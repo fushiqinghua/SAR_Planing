@@ -1,0 +1,5 @@
+MM scripts/run_stdc_local_stage.py
+MM scripts/stdc_validation_guards.py
+?? outputs/stdc_v0_2/local_validation_20261123_r4/
+?? outputs/stdc_v0_2/local_validation_20261123_r5/
+?? scripts/benchmark_stdc_comparison.py

@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "baseline_ref": "81b9be9b51625ed9012a69f9cb90e296bf2ec5c2",
+  "baseline_files_checked": 654,
+  "changed_baseline_files": [],
+  "unexpected_research_file_changes": [],
+  "raw_files_checked": 110,
+  "changed_raw_files": [],
+  "particle_sha256": "8b30a87e543f1b33c39e70e1d0054e1750ec046ba2e0b627dd311d9945749456",
+  "evaluator_sha256": "792077ad3e0286c03f60108f2580ea3b3557e3f5b002bc1a5e2f9f67e48fb2ad"
+}

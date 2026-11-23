@@ -1,0 +1,20 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\stdc_validation_guards.py",
+    "lake_worker",
+    "--output-dir",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\local_validation_20261123_r5\\paired_comparison\\mass_lb_eps_1p0_rep_2",
+    "--mode",
+    "mass_lb",
+    "--epsilon",
+    "1.0",
+    "--repeat-index",
+    "2",
+    "--benchmark-run"
+  ],
+  "seed": 41,
+  "threads": 1,
+  "execution_order": 26,
+  "watchdog_s": 150
+}

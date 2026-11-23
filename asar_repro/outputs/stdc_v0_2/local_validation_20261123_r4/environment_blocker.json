@@ -1,0 +1,9 @@
+{
+  "status": "blocked",
+  "failure": "tests/test_b1_additional.py::test_cf_storage_unpacks_once_and_preserves_mask",
+  "cause": "NetCDF Dataset(..., w) PermissionError on Unicode temporary path; investigate ASCII native IO",
+  "full_tests_passed": 3,
+  "full_tests_failed": 1,
+  "no_algorithm_assertion_failed": true,
+  "next_attempt": "outputs/stdc_v0_2/local_validation_20261123_r5"
+}

@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "planned_runs": 27,
+  "started_utc": "2026-11-23T14:10:15.349891+00:00",
+  "plan_sha256": "8a1247e3fa9d33721fe1703664da4fbd661b712e7f3d2be642f732462fa73bfd",
+  "verified_raw_sources": [
+    {
+      "path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t13z.f00.10m_uv.grib2",
+      "sha256": "d23da8d2684adeb56f7b205d84135aecce0a7fbacbe50d94eca933831a524419"
+    },
+    {
+      "path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t14z.f00.10m_uv.grib2",
+      "sha256": "e93eb9ebf9995368d535885e97c8442e50630b25e247e6efb938bb02b3ec06e4"
+    },
+    {
+      "path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t15z.f00.10m_uv.grib2",
+      "sha256": "644b9d28c24f01aeebc7fb75bcb7cb1468aece6068de5d4c37667e63d424130c"
+    },
+    {
+      "path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t16z.f00.10m_uv.grib2",
+      "sha256": "46256f2a7357568baa37e1193120521f3cda5706549e69023d5f274621108654"
+    },
+    {
+      "path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t17z.f00.10m_uv.grib2",
+      "sha256": "71beb93fd7c77e25ce6f3a1d75d10198e703b7b436640c0909cf0d51c61cf447"
+    },
+    {
+      "path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n001.nc",
+      "sha256": "7269134c0240c7f00eeca6e9e6bc39dc40ae49032004f8561c239510fcd7090f"
+    },
+    {
+      "path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n002.nc",
+      "sha256": "5092a254127774814da296dcc0edb302ca3320c5a8e2bd6f951d09ea25e75484"
+    },
+    {
+      "path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n003.nc",
+      "sha256": "ec3918e3251852e1646373b0aaa3e29f75232333879dfabcf37a547a3ffef4f3"
+    },
+    {
+      "path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n004.nc",
+      "sha256": "e16e82ce3149104f6f8d8e2d7ece55de11d1c7a7b1f36c2a9fd20b4714bac8c4"
+    },
+    {
+      "path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n005.nc",
+      "sha256": "aa575cf91f8ecb84e003389204cae11846fc9a22ac754b2817a4ccb367ee0682"
+    }
+  ],
+  "PT_J": 20.477608335999996,
+  "runs": 27,
+  "completed": 6,
+  "budget_exceeded": 21,
+  "certified": 0,
+  "wall_s": 144.64817289996427
+}

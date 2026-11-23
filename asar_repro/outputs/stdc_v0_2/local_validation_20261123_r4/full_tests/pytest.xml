@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="4" time="7.434" timestamp="2026-11-23T22:05:22.986646+08:00" hostname="jdd"><testcase classname="tests.test_b1_additional" name="test_order1_three_groups_cross_bit_boundaries_and_negative_minimum" time="0.003" /><testcase classname="tests.test_b1_additional" name="test_order2_and_zero_width_constant_group" time="0.001" /><testcase classname="tests.test_b1_additional" name="test_gfs_rejects_grid_relative_vectors_and_invalid_scan" time="0.001" /><testcase classname="tests.test_b1_additional" name="test_cf_storage_unpacks_once_and_preserves_mask" time="0.006"><failure message="PermissionError: [Errno 13] Permission denied: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\local_validation_20261123_r4\\full_tests\\pytest_tmp\\test_cf_storage_unpacks_once_a0\\packed.nc'">tmp_path = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-stdc-v0.2/asar_repro/outputs/stdc_v0_2/local_validation_20261123_r4/full_tests/pytest_tmp/test_cf_storage_unpacks_once_a0')
+
+    def test_cf_storage_unpacks_once_and_preserves_mask(tmp_path):
+        p=tmp_path/'packed.nc'
+&gt;       with Dataset(p,'w') as d:
+             ^^^^^^^^^^^^^^
+
+tests\test_b1_additional.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src/netCDF4/_netCDF4.pyx:2525: in netCDF4._netCDF4.Dataset.__init__
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+&gt;   ???
+E   PermissionError: [Errno 13] Permission denied: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\local_validation_20261123_r4\\full_tests\\pytest_tmp\\test_cf_storage_unpacks_once_a0\\packed.nc'
+
+src/netCDF4/_netCDF4.pyx:2162: PermissionError</failure></testcase></testsuite></testsuites>

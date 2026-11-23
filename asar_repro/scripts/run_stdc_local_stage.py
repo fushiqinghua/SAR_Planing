@@ -111,6 +111,9 @@ def stage(stage, run):
         'small_search':['scripts/stdc_validation_guards.py','small_search','--output-dir',str(folder)],
         'lake_smoke':['scripts/stdc_validation_guards.py','lake_smoke','--output-dir',str(folder)],
     }
+    if preflight.get('dedicated_pytest_temp') and stage in ('new_tests','full_tests'):
+        temp = Path(preflight['pytest_temp_root'])/stage if preflight.get('pytest_temp_root') else folder/'pytest_tmp'
+        commands[stage] += ['--basetemp', str(temp)]
     record['command']=[sys.executable,*commands[stage]]
     save(folder/'stage.json',record)
     started=perf_counter()

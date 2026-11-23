@@ -1,0 +1,62 @@
+diff --git a/asar_repro/scripts/run_stdc_local_stage.py b/asar_repro/scripts/run_stdc_local_stage.py
+index 1dd72da..d41cba7 100644
+--- a/asar_repro/scripts/run_stdc_local_stage.py
++++ b/asar_repro/scripts/run_stdc_local_stage.py
+@@ -111,6 +111,8 @@ def stage(stage, run):
+         'small_search':['scripts/stdc_validation_guards.py','small_search','--output-dir',str(folder)],
+         'lake_smoke':['scripts/stdc_validation_guards.py','lake_smoke','--output-dir',str(folder)],
+     }
++    if preflight.get('dedicated_pytest_temp') and stage in ('new_tests','full_tests'):
++        commands[stage] += ['--basetemp', str(folder/'pytest_tmp')]
+     record['command']=[sys.executable,*commands[stage]]
+     save(folder/'stage.json',record)
+     started=perf_counter()
+diff --git a/asar_repro/scripts/stdc_validation_guards.py b/asar_repro/scripts/stdc_validation_guards.py
+index 6142f6e..6070f9b 100644
+--- a/asar_repro/scripts/stdc_validation_guards.py
++++ b/asar_repro/scripts/stdc_validation_guards.py
+@@ -231,7 +231,7 @@ def load_real():
+     return protocol,graph,args,pt,times,raw
+ 
+ 
+-def lake_worker(folder,mode):
++def lake_worker(folder,mode,epsilon=1.1,repeat=0):
+     t0=perf_counter()
+     protocol,graph,cfg,pt,times,raw=load_real()
+     pre_s=perf_counter()-t0
+@@ -248,7 +248,7 @@ def lake_worker(folder,mode):
+         return timed
+     with patch.object(search_module,'Heuristic',factory):
+         tic=perf_counter()
+-        result=search_module.search_asar(graph,**cfg,heuristic=mode,epsilon=1.1,
++        result=search_module.search_asar(graph,**cfg,heuristic=mode,epsilon=epsilon,
+                    initial_path=tuple(protocol['initial_path']),**protocol['search_limits'])
+         search_s=perf_counter()-tic
+     score=replay_result(graph,cfg,result)
+@@ -267,7 +267,7 @@ def lake_worker(folder,mode):
+         limits=protocol['search_limits'],verified_raw_sources=raw,time_utc=[str(t)+'Z' for t in times],
+         survival=score.survival.tolist(),cumulative_J=score.g.tolist(),
+         guarantee='conditional discrete epsilon only' if result.theory_certified else 'uncertified',
+-        repeat=0,smoke_only=True)
++        repeat=repeat,smoke_only=(repeat==0 and epsilon==1.1))
+     save(folder/f'{mode}.json',row)
+     print(json.dumps({k:row[k] for k in ('mode','status','stop_reason','J','Pd_T','expanded',
+           'theory_certified','search_wall_s','process_peak_memory_mib')},allow_nan=False),flush=True)
+@@ -302,13 +302,15 @@ if __name__=='__main__':
+     parser=argparse.ArgumentParser(description=__doc__)
+     parser.add_argument('stage',choices=['random_audit','small_search','lake_smoke','lake_worker'])
+     parser.add_argument('--output-dir',type=Path,required=True)
+-    parser.add_argument('--mode',choices=['mass_lb','stdc_lb'])
++    parser.add_argument('--mode',choices=['mass_lb','stdc_lb','paper_greedy'])
++    parser.add_argument('--epsilon',type=float,default=1.1)
++    parser.add_argument('--repeat-index',type=int,default=0)
+     args=parser.parse_args()
+     folder=args.output_dir.resolve()
+     require(folder.is_relative_to(ROOT/'outputs/stdc_v0_2'),'research outputs only')
+     try:
+         if args.stage=='lake_worker':
+-            lake_worker(folder,args.mode)
++            lake_worker(folder,args.mode,args.epsilon,args.repeat_index)
+         else:
+             require(not (folder/'guard_summary.json').exists(),'refusing guard result overwrite')
+             result=globals()[args.stage](folder)

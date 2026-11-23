@@ -1,0 +1,48 @@
+{
+  "validation_status": "passed",
+  "comparison_execution_status": "complete",
+  "performance_claim": "not_supported_on_this_frozen_real_scene",
+  "tests": {
+    "new_passed": 28,
+    "full_passed": 281,
+    "failed": 0,
+    "skipped": 0
+  },
+  "random_oracle": {
+    "cases": 160,
+    "prefixes": 18024,
+    "violations_above_1e_10": 0
+  },
+  "small_search": {
+    "cases": 35,
+    "runs": 490,
+    "replays": 490,
+    "max_replay_error": 0
+  },
+  "real_smoke": {
+    "runs": 2,
+    "budget_stopped": 2,
+    "certified": 0
+  },
+  "paired_comparison": {
+    "runs": 27,
+    "completed": 6,
+    "budget_stopped": 21,
+    "certified": 0,
+    "STDC_improvements_in_J_vs_paper": 0,
+    "STDC_improvements_in_J_vs_mass": 0
+  },
+  "frozen_baseline_files_unchanged": 654,
+  "raw_copies_unchanged": 110,
+  "research_branch": "stdc-research-v0.2",
+  "baseline_commit": "81b9be9b51625ed9012a69f9cb90e296bf2ec5c2",
+  "prior_attempts_preserved": [
+    "local_validation_20261123",
+    "local_validation_20261123_r2",
+    "local_validation_20261123_r3",
+    "local_validation_20261123_r4"
+  ],
+  "no_innovation_two": true,
+  "no_forcing_or_objective_changes": true,
+  "no_remote_push": true
+}

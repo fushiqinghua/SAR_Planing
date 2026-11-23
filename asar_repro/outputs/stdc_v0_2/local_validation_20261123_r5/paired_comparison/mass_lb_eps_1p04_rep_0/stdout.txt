@@ -1,0 +1,1 @@
+{"mode": "mass_lb", "status": "budget_exceeded", "stop_reason": "max_expansions", "J": 20.477608335999996, "Pd_T": 0.88106304, "expanded": 5000, "theory_certified": false, "search_wall_s": 0.32984300004318357, "process_peak_memory_mib": 151.95703125}
