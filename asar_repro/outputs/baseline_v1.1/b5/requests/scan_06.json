@@ -1,0 +1,7 @@
+{
+  "heuristic": "paper_greedy",
+  "epsilon": 1.04,
+  "max_expansions": 600,
+  "max_seconds": 30,
+  "max_open": 20000
+}

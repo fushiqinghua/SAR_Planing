@@ -238,3 +238,69 @@ CLI 可使用 `--heuristic mass_lb --output-dir <新目录>` 选择方法，专�
 三个输入分别固化为 `static_input.npz`、`dynamic_suboptimal_input.npz`、`appendix_b_input.npz`，保存在上述 B4 目录；每条 toy 记录带矩阵归档指纹。B3 的 particles.npz、metadata.json、mass_audit.csv 均与上一轮 SHA-256 完全相同。
 
 **本轮停在 B4。** 下一阶段 B5 尚未实施：冻结输入上的 ε/预算扫描、cProfile、峰值内存与基于热点的有限工程优化。B6 真实场景算法比较、其他三份用户数据包的导入与后续阶段仍待指令。
+
+## B5 · 冻结真实输入上的预算扫描与性能核验
+
+**状态为 passed。** 从 B4 提交 565590a 接续，完成手册 §8。复用 B3 的 Lake Ontario 500 粒子归档，T=49、q=.78、seed=41；独立构造一次动态 ParallelTrack，作为所有搜索完全相同的初始上界。归档、元数据和 B4 数值核心指纹均不变。没有运行新的 OpenDrift 预处理，没有修改用户原海上搜救程序或安装/升级依赖。
+
+### 文件与运行命令
+
+| 文件 | 作用 |
+|---|---|
+| [b5_budget_scan.json](../../configs/b5_budget_scan.json) | 冻结输入 SHA、完整预算矩阵、诊断设置及 watchdog 宽限 |
+| [benchmark_b5.py](../../scripts/benchmark_b5.py) | 输入校验、同一 PT、独立子进程、分离计时、内存、cProfile、逐 ID 独立重放、显式异常记录 |
+| [report_b5.py](../../scripts/report_b5.py) | CSV 联合表、首次/复测对照、状态分布、预算图和自动报告 |
+| [test_b5_benchmark.py](../../tests/test_b5_benchmark.py) | 哈希/UTC、Oracle、诊断隔离、超时 PT、watchdog/崩溃 null、矩阵覆盖与保存结果 |
+
+沿用 B0 PowerShell 环境：C:\Users\35448\.conda\envs\maritime-sar\python.exe，实际 Python 3.11.18、NumPy 2.4.6、SciPy 1.17.1、OpenDrift 1.14.12。禁写字节码和 pytest 缓存。
+
+| 命令 | 退出码 | 结果 |
+|---|---:|---|
+| & $PY scripts/benchmark_b5.py --phase pilot | 0 | 6 次：两方法各一次原速、一次 cProfile、一次 tracemalloc |
+| & $PY scripts/benchmark_b5.py --phase scan | 0 | 36 次正式扫描、2 次旧 OPEN 上限探针 |
+| & $PY scripts/report_b5.py | 0 | 自动生成联合表、对照表、报告与预算图 |
+| & $PY -m pytest -q tests/test_b5_benchmark.py | 0 | 8 passed，5.26 s |
+| & $PY -m pytest -q | 0 | 217 passed，0 failed，0 skipped，17.47 s |
+
+首次全量回归中，旧 smoke test 在 pytest 收集时导入 OpenDrift，导致新增测试直接调用 worker 的未导入检查失败。新增测试已改为实际子进程调用，与正式 benchmark 隔离方式一致；未削弱生产检查。重新全量回归通过。原 toy Oracle、动态反例、质量守恒和粒子/矩阵交叉验证均包含在此次回归中。
+
+### 实验矩阵与主要数值
+
+正式矩阵为 paper_greedy/mass_lb × ε={1.10,1.04,1.00} × 展开上限={600,2000,5000} × 秒上限={30,60}，共 36 次。OPEN 统一为 20000，额外保留两个 OPEN=2400 探针。每个搜索使用新子进程和新索引，没有结果缓存。数值线程环境变量固定为 1；机器、CPU affinity、NumPy 构建与源码 SHA 见 manifest。此为普通 Windows 调度下的一轮矩阵，不作统计加速结论。
+
+| 设置/发现 | 实测结果 |
+|---|---|
+| 正式扫描退出分布 | 10 次 completed，26 次 max_expansions；无 max_seconds、watchdog 或 worker 异常 |
+| paper_greedy，ε=1.10 | 107 次展开完成；J=17.359684022080003，Pd(T)=0.89776904256 |
+| paper_greedy，ε=1.04 | 600 次上限时中止；2000/5000 上限下均用 1222 次展开完成；J=17.29389415456，Pd(T)=0.89737041888 |
+| paper_greedy，ε=1.00 | 到 5000 次仍中止，保留 PT；代表性 60 秒配置实测求解 4.3932 s |
+| mass_lb | 三档 ε 在三档展开预算下均中止，保留 PT；不标记证书 |
+| 共同 PT | J=20.477608335999996，Pd(T)=0.88106304；构造 0.0016418 s，以同一未摊销时间计入各运行 |
+| 旧 OPEN=2400 | 两方法均在 800 次展开时触发 max_open |
+| 30/60 秒配对 | 18 对的路径、J、Pd、展开/生成/剪枝计数与退出状态完全一致 |
+| 主扫描进程峰值 | 66.90625–152.66015625 MiB；进程生命周期工作集峰值，含导入/预处理 |
+| 独立逐 ID 重放 | 所有 44 次测量的 J 最大误差为 0；规划进程均未导入 OpenDrift |
+| 离散认证 | 0 次；paper_greedy 完成不具备一般 ε 认证，mass_lb 本轮均未完成 |
+
+ε=1.04 的完成路线 J 更小，但终点 Pd 略低，二者不能混为同一评价目标。所有中止分数均明确归属 PT。真实场景仍标记 historical_real_forcing_allwater，带全水域岸线与事后重建假设，不代表原作者 forcing/粒子/人工 PT 的逐点复现。
+
+### profile 与工程决策
+
+paper_greedy 的 2000 次展开 cProfile 中，启发函数累计时间占搜索约 97.15%，执行 247813 次 cell_mass 聚合。热点为 Algorithm 2 余下时域的贪心模拟；累计时间包含子调用，不将比例相加。格到粒子索引、每个顶点的可达范围已经缓存；不同路径的未探测权重不同，不能直接共享聚合结果或按 (vertex,depth) 合并状态。
+
+本轮没有修改数值核心，也不声称不存在其他优化空间。当前测量足以说明预算问题；跳过校验、改变浮点累加或跨状态缓存须另证等价性与收益。工具层完成输入锁定、子进程隔离、异常持久化和报告生成；首次/复测表标为实现未变的重复测量，不伪称优化加速。
+
+| 同配置原速对照 | 首次秒 | 复测秒 | 首次/复测进程峰值 MiB | 路径、得分、搜索计数 |
+|---|---:|---:|---:|---|
+| paper_greedy，ε=1，2000 次 | 1.8870 | 1.8866 | 99.867 / 99.926 | 完全相同 |
+| mass_lb，ε=1，5000 次 | 0.3017 | 0.2959 | 149.234 / 149.430 | 完全相同 |
+
+独立 tracemalloc 诊断中，两种配置的搜索分配峰值分别约 34.82 / 82.50 MiB。对应 OPEN=6001 / 15001，仅其中 500 维 float64 权重数组就至少需要 22.89 / 57.22 MiB，另有父节点保留的祖先、heap、索引和临时数组。分配峰值与 OS 工作集统计口径不同；cProfile 和 tracemalloc 耗时单列，不参与正式原速比较。
+
+### 保存证据与下一阶段
+
+[自动报告](../../outputs/baseline_v1.1/b5/report.md) · [联合 CSV](../../outputs/baseline_v1.1/b5/metrics.csv) · [扫描 JSON](../../outputs/baseline_v1.1/b5/scan_runs.json) · [诊断 CSV](../../outputs/baseline_v1.1/b5/diagnostic_metrics.csv) · [首次/复测 CSV](../../outputs/baseline_v1.1/b5/before_after.csv) · [预算图](../../outputs/baseline_v1.1/b5/budget_scan.png) · [状态汇总](../../outputs/baseline_v1.1/b5/summary.json) · [扫描清单](../../outputs/baseline_v1.1/b5/scan_manifest.json) · [诊断清单](../../outputs/baseline_v1.1/b5/pilot_manifest.json) · [初始 PT](../../outputs/baseline_v1.1/b5/warm_start.json) · [paper profile](../../outputs/baseline_v1.1/b5/profile_cprofile.txt) · [mass profile](../../outputs/baseline_v1.1/b5/mass_profile_cprofile.txt) · [保留校验](../../outputs/baseline_v1.1/b5/preservation_audit.json) · [专项测试](../../outputs/baseline_v1.1/b5/b5_pytest.txt) · [全量测试](../../outputs/baseline_v1.1/b5/full_pytest.txt)。
+
+同目录保留原始 .prof、结构化热点 *_stats.json、每次 worker 的 JSON 和 requests/ 参数。时间检查为协作式；父进程额外有搜索秒上限加 60 秒的 watchdog。超时/异常分支有故障注入测试，结果明确为 null 并使整轮命令失败退出；这些测试不冒充实际扫描中的超时次数。
+
+**本轮停在 B5。** B6 的统一真实场景最终比较、路线/生存曲线及后续阶段尚未实施；其余三份用户数据包仍保持原样。后续可依据本次证据配置预算，不要求 ε=1 的大规模搜索全部完成。
