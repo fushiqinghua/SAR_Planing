@@ -1,0 +1,22 @@
+{
+  "stage": "B3",
+  "status": "passed",
+  "mode": "generated",
+  "config_hash": "b7f8f7261148f6e9cf9a4cb68a0ab3e751f729a666c9b977f9e5646ccfec7ca8",
+  "archive_sha256": "8b30a87e543f1b33c39e70e1d0054e1750ec046ba2e0b627dd311d9945749456",
+  "native": {
+    "first_utc": "2025-08-26T14:45:00Z",
+    "last_utc": "2025-08-26T15:53:00Z",
+    "frames": 137
+  },
+  "search": {
+    "first_utc": "2025-08-26T15:45:00Z",
+    "last_utc": "2025-08-26T15:52:33.74Z",
+    "frames": 50
+  },
+  "compared_npz_arrays": 0,
+  "exact_replay": null,
+  "forcing_terminal_events": 0,
+  "archive_integration_seconds": 6.837059700046666,
+  "runtime_seconds": 9.210980299976654
+}

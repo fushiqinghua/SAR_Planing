@@ -152,3 +152,45 @@ HRRR 五个 f00 文件共 21,911,006 字节，各含两个 10 米风原始消息
 | [forcing_audit.json](../../outputs/baseline_v1.1/b2/forcing_audit.json) | `B78F6BEABCF396270A06B2305F29BFFE2FA989D9AF3914E7FFC44DE86D94D5BB` |
 | [审计命令输出](../../outputs/baseline_v1.1/b2/forcing_audit_run.txt) | `6E2AE4A59F4C310B67773AD179025FE64C67E0FBB7B758CB8E7229915A66A551` |
 | [全量 pytest 输出](../../outputs/baseline_v1.1/b2/full_pytest.txt) | `35C98144768CB8FB1B643E849C33E7F729A2D25971F08A3E2BEB2DF1E7C59D67` |
+
+## B3 · Lake Ontario 真实 Leeway 轨迹与质量验收
+
+**状态为 `passed`。** 从 B2 提交 `21bda2f` 接续，使用 `maritime-sar` 的 OpenDrift 1.14.12 对 Lake Ontario 运行一次连续漂移。场景参数沿用 PIW-2（本机对象编号 2）、100 m 初始半径、500 粒子、seed 41、17×17 搜索格和 185.2 m 格宽。风取五个 HRRR f00 分析时次，水流取 LOOFS 18 UTC 循环的回算时次。实验类型为 `historical_real_forcing_allwater`，表示事后环境重建。FVCOM 湿干和域外状态用于速度门禁，岸线策略采用全水域假设。
+
+| 核验项 | 实测结果 |
+|---|---|
+| 原生轨迹 | 2025-08-26 14:45:00 至 15:53:00 UTC，30 s 积分，136 步 / 137 帧 |
+| 规划轨迹 | 15:45:00 至 15:52:33.740 UTC，步长 9.26 s，共 49 步 / 50 帧 |
+| 逐 ID 状态 | 500 个原始 ID（0–499）均贯穿全程。原生与规划帧的所有粒子均处于有效、可搜索格 |
+| 纯漂移质量 | 逐原生帧的总权重误差不超过 6.67×10⁻¹⁶。陆地、域外、停用、未知四个特殊格本次质量均为 0 |
+| 固定审计路线 | 从 CSP 向东起步、沿同一行往返。第 0 帧不探测，后续统一使用论文的 `q=0.78` |
+| 路线审计结果 | `J=47.21975499424` 步，累计 `Pd=0.05770030656`，末帧剩余质量 `M_T=0.94229969344`。逐步质量守恒最大残差 4.44×10⁻¹⁶ |
+| 独立复验 | 重积分后 21 个 NPZ 字段逐项完全一致。普通重跑通过源文件、配置和归档指纹检查后命中缓存 |
+
+逐小时原生风流以线性插值接入 Leeway。模拟继续到搜索结束之后第一个 30 秒整点，以覆盖最后一个 9.26 秒规划帧。位置重采样复用 `Frames`，只在状态与掩膜一致时插值。原生与规划帧逐位置复核风流覆盖；一旦发生 forcing 导致的停用，后续帧保留该 ID 的域外、干单元或未知权重。专项测试用手算样例验证四类特殊格权重及重复探测。固定路线的数值用于审计粒子和评分器。搜索扩展数在 B3 不适用。
+
+缓存身份包含源文件 SHA-256、场景配置、B2 审计、相关实现和依赖版本。原始文件缺失或指纹不符时，命令报告 `blocked`。配置哈希不同或缓存损坏时，命令拒绝复用。全量回归后比对 v1.0 的 180 个已跟踪文件，全部指纹匹配。
+
+### 代码与复跑
+
+- 一次性漂移、UTC 对齐、分格和固定路线质量计算由新模块实现。[历史漂移模块](../../src/asar_repro/historical_drift.py)
+- 命令入口检查 B2 输入并发布原子归档，支持缓存命中和显式重积分。[生成与复验脚本](../../scripts/generate_historical_drift.py) · [绘图脚本](../../scripts/plot_historical_drift.py) · [专项测试](../../tests/test_historical_drift.py)
+
+从 `asar_repro` 沿用 B0 的 PowerShell 环境。首次生成可指定新的 `--output-dir` 以保留现有归档。
+
+| 命令 | 退出码 | 实测结果 |
+|---|---:|---|
+| `& $PY scripts/generate_historical_drift.py` | 0 | 首次生成 9.21 s，Leeway 积分 6.84 s，随后缓存重读 0.23 s |
+| `& $PY scripts/generate_historical_drift.py --verify-replay` | 0 | 独立复验 8.15 s |
+| `& $PY -m pytest -q tests/test_historical_drift.py` | 0 | 5 passed，0 failed，0 skipped，0.72 s |
+| `& $PY -m pytest -q` | 0 | 165 passed，0 failed，0 skipped，12.07 s |
+
+### 冻结证据
+
+| 文件 | SHA-256 |
+|---|---|
+| [particles.npz](../../outputs/baseline_v1.1/lake_ontario_real/particles.npz) | `8b30a87e543f1b33c39e70e1d0054e1750ec046ba2e0b627dd311d9945749456` |
+| [metadata.json](../../outputs/baseline_v1.1/lake_ontario_real/metadata.json) | `1e96ecea2547ca918dd068b7f86a3d4b680cdc89ad6814b1132ca80cdc5e89fc` |
+| [mass_audit.csv](../../outputs/baseline_v1.1/lake_ontario_real/mass_audit.csv) | `47b66d2f36652b3aa28001997845fe430bbea2e8550fc673ebbcd47186b4339a` |
+
+图件和机器可读复验日志可在归档中核对。[三时刻粒子分布](../../outputs/baseline_v1.1/lake_ontario_real/particles.png) · [CST 风流快照](../../outputs/baseline_v1.1/lake_ontario_real/forcing_snapshot.png) · [UTC 覆盖图](../../outputs/baseline_v1.1/lake_ontario_real/time_coverage.png) · [生成日志](../../outputs/baseline_v1.1/b3/generation.json) · [缓存命中](../../outputs/baseline_v1.1/b3/cache_hit.json) · [独立复验](../../outputs/baseline_v1.1/b3/replay_audit.json) · [全量 pytest](../../outputs/baseline_v1.1/b3/full_pytest.txt)
