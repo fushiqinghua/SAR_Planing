@@ -194,3 +194,47 @@ HRRR 五个 f00 文件共 21,911,006 字节，各含两个 10 米风原始消息
 | [mass_audit.csv](../../outputs/baseline_v1.1/lake_ontario_real/mass_audit.csv) | `47b66d2f36652b3aa28001997845fe430bbea2e8550fc673ebbcd47186b4339a` |
 
 图件和机器可读复验日志可在归档中核对。[三时刻粒子分布](../../outputs/baseline_v1.1/lake_ontario_real/particles.png) · [CST 风流快照](../../outputs/baseline_v1.1/lake_ontario_real/forcing_snapshot.png) · [UTC 覆盖图](../../outputs/baseline_v1.1/lake_ontario_real/time_coverage.png) · [生成日志](../../outputs/baseline_v1.1/b3/generation.json) · [缓存命中](../../outputs/baseline_v1.1/b3/cache_hit.json) · [独立复验](../../outputs/baseline_v1.1/b3/replay_audit.json) · [全量 pytest](../../outputs/baseline_v1.1/b3/full_pytest.txt)
+
+## B4 · 搜索结果语义与正确性边界
+
+**状态为 `passed`。** 从 B3 提交 `fc5c815` 接续，执行手册 §7。此次审计没有发现需要修改搜索数学或启发式的退出路径错误，因此保留 `search.py`、`heuristic.py`、Oracle、评分器及所有原反例。修订 adapter 的报告输出，新增统一分类和记录模块。原 v1.0 的 180 个冻结文件中 179 个字节不变；仅复现仓库自身的 `planner_adapter.py` 按 B4 要求增强报告，未接入或修改用户原有海上搜救程序。
+
+### 代码、配置与测试清单
+
+| 文件 | 本轮作用 |
+|---|---|
+| [search_reporting.py](../../src/asar_repro/search_reporting.py) | 分开记录理论适用性、完成条件、路线来源；独立评分重放；完整必需字段；按 forcing 与算法分组统计 |
+| [planner_adapter.py](../../src/asar_repro/planner_adapter.py) | 复用统一结果接口；补充时间、输入指纹、M_T；保持旧 status、路径和航点接口 |
+| [audit_search_results.py](../../scripts/audit_search_results.py) | 可指定 zero/mass_lb/paper_greedy 的 toy benchmark；只读重放旧 32 次运行；自动报告和状态图 |
+| [b4_search_audit.json](../../configs/b4_search_audit.json) | 三个 toy、两档 ε、无剪枝/剪枝/两种中止 profile，共 72 次 |
+| [test_search_reporting.py](../../tests/test_search_reporting.py) | 退出路径、上界与来源、确定性时钟、无路径 null、接口计时与配置、forcing 分组 |
+| [test_b4_artifacts.py](../../tests/test_b4_artifacts.py) | 保存字段、CSV null、两例反例、17/32 历史、来源指纹及 CLI 方法选择 |
+| [search_result_semantics.md](search_result_semantics.md) | 结果字典、认证前提、时间口径、已发现的边界行为与报告限制 |
+
+使用 B0 PowerShell 环境与既有 maritime-sar；实际 Python 3.11.18、NumPy 2.4.6、SciPy 1.17.1、OpenDrift 1.14.12。未安装或升级依赖，未重新生成 B3 真实轨迹。
+
+| 命令 | 退出码 | 实测结果 |
+|---|---:|---|
+| `& $PY scripts/audit_search_results.py` | 0 | 72 条 toy，32 条历史记录，历史 J 重放误差 0 |
+| `& $PY -m pytest -q tests/test_search_reporting.py tests/test_b4_artifacts.py tests/test_heuristic_counterexample.py` | 0 | 46 passed，1.87 s |
+| `& $PY -m pytest -q` | 0 | 209 passed，0 failed，0 skipped，15.38 s |
+
+CLI 可使用 `--heuristic mass_lb --output-dir <新目录>` 选择方法，专项测试实测生成 24 条 mass_lb 记录。完整测试包含旧 toy Oracle、动态反例、粒子/矩阵交叉验证、OpenDrift smoke 和旧 adapter 离线重放。
+
+### 数值与发现
+
+- 新结果明确分开 completed_search、aborted_feasible_incumbent、aborted_without_path。中止且无完整解时 path、J、Pd_T、M_T 为 null。有初始 PT 的中止结果归属 ParallelTrack。
+- mass_lb/zero 理论适用性与获得完成证书分别记录；只有完整结束且模型前提成立时标记条件性离散 ε 界。paper_greedy 在本轮所有记录中均不认证。质量守恒、每步单格探测、q∈[0,1]、无虚假检测、t=0 不探测的前提保持不变。
+- 72 条 toy 中 36 条正常完成、18 条保留 PT 的显式时间限额中止、18 条无完整路线中止。两种有下界的模式在 ε=1 时与 Oracle 的 J 差为 0；ε=1.1 界也逐例通过。这是有限样例事实，不等于所有输入的数值形式证明。
+- 3×3、T=4、q=.78 反例仍为 `2.6170801771 > 2.5417333379`。另一动态例子 ε=1 的 paper_greedy 为 `2.197771238744739`，Oracle 为 `2.185746589095029`，差 `0.01202464964970984`。原反例文件与测试未修改。
+- 历史 32 条中 17 条为 max_expansions，来源全部为 PT；15 条正常完成。全部仍标记 constant_synthetic，原报告可追溯。真实环境统计未混入这些结果。
+- 审计确认：根若先被初始上界剪掉，即便展开/OPEN 限额为 0，也可正常耗尽 OPEN。这不是“触发限额却误报完成”。首轮新增测试对这个分支的预期过严，随后将限额测试改为无剪枝以实际触发边界，并单独保留根剪枝结束测试。无需改动搜索。
+- 时间为协作式检查，不是硬实时中断；max_seconds 不包括 adapter 生成 PT 的时间，因此 PT、纯求解和二者总计分列。历史缺失的环境/Git 不以新值补造。
+
+### 保存的证据
+
+[审计配置、版本与源码指纹](../../outputs/baseline_v1.1/b4/audit.json) · [toy JSON](../../outputs/baseline_v1.1/b4/toy_runs.json) · [toy CSV](../../outputs/baseline_v1.1/b4/toy_metrics.csv) · [历史 JSON](../../outputs/baseline_v1.1/b4/legacy_runs.json) · [历史 CSV](../../outputs/baseline_v1.1/b4/legacy_metrics.csv) · [自动报告](../../outputs/baseline_v1.1/b4/report.md) · [完成/中止分栏图](../../outputs/baseline_v1.1/b4/legacy_status.png) · [专项 pytest](../../outputs/baseline_v1.1/b4/b4_pytest.txt) · [全量 pytest](../../outputs/baseline_v1.1/b4/full_pytest.txt) · [命令输出](../../outputs/baseline_v1.1/b4/audit_run.txt) · [原版与 B3 保留校验](../../outputs/baseline_v1.1/b4/preservation_audit.json)。
+
+三个输入分别固化为 `static_input.npz`、`dynamic_suboptimal_input.npz`、`appendix_b_input.npz`，保存在上述 B4 目录；每条 toy 记录带矩阵归档指纹。B3 的 particles.npz、metadata.json、mass_audit.csv 均与上一轮 SHA-256 完全相同。
+
+**本轮停在 B4。** 下一阶段 B5 尚未实施：冻结输入上的 ε/预算扫描、cProfile、峰值内存与基于热点的有限工程优化。B6 真实场景算法比较、其他三份用户数据包的导入与后续阶段仍待指令。

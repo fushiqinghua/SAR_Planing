@@ -1,0 +1,15 @@
+{
+  "stage": "B4",
+  "heuristics": ["zero", "mass_lb", "paper_greedy"],
+  "epsilon": [1.0, 1.1],
+  "cases": ["static", "dynamic_suboptimal", "appendix_b"],
+  "profiles": {
+    "reference": {"prune": false, "warm_start": false},
+    "pruned": {"prune": true, "warm_start": false},
+    "stopped_PT": {"prune": true, "warm_start": true, "max_seconds": 0.0},
+    "stopped_no_path": {"prune": true, "warm_start": false, "max_seconds": 0.0}
+  },
+  "comparison_atol": 1e-10,
+  "purpose": "result_semantics_audit; not a performance budget sweep",
+  "timing_scope": "search only plus separately timed PT; excludes inputs, replay, Oracle and plots"
+}

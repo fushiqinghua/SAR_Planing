@@ -2,6 +2,7 @@
 
 import json
 from pathlib import Path
+from time import perf_counter
 
 import numpy as np
 from pyproj.enums import TransformDirection
@@ -9,11 +10,11 @@ from pyproj.enums import TransformDirection
 from .grid import GridGraph
 from .gridding import ParticleGrid
 from .motion import ParticleMotion
-from .objective import score_path
 from .opendrift_adapter import planning_times
 from .scenario_baselines import parallel_track
 from .scenarios import config_digest, digest
 from .search import search_asar
+from .search_reporting import search_record
 
 
 def plan_particle_path(
@@ -30,7 +31,8 @@ def plan_particle_path(
     warm_start=True,
     max_expansions=600,
     max_open=2400,
-    max_seconds=30
+    max_seconds=30,
+    provenance=None,
 ):
     """Return a JSON-compatible plan for a ParticleGrid. time_utc is datetime64 UTC.
 
@@ -51,7 +53,30 @@ def plan_particle_path(
     if motion.cell_ids.shape[0] != len(times):
         raise ValueError("expected one UTC instant per particle frame")
     args = dict(start=start, budget=len(times) - 1, p=initial_weights, q=q, motion=motion)
+    limits = dict(max_expansions=max_expansions, max_open=max_open, max_seconds=max_seconds)
+    context = dict(provenance or {})
+    context["config_hash"] = config_digest(
+        dict(
+            input_provenance=context,
+            start=int(start),
+            grid=[grid.graph.rows, grid.graph.cols],
+            csp=list(grid.center_lon_lat),
+            cell_width_m=grid.width_m,
+            cell_ids=motion.cell_ids.tolist(),
+            trajectory_ids=np.asarray(trajectory_ids).tolist(),
+            initial_weights=np.asarray(initial_weights).tolist(),
+            time_utc=[str(t) for t in times],
+            q=np.asarray(q).tolist(),
+            heuristic=heuristic,
+            epsilon=epsilon,
+            warm_start=warm_start,
+            **limits,
+        )
+    )
+    started = perf_counter()
     initial = parallel_track(grid.graph, **args) if warm_start else None
+    warm_start_s = perf_counter() - started if warm_start else 0.0
+    started = perf_counter()
     result = search_asar(
         grid.graph,
         **args,
@@ -60,33 +85,22 @@ def plan_particle_path(
         initial_path=initial,
         max_expansions=max_expansions,
         max_open=max_open,
-        max_seconds=max_seconds
+        max_seconds=max_seconds,
     )
-    output = dict(
-        status=result.status,
-        stop_reason=result.stop_reason,
-        incumbent_source=(
-            "ParallelTrack" if result.incumbent_source == "initial_path" else result.incumbent_source
-        ),
-        expanded=result.expanded,
-        generated=result.generated,
-        pruned=result.pruned,
-        peak_open=result.peak_open,
-        heuristic=heuristic,
-        epsilon=float(epsilon),
-        discrete_model_certified=result.theory_certified,
-        uav_constraints="unevaluated",
-        T=len(times) - 1,
-        path=None,
-        waypoints=None,
-        J=None,
-        Pd_T=None,
-        M_0_to_T=None,
+    elapsed = perf_counter() - started
+    output = search_record(
+        result,
+        grid.graph,
+        **args,
+        planner_wall_s=elapsed,
+        warm_start_s=warm_start_s,
+        limits=limits,
+        provenance=context,
+        initial_source="ParallelTrack",
     )
+    output.update(status=result.status, uav_constraints="unevaluated", waypoints=None)
     if result.path is None:
         return output
-    score = score_path(grid.graph, result.path, **args)
-    np.testing.assert_allclose(score.J, result.J, atol=1e-10, rtol=0)
     waypoints = []
     for t, v in enumerate(result.path):
         row, col = grid.graph.coordinates(v)
@@ -107,9 +121,6 @@ def plan_particle_path(
     output.update(
         path=list(map(int, result.path)),
         waypoints=waypoints,
-        J=score.J,
-        Pd_T=score.pd_final,
-        M_0_to_T=score.survival.tolist(),
     )
     return output
 
@@ -148,7 +159,14 @@ def plan_from_bundle(manifest, scenario, **search_options):
             trajectory_ids=data["trajectory_id"],
             initial_weights=data["initial_weights"],
             time_utc=times,
-            **(entry["search_limits"] | search_options)
+            provenance=dict(
+                scenario_id=scenario,
+                forcing_kind=cfg["forcing_kind"],
+                source_manifest_sha256=digest(manifest),
+                particle_archive_sha256=entry["archive_sha256"],
+                seed=cfg["seed"],
+            ),
+            **(entry["search_limits"] | search_options),
         )
     result.update(
         scenario=scenario,

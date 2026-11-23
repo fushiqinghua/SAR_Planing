@@ -1,0 +1,181 @@
+{
+  "stage": "B4",
+  "status": "passed",
+  "config": {
+    "stage": "B4",
+    "heuristics": [
+      "zero",
+      "mass_lb",
+      "paper_greedy"
+    ],
+    "epsilon": [
+      1.0,
+      1.1
+    ],
+    "cases": [
+      "static",
+      "dynamic_suboptimal",
+      "appendix_b"
+    ],
+    "profiles": {
+      "reference": {
+        "prune": false,
+        "warm_start": false
+      },
+      "pruned": {
+        "prune": true,
+        "warm_start": false
+      },
+      "stopped_PT": {
+        "prune": true,
+        "warm_start": true,
+        "max_seconds": 0.0
+      },
+      "stopped_no_path": {
+        "prune": true,
+        "warm_start": false,
+        "max_seconds": 0.0
+      }
+    },
+    "comparison_atol": 1e-10,
+    "purpose": "result_semantics_audit; not a performance budget sweep",
+    "timing_scope": "search only plus separately timed PT; excludes inputs, replay, Oracle and plots"
+  },
+  "git_commit": "fc5c8151157e72caf8afd4662e1698089b3a50a8",
+  "git_commit_scope": "base HEAD; exact executing source is identified by code_sha256",
+  "code_sha256": {
+    "src\\asar_repro\\search.py": "ca874a27897323d1f5bff46ce4a69fbdf21016df9a2960dc685f6c6f1336ff93",
+    "src\\asar_repro\\heuristic.py": "38e03ceb511c62b7d5d9494206e752647bfaff796e7dc3ba08c195f1445446fc",
+    "src\\asar_repro\\search_reporting.py": "5e386a054a7ad9e3f6533d74197bca6c37713ea87de53bfd3b29669094eeb1f8",
+    "src\\asar_repro\\planner_adapter.py": "f47e508748daba824e21ec657458cd84657f8ddc405de68f898584c472ef8419",
+    "src\\asar_repro\\objective.py": "792077ad3e0286c03f60108f2580ea3b3557e3f5b002bc1a5e2f9f67e48fb2ad",
+    "src\\asar_repro\\motion.py": "7e74178390ffa34f30f7b987a4d7a2459e8f0ca2646ca3026c97e505f758c2c9",
+    "src\\asar_repro\\scenario_baselines.py": "630c417e51285c3f301504596a6d4a04b756a4bca4e46e1533862a202f2c577b",
+    "scripts\\audit_search_results.py": "47093d01d604111b8734f25d2e829da158096e566718e0d1aee6c6b73f3992f5",
+    "configs\\b4_search_audit.json": "afeec493e28b00ac99cd4b0dab3cd8541c5f1a4c32f940939dce68ce15e2ed26"
+  },
+  "environment_versions": {
+    "python": "3.11.18",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "pyproj": "3.7.2",
+    "opendrift": "1.14.12"
+  },
+  "toy_run_count": 72,
+  "toy_groups": [
+    {
+      "forcing_kind": "toy",
+      "algorithm": "ASAR_zero",
+      "runs": 24,
+      "completed_search": 12,
+      "aborted_feasible_incumbent": 6,
+      "aborted_without_path": 6,
+      "certified": 12,
+      "completion_rate": 0.5
+    },
+    {
+      "forcing_kind": "toy",
+      "algorithm": "ASAR_mass_lb",
+      "runs": 24,
+      "completed_search": 12,
+      "aborted_feasible_incumbent": 6,
+      "aborted_without_path": 6,
+      "certified": 12,
+      "completion_rate": 0.5
+    },
+    {
+      "forcing_kind": "toy",
+      "algorithm": "ASAR_paper",
+      "runs": 24,
+      "completed_search": 12,
+      "aborted_feasible_incumbent": 6,
+      "aborted_without_path": 6,
+      "certified": 0,
+      "completion_rate": 0.5
+    }
+  ],
+  "witnesses": {
+    "static": {
+      "oracle_J": 1.7380000000000002,
+      "oracle_path": [
+        0,
+        2,
+        3,
+        1,
+        0
+      ],
+      "root_paper_greedy": 1.7380000000000002,
+      "root_overestimate": 0.0,
+      "complete_paths": 16
+    },
+    "dynamic_suboptimal": {
+      "oracle_J": 2.185746589095029,
+      "oracle_path": [
+        0,
+        2,
+        0,
+        1,
+        3
+      ],
+      "root_paper_greedy": 1.8012576404977327,
+      "root_overestimate": -0.38448894859729643,
+      "complete_paths": 16
+    },
+    "appendix_b": {
+      "oracle_J": 2.541733337874664,
+      "oracle_path": [
+        4,
+        1,
+        0,
+        3,
+        4
+      ],
+      "root_paper_greedy": 2.617080177088715,
+      "root_overestimate": 0.07534683921405083,
+      "complete_paths": 96
+    }
+  },
+  "legacy_run_count": 32,
+  "legacy_groups": [
+    {
+      "forcing_kind": "constant_synthetic",
+      "algorithm": "ASAR_paper",
+      "runs": 32,
+      "completed_search": 15,
+      "aborted_feasible_incumbent": 17,
+      "aborted_without_path": 0,
+      "certified": 0,
+      "completion_rate": 0.46875
+    }
+  ],
+  "legacy_sources": [
+    {
+      "path": "outputs\\stage7\\arctic_ocean\\results.json",
+      "sha256": "cba2afa8cc8f7598fdf5b3d1f50ca54ed80e1976326550846a85369415045b12",
+      "particle_archive_sha256": "bd8f5be63ee77607fa4f80260ef6ebead58048df4da1f41124c145b28b32099e"
+    },
+    {
+      "path": "outputs\\stage7\\bay_of_fundy\\results.json",
+      "sha256": "eb84c9d14830259e9506a707fb305dcb3337b96e877c392bf4683748885ccfa5",
+      "particle_archive_sha256": "ed9006e58d234d67e8d1f96b343a5e287a821fe2798b4bb4333a16260ea15aa8"
+    },
+    {
+      "path": "outputs\\stage7\\lake_ontario\\results.json",
+      "sha256": "9d742eed6941fd8cfe3ed3773e0fcb1613dea4fd284e33ed9e7342522ed0fbea",
+      "particle_archive_sha256": "acadf2004698c21f5fce18cb9a03eaa5204a77363aa1d050ff92433655fa60e4"
+    },
+    {
+      "path": "outputs\\stage7\\salish_sea\\results.json",
+      "sha256": "041460d4f40586ebb40d006208f3928d4bfd7e7b470eb386e71df3c319379daa",
+      "particle_archive_sha256": "8bb93a0226c6c6e5a2fe6f9d703ba22ef015d56411bf90b67dd67490eddb3da4"
+    }
+  ],
+  "legacy_stop_reasons": {
+    "max_expansions": 17
+  },
+  "legacy_max_replay_error": 0.0,
+  "new_historical_forcing_planning_runs": 0,
+  "actual_timeout_tests": "Deterministic injected clock in pytest; toy abort profiles use max_seconds=0",
+  "scope": "B4 semantics only; B5 profile/budget sweep and B6 real comparisons not run"
+}
