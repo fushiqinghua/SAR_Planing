@@ -1,0 +1,120 @@
+{
+  "stage": "B0",
+  "status": "passed",
+  "baseline_commit": "abd1b472798fbf3d318e83d09caf9b69cc459122",
+  "source_branch": "upload/asar-repro-stage8",
+  "branch": "baseline-v1.1",
+  "local_tag": "asar-repro-v1.0",
+  "initial_git_status_short": "",
+  "tracked_files_checked": 180,
+  "all_match_commit_before_and_after": true,
+  "tests": {
+    "full": {
+      "command": [
+        "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 24.47271889995318,
+      "pytest_summary": "130 passed in 20.94s"
+    },
+    "counterexample": {
+      "command": [
+        "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "tests/test_heuristic_counterexample.py"
+      ],
+      "exit_code": 0,
+      "wall_seconds": 2.5310023999772966,
+      "pytest_summary": "2 passed in 0.25s"
+    }
+  },
+  "historical_stage7_scenarios": {
+    "arctic_ocean": {
+      "T": 60,
+      "q": 0.78,
+      "particles": 500,
+      "forcing_kind": "constant_synthetic",
+      "completed": 3,
+      "budget_exceeded": 5,
+      "stop_reasons": {
+        "max_expansions": 5
+      },
+      "stopped_incumbents": {
+        "ParallelTrack": 5
+      },
+      "limits": {
+        "max_expansions": 600,
+        "max_open": 2400,
+        "max_seconds": 30
+      }
+    },
+    "bay_of_fundy": {
+      "T": 55,
+      "q": 0.78,
+      "particles": 500,
+      "forcing_kind": "constant_synthetic",
+      "completed": 4,
+      "budget_exceeded": 4,
+      "stop_reasons": {
+        "max_expansions": 4
+      },
+      "stopped_incumbents": {
+        "ParallelTrack": 4
+      },
+      "limits": {
+        "max_expansions": 600,
+        "max_open": 2400,
+        "max_seconds": 30
+      }
+    },
+    "lake_ontario": {
+      "T": 49,
+      "q": 0.78,
+      "particles": 500,
+      "forcing_kind": "constant_synthetic",
+      "completed": 3,
+      "budget_exceeded": 5,
+      "stop_reasons": {
+        "max_expansions": 5
+      },
+      "stopped_incumbents": {
+        "ParallelTrack": 5
+      },
+      "limits": {
+        "max_expansions": 600,
+        "max_open": 2400,
+        "max_seconds": 30
+      }
+    },
+    "salish_sea": {
+      "T": 41,
+      "q": 0.78,
+      "particles": 500,
+      "forcing_kind": "constant_synthetic",
+      "completed": 5,
+      "budget_exceeded": 3,
+      "stop_reasons": {
+        "max_expansions": 3
+      },
+      "stopped_incumbents": {
+        "ParallelTrack": 3
+      },
+      "limits": {
+        "max_expansions": 600,
+        "max_open": 2400,
+        "max_seconds": 30
+      }
+    }
+  },
+  "historical_root_witness": {
+    "h_paper": 2.617080177088715,
+    "h_exact": 2.541733337874664,
+    "gap": 0.07534683921405083
+  },
+  "used_historical_forcing": false
+}
