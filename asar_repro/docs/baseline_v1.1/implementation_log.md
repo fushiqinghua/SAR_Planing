@@ -60,3 +60,36 @@ $env:PYTEST_ADDOPTS = '-p no:cacheprovider'
 | [全量 pytest 输出](../../outputs/baseline_v1.1/b0/full_pytest.txt) | `E487124B273DCC95B4FEF74A75F976526FC9AEBD6ECBDBFDC1558BF2834552C4` |
 | [反例 pytest 输出](../../outputs/baseline_v1.1/b0/counterexample_pytest.txt) | `CDF1FD5BF6D9D49F9BA3FE10976A7939BD2B5D273C1145286E690BA3692E786F` |
 | [B0 验收报告](../../outputs/baseline_v1.1/b0/baseline_report.json) | `DBD1E3C09E3881FE16D719AC1EF676F500F8A8E44396D9AF1C260D7508B80C19` |
+
+## B1 · Table I 历史风流文件可得性
+
+**状态为 `blocked`。** 基于 `baseline-v1.1` 上的 B0 提交 `734380e`，对 Lake Ontario 做了最小文件获取，并逐个探测其余三组备选场景。清单生成和代码回归已完成。实际收取的风场、流场文件各为 0，四组数据均为 `unverified`。完整任务窗口、小时缓冲、来源目录证据和下一次重跑命令见[来源核验说明](source_inventory.md)。
+
+### 运行与判读
+
+命令均在 `asar_repro` 下使用上文 B0 环境执行。这里的 `$PY` 指向 `maritime-sar` 解释器。
+
+| 命令 | 退出码 | 本次结果 |
+|---|---:|---|
+| `& $PY scripts/fetch_lake_b1.py` | 2 | Lake 选择 12Z 预报 f01–f05。风索引和湖流列表在建立 HTTPS 连接时报 WinError 10013 |
+| `& $PY scripts/inventory_historical.py` | 2 | 20/20 项 DNS 解析成功，20/20 项 HTTPS 连接失败，0/4 对可以打开 |
+| `& $PY -m pytest -q tests/test_b1_inventory.py` | 0 | 14 passed，0 failed，0 skipped，1.70 秒 |
+| `& $PY -m pytest -q` | 0 | 144 passed，0 failed，0 skipped，13.04 秒 |
+
+新增离线测试包含四组手算 UTC 结束时刻、跨日缓冲、目录响应与本地文件的区分、文件头与来源回执的指纹匹配、损坏文件、GRIB 范围与消息完整性、分月分页与别名、湖流不完整周期、下载限额、短传输与重试保护。测试数据均为测试目录中的临时样例。Lake 本次停止原因是网络访问错误，256 MiB 湖流限额未触发。J、Pd、粒子质量、扩展节点与搜索用时本阶段均不适用。
+
+全量回归后再次对照 B0 清单，v1.0 的 180 个已跟踪文件全部通过 SHA-256 核对。在历史文件达到手册的时空覆盖、物理分量和来源核验要求前，B2 等待。
+
+### 本阶段文件与指纹
+
+| 文件 | SHA-256 |
+|---|---|
+| [归档清单脚本](../../scripts/inventory_historical.py) | `3B328BBD204C6EC9774A4387DC9497CE2A6DA97A93CF6B98BD58BF16DB9AAF32` |
+| [Lake 最小获取脚本](../../scripts/fetch_lake_b1.py) | `6CEEE3A92FB1B0388BFA35B0A383D4DCB5AC12C69468B561F3EC3211221F0FAA` |
+| [B1 测试](../../tests/test_b1_inventory.py) | `ABFE70ABED4523559100ED9FCF18E26F4027AB9B7EE07847F531EC4BD86E80A8` |
+| [四场景来源清单](../../data/manifests/historical_sources.json) | `12448657F1C2829C48CF0538E8EBEF53F26C8EBF12D5012668221C188775E5C5` |
+| [来源核验说明](source_inventory.md) | `A475EA81CCCDEEB62AAB085EB236ACB79608FE95F9BC00E9D959790B58FB7EA6` |
+| [获取回执](../../outputs/baseline_v1.1/b1/lake_acquisition.json) | `7612D5D99B7A85F90AC022C95D31C33D681C68778B7D81FF4D729BDCB6E47401` |
+| [清单命令输出](../../outputs/baseline_v1.1/b1/inventory.txt) | `8F55B405F5787082854E5567ADAFDDF6EA6FD56FCB53A626AD4A7A37A7BD498B` |
+| [B1 pytest 输出](../../outputs/baseline_v1.1/b1/b1_pytest.txt) | `472BF8A255B3109F013735317AB25E5C93B5ACCA2245A56DFC7A1FC33E6E3D37` |
+| [全量 pytest 输出](../../outputs/baseline_v1.1/b1/full_pytest.txt) | `B41B9CBE82653B8A47C4B6C68565D4F193516D784EFA422A5CCBDF847A35BFDA` |
