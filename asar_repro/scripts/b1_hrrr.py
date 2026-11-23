@@ -5,75 +5,18 @@ import hashlib
 import struct
 
 import numpy as np
-from pyproj import Proj
 
 
-def require(ok, message):
-    if not ok:
-        raise ValueError(message)
-
-
-def simple_values(section, payload, count):
-    """Unpack GRIB2 template 5.0, Y = (R + X * 2**E) * 10**(-D)."""
-    n, template, ref, binary, decimal, width, kind = struct.unpack(">IHfHHBB", section[5:])
-    require((n, template, kind) == (count, 0, 0) and 1 <= width <= 16, "unsupported packing")
-    require(len(payload) == (n * width + 7) // 8, "packed wind field length mismatch")
-
-    def signed_magnitude(x):
-        return -(x & 0x7FFF) if x & 0x8000 else x
-
-    bits = np.unpackbits(np.frombuffer(payload, dtype="u1"), count=n * width).reshape(n, width)
-    powers = np.left_shift(1, np.arange(width - 1, -1, -1, dtype=np.uint16))
-    integers = bits @ powers
-    return (ref + np.ldexp(integers.astype(float), signed_magnitude(binary))) * 10.0 ** (
-        -signed_magnitude(decimal)
-    )
-
-
-def fields(message):
-    require(
-        message[:4] == b"GRIB"
-        and message[6:8] == bytes((0, 2))
-        and int.from_bytes(message[8:16], "big") == len(message)
-        and message[-4:] == b"7777",
-        "invalid GRIB2 message",
-    )
-    sections = {}
-    p = 16
-    for number in (1, 3, 4, 5, 6, 7):
-        size, actual = struct.unpack_from(">IB", message, p)
-        require(actual == number and 5 <= size <= len(message) - 4 - p, "invalid GRIB2 section")
-        sections[number] = message[p : p + size]
-        p += size
-    require(p == len(message) - 4 and sections[6][5:] == b"\xff", "unexpected bitmap or section")
-    return sections
+from asar_repro.hrrr import grib_sections as fields, lambert_grid, require, simple_values
 
 
 def geometry(grid, points):
-    require(
-        len(grid) == 81
-        and int.from_bytes(grid[12:14], "big") == 30
-        and grid[14] == 6
-        and grid[46] & 8
-        and grid[63:65] == bytes((0, 64)),
-        "unsupported Lambert grid or vector basis",
-    )
-    nx, ny, lat1, lon1 = struct.unpack_from(">IIII", grid, 30)
+    proj, xx, yy = lambert_grid(grid)
+    nx, ny = len(xx), len(yy)
+    lat1, lon1 = struct.unpack_from(">II", grid, 38)
     lad, lov, dx, dy = struct.unpack_from(">IIII", grid, 47)
     latin1, latin2 = struct.unpack_from(">II", grid, 65)
-    require(
-        nx * ny == int.from_bytes(grid[6:10], "big") and (nx, ny) == (1799, 1059),
-        "grid count mismatch",
-    )
-    proj = Proj(
-        proj="lcc",
-        R=6371229,
-        lat_1=latin1 / 1e6,
-        lat_2=latin2 / 1e6,
-        lat_0=lad / 1e6,
-        lon_0=lov / 1e6,
-    )
-    x0, y0 = proj(lon1 / 1e6, lat1 / 1e6)
+    x0, y0 = xx[0], yy[0]
     x, y = proj(points[:, 0], points[:, 1])
     col, row = (x - x0) / (dx / 1000), (y - y0) / (dy / 1000)
     require(

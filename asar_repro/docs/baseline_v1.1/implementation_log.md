@@ -118,3 +118,37 @@ HRRR 五个 f00 文件共 21,911,006 字节，各含两个 10 米风原始消息
 | [合并后的来源清单](../../data/manifests/historical_sources.json) | `fa6f8c839bf894a3654a74c28e347f598b413e4ae0484bd7d090b718a43fc400` |
 
 获取回执中的原始 URL、起报周期、HRRR 字节区间及逐文件 SHA-256 在合并后的清单中。详细复跑步骤与各测试输出见[来源说明](source_inventory.md)、[逐文件校验输出](../../outputs/baseline_v1.1/b1/local/hashes.txt)、[本地验收输出](../../outputs/baseline_v1.1/b1/local/verification.txt)、[专项测试](../../outputs/baseline_v1.1/b1/local/package_pytest.txt)和[全量回归](../../outputs/baseline_v1.1/b1/local/full_pytest.txt)。
+
+## B2 · Lake Ontario 真实风流适配
+
+**状态为 `passed`。** 从 B1 提交 `57284b0` 接续，逐文件复验 5 份 HRRR 与 5 份 LOOFS 的 SHA-256，并从原始字节解码风流。四个场景中本轮接入 Lake Ontario。数据用于事后环境重建。实测环境为 B0 的 `maritime-sar`，OpenDrift 1.14.12、NumPy 2.4.6、netCDF4 1.7.5、pyproj 3.7.2 和 Shapely 2.2.0。v1.0 的 180 个已跟踪文件全部通过 SHA-256 复核，原 `run_constant` 包含在全量回归中。
+
+- **HRRR。** 读取原生 10 米网格 U/V，先在 3 km Lambert 投影网格双线性插值，再用查询位置的子午线收敛角转成地理东、北分量。以 B1 独立解码的原生格点和球面 Lambert 正切圆锥解析式作对照，最大分量差为 1.64×10⁻¹² m/s，速率模长最大差为 1.52×10⁻¹² m/s。[NCEP 网格模板 3.30](https://www.nco.ncep.noaa.gov/pmb/docs/grib2/grib2_doc/grib2_temp3-30.shtml) · [PROJ Lambert 投影](https://proj.org/en/stable/operations/projections/lcc.html)
+- **LOOFS。** 在原生 UTM 三角网格查找包含位置的单元，采用其最浅 sigma 层的面心向量。原文件的经纬度投影到原生平面后，34395 个节点的最大坐标差约为 0.26 m。选取层的 sigma 约为 −0.025，全域节点所对应的层中心距水面约 0.027–5.712 m。事故点和搜索起点在五个整点的流速均与 B1 原位置样值一致。
+- **时间与缺测。** 两类输入由各自文件的有效 UTC 驱动，共五个逐小时时次，覆盖 13–17 UTC。时间线性插值的最大许可间隔为 3600 秒。流场的两个括点都须为同一位置提供有效湿单元速度。原始数值缺失、干单元、网格外和时段外有显式状态。OpenDrift 的四个速度分量分别由两个互不重叠的 reader 提供，域外速度保留为缺测。
+- **空间抽样。** 搜索格心的 289 个点中，风覆盖全部，流覆盖 221 个，其余 68 个在网格外。本轮另在搜索区域外扩 3 km 的矩形上抽样 25×25 个点，风覆盖 625 个，流覆盖 249 个，其余 376 个在网格外。3 km 是本轮的核验缓冲参数。岸线策略标记为 `historical_real_forcing_allwater`，同时执行 FVCOM 的湿干、域外速度门禁。实际粒子可达范围与搁浅处理留给 B3。
+
+通过 OpenDrift 环境查询核验事故时刻、预漂移中点、CST、搜索结束，并在两个任务位置核对所有四个物理分量。CST 时 CSP 的风为 (4.982572, 2.270503) m/s，流为 (0.212247, 0.012753) m/s。速度分量的 OpenDrift float32 值与适配器计算值的最大差为 2.27×10⁻⁷ m/s。报告按时次保存了全场统计、经纬度范围、域外计数、reader 优先级与输入指纹。J、Pd、搜索扩展和粒子质量账本在本阶段不适用。[forcing 审计](../../outputs/baseline_v1.1/b2/forcing_audit.json)
+
+### 新增文件与运行
+
+- 读取模块核验输入哈希、坐标、单位和时间，并提供独立于漂移模型的采样接口。`probe` 返回向量及状态，`sample` 对缺测查询抛出异常。[forcing 读取与查询](../../src/asar_repro/forcing.py)
+- HRRR 模块提供共享的 GRIB2 simple packing 解码与旋转，B1 核验入口也调用共享解码逻辑。[HRRR 解码和旋转](../../src/asar_repro/hrrr.py) · [B1 核验入口](../../scripts/b1_hrrr.py)
+- OpenDrift 适配层提供表层风流接口与 reader 注册配置。审计脚本对四个时刻的任务位置、搜索格心和外扩范围生成 JSON。[OpenDrift readers](../../src/asar_repro/historical_reader.py) · [实测审计命令](../../scripts/validate_forcing.py)
+- 专项测试在 pytest 隔离目录生成 3×3×4 CF 文件，覆盖单位、经纬度方向和跨日界线、插值、UTC、缺测、来源哈希以及 OpenDrift 数据选择。[B2 专项测试](../../tests/test_forcing.py)
+
+在 `asar_repro` 中沿用 B0 的 PowerShell 环境。精确运行命令和结果如下。
+
+| 命令 | 退出码 | 实测结果 |
+|---|---:|---|
+| `& $PY -m pytest -q tests/test_forcing.py` | 0 | 12 passed，0 failed，0 skipped，9.78 s |
+| `& $PY scripts/validate_forcing.py` | 0 | Lake Ontario 通过，含解释器启动 12.18 s |
+| `& $PY -m pytest -q` | 0 | 160 passed，0 failed，0 skipped，13.47 s |
+
+专项单独执行时出现 88 条来自环境中 cmocean/Matplotlib 的弃用警告。警告原文保留在[专项日志](../../outputs/baseline_v1.1/b2/forcing_pytest.txt)。原始风流文件均位于 B1 导入目录，审计过程直接读取，没有生成裁切文件。
+
+| 证据 | SHA-256 |
+|---|---|
+| [forcing_audit.json](../../outputs/baseline_v1.1/b2/forcing_audit.json) | `B78F6BEABCF396270A06B2305F29BFFE2FA989D9AF3914E7FFC44DE86D94D5BB` |
+| [审计命令输出](../../outputs/baseline_v1.1/b2/forcing_audit_run.txt) | `6E2AE4A59F4C310B67773AD179025FE64C67E0FBB7B758CB8E7229915A66A551` |
+| [全量 pytest 输出](../../outputs/baseline_v1.1/b2/full_pytest.txt) | `35C98144768CB8FB1B643E849C33E7F729A2D25971F08A3E2BEB2DF1E7C59D67` |
