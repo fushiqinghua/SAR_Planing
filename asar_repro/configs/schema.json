@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "A^SAR stage 0 environment check",
+  "type": "object",
+  "properties": {
+    "stage": { "const": 0 }
+  },
+  "required": ["stage"],
+  "additionalProperties": false
+}

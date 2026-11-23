@@ -1,0 +1,10 @@
+__pycache__/
+.pytest_cache/
+*.egg-info/
+.python-user/
+build/
+dist/
+data/raw/
+data/processed/*
+!data/processed/manifest.json
+!data/processed/*_????????????.npz

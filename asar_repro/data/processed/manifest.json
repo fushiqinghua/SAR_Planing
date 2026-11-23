@@ -1,0 +1,261 @@
+{
+  "format_version": 1,
+  "scenarios": {
+    "lake_ontario": {
+      "name": "Lake Ontario",
+      "archive_sha256": "acadf2004698c21f5fce18cb9a03eaa5204a77363aa1d050ff92433655fa60e4",
+      "drift_config_hash": "f04f2c86e650a4111727c73e441f7832bf1d9ac2c88c15ca2df1e23ead30fb59",
+      "drift_config": {
+        "forcing_kind": "constant_synthetic",
+        "forcing": {
+          "x_wind": 4.0,
+          "y_wind": 0.0,
+          "x_sea_water_velocity": 0.15,
+          "y_sea_water_velocity": 0.05,
+          "land_binary_mask": 0
+        },
+        "seed": 41,
+        "radius_m": 100,
+        "particles": 500,
+        "incident_utc": "2025-08-26T14:45:00Z",
+        "cst_utc": "2025-08-26T15:45:00Z",
+        "lkp_lon_lat": [
+          -76.5,
+          44.21
+        ],
+        "csp_lon_lat": [
+          -76.496,
+          44.215
+        ],
+        "object_key": "PIW-2",
+        "budget": 49,
+        "grid_rows_cols": [
+          17,
+          17
+        ],
+        "integration_s": 30,
+        "step_s": 9.26,
+        "cell_width_m": 185.2,
+        "output_s": 30
+      },
+      "special_bins": {
+        "land": 289,
+        "outside": 290,
+        "inactive": 291,
+        "unknown": 292
+      },
+      "object_resolved": {
+        "number": 2,
+        "key": "PIW-2",
+        "description": ">PIW, vertical PFD type III conscious"
+      },
+      "opendrift_version": "1.14.12",
+      "paper_source": "Mugford & Gammell, A^SAR, Table I (missions), Section IV (sensor and aircraft), Table II (C++ wall times)",
+      "paper_url": "https://arxiv.org/html/2511.10792v1",
+      "wind": "HRRR",
+      "current": "LOOFS",
+      "data_availability": "historical_wind_current_pair_unverified_locally",
+      "search_limits": {
+        "max_expansions": 600,
+        "max_open": 2400,
+        "max_seconds": 30
+      },
+      "q": 0.78,
+      "archive": "lake_ontario_acadf2004698.npz",
+      "start_vertex": 144,
+      "metadata_sha256": "09006bbec443a49a8115af7536a26bea56c0d8df04af316e32821f6c2c16f9a2"
+    },
+    "bay_of_fundy": {
+      "name": "Bay of Fundy",
+      "archive_sha256": "ed9006e58d234d67e8d1f96b343a5e287a821fe2798b4bb4333a16260ea15aa8",
+      "drift_config_hash": "d721184e665d5ebef77140fcbc8162784bb31f4bbd35aa5b0a68dacba2a573e7",
+      "drift_config": {
+        "forcing_kind": "constant_synthetic",
+        "forcing": {
+          "x_wind": 4.0,
+          "y_wind": 0.0,
+          "x_sea_water_velocity": 0.15,
+          "y_sea_water_velocity": 0.05,
+          "land_binary_mask": 0
+        },
+        "seed": 41,
+        "radius_m": 100,
+        "particles": 500,
+        "incident_utc": "2025-02-14T00:00:00Z",
+        "cst_utc": "2025-02-14T09:00:00Z",
+        "lkp_lon_lat": [
+          -65.3,
+          45.2
+        ],
+        "csp_lon_lat": [
+          -65.072,
+          45.283
+        ],
+        "object_key": "PIW-1",
+        "budget": 55,
+        "grid_rows_cols": [
+          49,
+          61
+        ],
+        "integration_s": 120,
+        "step_s": 37.04,
+        "cell_width_m": 740.8,
+        "output_s": 120
+      },
+      "special_bins": {
+        "land": 2989,
+        "outside": 2990,
+        "inactive": 2991,
+        "unknown": 2992
+      },
+      "object_resolved": {
+        "number": 1,
+        "key": "PIW-1",
+        "description": "Person-in-water (PIW), unknown state (mean values)"
+      },
+      "opendrift_version": "1.14.12",
+      "paper_source": "Mugford & Gammell, A^SAR, Table I (missions), Section IV (sensor and aircraft), Table II (C++ wall times)",
+      "paper_url": "https://arxiv.org/html/2511.10792v1",
+      "wind": "HRRR",
+      "current": "GoMOFS",
+      "data_availability": "historical_wind_current_pair_unverified_locally",
+      "search_limits": {
+        "max_expansions": 600,
+        "max_open": 2400,
+        "max_seconds": 30
+      },
+      "q": 0.78,
+      "archive": "bay_of_fundy_ed9006e58d23.npz",
+      "start_vertex": 1494,
+      "metadata_sha256": "20867006122d7090087293a7ad56ba5918cad745e197dfa8b9c530a57a403282"
+    },
+    "salish_sea": {
+      "name": "Salish Sea",
+      "archive_sha256": "8bb93a0226c6c6e5a2fe6f9d703ba22ef015d56411bf90b67dd67490eddb3da4",
+      "drift_config_hash": "25c41b57ed4240c8b87a448ed8046567766836814eb2b6eeb65b7f5e6c80cad9",
+      "drift_config": {
+        "forcing_kind": "constant_synthetic",
+        "forcing": {
+          "x_wind": 4.0,
+          "y_wind": 0.0,
+          "x_sea_water_velocity": 0.15,
+          "y_sea_water_velocity": 0.05,
+          "land_binary_mask": 0
+        },
+        "seed": 41,
+        "radius_m": 100,
+        "particles": 500,
+        "incident_utc": "2025-08-24T00:00:00Z",
+        "cst_utc": "2025-08-24T11:00:00Z",
+        "lkp_lon_lat": [
+          -123.07,
+          48.3
+        ],
+        "csp_lon_lat": [
+          -123.187,
+          48.195
+        ],
+        "object_key": "FISHING-VESSEL-1",
+        "budget": 41,
+        "grid_rows_cols": [
+          25,
+          31
+        ],
+        "integration_s": 120,
+        "step_s": 148.16,
+        "cell_width_m": 2963.2,
+        "output_s": 120
+      },
+      "special_bins": {
+        "land": 775,
+        "outside": 776,
+        "inactive": 777,
+        "unknown": 778
+      },
+      "object_resolved": {
+        "number": 50,
+        "key": "FISHING-VESSEL-1",
+        "description": "Fishing vessel, general (mean values)"
+      },
+      "opendrift_version": "1.14.12",
+      "paper_source": "Mugford & Gammell, A^SAR, Table I (missions), Section IV (sensor and aircraft), Table II (C++ wall times)",
+      "paper_url": "https://arxiv.org/html/2511.10792v1",
+      "wind": "HRRR",
+      "current": "CIOPS Salish Sea",
+      "data_availability": "historical_wind_current_pair_unverified_locally",
+      "search_limits": {
+        "max_expansions": 600,
+        "max_open": 2400,
+        "max_seconds": 30
+      },
+      "q": 0.78,
+      "archive": "salish_sea_8bb93a0226c6.npz",
+      "start_vertex": 387,
+      "metadata_sha256": "7b6a52c589dccb3cfdc83157e845dd1f89195d5ced890bcf6c1542e3b7f4e291"
+    },
+    "arctic_ocean": {
+      "name": "Arctic Ocean",
+      "archive_sha256": "bd8f5be63ee77607fa4f80260ef6ebead58048df4da1f41124c145b28b32099e",
+      "drift_config_hash": "e76abb7f4b1923acc13e6763281cde6a3957baef21b2326b74e25e8193e28b9e",
+      "drift_config": {
+        "forcing_kind": "constant_synthetic",
+        "forcing": {
+          "x_wind": 4.0,
+          "y_wind": 0.0,
+          "x_sea_water_velocity": 0.15,
+          "y_sea_water_velocity": 0.05,
+          "land_binary_mask": 0
+        },
+        "seed": 41,
+        "radius_m": 100,
+        "particles": 500,
+        "incident_utc": "2025-08-29T00:00:00Z",
+        "cst_utc": "2025-08-30T00:00:00Z",
+        "lkp_lon_lat": [
+          -90.6,
+          62.85
+        ],
+        "csp_lon_lat": [
+          -90.447,
+          62.786
+        ],
+        "object_key": "LIFE-RAFT-DB-10",
+        "budget": 60,
+        "grid_rows_cols": [
+          65,
+          85
+        ],
+        "integration_s": 120,
+        "step_s": 46.3,
+        "cell_width_m": 926.0,
+        "output_s": 120
+      },
+      "special_bins": {
+        "land": 5525,
+        "outside": 5526,
+        "inactive": 5527,
+        "unknown": 5528
+      },
+      "object_resolved": {
+        "number": 7,
+        "key": "LIFE-RAFT-DB-10",
+        "description": "Life raft, deep ballast (DB) system, general, unknown capacity and loading (mean values)"
+      },
+      "opendrift_version": "1.14.12",
+      "paper_source": "Mugford & Gammell, A^SAR, Table I (missions), Section IV (sensor and aircraft), Table II (C++ wall times)",
+      "paper_url": "https://arxiv.org/html/2511.10792v1",
+      "wind": "GFS",
+      "current": "ESPC-D-V02",
+      "data_availability": "historical_wind_current_pair_unverified_locally",
+      "search_limits": {
+        "max_expansions": 600,
+        "max_open": 2400,
+        "max_seconds": 30
+      },
+      "q": 0.78,
+      "archive": "arctic_ocean_bd8f5be63ee7.npz",
+      "start_vertex": 2762,
+      "metadata_sha256": "146dd45759464cab4ab6e8575294fdc6d99e7482368d33ee61307ebda3e8e822"
+    }
+  }
+}

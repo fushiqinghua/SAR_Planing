@@ -1,0 +1,23 @@
+id: lake_ontario_constant
+forcing_kind: constant_synthetic
+incident_utc: "2025-08-26T14:45:00Z"
+cst_utc: "2025-08-26T15:45:00Z"
+lkp_lon_lat: [-76.5, 44.21]
+csp_lon_lat: [-76.496, 44.215]
+object_key: PIW-2
+particles: 500
+radius_m: 100
+seed: 41
+forcing:
+  x_wind: 4.0
+  y_wind: 0.0
+  x_sea_water_velocity: 0.15
+  y_sea_water_velocity: 0.05
+  land_binary_mask: 0
+integration_s: 30
+output_s: 30
+budget: 49
+step_s: 9.26
+grid_rows_cols: [17, 17]
+cell_width_m: 185.2
+audit_q: 0.78

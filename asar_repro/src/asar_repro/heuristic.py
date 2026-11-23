@@ -1,0 +1,67 @@
+"""Remaining truncated cost estimates for a path-state with unnormalized belief."""
+
+import numpy as np
+
+from .belief import sensor_probabilities, undetected_mass
+from .grid import GridGraph, integer
+from .motion import MatrixMotion, ParticleMotion
+
+
+MODES = ("zero", "mass_lb", "paper_greedy", "paper_literal_abs_time")
+BOUND_MODES = ("zero", "mass_lb")
+
+
+class Heuristic:
+    def __init__(self, grid: GridGraph, *, budget: int, q, motion: MatrixMotion | ParticleMotion, mode: str):
+        if mode not in MODES:
+            raise ValueError(f"unknown heuristic: {mode}")
+        if grid.size != motion.size:
+            raise ValueError("transition matrix size must match the grid")
+        self.grid = grid
+        self.budget = integer(budget, "budget")
+        if isinstance(motion, ParticleMotion):
+            motion.check_horizon(self.budget)
+        self.q = sensor_probabilities(q, grid.size).copy()
+        self.motion = motion
+        self.mode = mode
+        self._reachable = {}
+        # S_R = a + ... + a^R = a(1 + S_{R-1}); includes a=0 and a=1.
+        self._mass_factors = [0.0]
+        if mode == "mass_lb":
+            a = 1.0 - float(self.q.max())
+            for _ in range(self.budget):
+                self._mass_factors.append(a * (1.0 + self._mass_factors[-1]))
+
+    def __call__(self, vertex, depth, belief, *, choices=None) -> float:
+        """Optionally append Algorithm 2's simulated cell IDs to choices."""
+        self.grid.coordinates(vertex)
+        depth = integer(depth, "depth")
+        if depth > self.budget:
+            raise ValueError("depth exceeds budget")
+        if depth == self.budget or self.mode == "zero":
+            return 0.0
+        b = undetected_mass(belief, self.motion.state_size)
+        if self.mode == "mass_lb":
+            return float(b.sum()) * self._mass_factors[self.budget - depth]
+
+        if vertex not in self._reachable:
+            distances = self.grid.distances_from(vertex)
+            self._reachable[vertex] = [
+                np.flatnonzero(distances <= k)
+                for k in range(min(self.budget, int(distances.max())) + 1)
+            ]
+        rings = self._reachable[vertex]
+        total = 0.0
+        for step in range(depth + 1, self.budget + 1):
+            prior = self.motion.propagate(b, step=step)
+            radius = step if self.mode == "paper_literal_abs_time" else step - depth
+            reachable = rings[min(radius, len(rings) - 1)]
+            # IDs ascend, so the first maximum implements the deterministic tie rule.
+            mass = self.motion.cell_mass(prior, step)
+            gains = self.q[reachable] * mass[reachable]
+            best = int(reachable[np.argmax(gains)])
+            b = self.motion.sense(prior, best, self.q, step)
+            total += float(b.sum())
+            if choices is not None:
+                choices.append(best)
+        return total

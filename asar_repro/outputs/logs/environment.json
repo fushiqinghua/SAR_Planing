@@ -1,0 +1,51 @@
+{
+  "stage": 0,
+  "checked_at_utc": "2026-11-22T15:52:43.017570+00:00",
+  "executable": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+  "prefix": "C:\\Users\\35448\\.conda\\envs\\maritime-sar",
+  "python": "3.11.18 | packaged by conda-forge | (main, Oct 26 2026, 11:29:07) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "packages": {
+    "opendrift": {
+      "version": "1.14.12",
+      "module_file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\opendrift\\__init__.py"
+    },
+    "numpy": {
+      "version": "2.4.6",
+      "module_file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\__init__.py"
+    },
+    "scipy": {
+      "version": "1.17.1",
+      "module_file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\scipy\\__init__.py"
+    },
+    "xarray": {
+      "version": "2026.9.0",
+      "module_file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\xarray\\__init__.py"
+    },
+    "matplotlib": {
+      "version": "3.11.2",
+      "module_file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\matplotlib\\__init__.py"
+    },
+    "pandas": {
+      "version": "3.1.1",
+      "module_file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\pandas\\__init__.py"
+    },
+    "pyproj": {
+      "version": "3.7.2",
+      "module_file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\pyproj\\__init__.py"
+    },
+    "pyyaml": {
+      "version": "6.0.3",
+      "module_file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\yaml\\__init__.py"
+    },
+    "pytest": {
+      "version": "9.2.0",
+      "module_file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\pytest\\__init__.py"
+    }
+  },
+  "leeway": {
+    "class": "opendrift.models.leeway.Leeway",
+    "fresh_result_type": "NoneType",
+    "run_called": false
+  }
+}

@@ -1,0 +1,6 @@
+﻿usage: python -m asar_repro.cli [-h]
+
+A^SAR reproduction (stage 0: environment setup).
+
+options:
+  -h, --help  show this help message and exit

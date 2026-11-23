@@ -1,0 +1,6 @@
+archive: outputs/particles/stage5_leeway.npz
+drift_config: configs/lake_ontario_constant.yaml
+heuristic: paper_greedy
+epsilon_grid: [1.10, 1.08, 1.06, 1.04, 1.02, 1.01, 1.005, 1.00]
+limits: {max_expansions: 12000, max_open: 15000, max_seconds: 15}
+initial_path: stage5_audit_transect

@@ -1,0 +1,83 @@
+paper_source: "Mugford & Gammell, A^SAR, Table I (missions), Section IV (sensor and aircraft), Table II (C++ wall times)"
+paper_url: https://arxiv.org/html/2511.10792v1
+archive_catalogs:
+  HRRR: https://registry.opendata.aws/noaa-hrrr-pds/
+  GFS: https://registry.opendata.aws/noaa-gfs-bdp-pds/
+  GoMOFS: https://opendap.co-ops.nos.noaa.gov/ofsdataagg/index.html
+  LOOFS: https://www.glerl.noaa.gov/res/Programs/ipemf/glcfs_data_access.html
+  CIOPS Salish Sea: https://eccc-msc.github.io/open-data/msc-data/nwp_ciops/readme_ciops-datamart_en/
+  ESPC-D-V02: https://www.hycom.org/dataserver/espc-d-v02/global-analysis
+forcing_kind: constant_synthetic
+data_availability: historical_wind_current_pair_unverified_locally
+forcing: {x_wind: 4.0, y_wind: 0.0, x_sea_water_velocity: 0.15, y_sea_water_velocity: 0.05, land_binary_mask: 0}
+q: 0.78
+speed_m_s: 20
+altitude_ft: 300
+particles: 500
+radius_m: 100
+seed: 41
+epsilon: [1.10, 1.08, 1.06, 1.04, 1.02, 1.01, 1.005, 1.00]
+search_limits: {max_expansions: 600, max_open: 2400, max_seconds: 30}
+aco: {first_seed: 7000, trials: 100, ants: 4, generations: 3, evaporation: 0.3, exploration_mass: 0.01, bootstrap_seed: 97, bootstrap_draws: 10000}
+scenarios:
+  lake_ontario:
+    name: Lake Ontario
+    object: PIW-2
+    object_key: PIW-2
+    wind: HRRR
+    current: LOOFS
+    lkp_lon_lat: [-76.5, 44.21]
+    incident_utc: "2025-08-26T14:45:00Z"
+    csp_lon_lat: [-76.496, 44.215]
+    cst_utc: "2025-08-26T15:45:00Z"
+    sweep_width_nm: 0.1
+    budget: 49
+    grid_rows_cols: [17, 17]
+    integration_s: 30
+    table_ii_s: [0.09, 0.09, 0.10, 0.13, 0.19, 0.30, 0.52, 0.86]
+  bay_of_fundy:
+    name: Bay of Fundy
+    object: PIW-1
+    object_key: PIW-1
+    wind: HRRR
+    current: GoMOFS
+    lkp_lon_lat: [-65.3, 45.2]
+    incident_utc: "2025-02-14T00:00:00Z"
+    csp_lon_lat: [-65.072, 45.283]
+    cst_utc: "2025-02-14T09:00:00Z"
+    sweep_width_nm: 0.4
+    budget: 55
+    grid_rows_cols: [49, 61]
+    integration_s: 120
+    table_ii_s: [0.10, 0.11, 0.12, 0.17, 0.29, 1.97, 5.45, 19.73]
+  salish_sea:
+    name: Salish Sea
+    object: Fishing Vessel
+    object_key: FISHING-VESSEL-1
+    wind: HRRR
+    current: CIOPS Salish Sea
+    lkp_lon_lat: [-123.07, 48.3]
+    incident_utc: "2025-08-24T00:00:00Z"
+    csp_lon_lat: [-123.187, 48.195]
+    cst_utc: "2025-08-24T11:00:00Z"
+    sweep_width_nm: 1.6
+    budget: 41
+    grid_rows_cols: [25, 31]
+    integration_s: 120
+    table_ii_s: [0.05, 0.05, 0.07, 0.22, 0.75, 1.32, 1.70, 2.24]
+  arctic_ocean:
+    name: Arctic Ocean
+    alias: hudsons_bay
+    object: Deep Ballast Life Raft
+    object_key: LIFE-RAFT-DB-10
+    wind: GFS
+    current: ESPC-D-V02
+    lkp_lon_lat: [-90.6, 62.85]
+    incident_utc: "2025-08-29T00:00:00Z"
+    csp_lon_lat: [-90.447, 62.786]
+    cst_utc: "2025-08-30T00:00:00Z"
+    sweep_width_nm: 0.5
+    budget: 60
+    grid_rows_cols: [65, 85]
+    integration_s: 120
+    table_ii_s: [0.10, 0.10, 0.10, 0.50, 0.52, 3.09, 10.78, 35.26]

@@ -1,0 +1,38 @@
+         415950 function calls in 0.172 seconds
+
+   Ordered by: cumulative time
+   List reduced from 113 to 30 due to restriction <30>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    0.001    0.001    0.172    0.172 search.py:50(search_asar)
+      301    0.001    0.000    0.169    0.001 search.py:102(enqueue)
+      301    0.026    0.000    0.167    0.001 heuristic.py:35(__call__)
+       42    0.014    0.000    0.068    0.002 grid.py:61(distances_from)
+    12262    0.012    0.000    0.053    0.000 grid.py:39(neighbors)
+    20088    0.008    0.000    0.029    0.000 grid.py:8(integer)
+    12657    0.006    0.000    0.026    0.000 grid.py:33(coordinates)
+    41081    0.006    0.000    0.021    0.000 {built-in method builtins.isinstance}
+    58451    0.015    0.000    0.015    0.000 grid.py:42(<genexpr>)
+     7125    0.003    0.000    0.015    0.000 motion.py:92(propagate)
+     7350    0.012    0.000    0.015    0.000 motion.py:100(sense)
+    20088    0.003    0.000    0.015    0.000 <frozen abc>:117(__instancecheck__)
+     7001    0.013    0.000    0.013    0.000 motion.py:97(cell_mass)
+    20088    0.005    0.000    0.012    0.000 {built-in method _abc._abc_instancecheck}
+     7650    0.002    0.000    0.011    0.000 {method 'sum' of 'numpy.ndarray' objects}
+     7001    0.004    0.000    0.010    0.000 fromnumeric.py:1221(argmax)
+     7650    0.001    0.000    0.009    0.000 _methods.py:47(_sum)
+     8305    0.009    0.000    0.009    0.000 {method 'reduce' of 'numpy.ufunc' objects}
+    20088    0.003    0.000    0.007    0.000 <frozen abc>:121(__subclasscheck__)
+     7896    0.003    0.000    0.007    0.000 fromnumeric.py:48(_wrapfunc)
+    20088    0.005    0.000    0.005    0.000 {built-in method _abc._abc_subclasscheck}
+       42    0.001    0.000    0.004    0.000 heuristic.py:49(<listcomp>)
+      297    0.001    0.000    0.004    0.000 belief.py:32(undetected_mass)
+      894    0.001    0.000    0.003    0.000 numeric.py:679(flatnonzero)
+     7001    0.003    0.000    0.003    0.000 {method 'argmax' of 'numpy.ndarray' objects}
+     7353    0.003    0.000    0.003    0.000 {method 'copy' of 'numpy.ndarray' objects}
+     7126    0.001    0.000    0.002    0.000 motion.py:88(check_horizon)
+    12704    0.002    0.000    0.002    0.000 grid.py:23(size)
+      613    0.001    0.000    0.001    0.000 fromnumeric.py:86(_wrapreduction_any_all)
+      894    0.000    0.000    0.001    0.000 fromnumeric.py:1993(nonzero)
+
+

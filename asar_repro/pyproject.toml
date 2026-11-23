@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "asar-repro"
+version = "0.0.1"
+description = "Reproduction of A^SAR for maritime search and rescue"
+requires-python = ">=3.11"
+dependencies = ["numpy", "scipy"]
+
+[project.optional-dependencies]
+adapter = ["pyproj"]
+report = ["matplotlib", "pyproj", "PyYAML"]
+toy = ["matplotlib", "PyYAML"]
+benchmark = ["matplotlib", "PyYAML", "psutil; sys_platform == 'win32'"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
