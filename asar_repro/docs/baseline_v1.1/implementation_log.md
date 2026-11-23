@@ -304,3 +304,60 @@ paper_greedy 的 2000 次展开 cProfile 中，启发函数累计时间占搜索
 同目录保留原始 .prof、结构化热点 *_stats.json、每次 worker 的 JSON 和 requests/ 参数。时间检查为协作式；父进程额外有搜索秒上限加 60 秒的 watchdog。超时/异常分支有故障注入测试，结果明确为 null 并使整轮命令失败退出；这些测试不冒充实际扫描中的超时次数。
 
 **本轮停在 B5。** B6 的统一真实场景最终比较、路线/生存曲线及后续阶段尚未实施；其余三份用户数据包仍保持原样。后续可依据本次证据配置预算，不要求 ε=1 的大规模搜索全部完成。
+
+## B6 · Lake Ontario 同数据最终基线对照
+
+**状态为 passed。** 从 B5 提交 8bc0732 接续，执行手册 §9。使用 B3 冻结的真实历史粒子，完成 PT、paper_greedy 和 mass_lb 对照；两种搜索各取 ε=1.10、1.04、1.00。统一上限为 5000 次展开、OPEN=20000、30 秒，沿用 B5 隔离 worker 与显式中止语义。可选 ACO_inspired 本轮未运行，无 ACO_original 声明。
+
+### 文件与核验命令
+
+| 文件 | 作用 |
+|---|---|
+| [b6_comparison.json](../../configs/b6_comparison.json) | B3 输入指纹、方法/ε、统一预算、快照时间及可选方法范围 |
+| [compare_b6.py](../../scripts/compare_b6.py) | 原始风流/冻结输入校验、PT 与六次隔离搜索、独立重放、逐步账本、真实/合成输入统计、旧文件保护 |
+| [plot_b6.py](../../scripts/plot_b6.py) | 路径叠图与顺序、先验快照、分状态质量曲线、效率图、输入环境图与自动报告 |
+| [test_b6_comparison.py](../../tests/test_b6_comparison.py) | 输入契约、非法路径/伪造评分、350 行账本、来源和认证、旧输出保护、产物指纹 |
+
+沿用 B0 的 maritime-sar PowerShell 环境，Python 3.11.18、OpenDrift 1.14.12；未安装或升级依赖。纯规划不导入或重新运行 OpenDrift，未修改用户已有海上搜救源码或任何数值核心。
+
+| 命令 | 退出码 | 实测结果 |
+|---|---:|---|
+| & $PY scripts/compare_b6.py | 0 | PT + 6 次搜索，共 7 条完整合法路线 |
+| & $PY -m pytest -q tests/test_b6_comparison.py | 0 | 12 passed，0.71 s；图表标签修订后的最终产物复核 |
+| & $PY -m pytest -q | 0 | 229 passed，0 failed，0 skipped，20.74 s |
+
+测试包含旧 Oracle、动态反例、粒子/矩阵交叉验证和 OpenDrift smoke。每条新路线独立调用 score_path，并用逐 ID 布尔掩码再次核对；J/Pd 最大重放误差均为 0。质量分箱求和与 M_t 的最大差为 3.33×10⁻¹⁶。第 0 帧不探测，350 行账本保留绝对 UTC、访问格、M_t、Pd_t、J_t、增量探测概率及四类特殊格质量。
+
+### 同一真实输入的实测结果
+
+| 方法 | ε | J | Pd(T) | 展开 | 状态与来源 |
+|---|---:|---:|---:|---:|---|
+| ParallelTrack | 不适用 | 20.4776083360 | 0.88106304 | 不适用 | 正常构造 PT；不计入搜索完成率 |
+| paper_greedy | 1.10 | 17.3596840221 | 0.89776904256 | 107 | completed，search |
+| paper_greedy | 1.04 | 17.2938941546 | 0.89737041888 | 1222 | completed，search |
+| paper_greedy | 1.00 | 20.4776083360 | 0.88106304 | 5000 | max_expansions，ParallelTrack |
+| mass_lb | 1.10 / 1.04 / 1.00 | 20.4776083360 | 0.88106304 | 各 5000 | 均 max_expansions，ParallelTrack |
+
+6 次搜索中 2 次完成、4 次预算中止，无实际时间超限或 watchdog 中止。所有路线来源均显式记录；中止分数属于初始 PT，不能作为 A^SAR 搜索改进。paper_greedy 正常完成仍不认证；mass_lb 下界适用，但运行未完成，因此本轮没有离散 ε 证书。ε=1.04 的 J 更低而终点 Pd 略低，两指标不能混同。
+
+PT 实际构造约 0.001035 s；paper_greedy 三档纯求解约 0.1129 / 0.8991 / 4.6274 s；mass_lb 三档约 0.3037 / 0.3204 / 0.3062 s。PT 构造成本、纯搜索时间及二者总计分列，未将校验、重放或作图时间混入。原 Table II C++/M1 Pro 秒数及旧 Stage 7 结果没有修改。
+
+### 环境假设、问题与保留核验
+
+真实数据标签为 historical_real_forcing_allwater：500 粒子、seed=41、PIW-2、17×17 格、185.2 m 格宽、9.26 s 步长、T=49、q=.78。事故 2025-08-26 14:45 UTC，CST 15:45 UTC，终点 15:52:33.740 UTC。全水域岸线假设和四类特殊格保留机制继续适用。结论是使用论文任务参数的真实历史环境重建，不是原作者精确 cycle/原始粒子/地图/手工 PT 的逐点复现。
+
+原始五个 HRRR 与五个 LOOFS 文件重新校验 SHA-256，未重新积分。旧 constant_synthetic 归档只用于轨迹云、位置、风流与特殊格质量的环境输入对照，不进入本轮算法排名。真实风流统计取 B2 四个事件的 LKP/CSP 样本；明确标为局部事件样本统计，不外推为全域均值。两个输入本次四类特殊格质量均为 0，仍保存全部 50 帧账本且不归一化。
+
+首次调度暴露了一个工具衔接问题：ε 的小数点进入文件名后，旧 worker 的 with_suffix 处理改变了读取路径。B6 改用无小数点的稳定运行 ID，保留首次失败记录于 [b6_failed_attempt_01](../../outputs/baseline_v1.1/b6_failed_attempt_01/run_manifest.json)，未混入正式结果。新增测试确认每个运行 ID 都对应实际 worker JSON。数值算法未改。
+
+27 个既存 Stage 7/B3/旧粒子文件的前后指纹全部一致；测试也逐项复核。正式 B6 结果存在时命令拒绝覆盖，复跑须指定新的 --output-dir；明确禁止写入旧 outputs/stage7。图表已经视觉检查，并缩短效率图横轴标签以消除拥挤。
+
+### 保存产物
+
+[最终对照报告](../../outputs/baseline_v1.1/lake_ontario_real/comparison.md) · [metrics.csv](../../outputs/baseline_v1.1/lake_ontario_real/metrics.csv) · [逐步账本](../../outputs/baseline_v1.1/lake_ontario_real/step_metrics.csv) · [runs.json](../../outputs/baseline_v1.1/lake_ontario_real/runs.json) · [来源、代码、命令及保留指纹](../../outputs/baseline_v1.1/lake_ontario_real/run_manifest.json)。
+
+[路径图](../../outputs/baseline_v1.1/lake_ontario_real/paths.png) · [剩余质量曲线](../../outputs/baseline_v1.1/lake_ontario_real/survival_curves.png) · [效率图](../../outputs/baseline_v1.1/lake_ontario_real/runtime_expansions.png) · [t=1/5/15/30 先验快照](../../outputs/baseline_v1.1/lake_ontario_real/probability_snapshots.png) · [real/synthetic 输入图](../../outputs/baseline_v1.1/lake_ontario_real/environment_inputs.png) · [环境统计 JSON](../../outputs/baseline_v1.1/lake_ontario_real/environment_comparison.json) · [环境特殊格质量 CSV](../../outputs/baseline_v1.1/lake_ontario_real/environment_mass.csv)。
+
+[执行输出](../../outputs/baseline_v1.1/b6/comparison_run.txt) · [专项测试](../../outputs/baseline_v1.1/b6/b6_pytest.txt) · [全量回归](../../outputs/baseline_v1.1/b6/full_pytest.txt)。b6_workers/ 保存 PT 初始解、每次请求与原始结果。
+
+**本轮停在 B6。** 未进入后续可执行性约束、工程集成或其他阶段，未导入其余三个用户数据包；原程序与旧报告保持原样。

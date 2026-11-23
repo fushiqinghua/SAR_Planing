@@ -1,0 +1,9 @@
+Command: C:\Users\35448\.conda\envs\maritime-sar\python.exe scripts/compare_b6.py
+paper_greedy_eps_1p1 completed None J 17.359684022080003 expanded 107
+paper_greedy_eps_1p04 completed None J 17.29389415456 expanded 1222
+paper_greedy_eps_1 budget_exceeded max_expansions J 20.477608335999996 expanded 5000
+mass_lb_eps_1p1 budget_exceeded max_expansions J 20.477608335999996 expanded 5000
+mass_lb_eps_1p04 budget_exceeded max_expansions J 20.477608335999996 expanded 5000
+mass_lb_eps_1 budget_exceeded max_expansions J 20.477608335999996 expanded 5000
+{'status': 'passed', 'runs': 7, 'search_completed': 2, 'search_aborted': 4, 'max_replay_J_error': 0.0}
+Exit code: 0
