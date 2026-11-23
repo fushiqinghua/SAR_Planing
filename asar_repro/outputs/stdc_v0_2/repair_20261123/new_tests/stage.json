@@ -1,0 +1,42 @@
+{
+  "status": "passed",
+  "stage": "new_tests",
+  "started_utc": "2026-11-23T14:55:12.619355+00:00",
+  "seeds": 41,
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "-m",
+    "pytest",
+    "-x",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "tests/test_stdc_optimization.py",
+    "tests/test_search_state_reuse.py",
+    "tests/test_stdc_heuristic.py",
+    "--junitxml",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\repair_20261123\\new_tests\\pytest.xml",
+    "--basetemp",
+    "C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\stdc_repair_tmp\\new_tests"
+  ],
+  "preservation_before": {
+    "status": "passed",
+    "baseline_files": 654,
+    "protected_research_files": 1077,
+    "source_files": 96
+  },
+  "exit_code": 0,
+  "test_counts": {
+    "tests": 93,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "preservation_after": {
+    "status": "passed",
+    "baseline_files": 654,
+    "protected_research_files": 1077,
+    "source_files": 96
+  },
+  "wall_s": 9.2569111000048
+}

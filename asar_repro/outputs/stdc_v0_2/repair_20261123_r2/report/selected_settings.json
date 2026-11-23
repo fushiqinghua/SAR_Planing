@@ -1,0 +1,11 @@
+{
+  "scope": "post-experiment engineering choice for this frozen Lake Ontario input only",
+  "heuristic": "stdc_lb",
+  "heuristic_cache_size": 4096,
+  "exact_dominance": false,
+  "selection_reason": "cache-only had lower median wall time and peak memory than exact-dominance STDC in all three tested epsilons; same returned J",
+  "automatic_default_changed": false,
+  "quality_improvement": false,
+  "conditional_certificate_on_budget_stop": false,
+  "limitation": "still returns initial PT; not evidence of superiority to paper baseline"
+}

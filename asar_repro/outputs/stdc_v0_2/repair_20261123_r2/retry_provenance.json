@@ -1,0 +1,11 @@
+{
+  "previous_attempt": "outputs/stdc_v0_2/repair_20261123",
+  "previous_status": "blocked",
+  "cause": "pytest basetemp parent missing, fixture setup WinError 3 before test body",
+  "changed_for_retry": [
+    "scripts/run_stdc_repair.py: create a separate per-run temporary parent before pytest; correct test seed metadata; support descendants of pinned reference"
+  ],
+  "algorithm_changed_for_retry": false,
+  "historical_test_changed_for_retry": false,
+  "all_validation_stages_restarted": true
+}

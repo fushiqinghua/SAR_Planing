@@ -1,0 +1,20 @@
+...E
+=================================== ERRORS ====================================
+______ ERROR at setup of test_cf_storage_unpacks_once_and_preserves_mask ______
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/stdc_repair_tmp/full_tests')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\stdc_repair_tmp\\full_tests'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+=========================== short test summary info ===========================
+ERROR tests/test_b1_additional.py::test_cf_storage_unpacks_once_and_preserves_mask
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+3 passed, 1 error in 9.79s

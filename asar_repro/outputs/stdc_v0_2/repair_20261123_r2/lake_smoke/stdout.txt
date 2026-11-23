@@ -1,0 +1,2 @@
+1: mass_reuse_eps_1p1_rep_0 J=20.477608336 budget_exceeded max_expansions wall=0.441s
+2: stdc_reuse_eps_1p1_rep_0 J=20.477608336 budget_exceeded max_expansions wall=7.214s

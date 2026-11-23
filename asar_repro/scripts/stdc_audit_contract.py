@@ -12,6 +12,10 @@ FROZEN_COMMIT = "81b9be9b51625ed9012a69f9cb90e296bf2ec5c2"
 APPROVED_RESEARCH = {
     "src/asar_repro/heuristic.py":
         "43f94d7ec3ae69dc67ee4416892ea65aa445498a002905f77d4b1f533b168c0b",
+    # User-authorized STDC repair: opt-in exact-state dominance / bounded h cache.
+    # Historical B4/B6 source identity is still checked against FROZEN_COMMIT.
+    "src/asar_repro/search.py":
+        "868b09203c3a782765f9b4440751d56512e5a24c1a0a44d5706e6a6aa5b34bbc",
 }
 
 

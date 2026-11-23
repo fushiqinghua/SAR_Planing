@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "stage": "random_audit",
+  "started_utc": "2026-11-23T14:59:40.405879+00:00",
+  "seeds": {
+    "prefixes": [
+      100,
+      179
+    ],
+    "small": [
+      15000,
+      15034
+    ]
+  },
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "scripts/stdc_validation_guards.py",
+    "random_audit",
+    "--output-dir",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\repair_20261123_r2\\random_audit"
+  ],
+  "preservation_before": {
+    "status": "passed",
+    "baseline_files": 654,
+    "protected_research_files": 1106,
+    "source_files": 96
+  },
+  "exit_code": 0,
+  "preservation_after": {
+    "status": "passed",
+    "baseline_files": 654,
+    "protected_research_files": 1106,
+    "source_files": 96
+  },
+  "wall_s": 30.867453699931502
+}

@@ -1,0 +1,4 @@
+﻿mode,expanded,generated,pruned,max_expanded_depth,max_generated_depth,generated_complete_candidates,duplicate_pops,unique_popped_states,h_calls,h_microseconds_per_call,search_seconds,root_h
+mass_lb,5000,20000,0,6,7,0,4330,671,20001,9.720619206298283,0.3181533000897616,0.2820512820512821
+stdc_lb,5000,20000,0,13,14,0,1698,3303,20001,464.33791845717855,9.462683300022036,9.179977673619849
+paper_greedy,107,428,4,48,49,4,0,108,429,271.64894955054723,0.1195587000111118,16.718346419200003

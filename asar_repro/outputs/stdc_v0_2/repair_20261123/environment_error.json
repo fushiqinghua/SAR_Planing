@@ -1,0 +1,14 @@
+{
+  "status": "blocked",
+  "failure_kind": "pytest fixture setup, before test body",
+  "error": "WinError 3: missing parent of explicit pytest basetemp",
+  "algorithm_assertion_failed": false,
+  "stages_not_started": [
+    "random_audit",
+    "small_search",
+    "lake_smoke",
+    "comparison"
+  ],
+  "repair": "create per-run basetemp parent; no tests or algorithms changed for this environment repair",
+  "retry_policy": "fresh validation directory, all stages from new_tests, original failure retained"
+}

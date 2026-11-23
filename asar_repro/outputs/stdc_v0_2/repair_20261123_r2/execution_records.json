@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "interpreter": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+  "stage_commands": "each stage.json preserves exact command, seed and exit status; stdout/stderr preserved alongside",
+  "new_tests": 93,
+  "full_tests": 356,
+  "random_cases": 160,
+  "prefixes": 18024,
+  "small_cases": 35,
+  "small_searches": 1120,
+  "real_smoke_runs": 2,
+  "paired_real_runs": 72,
+  "paired_completed": 12,
+  "paired_budget_stops": 60,
+  "paired_certified": 0,
+  "new_tests_seeds": [
+    0,
+    5,
+    7,
+    11,
+    12,
+    13,
+    93,
+    615,
+    4517
+  ],
+  "real_particle_seed": 41,
+  "report_command": [
+    "C:/Users/35448/.conda/envs/maritime-sar/python.exe",
+    "scripts/report_stdc_repair.py",
+    "--run-dir",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\repair_20261123_r2"
+  ],
+  "report_exit_code": 0,
+  "report_stdout": "report_command_output.txt",
+  "report_stderr": "not separately captured for report generation; test and benchmark stderr are separately archived",
+  "figure_visual_review": [
+    "report/repair_performance.png",
+    "report/repair_paths_survival.png"
+  ],
+  "first_attempt": "outputs/stdc_v0_2/repair_20261123: blocked at fixture setup; preserved unchanged",
+  "retry_note": "retry_provenance.json",
+  "source_changes": "code_files.json",
+  "quality_goal_status": "not achieved: no improvement in J/Pd over old STDC or paper baseline",
+  "math_changed": false,
+  "original_baseline_changed": false,
+  "github_push": false
+}

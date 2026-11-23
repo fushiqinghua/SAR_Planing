@@ -1,0 +1,1 @@
+{"variant": "paper_reference", "epsilon": 1.0, "J": 20.477608335999996, "status": "budget_exceeded", "stop_reason": "max_expansions", "expanded": 5000, "wall_s": 7.823849099921063, "stats": {}}

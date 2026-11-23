@@ -1,0 +1,41 @@
+{
+  "files": [
+    {
+      "path": "src/asar_repro/stdc_heuristic.py",
+      "sha256": "18bee643e5860683cd4dfa9cbf12d9ec7a2c5ee4e2abd7d0895cf9a144cc980f"
+    },
+    {
+      "path": "src/asar_repro/search.py",
+      "sha256": "868b09203c3a782765f9b4440751d56512e5a24c1a0a44d5706e6a6aa5b34bbc"
+    },
+    {
+      "path": "scripts/stdc_audit_contract.py",
+      "sha256": "d763ee5f1821f3f4350d65076c5767fec4f507b9473542b0387ce78815ee9f57"
+    },
+    {
+      "path": "tests/test_stdc_audit_contract.py",
+      "sha256": "4489e3d3194d16e0ce7f6c95e1f6849c36b552411a46e15c6dbea7bc719f7559"
+    },
+    {
+      "path": "tests/test_stdc_optimization.py",
+      "sha256": "99d3a9701b8ec387fe6778dc130718efa959eb0a823a71036954c3dfba5f7b0b"
+    },
+    {
+      "path": "tests/test_search_state_reuse.py",
+      "sha256": "7f97046b74d9e00e44ad16a196bbbe483a455a9647a78e58415ac460616653a2"
+    },
+    {
+      "path": "scripts/run_stdc_repair.py",
+      "sha256": "eea11feecfaed1f983c7a0e262d931a03fa093579325fa25781eda68cb1783ba"
+    },
+    {
+      "path": "scripts/report_stdc_repair.py",
+      "sha256": "a185918cecd8fd46dbf23de86286de7417fc753d84d7f8f12a67367c80913524"
+    },
+    {
+      "path": "docs/stdc_v0_2/repair_design.md",
+      "sha256": "5cf71cba08b5e3f6327fa66d9920257525e83c82f8f0a026f215f636ce0a6e84"
+    }
+  ],
+  "previous_diagnostic_files": "pre-existing uncommitted work preserved; not newly changed in this repair"
+}

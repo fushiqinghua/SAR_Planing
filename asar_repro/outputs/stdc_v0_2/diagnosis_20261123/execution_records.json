@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "branch": "stdc-research-v0.2",
+  "reference_commit": "4a01dee2275ce3b732f619e0192fd1a417a5766e",
+  "commands": [
+    [
+      "C:/Users/35448/.conda/envs/maritime-sar/python.exe",
+      "scripts\\diagnose_stdc.py",
+      "--output-dir",
+      "outputs/stdc_v0_2/diagnosis_20261123"
+    ],
+    [
+      "C:/Users/35448/.conda/envs/maritime-sar/python.exe",
+      "scripts\\analyze_stdc_trace.py",
+      "--output-dir",
+      "outputs/stdc_v0_2/diagnosis_20261123"
+    ],
+    [
+      "C:/Users/35448/.conda/envs/maritime-sar/python.exe",
+      "scripts\\report_stdc_diagnosis.py",
+      "--output-dir",
+      "outputs/stdc_v0_2/diagnosis_20261123"
+    ]
+  ],
+  "exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "seed": 41,
+  "epsilon": 1.1,
+  "input_type": "frozen real historical Lake Ontario particles, SHA verified",
+  "limits": {
+    "max_expansions": 5000,
+    "max_open": 20000,
+    "max_seconds": 30
+  },
+  "planner_changed": false,
+  "diagnostic_searches_matching_reference": 3,
+  "feasible_suffix_checks": 100,
+  "root_recurrence_check": true,
+  "script_syntax_checks": 3,
+  "pytest_run_this_diagnosis": false,
+  "prior_pytest": {
+    "new_tests": 28,
+    "full_suite": 281,
+    "location": "outputs/stdc_v0_2/local_validation_20261123_r5",
+    "rerun": false
+  },
+  "profiler_scope": "1400 h-only evaluations; not a search benchmark",
+  "source_and_old_artifact_preservation": {
+    "status": "passed",
+    "baseline_files_checked": 654,
+    "changed_baseline_files": [],
+    "changed_production_source": [],
+    "changed_prior_comparison_artifacts": [],
+    "baseline_ref": "81b9be9b51625ed9012a69f9cb90e296bf2ec5c2"
+  },
+  "no_real_optimum_known": true,
+  "no_new_epsilon_certificate": true,
+  "replay_command": "powershell -File outputs/stdc_v0_2/diagnosis_20261123/replay.ps1",
+  "notes": [
+    "Traces affect timing; performance numbers use prior uninstrumented benchmark.",
+    "The profile was originally measured by Python stdin; analyze_stdc_trace.py reproduces the same loop on a fresh output folder.",
+    "No planner changes, state merging, budget changes, forcing changes or GitHub push."
+  ]
+}

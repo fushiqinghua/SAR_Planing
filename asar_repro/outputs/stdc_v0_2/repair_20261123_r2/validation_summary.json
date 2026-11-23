@@ -1,0 +1,229 @@
+{
+  "status": "passed",
+  "stages": {
+    "new_tests": {
+      "status": "passed",
+      "stage": "new_tests",
+      "started_utc": "2026-11-23T14:58:48.825218+00:00",
+      "seeds": [
+        0,
+        5,
+        7,
+        11,
+        12,
+        13,
+        93,
+        615,
+        4517
+      ],
+      "command": [
+        "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+        "-m",
+        "pytest",
+        "-x",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "tests/test_stdc_optimization.py",
+        "tests/test_search_state_reuse.py",
+        "tests/test_stdc_heuristic.py",
+        "--junitxml",
+        "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\repair_20261123_r2\\new_tests\\pytest.xml",
+        "--basetemp",
+        "C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\stdc_repair_tmp\\repair_20261123_r2\\new_tests"
+      ],
+      "preservation_before": {
+        "status": "passed",
+        "baseline_files": 654,
+        "protected_research_files": 1106,
+        "source_files": 96
+      },
+      "exit_code": 0,
+      "test_counts": {
+        "tests": 93,
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0
+      },
+      "preservation_after": {
+        "status": "passed",
+        "baseline_files": 654,
+        "protected_research_files": 1106,
+        "source_files": 96
+      },
+      "wall_s": 8.745398300001398
+    },
+    "full_tests": {
+      "status": "passed",
+      "stage": "full_tests",
+      "started_utc": "2026-11-23T14:58:58.277631+00:00",
+      "seeds": "explicit seeds and frozen fixtures in source_sha256.json; includes particle seed 41",
+      "command": [
+        "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+        "-m",
+        "pytest",
+        "-x",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml",
+        "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\repair_20261123_r2\\full_tests\\pytest.xml",
+        "--basetemp",
+        "C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\stdc_repair_tmp\\repair_20261123_r2\\full_tests"
+      ],
+      "preservation_before": {
+        "status": "passed",
+        "baseline_files": 654,
+        "protected_research_files": 1106,
+        "source_files": 96
+      },
+      "exit_code": 0,
+      "test_counts": {
+        "tests": 356,
+        "errors": 0,
+        "failures": 0,
+        "skipped": 0
+      },
+      "preservation_after": {
+        "status": "passed",
+        "baseline_files": 654,
+        "protected_research_files": 1106,
+        "source_files": 96
+      },
+      "wall_s": 40.470330900046974
+    },
+    "random_audit": {
+      "status": "passed",
+      "stage": "random_audit",
+      "started_utc": "2026-11-23T14:59:40.405879+00:00",
+      "seeds": {
+        "prefixes": [
+          100,
+          179
+        ],
+        "small": [
+          15000,
+          15034
+        ]
+      },
+      "command": [
+        "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+        "scripts/stdc_validation_guards.py",
+        "random_audit",
+        "--output-dir",
+        "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\repair_20261123_r2\\random_audit"
+      ],
+      "preservation_before": {
+        "status": "passed",
+        "baseline_files": 654,
+        "protected_research_files": 1106,
+        "source_files": 96
+      },
+      "exit_code": 0,
+      "preservation_after": {
+        "status": "passed",
+        "baseline_files": 654,
+        "protected_research_files": 1106,
+        "source_files": 96
+      },
+      "wall_s": 30.867453699931502
+    },
+    "small_search": {
+      "status": "passed",
+      "stage": "small_search",
+      "started_utc": "2026-11-23T15:00:11.980902+00:00",
+      "seeds": {
+        "prefixes": [
+          100,
+          179
+        ],
+        "small": [
+          15000,
+          15034
+        ]
+      },
+      "command": [
+        "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+        "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\run_stdc_repair.py",
+        "small_search_worker",
+        "--run-dir",
+        "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\repair_20261123_r2",
+        "--output-dir",
+        "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\repair_20261123_r2\\small_search"
+      ],
+      "preservation_before": {
+        "status": "passed",
+        "baseline_files": 654,
+        "protected_research_files": 1106,
+        "source_files": 96
+      },
+      "exit_code": 0,
+      "preservation_after": {
+        "status": "passed",
+        "baseline_files": 654,
+        "protected_research_files": 1106,
+        "source_files": 96
+      },
+      "wall_s": 18.231714299996383
+    },
+    "lake_smoke": {
+      "status": "passed",
+      "stage": "lake_smoke",
+      "started_utc": "2026-11-23T15:00:31.885347+00:00",
+      "seeds": 41,
+      "command": [
+        "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+        "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\run_stdc_repair.py",
+        "lake_smoke_worker",
+        "--run-dir",
+        "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\repair_20261123_r2",
+        "--output-dir",
+        "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\repair_20261123_r2\\lake_smoke"
+      ],
+      "preservation_before": {
+        "status": "passed",
+        "baseline_files": 654,
+        "protected_research_files": 1106,
+        "source_files": 96
+      },
+      "exit_code": 0,
+      "preservation_after": {
+        "status": "passed",
+        "baseline_files": 654,
+        "protected_research_files": 1106,
+        "source_files": 96
+      },
+      "wall_s": 16.170524600078352
+    },
+    "comparison": {
+      "status": "passed",
+      "stage": "comparison",
+      "started_utc": "2026-11-23T15:00:48.875171+00:00",
+      "seeds": 41,
+      "command": [
+        "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+        "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\run_stdc_repair.py",
+        "comparison_worker",
+        "--run-dir",
+        "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\repair_20261123_r2",
+        "--output-dir",
+        "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\repair_20261123_r2\\comparison"
+      ],
+      "preservation_before": {
+        "status": "passed",
+        "baseline_files": 654,
+        "protected_research_files": 1106,
+        "source_files": 96
+      },
+      "exit_code": 0,
+      "preservation_after": {
+        "status": "passed",
+        "baseline_files": 654,
+        "protected_research_files": 1106,
+        "source_files": 96
+      },
+      "wall_s": 425.85831589996815
+    }
+  },
+  "not_run": []
+}

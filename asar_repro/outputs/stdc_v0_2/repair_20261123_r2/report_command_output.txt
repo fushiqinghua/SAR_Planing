@@ -1,0 +1,2 @@
+本轮 STDC 修复未改善真实场景返回 J；重复计算问题得到针对性处理，弱下界导致的有限预算路径质量问题仍未解决。
+E:\毕业设计\终稿研发\new\baseline\SAR_Planing-stdc-v0.2\asar_repro\outputs\stdc_v0_2\repair_20261123_r2\report

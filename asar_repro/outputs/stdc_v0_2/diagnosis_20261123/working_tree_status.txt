@@ -1,0 +1,6 @@
+?? outputs/stdc_v0_2/diagnosis_20261123.stderr.txt
+?? outputs/stdc_v0_2/diagnosis_20261123.stdout.txt
+?? outputs/stdc_v0_2/diagnosis_20261123/
+?? scripts/analyze_stdc_trace.py
+?? scripts/diagnose_stdc.py
+?? scripts/report_stdc_diagnosis.py

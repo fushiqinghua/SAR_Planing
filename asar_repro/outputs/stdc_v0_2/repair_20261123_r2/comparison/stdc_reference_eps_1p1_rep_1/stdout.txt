@@ -1,0 +1,1 @@
+{"variant": "stdc_reference", "epsilon": 1.1, "J": 20.477608335999996, "status": "budget_exceeded", "stop_reason": "max_expansions", "expanded": 5000, "wall_s": 10.382887599989772, "stats": {}}

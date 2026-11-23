@@ -1,0 +1,1285 @@
+diff --git a/asar_repro/tests/test_search_state_reuse.py b/asar_repro/tests/test_search_state_reuse.py
+new file mode 100644
+index 0000000..e139a44
+--- /dev/null
++++ b/asar_repro/tests/test_search_state_reuse.py
+@@ -0,0 +1,155 @@
++"""Exact-state reuse is optional and must preserve the discrete guarantees."""
++from dataclasses import asdict
++
++import numpy as np
++import pytest
++
++from asar_repro.grid import GridGraph
++from asar_repro.heuristic import Heuristic
++from asar_repro.motion import MatrixMotion, ParticleMotion
++from asar_repro.objective import score_path
++from asar_repro.oracle import enumerate_oracle
++from asar_repro.search import search_asar
++import asar_repro.search as search_module
++
++
++def scenario(kind, budget=4):
++    grid = GridGraph(2, 3)
++    rng = np.random.default_rng(615)
++    q = np.array([0.1, 0.5, 0.8, 0.4, 0.7, 0.9])
++    if kind == 'particles':
++        cells = rng.integers(0, grid.size + 4, size=(budget + 1, 12))
++        cells[:, 0] = grid.size
++        p = rng.dirichlet(np.ones(12))
++        motion = ParticleMotion(cells, grid.size, np.arange(12))
++    else:
++        p = rng.dirichlet(np.ones(grid.size))
++        motion = (MatrixMotion.identity(grid.size) if kind == 'static' else
++                  MatrixMotion.time_varying(rng.dirichlet(np.ones(grid.size), size=(budget, grid.size))))
++    return grid, dict(start=1, budget=budget, p=p, q=q, motion=motion)
++
++
++@pytest.mark.parametrize('kind', ['static', 'dynamic', 'particles'])
++@pytest.mark.parametrize('mode', ['zero', 'mass_lb', 'stdc_lb', 'paper_greedy'])
++def test_h_cache_preserves_complete_reference_result_and_trace(kind, mode):
++    grid, cfg = scenario(kind)
++    before, after, stats = [], [], {}
++    reference = search_asar(grid, **cfg, heuristic=mode, epsilon=1.1, trace=before.append)
++    cached = search_asar(grid, **cfg, heuristic=mode, epsilon=1.1, trace=after.append,
++                         heuristic_cache_size=8, reuse_stats=stats)
++    assert asdict(cached) == asdict(reference)
++    assert after == before
++    assert stats['heuristic_cache_peak_entries'] <= 8
++    assert stats['heuristic_cache_peak_key_bytes'] <= 8 * cfg['motion'].state_size * 8
++    assert stats['heuristic_requests'] == stats['heuristic_evaluations'] + stats['heuristic_cache_hits']
++
++
++@pytest.mark.parametrize('kind', ['static', 'dynamic', 'particles'])
++@pytest.mark.parametrize('epsilon', [1.0, 1.1])
++@pytest.mark.parametrize('prune', [False, True])
++def test_exact_dominance_with_oracle(kind, epsilon, prune):
++    grid, cfg = scenario(kind)
++    optimum = enumerate_oracle(grid, **cfg).J
++    stats = {}
++    result = search_asar(grid, **cfg, heuristic='stdc_lb', epsilon=epsilon, prune=prune,
++                         exact_dominance=True, heuristic_cache_size=16, reuse_stats=stats)
++    replay = score_path(grid, result.path, **cfg)
++    assert result.status == 'completed' and result.theory_certified
++    assert optimum - 1e-10 <= result.J <= epsilon * optimum + 1e-10
++    assert result.J == pytest.approx(replay.J, abs=1e-10)
++    assert stats['state_records'] == stats['state_records_peak']
++
++
++def test_same_depth_vertex_with_different_belief_is_not_merged():
++    # The lower-g prefix at (depth=4, vertex=6) loses after the next observation.
++    # This regression detects the invalid (depth, vertex)-only dominance rule.
++    grid = GridGraph(3, 3)
++    cfg = dict(start=0, budget=5, p=np.array([8, 2, 1, 1, 0, 0, 8, 8, 1]) / 29,
++               q=1, motion=MatrixMotion.identity(9))
++    optimum = enumerate_oracle(grid, **cfg)
++    result = search_asar(grid, **cfg, exact_dominance=True, heuristic_cache_size=64)
++    assert result.path == optimum.path == (0, 1, 0, 3, 6, 7)
++    assert result.J == pytest.approx(76 / 29, abs=1e-12)
++
++
++def test_no_detection_reuses_states_and_preserves_path_and_cost():
++    grid = GridGraph(2, 2)
++    cfg = dict(start=0, budget=7, p=[1, 0, 0, 0], q=0, motion=MatrixMotion.identity(4))
++    reference = search_asar(grid, **cfg, prune=False)
++    stats = {}
++    result = search_asar(grid, **cfg, prune=False, exact_dominance=True, reuse_stats=stats)
++    assert result.J == reference.J == 7
++    assert result.path == reference.path
++    assert result.expanded < reference.expanded
++    assert stats['dominance_pruned'] > 0
++    assert stats['dominance_key_bytes'] == stats['state_records'] * 4 * 8
++
++
++def test_cache_hits_and_eviction_are_bounded_without_state_pruning():
++    grid = GridGraph(2, 2)
++    cfg = dict(start=0, budget=6, p=[1, 0, 0, 0], q=0, motion=MatrixMotion.identity(4))
++    reference = search_asar(grid, **cfg, prune=False)
++    stats = {}
++    cached = search_asar(grid, **cfg, prune=False, heuristic_cache_size=8, reuse_stats=stats)
++    assert asdict(cached) == asdict(reference)
++    assert stats['heuristic_cache_hits'] > 0
++    assert stats['heuristic_cache_evictions'] > 0
++    assert stats['heuristic_cache_peak_entries'] == 8
++    assert stats['state_records'] == stats['dominance_pruned'] == 0
++
++
++def test_lower_g_reopens_state_and_stale_copies_are_skipped(monkeypatch):
++    # Subsampling a valid mass bound produces an admissible but inconsistent h.
++    # Reopen handling must not depend on heuristic consistency or FIFO luck.
++    grid = GridGraph(2, 3)
++    mask = np.random.default_rng(0).integers(0, 2, size=(8, grid.size))
++    cfg = dict(start=1, budget=7, p=np.random.default_rng(0).dirichlet(np.ones(grid.size)),
++               q=0.5, motion=MatrixMotion.identity(grid.size))
++    def factory(*args, **kwargs):
++        estimate = Heuristic(*args, **{**kwargs, 'mode': 'mass_lb'})
++        return lambda v, d, b: float(mask[d, v]) * estimate(v, d, b)
++    monkeypatch.setattr(search_module, 'Heuristic', factory)
++    stats, events = {}, []
++    result = search_asar(grid, **cfg, heuristic='mass_lb', prune=False,
++                         exact_dominance=True, heuristic_cache_size=64,
++                         reuse_stats=stats, trace=events.append)
++    assert result.J == pytest.approx(enumerate_oracle(grid, **cfg).J, abs=1e-10)
++    assert stats['improved_state_records'] > 0
++    assert stats['stale_pops'] > 0
++    assert stats['stale_pops'] == sum(e['event'] == 'stale' for e in events)
++    assert result.expanded == sum(e['event'] == 'pop' and e['depth'] < cfg['budget'] for e in events)
++
++
++@pytest.mark.parametrize('limit,reason', [
++    ({'max_expansions': 0}, 'max_expansions'),
++    ({'max_open': 0}, 'max_open'),
++    ({'max_seconds': 0}, 'max_seconds'),
++])
++def test_reuse_budget_stop_preserves_initial_incumbent_and_is_uncertified(limit, reason):
++    grid, cfg = scenario('particles')
++    path = (1, 0, 1, 0, 1)
++    stats = {}
++    result = search_asar(grid, **cfg, heuristic='stdc_lb', initial_path=path,
++                         exact_dominance=True, heuristic_cache_size=8,
++                         reuse_stats=stats, **limit)
++    assert result.status == 'budget_exceeded' and result.stop_reason == reason
++    assert not result.theory_certified
++    assert result.incumbent_source == 'initial_path' and result.path == path
++    assert result.J == pytest.approx(score_path(grid, path, **cfg).J, abs=1e-12)
++
++
++def test_paper_reproduction_remains_uncertified_with_reuse():
++    grid, cfg = scenario('dynamic')
++    result = search_asar(grid, **cfg, heuristic='paper_greedy',
++                         exact_dominance=True, heuristic_cache_size=8)
++    assert result.status == 'completed' and not result.theory_certified
++
++
++@pytest.mark.parametrize('kwargs', [
++    {'exact_dominance': 1}, {'heuristic_cache_size': -1},
++    {'heuristic_cache_size': 1.5}, {'heuristic_cache_size': True}, {'reuse_stats': []},
++])
++def test_invalid_reuse_options(kwargs):
++    grid, cfg = scenario('static')
++    with pytest.raises(ValueError):
++        search_asar(grid, **cfg, **kwargs)
+
+diff --git a/asar_repro/tests/test_stdc_optimization.py b/asar_repro/tests/test_stdc_optimization.py
+new file mode 100644
+index 0000000..10fd5ad
+--- /dev/null
++++ b/asar_repro/tests/test_stdc_optimization.py
+@@ -0,0 +1,165 @@
++"""Numerical equivalence to the pre-optimization STDC recurrence.
++
++The reference below is independent of the optimized geometry cache and is
++frozen from commit 4a01dee. Mathematical admissibility is separately tested
++against the DFS Oracle in test_stdc_heuristic.py and the audit scripts.
++"""
++import numpy as np
++import pytest
++
++from asar_repro.belief import sensor_probabilities
++from asar_repro.grid import GridGraph
++from asar_repro.motion import MatrixMotion, ParticleMotion
++from asar_repro.objective import score_path
++from asar_repro.stdc_heuristic import STDCHeuristic, STDC_MODES
++
++
++def legacy_value(grid, budget, q, motion, mode, vertex, depth, belief):
++    """Original arithmetic, without calling any optimized STDC method."""
++    if depth == budget:
++        return 0.0
++    q = sensor_probabilities(q, grid.size)
++    distances = grid.distances_from(vertex)
++    relaxed = belief.copy()
++    no_search = belief.copy()
++    capacity = coupled = float(np.sum(belief))
++    total = 0.0
++    for k in range(1, budget - depth + 1):
++        t = depth + k
++        mask = distances <= k
++        if mode != 'stdc_radius_lb':
++            mask &= ((k - distances) % 2 == 0)
++        reach = np.flatnonzero(mask)
++        if not reach.size:
++            raise ValueError('no legal continuation')
++        qr = q[reach]
++        qmax = float(qr.max())
++        if isinstance(motion, ParticleMotion):
++            if mode != 'capacity_lb':
++                factors = np.ones(motion.bin_count, dtype=np.float64)
++                factors[reach] = 1.0 - qr
++                relaxed *= factors[motion.cell_ids[t]]
++                a = float(relaxed.sum())
++            else:
++                a = 0.0
++            if mode != 'reach_lb':
++                mu = motion.cell_mass(no_search, t)
++                u = float(np.max(qr * mu[reach]))
++            else:
++                u = 0.0
++        else:
++            if mode != 'capacity_lb':
++                relaxed = motion.propagate(relaxed, step=t)
++                relaxed[reach] *= (1.0 - qr)
++                a = float(relaxed.sum())
++            else:
++                a = 0.0
++            if mode != 'reach_lb':
++                no_search = motion.propagate(no_search, step=t)
++                mu = motion.cell_mass(no_search, t)
++                u = float(np.max(qr * mu[reach]))
++            else:
++                u = 0.0
++        if mode == 'reach_lb':
++            ell = a
++        else:
++            capacity = max((1.0 - qmax) * capacity, capacity - u)
++            if mode == 'capacity_lb':
++                ell = capacity
++            elif mode == 'stepwise_lb':
++                ell = max(a, capacity)
++            else:
++                coupled = max(a, (1.0 - qmax) * coupled, coupled - u)
++                ell = coupled
++        total += ell
++    return float(total)
++
++
++def case(kind, q_kind):
++    grid, T = GridGraph(2, 3), 6
++    rng = np.random.default_rng(4517)
++    q = rng.uniform(.05, .95, grid.size) if q_kind == 'varying' else np.array([0., 1., .78, 0., 1., .35])
++    if kind == 'particles':
++        cells = rng.integers(0, grid.size + 4, size=(T + 1, 19))
++        cells[:, :4] = np.arange(grid.size, grid.size + 4)
++        motion = ParticleMotion(cells, grid.size, np.arange(19) + 213)
++    elif kind == 'dynamic_matrix':
++        motion = MatrixMotion.time_varying([
++            rng.dirichlet(np.ones(grid.size), size=grid.size) for _ in range(T)])
++    else:
++        motion = MatrixMotion.identity(grid.size)
++    p = rng.dirichlet(np.ones(motion.state_size))
++    return rng, grid, T, p, q, motion
++
++
++@pytest.mark.parametrize('mode', STDC_MODES)
++@pytest.mark.parametrize('kind', ['static_matrix', 'dynamic_matrix', 'particles'])
++@pytest.mark.parametrize('q_kind', ['varying', 'edge_probabilities'])
++def test_cached_geometry_is_bitwise_equivalent_for_path_dependent_prefixes(mode, kind, q_kind):
++    rng, grid, T, p, q, motion = case(kind, q_kind)
++    estimator = STDCHeuristic(grid, budget=T, q=q, motion=motion, mode=mode)
++    original_p, original_q = p.copy(), q.copy()
++    for _ in range(8):
++        path = [int(rng.integers(grid.size))]
++        for _ in range(T):
++            path.append(int(rng.choice(grid.neighbors(path[-1]))))
++        score = score_path(grid, path, start=path[0], budget=T, p=p, q=q,
++                           motion=motion, record_beliefs=True)
++        for d, v in enumerate(path):
++            b = score.beliefs[d]
++            before = b.copy()
++            expected = legacy_value(grid, T, q, motion, mode, v, d, b)
++            assert estimator(v, d, b) == expected
++            # Same geometry with a distinct belief must be recomputed.
++            assert estimator(v, d, .5*b) == legacy_value(grid, T, q, motion, mode, v, d, .5*b)
++            np.testing.assert_array_equal(b, before)
++    np.testing.assert_array_equal(p, original_p)
++    np.testing.assert_array_equal(q, original_q)
++    info = estimator.geometry_cache_info()
++    assert info['hits'] > 0
++    assert info['array_bytes'] <= info['array_byte_limit']
++
++
++@pytest.mark.parametrize('mode', STDC_MODES)
++def test_saturated_reachability_reuses_geometry_without_losing_parity(mode):
++    grid = GridGraph(2, 3)
++    estimator = STDCHeuristic(grid, budget=100, q=.78,
++                             motion=MatrixMotion.identity(grid.size), mode=mode)
++    distances = grid.distances_from(0)
++    for k in (1, 2, 3, 4, 5, 50, 51, 100):
++        mask = distances <= k
++        if mode != 'stdc_radius_lb':
++            mask &= (k - distances) % 2 == 0
++        np.testing.assert_array_equal(estimator.reachable(0, k), np.flatnonzero(mask))
++    assert len(estimator._reach) <= 4
++    for invalid_vertex in (True, -1, grid.size, 1.2):
++        with pytest.raises(ValueError):
++            estimator.reachable(invalid_vertex, 2)
++    for invalid_step in (True, 0, -1, 1.2):
++        with pytest.raises(ValueError):
++            estimator.reachable(0, invalid_step)
++
++
++def test_geometry_cache_eviction_preserves_particle_values_and_special_mass():
++    _, grid, T, p, q, motion = case('particles', 'edge_probabilities')
++    estimator = STDCHeuristic(grid, budget=T, q=q, motion=motion)
++    estimator._geometry_limit = 120  # force eviction and oversized uncached entries
++    for v in range(grid.size):
++        for d in (0, 1, 4):
++            assert estimator(v, d, p) == legacy_value(grid, T, q, motion, 'stdc_lb', v, d, p)
++            assert estimator.geometry_cache_info()['array_bytes'] <= 120
++    outside = np.zeros_like(p)
++    outside[:4] = .25
++    assert estimator(0, 0, outside) == T
++    assert estimator(0, T, p) == 0.0
++
++
++def test_particle_factor_cache_is_read_only_and_never_stores_beliefs():
++    _, grid, T, p, q, motion = case('particles', 'varying')
++    estimator = STDCHeuristic(grid, budget=T, q=q, motion=motion)
++    estimator(0, 0, p)
++    for (reach, qr, miss, _, factors), _ in estimator._geometry.values():
++        for array in (reach, qr, miss, factors):
++            assert not array.flags.writeable
++            assert not np.shares_memory(array, p)
++        np.testing.assert_array_equal(factors[grid.size:], np.ones(4))
+
+diff --git a/asar_repro/scripts/analyze_stdc_trace.py b/asar_repro/scripts/analyze_stdc_trace.py
+new file mode 100644
+index 0000000..e5e69f2
+--- /dev/null
++++ b/asar_repro/scripts/analyze_stdc_trace.py
+@@ -0,0 +1,79 @@
++"""Reproduce supplementary trace analysis and an isolated h-only profile."""
++import argparse
++from collections import Counter,defaultdict
++import cProfile
++import hashlib
++import io
++import json
++from pathlib import Path
++import pstats
++from time import perf_counter
++import numpy as np
++from asar_repro.heuristic import Heuristic
++from asar_repro.objective import score_path
++from stdc_validation_guards import ROOT,load_real,read,save
++
++
++def main(out):
++    _,graph,cfg,_,_,_=load_real()
++    prior=ROOT/'outputs/stdc_v0_2/local_validation_20261123_r5'
++    paper=read(prior/'paired_comparison/paper_greedy_eps_1p1_rep_0/paper_greedy.json')
++    score=score_path(graph,paper['path'],**cfg,record_beliefs=True)
++    keys=[(d,v,hashlib.sha256(np.asarray(score.beliefs[d],dtype='<f8').tobytes()).hexdigest())
++          for d,v in enumerate(paper['path'])]
++    totals=[];states=[];bounds=read(out/'path_bounds.json')
++    for mode in ['mass_lb','stdc_lb','paper_greedy']:
++        events=[json.loads(s) for s in (out/f'{mode}.trace.jsonl').read_text().splitlines()]
++        calls=[r for r in events if r['event'] in ('push','prune')]
++        pops=[r for r in events if r['event']=='pop']
++        popkeys={(r['depth'],r['vertex'],r['belief_sha']) for r in pops}
++        pushkeys={(r['depth'],r['vertex'],r['belief_sha']) for r in calls if r['event']=='push'}
++        fcounts=Counter(r['f_weighted'] for r in pops);gs=defaultdict(set)
++        for r in pops:gs[(r['depth'],r['vertex'],r['belief_sha'])].add(r['g'])
++        hits=[d for d,k in enumerate(keys) if k in popkeys]
++        next_depth=max(hits)+1 if max(hits)<49 else None
++        next_key=keys[next_depth] if next_depth is not None else None
++        next_pushes=[r for r in calls if r['event']=='push' and
++            (r['depth'],r['vertex'],r['belief_sha'])==next_key and r['g']==float(score.g[next_depth])]
++        totals.append(dict(mode=mode,paper_prefix_equivalent_states_popped=hits,
++            next_paper_prefix=next((r for r in bounds if r['path']=='paper_1p1' and r['depth']==next_depth),None),
++            next_paper_prefix_pushes_with_matching_g=next_pushes,
++            max_same_f_pop_multiplicity=max(fcounts.values()),
++            pop_states_with_multiple_g=sum(len(v)>1 for v in gs.values()),most_common_f=fcounts.most_common(3),
++            exact_statement='belief-byte identity does not imply same g or same path'))
++        states.extend(dict(mode=mode,depth=d,pushed=k in pushkeys,popped=k in popkeys) for d,k in enumerate(keys))
++        summary=read(out/f'{mode}.json')
++        summary.update(actual_max_expanded_depth=max(r['depth'] for r in pops[:-1]),
++            generated_complete_candidates=sum(r['depth']==49 for r in calls),
++            remaining_step_iterations=sum(49-r['depth'] for r in calls) if mode!='mass_lb' else None,
++            depth_49_pops=sum(r['depth']==49 for r in pops))
++        save(out/f'{mode}.json',summary)
++    root=read(out/'root_decomposition.json');roots=read(prior/'random_audit/random_audit.json')['roots']
++    save(out/'mechanism_evidence.json',dict(prefix_progress=totals,
++        root_coupling_gain=root['root_h']['stdc_lb']-root['root_h']['stepwise_lb'],
++        root_capacity_gain=root['root_h']['stdc_lb']-root['root_h']['capacity_lb'],
++        toy_roots_with_coupling_gain_gt_1e_8=sum(r['values']['stdc_lb']>r['values']['stepwise_lb']+1e-8 for r in roots),
++        toy_root_count=len(roots),paper_path_mass_at_20=float(score.survival[20]),
++        paper_path_cost_after_20=float(score.survival[21:].sum()),
++        relaxed_root_mass_at_20=root['rows'][19]['ell'],relaxed_root_cost_after_20=root['tail_after_20']))
++    save(out/'known_path_prefix_progress.json',states)
++    # Never replace an existing measured profile when regenerating tables.
++    if not (out/'heuristic_profile.json').exists():
++        h=Heuristic(graph,budget=49,q=.78,motion=cfg['motion'],mode='stdc_lb')
++        prof=cProfile.Profile();tic=perf_counter();prof.enable()
++        for _ in range(100):
++            for d in range(14):h(paper['path'][d],d,score.beliefs[d])
++        prof.disable();wall=perf_counter()-tic
++        prof.dump_stats(str(out/'heuristic_diagnostic.pstats'))
++        stream=io.StringIO();pstats.Stats(prof,stream=stream).strip_dirs().sort_stats('cumulative').print_stats(25)
++        (out/'heuristic_profile.txt').write_text(stream.getvalue(),encoding='utf-8')
++        entries=[dict(file=f,line=line,function=name,primitive_calls=p,calls=n,self_s=s,cumulative_s=c)
++                 for (f,line,name),(p,n,s,c,_) in pstats.Stats(prof).stats.items()]
++        save(out/'heuristic_profile.json',dict(scope='1400 h evaluations on frozen paper route depths 0..13; NOT a search benchmark',
++            epsilon=None,budget_changed=False,calls=1400,wall_s=wall,rows=sorted(entries,key=lambda r:r['cumulative_s'],reverse=True)[:30]))
++
++
++if __name__=='__main__':
++    parser=argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--output-dir',type=Path,required=True)
++    main(parser.parse_args().output_dir.resolve())
+
+diff --git a/asar_repro/scripts/diagnose_stdc.py b/asar_repro/scripts/diagnose_stdc.py
+new file mode 100644
+index 0000000..f45be32
+--- /dev/null
++++ b/asar_repro/scripts/diagnose_stdc.py
+@@ -0,0 +1,152 @@
++"""Observe the frozen planner without changing its objective, ordering or limits.
++
++Diagnostic timing includes tracing overhead and is not a performance benchmark.
++State hashes are counted only: they are never used for merging or pruning.
++"""
++import argparse
++from collections import Counter, defaultdict, deque
++from dataclasses import asdict
++import hashlib
++import json
++from pathlib import Path
++from time import perf_counter
++import traceback
++from unittest.mock import patch
++
++import numpy as np
++from asar_repro.heuristic import Heuristic
++from asar_repro.objective import score_path
++import asar_repro.search as search_module
++from stdc_validation_guards import ROOT, load_real, replay_result, read, save, require, digest
++
++
++def decomposition(graph,cfg):
++    motion=cfg['motion']; p=cfg['p']; q=cfg['q']; T=cfg['budget']
++    h=Heuristic(graph,budget=T,q=q,motion=motion,mode='stdc_lb')
++    relaxed=p.copy(); cap=coupled=float(p.sum()); rows=[]
++    for k in range(1,T+1):
++        reach=h._stdc.reachable(cfg['start'],k)
++        factors=np.ones(motion.bin_count); factors[reach]=1-q
++        relaxed*=factors[motion.cell_ids[k]]
++        a=float(relaxed.sum())
++        mass=motion.cell_mass(p,k); chosen=int(reach[np.argmax(mass[reach])])
++        u=q*float(mass[chosen]); prev=cap
++        cap=max((1-q)*cap,cap-u)
++        mult=(1-q)*coupled; subtract=coupled-u
++        coupled=max(a,mult,subtract)
++        rows.append(dict(k=k,reachable_cells=len(reach),a=a,U=u,U_best_cell=chosen,
++            capacity=cap,stepwise=max(a,cap),ell=coupled,coupled_reach_term=a,
++            coupled_q_term=mult,coupled_U_term=subtract,capacity_before=prev))
++    totals={m:Heuristic(graph,budget=T,q=q,motion=motion,mode=m)(cfg['start'],0,p)
++            for m in ('zero','mass_lb','reach_lb','capacity_lb','stepwise_lb','stdc_radius_lb','stdc_lb','paper_greedy')}
++    require(abs(sum(r['ell'] for r in rows)-totals['stdc_lb'])<1e-12,'root decomposition mismatch')
++    return dict(rows=rows,root_h=totals,tail_after_20=sum(r['ell'] for r in rows if r['k']>20),
++                total_initial_mass=float(p.sum()),special_mass_initial=float(p[motion.cell_ids[0]>=graph.size].sum()))
++
++
++def trace_search(folder,mode,graph,cfg,protocol):
++    events=[]; unique_states=Counter(); popped_states=Counter(); dv=defaultdict(set)
++    open_signatures=defaultdict(deque); last={}; samples={}; base=search_module.Heuristic
++    def factory(*args,**kwargs):
++        estimator=base(*args,**kwargs)
++        def observed(v,d,b,**kw):
++            value=estimator(v,d,b,**kw)
++            key=hashlib.sha256(np.ascontiguousarray(b,dtype='<f8').tobytes()).hexdigest()
++            unique_states[(d,v,key)]+=1; dv[(d,v)].add(key)
++            last.update(d=d,v=v,belief_sha=key,mass=float(b.sum()))
++            return value
++        return observed
++    def trace(row):
++        row=dict(row)
++        sig=tuple(row[k] for k in ('vertex','depth','g','h','f_weighted'))
++        if row['event'] in ('push','prune'):
++            row.update(belief_sha=last['belief_sha'],mass=last['mass'])
++            if row['event']=='push':open_signatures[sig].append((last['belief_sha'],last['mass']))
++        elif row['event']=='pop':
++            key,mass=open_signatures[sig].popleft()
++            row.update(belief_sha=key,mass=mass)
++            popped_states[(row['depth'],row['vertex'],key)]+=1
++        events.append(row)
++    tic=perf_counter()
++    with patch.object(search_module,'Heuristic',factory):
++        result=search_module.search_asar(graph,**cfg,heuristic=mode,epsilon=1.1,
++            initial_path=protocol['initial_path'],trace=trace,**protocol['search_limits'])
++    wall=perf_counter()-tic
++    score=replay_result(graph,cfg,result)
++    ref=read(ROOT/f'outputs/stdc_v0_2/local_validation_20261123_r5/paired_comparison/{mode}_eps_1p1_rep_0/{mode}.json')
++    for key in ('expanded','generated','pruned','peak_open','status','stop_reason','incumbent_source','path','J'):
++        actual=getattr(result,key)
++        if key=='path': actual=list(actual)
++        require(actual==ref[key],f'instrumentation changed {mode}/{key}')
++    with (folder/f'{mode}.trace.jsonl').open('w',encoding='utf-8',newline='\n') as stream:
++        for row in events:stream.write(json.dumps(row,allow_nan=False)+'\n')
++    pops=[r for r in events if r['event']=='pop']
++    depths=[]
++    for depth in sorted({r['depth'] for r in pops}):
++        group=[r for r in pops if r['depth']==depth]
++        depths.append(dict(depth=depth,pops=len(group),f_min=min(r['f_weighted'] for r in group),
++          f_median=float(np.median([r['f_weighted'] for r in group])),f_max=max(r['f_weighted'] for r in group),
++          mass_mean=float(np.mean([r['mass'] for r in group]))))
++    result_row=dict(mode=mode,result=asdict(result),diagnostic_wall_s=wall,
++        matches_uninstrumented_reference=True,popped=len(pops),
++        max_pop_depth=max(r['depth'] for r in pops),max_generated_depth=max(r['depth'] for r in events),
++        terminal_events=sum(r['depth']==cfg['budget'] for r in events),
++        final_pop=pops[-1],depths=depths,
++        unique_evaluated_states=len(unique_states),duplicate_evaluations=sum(unique_states.values())-len(unique_states),
++        unique_popped_states=len(popped_states),duplicate_pops=sum(popped_states.values())-len(popped_states),
++        distinct_depth_vertex=len(dv),depth_vertex_with_multiple_beliefs=sum(len(s)>1 for s in dv.values()),
++        distinct_pop_f_exact=len({r['f_weighted'] for r in pops}),
++        f_quantiles=np.quantile([r['f_weighted'] for r in pops],[0,.25,.5,.75,1]).tolist(),
++        exact_state_duplicates_are_diagnostic_only=True)
++    save(folder/f'{mode}.json',result_row)
++    print(json.dumps({k:result_row[k] for k in ('mode','max_pop_depth','max_generated_depth','terminal_events',
++         'unique_evaluated_states','duplicate_evaluations','duplicate_pops','distinct_pop_f_exact','f_quantiles')},allow_nan=False),flush=True)
++    return result_row
++
++
++def path_bounds(graph,cfg,protocol):
++    old=ROOT/'outputs/stdc_v0_2/local_validation_20261123_r5/paired_comparison'
++    paths={'PT':protocol['initial_path'],
++           'paper_1p1':read(old/'paper_greedy_eps_1p1_rep_0/paper_greedy.json')['path']}
++    rows=[]
++    for name,path in paths.items():
++        score=score_path(graph,path,**cfg,record_beliefs=True)
++        for d in range(50):
++            values={m:Heuristic(graph,budget=49,q=cfg['q'],motion=cfg['motion'],mode=m)
++                      (path[d],d,score.beliefs[d])
++                    for m in ('mass_lb','reach_lb','capacity_lb','stepwise_lb','stdc_lb','paper_greedy')}
++            require(values['stdc_lb']<=score.J-float(score.g[d])+1e-10,'STDC exceeds feasible suffix')
++            rows.append(dict(path=name,depth=d,vertex=path[d],g=float(score.g[d]),
++                  feasible_suffix_cost=score.J-float(score.g[d]),h=values,
++                  stdc_f=float(score.g[d])+1.1*values['stdc_lb']))
++    return rows
++
++
++def main(folder):
++    require(folder.is_relative_to(ROOT/'outputs/stdc_v0_2'),'research outputs only')
++    folder.mkdir(exist_ok=False)
++    files=list((ROOT/'src').rglob('*.py'))
++    before={p.relative_to(ROOT).as_posix():digest(p) for p in files}
++    save(folder/'source_before.json',before)
++    summary=dict(status='running',source_commit='4a01dee2275ce3b732f619e0192fd1a417a5766e',
++                 purpose='causal diagnosis; not a new benchmark or optimizer',modes=['mass_lb','stdc_lb','paper_greedy'],
++                 epsilon=1.1,seed=41,limits=dict(max_expansions=5000,max_open=20000,max_seconds=30))
++    try:
++        protocol,graph,cfg,pt,_,raw=load_real()
++        save(folder/'input_gate.json',dict(status='passed',particle_sha256=protocol['particle_archive']['sha256'],
++             verified_raw_sources=raw,PT_J=pt.J,limits=protocol['search_limits']))
++        save(folder/'root_decomposition.json',decomposition(graph,cfg))
++        save(folder/'path_bounds.json',path_bounds(graph,cfg,protocol))
++        summary['traces']=[trace_search(folder,m,graph,cfg,protocol) for m in summary['modes']]
++        require(before=={p.relative_to(ROOT).as_posix():digest(p) for p in files},'production source changed')
++        summary['status']='passed'
++    except Exception as exc:
++        summary.update(status='blocked',error=str(exc),traceback=traceback.format_exc())
++        raise
++    finally:save(folder/'diagnosis.json',summary)
++
++
++if __name__=='__main__':
++    parser=argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--output-dir',type=Path,required=True)
++    main(parser.parse_args().output_dir.resolve())
+
+diff --git a/asar_repro/scripts/report_stdc_diagnosis.py b/asar_repro/scripts/report_stdc_diagnosis.py
+new file mode 100644
+index 0000000..86ee211
+--- /dev/null
++++ b/asar_repro/scripts/report_stdc_diagnosis.py
+@@ -0,0 +1,146 @@
++"""Summarize diagnostic traces; no planner modifications or additional searches."""
++import argparse
++import csv
++import json
++from pathlib import Path
++import matplotlib
++matplotlib.use('Agg')
++import matplotlib.pyplot as plt
++import numpy as np
++from stdc_validation_guards import ROOT,read,require,save
++
++
++def main(folder):
++    require(read(folder/'diagnosis.json')['status']=='passed','diagnostic search did not pass')
++    modes=['mass_lb','stdc_lb','paper_greedy']
++    traces={m:[json.loads(s) for s in (folder/f'{m}.trace.jsonl').read_text().splitlines()] for m in modes}
++    summaries={m:read(folder/f'{m}.json') for m in modes}
++    root=read(folder/'root_decomposition.json'); evidence=read(folder/'mechanism_evidence.json')
++    profile=read(folder/'heuristic_profile.json')
++    profile_total=max(r['cumulative_s'] for r in profile['rows'])
++    profile_reach=next(r['cumulative_s'] for r in profile['rows'] if r['function']=='reachable')
++    profile_copy=sum(r['self_s'] for r in profile['rows'] if "'copy' of 'numpy.ndarray'" in r['function'])
++    old=read(ROOT/'outputs/stdc_v0_2/local_validation_20261123_r5/paired_comparison/aggregate.json')
++    baseline={r['mode']:r for r in old['aggregate'] if r['epsilon']==1.1}
++    with (folder/'search_diagnosis.csv').open('w',newline='',encoding='utf-8-sig') as stream:
++        keys=['mode','expanded','generated','pruned','max_expanded_depth','max_generated_depth',
++              'generated_complete_candidates','duplicate_pops','unique_popped_states','h_calls',
++              'h_microseconds_per_call','search_seconds','root_h']
++        writer=csv.DictWriter(stream,fieldnames=keys);writer.writeheader()
++        for m in modes:
++            s=summaries[m];b=baseline[m]
++            writer.writerow(dict(mode=m,expanded=s['result']['expanded'],generated=s['result']['generated'],
++                pruned=s['result']['pruned'],max_expanded_depth=s['actual_max_expanded_depth'],
++                max_generated_depth=s['max_generated_depth'],generated_complete_candidates=s['generated_complete_candidates'],
++                duplicate_pops=s['duplicate_pops'],unique_popped_states=s['unique_popped_states'],
++                h_calls=b['heuristic_calls_median'],h_microseconds_per_call=1e6*b['heuristic_wall_s_median']/b['heuristic_calls_median'],
++                search_seconds=b['search_wall_s_median'],root_h=b['root_h_median']))
++    with (folder/'root_decomposition.csv').open('w',newline='',encoding='utf-8-sig') as stream:
++        writer=csv.DictWriter(stream,fieldnames=list(root['rows'][0]));writer.writeheader();writer.writerows(root['rows'])
++    colors={'mass_lb':'#777777','stdc_lb':'#D55E00','paper_greedy':'#0072B2'}
++    fig,axes=plt.subplots(2,2,figsize=(12,8),constrained_layout=True)
++    for m in modes:
++        pops=[r for r in traces[m] if r['event']=='pop']
++        axes[0,0].plot(np.arange(len(pops))+1,[r['depth'] for r in pops],label=m,color=colors[m],linewidth=1)
++        depths=summaries[m]['depths']
++        axes[0,1].plot([r['depth'] for r in depths],[r['pops'] for r in depths],'o-',label=m,color=colors[m],markersize=3)
++    axes[0,0].axhline(49,color='black',ls='--',lw=1);axes[0,0].set_xlabel('Pop index');axes[0,0].set_ylabel('Depth')
++    axes[0,0].set_title('Budget consumed before reaching depth 49');axes[0,0].legend(fontsize=8)
++    axes[0,1].set_yscale('log');axes[0,1].set_xlabel('Depth');axes[0,1].set_ylabel('Pop count (log)')
++    axes[0,1].set_title('Many shallow prefixes; traces are not benchmarks')
++    steps=[r['k'] for r in root['rows']]
++    axes[1,0].plot(steps,[r['ell'] for r in root['rows']],label='STDC relaxed mass bound',color=colors['stdc_lb'])
++    prior=read(ROOT/'outputs/stdc_v0_2/local_validation_20261123_r5/paired_comparison/paper_greedy_eps_1p1_rep_0/paper_greedy.json')
++    axes[1,0].plot(steps,prior['survival'][1:],label='One feasible paper route (not optimum)',color=colors['paper_greedy'])
++    axes[1,0].set_yscale('log');axes[1,0].set_xlabel('Future step k from root');axes[1,0].set_ylabel('Undetected mass (log)')
++    axes[1,0].set_title('Optimistic relaxed tail');axes[1,0].legend(fontsize=8)
++    names=['mass_lb','reach_lb','capacity_lb','stepwise_lb','stdc_lb','paper_greedy']
++    axes[1,1].barh(names,[root['root_h'][m] for m in names],color=['#777777']*4+['#D55E00','#0072B2'])
++    axes[1,1].set_xlabel('Root heuristic');axes[1,1].set_title('paper_greedy is not a certified lower bound')
++    for ax in axes.flat:ax.grid(alpha=.15);ax.set_axisbelow(True)
++    fig.suptitle('STDC diagnosis: frozen Lake Ontario, epsilon=1.10, unchanged 5000-expansion budget')
++    fig.savefig(folder/'diagnosis.png',dpi=170);plt.close(fig)
++    s=summaries['stdc_lb'];paper=summaries['paper_greedy'];mass=summaries['mass_lb']
++    report=f'''# STDC 问题归因报告
++
++结论：当前证据支持“可采纳放松仍过于乐观 → 大量短前缀优先 → 扩展预算内未生成完整路径”，同时存在重复状态计算和较高的启发式开销。没有发现能够解释这次退化的公式、时间索引或搜索接入错误。未修改算法来追求更好结果。
++
++## 诊断范围与可信度
++
++以已上传提交 4a01dee 为起点。读取并校验冻结真实粒子、原 forcing、协议及评价器 SHA，保留原目标、PT 初始路径、ε=1.10、5000 expansions / 20000 OPEN / 30 s。给原 search_asar 添加已有 trace 回调及只读观测包装，没有状态合并或搜索排序变化。
++
++三个诊断搜索的 J、路径、状态、incumbent 来源、expanded/generated/pruned/peak_open 与既有无追踪结果逐项完全一致。诊断墙钟含额外记录开销，不作为性能成绩；本报告耗时来自上一轮三次独立进程基准。未重跑 OpenDrift。生产源码 SHA 前后不变。
++
++## 1. 直接原因：尚未到达完整路径
++
++| 方法 | 扩展数 | 最大展开深度 | 最深生成 | 完整候选数 | 剪枝 |
++|---|---:|---:|---:|---:|---:|
++| mass_lb | 5000 | {mass['actual_max_expanded_depth']} | {mass['max_generated_depth']} | {mass['generated_complete_candidates']} | 0 |
++| STDC | 5000 | {s['actual_max_expanded_depth']} | {s['max_generated_depth']} | {s['generated_complete_candidates']} | 0 |
++| paper_greedy | 107 | {paper['actual_max_expanded_depth']} | {paper['max_generated_depth']} | {paper['generated_complete_candidates']} | 4 |
++
++任务要求 49 步。STDC 最深只生成 14 步，并非找到较好路径后评分或保存错误。search.py 仅在生成完整终点时更新 incumbent；扩展中止返回原 PT 是该行为的直接结果。STDC 比 mass 搜得更深，二者计数相同不代表搜索顺序相同。
++
++在已知 paper 路径上，STDC 仅弹出到第 8 步的等价 (depth, vertex, belief) 状态；第 9 步候选已入队但未出队，其 f=g+1.1h=12.223390，高于所有已出队节点的最大 f=12.178884。更多低 f 前缀挡在该延伸之前。这是对已知可行路径的检查，不是对未知最优路径的识别，也不表示观测到了相同历史路径。
++
++## 2. 下界更紧，但仍然非常乐观
++
++| 根估值 | 数值 |
++|---|---:|
++| mass_lb | {root['root_h']['mass_lb']:.10f} |
++| reach_lb | {root['root_h']['reach_lb']:.10f} |
++| capacity_lb | {root['root_h']['capacity_lb']:.10f} |
++| stepwise_lb | {root['root_h']['stepwise_lb']:.10f} |
++| STDC | {root['root_h']['stdc_lb']:.10f} |
++| paper_greedy（不是可认证下界） | {root['root_h']['paper_greedy']:.10f} |
++
++STDC 的多格同时探测放松忽略了每步只能探测一个格子；capacity 的 U_k 使用未来无探测质量，对先前已经探测消耗过的潜在收益保持乐观。这些是允许的下界放松，不能写成代码漏更新或数学错误。
++
++根状态第 20 步的耦合质量下界只有 {evidence['relaxed_root_mass_at_20']:.8g}；第 21–49 步的尾部代价下界合计只有 {evidence['relaxed_root_cost_after_20']:.8g}。作为对照，一条实际可行 paper 路径在第 20 步仍有未探测质量 {evidence['paper_path_mass_at_20']:.8f}，之后尾部代价为 {evidence['paper_path_cost_after_20']:.8f}。此比较仅展示放松程度；可行路径不是 Oracle 真最优值，不能把差额称为最优值估计误差。
++
++## 3. 时序耦合的新增贡献很小
++
++本真实根状态 STDC−stepwise = {evidence['root_coupling_gain']:.1f}，STDC−capacity = {evidence['root_capacity_gain']:.8g}。已完成的 160 个 toy 根状态中，耦合比 stepwise 严格提高超过 1e-8 的只有 {evidence['toy_roots_with_coupling_gain_gt_1e_8']} 个。
++
++在所检验的 toy 根状态上，STDC 相对 mass 的下界增量主要已由可达性和容量约束解释；对整次搜索的收益归因仍需逐前缀消融。这里没有证明耦合对全部深度或全部输入均无作用。
++
++## 4. 重复工作与计算成本
++
++STDC 的 5001 次出队含最后一次未扩展的预算检查节点；其中 {s['duplicate_pops']} 次重复了之前的 (depth,vertex,belief逐字节指纹)。这些状态的 g 在本次 STDC 出队记录中也相同。20001 次启发式调用中有 {s['duplicate_evaluations']} 次重复相同状态身份，但生成状态的 g 不保证相同。
++
++仅按 (depth,vertex) 合并仍不正确：诊断确实观察到同一位置/深度对应不同 belief。这里仅计数，没有实现去重、剪枝或缓存；完整状态上的支配规则能否在保持正确性的同时带来收益，需要独立验证。
++
++在 ε=1.10 基准中，STDC 调用 h 20001 次，paper 仅 429 次；平均每次约 464 µs 与 272 µs。STDC 跟踪记录对应 {s['remaining_step_iterations']:,} 次剩余时步循环，paper 为 {paper['remaining_step_iterations']:,} 次。主要差距不仅是每次 h 较贵，也来自大量浅层节点反复计算很长的剩余时域。
++
++独立 cProfile 诊断对已知路径深度 0–13 共求值 1400 次：stdc 主函数 Python 自身计算、reachable 的重复参数验证、NumPy 归约和 cell_mass 都产生开销。reachable 累积约 {profile_reach:.3f} s / 总 {profile_total:.3f} s，数组 copy 合计约 {profile_copy:.3f} s；不能把问题简单归咎为数组复制。该剖析包含 profiler 开销，不是搜索性能基准。
++
++## 5. 已排除或未证实的解释
++
++- 未见绝对时间 d+k 与相对 k 混淆、特殊 bin 质量丢弃、t=0 多探测、评分器差异或替换真实输入。
++- STDC 和 mass 的中止均不是先触发 30 秒或 OPEN 上限；二者在三个 ε 的原基准中都先到 5000 次扩展。
++- 不支持把 FIFO 同 f 平台当成 STDC 的主要归因：STDC 5001 次出队有 3270 个不同 f，最大完全同 f 组只有 11 次。mass 的最大同 f 组为 2167 次。没有修改 tie-break 做因果干预，故不声称其完全无影响。
++- paper_greedy 更快、更好只是该冻结场景的有限预算事实；它仍不能认证动态 ε 界。不能为追求接近 paper 的估值而任意抬高 STDC 下界。
++
++## 下一步应验证什么
++
++1. 优先研究保留空间移动连续性、避免过分乐观尾部代价的下界；每项修改先对小图逐前缀 Oracle 检验可采纳性。仅把 h 调大不是合法修复。
++2. 将已证实的重复状态作为单独实验：键必须包含完整 belief，且比较累计 g；不得使用 (depth,vertex) 粗合并。本轮未实施。
++3. 计算加速可以改善耗时，但本轮 5000 扩展先中止，保持同一搜索顺序与扩展预算时，加速本身不会改善返回 J。
++4. 若研究“可行解引导 + 可采纳界认证”的分工，应另立对照协议，给所有方法相同的初始解和预算；不能混写成本轮 STDC 的成果。
++
++当前先冻结归因证据，不实施第二个创新点，不改原目标/forcing/预算，也不自动推送这些新增诊断。
++
++## 证据
++
++- diagnosis.json、三份 *.trace.jsonl：完整搜索轨迹与无追踪参考的一致性断言。
++- root_decomposition.json/CSV、path_bounds.json、known_path_prefix_progress.json、mechanism_evidence.json。
++- search_diagnosis.csv、heuristic_profile.txt/JSON/pstats、diagnosis.png。
++- source_before.json、post_diagnosis_preservation.json：源码与旧数据保护记录。
++'''
++    (folder/'diagnosis_report.md').write_text(report,encoding='utf-8',newline='\n')
++
++
++if __name__=='__main__':
++    parser=argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--output-dir',type=Path,required=True)
++    main(parser.parse_args().output_dir.resolve())
+
+diff --git a/asar_repro/scripts/report_stdc_repair.py b/asar_repro/scripts/report_stdc_repair.py
+new file mode 100644
+index 0000000..77c6c57
+--- /dev/null
++++ b/asar_repro/scripts/report_stdc_repair.py
+@@ -0,0 +1,247 @@
++"""Report the recorded repair experiment, including unsuccessful outcomes."""
++import argparse
++from collections import Counter
++import csv
++from pathlib import Path
++from statistics import median
++
++import matplotlib
++matplotlib.use('Agg')
++import matplotlib.pyplot as plt
++import numpy as np
++
++from run_stdc_repair import VARIANTS, ORDER, REFERENCE, preserve
++from stdc_validation_guards import ROOT, read, save, require, load_real
++
++
++LABELS = {'paper_reference':'Paper reference', 'mass_reference':'Mass reference',
++    'stdc_reference':'STDC reference', 'stdc_geometry':'STDC geometry',
++    'stdc_cache':'STDC + h cache', 'stdc_reuse':'STDC + exact reuse',
++    'paper_reuse':'Paper + exact reuse', 'mass_reuse':'Mass + exact reuse'}
++COLORS = dict(zip(VARIANTS, ['#0072B2','#888888','#E69F00','#F0B750',
++                            '#CC79A7','#D55E00','#009E73','#565656']))
++METRICS = ('J','Pd_T','expanded','generated','pruned','peak_open','search_wall_s',
++           'heuristic_calls','heuristic_wall_s','process_peak_memory_mib')
++
++
++def csv_file(path, rows):
++    with path.open('w', encoding='utf-8-sig', newline='') as stream:
++        writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
++        writer.writeheader(); writer.writerows(rows)
++
++
++def aggregate_rows(rows, epsilons):
++    aggregate = []
++    for eps in epsilons:
++        for variant in VARIANTS:
++            group = [r for r in rows if r['epsilon']==eps and r['variant']==variant]
++            require(len(group)==3 and {r['repeat'] for r in group}=={0,1,2},
++                    f'missing or duplicate repeat: {variant}/{eps}')
++            record = dict(variant=variant, epsilon=eps, runs=3,
++                completed=sum(r['status']=='completed' for r in group),
++                budget_exceeded=sum(r['status']=='budget_exceeded' for r in group),
++                certified=sum(r['theory_certified'] for r in group),
++                stop_reasons=dict(Counter(r['stop_reason'] or 'none' for r in group)),
++                incumbent_sources=dict(Counter(r['incumbent_source'] or 'none' for r in group)),
++                distinct_paths=len({tuple(r['path']) for r in group}),
++                max_generated_depth=max(r['depth_stats']['max_generated_depth'] for r in group),
++                complete_candidates_median=median(r['depth_stats']['complete_candidates'] for r in group))
++            for field in METRICS:
++                values = [r[field] for r in group]
++                record[field+'_median'] = median(values)
++                record[field+'_min'] = min(values); record[field+'_max'] = max(values)
++            for field in ('dominance_pruned','stale_pops','heuristic_cache_hits',
++                          'heuristic_cache_misses','state_records_peak',
++                          'dominance_key_bytes','heuristic_cache_peak_key_bytes'):
++                record[field+'_median'] = median(r['reuse_stats'].get(field,0) for r in group)
++            record['geometry_array_bytes_median'] = median(
++                sum(c['array_bytes']+c['reach_array_bytes'] for c in r['geometry_cache']) for r in group)
++            aggregate.append(record)
++    return aggregate
++
++
++def paired_rows(rows, epsilons):
++    pairs = []
++    comparisons = [('stdc_geometry','stdc_reference'), ('stdc_cache','stdc_geometry'),
++        ('stdc_reuse','stdc_cache'), ('stdc_reuse','stdc_reference'),
++        ('stdc_reuse','paper_reference'), ('stdc_reuse','paper_reuse'),
++        ('stdc_reuse','mass_reuse')]
++    for eps in epsilons:
++        for rep in range(3):
++            group = {r['variant']:r for r in rows if r['epsilon']==eps and r['repeat']==rep}
++            for variant, baseline in comparisons:
++                a,b = group[variant],group[baseline]
++                pairs.append(dict(variant=variant,baseline=baseline,epsilon=eps,repeat=rep,
++                    delta_J=a['J']-b['J'],delta_Pd=a['Pd_T']-b['Pd_T'],
++                    time_ratio=a['search_wall_s']/b['search_wall_s'],
++                    delta_expanded=a['expanded']-b['expanded'],
++                    delta_peak_memory_mib=a['process_peak_memory_mib']-b['process_peak_memory_mib'],
++                    J_improved=a['J']<b['J']-1e-10,
++                    J_worse=a['J']>b['J']+1e-10,
++                    variant_status=a['status'],baseline_status=b['status']))
++    return pairs
++
++
++def figures(output, rows, aggregate):
++    selected = [r for r in aggregate if r['epsilon']==1.1]
++    fig,axes = plt.subplots(2,2,figsize=(13,9),constrained_layout=True)
++    for ax,(metric,title) in zip(axes.flat,[
++        ('search_wall_s','Search wall time (s)'),('expanded','Expanded nodes'),
++        ('J','Truncated cost J (lower is better)'),('process_peak_memory_mib','Process peak working set (MiB)')]):
++        vals = np.array([r[metric+'_median'] for r in selected])
++        errs = np.array([[r[metric+'_median']-r[metric+'_min'] for r in selected],
++                         [r[metric+'_max']-r[metric+'_median'] for r in selected]])
++        y = np.arange(len(selected))
++        ax.barh(y,vals,xerr=errs,capsize=2,color=[COLORS[r['variant']] for r in selected])
++        ax.set_yticks(y,[LABELS[r['variant']]+(' *' if r['budget_exceeded'] else '') for r in selected])
++        ax.invert_yaxis();ax.set_title(title);ax.grid(axis='x',alpha=.2);ax.set_axisbelow(True)
++        for yi,value in zip(y,vals):
++            ax.annotate(f'{value:.3g}',(value,yi),xytext=(4,0),textcoords='offset points',va='center',fontsize=8)
++        ax.margins(x=.18)
++    fig.suptitle('Frozen real Lake Ontario, epsilon=1.10, 3 repeats per variant\n'
++                 'Median and min-max; * includes a budget stop. Completion is not a paper-greedy certificate.',fontsize=11)
++    fig.savefig(output/'repair_performance.png',dpi=170);plt.close(fig)
++
++    protocol,grid,cfg,_,_,_ = load_real()  # SHA gate before reading particle-derived map
++    mass = cfg['motion'].cell_mass(cfg['p'],0)[:grid.size].reshape(grid.rows,grid.cols)
++    chosen = {r['variant']:r for r in rows if r['epsilon']==1.1 and r['repeat']==0}
++    groups = {}
++    for name in VARIANTS:
++        groups.setdefault(tuple(chosen[name]['path']),[]).append(name)
++    fig,axes = plt.subplots(1,2,figsize=(14,6),constrained_layout=True)
++    im = axes[0].imshow(mass,cmap='Blues',vmin=0,vmax=mass.max())
++    fig.colorbar(im,ax=axes[0],label='Initial searchable mass (special bins retained in scores)',shrink=.7)
++    for path,names in groups.items():
++        row = chosen[names[0]]; vertices = np.asarray(path)
++        color = COLORS[names[0]];label = ' / '.join(LABELS[n] for n in names)
++        axes[0].plot(vertices%grid.cols,vertices//grid.cols,'o-',markersize=2,
++                     linewidth=1.2,color=color,label=label)
++        axes[1].plot(np.arange(len(row['survival'])),row['survival'],color=color,label=label)
++    start = protocol['start_vertex']
++    axes[0].scatter(start%grid.cols,start//grid.cols,marker='*',s=110,c='gold',edgecolors='black',zorder=5)
++    axes[0].set_title('Returned paths; identical paths grouped')
++    axes[0].set_xlabel('Grid column');axes[0].set_ylabel('Grid row')
++    axes[1].set_title('Remaining undetected mass from independent replay')
++    axes[1].set_xlabel('Step t (no detection at t=0)');axes[1].set_ylabel('M(t)')
++    axes[1].grid(alpha=.2);axes[1].legend(fontsize=7,loc='best')
++    fig.suptitle('Frozen real particles; epsilon=1.10, repeat 0; shared initial PT and unchanged budgets')
++    fig.savefig(output/'repair_paths_survival.png',dpi=170);plt.close(fig)
++
++
++def main(run):
++    require(run.is_relative_to(ROOT/'outputs/stdc_v0_2'),'research output required')
++    output = run/'report';output.mkdir(exist_ok=False)
++    validation = read(run/'validation_summary.json')
++    if validation['status']!='passed' or validation['not_run']:
++        save(output/'aggregate.json',dict(status='blocked',reason='mandatory validation incomplete or failed'))
++        (output/'repair_report.md').write_text('# STDC 修复验证\n\nblocked：强制门槛未全部通过，不生成完成结论。\n',encoding='utf-8')
++        return 2
++    save(output/'preservation.json',preserve(run))
++    pre = read(run/'preflight.json');epsilons = pre['plan']['epsilons']
++    require(pre['plan']['repeats']==3 and list(pre['plan']['variants'])==list(VARIANTS),'experiment plan changed')
++    data = read(run/'comparison/results.json');rows = data['rows']
++    require(data['status']=='passed' and len(rows)==72,'comparison must contain all 72 planned runs')
++    for r in rows:
++        require(r['forcing_kind']=='historical_real' and r['legal'] and r['replay_error']<=1e-10,'invalid replay/input row')
++        require(r['status'] in ('completed','budget_exceeded'),'unknown status')
++        require(not r['theory_certified'] or (r['status']=='completed' and r['heuristic_mode']!='paper_greedy'),'invalid certificate')
++    aggregate = aggregate_rows(rows,epsilons);pairs = paired_rows(rows,epsilons)
++    fields = ['variant','epsilon','repeat','heuristic_mode','forcing_kind',*METRICS,
++              'status','stop_reason','incumbent_source','theory_certified','guarantee',
++              'replay_J','replay_error','legal','particle_sha256','seed']
++    flat = []
++    for r in rows:
++        record = {field:r[field] for field in fields}
++        record.update(r['depth_stats'])
++        for key in ('dominance_pruned','stale_pops','heuristic_cache_hits','heuristic_cache_misses',
++                    'heuristic_cache_peak_entries','heuristic_cache_peak_key_bytes',
++                    'state_records_peak','dominance_key_bytes'):
++            record[key] = r['reuse_stats'].get(key,0)
++        record['geometry_array_bytes'] = sum(c['array_bytes']+c['reach_array_bytes'] for c in r['geometry_cache'])
++        flat.append(record)
++    csv_file(output/'metrics.csv',flat);csv_file(output/'aggregate.csv',aggregate)
++    csv_file(output/'paired_differences.csv',pairs)
++    quality = [r for r in pairs if r['variant']=='stdc_reuse' and r['baseline']=='stdc_reference']
++    paper = [r for r in pairs if r['variant']=='stdc_reuse' and r['baseline']=='paper_reference']
++    same_engine = [r for r in pairs if r['variant']=='stdc_reuse' and r['baseline']=='paper_reuse']
++    wins = sum(r['J_improved'] for r in quality)
++    verdict = ('本轮 STDC 修复未改善真实场景返回 J；重复计算问题得到针对性处理，弱下界导致的有限预算路径质量问题仍未解决。'
++               if wins==0 else f'本轮 STDC 修复在 {wins}/9 个与旧 STDC 的配对中降低了 J；这是当前冻结场景的有限预算结果，不能推广为跨场景优势。')
++    save(output/'aggregate.json',dict(status='passed',aggregate=aggregate,paired=pairs,
++        verdict=verdict,source_commit=REFERENCE,planned_runs=72,
++        STDC_J_improvements_vs_reference=wins,
++        STDC_J_improvements_vs_paper=sum(r['J_improved'] for r in paper),
++        STDC_J_improvements_vs_paper_same_reuse=sum(r['J_improved'] for r in same_engine),
++        interpretation='one frozen scenario; repeats measure timing variation, not independent scene samples'))
++    figures(output,rows,aggregate)
++    audit = read(run/'random_audit/random_audit.json')
++    small = read(run/'small_search/small_search.json')
++    lines = ['# STDC 修复：验证与同预算对照','',verdict,'',
++        '## 修复范围与对照','',
++        f'- 原实现 reference 从 Git 提交 `{REFERENCE}` 冻结 search.py 与 stdc_heuristic.py 后加载复跑；不将新实现伪装成旧基线。',
++        '- 本轮只处理等价几何计算、完整状态启发式缓存、严格状态支配。原 STDC 下界公式未增强，规划目标、forcing、粒子、初始 PT 和预算均未改变。',
++        '- 两个新增搜索选项默认关闭。paper_reuse/mass_reuse 也使用相同复用机制，以区分通用工程优化与 STDC 特有收益。','',
++        '| variant | 启发式 | 原冻结搜索 | 完整状态支配 | h 缓存条目上限 |',
++        '|---|---|---|---|---:|']
++    for name,(mode,dominance,cache,legacy) in VARIANTS.items():
++        lines.append(f'| {name} | {mode} | {legacy} | {dominance} | {cache} |')
++    lines += ['', '## 强制门槛与数据','',
++        '| 阶段 | 状态 | 测试数 / 说明 |','|---|---|---|']
++    for stage in ORDER:
++        rec = validation['stages'][stage];counts = rec.get('test_counts')
++        detail = str(counts) if counts else '见阶段命令、stdout/stderr、JSON 与源码指纹'
++        lines.append(f"| {stage} | {rec['status']} | {detail} |")
++    lines += ['',
++        f"- 合成小图：160 个场景、{audit['prefix_evaluations']} 个前缀，超出 1e-10 的可采纳性违规数为 {audit['violations']}；最大正差 {audit['positive_overestimation']:.3g}。",
++        f"- 35 组小图：历史搜索 {small['historical_searches']} 次，修复选项搜索 {small['repair_searches']} 次；共 {small['independent_replays']} 条路径独立评分与 Oracle 检查。",
++        '- 真实 Lake Ontario：粒子及原始风流指纹门禁通过；17×17、500 粒子、T=49、q=.78、seed=41，t=0 不探测。未重新运行 Leeway。',
++        '- 8 variants × 3 ε × 3 次独立进程 = 72 次；统一 PT 初始解及 5000 expansions / 20000 OPEN / 30 s，方法次序按重复轮转。',
++        '- geometry/cache 与原 STDC 的路径、J、状态、节点计数须完全一致，驱动器已强制检查。支配会改变被扩展的完整状态集合，按 Oracle 和独立回放验证。',
++        '- depth_stats 为 trace 观测最深生成/完整候选，含 dominance_prune；最后预算边界的节点可能在回调前退出，不能将这些观测计数当成所有内部节点的绝对精确总数。','',
++        '## 完整 ε 对照：三次重复的中位数','',
++        '| ε | variant | J↓ | Pd↑ | 扩展 | 秒〔min–max〕 | 峰值 MiB | completed/budget | incumbent 来源 | 条件认证 |',
++        '|---|---|---:|---:|---:|---:|---:|---|---|---|']
++    for r in aggregate:
++        sources = ', '.join(f'{k}:{v}' for k,v in r['incumbent_sources'].items())
++        lines.append(f"| {r['epsilon']:.2f} | {r['variant']} | {r['J_median']:.9f} | {r['Pd_T_median']:.6f} | "
++            f"{r['expanded_median']:.0f} | {r['search_wall_s_median']:.4f}〔{r['search_wall_s_min']:.4f}–{r['search_wall_s_max']:.4f}〕 | "
++            f"{r['process_peak_memory_mib_median']:.2f} | {r['completed']}/{r['budget_exceeded']} | {sources} | {r['certified']}/3 |")
++    lines += ['', 'budget_exceeded 均为 uncertified；具体 max_expansions/max_open/max_seconds 逐行保留于 metrics.csv。paper_greedy 的 completed 也不具有动态 ε 认证。',
++        '', '## 配对差异与归因','',
++        '| ε | variant / 对照 | ΔJ | 时间倍数 | Δ峰值 MiB | J 改善次数 |','|---|---|---:|---:|---:|---|']
++    for eps in epsilons:
++        identities = list(dict.fromkeys((r['variant'],r['baseline']) for r in pairs))
++        for variant,baseline in identities:
++            group = [r for r in pairs if r['epsilon']==eps and r['variant']==variant and r['baseline']==baseline]
++            lines.append(f"| {eps:.2f} | {variant} / {baseline} | {median(r['delta_J'] for r in group):+.9f} | "
++                f"{median(r['time_ratio'] for r in group):.3f}× | {median(r['delta_peak_memory_mib'] for r in group):+.2f} | "
++                f"{sum(r['J_improved'] for r in group)}/3 |")
++    lines += ['',
++        '- geometry / reference 衡量保持数值与搜索顺序的几何加速；cache / geometry 衡量完整 belief 的 h 复用；reuse / cache 衡量严格支配的新增影响。',
++        '- 只有对 paper_reference 的 J/Pd/时间差能回答相对原 baseline A^SAR 的本场景表现；对 paper_reuse 的差异进一步控制通用搜索优化。改善旧 STDC 的耗时不等于超过 paper baseline。',
++        '- 本轮没有新增更紧的下界。若完整候选仍为零或 J 仍等于初始 PT，不将计算加速解释成路径质量瓶颈已修复。','',
++        '## 正确性前提与内存代价','',
++        '- 支配键包括 depth、vertex、belief dtype/shape/完整字节；运动、传感器和时域在单次搜索内固定。相同完整状态的任意合法后缀具有相同未来 belief 和新增代价，因此仅保留较小 g 不损失更优完成路径。更小 g 重新入队，较大 g 的旧堆项过期跳过。',
++        '- 未按 (depth,vertex) 合并、未用哈希碰撞身份或浮点容差近似合并；路径历史必须仅通过当前完整 belief、位置、深度影响未来。若以后加入转向、燃油或历史约束，必须扩展状态键。',
++        '- h 的 LRU 上限为 4096 条；几何缓存额外浮点数组上限为 16 MiB，可达整数数组另计。完整状态支配表保留遇到的状态，并不由 OPEN 条目数直接限制，可能增加内存。',
++        '- metrics 的字节计数只覆盖相应键载荷/数组；可能共享引用，不宜直接相加当作进程增量。峰值 MiB 为独立工作进程 peak working set，包含输入校验、预处理和回放，不是纯搜索堆。',
++        '- 预算中止无 ε 认证。可采纳模式仅在离散模型前提成立且搜索完成时具有条件性 ε 界；本地有限测试不是全输入形式化浮点证明。',
++        '- 真实历史环境归档沿用 allwater 假设与本地 PT，不声称复现原作者私有 forcing 或手工 PT。三次重复不是三个独立场景。','',
++        '## 文件与复跑','',
++        '- metrics.csv：72 条运行；aggregate.json/CSV：24 组汇总及配对解释；paired_differences.csv：逐重复差值。',
++        '- repair_performance.png：ε=1.10 的耗时、扩展、J、内存；repair_paths_survival.png：独立回放的路径和剩余质量。',
++        '- 各阶段目录保留命令、seed、stderr、JUnit、JSON 和 git diff；comparison 每个子目录保留完整路径和来源。',
++        '- 初始化新目录后，按 new_tests → full_tests → random_audit → small_search → lake_smoke → comparison 顺序运行 scripts/run_stdc_repair.py。',
++        '- 报告命令：`python scripts/report_stdc_repair.py --run-dir <本轮目录>`；拒绝覆盖已有 report 目录。',
++        '- 本轮没有实施新下界或第二个创新点；没有修改 baseline-v1.1、B7 原始结果和评价器。','']
++    (output/'repair_report.md').write_text('\n'.join(lines),encoding='utf-8')
++    print(verdict)
++    print(output)
++    return 0
++
++
++if __name__=='__main__':
++    parser = argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--run-dir',type=Path,required=True)
++    args = parser.parse_args()
++    raise SystemExit(main(args.run_dir.resolve()))
+
+diff --git a/asar_repro/scripts/run_stdc_repair.py b/asar_repro/scripts/run_stdc_repair.py
+new file mode 100644
+index 0000000..52904e8
+--- /dev/null
++++ b/asar_repro/scripts/run_stdc_repair.py
+@@ -0,0 +1,293 @@
++"""Fail-fast repair validation and paired experiments; frozen inputs stay read-only."""
++import argparse
++from dataclasses import asdict
++from datetime import datetime, timezone
++import importlib.util
++import importlib.metadata
++import json
++from pathlib import Path
++import subprocess
++import sys
++from time import perf_counter
++import traceback
++import xml.etree.ElementTree as ET
++
++import numpy as np
++import psutil
++
++from asar_repro.heuristic import Heuristic
++from asar_repro.oracle import enumerate_oracle
++import asar_repro.search as search_module
++from run_stdc_small_search import case
++from stdc_validation_guards import (ROOT, read, save, require, digest, load_real,
++                                    replay_result, small_search, freeze_case)
++
++REFERENCE = '4a01dee2275ce3b732f619e0192fd1a417a5766e'
++OLD = ROOT/'outputs/stdc_v0_2/local_validation_20261123_r5'
++ORDER = ('new_tests','full_tests','random_audit','small_search','lake_smoke','comparison')
++VARIANTS = {
++    'paper_reference': ('paper_greedy', False, 0, True),
++    'mass_reference': ('mass_lb', False, 0, True),
++    'stdc_reference': ('stdc_lb', False, 0, True),
++    'stdc_geometry': ('stdc_lb', False, 0, False),
++    'stdc_cache': ('stdc_lb', False, 4096, False),
++    'stdc_reuse': ('stdc_lb', True, 4096, False),
++    'paper_reuse': ('paper_greedy', True, 4096, False),
++    'mass_reuse': ('mass_lb', True, 4096, False),
++}
++
++
++def git(*args, cwd=ROOT):
++    return subprocess.check_output(['git','-c',f'safe.directory={Path(cwd).parent.as_posix()}',*args],cwd=cwd)
++
++
++def sources():
++    return {p.relative_to(ROOT).as_posix():digest(p) for top in ('src','tests','scripts')
++            for p in sorted((ROOT/top).rglob('*.py'))}
++
++
++def snapshot(folder):
++    (folder/'changes.diff').write_bytes(git('diff','HEAD','--binary'))
++    tracked=set(git('ls-files','-z').decode().split('\0'))
++    additions=[]
++    for name in sources():
++        if name not in tracked:
++            proc=subprocess.run(['git','diff','--no-index','--','/dev/null','asar_repro/'+name],
++                cwd=ROOT.parent,capture_output=True)
++            require(proc.returncode==1,'new source diff failed: '+name)
++            additions.append(proc.stdout)
++    (folder/'new_sources.diff').write_bytes(b'\n'.join(additions))
++    (folder/'git.status').write_bytes(git('status','--short'))
++    save(folder/'source_sha256.json',sources())
++
++
++def preserve(run):
++    pre=read(run/'preflight.json'); old=read(OLD/'00_preflight.json')
++    base=Path(old['baseline_root'])
++    require(git('branch','--show-current').decode().strip()=='stdc-research-v0.2','wrong research branch')
++    require(git('rev-parse','baseline-v1.1').decode().strip()==old['base_commit'],'baseline ref moved')
++    require(git('branch','--show-current',cwd=base).decode().strip()=='baseline-v1.1','baseline checkout moved')
++    for name,sha in old['baseline_all_preserved'].items():
++        require(digest(base/name)==sha,'baseline file changed: '+name)
++    for name,sha in pre['protected'].items():
++        require(digest(ROOT/name)==sha,'protected input/result changed: '+name)
++    require(sources()==pre['source_sha256'],'source changed after validation freeze')
++    return dict(status='passed',baseline_files=len(old['baseline_all_preserved']),
++                protected_research_files=len(pre['protected']),source_files=len(pre['source_sha256']))
++
++
++def init(run):
++    require(run.is_relative_to(ROOT/'outputs/stdc_v0_2'),'research output required')
++    run.mkdir(exist_ok=False)
++    current_commit=git('rev-parse','HEAD').decode().strip()
++    require(git('merge-base',REFERENCE,current_commit).decode().strip()==REFERENCE,
++            'research checkout must descend from frozen reference')
++    paths=[]
++    for top in ('data','outputs'):
++        paths.extend(p for p in (ROOT/top).rglob('*') if p.is_file() and not p.is_relative_to(run))
++    # The frozen scorer, motion, grid and input adapters are not repair targets.
++    for p in (ROOT/'src').rglob('*.py'):
++        if p.name not in ('stdc_heuristic.py','search.py'):
++            paths.append(p)
++    pre=dict(status='passed',source_commit=current_commit,reference_commit=REFERENCE,source_sha256=sources(),
++             interpreter=sys.executable,python_version=sys.version,
++             versions={name:importlib.metadata.version(name) for name in ('numpy','scipy','pytest','opendrift')},
++             protected={p.relative_to(ROOT).as_posix():digest(p) for p in sorted(paths)},
++             user_authorization='Repair the diagnosed STDC issues on research branch',
++             plan=dict(order=ORDER,variants=VARIANTS,epsilons=[1.1,1.04,1.0],repeats=3,
++                       limits=dict(max_expansions=5000,max_open=20000,max_seconds=30),
++                       h_cache_entries=4096,seed=41,forcing='historical_real',
++                       synthetic_seeds=dict(prefixes=[100,179],small=[15000,15034])),
++             scope='equivalent geometry cache plus opt-in exact-state reuse; no new heuristic or objective')
++    save(run/'preflight.json',pre)
++    (run/'reference').mkdir()
++    for name in ('search','stdc_heuristic','heuristic'):
++        (run/'reference'/f'{name}.py').write_bytes(git('show',f'{REFERENCE}:asar_repro/src/asar_repro/{name}.py'))
++    snapshot(run)
++    save(run/'preservation_initial.json',preserve(run))
++
++
++def load_reference(run, name):
++    path=run/'reference'/f'{name}.py'
++    require(path.read_bytes()==git('show',f'{REFERENCE}:asar_repro/src/asar_repro/{name}.py'),
++            'legacy source fingerprint changed')
++    key='asar_repro._repair_reference_'+name
++    spec=importlib.util.spec_from_file_location(key,path)
++    module=importlib.util.module_from_spec(spec);sys.modules[key]=module;spec.loader.exec_module(module)
++    return module
++
++
++def small_worker(folder):
++    # Re-run all 490 historical searches before opt-in variants.
++    old=folder/'reference_modes';old.mkdir();small_search(old)
++    rows=[];inputs=folder/'inputs';inputs.mkdir()
++    with (folder/'repair_rows.jsonl').open('w',encoding='utf-8',buffering=1) as stream:
++        for seed in range(15000,15035):
++            graph,cfg=case(seed)
++            sha=freeze_case(inputs,str(seed),graph,cfg)
++            optimum=enumerate_oracle(graph,**cfg).J
++            for mode in ('zero','mass_lb','stdc_lb'):
++                for eps in (1.,1.04,1.1):
++                    reference=search_module.search_asar(graph,**cfg,heuristic=mode,epsilon=eps)
++                    for dominance in (False,True):
++                        stats={};tic=perf_counter()
++                        result=search_module.search_asar(graph,**cfg,heuristic=mode,epsilon=eps,
++                            exact_dominance=dominance,heuristic_cache_size=4096,reuse_stats=stats)
++                        wall=perf_counter()-tic
++                        score=replay_result(graph,cfg,result,oracle=optimum)
++                        if not dominance:
++                            require(asdict(result)==asdict(reference),'h cache changed search result/counts')
++                        row=dict(seed=seed,forcing_kind='synthetic_toy',input_sha256=sha,
++                            exact_dominance=dominance,stats=stats,wall_s=wall,oracle=optimum,
++                            replay_error=abs(score.J-result.J),Pd_T=score.pd_final,**asdict(result))
++                        stream.write(json.dumps(row,allow_nan=False)+'\n');rows.append(row)
++            print(f'small case {seed}: cumulative repair searches={len(rows)}',flush=True)
++    save(folder/'small_search.json',dict(status='passed',cases=35,historical_searches=490,
++        repair_searches=len(rows),independent_replays=490+len(rows),rows=rows))
++
++
++def real_worker(run,folder,variant,epsilon,repeat):
++    protocol,graph,cfg,pt,times,raw=load_real()
++    mode,dominance,cache,legacy=VARIANTS[variant]
++    engine=load_reference(run,'search') if legacy else search_module
++    if legacy:
++        original_heuristic=load_reference(run,'heuristic')
++        original_heuristic.STDCHeuristic=load_reference(run,'stdc_heuristic').STDCHeuristic
++        heuristic_class=original_heuristic.Heuristic
++    else:heuristic_class=Heuristic
++    stats={};counter=dict(calls=0,wall_s=0.);estimators=[]
++    def factory(*args,**kwargs):
++        estimator=heuristic_class(*args,**kwargs)
++        estimators.append(estimator)
++        def timed(*a,**kw):
++            tic=perf_counter()
++            try: return estimator(*a,**kw)
++            finally: counter['calls']+=1;counter['wall_s']+=perf_counter()-tic
++        return timed
++    # Same tracing work for every variant; no belief serialization or trace file I/O.
++    observed=dict(max_generated_depth=0,max_popped_depth=0,complete_candidates=0,
++        scope='trace-observed push/prune/dominance_prune; a final budget-boundary node can lack an event')
++    def trace(row):
++        if row['event'] in ('push','prune','dominance_prune'):
++            observed['max_generated_depth']=max(observed['max_generated_depth'],row['depth'])
++            observed['complete_candidates']+=int(row['depth']==cfg['budget'])
++        if row['event']=='pop':observed['max_popped_depth']=max(observed['max_popped_depth'],row['depth'])
++    previous=engine.Heuristic;engine.Heuristic=factory
++    try:
++        options={} if legacy else dict(exact_dominance=dominance,heuristic_cache_size=cache,reuse_stats=stats)
++        tic=perf_counter()
++        result=engine.search_asar(graph,**cfg,heuristic=mode,epsilon=epsilon,
++            initial_path=protocol['initial_path'],trace=trace,**protocol['search_limits'],**options)
++        elapsed=perf_counter()-tic
++    finally: engine.Heuristic=previous
++    score=replay_result(graph,cfg,result)
++    require(score.J<=pt.J+1e-10,'incumbent worse than initial PT')
++    if variant in ('paper_reference','mass_reference','stdc_reference','stdc_geometry','stdc_cache'):
++        old=read(OLD/f"paired_comparison/{mode}_eps_{str(epsilon).replace('.','p')}_rep_0/{mode}.json")
++        for key in ('J','path','status','stop_reason','expanded','generated','pruned','peak_open','incumbent_source'):
++            actual=getattr(result,key);actual=list(actual) if key=='path' else actual
++            require(actual==old[key],f'unchanged reference mismatch: {variant}/{key}')
++    geometry=[h._stdc.geometry_cache_info() for h in estimators
++              if h._stdc is not None and hasattr(h._stdc,'geometry_cache_info')]
++    mem=psutil.Process().memory_info()
++    save(folder/'result.json',dict(variant=variant,repeat=repeat,**asdict(result),
++        search_wall_s=elapsed,heuristic_calls=counter['calls'],heuristic_wall_s=counter['wall_s'],
++        reuse_stats=stats,geometry_cache=geometry,depth_stats=observed,
++        process_peak_memory_mib=getattr(mem,'peak_wset',mem.rss)/2**20,
++        memory_scope='isolated worker peak working set, including verification and replay',
++        Pd_T=score.pd_final,replay_J=score.J,replay_error=abs(score.J-result.J),legal=True,
++        survival=score.survival.tolist(),cumulative_J=score.g.tolist(),
++        forcing_kind='historical_real',particle_sha256=protocol['particle_archive']['sha256'],
++        seed=41,verified_raw_sources=raw,limits=protocol['search_limits'],PT_J=pt.J,
++        time_utc=[str(t)+'Z' for t in times],guarantee='conditional discrete epsilon' if result.theory_certified else 'uncertified'))
++    print(json.dumps(dict(variant=variant,epsilon=epsilon,J=result.J,status=result.status,
++        stop_reason=result.stop_reason,expanded=result.expanded,wall_s=elapsed,stats=stats)),flush=True)
++
++
++def real_runs(run,folder,smoke):
++    protocol,_,_,_,_,_=load_real()
++    variants=['mass_reuse','stdc_reuse'] if smoke else list(VARIANTS)
++    rows=[]
++    for epsilon in ([1.1] if smoke else protocol['epsilon']):
++        for repeat in range(1 if smoke else 3):
++            for variant in variants[repeat:]+variants[:repeat]:
++                target=folder/f"{variant}_eps_{str(epsilon).replace('.','p')}_rep_{repeat}";target.mkdir()
++                command=[sys.executable,__file__,'real_worker','--run-dir',str(run),
++                    '--output-dir',str(target),'--variant',variant,'--epsilon',str(epsilon),'--repeat',str(repeat)]
++                save(target/'command.json',dict(command=command,seed=41,threads=1,watchdog_s=150))
++                with (target/'stdout.txt').open('w') as stdout,(target/'stderr.txt').open('w') as stderr:
++                    try: proc=subprocess.run(command,cwd=ROOT,stdout=stdout,stderr=stderr,timeout=150)
++                    except subprocess.TimeoutExpired:
++                        save(target/'watchdog.json',dict(status='budget_exceeded',stop_reason='watchdog',
++                             theory_certified=False,incumbent_source=None,J=None));raise
++                require(proc.returncode==0,'real worker failed: '+target.name)
++                row=read(target/'result.json');rows.append(row)
++                save(folder/'results.json',dict(status='running',rows=rows))
++                print(f"{len(rows)}: {target.name} J={row['J']:.9f} {row['status']} {row['stop_reason']} wall={row['search_wall_s']:.3f}s",flush=True)
++    save(folder/'results.json',dict(status='passed',rows=rows))
++
++
++def stage(run,name):
++    for prior in ORDER[:ORDER.index(name)]:
++        require(read(run/prior/'stage.json')['status']=='passed','prior stage not passed: '+prior)
++    folder=run/name;folder.mkdir(exist_ok=False)
++    stage_seeds=read(run/'preflight.json')['plan']['synthetic_seeds'] if name in ('random_audit','small_search') else 41
++    if name=='new_tests':stage_seeds=[0,5,7,11,12,13,93,615,4517]
++    if name=='full_tests':stage_seeds='explicit seeds and frozen fixtures in source_sha256.json; includes particle seed 41'
++    record=dict(status='running',stage=name,started_utc=datetime.now(timezone.utc).isoformat(),seeds=stage_seeds)
++    tests=['tests/test_stdc_optimization.py','tests/test_search_state_reuse.py','tests/test_stdc_heuristic.py']
++    command=[sys.executable,'-m','pytest','-x','-q','-p','no:cacheprovider']
++    if name=='new_tests':command+=tests
++    if name in ('new_tests','full_tests'):
++        temp=Path('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4')/'stdc_repair_tmp'/run.name/name
++        # pytest creates the leaf basetemp without parents=True.
++        temp.parent.mkdir(parents=True,exist_ok=True)
++        command+=['--junitxml',str(folder/'pytest.xml'),'--basetemp',
++            str(temp)]
++    elif name=='random_audit':
++        command=[sys.executable,'scripts/stdc_validation_guards.py','random_audit','--output-dir',str(folder)]
++    else:command=[sys.executable,__file__,name+'_worker','--run-dir',str(run),'--output-dir',str(folder)]
++    record['command']=command;save(folder/'stage.json',record);tic=perf_counter()
++    try:
++        record['preservation_before']=preserve(run);snapshot(folder)
++        with (folder/'stdout.txt').open('w',encoding='utf-8') as stdout,(folder/'stderr.txt').open('w',encoding='utf-8') as stderr:
++            proc=subprocess.run(command,cwd=ROOT,stdout=stdout,stderr=stderr,timeout=1200)
++        record['exit_code']=proc.returncode
++        if (folder/'pytest.xml').exists():
++            suites=ET.parse(folder/'pytest.xml').getroot()
++            counts={k:sum(int(s.get(k,0)) for s in suites.iter('testsuite')) for k in ('tests','errors','failures','skipped')}
++            record['test_counts']=counts
++            require(counts['errors']==counts['failures']==counts['skipped']==0,'pytest failure/error/skip: STOP')
++            require(counts['tests']>0,'empty pytest collection')
++        require(proc.returncode==0,'stage failed: STOP; inspect stdout/stderr')
++        record['preservation_after']=preserve(run);record['status']='passed'
++    except Exception as exc:
++        record.update(status='blocked',error=str(exc),traceback=traceback.format_exc())
++    finally:
++        record['wall_s']=perf_counter()-tic;save(folder/'stage.json',record)
++        known={s:read(run/s/'stage.json') for s in ORDER if (run/s/'stage.json').exists()}
++        save(run/'validation_summary.json',dict(status='blocked' if any(v['status']=='blocked' for v in known.values())
++             else 'passed' if len(known)==len(ORDER) else 'in_progress',stages=known,not_run=[s for s in ORDER if s not in known]))
++    print(json.dumps(record,ensure_ascii=False),flush=True)
++    return 0 if record['status']=='passed' else 2
++
++
++if __name__=='__main__':
++    parser=argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('action',choices=['init',*ORDER,'small_search_worker','lake_smoke_worker','comparison_worker','real_worker'])
++    parser.add_argument('--run-dir',type=Path,required=True)
++    parser.add_argument('--output-dir',type=Path)
++    parser.add_argument('--variant',choices=VARIANTS)
++    parser.add_argument('--epsilon',type=float,default=1.1)
++    parser.add_argument('--repeat',type=int,default=0)
++    args=parser.parse_args();run=args.run_dir.resolve()
++    require(run.is_relative_to(ROOT/'outputs/stdc_v0_2'),'research output required')
++    if args.action=='init':init(run)
++    elif args.action in ORDER:sys.exit(stage(run,args.action))
++    else:
++        try:
++            if args.action=='small_search_worker':small_worker(args.output_dir)
++            elif args.action=='real_worker':real_worker(run,args.output_dir,args.variant,args.epsilon,args.repeat)
++            else:real_runs(run,args.output_dir,args.action=='lake_smoke_worker')
++        except Exception as exc:
++            save(args.output_dir/'failure.json',dict(status='blocked',error=str(exc),traceback=traceback.format_exc()));raise

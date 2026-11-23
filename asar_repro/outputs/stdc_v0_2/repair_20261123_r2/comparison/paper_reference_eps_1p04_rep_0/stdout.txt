@@ -1,0 +1,1 @@
+{"variant": "paper_reference", "epsilon": 1.04, "J": 17.29389415456, "status": "completed", "stop_reason": null, "expanded": 1222, "wall_s": 0.998988899984397, "stats": {}}

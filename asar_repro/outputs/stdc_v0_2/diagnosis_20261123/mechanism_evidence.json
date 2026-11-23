@@ -1,0 +1,202 @@
+{
+  "prefix_progress": [
+    {
+      "mode": "mass_lb",
+      "paper_prefix_equivalent_states_popped": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "next_paper_prefix": {
+        "path": "paper_1p1",
+        "depth": 7,
+        "vertex": 199,
+        "g": 6.293320000000001,
+        "feasible_suffix_cost": 11.066364022080002,
+        "h": {
+          "mass_lb": 0.20329128205128202,
+          "reach_lb": 1.2437149042965256,
+          "capacity_lb": 3.8739536820512814,
+          "stepwise_lb": 3.873956911224929,
+          "stdc_lb": 3.873956911224929,
+          "paper_greedy": 10.421598138240006
+        },
+        "stdc_f": 10.554672602347424
+      },
+      "next_paper_prefix_pushes_with_matching_g": [
+        {
+          "event": "push",
+          "vertex": 199,
+          "depth": 7,
+          "g": 6.293320000000001,
+          "h": 0.20329128205128202,
+          "f_weighted": 6.516940410256412,
+          "belief_sha": "756dc82396f89f1e4cb67c83f3fb1ec0134cd0af47030fd270ef547d75e704e4",
+          "mass": 0.7207600000000001
+        }
+      ],
+      "max_same_f_pop_multiplicity": 2167,
+      "pop_states_with_multiple_g": 41,
+      "most_common_f": [
+        [
+          6.310256410256412,
+          2167
+        ],
+        [
+          5.310256410256412,
+          714
+        ],
+        [
+          6.293688410256412,
+          188
+        ]
+      ],
+      "exact_statement": "belief-byte identity does not imply same g or same path"
+    },
+    {
+      "mode": "stdc_lb",
+      "paper_prefix_equivalent_states_popped": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "next_paper_prefix": {
+        "path": "paper_1p1",
+        "depth": 9,
+        "vertex": 165,
+        "g": 7.537780800000001,
+        "feasible_suffix_cost": 9.821903222080003,
+        "h": {
+          "mass_lb": 0.168680882051282,
+          "reach_lb": 1.4928686814141972,
+          "capacity_lb": 4.25964488205128,
+          "stepwise_lb": 4.259645028883194,
+          "stdc_lb": 4.259645028883194,
+          "paper_greedy": 9.244613678079999
+        },
+        "stdc_f": 12.223390331771515
+      },
+      "next_paper_prefix_pushes_with_matching_g": [
+        {
+          "event": "push",
+          "vertex": 165,
+          "depth": 9,
+          "g": 7.537780800000001,
+          "h": 4.259645028883194,
+          "f_weighted": 12.223390331771515,
+          "belief_sha": "8b9174c2c26888feae148cff73215193c1ed183cdee6cce2fdbf87431814152c",
+          "mass": 0.5980504
+        }
+      ],
+      "max_same_f_pop_multiplicity": 11,
+      "pop_states_with_multiple_g": 0,
+      "most_common_f": [
+        [
+          11.867879760829975,
+          11
+        ],
+        [
+          11.773813805464439,
+          11
+        ],
+        [
+          11.965695719580001,
+          7
+        ]
+      ],
+      "exact_statement": "belief-byte identity does not imply same g or same path"
+    },
+    {
+      "mode": "paper_greedy",
+      "paper_prefix_equivalent_states_popped": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49
+      ],
+      "next_paper_prefix": null,
+      "next_paper_prefix_pushes_with_matching_g": [],
+      "max_same_f_pop_multiplicity": 1,
+      "pop_states_with_multiple_g": 0,
+      "most_common_f": [
+        [
+          18.390181061120003,
+          1
+        ],
+        [
+          18.29018106112,
+          1
+        ],
+        [
+          18.19049306112,
+          1
+        ]
+      ],
+      "exact_statement": "belief-byte identity does not imply same g or same path"
+    }
+  ],
+  "root_coupling_gain": 0.0,
+  "root_capacity_gain": 6.3915685615256734e-06,
+  "toy_roots_with_coupling_gain_gt_1e_8": 5,
+  "toy_root_count": 160,
+  "paper_path_mass_at_20": 0.306366592,
+  "paper_path_cost_after_20": 5.22561773408,
+  "relaxed_root_mass_at_20": 4.906257663999982e-05,
+  "relaxed_root_cost_after_20": 2.0229731204072397e-05
+}

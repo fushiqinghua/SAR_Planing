@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="4" time="9.801" timestamp="2026-11-23T22:56:08.636167+08:00" hostname="jdd"><testcase classname="tests.test_b1_additional" name="test_order1_three_groups_cross_bit_boundaries_and_negative_minimum" time="0.003" /><testcase classname="tests.test_b1_additional" name="test_order2_and_zero_width_constant_group" time="0.001" /><testcase classname="tests.test_b1_additional" name="test_gfs_rejects_grid_relative_vectors_and_invalid_scan" time="0.001" /><testcase classname="tests.test_b1_additional" name="test_cf_storage_unpacks_once_and_preserves_mask" time="0.002"><error message="failed on setup with &quot;FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\stdc_repair_tmp\\full_tests'&quot;">self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/stdc_repair_tmp/full_tests')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+&gt;           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\stdc_repair_tmp\\full_tests'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError</error></testcase></testsuite></testsuites>

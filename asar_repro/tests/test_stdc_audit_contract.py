@@ -7,7 +7,7 @@ import pytest
 from stdc_audit_contract import assert_archived_source, frozen_bytes
 
 
-@pytest.mark.parametrize("source", ["src/asar_repro/heuristic.py", "src/asar_repro/objective.py"])
+@pytest.mark.parametrize("source", ["src/asar_repro/heuristic.py", "src/asar_repro/objective.py", "src/asar_repro/search.py"])
 def test_mutated_current_source_is_rejected(tmp_path, source):
     expected = hashlib.sha256(frozen_bytes(source)).hexdigest()
     path = tmp_path / source

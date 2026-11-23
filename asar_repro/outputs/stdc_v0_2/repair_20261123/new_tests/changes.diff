@@ -1,0 +1,320 @@
+diff --git a/asar_repro/scripts/stdc_audit_contract.py b/asar_repro/scripts/stdc_audit_contract.py
+index baf1a0a..7228922 100644
+--- a/asar_repro/scripts/stdc_audit_contract.py
++++ b/asar_repro/scripts/stdc_audit_contract.py
+@@ -12,6 +12,10 @@ FROZEN_COMMIT = "81b9be9b51625ed9012a69f9cb90e296bf2ec5c2"
+ APPROVED_RESEARCH = {
+     "src/asar_repro/heuristic.py":
+         "43f94d7ec3ae69dc67ee4416892ea65aa445498a002905f77d4b1f533b168c0b",
++    # User-authorized STDC repair: opt-in exact-state dominance / bounded h cache.
++    # Historical B4/B6 source identity is still checked against FROZEN_COMMIT.
++    "src/asar_repro/search.py":
++        "868b09203c3a782765f9b4440751d56512e5a24c1a0a44d5706e6a6aa5b34bbc",
+ }
+ 
+ 
+diff --git a/asar_repro/src/asar_repro/search.py b/asar_repro/src/asar_repro/search.py
+index 14c4746..7808cce 100644
+--- a/asar_repro/src/asar_repro/search.py
++++ b/asar_repro/src/asar_repro/search.py
+@@ -1,6 +1,7 @@
+ """A^SAR search over distinct path states, ordered by g + epsilon * h."""
+ 
+ from dataclasses import dataclass
++from collections import OrderedDict
+ from heapq import heappop, heappush
+ from itertools import count
+ from math import inf, isfinite
+@@ -22,6 +23,7 @@ class _Node:
+     belief: np.ndarray
+     g: float
+     parent: "_Node | None"
++    state_key: tuple | None = None
+ 
+ 
+ @dataclass
+@@ -50,14 +52,42 @@ def search_zero(grid: GridGraph, *, start: int, budget: int, p, q,
+ def search_asar(grid: GridGraph, *, start: int, budget: int, p, q,
+                 motion: MatrixMotion | ParticleMotion, heuristic: str = "zero", epsilon: float = 1.0,
+                 prune: bool = True, trace=None, max_expansions=None, max_seconds=None,
+-                max_open=None, initial_path=None) -> SearchResult:
++                max_open=None, initial_path=None, exact_dominance: bool = False,
++                heuristic_cache_size: int = 0, reuse_stats: dict | None = None) -> SearchResult:
+     """Algorithm 1. p is cell mass for matrices, ID-column weights for particles.
+ 
+     initial_path is replayed before search as a feasible upper bound. Limits
+     are optional; wall time is checked cooperatively at node/heuristic boundaries.
+     A budget stop with no complete solution returns path=None and J=None.
++
++    Research optimizations are opt-in. The exact state identity includes depth,
++    vertex and every belief byte; motion, sensor and horizon are fixed for this
++    search. An equal state with no smaller g is dominated, regardless of h or
++    epsilon. A smaller g reopens the state; previously queued larger-g copies
++    become stale. No tolerance or hash-only identity is used. The optional LRU
++    caches h only, not g, and is bounded by heuristic_cache_size entries.
++
++    reuse_stats receives counters without changing SearchResult. The dominance
++    table retains one g per encountered exact state (its size is reported).
++    OPEN limits count physical heap entries, including not-yet-popped stale
++    entries; stale pops consume time but not an expansion. Trace callbacks in
++    this opt-in mode may see dominance_prune (h/f are None) and stale events.
+     """
+     started = perf_counter()
++    if not isinstance(exact_dominance, bool):
++        raise ValueError("exact_dominance must be a bool")
++    heuristic_cache_size = integer(heuristic_cache_size, "heuristic_cache_size")
++    if reuse_stats is not None and not isinstance(reuse_stats, dict):
++        raise ValueError("reuse_stats must be a dict or None")
++    stats = dict(heuristic_requests=0, heuristic_evaluations=0,
++                 heuristic_cache_hits=0, heuristic_cache_misses=0,
++                 heuristic_cache_evictions=0, heuristic_cache_peak_entries=0,
++                 heuristic_cache_key_bytes=0, heuristic_cache_peak_key_bytes=0,
++                 dominance_key_bytes=0,
++                 dominance_pruned=0, stale_pops=0, improved_state_records=0)
++    collect_stats = reuse_stats is not None
++    best_g = {} if exact_dominance else None
++    h_cache = OrderedDict() if heuristic_cache_size else None
+     if max_expansions is not None:
+         integer(max_expansions, "max_expansions")
+     if max_open is not None:
+@@ -84,6 +114,13 @@ def search_asar(grid: GridGraph, *, start: int, budget: int, p, q,
+                                p=p, q=q, motion=motion).J
+ 
+     def finish(reason=None):
++        if collect_stats:
++            reuse_stats.update(stats, heuristic_cache_entries=len(h_cache) if h_cache is not None else 0,
++                               state_records=len(best_g) if best_g is not None else 0,
++                               state_records_peak=len(best_g) if best_g is not None else 0,
++                               key_byte_scope="belief payload bytes in each table; excludes Python/heap overhead and shared references",
++                               exact_dominance=exact_dominance,
++                               heuristic_cache_size=heuristic_cache_size)
+         path = initial_path
+         source = "initial_path" if path is not None else None
+         if best_goal is not None:
+@@ -111,7 +148,48 @@ def search_asar(grid: GridGraph, *, start: int, budget: int, p, q,
+             incumbent, best_goal = node.g, node
+         if perf_counter() >= deadline:
+             return "max_seconds"
+-        h = estimate(node.vertex, node.depth, node.belief)
++        if exact_dominance or h_cache is not None:
++            node.state_key = (node.depth, node.vertex, node.belief.dtype.str,
++                              node.belief.shape, node.belief.tobytes(order="C"))
++        if exact_dominance:
++            previous_g = best_g.get(node.state_key)
++            if previous_g is not None and previous_g <= node.g:
++                pruned += 1
++                if collect_stats:
++                    stats['dominance_pruned'] += 1
++                record("dominance_prune", node, None, None)
++                return
++            if previous_g is not None and collect_stats:
++                stats['improved_state_records'] += 1
++            if previous_g is None and collect_stats:
++                stats['dominance_key_bytes'] += len(node.state_key[-1])
++            best_g[node.state_key] = node.g
++        if collect_stats:
++            stats['heuristic_requests'] += 1
++        if h_cache is not None and node.state_key in h_cache:
++            h = h_cache.pop(node.state_key)
++            h_cache[node.state_key] = h
++            if collect_stats:
++                stats['heuristic_cache_hits'] += 1
++        else:
++            h = estimate(node.vertex, node.depth, node.belief)
++            if collect_stats:
++                stats['heuristic_evaluations'] += 1
++            if h_cache is not None:
++                h_cache[node.state_key] = h
++                if collect_stats:
++                    stats['heuristic_cache_misses'] += 1
++                    stats['heuristic_cache_key_bytes'] += len(node.state_key[-1])
++                if len(h_cache) > heuristic_cache_size:
++                    evicted_key, _ = h_cache.popitem(last=False)
++                    if collect_stats:
++                        stats['heuristic_cache_evictions'] += 1
++                        stats['heuristic_cache_key_bytes'] -= len(evicted_key[-1])
++                if collect_stats:
++                    stats['heuristic_cache_peak_entries'] = max(
++                        stats['heuristic_cache_peak_entries'], len(h_cache))
++                    stats['heuristic_cache_peak_key_bytes'] = max(
++                        stats['heuristic_cache_peak_key_bytes'], stats['heuristic_cache_key_bytes'])
+         f = node.g + epsilon * h
+         if not isfinite(f):
+             raise ValueError("weighted evaluation overflow; use a smaller epsilon")
+@@ -123,6 +201,10 @@ def search_asar(grid: GridGraph, *, start: int, budget: int, p, q,
+             return
+         if max_open is not None and len(queue) >= max_open:
+             return "max_open"
++        if not exact_dominance:
++            # An LRU eviction must also release its key payload when caching is
++            # the only enabled optimization; the heap does not need that key.
++            node.state_key = None
+         heappush(queue, (f, next(sequence), h, node))
+         peak_open = max(peak_open, len(queue))
+         record("push", node, h, f)
+@@ -135,6 +217,11 @@ def search_asar(grid: GridGraph, *, start: int, budget: int, p, q,
+         if perf_counter() >= deadline:
+             return finish("max_seconds")
+         f, _, h, node = heappop(queue)
++        if exact_dominance and node.g > best_g[node.state_key]:
++            if collect_stats:
++                stats['stale_pops'] += 1
++            record("stale", node, h, f)
++            continue
+         record("pop", node, h, f)
+         if node.depth == budget:
+             return finish()
+diff --git a/asar_repro/src/asar_repro/stdc_heuristic.py b/asar_repro/src/asar_repro/stdc_heuristic.py
+index 225c7b4..b91f9ea 100644
+--- a/asar_repro/src/asar_repro/stdc_heuristic.py
++++ b/asar_repro/src/asar_repro/stdc_heuristic.py
+@@ -14,6 +14,8 @@ For a single-vertex grid and a nonzero remainder, no legal completion exists.
+ 
+ from __future__ import annotations
+ 
++from collections import OrderedDict
++
+ import numpy as np
+ 
+ from .belief import sensor_probabilities, undetected_mass
+@@ -47,13 +49,22 @@ class STDCHeuristic:
+         self.grid = grid
+         self.budget = integer(budget, "budget")
+         self.q = sensor_probabilities(q, grid.size).copy()
++        self.q.setflags(write=False)
+         self.motion = motion
+         self.mode = mode
+         self._use_exact = mode != "stdc_radius_lb"
+         if isinstance(motion, ParticleMotion):
+             motion.check_horizon(self.budget)
+         self._distances: dict[int, np.ndarray] = {}
++        self._saturation: dict[int, int] = {}
+         self._reach: dict[tuple[int, int], np.ndarray] = {}
++        # Geometry and sensor parameters are independent of path belief and
++        # absolute time. Cache ONLY these; never cache h by (depth, vertex).
++        # LRU bounds the extra float arrays, independently of T and particle N.
++        self._geometry = OrderedDict()
++        self._geometry_bytes = 0
++        self._geometry_limit = 16 * 1024 * 1024
++        self._geometry_hits = self._geometry_misses = 0
+         # The native particle array can also represent inactive, land and
+         # outside particles with IDs >= grid.size; they MUST NOT be sensed.
+         self._particle_factors_template = (
+@@ -68,12 +79,26 @@ class STDCHeuristic:
+         """
+         self.grid.coordinates(vertex)
+         k = integer(relative_step, "relative_step", 1)
+-        key = (vertex, k)
++        return self._reachable(self._reach_key(vertex, k))
++
++    def _reach_key(self, vertex, k):
++        """Unchecked internal lookup, after the public call validates inputs."""
++        if vertex not in self._distances:
++            dist = self.grid.distances_from(vertex)
++            self._distances[vertex] = dist
++            self._saturation[vertex] = int(dist.max())
++        last = self._saturation[vertex]
++        if k > last:
++            # Beyond the farthest cell, exact reachability alternates between
++            # the two graph parities; radius reachability no longer changes.
++            k = last + ((k - last) % 2) if self._use_exact else last
++        return (vertex, k)
++
++    def _reachable(self, key):
+         result = self._reach.get(key)
+         if result is not None:
+             return result
+-        if vertex not in self._distances:
+-            self._distances[vertex] = self.grid.distances_from(vertex)
++        vertex, k = key
+         dist = self._distances[vertex]
+         mask = dist <= k
+         if self._use_exact:
+@@ -83,9 +108,46 @@ class STDCHeuristic:
+         # or one-cell no-wait graph. Exact-k availability is a model premise.
+         if result.size == 0:
+             raise ValueError("no legal continuation at this remaining step")
++        result.setflags(write=False)
+         self._reach[key] = result
+         return result
+ 
++    def _step_geometry(self, vertex, k):
++        key = self._reach_key(vertex, k)
++        cached = self._geometry.get(key)
++        if cached is not None:
++            self._geometry_hits += 1
++            self._geometry.move_to_end(key)
++            return cached[0]
++        self._geometry_misses += 1
++        reach = self._reachable(key)
++        qr = self.q[reach]
++        miss = 1.0 - qr
++        qmax = float(qr.max())
++        factors = None
++        if self._particle_factors_template is not None and self.mode != "capacity_lb":
++            factors = self._particle_factors_template.copy()
++            factors[reach] = miss
++            factors.setflags(write=False)
++        qr.setflags(write=False)
++        miss.setflags(write=False)
++        value = (reach, qr, miss, qmax, factors)
++        size = qr.nbytes + miss.nbytes + (0 if factors is None else factors.nbytes)
++        if size <= self._geometry_limit:
++            while self._geometry and self._geometry_bytes + size > self._geometry_limit:
++                _, (_, removed_size) = self._geometry.popitem(last=False)
++                self._geometry_bytes -= removed_size
++            self._geometry[key] = (value, size)
++            self._geometry_bytes += size
++        return value
++
++    def geometry_cache_info(self):
++        """Diagnostic counters; excludes the pre-existing integer reach arrays."""
++        return dict(hits=self._geometry_hits, misses=self._geometry_misses,
++                    entries=len(self._geometry), array_bytes=self._geometry_bytes,
++                    array_byte_limit=self._geometry_limit,
++                    reach_array_bytes=sum(a.nbytes for a in self._reach.values()))
++
+     def __call__(self, vertex: int, depth: int, belief, *, choices=None) -> float:
+         self.grid.coordinates(vertex)
+         depth = integer(depth, "depth")
+@@ -105,17 +167,13 @@ class STDCHeuristic:
+ 
+         for k in range(1, self.budget - depth + 1):
+             t = depth + k  # motion uses ABSOLUTE time; reach uses RELATIVE k
+-            reach = self.reachable(vertex, k)
+-            qr = self.q[reach]
+-            qmax = float(qr.max())
++            reach, qr, miss, qmax, factors = self._step_geometry(vertex, k)
+ 
+             if is_particles:
+                 # OpenDrift particle ID-weight vector is unchanged by drift;
+                 # absolute frame t gives each ID's new cell.
+                 cells = self.motion.cell_ids[t]
+                 if self.mode != "capacity_lb":
+-                    factors = self._particle_factors_template.copy()
+-                    factors[reach] = 1.0 - qr
+                     relaxed *= factors[cells]
+                     a = float(relaxed.sum())
+                 else:
+@@ -128,7 +186,7 @@ class STDCHeuristic:
+             else:
+                 if self.mode != "capacity_lb":
+                     relaxed = self.motion.propagate(relaxed, step=t)
+-                    relaxed[reach] *= (1.0 - qr)
++                    relaxed[reach] *= miss
+                     a = float(relaxed.sum())
+                 else:
+                     a = 0.0
+diff --git a/asar_repro/tests/test_stdc_audit_contract.py b/asar_repro/tests/test_stdc_audit_contract.py
+index 762512d..11a4237 100644
+--- a/asar_repro/tests/test_stdc_audit_contract.py
++++ b/asar_repro/tests/test_stdc_audit_contract.py
+@@ -7,7 +7,7 @@ import pytest
+ from stdc_audit_contract import assert_archived_source, frozen_bytes
+ 
+ 
+-@pytest.mark.parametrize("source", ["src/asar_repro/heuristic.py", "src/asar_repro/objective.py"])
++@pytest.mark.parametrize("source", ["src/asar_repro/heuristic.py", "src/asar_repro/objective.py", "src/asar_repro/search.py"])
+ def test_mutated_current_source_is_rejected(tmp_path, source):
+     expected = hashlib.sha256(frozen_bytes(source)).hexdigest()
+     path = tmp_path / source

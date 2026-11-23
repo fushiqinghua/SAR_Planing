@@ -1,0 +1,17 @@
+ M scripts/stdc_audit_contract.py
+ M src/asar_repro/search.py
+ M src/asar_repro/stdc_heuristic.py
+ M tests/test_stdc_audit_contract.py
+?? docs/stdc_v0_2/repair_design.md
+?? outputs/stdc_v0_2/diagnosis_20261123.stderr.txt
+?? outputs/stdc_v0_2/diagnosis_20261123.stdout.txt
+?? outputs/stdc_v0_2/diagnosis_20261123/
+?? outputs/stdc_v0_2/repair_20261123/
+?? outputs/stdc_v0_2/repair_20261123_r2/
+?? scripts/analyze_stdc_trace.py
+?? scripts/diagnose_stdc.py
+?? scripts/report_stdc_diagnosis.py
+?? scripts/report_stdc_repair.py
+?? scripts/run_stdc_repair.py
+?? tests/test_search_state_reuse.py
+?? tests/test_stdc_optimization.py

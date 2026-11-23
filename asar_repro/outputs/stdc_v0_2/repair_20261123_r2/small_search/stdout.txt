@@ -1,0 +1,42 @@
+small cases=5, searches=70
+small cases=10, searches=140
+small cases=15, searches=210
+small cases=20, searches=280
+small cases=25, searches=350
+small cases=30, searches=420
+small cases=35, searches=490
+small case 15000: cumulative repair searches=18
+small case 15001: cumulative repair searches=36
+small case 15002: cumulative repair searches=54
+small case 15003: cumulative repair searches=72
+small case 15004: cumulative repair searches=90
+small case 15005: cumulative repair searches=108
+small case 15006: cumulative repair searches=126
+small case 15007: cumulative repair searches=144
+small case 15008: cumulative repair searches=162
+small case 15009: cumulative repair searches=180
+small case 15010: cumulative repair searches=198
+small case 15011: cumulative repair searches=216
+small case 15012: cumulative repair searches=234
+small case 15013: cumulative repair searches=252
+small case 15014: cumulative repair searches=270
+small case 15015: cumulative repair searches=288
+small case 15016: cumulative repair searches=306
+small case 15017: cumulative repair searches=324
+small case 15018: cumulative repair searches=342
+small case 15019: cumulative repair searches=360
+small case 15020: cumulative repair searches=378
+small case 15021: cumulative repair searches=396
+small case 15022: cumulative repair searches=414
+small case 15023: cumulative repair searches=432
+small case 15024: cumulative repair searches=450
+small case 15025: cumulative repair searches=468
+small case 15026: cumulative repair searches=486
+small case 15027: cumulative repair searches=504
+small case 15028: cumulative repair searches=522
+small case 15029: cumulative repair searches=540
+small case 15030: cumulative repair searches=558
+small case 15031: cumulative repair searches=576
+small case 15032: cumulative repair searches=594
+small case 15033: cumulative repair searches=612
+small case 15034: cumulative repair searches=630
