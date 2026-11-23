@@ -1,0 +1,567 @@
+{
+  "stage": "B1",
+  "audit_utc": "2026-11-23T02:28:57.192Z",
+  "config_sha256": "40311df54d7e43dcebdb2e618ebcb81a86add4d83db7a8ac925253ff73f391d6",
+  "interpreter": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+  "proxy_schemes": [],
+  "aws_cli": null,
+  "raw_root": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\data\\raw\\historical",
+  "scenarios": [
+    {
+      "scenario": "lake_ontario",
+      "requested_window_utc": [
+        "2025-08-26T14:45:00.000Z",
+        "2025-08-26T15:52:33.740Z"
+      ],
+      "hourly_inspection_window_utc": [
+        "2025-08-26T13:00:00.000Z",
+        "2025-08-26T17:00:00.000Z"
+      ],
+      "cst_utc": "2025-08-26T15:45:00Z",
+      "lkp_lon_lat": [
+        -76.5,
+        44.21
+      ],
+      "csp_lon_lat": [
+        -76.496,
+        44.215
+      ],
+      "wind": {
+        "resolved_source": null,
+        "local_path": null,
+        "sha256": null,
+        "size_bytes": null,
+        "native_variable_names": null,
+        "units": null,
+        "valid_time_range_utc": null,
+        "spatial_coverage": null,
+        "run_cycle_utc": null,
+        "forecast_or_analysis": null,
+        "downloaded_at_utc": null,
+        "download_command": null,
+        "crs": null,
+        "dimensions": null,
+        "missing_fraction": null,
+        "subset_bounds": null,
+        "subset_sha256": null,
+        "product": "HRRR",
+        "catalog": "https://registry.opendata.aws/noaa-hrrr-pds/",
+        "probes": [
+          {
+            "kind": "idx",
+            "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t14z.wrfsfcf00.grib2.idx",
+            "queried_at_utc": "2026-11-23T02:28:56.575Z",
+            "command": "curl.exe --fail --location \"https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t14z.wrfsfcf00.grib2.idx\"",
+            "dns_addresses": [
+              "198.18.0.64",
+              "2001:2::3f"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          },
+          {
+            "kind": "idx",
+            "url": "https://storage.googleapis.com/high-resolution-rapid-refresh/hrrr.20250826/conus/hrrr.t14z.wrfsfcf00.grib2.idx",
+            "queried_at_utc": "2026-11-23T02:28:56.575Z",
+            "command": "curl.exe --fail --location \"https://storage.googleapis.com/high-resolution-rapid-refresh/hrrr.20250826/conus/hrrr.t14z.wrfsfcf00.grib2.idx\"",
+            "dns_addresses": [
+              "198.18.0.63",
+              "2001:2::3e"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          }
+        ],
+        "local_files": [],
+        "status": "unverified",
+        "citation_and_rights_source": "https://registry.opendata.aws/noaa-hrrr-pds/"
+      },
+      "current": {
+        "resolved_source": null,
+        "local_path": null,
+        "sha256": null,
+        "size_bytes": null,
+        "native_variable_names": null,
+        "units": null,
+        "valid_time_range_utc": null,
+        "spatial_coverage": null,
+        "run_cycle_utc": null,
+        "forecast_or_analysis": null,
+        "downloaded_at_utc": null,
+        "download_command": null,
+        "crs": null,
+        "dimensions": null,
+        "missing_fraction": null,
+        "subset_bounds": null,
+        "subset_sha256": null,
+        "product": "LOOFS",
+        "catalog": "https://www.glerl.noaa.gov/res/Programs/ipemf/glcfs_data_access.html",
+        "probes": [
+          {
+            "kind": "s3",
+            "url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/?list-type=2&prefix=loofs%2Fnetcdf%2F2025%2F08%2F26%2F&max-keys=100",
+            "queried_at_utc": "2026-11-23T02:28:56.640Z",
+            "command": "curl.exe --fail --location \"https://noaa-nos-ofs-pds.s3.amazonaws.com/?list-type=2&prefix=loofs%2Fnetcdf%2F2025%2F08%2F26%2F&max-keys=100\"",
+            "dns_addresses": [
+              "198.18.0.61",
+              "2001:2::3c"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          },
+          {
+            "kind": "s3",
+            "url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/?list-type=2&prefix=loofs%2Fnetcdf%2F202508%2F&max-keys=100",
+            "queried_at_utc": "2026-11-23T02:28:56.640Z",
+            "command": "curl.exe --fail --location \"https://noaa-nos-ofs-pds.s3.amazonaws.com/?list-type=2&prefix=loofs%2Fnetcdf%2F202508%2F&max-keys=100\"",
+            "dns_addresses": [
+              "198.18.0.61",
+              "2001:2::3c"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          },
+          {
+            "kind": "s3",
+            "url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/?list-type=2&prefix=laofs%2Fnetcdf%2F2025%2F08%2F26%2F&max-keys=100",
+            "queried_at_utc": "2026-11-23T02:28:56.641Z",
+            "command": "curl.exe --fail --location \"https://noaa-nos-ofs-pds.s3.amazonaws.com/?list-type=2&prefix=laofs%2Fnetcdf%2F2025%2F08%2F26%2F&max-keys=100\"",
+            "dns_addresses": [
+              "198.18.0.61",
+              "2001:2::3c"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          },
+          {
+            "kind": "s3",
+            "url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/?list-type=2&prefix=laofs%2Fnetcdf%2F202508%2F&max-keys=100",
+            "queried_at_utc": "2026-11-23T02:28:56.641Z",
+            "command": "curl.exe --fail --location \"https://noaa-nos-ofs-pds.s3.amazonaws.com/?list-type=2&prefix=laofs%2Fnetcdf%2F202508%2F&max-keys=100\"",
+            "dns_addresses": [
+              "198.18.0.61",
+              "2001:2::3c"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          },
+          {
+            "kind": "thredds",
+            "url": "https://www.ncei.noaa.gov/thredds/catalog/model-loofs-files/2025/08/catalog.xml",
+            "queried_at_utc": "2026-11-23T02:28:56.729Z",
+            "command": "curl.exe --fail --location \"https://www.ncei.noaa.gov/thredds/catalog/model-loofs-files/2025/08/catalog.xml\"",
+            "dns_addresses": [
+              "198.18.0.62",
+              "2001:2::3d"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          },
+          {
+            "kind": "thredds",
+            "url": "https://www.ncei.noaa.gov/thredds/catalog/model-loofs-files/2025/08/26/catalog.xml",
+            "queried_at_utc": "2026-11-23T02:28:56.729Z",
+            "command": "curl.exe --fail --location \"https://www.ncei.noaa.gov/thredds/catalog/model-loofs-files/2025/08/26/catalog.xml\"",
+            "dns_addresses": [
+              "198.18.0.62",
+              "2001:2::3d"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          }
+        ],
+        "local_files": [],
+        "status": "unverified",
+        "citation_and_rights_source": "https://www.glerl.noaa.gov/res/Programs/ipemf/glcfs_data_access.html",
+        "additional_catalog": "https://www.ncei.noaa.gov/products/weather-climate-models/co-ops-operational-forecast"
+      },
+      "pair_status": "blocked_pending_file_verification"
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "requested_window_utc": [
+        "2025-02-14T00:00:00.000Z",
+        "2025-02-14T09:33:57.200Z"
+      ],
+      "hourly_inspection_window_utc": [
+        "2025-02-13T23:00:00.000Z",
+        "2025-02-14T11:00:00.000Z"
+      ],
+      "cst_utc": "2025-02-14T09:00:00Z",
+      "lkp_lon_lat": [
+        -65.3,
+        45.2
+      ],
+      "csp_lon_lat": [
+        -65.072,
+        45.283
+      ],
+      "wind": {
+        "resolved_source": null,
+        "local_path": null,
+        "sha256": null,
+        "size_bytes": null,
+        "native_variable_names": null,
+        "units": null,
+        "valid_time_range_utc": null,
+        "spatial_coverage": null,
+        "run_cycle_utc": null,
+        "forecast_or_analysis": null,
+        "downloaded_at_utc": null,
+        "download_command": null,
+        "crs": null,
+        "dimensions": null,
+        "missing_fraction": null,
+        "subset_bounds": null,
+        "subset_sha256": null,
+        "product": "HRRR",
+        "catalog": "https://registry.opendata.aws/noaa-hrrr-pds/",
+        "probes": [
+          {
+            "kind": "idx",
+            "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t00z.wrfsfcf00.grib2.idx",
+            "queried_at_utc": "2026-11-23T02:28:56.789Z",
+            "command": "curl.exe --fail --location \"https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t00z.wrfsfcf00.grib2.idx\"",
+            "dns_addresses": [
+              "198.18.0.64",
+              "2001:2::3f"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          },
+          {
+            "kind": "idx",
+            "url": "https://storage.googleapis.com/high-resolution-rapid-refresh/hrrr.20250214/conus/hrrr.t00z.wrfsfcf00.grib2.idx",
+            "queried_at_utc": "2026-11-23T02:28:56.789Z",
+            "command": "curl.exe --fail --location \"https://storage.googleapis.com/high-resolution-rapid-refresh/hrrr.20250214/conus/hrrr.t00z.wrfsfcf00.grib2.idx\"",
+            "dns_addresses": [
+              "198.18.0.63",
+              "2001:2::3e"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          }
+        ],
+        "local_files": [],
+        "status": "unverified",
+        "citation_and_rights_source": "https://registry.opendata.aws/noaa-hrrr-pds/"
+      },
+      "current": {
+        "resolved_source": null,
+        "local_path": null,
+        "sha256": null,
+        "size_bytes": null,
+        "native_variable_names": null,
+        "units": null,
+        "valid_time_range_utc": null,
+        "spatial_coverage": null,
+        "run_cycle_utc": null,
+        "forecast_or_analysis": null,
+        "downloaded_at_utc": null,
+        "download_command": null,
+        "crs": null,
+        "dimensions": null,
+        "missing_fraction": null,
+        "subset_bounds": null,
+        "subset_sha256": null,
+        "product": "GoMOFS",
+        "catalog": "https://opendap.co-ops.nos.noaa.gov/ofsdataagg/index.html",
+        "probes": [
+          {
+            "kind": "s3",
+            "url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/?list-type=2&prefix=gomofs%2Fnetcdf%2F2025%2F02%2F14%2F&max-keys=100",
+            "queried_at_utc": "2026-11-23T02:28:56.865Z",
+            "command": "curl.exe --fail --location \"https://noaa-nos-ofs-pds.s3.amazonaws.com/?list-type=2&prefix=gomofs%2Fnetcdf%2F2025%2F02%2F14%2F&max-keys=100\"",
+            "dns_addresses": [
+              "198.18.0.61",
+              "2001:2::3c"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          },
+          {
+            "kind": "s3",
+            "url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/?list-type=2&prefix=gomofs%2Fnetcdf%2F202502%2F&max-keys=100",
+            "queried_at_utc": "2026-11-23T02:28:56.865Z",
+            "command": "curl.exe --fail --location \"https://noaa-nos-ofs-pds.s3.amazonaws.com/?list-type=2&prefix=gomofs%2Fnetcdf%2F202502%2F&max-keys=100\"",
+            "dns_addresses": [
+              "198.18.0.61",
+              "2001:2::3c"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          },
+          {
+            "kind": "thredds",
+            "url": "https://www.ncei.noaa.gov/thredds/catalog/model-gomofs-files/2025/02/catalog.xml",
+            "queried_at_utc": "2026-11-23T02:28:56.866Z",
+            "command": "curl.exe --fail --location \"https://www.ncei.noaa.gov/thredds/catalog/model-gomofs-files/2025/02/catalog.xml\"",
+            "dns_addresses": [
+              "198.18.0.62",
+              "2001:2::3d"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          },
+          {
+            "kind": "thredds",
+            "url": "https://www.ncei.noaa.gov/thredds/catalog/model-gomofs-files/2025/02/14/catalog.xml",
+            "queried_at_utc": "2026-11-23T02:28:56.867Z",
+            "command": "curl.exe --fail --location \"https://www.ncei.noaa.gov/thredds/catalog/model-gomofs-files/2025/02/14/catalog.xml\"",
+            "dns_addresses": [
+              "198.18.0.62",
+              "2001:2::3d"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          }
+        ],
+        "local_files": [],
+        "status": "unverified",
+        "citation_and_rights_source": "https://opendap.co-ops.nos.noaa.gov/ofsdataagg/index.html",
+        "additional_catalog": "https://www.ncei.noaa.gov/products/weather-climate-models/co-ops-operational-forecast"
+      },
+      "pair_status": "blocked_pending_file_verification"
+    },
+    {
+      "scenario": "salish_sea",
+      "requested_window_utc": [
+        "2025-08-24T00:00:00.000Z",
+        "2025-08-24T12:41:14.560Z"
+      ],
+      "hourly_inspection_window_utc": [
+        "2025-08-23T23:00:00.000Z",
+        "2025-08-24T14:00:00.000Z"
+      ],
+      "cst_utc": "2025-08-24T11:00:00Z",
+      "lkp_lon_lat": [
+        -123.07,
+        48.3
+      ],
+      "csp_lon_lat": [
+        -123.187,
+        48.195
+      ],
+      "wind": {
+        "resolved_source": null,
+        "local_path": null,
+        "sha256": null,
+        "size_bytes": null,
+        "native_variable_names": null,
+        "units": null,
+        "valid_time_range_utc": null,
+        "spatial_coverage": null,
+        "run_cycle_utc": null,
+        "forecast_or_analysis": null,
+        "downloaded_at_utc": null,
+        "download_command": null,
+        "crs": null,
+        "dimensions": null,
+        "missing_fraction": null,
+        "subset_bounds": null,
+        "subset_sha256": null,
+        "product": "HRRR",
+        "catalog": "https://registry.opendata.aws/noaa-hrrr-pds/",
+        "probes": [
+          {
+            "kind": "idx",
+            "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250824/conus/hrrr.t00z.wrfsfcf00.grib2.idx",
+            "queried_at_utc": "2026-11-23T02:28:56.982Z",
+            "command": "curl.exe --fail --location \"https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250824/conus/hrrr.t00z.wrfsfcf00.grib2.idx\"",
+            "dns_addresses": [
+              "198.18.0.64",
+              "2001:2::3f"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          },
+          {
+            "kind": "idx",
+            "url": "https://storage.googleapis.com/high-resolution-rapid-refresh/hrrr.20250824/conus/hrrr.t00z.wrfsfcf00.grib2.idx",
+            "queried_at_utc": "2026-11-23T02:28:56.983Z",
+            "command": "curl.exe --fail --location \"https://storage.googleapis.com/high-resolution-rapid-refresh/hrrr.20250824/conus/hrrr.t00z.wrfsfcf00.grib2.idx\"",
+            "dns_addresses": [
+              "198.18.0.63",
+              "2001:2::3e"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          }
+        ],
+        "local_files": [],
+        "status": "unverified",
+        "citation_and_rights_source": "https://registry.opendata.aws/noaa-hrrr-pds/"
+      },
+      "current": {
+        "resolved_source": null,
+        "local_path": null,
+        "sha256": null,
+        "size_bytes": null,
+        "native_variable_names": null,
+        "units": null,
+        "valid_time_range_utc": null,
+        "spatial_coverage": null,
+        "run_cycle_utc": null,
+        "forecast_or_analysis": null,
+        "downloaded_at_utc": null,
+        "download_command": null,
+        "crs": null,
+        "dimensions": null,
+        "missing_fraction": null,
+        "subset_bounds": null,
+        "subset_sha256": null,
+        "product": "CIOPS Salish Sea",
+        "catalog": "https://eccc-msc.github.io/open-data/msc-data/nwp_ciops/readme_ciops-datamart_en/",
+        "probes": [
+          {
+            "kind": "directory",
+            "url": "https://dd.weather.gc.ca/20250824/model_ciops/salish-sea/500m/00/",
+            "queried_at_utc": "2026-11-23T02:28:57.043Z",
+            "command": "curl.exe --fail --location \"https://dd.weather.gc.ca/20250824/model_ciops/salish-sea/500m/00/\"",
+            "dns_addresses": [
+              "198.18.0.65",
+              "2001:2::40"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          }
+        ],
+        "local_files": [],
+        "status": "unverified",
+        "citation_and_rights_source": "https://eccc-msc.github.io/open-data/msc-data/nwp_ciops/readme_ciops-datamart_en/"
+      },
+      "pair_status": "blocked_pending_file_verification"
+    },
+    {
+      "scenario": "arctic_ocean",
+      "requested_window_utc": [
+        "2025-08-29T00:00:00.000Z",
+        "2025-08-30T00:46:18.000Z"
+      ],
+      "hourly_inspection_window_utc": [
+        "2025-08-28T23:00:00.000Z",
+        "2025-08-30T02:00:00.000Z"
+      ],
+      "cst_utc": "2025-08-30T00:00:00Z",
+      "lkp_lon_lat": [
+        -90.6,
+        62.85
+      ],
+      "csp_lon_lat": [
+        -90.447,
+        62.786
+      ],
+      "wind": {
+        "resolved_source": null,
+        "local_path": null,
+        "sha256": null,
+        "size_bytes": null,
+        "native_variable_names": null,
+        "units": null,
+        "valid_time_range_utc": null,
+        "spatial_coverage": null,
+        "run_cycle_utc": null,
+        "forecast_or_analysis": null,
+        "downloaded_at_utc": null,
+        "download_command": null,
+        "crs": null,
+        "dimensions": null,
+        "missing_fraction": null,
+        "subset_bounds": null,
+        "subset_sha256": null,
+        "product": "GFS",
+        "catalog": "https://registry.opendata.aws/noaa-gfs-bdp-pds/",
+        "probes": [
+          {
+            "kind": "idx",
+            "url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20250829/00/atmos/gfs.t00z.pgrb2.0p25.f000.idx",
+            "queried_at_utc": "2026-11-23T02:28:57.087Z",
+            "command": "curl.exe --fail --location \"https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20250829/00/atmos/gfs.t00z.pgrb2.0p25.f000.idx\"",
+            "dns_addresses": [
+              "198.18.0.66",
+              "2001:2::41"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          }
+        ],
+        "local_files": [],
+        "status": "unverified",
+        "citation_and_rights_source": "https://registry.opendata.aws/noaa-gfs-bdp-pds/"
+      },
+      "current": {
+        "resolved_source": null,
+        "local_path": null,
+        "sha256": null,
+        "size_bytes": null,
+        "native_variable_names": null,
+        "units": null,
+        "valid_time_range_utc": null,
+        "spatial_coverage": null,
+        "run_cycle_utc": null,
+        "forecast_or_analysis": null,
+        "downloaded_at_utc": null,
+        "download_command": null,
+        "crs": null,
+        "dimensions": null,
+        "missing_fraction": null,
+        "subset_bounds": null,
+        "subset_sha256": null,
+        "product": "ESPC-D-V02",
+        "catalog": "https://www.hycom.org/dataserver/espc-d-v02/global-analysis",
+        "probes": [
+          {
+            "kind": "dds",
+            "url": "https://tds.hycom.org/thredds/dodsC/ESPC-D-V02/ice/2025.dds",
+            "queried_at_utc": "2026-11-23T02:28:57.138Z",
+            "command": "curl.exe --fail --location \"https://tds.hycom.org/thredds/dodsC/ESPC-D-V02/ice/2025.dds\"",
+            "dns_addresses": [
+              "198.18.0.67",
+              "2001:2::42"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          },
+          {
+            "kind": "ncss",
+            "url": "https://ncss.hycom.org/thredds/ncss/grid/ESPC-D-V02/ice/2025/dataset.xml",
+            "queried_at_utc": "2026-11-23T02:28:57.138Z",
+            "command": "curl.exe --fail --location \"https://ncss.hycom.org/thredds/ncss/grid/ESPC-D-V02/ice/2025/dataset.xml\"",
+            "dns_addresses": [
+              "198.18.0.68",
+              "2001:2::43"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          }
+        ],
+        "local_files": [],
+        "status": "unverified",
+        "citation_and_rights_source": "https://www.hycom.org/dataserver/espc-d-v02/global-analysis",
+        "published_dataset_service": "https://tds.hycom.org/thredds/dodsC/ESPC-D-V02/ice/2025",
+        "service_catalog": "https://tds.hycom.org/thredds/catalogs/ESPC-D-V02_ice.html?dataset=ESPC-D-V02-ice-2025"
+      },
+      "pair_status": "blocked_pending_file_verification"
+    }
+  ]
+}

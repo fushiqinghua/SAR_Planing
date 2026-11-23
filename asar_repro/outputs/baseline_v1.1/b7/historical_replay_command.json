@@ -1,0 +1,11 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "scripts/generate_historical_drift.py",
+    "--verify-replay"
+  ],
+  "exit_code": 0,
+  "wall_s": 11.80220170004759,
+  "stdout": "{\n  \"stage\": \"B3\",\n  \"status\": \"passed\",\n  \"mode\": \"independent_replay\",\n  \"config_hash\": \"b7f8f7261148f6e9cf9a4cb68a0ab3e751f729a666c9b977f9e5646ccfec7ca8\",\n  \"archive_sha256\": \"8b30a87e543f1b33c39e70e1d0054e1750ec046ba2e0b627dd311d9945749456\",\n  \"native\": {\n    \"first_utc\": \"2025-08-26T14:45:00Z\",\n    \"last_utc\": \"2025-08-26T15:53:00Z\",\n    \"frames\": 137\n  },\n  \"search\": {\n    \"first_utc\": \"2025-08-26T15:45:00Z\",\n    \"last_utc\": \"2025-08-26T15:52:33.74Z\",\n    \"frames\": 50\n  },\n  \"compared_npz_arrays\": 21,\n  \"exact_replay\": true,\n  \"forcing_terminal_events\": 0,\n  \"archive_integration_seconds\": 6.837059700046666,\n  \"runtime_seconds\": 9.396643600077368\n}\n",
+  "stderr": ""
+}

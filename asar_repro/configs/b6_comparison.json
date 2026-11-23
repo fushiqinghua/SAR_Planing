@@ -1,0 +1,17 @@
+{
+  "stage": "B6",
+  "archive": "outputs/baseline_v1.1/lake_ontario_real/particles.npz",
+  "archive_sha256": "8b30a87e543f1b33c39e70e1d0054e1750ec046ba2e0b627dd311d9945749456",
+  "metadata": "outputs/baseline_v1.1/lake_ontario_real/metadata.json",
+  "metadata_sha256": "1e96ecea2547ca918dd068b7f86a3d4b680cdc89ad6814b1132ca80cdc5e89fc",
+  "synthetic_report": "outputs/stage7/lake_ontario/results.json",
+  "heuristics": ["paper_greedy", "mass_lb"],
+  "epsilon": [1.1, 1.04, 1.0],
+  "limits": {"max_expansions": 5000, "max_open": 20000, "max_seconds": 30},
+  "watchdog_grace_s": 60,
+  "threads": 1,
+  "snapshot_steps": [1, 5, 15, 30],
+  "aco_inspired": false,
+  "aco_note": "Optional comparator omitted in B6; no ACO_original claim",
+  "numerical_atol": 1e-10
+}

@@ -1,0 +1,12 @@
+{
+  "v1_commit": "abd1b472798fbf3d318e83d09caf9b69cc459122",
+  "v1_files": 180,
+  "git_blobs_verified": true,
+  "original_worktree_present": true,
+  "original_worktree_verified": true,
+  "intentional_v1_1_changes": [
+    "asar_repro/src/asar_repro/planner_adapter.py"
+  ],
+  "frozen_file_count": 426,
+  "real_files": 10
+}

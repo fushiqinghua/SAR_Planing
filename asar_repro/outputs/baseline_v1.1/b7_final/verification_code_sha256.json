@@ -1,0 +1,7 @@
+{
+  "scripts/validate_baseline_v1_1.py": "f6de322990b83fec718c2e49916b2c31936725073c31fd9e16576b6e46068199",
+  "scripts/report_baseline_v1_1.py": "32713caa9bf2971a56dcd1fea34c332ab2e9657acaea208ab345ce7c1e2b8654",
+  "scripts/replay_baseline_v1_1.py": "87bfb4bd406bd6ce8e0ece7b5990178ed506ee5affdbee9279c5a772112d97cb",
+  "scripts/offline_guard/sitecustomize.py": "3bc07350962b4ba9e40cecff13218ed8bff7f379b177217364dba0e6f03fd2ce",
+  "tests/test_b7_validation.py": "d7b0e313f09176b7460ba373f4073c31400c8460dbe0b53cd07a93dc92035f52"
+}

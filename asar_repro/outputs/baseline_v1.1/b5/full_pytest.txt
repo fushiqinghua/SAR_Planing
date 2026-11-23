@@ -1,0 +1,9 @@
+Command: C:\Users\35448\.conda\envs\maritime-sar\python.exe -m pytest -q
+CWD: E:\毕业设计\终稿研发\new\baseline\SAR_Planing-v1.1\asar_repro
+PYTHONPATH=src; PYTHONDONTWRITEBYTECODE=1; PYTEST_ADDOPTS=-p no:cacheprovider
+........................................................................ [ 33%]
+........................................................................ [ 66%]
+........................................................................ [ 99%]
+.                                                                        [100%]
+217 passed in 17.47s
+Exit code: 0

@@ -1,0 +1,1760 @@
+{
+  "status": "passed",
+  "stage": "B3",
+  "scenario": "lake_ontario",
+  "forcing_kind": "historical_real",
+  "experiment_label": "historical_real_forcing_allwater",
+  "shoreline_policy": "allwater",
+  "interpretation": "retrospective_environment_reconstruction",
+  "config_hash": "b7f8f7261148f6e9cf9a4cb68a0ab3e751f729a666c9b977f9e5646ccfec7ca8",
+  "provenance": {
+    "schema": 1,
+    "config": {
+      "forcing_kind": "historical_real",
+      "seed": 41,
+      "radius_m": 100,
+      "particles": 500,
+      "incident_utc": "2025-08-26T14:45:00Z",
+      "cst_utc": "2025-08-26T15:45:00Z",
+      "lkp_lon_lat": [
+        -76.5,
+        44.21
+      ],
+      "csp_lon_lat": [
+        -76.496,
+        44.215
+      ],
+      "object_key": "PIW-2",
+      "budget": 49,
+      "grid_rows_cols": [
+        17,
+        17
+      ],
+      "integration_s": 30,
+      "step_s": 9.26,
+      "cell_width_m": 185.2,
+      "output_s": 30,
+      "audit_q": 0.78
+    },
+    "input_fingerprints": {
+      "manifest_sha256": "fa6f8c839bf894a3654a74c28e347f598b413e4ae0484bd7d090b718a43fc400",
+      "b2_audit_sha256": "b78f6beabcf396270a06b2305f29bffe2fa989d9af3914e7ffc44de86d94d5bb",
+      "stage7_config_sha256": "40311df54d7e43dcebdb2e618ebcb81a86add4d83db7a8ac925253ff73f391d6",
+      "sources": {
+        "wind": [
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t13z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t13z.wrfsfcf00.grib2.idx",
+            "bytes": 4763230,
+            "sha256": "d23da8d2684adeb56f7b205d84135aecce0a7fbacbe50d94eca933831a524419",
+            "source_kind": "byte_exact_selected_original_grib_messages",
+            "run_cycle_utc": "2025-08-26T13:00:00Z",
+            "forecast_or_analysis": "analysis_f00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "level": "10 m above ground",
+                "start": 42197515,
+                "end_inclusive": 44579129,
+                "sha256": "3ee355185cb5794ef35174a030ff4d025155c3f92f0fd3f31b52866ca53c6bef",
+                "index_line": "77:42197515:d=2025082613:UGRD:10 m above ground:anl:",
+                "response": {
+                  "http_status": 206,
+                  "etag": "\"50783850e0d96efe0507cb26bb88c732\"",
+                  "content_range": "bytes 42197515-44579129/141292273",
+                  "last_modified": "Tue, 26 Aug 2025 13:51:07 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "level": "10 m above ground",
+                "start": 44579130,
+                "end_inclusive": 46960744,
+                "sha256": "2a932dfa433967877cf1c93411ae80830c59e736946c27ab72e1f52577f8c734",
+                "index_line": "78:44579130:d=2025082613:VGRD:10 m above ground:anl:",
+                "response": {
+                  "http_status": 206,
+                  "etag": "\"50783850e0d96efe0507cb26bb88c732\"",
+                  "content_range": "bytes 44579130-46960744/141292273",
+                  "last_modified": "Tue, 26 Aug 2025 13:51:07 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t13z.f00.10m_uv.grib2",
+            "valid_utc": "2025-08-26T13:00:00+00:00",
+            "subset_sha256": "d23da8d2684adeb56f7b205d84135aecce0a7fbacbe50d94eca933831a524419",
+            "full_object_sha256": null
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t14z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t14z.wrfsfcf00.grib2.idx",
+            "bytes": 4286944,
+            "sha256": "e93eb9ebf9995368d535885e97c8442e50630b25e247e6efb938bb02b3ec06e4",
+            "source_kind": "byte_exact_selected_original_grib_messages",
+            "run_cycle_utc": "2025-08-26T14:00:00Z",
+            "forecast_or_analysis": "analysis_f00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "level": "10 m above ground",
+                "start": 42140365,
+                "end_inclusive": 44283836,
+                "sha256": "01d31873869925135772c9800281c5652c27819e78ea8dd1b3c97b0be24e14c7",
+                "index_line": "77:42140365:d=2025082614:UGRD:10 m above ground:anl:",
+                "response": {
+                  "http_status": 206,
+                  "etag": "\"43a0df77f63343a5929e94ec78b7b1ac\"",
+                  "content_range": "bytes 42140365-44283836/144085737",
+                  "last_modified": "Tue, 26 Aug 2025 14:52:15 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "level": "10 m above ground",
+                "start": 44283837,
+                "end_inclusive": 46427308,
+                "sha256": "a902ca85ae2e39a0f89d68be05672a996f3c57c720592d28c5ae082239f769fa",
+                "index_line": "78:44283837:d=2025082614:VGRD:10 m above ground:anl:",
+                "response": {
+                  "http_status": 206,
+                  "etag": "\"43a0df77f63343a5929e94ec78b7b1ac\"",
+                  "content_range": "bytes 44283837-46427308/144085737",
+                  "last_modified": "Tue, 26 Aug 2025 14:52:15 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t14z.f00.10m_uv.grib2",
+            "valid_utc": "2025-08-26T14:00:00+00:00",
+            "subset_sha256": "e93eb9ebf9995368d535885e97c8442e50630b25e247e6efb938bb02b3ec06e4",
+            "full_object_sha256": null
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t15z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t15z.wrfsfcf00.grib2.idx",
+            "bytes": 4286944,
+            "sha256": "644b9d28c24f01aeebc7fb75bcb7cb1468aece6068de5d4c37667e63d424130c",
+            "source_kind": "byte_exact_selected_original_grib_messages",
+            "run_cycle_utc": "2025-08-26T15:00:00Z",
+            "forecast_or_analysis": "analysis_f00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "level": "10 m above ground",
+                "start": 42141801,
+                "end_inclusive": 44285272,
+                "sha256": "5259700b591bf8f744aac6da215654af5543c0f12ce79b9056a69d1b02489cbe",
+                "index_line": "77:42141801:d=2025082615:UGRD:10 m above ground:anl:",
+                "response": {
+                  "http_status": 206,
+                  "etag": "\"ab9827c2bfd3282ac71052091480ed35\"",
+                  "content_range": "bytes 42141801-44285272/146411883",
+                  "last_modified": "Tue, 26 Aug 2025 15:54:15 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "level": "10 m above ground",
+                "start": 44285273,
+                "end_inclusive": 46428744,
+                "sha256": "b3a968f74a17cf183cb27f260a8c1f74a01c30844d92c0b08a57f97e9d6281e1",
+                "index_line": "78:44285273:d=2025082615:VGRD:10 m above ground:anl:",
+                "response": {
+                  "http_status": 206,
+                  "etag": "\"ab9827c2bfd3282ac71052091480ed35\"",
+                  "content_range": "bytes 44285273-46428744/146411883",
+                  "last_modified": "Tue, 26 Aug 2025 15:54:15 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t15z.f00.10m_uv.grib2",
+            "valid_utc": "2025-08-26T15:00:00+00:00",
+            "subset_sha256": "644b9d28c24f01aeebc7fb75bcb7cb1468aece6068de5d4c37667e63d424130c",
+            "full_object_sha256": null
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t16z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t16z.wrfsfcf00.grib2.idx",
+            "bytes": 4286944,
+            "sha256": "46256f2a7357568baa37e1193120521f3cda5706549e69023d5f274621108654",
+            "source_kind": "byte_exact_selected_original_grib_messages",
+            "run_cycle_utc": "2025-08-26T16:00:00Z",
+            "forecast_or_analysis": "analysis_f00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "level": "10 m above ground",
+                "start": 42534354,
+                "end_inclusive": 44677825,
+                "sha256": "cf8be8957d2acf29dc2edf956044bab6708d2b9a0081bba19e01336ab7e1e816",
+                "index_line": "77:42534354:d=2025082616:UGRD:10 m above ground:anl:",
+                "response": {
+                  "http_status": 206,
+                  "etag": "\"0e923b05a9ce7d792af3af6670a1ee9d\"",
+                  "content_range": "bytes 42534354-44677825/148265046",
+                  "last_modified": "Tue, 26 Aug 2025 16:52:12 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "level": "10 m above ground",
+                "start": 44677826,
+                "end_inclusive": 46821297,
+                "sha256": "e35ae666d4a5784ad00aa6d0321b6c3f8e7aad299c9cda13b4e154d612874faa",
+                "index_line": "78:44677826:d=2025082616:VGRD:10 m above ground:anl:",
+                "response": {
+                  "http_status": 206,
+                  "etag": "\"0e923b05a9ce7d792af3af6670a1ee9d\"",
+                  "content_range": "bytes 44677826-46821297/148265046",
+                  "last_modified": "Tue, 26 Aug 2025 16:52:12 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t16z.f00.10m_uv.grib2",
+            "valid_utc": "2025-08-26T16:00:00+00:00",
+            "subset_sha256": "46256f2a7357568baa37e1193120521f3cda5706549e69023d5f274621108654",
+            "full_object_sha256": null
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t17z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t17z.wrfsfcf00.grib2.idx",
+            "bytes": 4286944,
+            "sha256": "71beb93fd7c77e25ce6f3a1d75d10198e703b7b436640c0909cf0d51c61cf447",
+            "source_kind": "byte_exact_selected_original_grib_messages",
+            "run_cycle_utc": "2025-08-26T17:00:00Z",
+            "forecast_or_analysis": "analysis_f00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "level": "10 m above ground",
+                "start": 42473413,
+                "end_inclusive": 44616884,
+                "sha256": "c50059e7fcdf03975e515d5dbc502ad89e3907d7c2a8b2e0eadca21391d254ee",
+                "index_line": "77:42473413:d=2025082617:UGRD:10 m above ground:anl:",
+                "response": {
+                  "http_status": 206,
+                  "etag": "\"de73af5cae03b769b43f3b25b0f0a89f\"",
+                  "content_range": "bytes 42473413-44616884/148192812",
+                  "last_modified": "Tue, 26 Aug 2025 17:51:38 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "level": "10 m above ground",
+                "start": 44616885,
+                "end_inclusive": 46760356,
+                "sha256": "1669bb2747d46323a95a0c88812b3e4d7d076c9f60b64108fa1df577af56fed7",
+                "index_line": "78:44616885:d=2025082617:VGRD:10 m above ground:anl:",
+                "response": {
+                  "http_status": 206,
+                  "etag": "\"de73af5cae03b769b43f3b25b0f0a89f\"",
+                  "content_range": "bytes 44616885-46760356/148192812",
+                  "last_modified": "Tue, 26 Aug 2025 17:51:38 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t17z.f00.10m_uv.grib2",
+            "valid_utc": "2025-08-26T17:00:00+00:00",
+            "subset_sha256": "71beb93fd7c77e25ce6f3a1d75d10198e703b7b436640c0909cf0d51c61cf447",
+            "full_object_sha256": null
+          }
+        ],
+        "current": [
+          {
+            "product": "LOOFS",
+            "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n001.nc",
+            "bytes": 70159473,
+            "sha256": "7269134c0240c7f00eeca6e9e6bc39dc40ae49032004f8561c239510fcd7090f",
+            "source_kind": "complete_original_netcdf",
+            "run_cycle_utc": "2025-08-26T18:00:00Z",
+            "forecast_or_analysis": "nowcast",
+            "response": {
+              "http_status": 200,
+              "etag": "\"7f9e13523b4eaee27347f515bb6bb7fc-9\"",
+              "content_range": null,
+              "last_modified": "Tue, 26 Aug 2025 20:46:32 GMT"
+            },
+            "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n001.nc",
+            "valid_utc": "2025-08-26T13:00:00+00:00",
+            "subset_sha256": null,
+            "full_object_sha256": "7269134c0240c7f00eeca6e9e6bc39dc40ae49032004f8561c239510fcd7090f"
+          },
+          {
+            "product": "LOOFS",
+            "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n002.nc",
+            "bytes": 70159473,
+            "sha256": "5092a254127774814da296dcc0edb302ca3320c5a8e2bd6f951d09ea25e75484",
+            "source_kind": "complete_original_netcdf",
+            "run_cycle_utc": "2025-08-26T18:00:00Z",
+            "forecast_or_analysis": "nowcast",
+            "response": {
+              "http_status": 200,
+              "etag": "\"00a1fb49c865d41e06071ecdd5335ae6-9\"",
+              "content_range": null,
+              "last_modified": "Tue, 26 Aug 2025 20:46:32 GMT"
+            },
+            "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n002.nc",
+            "valid_utc": "2025-08-26T14:00:00+00:00",
+            "subset_sha256": null,
+            "full_object_sha256": "5092a254127774814da296dcc0edb302ca3320c5a8e2bd6f951d09ea25e75484"
+          },
+          {
+            "product": "LOOFS",
+            "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n003.nc",
+            "bytes": 70159473,
+            "sha256": "ec3918e3251852e1646373b0aaa3e29f75232333879dfabcf37a547a3ffef4f3",
+            "source_kind": "complete_original_netcdf",
+            "run_cycle_utc": "2025-08-26T18:00:00Z",
+            "forecast_or_analysis": "nowcast",
+            "response": {
+              "cache_reused": true
+            },
+            "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n003.nc",
+            "valid_utc": "2025-08-26T15:00:00+00:00",
+            "subset_sha256": null,
+            "full_object_sha256": "ec3918e3251852e1646373b0aaa3e29f75232333879dfabcf37a547a3ffef4f3"
+          },
+          {
+            "product": "LOOFS",
+            "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n004.nc",
+            "bytes": 70159473,
+            "sha256": "e16e82ce3149104f6f8d8e2d7ece55de11d1c7a7b1f36c2a9fd20b4714bac8c4",
+            "source_kind": "complete_original_netcdf",
+            "run_cycle_utc": "2025-08-26T18:00:00Z",
+            "forecast_or_analysis": "nowcast",
+            "response": {
+              "http_status": 200,
+              "etag": "\"319adf6d64e7d518ca2894eb05cf60d7-9\"",
+              "content_range": null,
+              "last_modified": "Tue, 26 Aug 2025 20:46:32 GMT"
+            },
+            "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n004.nc",
+            "valid_utc": "2025-08-26T16:00:00+00:00",
+            "subset_sha256": null,
+            "full_object_sha256": "e16e82ce3149104f6f8d8e2d7ece55de11d1c7a7b1f36c2a9fd20b4714bac8c4"
+          },
+          {
+            "product": "LOOFS",
+            "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n005.nc",
+            "bytes": 70159473,
+            "sha256": "aa575cf91f8ecb84e003389204cae11846fc9a22ac754b2817a4ccb367ee0682",
+            "source_kind": "complete_original_netcdf",
+            "run_cycle_utc": "2025-08-26T18:00:00Z",
+            "forecast_or_analysis": "nowcast",
+            "response": {
+              "http_status": 200,
+              "etag": "\"1cb9941135a33f76b0a719400cd991ee-9\"",
+              "content_range": null,
+              "last_modified": "Tue, 26 Aug 2025 20:46:32 GMT"
+            },
+            "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n005.nc",
+            "valid_utc": "2025-08-26T17:00:00+00:00",
+            "subset_sha256": null,
+            "full_object_sha256": "aa575cf91f8ecb84e003389204cae11846fc9a22ac754b2817a4ccb367ee0682"
+          }
+        ]
+      },
+      "implementation_sha256": {
+        "historical_drift": "64fae2f0a0744dc35a3f3b557083c74a2a1b98b1c7572e028012f7d81970b80d",
+        "opendrift_adapter": "74c671d7b74cec45fe9702f314236f35d8063571425329ed38da026292f6ca44",
+        "historical_reader": "7d7e936ad12de6eb6b7f0bb27a04bb26fa1910cb37949ff03b3f8ed27694535d",
+        "forcing": "cf9715349d65abda1c3e6d9b09f731bab5ef98708a03d338534fa2800f1f3450",
+        "hrrr": "b770a776dd04af1651930754b22a02cfc1f03a0f3dd1411e6332dc77eeb6337d",
+        "grid": "d9794ec80afb764699333e0fa7bd9ef098d3d1360f14a76ae57b5b41f2a547e9",
+        "gridding": "c684c341f8d0f5cb73d37e240f376fc9e5c42c092f015e3b72c31d4fd0656e43",
+        "objective": "792077ad3e0286c03f60108f2580ea3b3557e3f5b002bc1a5e2f9f67e48fb2ad",
+        "motion": "7e74178390ffa34f30f7b987a4d7a2459e8f0ca2646ca3026c97e505f758c2c9",
+        "belief": "cc11028b1ef3a8bf29680a61ddee6262e63be5b2ff00e78075fbab396ac09021",
+        "scenarios": "8bcb2f9663ab1b26dcb8305a321ede07c31eab6f7ad346e308746842a3a652be",
+        "generator": "f5d0a0ab5b4a9f25f2a151a0cc1ccbf85eab5dbc963f4f98246e6cf98b55cd44",
+        "figures": "1d71bdcdc239d5f17d2fe756ffb00df6f25e17c811b1c03bcd69c1417e6e280e"
+      }
+    },
+    "versions": {
+      "opendrift": "1.14.12",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "pyproj": "3.7.2",
+      "netCDF4": "1.7.5",
+      "shapely": "2.2.0"
+    }
+  },
+  "interpreter": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+  "model": {
+    "object": {
+      "number": 2,
+      "key": "PIW-2",
+      "description": ">PIW, vertical PFD type III conscious"
+    },
+    "readers": {
+      "x_wind": [
+        "asar_wind"
+      ],
+      "y_wind": [
+        "asar_wind"
+      ],
+      "x_sea_water_velocity": [
+        "asar_current"
+      ],
+      "y_sea_water_velocity": [
+        "asar_current"
+      ]
+    },
+    "integration_steps": 136,
+    "source_dims": [
+      "trajectory",
+      "time"
+    ]
+  },
+  "weather_valid_utc": {
+    "wind": [
+      "2025-08-26T13:00:00+00:00",
+      "2025-08-26T14:00:00+00:00",
+      "2025-08-26T15:00:00+00:00",
+      "2025-08-26T16:00:00+00:00",
+      "2025-08-26T17:00:00+00:00"
+    ],
+    "current": [
+      "2025-08-26T13:00:00+00:00",
+      "2025-08-26T14:00:00+00:00",
+      "2025-08-26T15:00:00+00:00",
+      "2025-08-26T16:00:00+00:00",
+      "2025-08-26T17:00:00+00:00"
+    ]
+  },
+  "native_output": {
+    "first_utc": "2025-08-26T14:45:00Z",
+    "last_utc": "2025-08-26T15:53:00Z",
+    "frames": 137
+  },
+  "search_output": {
+    "first_utc": "2025-08-26T15:45:00Z",
+    "last_utc": "2025-08-26T15:52:33.74Z",
+    "frames": 50
+  },
+  "archive_dims": [
+    "time",
+    "trajectory_id"
+  ],
+  "status_flags": {
+    "0": "active"
+  },
+  "search_grid": {
+    "crs": "PROJCRS[\"unknown\",BASEGEOGCRS[\"unknown\",DATUM[\"World Geodetic System 1984\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1]],ID[\"EPSG\",6326]],PRIMEM[\"Greenwich\",0,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8901]]],CONVERSION[\"unknown\",METHOD[\"Azimuthal Equidistant\",ID[\"EPSG\",1125]],PARAMETER[\"Latitude of natural origin\",44.215,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8801]],PARAMETER[\"Longitude of natural origin\",-76.496,ANGLEUNIT[\"degree\",0.0174532925199433],ID[\"EPSG\",8802]],PARAMETER[\"False easting\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8806]],PARAMETER[\"False northing\",0,LENGTHUNIT[\"metre\",1],ID[\"EPSG\",8807]]],CS[Cartesian,2],AXIS[\"(E)\",east,ORDER[1],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]],AXIS[\"(N)\",north,ORDER[2],LENGTHUNIT[\"metre\",1,ID[\"EPSG\",9001]]]]",
+    "indexing": "row-major, north row first; west/south inclusive; east/north exclusive",
+    "special_bins": {
+      "land": 289,
+      "outside": 290,
+      "inactive": 291,
+      "unknown": 292
+    }
+  },
+  "resampling": "UTC linear latitude and shortest-arc longitude with matching status and mask; ambiguous intervals unknown; carry terminal states without inventing positions",
+  "forcing_time_interpolation": "linear between hourly native fields",
+  "forcing_terminal_events": [],
+  "postprocessing": "wet or dry and support checked at native and planning positions; future samples after a forcing-induced terminal event retain its original mass category",
+  "native_mass": [
+    {
+      "utc": "2025-08-26T14:45:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:45:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:46:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:46:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:47:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:47:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:48:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:48:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:49:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:49:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:50:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:50:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:51:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:51:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:52:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:52:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:53:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:53:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:54:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:54:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:55:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:55:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:56:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:56:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:57:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:57:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:58:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:58:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:59:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T14:59:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:00:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:00:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:01:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:01:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:02:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:02:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:03:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:03:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:04:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:04:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:05:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:05:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:06:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:06:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:07:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:07:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:08:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:08:30Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:09:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:09:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:10:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:10:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:11:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:11:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:12:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:12:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:13:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:13:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:14:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:14:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:15:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:15:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:16:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:16:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:17:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:17:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:18:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:18:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:19:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:19:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:20:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:20:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:21:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:21:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:22:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:22:30Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:23:00Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:23:30Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:24:00Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:24:30Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:25:00Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:25:30Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:26:00Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:26:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:27:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:27:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:28:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:28:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:29:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:29:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:30:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:30:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:31:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:31:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:32:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:32:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:33:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:33:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:34:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:34:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:35:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:35:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:36:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:36:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:37:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:37:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:38:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:38:30Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:39:00Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:39:30Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:40:00Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:40:30Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:41:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:41:30Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:42:00Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:42:30Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:43:00Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:43:30Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:44:00Z",
+      "total": 1.0000000000000007,
+      "searchable": 1.0000000000000007,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:44:30Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:45:00Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:45:30Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:46:00Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:46:30Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:47:00Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:47:30Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:48:00Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:48:30Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:49:00Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:49:30Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:50:00Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:50:30Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:51:00Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:51:30Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:52:00Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:52:30Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "utc": "2025-08-26T15:53:00Z",
+      "total": 1.0000000000000004,
+      "searchable": 1.0000000000000004,
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    }
+  ],
+  "audit": {
+    "path": "fixed east/west transect through CSP, first move east",
+    "q": 0.78,
+    "J": 47.219754994240006,
+    "Pd": 0.05770030656,
+    "M_T": 0.9422996934400003,
+    "max_error": 4.440892098500626e-16,
+    "max_prior_special_mass": {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    "first": {
+      "step": 0,
+      "utc": "2025-08-26T15:45:00Z",
+      "visited": null,
+      "particles": 500,
+      "prior_searchable": 1.0000000000000004,
+      "prior_land": 0.0,
+      "prior_outside": 0.0,
+      "prior_inactive": 0.0,
+      "prior_unknown": 0.0,
+      "prior_total": 1.0000000000000004,
+      "posterior_searchable": 1.0000000000000004,
+      "posterior_land": 0.0,
+      "posterior_outside": 0.0,
+      "posterior_inactive": 0.0,
+      "posterior_unknown": 0.0,
+      "M": 1.0000000000000004,
+      "Pd": 0.0,
+      "delta_Pd": 0.0,
+      "max_error": 4.440892098500626e-16
+    },
+    "last": {
+      "step": 49,
+      "utc": "2025-08-26T15:52:33.74Z",
+      "visited": 143,
+      "particles": 500,
+      "prior_searchable": 1.0000000000000004,
+      "prior_land": 0.0,
+      "prior_outside": 0.0,
+      "prior_inactive": 0.0,
+      "prior_unknown": 0.0,
+      "prior_total": 1.0000000000000004,
+      "posterior_searchable": 0.9422996934400004,
+      "posterior_land": 0.0,
+      "posterior_outside": 0.0,
+      "posterior_inactive": 0.0,
+      "posterior_unknown": 0.0,
+      "M": 0.9422996934400003,
+      "Pd": 0.05770030656,
+      "delta_Pd": 0.0,
+      "max_error": 4.440892098500626e-16
+    }
+  },
+  "integration_seconds": 6.837059700046666,
+  "artifacts_sha256": {
+    "particles.npz": "8b30a87e543f1b33c39e70e1d0054e1750ec046ba2e0b627dd311d9945749456",
+    "mass_audit.csv": "47b66d2f36652b3aa28001997845fe430bbea2e8550fc673ebbcd47186b4339a",
+    "particles.png": "6feb6ac18f386e0fb7a11669adc5bae6d136878119972c6aae22903b2c6c6360",
+    "forcing_snapshot.png": "4e6610a5395d87be8a39d5c839c6b8087395b909249a9368072d03f3e8fe058e",
+    "time_coverage.png": "fbcc597e1bca9558bfc85190bdda1e4f7659f5daa13e4616209727024661e146",
+    "forcing_audit.json": "b78f6beabcf396270a06b2305f29bffe2fa989d9af3914e7ffc44de86d94d5bb"
+  }
+}

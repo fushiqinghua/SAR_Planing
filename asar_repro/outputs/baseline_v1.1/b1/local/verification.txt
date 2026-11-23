@@ -1,0 +1,1 @@
+verified_B1_local 26 checksums; {'wind': 5, 'current': 5}

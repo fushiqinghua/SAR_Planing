@@ -1,0 +1,7 @@
+{
+  "heuristic": "mass_lb",
+  "epsilon": 1.0,
+  "max_expansions": 2000,
+  "max_seconds": 30,
+  "max_open": 20000
+}

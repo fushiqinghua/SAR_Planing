@@ -1,0 +1,17 @@
+{
+  "lake_ontario": {
+    "zip": "ASAR_B1_LakeOntario_真实风流数据包.zip",
+    "zip_sha256": "72f7f4473fa81b15de09c1316d41f3b6596471a36c15e4539717ce1f5db0ae78",
+    "sums_sha256": "8ba23e4e7e3d81a0d048ab11d2efa430aa61a0042e594c5271c3203c631c7bc8"
+  },
+  "arctic_ocean": {
+    "zip": "ASAR_B1_HudsonsBay_真实风流数据包.zip",
+    "zip_sha256": "9d79685db24936d2e3906e50b05b89e6faea5907e8b651874ad5f0518887b2b6",
+    "sums_sha256": "fb04fcf592e16e4753ea6367e07e95f93b693983bfe69b078dcaf93a072f3156"
+  },
+  "bay_of_fundy": {
+    "zip": "ASAR_B1_BayOfFundy_真实风流数据包.zip",
+    "zip_sha256": "fb84cdfd2bc5e7b3805763ef0f1aa6b1fd213d1ca6b64d5560d9aae742ef6375",
+    "sums_sha256": "762d80b14eded923fcd78390f8d990e6e6fa3433391c65664dc3ba965b4c0504"
+  }
+}

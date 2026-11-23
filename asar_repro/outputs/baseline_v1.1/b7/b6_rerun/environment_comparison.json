@@ -1,0 +1,335 @@
+{
+  "historical_real": {
+    "archive_sha256": "8b30a87e543f1b33c39e70e1d0054e1750ec046ba2e0b627dd311d9945749456",
+    "position_statistics": [
+      {
+        "t": 0,
+        "located_mass": 1.0000000000000004,
+        "centroid_east_north_m": [
+          658.8911134580128,
+          -454.4625178076117
+        ],
+        "radial_distance_quantiles_m": [
+          498.0980942327683,
+          834.9715329230687,
+          1144.4803149935997
+        ]
+      },
+      {
+        "t": 49,
+        "located_mass": 1.0000000000000004,
+        "centroid_east_north_m": [
+          777.8492215861644,
+          -434.9494118380594
+        ],
+        "radial_distance_quantiles_m": [
+          553.8851529728827,
+          931.4592976719725,
+          1270.6583786371464
+        ]
+      }
+    ],
+    "forcing_samples": [
+      {
+        "event": "incident",
+        "utc": "2025-08-26T14:45:00+00:00",
+        "wind": [
+          {
+            "status": "ok",
+            "east_north_m_s": [
+              5.492729663848877,
+              1.3312333822250366
+            ]
+          },
+          {
+            "status": "ok",
+            "east_north_m_s": [
+              5.3723649978637695,
+              1.4423929452896118
+            ]
+          },
+          {
+            "status": "ok",
+            "east_north_m_s": [
+              5.161346912384033,
+              1.183688759803772
+            ]
+          }
+        ],
+        "current": [
+          {
+            "status": "ok",
+            "east_north_m_s": [
+              0.24327170848846436,
+              0.011498522013425827
+            ]
+          },
+          {
+            "status": "ok",
+            "east_north_m_s": [
+              0.1997048556804657,
+              0.012618371285498142
+            ]
+          },
+          {
+            "status": "outside_mesh",
+            "east_north_m_s": null
+          }
+        ]
+      },
+      {
+        "event": "predrift_midpoint",
+        "utc": "2025-08-26T15:15:00+00:00",
+        "wind": [
+          {
+            "status": "ok",
+            "east_north_m_s": [
+              5.274463653564453,
+              1.5829908847808838
+            ]
+          },
+          {
+            "status": "ok",
+            "east_north_m_s": [
+              5.176003932952881,
+              1.6997328996658325
+            ]
+          },
+          {
+            "status": "ok",
+            "east_north_m_s": [
+              5.003363609313965,
+              1.4094932079315186
+            ]
+          }
+        ],
+        "current": [
+          {
+            "status": "ok",
+            "east_north_m_s": [
+              0.24655647575855255,
+              0.012524238787591457
+            ]
+          },
+          {
+            "status": "ok",
+            "east_north_m_s": [
+              0.2050505429506302,
+              0.013007544912397861
+            ]
+          },
+          {
+            "status": "outside_mesh",
+            "east_north_m_s": null
+          }
+        ]
+      },
+      {
+        "event": "cst",
+        "utc": "2025-08-26T15:45:00+00:00",
+        "wind": [
+          {
+            "status": "ok",
+            "east_north_m_s": [
+              5.081600189208984,
+              2.1506006717681885
+            ]
+          },
+          {
+            "status": "ok",
+            "east_north_m_s": [
+              4.982571601867676,
+              2.270503044128418
+            ]
+          },
+          {
+            "status": "ok",
+            "east_north_m_s": [
+              4.867772102355957,
+              1.9331473112106323
+            ]
+          }
+        ],
+        "current": [
+          {
+            "status": "ok",
+            "east_north_m_s": [
+              0.2538433074951172,
+              0.012897358275949955
+            ]
+          },
+          {
+            "status": "ok",
+            "east_north_m_s": [
+              0.21224737167358398,
+              0.012753214687108994
+            ]
+          },
+          {
+            "status": "outside_mesh",
+            "east_north_m_s": null
+          }
+        ]
+      },
+      {
+        "event": "search_end",
+        "utc": "2025-08-26T15:52:33.740000+00:00",
+        "wind": [
+          {
+            "status": "ok",
+            "east_north_m_s": [
+              5.032983303070068,
+              2.29368257522583
+            ]
+          },
+          {
+            "status": "ok",
+            "east_north_m_s": [
+              4.933811664581299,
+              2.414381504058838
+            ]
+          },
+          {
+            "status": "ok",
+            "east_north_m_s": [
+              4.833592414855957,
+              2.0651488304138184
+            ]
+          }
+        ],
+        "current": [
+          {
+            "status": "ok",
+            "east_north_m_s": [
+              0.2556801736354828,
+              0.012991413474082947
+            ]
+          },
+          {
+            "status": "ok",
+            "east_north_m_s": [
+              0.21406154334545135,
+              0.012689103372395039
+            ]
+          },
+          {
+            "status": "outside_mesh",
+            "east_north_m_s": null
+          }
+        ]
+      }
+    ],
+    "sample_sites_in_order": [
+      "LKP",
+      "CSP",
+      "outside_LOOFS"
+    ],
+    "cycle_policy": {
+      "wind": "each distinct valid UTC from its own HRRR f00 analysis",
+      "current": "one 18 UTC LOOFS nowcast cycle using file-native valid UTC"
+    },
+    "wind_site_event_stats": {
+      "count": 8,
+      "east_north_min_m_s": [
+        4.933811664581299,
+        1.3312333822250366
+      ],
+      "east_north_mean_m_s": [
+        5.168316125869751,
+        1.89818973839283
+      ],
+      "east_north_max_m_s": [
+        5.492729663848877,
+        2.414381504058838
+      ],
+      "speed_range_m_s": [
+        5.447945359871931,
+        5.651748532806082
+      ],
+      "scope": "LKP and CSP at 4 B2 events; not domain or particle-weighted average"
+    },
+    "current_site_event_stats": {
+      "count": 8,
+      "east_north_min_m_s": [
+        0.1997048556804657,
+        0.011498522013425827
+      ],
+      "east_north_mean_m_s": [
+        0.2288019973784685,
+        0.012622470851056278
+      ],
+      "east_north_max_m_s": [
+        0.2556801736354828,
+        0.013007544912397861
+      ],
+      "speed_range_m_s": [
+        0.20010310511397447,
+        0.25601001545706215
+      ],
+      "scope": "LKP and CSP at 4 B2 events; not domain or particle-weighted average"
+    }
+  },
+  "constant_synthetic": {
+    "archive_sha256": "acadf2004698c21f5fce18cb9a03eaa5204a77363aa1d050ff92433655fa60e4",
+    "position_statistics": [
+      {
+        "t": 0,
+        "located_mass": 1.0000000000000004,
+        "centroid_east_north_m": [
+          335.394468290246,
+          -375.49295158892295
+        ],
+        "radial_distance_quantiles_m": [
+          228.99780274691958,
+          540.297473350395,
+          861.0633498532177
+        ]
+      },
+      {
+        "t": 49,
+        "located_mass": 1.0000000000000004,
+        "centroid_east_north_m": [
+          417.71425668461677,
+          -353.0213733745189
+        ],
+        "radial_distance_quantiles_m": [
+          243.641637366877,
+          583.7386766127213,
+          921.7213720859994
+        ]
+      }
+    ],
+    "constant_forcing_m_s": {
+      "x_wind": 4.0,
+      "y_wind": 0.0,
+      "x_sea_water_velocity": 0.15,
+      "y_sea_water_velocity": 0.05,
+      "land_binary_mask": 0
+    }
+  },
+  "interpretation": "Matched mission parameters, different environment inputs; no cross-forcing algorithm ranking",
+  "matched_parameters": {
+    "seed": 41,
+    "radius_m": 100,
+    "particles": 500,
+    "incident_utc": "2025-08-26T14:45:00Z",
+    "cst_utc": "2025-08-26T15:45:00Z",
+    "lkp_lon_lat": [
+      -76.5,
+      44.21
+    ],
+    "csp_lon_lat": [
+      -76.496,
+      44.215
+    ],
+    "object_key": "PIW-2",
+    "budget": 49,
+    "grid_rows_cols": [
+      17,
+      17
+    ],
+    "integration_s": 30,
+    "step_s": 9.26,
+    "cell_width_m": 185.2
+  }
+}

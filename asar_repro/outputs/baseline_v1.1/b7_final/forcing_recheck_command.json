@@ -1,0 +1,12 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "scripts/validate_forcing.py",
+    "--output",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\b7_final\\forcing_audit.json"
+  ],
+  "exit_code": 0,
+  "wall_s": 9.977622899925336,
+  "stdout": "{\n  \"status\": \"passed\",\n  \"scenario\": \"lake_ontario\",\n  \"checks\": {\n    \"wind_node_max_error_m_s\": 1.6333601138285303e-12,\n    \"wind_speed_max_error_m_s\": 1.5152323840084136e-12,\n    \"current_face_max_error_m_s\": 0.0,\n    \"wind_check\": \"B1 ecCodes node vectors rotated using analytical spherical tangent cone convergence\",\n    \"current_check\": \"B1 original face speeds at LKP and CSP for each hour\",\n    \"opendrift_float32_max_error_m_s\": 2.2667352972405297e-07\n  },\n  \"samples\": 4\n}\n",
+  "stderr": ""
+}

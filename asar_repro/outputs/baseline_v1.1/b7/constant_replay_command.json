@@ -1,0 +1,12 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "scripts/generate_drift.py",
+    "--output-dir",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\b7\\constant_rerun"
+  ],
+  "exit_code": 0,
+  "wall_s": 8.47033200005535,
+  "stdout": "{'number': 2, 'key': 'PIW-2', 'description': '>PIW, vertical PFD type III conscious'} (50, 500) 2025-08-26T15:52:33.740Z 4.440892098500626e-16 {'t': 49, 'utc': '2025-08-26T15:52:33.740Z', 'visited': 143, 'n_ids': 500, 'water': np.float64(0.9111072336064006), 'land': np.float64(0.0), 'outside': np.float64(0.0), 'inactive': np.float64(0.0), 'unknown': np.float64(0.0), 'before': np.float64(0.9111827376064003), 'removed': np.float64(7.550399999999999e-05), 'M': np.float64(0.9111072336064003), 'Pd': np.float64(0.08889276639360001), 'max_abs_residual': np.float64(4.440892098500626e-16)}\n",
+  "stderr": ""
+}
