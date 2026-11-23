@@ -1,0 +1,170 @@
+﻿[
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:P(A;OICI;FA;;;OW)(A;OICI;FA;;;SY)(A;OICI;FA;;;BA)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\b6_failed_attempt_01",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:AI(A;OICIID;0x1301bf;;;S-1-5-21-3309442951-4218089613-52256058-568279539)(A;OICIID;0x1301bf;;;S-1-5-21-2347687658-3010130035-1692176698-1601292468)(A;OICIID;0x1301ff;;;S-1-5-21-2917688776-448670640-461486545-1275850019)(A;OICIID;0x1301ff;;;S-1-5-21-1404081547-2965153439-1143136812-1003)(A;OICIID;0x1301ff;;;S-1-5-21-3410278350-156992310-3050836714-859338126)(A;ID;FA;;;BA)(A;OICIIOID;GA;;;BA)(A;ID;FA;;;SY)(A;OICIIOID;GA;;;SY)(A;ID;0x1301bf;;;AU)(A;OICIIOID;SDGXGWGR;;;AU)(A;ID;0x1200a9;;;BU)(A;OICIIOID;GXGR;;;BU)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\runs.json",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\paths.png",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\b6_workers",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;OICIID;FA;;;SY)(A;OICIID;FA;;;BA)(A;OICIID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\metrics.csv",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\b6_failed_attempt_01\\b6_workers",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:P(A;OICI;FA;;;OW)(A;OICI;FA;;;SY)(A;OICI;FA;;;BA)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\particles.npz",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\particles.png",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\comparison.md",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\metadata.json",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\mass_audit.csv",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\step_metrics.csv",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\run_manifest.json",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\time_coverage.png",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\forcing_audit.json",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\survival_curves.png",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\b6_workers\\requests",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;OICIID;FA;;;SY)(A;OICIID;FA;;;BA)(A;OICIID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\forcing_snapshot.png",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\environment_mass.csv",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\b6_failed_attempt_01\\run_manifest.json",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:P(A;;FA;;;OW)(A;;FA;;;SY)(A;;FA;;;BA)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\environment_inputs.png",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\b6_failed_attempt_01\\b6_workers\\requests",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;OICIID;FA;;;SY)(A;OICIID;FA;;;BA)(A;OICIID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\runtime_expansions.png",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\probability_snapshots.png",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\b6_workers\\warm_start.json",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\environment_comparison.json",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\b6_workers\\mass_lb_eps_1.json",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\b6_failed_attempt_01\\b6_workers\\warm_start.json",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\b6_workers\\mass_lb_eps_1p1.json",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\b6_workers\\mass_lb_eps_1p04.json",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\b6_workers\\paper_greedy_eps_1.json",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\b6_failed_attempt_01\\b6_workers\\paper_greedy_1.1.json",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\b6_workers\\paper_greedy_eps_1p1.json",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\b6_workers\\paper_greedy_eps_1p04.json",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\b6_workers\\requests\\mass_lb_eps_1.json",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\b6_workers\\requests\\mass_lb_eps_1p1.json",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\b6_workers\\requests\\mass_lb_eps_1p04.json",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\b6_workers\\requests\\paper_greedy_eps_1.json",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\b6_failed_attempt_01\\b6_workers\\requests\\paper_greedy_1.1.json",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\b6_workers\\requests\\paper_greedy_eps_1p1.json",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    },
+    {
+        "path":  "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\lake_ontario_real\\b6_workers\\requests\\paper_greedy_eps_1p04.json",
+        "sddl":  "O:S-1-5-21-1404081547-2965153439-1143136812-1004G:S-1-5-21-1404081547-2965153439-1143136812-513D:(A;ID;FA;;;SY)(A;ID;FA;;;BA)(A;ID;FA;;;OW)"
+    }
+]
