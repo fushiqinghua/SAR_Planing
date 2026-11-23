@@ -1,0 +1,4516 @@
+{
+  "stage": "B1_additional_local_packages",
+  "audit_utc": "2026-11-23T02:28:57.192Z",
+  "config_sha256": "40311df54d7e43dcebdb2e618ebcb81a86add4d83db7a8ac925253ff73f391d6",
+  "interpreter": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+  "proxy_schemes": [],
+  "aws_cli": null,
+  "raw_root": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\data\\raw\\historical",
+  "scenarios": [
+    {
+      "scenario": "lake_ontario",
+      "requested_window_utc": [
+        "2025-08-26T14:45:00.000Z",
+        "2025-08-26T15:52:33.740Z"
+      ],
+      "hourly_inspection_window_utc": [
+        "2025-08-26T13:00:00.000Z",
+        "2025-08-26T17:00:00.000Z"
+      ],
+      "cst_utc": "2025-08-26T15:45:00Z",
+      "lkp_lon_lat": [
+        -76.5,
+        44.21
+      ],
+      "csp_lon_lat": [
+        -76.496,
+        44.215
+      ],
+      "wind": {
+        "resolved_source": [
+          "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t13z.wrfsfcf00.grib2",
+          "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t14z.wrfsfcf00.grib2",
+          "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t15z.wrfsfcf00.grib2",
+          "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t16z.wrfsfcf00.grib2",
+          "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t17z.wrfsfcf00.grib2"
+        ],
+        "local_path": [
+          "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t13z.f00.10m_uv.grib2",
+          "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t14z.f00.10m_uv.grib2",
+          "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t15z.f00.10m_uv.grib2",
+          "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t16z.f00.10m_uv.grib2",
+          "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t17z.f00.10m_uv.grib2"
+        ],
+        "sha256": [
+          "d23da8d2684adeb56f7b205d84135aecce0a7fbacbe50d94eca933831a524419",
+          "e93eb9ebf9995368d535885e97c8442e50630b25e247e6efb938bb02b3ec06e4",
+          "644b9d28c24f01aeebc7fb75bcb7cb1468aece6068de5d4c37667e63d424130c",
+          "46256f2a7357568baa37e1193120521f3cda5706549e69023d5f274621108654",
+          "71beb93fd7c77e25ce6f3a1d75d10198e703b7b436640c0909cf0d51c61cf447"
+        ],
+        "size_bytes": 21911006,
+        "native_variable_names": [
+          "UGRD",
+          "VGRD"
+        ],
+        "units": "m/s",
+        "valid_time_range_utc": [
+          "2025-08-26T13:00:00+00:00",
+          "2025-08-26T17:00:00+00:00"
+        ],
+        "spatial_coverage": {
+          "sites_inside_grid": 291,
+          "lon_lat_bounds": [
+            -134.09547973426314,
+            -60.91719277183784,
+            21.138123000000004,
+            52.61565330680793
+          ]
+        },
+        "run_cycle_utc": [
+          "2025-08-26T13:00:00Z",
+          "2025-08-26T14:00:00Z",
+          "2025-08-26T15:00:00Z",
+          "2025-08-26T16:00:00Z",
+          "2025-08-26T17:00:00Z"
+        ],
+        "forecast_or_analysis": "analysis_f00",
+        "downloaded_at_utc": "2026-11-23T02:42:32.980707+00:00",
+        "download_command": "python scripts/download_lake.py --out <new-directory> (from unpacked delivery root)",
+        "crs": {
+          "Nx": 1799,
+          "Ny": 1059,
+          "grid_type": "Lambert conformal",
+          "radius_m": 6371229,
+          "latitude_origin": 38.5,
+          "central_longitude": 262.5,
+          "standard_parallels": [
+            38.5,
+            38.5
+          ],
+          "first_lon_lat": [
+            237.280472,
+            21.138123
+          ],
+          "spacing_m": [
+            3000.0,
+            3000.0
+          ],
+          "uvRelativeToGrid": 1,
+          "scan_mode": 64,
+          "lon_lat_bounds": [
+            -134.09547973426314,
+            -60.91719277183784,
+            21.138123000000004,
+            52.61565330680793
+          ]
+        },
+        "dimensions": [
+          1059,
+          1799
+        ],
+        "missing_fraction": 0.0,
+        "subset_bounds": "full native horizontal grid, two 10 m messages",
+        "subset_sha256": [
+          "d23da8d2684adeb56f7b205d84135aecce0a7fbacbe50d94eca933831a524419",
+          "e93eb9ebf9995368d535885e97c8442e50630b25e247e6efb938bb02b3ec06e4",
+          "644b9d28c24f01aeebc7fb75bcb7cb1468aece6068de5d4c37667e63d424130c",
+          "46256f2a7357568baa37e1193120521f3cda5706549e69023d5f274621108654",
+          "71beb93fd7c77e25ce6f3a1d75d10198e703b7b436640c0909cf0d51c61cf447"
+        ],
+        "product": "HRRR",
+        "catalog": "https://registry.opendata.aws/noaa-hrrr-pds/",
+        "probes": [
+          {
+            "kind": "idx",
+            "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t14z.wrfsfcf00.grib2.idx",
+            "queried_at_utc": "2026-11-23T02:28:56.575Z",
+            "command": "curl.exe --fail --location \"https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t14z.wrfsfcf00.grib2.idx\"",
+            "dns_addresses": [
+              "198.18.0.64",
+              "2001:2::3f"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          },
+          {
+            "kind": "idx",
+            "url": "https://storage.googleapis.com/high-resolution-rapid-refresh/hrrr.20250826/conus/hrrr.t14z.wrfsfcf00.grib2.idx",
+            "queried_at_utc": "2026-11-23T02:28:56.575Z",
+            "command": "curl.exe --fail --location \"https://storage.googleapis.com/high-resolution-rapid-refresh/hrrr.20250826/conus/hrrr.t14z.wrfsfcf00.grib2.idx\"",
+            "dns_addresses": [
+              "198.18.0.63",
+              "2001:2::3e"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          }
+        ],
+        "local_files": [
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t13z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t13z.wrfsfcf00.grib2.idx",
+            "bytes": 4763230,
+            "sha256": "d23da8d2684adeb56f7b205d84135aecce0a7fbacbe50d94eca933831a524419",
+            "source_kind": "byte_exact_selected_original_grib_messages",
+            "run_cycle_utc": "2025-08-26T13:00:00Z",
+            "forecast_or_analysis": "analysis_f00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "level": "10 m above ground",
+                "start": 42197515,
+                "end_inclusive": 44579129,
+                "sha256": "3ee355185cb5794ef35174a030ff4d025155c3f92f0fd3f31b52866ca53c6bef",
+                "index_line": "77:42197515:d=2025082613:UGRD:10 m above ground:anl:",
+                "response": {
+                  "http_status": 206,
+                  "etag": "\"50783850e0d96efe0507cb26bb88c732\"",
+                  "content_range": "bytes 42197515-44579129/141292273",
+                  "last_modified": "Tue, 26 Aug 2025 13:51:07 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "level": "10 m above ground",
+                "start": 44579130,
+                "end_inclusive": 46960744,
+                "sha256": "2a932dfa433967877cf1c93411ae80830c59e736946c27ab72e1f52577f8c734",
+                "index_line": "78:44579130:d=2025082613:VGRD:10 m above ground:anl:",
+                "response": {
+                  "http_status": 206,
+                  "etag": "\"50783850e0d96efe0507cb26bb88c732\"",
+                  "content_range": "bytes 44579130-46960744/141292273",
+                  "last_modified": "Tue, 26 Aug 2025 13:51:07 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t13z.f00.10m_uv.grib2",
+            "valid_utc": "2025-08-26T13:00:00+00:00",
+            "subset_sha256": "d23da8d2684adeb56f7b205d84135aecce0a7fbacbe50d94eca933831a524419",
+            "full_object_sha256": null
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t14z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t14z.wrfsfcf00.grib2.idx",
+            "bytes": 4286944,
+            "sha256": "e93eb9ebf9995368d535885e97c8442e50630b25e247e6efb938bb02b3ec06e4",
+            "source_kind": "byte_exact_selected_original_grib_messages",
+            "run_cycle_utc": "2025-08-26T14:00:00Z",
+            "forecast_or_analysis": "analysis_f00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "level": "10 m above ground",
+                "start": 42140365,
+                "end_inclusive": 44283836,
+                "sha256": "01d31873869925135772c9800281c5652c27819e78ea8dd1b3c97b0be24e14c7",
+                "index_line": "77:42140365:d=2025082614:UGRD:10 m above ground:anl:",
+                "response": {
+                  "http_status": 206,
+                  "etag": "\"43a0df77f63343a5929e94ec78b7b1ac\"",
+                  "content_range": "bytes 42140365-44283836/144085737",
+                  "last_modified": "Tue, 26 Aug 2025 14:52:15 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "level": "10 m above ground",
+                "start": 44283837,
+                "end_inclusive": 46427308,
+                "sha256": "a902ca85ae2e39a0f89d68be05672a996f3c57c720592d28c5ae082239f769fa",
+                "index_line": "78:44283837:d=2025082614:VGRD:10 m above ground:anl:",
+                "response": {
+                  "http_status": 206,
+                  "etag": "\"43a0df77f63343a5929e94ec78b7b1ac\"",
+                  "content_range": "bytes 44283837-46427308/144085737",
+                  "last_modified": "Tue, 26 Aug 2025 14:52:15 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t14z.f00.10m_uv.grib2",
+            "valid_utc": "2025-08-26T14:00:00+00:00",
+            "subset_sha256": "e93eb9ebf9995368d535885e97c8442e50630b25e247e6efb938bb02b3ec06e4",
+            "full_object_sha256": null
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t15z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t15z.wrfsfcf00.grib2.idx",
+            "bytes": 4286944,
+            "sha256": "644b9d28c24f01aeebc7fb75bcb7cb1468aece6068de5d4c37667e63d424130c",
+            "source_kind": "byte_exact_selected_original_grib_messages",
+            "run_cycle_utc": "2025-08-26T15:00:00Z",
+            "forecast_or_analysis": "analysis_f00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "level": "10 m above ground",
+                "start": 42141801,
+                "end_inclusive": 44285272,
+                "sha256": "5259700b591bf8f744aac6da215654af5543c0f12ce79b9056a69d1b02489cbe",
+                "index_line": "77:42141801:d=2025082615:UGRD:10 m above ground:anl:",
+                "response": {
+                  "http_status": 206,
+                  "etag": "\"ab9827c2bfd3282ac71052091480ed35\"",
+                  "content_range": "bytes 42141801-44285272/146411883",
+                  "last_modified": "Tue, 26 Aug 2025 15:54:15 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "level": "10 m above ground",
+                "start": 44285273,
+                "end_inclusive": 46428744,
+                "sha256": "b3a968f74a17cf183cb27f260a8c1f74a01c30844d92c0b08a57f97e9d6281e1",
+                "index_line": "78:44285273:d=2025082615:VGRD:10 m above ground:anl:",
+                "response": {
+                  "http_status": 206,
+                  "etag": "\"ab9827c2bfd3282ac71052091480ed35\"",
+                  "content_range": "bytes 44285273-46428744/146411883",
+                  "last_modified": "Tue, 26 Aug 2025 15:54:15 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t15z.f00.10m_uv.grib2",
+            "valid_utc": "2025-08-26T15:00:00+00:00",
+            "subset_sha256": "644b9d28c24f01aeebc7fb75bcb7cb1468aece6068de5d4c37667e63d424130c",
+            "full_object_sha256": null
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t16z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t16z.wrfsfcf00.grib2.idx",
+            "bytes": 4286944,
+            "sha256": "46256f2a7357568baa37e1193120521f3cda5706549e69023d5f274621108654",
+            "source_kind": "byte_exact_selected_original_grib_messages",
+            "run_cycle_utc": "2025-08-26T16:00:00Z",
+            "forecast_or_analysis": "analysis_f00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "level": "10 m above ground",
+                "start": 42534354,
+                "end_inclusive": 44677825,
+                "sha256": "cf8be8957d2acf29dc2edf956044bab6708d2b9a0081bba19e01336ab7e1e816",
+                "index_line": "77:42534354:d=2025082616:UGRD:10 m above ground:anl:",
+                "response": {
+                  "http_status": 206,
+                  "etag": "\"0e923b05a9ce7d792af3af6670a1ee9d\"",
+                  "content_range": "bytes 42534354-44677825/148265046",
+                  "last_modified": "Tue, 26 Aug 2025 16:52:12 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "level": "10 m above ground",
+                "start": 44677826,
+                "end_inclusive": 46821297,
+                "sha256": "e35ae666d4a5784ad00aa6d0321b6c3f8e7aad299c9cda13b4e154d612874faa",
+                "index_line": "78:44677826:d=2025082616:VGRD:10 m above ground:anl:",
+                "response": {
+                  "http_status": 206,
+                  "etag": "\"0e923b05a9ce7d792af3af6670a1ee9d\"",
+                  "content_range": "bytes 44677826-46821297/148265046",
+                  "last_modified": "Tue, 26 Aug 2025 16:52:12 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t16z.f00.10m_uv.grib2",
+            "valid_utc": "2025-08-26T16:00:00+00:00",
+            "subset_sha256": "46256f2a7357568baa37e1193120521f3cda5706549e69023d5f274621108654",
+            "full_object_sha256": null
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t17z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t17z.wrfsfcf00.grib2.idx",
+            "bytes": 4286944,
+            "sha256": "71beb93fd7c77e25ce6f3a1d75d10198e703b7b436640c0909cf0d51c61cf447",
+            "source_kind": "byte_exact_selected_original_grib_messages",
+            "run_cycle_utc": "2025-08-26T17:00:00Z",
+            "forecast_or_analysis": "analysis_f00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "level": "10 m above ground",
+                "start": 42473413,
+                "end_inclusive": 44616884,
+                "sha256": "c50059e7fcdf03975e515d5dbc502ad89e3907d7c2a8b2e0eadca21391d254ee",
+                "index_line": "77:42473413:d=2025082617:UGRD:10 m above ground:anl:",
+                "response": {
+                  "http_status": 206,
+                  "etag": "\"de73af5cae03b769b43f3b25b0f0a89f\"",
+                  "content_range": "bytes 42473413-44616884/148192812",
+                  "last_modified": "Tue, 26 Aug 2025 17:51:38 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "level": "10 m above ground",
+                "start": 44616885,
+                "end_inclusive": 46760356,
+                "sha256": "1669bb2747d46323a95a0c88812b3e4d7d076c9f60b64108fa1df577af56fed7",
+                "index_line": "78:44616885:d=2025082617:VGRD:10 m above ground:anl:",
+                "response": {
+                  "http_status": 206,
+                  "etag": "\"de73af5cae03b769b43f3b25b0f0a89f\"",
+                  "content_range": "bytes 44616885-46760356/148192812",
+                  "last_modified": "Tue, 26 Aug 2025 17:51:38 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t17z.f00.10m_uv.grib2",
+            "valid_utc": "2025-08-26T17:00:00+00:00",
+            "subset_sha256": "71beb93fd7c77e25ce6f3a1d75d10198e703b7b436640c0909cf0d51c61cf447",
+            "full_object_sha256": null
+          }
+        ],
+        "status": "verified",
+        "citation_and_rights_source": "https://registry.opendata.aws/noaa-hrrr-pds/",
+        "missing_fraction_scope": "delivered 10m components",
+        "vector_basis": "grid_relative",
+        "surface_definition": "10 m above ground"
+      },
+      "current": {
+        "resolved_source": [
+          "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n001.nc",
+          "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n002.nc",
+          "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n003.nc",
+          "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n004.nc",
+          "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n005.nc"
+        ],
+        "local_path": [
+          "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n001.nc",
+          "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n002.nc",
+          "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n003.nc",
+          "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n004.nc",
+          "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n005.nc"
+        ],
+        "sha256": [
+          "7269134c0240c7f00eeca6e9e6bc39dc40ae49032004f8561c239510fcd7090f",
+          "5092a254127774814da296dcc0edb302ca3320c5a8e2bd6f951d09ea25e75484",
+          "ec3918e3251852e1646373b0aaa3e29f75232333879dfabcf37a547a3ffef4f3",
+          "e16e82ce3149104f6f8d8e2d7ece55de11d1c7a7b1f36c2a9fd20b4714bac8c4",
+          "aa575cf91f8ecb84e003389204cae11846fc9a22ac754b2817a4ccb367ee0682"
+        ],
+        "size_bytes": 350797365,
+        "native_variable_names": [
+          "u",
+          "v"
+        ],
+        "units": "meters s-1",
+        "valid_time_range_utc": [
+          "2025-08-26T13:00:00+00:00",
+          "2025-08-26T17:00:00+00:00"
+        ],
+        "spatial_coverage": {
+          "lon_lat_bounds": [
+            -79.80072021484375,
+            -76.05899047851562,
+            43.180450439453125,
+            44.22895431518555
+          ],
+          "grid_centres_by_hour": [
+            {
+              "total": 289,
+              "wet": 221,
+              "outside_mesh": 68,
+              "dry": 0
+            },
+            {
+              "total": 289,
+              "wet": 221,
+              "outside_mesh": 68,
+              "dry": 0
+            },
+            {
+              "total": 289,
+              "wet": 221,
+              "outside_mesh": 68,
+              "dry": 0
+            },
+            {
+              "total": 289,
+              "wet": 221,
+              "outside_mesh": 68,
+              "dry": 0
+            },
+            {
+              "total": 289,
+              "wet": 221,
+              "outside_mesh": 68,
+              "dry": 0
+            }
+          ]
+        },
+        "run_cycle_utc": [
+          "2025-08-26T18:00:00Z"
+        ],
+        "forecast_or_analysis": "nowcast",
+        "downloaded_at_utc": "2026-11-23T02:42:32.980707+00:00",
+        "download_command": "python scripts/download_lake.py --out <new-directory> (from unpacked delivery root)",
+        "crs": "proj=utm +zone=16 +datum=NAD83",
+        "dimensions": {
+          "nele": 64453,
+          "node": 34395,
+          "siglay": 20,
+          "siglev": 21,
+          "three": 3,
+          "time": 1,
+          "DateStrLen": 26,
+          "maxnode": 11,
+          "maxelem": 9,
+          "four": 4
+        },
+        "missing_fraction": 0.0,
+        "subset_bounds": null,
+        "subset_sha256": null,
+        "product": "LOOFS",
+        "catalog": "https://www.glerl.noaa.gov/res/Programs/ipemf/glcfs_data_access.html",
+        "probes": [
+          {
+            "kind": "s3",
+            "url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/?list-type=2&prefix=loofs%2Fnetcdf%2F2025%2F08%2F26%2F&max-keys=100",
+            "queried_at_utc": "2026-11-23T02:28:56.640Z",
+            "command": "curl.exe --fail --location \"https://noaa-nos-ofs-pds.s3.amazonaws.com/?list-type=2&prefix=loofs%2Fnetcdf%2F2025%2F08%2F26%2F&max-keys=100\"",
+            "dns_addresses": [
+              "198.18.0.61",
+              "2001:2::3c"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          },
+          {
+            "kind": "s3",
+            "url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/?list-type=2&prefix=loofs%2Fnetcdf%2F202508%2F&max-keys=100",
+            "queried_at_utc": "2026-11-23T02:28:56.640Z",
+            "command": "curl.exe --fail --location \"https://noaa-nos-ofs-pds.s3.amazonaws.com/?list-type=2&prefix=loofs%2Fnetcdf%2F202508%2F&max-keys=100\"",
+            "dns_addresses": [
+              "198.18.0.61",
+              "2001:2::3c"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          },
+          {
+            "kind": "s3",
+            "url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/?list-type=2&prefix=laofs%2Fnetcdf%2F2025%2F08%2F26%2F&max-keys=100",
+            "queried_at_utc": "2026-11-23T02:28:56.641Z",
+            "command": "curl.exe --fail --location \"https://noaa-nos-ofs-pds.s3.amazonaws.com/?list-type=2&prefix=laofs%2Fnetcdf%2F2025%2F08%2F26%2F&max-keys=100\"",
+            "dns_addresses": [
+              "198.18.0.61",
+              "2001:2::3c"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          },
+          {
+            "kind": "s3",
+            "url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/?list-type=2&prefix=laofs%2Fnetcdf%2F202508%2F&max-keys=100",
+            "queried_at_utc": "2026-11-23T02:28:56.641Z",
+            "command": "curl.exe --fail --location \"https://noaa-nos-ofs-pds.s3.amazonaws.com/?list-type=2&prefix=laofs%2Fnetcdf%2F202508%2F&max-keys=100\"",
+            "dns_addresses": [
+              "198.18.0.61",
+              "2001:2::3c"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          },
+          {
+            "kind": "thredds",
+            "url": "https://www.ncei.noaa.gov/thredds/catalog/model-loofs-files/2025/08/catalog.xml",
+            "queried_at_utc": "2026-11-23T02:28:56.729Z",
+            "command": "curl.exe --fail --location \"https://www.ncei.noaa.gov/thredds/catalog/model-loofs-files/2025/08/catalog.xml\"",
+            "dns_addresses": [
+              "198.18.0.62",
+              "2001:2::3d"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          },
+          {
+            "kind": "thredds",
+            "url": "https://www.ncei.noaa.gov/thredds/catalog/model-loofs-files/2025/08/26/catalog.xml",
+            "queried_at_utc": "2026-11-23T02:28:56.729Z",
+            "command": "curl.exe --fail --location \"https://www.ncei.noaa.gov/thredds/catalog/model-loofs-files/2025/08/26/catalog.xml\"",
+            "dns_addresses": [
+              "198.18.0.62",
+              "2001:2::3d"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          }
+        ],
+        "local_files": [
+          {
+            "product": "LOOFS",
+            "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n001.nc",
+            "bytes": 70159473,
+            "sha256": "7269134c0240c7f00eeca6e9e6bc39dc40ae49032004f8561c239510fcd7090f",
+            "source_kind": "complete_original_netcdf",
+            "run_cycle_utc": "2025-08-26T18:00:00Z",
+            "forecast_or_analysis": "nowcast",
+            "response": {
+              "http_status": 200,
+              "etag": "\"7f9e13523b4eaee27347f515bb6bb7fc-9\"",
+              "content_range": null,
+              "last_modified": "Tue, 26 Aug 2025 20:46:32 GMT"
+            },
+            "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n001.nc",
+            "valid_utc": "2025-08-26T13:00:00+00:00",
+            "subset_sha256": null,
+            "full_object_sha256": "7269134c0240c7f00eeca6e9e6bc39dc40ae49032004f8561c239510fcd7090f"
+          },
+          {
+            "product": "LOOFS",
+            "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n002.nc",
+            "bytes": 70159473,
+            "sha256": "5092a254127774814da296dcc0edb302ca3320c5a8e2bd6f951d09ea25e75484",
+            "source_kind": "complete_original_netcdf",
+            "run_cycle_utc": "2025-08-26T18:00:00Z",
+            "forecast_or_analysis": "nowcast",
+            "response": {
+              "http_status": 200,
+              "etag": "\"00a1fb49c865d41e06071ecdd5335ae6-9\"",
+              "content_range": null,
+              "last_modified": "Tue, 26 Aug 2025 20:46:32 GMT"
+            },
+            "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n002.nc",
+            "valid_utc": "2025-08-26T14:00:00+00:00",
+            "subset_sha256": null,
+            "full_object_sha256": "5092a254127774814da296dcc0edb302ca3320c5a8e2bd6f951d09ea25e75484"
+          },
+          {
+            "product": "LOOFS",
+            "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n003.nc",
+            "bytes": 70159473,
+            "sha256": "ec3918e3251852e1646373b0aaa3e29f75232333879dfabcf37a547a3ffef4f3",
+            "source_kind": "complete_original_netcdf",
+            "run_cycle_utc": "2025-08-26T18:00:00Z",
+            "forecast_or_analysis": "nowcast",
+            "response": {
+              "cache_reused": true
+            },
+            "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n003.nc",
+            "valid_utc": "2025-08-26T15:00:00+00:00",
+            "subset_sha256": null,
+            "full_object_sha256": "ec3918e3251852e1646373b0aaa3e29f75232333879dfabcf37a547a3ffef4f3"
+          },
+          {
+            "product": "LOOFS",
+            "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n004.nc",
+            "bytes": 70159473,
+            "sha256": "e16e82ce3149104f6f8d8e2d7ece55de11d1c7a7b1f36c2a9fd20b4714bac8c4",
+            "source_kind": "complete_original_netcdf",
+            "run_cycle_utc": "2025-08-26T18:00:00Z",
+            "forecast_or_analysis": "nowcast",
+            "response": {
+              "http_status": 200,
+              "etag": "\"319adf6d64e7d518ca2894eb05cf60d7-9\"",
+              "content_range": null,
+              "last_modified": "Tue, 26 Aug 2025 20:46:32 GMT"
+            },
+            "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n004.nc",
+            "valid_utc": "2025-08-26T16:00:00+00:00",
+            "subset_sha256": null,
+            "full_object_sha256": "e16e82ce3149104f6f8d8e2d7ece55de11d1c7a7b1f36c2a9fd20b4714bac8c4"
+          },
+          {
+            "product": "LOOFS",
+            "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n005.nc",
+            "bytes": 70159473,
+            "sha256": "aa575cf91f8ecb84e003389204cae11846fc9a22ac754b2817a4ccb367ee0682",
+            "source_kind": "complete_original_netcdf",
+            "run_cycle_utc": "2025-08-26T18:00:00Z",
+            "forecast_or_analysis": "nowcast",
+            "response": {
+              "http_status": 200,
+              "etag": "\"1cb9941135a33f76b0a719400cd991ee-9\"",
+              "content_range": null,
+              "last_modified": "Tue, 26 Aug 2025 20:46:32 GMT"
+            },
+            "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n005.nc",
+            "valid_utc": "2025-08-26T17:00:00+00:00",
+            "subset_sha256": null,
+            "full_object_sha256": "aa575cf91f8ecb84e003389204cae11846fc9a22ac754b2817a4ccb367ee0682"
+          }
+        ],
+        "status": "verified",
+        "citation_and_rights_source": "https://www.glerl.noaa.gov/res/Programs/ipemf/glcfs_data_access.html",
+        "additional_catalog": "https://www.ncei.noaa.gov/products/weather-climate-models/co-ops-operational-forecast",
+        "missing_fraction_scope": "uppermost layer components",
+        "vector_basis": "geographic_east_north",
+        "surface_definition": "uppermost sigma layer, index 0"
+      },
+      "pair_status": "verified",
+      "forcing_kind": "historical_real",
+      "verification_scope": "B1_raw_files",
+      "verified_at_utc": "2026-11-23T03:01:53.115886+00:00",
+      "purpose": "retrospective_environment_reconstruction",
+      "paper_cycles_verified": false,
+      "available_at_cst": false,
+      "package_checksums_sha256": "8ba23e4e7e3d81a0d048ab11d2efa430aa61a0042e594c5271c3203c631c7bc8"
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "alias": null,
+      "mission": {
+        "name": "Bay of Fundy",
+        "object": "PIW-1",
+        "object_key": "PIW-1",
+        "wind": "HRRR",
+        "current": "GoMOFS",
+        "lkp_lon_lat": [
+          -65.3,
+          45.2
+        ],
+        "incident_utc": "2025-02-14T00:00:00Z",
+        "csp_lon_lat": [
+          -65.072,
+          45.283
+        ],
+        "cst_utc": "2025-02-14T09:00:00Z",
+        "sweep_width_nm": 0.4,
+        "budget": 55,
+        "grid_rows_cols": [
+          49,
+          61
+        ],
+        "integration_s": 120,
+        "table_ii_s": [
+          0.1,
+          0.11,
+          0.12,
+          0.17,
+          0.29,
+          1.97,
+          5.45,
+          19.73
+        ]
+      },
+      "requested_window_utc": [
+        "2025-02-14T00:00:00+00:00",
+        "2025-02-14T09:33:57.200000+00:00"
+      ],
+      "sweep_width_nm": 0.4,
+      "T": 55,
+      "speed_m_s": 20,
+      "q": 0.78,
+      "source_config_sha256": "40311df54d7e43dcebdb2e618ebcb81a86add4d83db7a8ac925253ff73f391d6",
+      "wind": {
+        "product": "HRRR",
+        "status": "verified",
+        "local_files": [
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250213/conus/hrrr.t23z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250213/conus/hrrr.t23z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "fd5491a2df8723107834e993e3afb4f08313e7ca57ed6c539735b280b7c7a108",
+            "run_cycle_utc": "2025-02-13T23:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-13T23:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 47125288,
+                "end_inclusive": 49506902,
+                "index_line": "77:47125288:d=2025021323:UGRD:10 m above ground:anl:",
+                "sha256": "e837507daad72b6c7a26b0aa001525a2eb56ffb56ed6029978651b4a31171c29",
+                "http": {
+                  "status": 206,
+                  "etag": "\"99aa8bc31895deac6cd04c8f2666cd78\"",
+                  "content_range": "bytes 47125288-49506902/147095456",
+                  "last_modified": "Thu, 13 Feb 2025 23:51:38 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 49506903,
+                "end_inclusive": 51888517,
+                "index_line": "78:49506903:d=2025021323:VGRD:10 m above ground:anl:",
+                "sha256": "e502751fb84a52b43b312ab050b1b6da6dfd6da167593cda97d160f41939c3bc",
+                "http": {
+                  "status": 206,
+                  "etag": "\"99aa8bc31895deac6cd04c8f2666cd78\"",
+                  "content_range": "bytes 49506903-51888517/147095456",
+                  "last_modified": "Thu, 13 Feb 2025 23:51:38 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250213.t23z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-13T23:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -18.545669555664062,
+                  "max": 22.704330444335938,
+                  "mean": 1.2767845304114562,
+                  "std": 4.741055733716479
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": -7.8581695556640625,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": -9.170669555664062,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -16.308229446411133,
+                  "max": 22.754270553588867,
+                  "mean": 0.8458054452320579,
+                  "std": 4.785332163072945
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": -6.120729446411133,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": -3.245729446411133,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t00z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t00z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "077d94569ef61fbf3de8b1537ce42e98810d7e517b3a33041791b36266b346b2",
+            "run_cycle_utc": "2025-02-14T00:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-14T00:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 47396692,
+                "end_inclusive": 49778306,
+                "index_line": "77:47396692:d=2025021400:UGRD:10 m above ground:anl:",
+                "sha256": "4b3b1dfaed7e47c9689718fc148db2524de5f3c1cbca878294ecfe761d331323",
+                "http": {
+                  "status": 206,
+                  "etag": "\"826355a9773af328d087220cf2ee4a6c\"",
+                  "content_range": "bytes 47396692-49778306/143409689",
+                  "last_modified": "Fri, 14 Feb 2025 00:52:26 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 49778307,
+                "end_inclusive": 52159921,
+                "index_line": "78:49778307:d=2025021400:VGRD:10 m above ground:anl:",
+                "sha256": "75227147bfa7d72eba0886cd6f28410b3b23c270fd0042fd7c9a2eb4c9d99da6",
+                "http": {
+                  "status": 206,
+                  "etag": "\"826355a9773af328d087220cf2ee4a6c\"",
+                  "content_range": "bytes 49778307-52159921/143409689",
+                  "last_modified": "Fri, 14 Feb 2025 00:52:26 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250214.t00z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-14T00:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -16.538118362426758,
+                  "max": 22.961881637573242,
+                  "mean": 1.1616831548887585,
+                  "std": 4.784718971304225
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": -8.913118362426758,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": -10.788118362426758,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -15.890950202941895,
+                  "max": 22.421549797058105,
+                  "mean": 0.5788594463176616,
+                  "std": 4.627858456629131
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": -4.8909502029418945,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": -5.3909502029418945,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t01z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t01z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "99389b5e4f126daf00689c40913c2ce5a84ee51990443f44df94f92bb4f246bf",
+            "run_cycle_utc": "2025-02-14T01:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-14T01:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 47118772,
+                "end_inclusive": 49500386,
+                "index_line": "77:47118772:d=2025021401:UGRD:10 m above ground:anl:",
+                "sha256": "4031a9fccfe42e49f81262d062d01e7eec25fdf51a4a57e9fcc532c17c5db20a",
+                "http": {
+                  "status": 206,
+                  "etag": "\"4fe63718f5ad57747f7fb70aac55ab51\"",
+                  "content_range": "bytes 47118772-49500386/140022121",
+                  "last_modified": "Fri, 14 Feb 2025 01:51:25 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 49500387,
+                "end_inclusive": 51882001,
+                "index_line": "78:49500387:d=2025021401:VGRD:10 m above ground:anl:",
+                "sha256": "01529e2534c3d3624b97e9bc87bc87e1fac19eb93b9cc03e9cbd5fa77f307b16",
+                "http": {
+                  "status": 206,
+                  "etag": "\"4fe63718f5ad57747f7fb70aac55ab51\"",
+                  "content_range": "bytes 49500387-51882001/140022121",
+                  "last_modified": "Fri, 14 Feb 2025 01:51:25 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250214.t01z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-14T01:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -19.104801177978516,
+                  "max": 21.020198822021484,
+                  "mean": 1.0824191511204855,
+                  "std": 4.798002576254252
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": -5.417301177978516,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": -6.542301177978516,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -16.550138473510742,
+                  "max": 20.637361526489258,
+                  "mean": 0.31353782393915786,
+                  "std": 4.443720351191023
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": -5.362638473510742,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": -4.737638473510742,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t02z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t02z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "d83cd1decdd37d3d7a31ec09b350d764455779361e411a42a0d185816cfb1654",
+            "run_cycle_utc": "2025-02-14T02:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-14T02:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 47062645,
+                "end_inclusive": 49444259,
+                "index_line": "77:47062645:d=2025021402:UGRD:10 m above ground:anl:",
+                "sha256": "c45857b4d9517e31e87403edcb3c8a18efb0e42c1d95aa7bb8ab69013a1a6ee9",
+                "http": {
+                  "status": 206,
+                  "etag": "\"8a994582e6dd1b00de92dca3e2de9b7d\"",
+                  "content_range": "bytes 47062645-49444259/137866381",
+                  "last_modified": "Fri, 14 Feb 2025 02:51:48 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 49444260,
+                "end_inclusive": 51825874,
+                "index_line": "78:49444260:d=2025021402:VGRD:10 m above ground:anl:",
+                "sha256": "a20819159e03ca48babc96dc665ba20a88fe5f4b40bd9513a94367df22c1e435",
+                "http": {
+                  "status": 206,
+                  "etag": "\"8a994582e6dd1b00de92dca3e2de9b7d\"",
+                  "content_range": "bytes 49444260-51825874/137866381",
+                  "last_modified": "Fri, 14 Feb 2025 02:51:48 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250214.t02z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-14T02:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -20.376628875732422,
+                  "max": 23.310871124267578,
+                  "mean": 1.0595569826896056,
+                  "std": 4.864734904071475
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": -1.7516288757324219,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": -2.126628875732422,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -17.588682174682617,
+                  "max": 19.973817825317383,
+                  "mean": 0.1557934966718915,
+                  "std": 4.389774117807245
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": -5.776182174682617,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": -5.713682174682617,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t03z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t03z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "505a792d9f72fae99e205bdc2e34677a67a3d95810c72cb30eff89ba274429d3",
+            "run_cycle_utc": "2025-02-14T03:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-14T03:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 47084253,
+                "end_inclusive": 49465867,
+                "index_line": "77:47084253:d=2025021403:UGRD:10 m above ground:anl:",
+                "sha256": "06160a299ea471522d323919e9a6633d41c65c1ed08e1619ae981e47557fc4f2",
+                "http": {
+                  "status": 206,
+                  "etag": "\"45fb5a6eaaba86d37b15e011f5364b64\"",
+                  "content_range": "bytes 47084253-49465867/137886947",
+                  "last_modified": "Fri, 14 Feb 2025 03:51:44 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 49465868,
+                "end_inclusive": 51847482,
+                "index_line": "78:49465868:d=2025021403:VGRD:10 m above ground:anl:",
+                "sha256": "c328f3f017efae23c88ce543e3d00251f27dac1132e4096a7221f8a98f934ec5",
+                "http": {
+                  "status": 206,
+                  "etag": "\"45fb5a6eaaba86d37b15e011f5364b64\"",
+                  "content_range": "bytes 49465868-51847482/137886947",
+                  "last_modified": "Fri, 14 Feb 2025 03:51:44 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250214.t03z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-14T03:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -21.099821090698242,
+                  "max": 23.337678909301758,
+                  "mean": 1.1222618155013515,
+                  "std": 4.903263685189936
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 2.400178909301758,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 0.4626789093017578,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -17.73739242553711,
+                  "max": 19.26260757446289,
+                  "mean": 0.04545547128522556,
+                  "std": 4.350131227893933
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": -5.862392425537109,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": -6.924892425537109,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t04z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t04z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "9adff744b72af45533ffb5a1c5b240627e7b04564426765c0dc812ef4ac171cb",
+            "run_cycle_utc": "2025-02-14T04:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-14T04:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 46966639,
+                "end_inclusive": 49348253,
+                "index_line": "77:46966639:d=2025021404:UGRD:10 m above ground:anl:",
+                "sha256": "fd3195c65796429b6b03f4eb2c69ad174cf21290a17cd0c34631a6dd5e892a1a",
+                "http": {
+                  "status": 206,
+                  "etag": "\"e2911b260cd45d41aac294da80d43d50\"",
+                  "content_range": "bytes 46966639-49348253/137933193",
+                  "last_modified": "Fri, 14 Feb 2025 04:51:39 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 49348254,
+                "end_inclusive": 51729868,
+                "index_line": "78:49348254:d=2025021404:VGRD:10 m above ground:anl:",
+                "sha256": "dee85069fa7fa3986b9dd71e4b7053ab19e29705a2f493cca7e34664af48baf0",
+                "http": {
+                  "status": 206,
+                  "etag": "\"e2911b260cd45d41aac294da80d43d50\"",
+                  "content_range": "bytes 49348254-51729868/137933193",
+                  "last_modified": "Fri, 14 Feb 2025 04:51:39 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250214.t04z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-14T04:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -20.792930603027344,
+                  "max": 23.957069396972656,
+                  "mean": 1.1391598892249357,
+                  "std": 4.903392129677877
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 9.332069396972656,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 7.582069396972656,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -17.421741485595703,
+                  "max": 19.140758514404297,
+                  "mean": -0.06102894515906353,
+                  "std": 4.308480610435013
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": -0.6092414855957031,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": -1.4217414855957031,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t05z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t05z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "c9222a436e1df0570d9424bc031d8e854cc93fc6e579eea4605e3255ade37d2a",
+            "run_cycle_utc": "2025-02-14T05:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-14T05:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 46785259,
+                "end_inclusive": 49166873,
+                "index_line": "77:46785259:d=2025021405:UGRD:10 m above ground:anl:",
+                "sha256": "a2192bd970ba42452bfa65306e0a48653c372a5c6f304b5128932692b2dea794",
+                "http": {
+                  "status": 206,
+                  "etag": "\"b1781dd47eec571b23f9ebe56756be28\"",
+                  "content_range": "bytes 46785259-49166873/137846588",
+                  "last_modified": "Fri, 14 Feb 2025 05:51:40 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 49166874,
+                "end_inclusive": 51548488,
+                "index_line": "78:49166874:d=2025021405:VGRD:10 m above ground:anl:",
+                "sha256": "e0fbea4775e21b0c936d678943b3d014b9034517cb47e095fb94ca2f4cdfbd4f",
+                "http": {
+                  "status": 206,
+                  "etag": "\"b1781dd47eec571b23f9ebe56756be28\"",
+                  "content_range": "bytes 49166874-51548488/137846588",
+                  "last_modified": "Fri, 14 Feb 2025 05:51:40 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250214.t05z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-14T05:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -20.660425186157227,
+                  "max": 25.652074813842773,
+                  "mean": 1.2141986277757055,
+                  "std": 4.930357030719856
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 9.652074813842773,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 9.714574813842773,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -17.53615379333496,
+                  "max": 18.40134620666504,
+                  "mean": -0.187858608096703,
+                  "std": 4.271408986835464
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 3.026346206665039,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 3.213846206665039,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t06z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t06z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "93a73a3cb49f6373e3b08731d3f616e15014ad63d81434af55c67e1ae24cb0df",
+            "run_cycle_utc": "2025-02-14T06:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-14T06:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 46978909,
+                "end_inclusive": 49360523,
+                "index_line": "77:46978909:d=2025021406:UGRD:10 m above ground:anl:",
+                "sha256": "114c9450624b6428238796cff19e98132067eb9ff486f94c2e81e4a06a885652",
+                "http": {
+                  "status": 206,
+                  "etag": "\"51e49a83d610ba1cc6332ad146fe8b42\"",
+                  "content_range": "bytes 46978909-49360523/138131929",
+                  "last_modified": "Fri, 14 Feb 2025 06:51:39 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 49360524,
+                "end_inclusive": 51742138,
+                "index_line": "78:49360524:d=2025021406:VGRD:10 m above ground:anl:",
+                "sha256": "04f438d3cde2835657aaf1cb0993a42d33ae16e8add3deea943aa16b113cd1dd",
+                "http": {
+                  "status": 206,
+                  "etag": "\"51e49a83d610ba1cc6332ad146fe8b42\"",
+                  "content_range": "bytes 49360524-51742138/138131929",
+                  "last_modified": "Fri, 14 Feb 2025 06:51:39 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250214.t06z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-14T06:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -19.977453231811523,
+                  "max": 26.960046768188477,
+                  "mean": 1.2655275042599798,
+                  "std": 4.899444237478774
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 11.460046768188477,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 11.772546768188477,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -17.244953155517578,
+                  "max": 17.630046844482422,
+                  "mean": -0.32125183892211356,
+                  "std": 4.254067113126637
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 5.817546844482422,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 6.067546844482422,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t07z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t07z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "ef68aec3acba0ded84866c4cdbfce6972ee8ea9d8cb80c916ccf41f7abf91051",
+            "run_cycle_utc": "2025-02-14T07:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-14T07:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 46434806,
+                "end_inclusive": 48816420,
+                "index_line": "77:46434806:d=2025021407:UGRD:10 m above ground:anl:",
+                "sha256": "b5ab03b83823e130c9ee7df6e49d05f921a3dec38ab01edbff5567747d2b8a60",
+                "http": {
+                  "status": 206,
+                  "etag": "\"111993fbd9124289e8b8d70d6e03bc6a\"",
+                  "content_range": "bytes 46434806-48816420/138084369",
+                  "last_modified": "Fri, 14 Feb 2025 07:51:56 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 48816421,
+                "end_inclusive": 51198035,
+                "index_line": "78:48816421:d=2025021407:VGRD:10 m above ground:anl:",
+                "sha256": "08bae86f2cca606290ca7ecfa7ad35d19565a74f92e9063dab1337706fea7006",
+                "http": {
+                  "status": 206,
+                  "etag": "\"111993fbd9124289e8b8d70d6e03bc6a\"",
+                  "content_range": "bytes 48816421-51198035/138084369",
+                  "last_modified": "Fri, 14 Feb 2025 07:51:56 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250214.t07z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-14T07:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -18.56049919128418,
+                  "max": 25.37700080871582,
+                  "mean": 1.287839953954939,
+                  "std": 4.830957692914478
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 12.81450080871582,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 13.43950080871582,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -17.929821014404297,
+                  "max": 18.882678985595703,
+                  "mean": -0.47087716195453067,
+                  "std": 4.311684652997223
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 5.257678985595703,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 6.382678985595703,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t08z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t08z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "cf3cecac020d31595eb7afcc056f1eb6c395dcc21755740128fde7c052db9a2c",
+            "run_cycle_utc": "2025-02-14T08:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-14T08:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 46427840,
+                "end_inclusive": 48809454,
+                "index_line": "77:46427840:d=2025021408:UGRD:10 m above ground:anl:",
+                "sha256": "18cb21c3d309a0bb9a687f34b971b41c44a182b350f6f8cd252cfc6556113c81",
+                "http": {
+                  "status": 206,
+                  "etag": "\"5411844c6d18b155601a9b28d3395d5c\"",
+                  "content_range": "bytes 46427840-48809454/137834745",
+                  "last_modified": "Fri, 14 Feb 2025 08:51:40 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 48809455,
+                "end_inclusive": 51191069,
+                "index_line": "78:48809455:d=2025021408:VGRD:10 m above ground:anl:",
+                "sha256": "4f64bda066355a2385b510db3f4fc204ecfb13bedf2477235e6548a635942dbe",
+                "http": {
+                  "status": 206,
+                  "etag": "\"5411844c6d18b155601a9b28d3395d5c\"",
+                  "content_range": "bytes 48809455-51191069/137834745",
+                  "last_modified": "Fri, 14 Feb 2025 08:51:40 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250214.t08z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-14T08:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -13.947831153869629,
+                  "max": 26.92716884613037,
+                  "mean": 1.292368029550391,
+                  "std": 4.7845263992355305
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 15.364668846130371,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 14.364668846130371,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -18.471595764160156,
+                  "max": 17.465904235839844,
+                  "mean": -0.6276165980511911,
+                  "std": 4.335459486621177
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 4.090904235839844,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 4.965904235839844,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t09z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t09z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "a0faee65e14aa7d03658a064d0b8d92ea0c08f227dabcc6c29357691a2ce6d43",
+            "run_cycle_utc": "2025-02-14T09:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-14T09:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 46415094,
+                "end_inclusive": 48796708,
+                "index_line": "77:46415094:d=2025021409:UGRD:10 m above ground:anl:",
+                "sha256": "f611456df52d3f1df8fff7cad863b17025444eb8c983c5a8571f97a90f2b4910",
+                "http": {
+                  "status": 206,
+                  "etag": "\"921f3818e41c1bb66a7c756818eeb733\"",
+                  "content_range": "bytes 46415094-48796708/137050316",
+                  "last_modified": "Fri, 14 Feb 2025 09:50:05 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 48796709,
+                "end_inclusive": 51178323,
+                "index_line": "78:48796709:d=2025021409:VGRD:10 m above ground:anl:",
+                "sha256": "55bc1be69bb1d0e7dfa926185f1264a752c6641deeef1bb1b88f77662eee32d3",
+                "http": {
+                  "status": 206,
+                  "etag": "\"921f3818e41c1bb66a7c756818eeb733\"",
+                  "content_range": "bytes 48796709-51178323/137050316",
+                  "last_modified": "Fri, 14 Feb 2025 09:50:05 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250214.t09z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-14T09:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -14.499067306518555,
+                  "max": 27.625932693481445,
+                  "mean": 1.2549792115606846,
+                  "std": 4.797645188418972
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 17.438432693481445,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 16.750932693481445,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -18.288959503173828,
+                  "max": 19.336040496826172,
+                  "mean": -0.791726358750397,
+                  "std": 4.386701542327484
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 4.023540496826172,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 5.523540496826172,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t10z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t10z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "9ee502c48d8d90925480913d978b8222127a21c0545c97eef5f482db6ae7dc12",
+            "run_cycle_utc": "2025-02-14T10:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-14T10:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 46004347,
+                "end_inclusive": 48385961,
+                "index_line": "77:46004347:d=2025021410:UGRD:10 m above ground:anl:",
+                "sha256": "0cd4bd465a229420b4776df07c140b977bfd5a6cc35c859b28dbbc1d09a15b22",
+                "http": {
+                  "status": 206,
+                  "etag": "\"ccf67fd365b9f76ac76f3d79d49ac4ce\"",
+                  "content_range": "bytes 46004347-48385961/136619377",
+                  "last_modified": "Fri, 14 Feb 2025 10:51:22 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 48385962,
+                "end_inclusive": 50767576,
+                "index_line": "78:48385962:d=2025021410:VGRD:10 m above ground:anl:",
+                "sha256": "d8022e85dbc47451e348e787ca6dbc8e580f6606273cb4bf9f64649a9b735323",
+                "http": {
+                  "status": 206,
+                  "etag": "\"ccf67fd365b9f76ac76f3d79d49ac4ce\"",
+                  "content_range": "bytes 48385962-50767576/136619377",
+                  "last_modified": "Fri, 14 Feb 2025 10:51:22 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250214.t10z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-14T10:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -14.28581428527832,
+                  "max": 27.46418571472168,
+                  "mean": 1.2039492020436153,
+                  "std": 4.777449995248061
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 16.71418571472168,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 16.83918571472168,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -17.04294204711914,
+                  "max": 23.08205795288086,
+                  "mean": -0.8624907380034373,
+                  "std": 4.38388628857261
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 2.2695579528808594,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 1.8945579528808594,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t11z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t11z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "ab073180f7a2c19a0a05859d418c0412cdcdc1abeb3187df2d9e35dbcf8f56a8",
+            "run_cycle_utc": "2025-02-14T11:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-14T11:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 45809836,
+                "end_inclusive": 48191450,
+                "index_line": "77:45809836:d=2025021411:UGRD:10 m above ground:anl:",
+                "sha256": "d51ff1f19d03d672e1bc70f60cb2257d0cb2e1db8b1fd600863c6b646b6f8822",
+                "http": {
+                  "status": 206,
+                  "etag": "\"05a40207077affbb834a1e395620782d\"",
+                  "content_range": "bytes 45809836-48191450/137238199",
+                  "last_modified": "Fri, 14 Feb 2025 11:50:20 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 48191451,
+                "end_inclusive": 50573065,
+                "index_line": "78:48191451:d=2025021411:VGRD:10 m above ground:anl:",
+                "sha256": "105ae02a80e7c6fd8bdc0afc63bc0f3d411142694e7e2ed6bd541486eb0f6aab",
+                "http": {
+                  "status": 206,
+                  "etag": "\"05a40207077affbb834a1e395620782d\"",
+                  "content_range": "bytes 48191451-50573065/137238199",
+                  "last_modified": "Fri, 14 Feb 2025 11:50:20 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250214.t11z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-14T11:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -15.181639671325684,
+                  "max": 23.443360328674316,
+                  "mean": 1.09912045351547,
+                  "std": 4.831502258241056
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 16.755860328674316,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 16.380860328674316,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -19.222225189208984,
+                  "max": 18.465274810791016,
+                  "mean": -0.9563821689285957,
+                  "std": 4.378346478436841
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 3.0902748107910156,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 2.2777748107910156,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          }
+        ],
+        "coverage": {
+          "first_utc": "2025-02-13T23:00:00+00:00",
+          "last_utc": "2025-02-14T11:00:00+00:00",
+          "time_count": 13,
+          "interval_seconds": 3600,
+          "required_window_covered": true
+        },
+        "native_variable_names": [
+          "UGRD",
+          "VGRD"
+        ],
+        "units": "m/s",
+        "surface_definition": "10 m above ground",
+        "vector_basis": "grid_relative_requires_rotation",
+        "run_cycle_utc": [
+          "2025-02-13T23:00:00+00:00",
+          "2025-02-14T00:00:00+00:00",
+          "2025-02-14T01:00:00+00:00",
+          "2025-02-14T02:00:00+00:00",
+          "2025-02-14T03:00:00+00:00",
+          "2025-02-14T04:00:00+00:00",
+          "2025-02-14T05:00:00+00:00",
+          "2025-02-14T06:00:00+00:00",
+          "2025-02-14T07:00:00+00:00",
+          "2025-02-14T08:00:00+00:00",
+          "2025-02-14T09:00:00+00:00",
+          "2025-02-14T10:00:00+00:00",
+          "2025-02-14T11:00:00+00:00"
+        ],
+        "delivery_kind": "byte_exact_original_message_subsets",
+        "full_parent_files_available": false
+      },
+      "current": {
+        "product": "GoMOFS",
+        "status": "verified",
+        "local_files": [
+          {
+            "bytes": 123073803,
+            "sha256": "eb768c27d14aa22cadb53a46596fbd235fed260e80fe82694bfaa4d3f1fcf5f9",
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/derived/gomofs_native_surface_20250213T23_20250214T11.nc",
+            "valid_times_utc": [
+              "2025-02-13T23:00:00+00:00",
+              "2025-02-14T00:00:00+00:00",
+              "2025-02-14T01:00:00+00:00",
+              "2025-02-14T02:00:00+00:00",
+              "2025-02-14T03:00:00+00:00",
+              "2025-02-14T04:00:00+00:00",
+              "2025-02-14T05:00:00+00:00",
+              "2025-02-14T06:00:00+00:00",
+              "2025-02-14T07:00:00+00:00",
+              "2025-02-14T08:00:00+00:00",
+              "2025-02-14T09:00:00+00:00",
+              "2025-02-14T10:00:00+00:00",
+              "2025-02-14T11:00:00+00:00"
+            ],
+            "native_variables": {
+              "u_sur": {
+                "units": "meter second-1",
+                "standard_name": "sea_water_surface_x_velocity",
+                "dimensions": [
+                  "ocean_time",
+                  "eta_u",
+                  "xi_u"
+                ],
+                "wet_statistics": {
+                  "total": 9554766,
+                  "valid": 9554766,
+                  "missing_or_nonfinite": 0,
+                  "min": -3.7950799465179443,
+                  "max": 4.477809906005859,
+                  "mean": 0.08065133654598196,
+                  "std": 0.2734061932223136
+                },
+                "whole_array_statistics": {
+                  "total": 11838372,
+                  "valid": 9555026,
+                  "missing_or_nonfinite": 2283346,
+                  "min": -3.7950799465179443,
+                  "max": 4.477809906005859,
+                  "mean": 0.08064914805866111,
+                  "std": 0.2734027983742009
+                }
+              },
+              "v_sur": {
+                "units": "meter second-1",
+                "standard_name": "sea_water_surface_y_velocity",
+                "dimensions": [
+                  "ocean_time",
+                  "eta_v",
+                  "xi_v"
+                ],
+                "wet_statistics": {
+                  "total": 9548682,
+                  "valid": 9548682,
+                  "missing_or_nonfinite": 0,
+                  "min": -2.807901382446289,
+                  "max": 3.042041063308716,
+                  "mean": -0.13111944008554824,
+                  "std": 0.3049864442347845
+                },
+                "whole_array_statistics": {
+                  "total": 11833224,
+                  "valid": 9548864,
+                  "missing_or_nonfinite": 2284360,
+                  "min": -2.807901382446289,
+                  "max": 3.042041063308716,
+                  "mean": -0.13111719312124656,
+                  "std": 0.3049839736162072
+                }
+              }
+            },
+            "points": {
+              "LKP": {
+                "rho": {
+                  "index": [
+                    699,
+                    964
+                  ],
+                  "distance_m_approx": 298.9847857061088,
+                  "always_wet": true
+                },
+                "u": {
+                  "index": [
+                    699,
+                    964
+                  ],
+                  "distance_m_approx": 225.65049496062278,
+                  "always_wet": true,
+                  "native_component_m_s": [
+                    -0.2510182559490204,
+                    0.42799538373947144,
+                    1.0084105730056763,
+                    1.2561886310577393,
+                    1.1024242639541626,
+                    0.7312936186790466,
+                    0.25299179553985596,
+                    -0.31735748052597046,
+                    -0.8369808793067932,
+                    -1.1450990438461304,
+                    -1.113226294517517,
+                    -0.8073537945747375,
+                    -0.2964012622833252
+                  ]
+                },
+                "v": {
+                  "index": [
+                    698,
+                    964
+                  ],
+                  "distance_m_approx": 277.39539144510366,
+                  "always_wet": true,
+                  "native_component_m_s": [
+                    0.07009705156087875,
+                    0.14134904742240906,
+                    0.15987882018089294,
+                    0.11455754190683365,
+                    0.06709077209234238,
+                    0.001943218638189137,
+                    -0.059611883014440536,
+                    -0.11725931614637375,
+                    -0.16275878250598907,
+                    -0.1709623634815216,
+                    -0.1473289132118225,
+                    -0.1214347779750824,
+                    -0.08176517486572266
+                  ]
+                }
+              },
+              "CSP": {
+                "rho": {
+                  "index": [
+                    700,
+                    993
+                  ],
+                  "distance_m_approx": 213.15655789148926,
+                  "always_wet": true
+                },
+                "u": {
+                  "index": [
+                    700,
+                    993
+                  ],
+                  "distance_m_approx": 180.5552794223164,
+                  "always_wet": true,
+                  "native_component_m_s": [
+                    -0.37258315086364746,
+                    0.1730605810880661,
+                    0.6910098195075989,
+                    0.998420238494873,
+                    0.9072570204734802,
+                    0.6363831162452698,
+                    0.2647983729839325,
+                    -0.19034384191036224,
+                    -0.600935697555542,
+                    -0.8614242076873779,
+                    -0.8975811004638672,
+                    -0.7032602429389954,
+                    -0.37939122319221497
+                  ]
+                },
+                "v": {
+                  "index": [
+                    699,
+                    993
+                  ],
+                  "distance_m_approx": 319.4315717405689,
+                  "always_wet": true,
+                  "native_component_m_s": [
+                    0.2403945028781891,
+                    0.25443920493125916,
+                    0.19880518317222595,
+                    0.0425899401307106,
+                    -0.03296569362282753,
+                    -0.06660018861293793,
+                    -0.05814269185066223,
+                    -0.041250068694353104,
+                    -0.04832788556814194,
+                    -0.061978794634342194,
+                    -0.05207204818725586,
+                    0.05691953003406525,
+                    0.13181042671203613
+                  ]
+                }
+              }
+            },
+            "dimensions": {
+              "xi_rho": 1173,
+              "xi_u": 1172,
+              "xi_v": 1173,
+              "xi_psi": 1172,
+              "eta_rho": 777,
+              "eta_u": 777,
+              "eta_v": 776,
+              "eta_psi": 776,
+              "N": 30,
+              "s_rho": 30,
+              "s_w": 31,
+              "tracer": 2,
+              "boundary": 4,
+              "ocean_time": 13
+            },
+            "vector_basis": "ROMS_native_staggered_xi_eta_requires_collocation_and_rotation",
+            "original_parent_files_reverified_locally": false,
+            "extraction_claim_scope": "13 parent comparisons reported by download environment only",
+            "angle_radians_range": [
+              0.5584034008185228,
+              0.5585936368521418
+            ],
+            "source_cycles_utc": [
+              "2025-02-14T00:00:00+00:00",
+              "2025-02-14T00:00:00+00:00",
+              "2025-02-14T06:00:00+00:00",
+              "2025-02-14T06:00:00+00:00",
+              "2025-02-14T06:00:00+00:00",
+              "2025-02-14T06:00:00+00:00",
+              "2025-02-14T06:00:00+00:00",
+              "2025-02-14T06:00:00+00:00",
+              "2025-02-14T12:00:00+00:00",
+              "2025-02-14T12:00:00+00:00",
+              "2025-02-14T12:00:00+00:00",
+              "2025-02-14T12:00:00+00:00",
+              "2025-02-14T12:00:00+00:00"
+            ],
+            "lon_lat_bounds": [
+              -73.0352211,
+              -61.25359535,
+              38.54311465,
+              46.1781025
+            ],
+            "time_units": "seconds since 2016-01-01 00:00:00"
+          }
+        ],
+        "native_variable_names": [
+          "u_sur",
+          "v_sur"
+        ],
+        "units": "m/s",
+        "vector_basis": "ROMS_native_staggered_xi_eta_requires_collocation_and_rotation",
+        "run_cycle_utc": [
+          "2025-02-14T00:00:00+00:00",
+          "2025-02-14T06:00:00+00:00",
+          "2025-02-14T12:00:00+00:00"
+        ],
+        "parent_sources": [
+          {
+            "product": "GoMOFS",
+            "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/gomofs/netcdf/2025/02/14/gomofs.t00z.20250214.2ds.n005.nc",
+            "source_kind": "complete_original_netcdf_downloaded",
+            "source_filename": "gomofs.t00z.20250214.2ds.n005.nc",
+            "bytes": 171414927,
+            "sha256": "c2879d000da71de2509e5f5194130de8c063256dc9c784a443826474894a378e",
+            "run_cycle_utc": "2025-02-14T00:00:00+00:00",
+            "forecast_or_analysis": "nowcast",
+            "http": {
+              "status": 200,
+              "etag": "\"c7b544d3389aac73dd6fe2aa0773c700-21\"",
+              "content_range": null,
+              "last_modified": "Fri, 14 Feb 2025 02:09:40 GMT"
+            },
+            "valid_time_utc": "2025-02-13T23:00:00Z"
+          },
+          {
+            "product": "GoMOFS",
+            "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/gomofs/netcdf/2025/02/14/gomofs.t00z.20250214.2ds.n006.nc",
+            "source_kind": "complete_original_netcdf_downloaded",
+            "source_filename": "gomofs.t00z.20250214.2ds.n006.nc",
+            "bytes": 171414927,
+            "sha256": "8cd71b54f28bef38adb54f3dc9daa40a146e96d9936051922f436714549e9fb8",
+            "run_cycle_utc": "2025-02-14T00:00:00+00:00",
+            "forecast_or_analysis": "nowcast",
+            "http": {
+              "status": 200,
+              "etag": "\"69fa32312678515bebf6304e8069e11c-21\"",
+              "content_range": null,
+              "last_modified": "Fri, 14 Feb 2025 02:09:40 GMT"
+            },
+            "valid_time_utc": "2025-02-14T00:00:00Z"
+          },
+          {
+            "product": "GoMOFS",
+            "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/gomofs/netcdf/2025/02/14/gomofs.t06z.20250214.2ds.n001.nc",
+            "source_kind": "complete_original_netcdf_downloaded",
+            "source_filename": "gomofs.t06z.20250214.2ds.n001.nc",
+            "bytes": 171414927,
+            "sha256": "7bea8b30f192a7dce61ad7e79ed97d1cab1546aefbe6343743d931565e694cf0",
+            "run_cycle_utc": "2025-02-14T06:00:00+00:00",
+            "forecast_or_analysis": "nowcast",
+            "http": {
+              "cache_reused": true
+            },
+            "valid_time_utc": "2025-02-14T01:00:00Z"
+          },
+          {
+            "product": "GoMOFS",
+            "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/gomofs/netcdf/2025/02/14/gomofs.t06z.20250214.2ds.n002.nc",
+            "source_kind": "complete_original_netcdf_downloaded",
+            "source_filename": "gomofs.t06z.20250214.2ds.n002.nc",
+            "bytes": 171414927,
+            "sha256": "13aedab4aabfc65064c09a2e417fe4a630f9fcdcad124f33aa1345f20ad254c2",
+            "run_cycle_utc": "2025-02-14T06:00:00+00:00",
+            "forecast_or_analysis": "nowcast",
+            "http": {
+              "status": 200,
+              "etag": "\"99dba7b078e2fb444e4693fba560eb7b-21\"",
+              "content_range": null,
+              "last_modified": "Fri, 14 Feb 2025 08:09:14 GMT"
+            },
+            "valid_time_utc": "2025-02-14T02:00:00Z"
+          },
+          {
+            "product": "GoMOFS",
+            "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/gomofs/netcdf/2025/02/14/gomofs.t06z.20250214.2ds.n003.nc",
+            "source_kind": "complete_original_netcdf_downloaded",
+            "source_filename": "gomofs.t06z.20250214.2ds.n003.nc",
+            "bytes": 171414927,
+            "sha256": "3d864a9a997d9a8aa0c5936b4f78b08ebaa7838c3f8239701e47e40101580847",
+            "run_cycle_utc": "2025-02-14T06:00:00+00:00",
+            "forecast_or_analysis": "nowcast",
+            "http": {
+              "status": 200,
+              "etag": "\"0030e230bf19ce8435f8c0201865966c-21\"",
+              "content_range": null,
+              "last_modified": "Fri, 14 Feb 2025 08:09:14 GMT"
+            },
+            "valid_time_utc": "2025-02-14T03:00:00Z"
+          },
+          {
+            "product": "GoMOFS",
+            "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/gomofs/netcdf/2025/02/14/gomofs.t06z.20250214.2ds.n004.nc",
+            "source_kind": "complete_original_netcdf_downloaded",
+            "source_filename": "gomofs.t06z.20250214.2ds.n004.nc",
+            "bytes": 171414927,
+            "sha256": "95f3f8bc88acd08a9aff4823306618d6c2cc7125a6adcdeb63f9f533b0ebcbf8",
+            "run_cycle_utc": "2025-02-14T06:00:00+00:00",
+            "forecast_or_analysis": "nowcast",
+            "http": {
+              "status": 200,
+              "etag": "\"81275efac64c5c9766ef82f9a8dd7b34-21\"",
+              "content_range": null,
+              "last_modified": "Fri, 14 Feb 2025 08:09:17 GMT"
+            },
+            "valid_time_utc": "2025-02-14T04:00:00Z"
+          },
+          {
+            "product": "GoMOFS",
+            "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/gomofs/netcdf/2025/02/14/gomofs.t06z.20250214.2ds.n005.nc",
+            "source_kind": "complete_original_netcdf_downloaded",
+            "source_filename": "gomofs.t06z.20250214.2ds.n005.nc",
+            "bytes": 171414927,
+            "sha256": "6c38b2efab2f63ecf4afa1f6d6e1e585f5f22737ea99386a3b8b154b1e43e688",
+            "run_cycle_utc": "2025-02-14T06:00:00+00:00",
+            "forecast_or_analysis": "nowcast",
+            "http": {
+              "status": 200,
+              "etag": "\"809e5364b1c158033277b2e830da6b60-21\"",
+              "content_range": null,
+              "last_modified": "Fri, 14 Feb 2025 08:09:18 GMT"
+            },
+            "valid_time_utc": "2025-02-14T05:00:00Z"
+          },
+          {
+            "product": "GoMOFS",
+            "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/gomofs/netcdf/2025/02/14/gomofs.t06z.20250214.2ds.n006.nc",
+            "source_kind": "complete_original_netcdf_downloaded",
+            "source_filename": "gomofs.t06z.20250214.2ds.n006.nc",
+            "bytes": 171414927,
+            "sha256": "3e72bcf04b20921387c3c7241cbf686aa5d8f6425bc3414383405c0f8a3fd84c",
+            "run_cycle_utc": "2025-02-14T06:00:00+00:00",
+            "forecast_or_analysis": "nowcast",
+            "http": {
+              "status": 200,
+              "etag": "\"f02d6b9c7d8ea306a3926f8711b87567-21\"",
+              "content_range": null,
+              "last_modified": "Fri, 14 Feb 2025 08:09:18 GMT"
+            },
+            "valid_time_utc": "2025-02-14T06:00:00Z"
+          },
+          {
+            "product": "GoMOFS",
+            "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/gomofs/netcdf/2025/02/14/gomofs.t12z.20250214.2ds.n001.nc",
+            "source_kind": "complete_original_netcdf_downloaded",
+            "source_filename": "gomofs.t12z.20250214.2ds.n001.nc",
+            "bytes": 171414927,
+            "sha256": "fdd4b18c8cd8cd1daa29a5dd69dfd4648cd466477b47b5d86a8f486e48f0fbb8",
+            "run_cycle_utc": "2025-02-14T12:00:00+00:00",
+            "forecast_or_analysis": "nowcast",
+            "http": {
+              "status": 200,
+              "etag": "\"424ef9dc446a79097ded70017b3c385d-21\"",
+              "content_range": null,
+              "last_modified": "Fri, 14 Feb 2025 14:09:37 GMT"
+            },
+            "valid_time_utc": "2025-02-14T07:00:00Z"
+          },
+          {
+            "product": "GoMOFS",
+            "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/gomofs/netcdf/2025/02/14/gomofs.t12z.20250214.2ds.n002.nc",
+            "source_kind": "complete_original_netcdf_downloaded",
+            "source_filename": "gomofs.t12z.20250214.2ds.n002.nc",
+            "bytes": 171414927,
+            "sha256": "1f308105e3481240389ba6b4ecc98b2599a37a7f9be1719732e649a9f0454553",
+            "run_cycle_utc": "2025-02-14T12:00:00+00:00",
+            "forecast_or_analysis": "nowcast",
+            "http": {
+              "status": 200,
+              "etag": "\"d2d5775fe4b9deebb2e830dad0bf96ae-21\"",
+              "content_range": null,
+              "last_modified": "Fri, 14 Feb 2025 14:09:38 GMT"
+            },
+            "valid_time_utc": "2025-02-14T08:00:00Z"
+          },
+          {
+            "product": "GoMOFS",
+            "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/gomofs/netcdf/2025/02/14/gomofs.t12z.20250214.2ds.n003.nc",
+            "source_kind": "complete_original_netcdf_downloaded",
+            "source_filename": "gomofs.t12z.20250214.2ds.n003.nc",
+            "bytes": 171414927,
+            "sha256": "2ef61d6fffb35812567320f19228a4c15f168a10fbd1c46f909424ca46340ccc",
+            "run_cycle_utc": "2025-02-14T12:00:00+00:00",
+            "forecast_or_analysis": "nowcast",
+            "http": {
+              "status": 200,
+              "etag": "\"5f28f07c4f8eb32ba214037a077a9f96-21\"",
+              "content_range": null,
+              "last_modified": "Fri, 14 Feb 2025 14:09:38 GMT"
+            },
+            "valid_time_utc": "2025-02-14T09:00:00Z"
+          },
+          {
+            "product": "GoMOFS",
+            "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/gomofs/netcdf/2025/02/14/gomofs.t12z.20250214.2ds.n004.nc",
+            "source_kind": "complete_original_netcdf_downloaded",
+            "source_filename": "gomofs.t12z.20250214.2ds.n004.nc",
+            "bytes": 171414927,
+            "sha256": "e08b0fd9fbfb50137ff9cafa16c5609e48c419d2d845774090f7a63de2e65188",
+            "run_cycle_utc": "2025-02-14T12:00:00+00:00",
+            "forecast_or_analysis": "nowcast",
+            "http": {
+              "status": 200,
+              "etag": "\"74be4c9062d396b9d04ae2d6cd138100-21\"",
+              "content_range": null,
+              "last_modified": "Fri, 14 Feb 2025 14:09:41 GMT"
+            },
+            "valid_time_utc": "2025-02-14T10:00:00Z"
+          },
+          {
+            "product": "GoMOFS",
+            "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/gomofs/netcdf/2025/02/14/gomofs.t12z.20250214.2ds.n005.nc",
+            "source_kind": "complete_original_netcdf_downloaded",
+            "source_filename": "gomofs.t12z.20250214.2ds.n005.nc",
+            "bytes": 171414927,
+            "sha256": "4a5fe80b6b0f028b5988e8b7bd195ba3863356c6c4b82e09ab4ff04dbeea15c5",
+            "run_cycle_utc": "2025-02-14T12:00:00+00:00",
+            "forecast_or_analysis": "nowcast",
+            "http": {
+              "status": 200,
+              "etag": "\"009b0fcca9000f230ed82891b67ed0d2-21\"",
+              "content_range": null,
+              "last_modified": "Fri, 14 Feb 2025 14:09:41 GMT"
+            },
+            "valid_time_utc": "2025-02-14T11:00:00Z"
+          }
+        ],
+        "original_parent_files_reverified_locally": false,
+        "delivery_kind": "lossless_full_native_horizontal_grid_surface_variables_time_concatenation",
+        "coverage": {
+          "first_utc": "2025-02-13T23:00:00+00:00",
+          "last_utc": "2025-02-14T11:00:00+00:00",
+          "time_count": 13,
+          "interval_seconds": 3600,
+          "required_window_covered": true
+        }
+      },
+      "package": {
+        "zip_sha256": "fb84cdfd2bc5e7b3805763ef0f1aa6b1fd213d1ca6b64d5560d9aae742ef6375",
+        "sums_sha256": "762d80b14eded923fcd78390f8d990e6e6fa3433391c65664dc3ba965b4c0504",
+        "verified_members": 39,
+        "files": {
+          "README_给本地Codex.md": "1d6996cb953e56784eacd24c19ca69558af700a89be0d3c924af38022212829f",
+          "derived/gomofs_native_surface_20250213T23_20250214T11.nc": "eb768c27d14aa22cadb53a46596fbd235fed260e80fe82694bfaa4d3f1fcf5f9",
+          "evidence/gomofs_listing.xml": "4ca5f0328dd3c739af3c00c6cc61ea80eb4934eebfe0171e5109e9d7da441dee",
+          "evidence/hrrr.20250213.t23z.f000.idx": "f4cfea2d3624935c85a7785a3d76d19cee6a0173cdcf2e27fea85b349e13f880",
+          "evidence/hrrr.20250214.t00z.f000.idx": "244522f4f3fcf53e9b02e5c9f0fecdfa6c4033d503678a34fa043c843c29a34d",
+          "evidence/hrrr.20250214.t01z.f000.idx": "334e4ae51773f0a839cce464a7892af609fe81feb682e066a10d7113fdbf47a5",
+          "evidence/hrrr.20250214.t02z.f000.idx": "cf4ded8d2e103009b25234065e3285b144846096f625891abd2d3aadc55f438f",
+          "evidence/hrrr.20250214.t03z.f000.idx": "1bf789b243645e1ba67854ccfc3e446c59c82d3767755151ceb6c5abba88abe4",
+          "evidence/hrrr.20250214.t04z.f000.idx": "c16d4cad6076d4183c3c4df23725bb6dac9a83a32e309be8b707ad70e7292313",
+          "evidence/hrrr.20250214.t05z.f000.idx": "f5d5d0e22a25f9bd86b2f91bbd62521469a20bc8e43ab2a389d03f72c96a904c",
+          "evidence/hrrr.20250214.t06z.f000.idx": "74afc80aadabdfb7541e43f4fc6634699d57b52cec08facaa81ef3cfcfef98c9",
+          "evidence/hrrr.20250214.t07z.f000.idx": "d03fcf0fdb1c5ee2c9611b715c0bb4fcba50f422bac0c2ac042049d5f063c734",
+          "evidence/hrrr.20250214.t08z.f000.idx": "025328aaac7f7b5913f83c10fd2d0b6071156ca13df2014fb90f4566fa64e998",
+          "evidence/hrrr.20250214.t09z.f000.idx": "59571a1fc9b0d2566dc8ab423ee0c472decccd06a6213e73a264b531b4133cc0",
+          "evidence/hrrr.20250214.t10z.f000.idx": "01465e6e2e96756bb2a37ea581f7de39f67abba922c55f45f845af5c5a5d0f2d",
+          "evidence/hrrr.20250214.t11z.f000.idx": "161c456f5a99b4cfb9d8d8490b804a57aa182387cda75a22dcba870115b0261b",
+          "evidence/stage7_scenarios.yaml": "40311df54d7e43dcebdb2e618ebcb81a86add4d83db7a8ac925253ff73f391d6",
+          "gomofs_extraction_audit.json": "c2558a0499356d892eaf5c3edf9e61152d4a4e00083c0847563418ba2722662c",
+          "historical_sources.json": "923726b346e9b23300d42b74352e139c7e07da18a261a462793af50958a90b77",
+          "noaa_downloads.json": "4900c8d75d6d6b19849cec9e558fe95583ccdd5f22d50b6d673d102e69801d46",
+          "raw/wind/hrrr.20250213.t23z.f000.10m_uv.grib2": "fd5491a2df8723107834e993e3afb4f08313e7ca57ed6c539735b280b7c7a108",
+          "raw/wind/hrrr.20250214.t00z.f000.10m_uv.grib2": "077d94569ef61fbf3de8b1537ce42e98810d7e517b3a33041791b36266b346b2",
+          "raw/wind/hrrr.20250214.t01z.f000.10m_uv.grib2": "99389b5e4f126daf00689c40913c2ce5a84ee51990443f44df94f92bb4f246bf",
+          "raw/wind/hrrr.20250214.t02z.f000.10m_uv.grib2": "d83cd1decdd37d3d7a31ec09b350d764455779361e411a42a0d185816cfb1654",
+          "raw/wind/hrrr.20250214.t03z.f000.10m_uv.grib2": "505a792d9f72fae99e205bdc2e34677a67a3d95810c72cb30eff89ba274429d3",
+          "raw/wind/hrrr.20250214.t04z.f000.10m_uv.grib2": "9adff744b72af45533ffb5a1c5b240627e7b04564426765c0dc812ef4ac171cb",
+          "raw/wind/hrrr.20250214.t05z.f000.10m_uv.grib2": "c9222a436e1df0570d9424bc031d8e854cc93fc6e579eea4605e3255ade37d2a",
+          "raw/wind/hrrr.20250214.t06z.f000.10m_uv.grib2": "93a73a3cb49f6373e3b08731d3f616e15014ad63d81434af55c67e1ae24cb0df",
+          "raw/wind/hrrr.20250214.t07z.f000.10m_uv.grib2": "ef68aec3acba0ded84866c4cdbfce6972ee8ea9d8cb80c916ccf41f7abf91051",
+          "raw/wind/hrrr.20250214.t08z.f000.10m_uv.grib2": "cf3cecac020d31595eb7afcc056f1eb6c395dcc21755740128fde7c052db9a2c",
+          "raw/wind/hrrr.20250214.t09z.f000.10m_uv.grib2": "a0faee65e14aa7d03658a064d0b8d92ea0c08f227dabcc6c29357691a2ce6d43",
+          "raw/wind/hrrr.20250214.t10z.f000.10m_uv.grib2": "9ee502c48d8d90925480913d978b8222127a21c0545c97eef5f482db6ae7dc12",
+          "raw/wind/hrrr.20250214.t11z.f000.10m_uv.grib2": "ab073180f7a2c19a0a05859d418c0412cdcdc1abeb3187df2d9e35dbcf8f56a8",
+          "requirements_validation.txt": "8976420e7e81ba75763ae24b6c551941fe37b4f88b2a8f32c14a6145b355be15",
+          "scripts/fetch_noaa.py": "2df7ca1369f43adf33fa32273a76ed88a1199912699f3bba9e7b7577b21eaf75",
+          "scripts/merge_gomofs.py": "3d274679ae6bbe87e72af2199f8e089977228b2225a25a0393815aef72ddc1cc",
+          "scripts/validate_package.py": "66e2c4bfb22a857519c6cee28b318b81339209e33686f550d17dced373d5e313",
+          "scripts/verify_hashes.py": "0cf27656e4b9701f69cac3c81bd637443aea9dad9f593972b9bda6513a1ac1aa",
+          "validation_download_environment.json": "5f29cea2deda7f1bf7a9c1659b99f0d0fc680dcc642b866604473d70c9b27095"
+        }
+      },
+      "pair_status": "verified",
+      "verification_scope": "B1_delivered_files_local",
+      "forcing_kind": "historical_real",
+      "B2_completed": false,
+      "B3_completed": false,
+      "paper_cycles_verified": false,
+      "real_time_information_constraint": "not_certified",
+      "purpose": "retrospective_environment_reconstruction"
+    },
+    {
+      "scenario": "salish_sea",
+      "requested_window_utc": [
+        "2025-08-24T00:00:00.000Z",
+        "2025-08-24T12:41:14.560Z"
+      ],
+      "hourly_inspection_window_utc": [
+        "2025-08-23T23:00:00.000Z",
+        "2025-08-24T14:00:00.000Z"
+      ],
+      "cst_utc": "2025-08-24T11:00:00Z",
+      "lkp_lon_lat": [
+        -123.07,
+        48.3
+      ],
+      "csp_lon_lat": [
+        -123.187,
+        48.195
+      ],
+      "wind": {
+        "resolved_source": null,
+        "local_path": null,
+        "sha256": null,
+        "size_bytes": null,
+        "native_variable_names": null,
+        "units": null,
+        "valid_time_range_utc": null,
+        "spatial_coverage": null,
+        "run_cycle_utc": null,
+        "forecast_or_analysis": null,
+        "downloaded_at_utc": null,
+        "download_command": null,
+        "crs": null,
+        "dimensions": null,
+        "missing_fraction": null,
+        "subset_bounds": null,
+        "subset_sha256": null,
+        "product": "HRRR",
+        "catalog": "https://registry.opendata.aws/noaa-hrrr-pds/",
+        "probes": [
+          {
+            "kind": "idx",
+            "url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250824/conus/hrrr.t00z.wrfsfcf00.grib2.idx",
+            "queried_at_utc": "2026-11-23T02:28:56.982Z",
+            "command": "curl.exe --fail --location \"https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250824/conus/hrrr.t00z.wrfsfcf00.grib2.idx\"",
+            "dns_addresses": [
+              "198.18.0.64",
+              "2001:2::3f"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          },
+          {
+            "kind": "idx",
+            "url": "https://storage.googleapis.com/high-resolution-rapid-refresh/hrrr.20250824/conus/hrrr.t00z.wrfsfcf00.grib2.idx",
+            "queried_at_utc": "2026-11-23T02:28:56.983Z",
+            "command": "curl.exe --fail --location \"https://storage.googleapis.com/high-resolution-rapid-refresh/hrrr.20250824/conus/hrrr.t00z.wrfsfcf00.grib2.idx\"",
+            "dns_addresses": [
+              "198.18.0.63",
+              "2001:2::3e"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          }
+        ],
+        "local_files": [],
+        "status": "unverified",
+        "citation_and_rights_source": "https://registry.opendata.aws/noaa-hrrr-pds/"
+      },
+      "current": {
+        "resolved_source": null,
+        "local_path": null,
+        "sha256": null,
+        "size_bytes": null,
+        "native_variable_names": null,
+        "units": null,
+        "valid_time_range_utc": null,
+        "spatial_coverage": null,
+        "run_cycle_utc": null,
+        "forecast_or_analysis": null,
+        "downloaded_at_utc": null,
+        "download_command": null,
+        "crs": null,
+        "dimensions": null,
+        "missing_fraction": null,
+        "subset_bounds": null,
+        "subset_sha256": null,
+        "product": "CIOPS Salish Sea",
+        "catalog": "https://eccc-msc.github.io/open-data/msc-data/nwp_ciops/readme_ciops-datamart_en/",
+        "probes": [
+          {
+            "kind": "directory",
+            "url": "https://dd.weather.gc.ca/20250824/model_ciops/salish-sea/500m/00/",
+            "queried_at_utc": "2026-11-23T02:28:57.043Z",
+            "command": "curl.exe --fail --location \"https://dd.weather.gc.ca/20250824/model_ciops/salish-sea/500m/00/\"",
+            "dns_addresses": [
+              "198.18.0.65",
+              "2001:2::40"
+            ],
+            "status": "probe_failed",
+            "error": "<urlopen error [WinError 10013] 以一种访问权限不允许的方式做了一个访问套接字的尝试。>",
+            "winerror": 10013
+          }
+        ],
+        "local_files": [],
+        "status": "unverified",
+        "citation_and_rights_source": "https://eccc-msc.github.io/open-data/msc-data/nwp_ciops/readme_ciops-datamart_en/"
+      },
+      "pair_status": "blocked_pending_file_verification"
+    },
+    {
+      "scenario": "arctic_ocean",
+      "alias": "hudsons_bay",
+      "mission": {
+        "name": "Arctic Ocean",
+        "alias": "hudsons_bay",
+        "object": "Deep Ballast Life Raft",
+        "object_key": "LIFE-RAFT-DB-10",
+        "wind": "GFS",
+        "current": "ESPC-D-V02",
+        "lkp_lon_lat": [
+          -90.6,
+          62.85
+        ],
+        "incident_utc": "2025-08-29T00:00:00Z",
+        "csp_lon_lat": [
+          -90.447,
+          62.786
+        ],
+        "cst_utc": "2025-08-30T00:00:00Z",
+        "sweep_width_nm": 0.5,
+        "budget": 60,
+        "grid_rows_cols": [
+          65,
+          85
+        ],
+        "integration_s": 120,
+        "table_ii_s": [
+          0.1,
+          0.1,
+          0.1,
+          0.5,
+          0.52,
+          3.09,
+          10.78,
+          35.26
+        ]
+      },
+      "requested_window_utc": [
+        "2025-08-29T00:00:00+00:00",
+        "2025-08-30T00:46:18+00:00"
+      ],
+      "sweep_width_nm": 0.5,
+      "T": 60,
+      "speed_m_s": 20,
+      "q": 0.78,
+      "source_config_sha256": "40311df54d7e43dcebdb2e618ebcb81a86add4d83db7a8ac925253ff73f391d6",
+      "wind": {
+        "product": "GFS",
+        "status": "verified",
+        "local_files": [
+          {
+            "product": "GFS",
+            "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20250828/18/atmos/gfs.t18z.pgrb2.0p25.f003",
+            "index_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20250828/18/atmos/gfs.t18z.pgrb2.0p25.f003.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 1931542,
+            "sha256": "a91838d9f73b5e4752302bbdff48b9c9c360951bfa8519152deca6c27091327b",
+            "run_cycle_utc": "2025-08-28T18:00:00+00:00",
+            "lead_hours": 3,
+            "expected_valid_time_utc": "2025-08-28T21:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 421220598,
+                "end_inclusive": 422198903,
+                "index_line": "588:421220598:d=2025082818:UGRD:10 m above ground:3 hour fcst:",
+                "sha256": "a2cd6b13eb4871467749cb301b6c47120b8df8aa35b6798b5d04cdd172433857",
+                "http": {
+                  "status": 206,
+                  "etag": "\"5d7ec19c86cd75cb3b75a34afa6ce1e9\"",
+                  "content_range": "bytes 421220598-422198903/539551709",
+                  "last_modified": "Thu, 28 Aug 2025 21:50:06 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 422198904,
+                "end_inclusive": 423152139,
+                "index_line": "589:422198904:d=2025082818:VGRD:10 m above ground:3 hour fcst:",
+                "sha256": "ea95f0b734f156987d9ed8f78c854d03dc9c4023e0ac0860950af1239bbeea80",
+                "http": {
+                  "status": 206,
+                  "etag": "\"5d7ec19c86cd75cb3b75a34afa6ce1e9\"",
+                  "content_range": "bytes 422198904-423152139/539551709",
+                  "last_modified": "Thu, 28 Aug 2025 21:50:06 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_HudsonsBay_20250829/raw/wind/gfs.20250828.t18z.f003.10m_uv.grib2",
+            "valid_utc": "2025-08-28T21:00:00+00:00",
+            "grid": {
+              "kind": "regular_ll",
+              "Nx": 1440,
+              "Ny": 721,
+              "uvRelativeToGrid": 0
+            },
+            "vector_basis": "geographic_east_north",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1038240,
+                  "valid": 1038240,
+                  "missing_or_nonfinite": 0,
+                  "min": -21.94455810546875,
+                  "max": 25.53544189453125,
+                  "mean": 0.16052134629577453,
+                  "std": 5.602382390290004
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 3.89544189453125,
+                    "distance_m_approx": 12222.49751926488
+                  },
+                  "CSP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 3.89544189453125,
+                    "distance_m_approx": 4825.743185274233
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1038240,
+                  "valid": 1038240,
+                  "missing_or_nonfinite": 0,
+                  "min": -24.251669921875,
+                  "max": 23.178330078125,
+                  "mean": 0.6702952981126715,
+                  "std": 4.774523510548238
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 6.988330078125,
+                    "distance_m_approx": 12222.49751926488
+                  },
+                  "CSP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 6.988330078125,
+                    "distance_m_approx": 4825.743185274233
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "GFS",
+            "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20250828/18/atmos/gfs.t18z.pgrb2.0p25.f006",
+            "index_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20250828/18/atmos/gfs.t18z.pgrb2.0p25.f006.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 1921864,
+            "sha256": "239e8e88c98111c56635e7d4138cbb09a87ca8c824c3ff83ee24cba5dc24414f",
+            "run_cycle_utc": "2025-08-28T18:00:00+00:00",
+            "lead_hours": 6,
+            "expected_valid_time_utc": "2025-08-29T00:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 422243133,
+                "end_inclusive": 423215992,
+                "index_line": "588:422243133:d=2025082818:UGRD:10 m above ground:6 hour fcst:",
+                "sha256": "e1f5bd7dd0bac718a55d956ba1bb5c33e4579ba7e9c5f72c4643aa1febf5c24e",
+                "http": {
+                  "status": 206,
+                  "etag": "\"953dc7cfac8a72aef6b16841f6b40bef\"",
+                  "content_range": "bytes 422243133-423215992/542391278",
+                  "last_modified": "Thu, 28 Aug 2025 21:35:40 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 423215993,
+                "end_inclusive": 424164996,
+                "index_line": "589:423215993:d=2025082818:VGRD:10 m above ground:6 hour fcst:",
+                "sha256": "e4eb693fce25c11c882343fa833e4c0e110799b8a9171a49e1dc9a9b425cee00",
+                "http": {
+                  "status": 206,
+                  "etag": "\"953dc7cfac8a72aef6b16841f6b40bef\"",
+                  "content_range": "bytes 423215993-424164996/542391278",
+                  "last_modified": "Thu, 28 Aug 2025 21:35:40 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_HudsonsBay_20250829/raw/wind/gfs.20250828.t18z.f006.10m_uv.grib2",
+            "valid_utc": "2025-08-29T00:00:00+00:00",
+            "grid": {
+              "kind": "regular_ll",
+              "Nx": 1440,
+              "Ny": 721,
+              "uvRelativeToGrid": 0
+            },
+            "vector_basis": "geographic_east_north",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1038240,
+                  "valid": 1038240,
+                  "missing_or_nonfinite": 0,
+                  "min": -21.8112109375,
+                  "max": 30.748789062500002,
+                  "mean": 0.15610659023925116,
+                  "std": 5.6398574664226455
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 4.0287890625000005,
+                    "distance_m_approx": 12222.49751926488
+                  },
+                  "CSP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 4.0287890625000005,
+                    "distance_m_approx": 4825.743185274233
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1038240,
+                  "valid": 1038240,
+                  "missing_or_nonfinite": 0,
+                  "min": -23.66752685546875,
+                  "max": 25.77247314453125,
+                  "mean": 0.670078014310877,
+                  "std": 4.742053595655999
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 9.22247314453125,
+                    "distance_m_approx": 12222.49751926488
+                  },
+                  "CSP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 9.22247314453125,
+                    "distance_m_approx": 4825.743185274233
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "GFS",
+            "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20250828/18/atmos/gfs.t18z.pgrb2.0p25.f009",
+            "index_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20250828/18/atmos/gfs.t18z.pgrb2.0p25.f009.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 1919208,
+            "sha256": "b3a133eff053796c6233f1df0c5a80338f1582d1106189a0f4dbedc39bffbfe4",
+            "run_cycle_utc": "2025-08-28T18:00:00+00:00",
+            "lead_hours": 9,
+            "expected_valid_time_utc": "2025-08-29T03:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 426764898,
+                "end_inclusive": 427737005,
+                "index_line": "588:426764898:d=2025082818:UGRD:10 m above ground:9 hour fcst:",
+                "sha256": "adcb91b6bbb5e9689419bb8e04477108e3ca920af222362da1283ea7e7aa7684",
+                "http": {
+                  "status": 206,
+                  "etag": "\"a3014a743ab8b0b682cd29c06ceec71f\"",
+                  "content_range": "bytes 426764898-427737005/545218848",
+                  "last_modified": "Thu, 28 Aug 2025 21:36:35 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 427737006,
+                "end_inclusive": 428684105,
+                "index_line": "589:427737006:d=2025082818:VGRD:10 m above ground:9 hour fcst:",
+                "sha256": "e1d3a0cb88579db95205202c23f48e7143da2052aac3d2a33ab0167f3ca1a615",
+                "http": {
+                  "status": 206,
+                  "etag": "\"a3014a743ab8b0b682cd29c06ceec71f\"",
+                  "content_range": "bytes 427737006-428684105/545218848",
+                  "last_modified": "Thu, 28 Aug 2025 21:36:35 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_HudsonsBay_20250829/raw/wind/gfs.20250828.t18z.f009.10m_uv.grib2",
+            "valid_utc": "2025-08-29T03:00:00+00:00",
+            "grid": {
+              "kind": "regular_ll",
+              "Nx": 1440,
+              "Ny": 721,
+              "uvRelativeToGrid": 0
+            },
+            "vector_basis": "geographic_east_north",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1038240,
+                  "valid": 1038240,
+                  "missing_or_nonfinite": 0,
+                  "min": -23.018415527343752,
+                  "max": 25.66158447265625,
+                  "mean": 0.16394469765239744,
+                  "std": 5.68164627553056
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 5.93158447265625,
+                    "distance_m_approx": 12222.49751926488
+                  },
+                  "CSP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 5.93158447265625,
+                    "distance_m_approx": 4825.743185274233
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1038240,
+                  "valid": 1038240,
+                  "missing_or_nonfinite": 0,
+                  "min": -25.0107373046875,
+                  "max": 28.7792626953125,
+                  "mean": 0.6777790595442769,
+                  "std": 4.715863650580459
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 9.1892626953125,
+                    "distance_m_approx": 12222.49751926488
+                  },
+                  "CSP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 9.1892626953125,
+                    "distance_m_approx": 4825.743185274233
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "GFS",
+            "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20250828/18/atmos/gfs.t18z.pgrb2.0p25.f012",
+            "index_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20250828/18/atmos/gfs.t18z.pgrb2.0p25.f012.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 1920368,
+            "sha256": "28d442ecd22295a816f7f4c3d3a6d34f8198004c5287d717407e468ef2b61866",
+            "run_cycle_utc": "2025-08-28T18:00:00+00:00",
+            "lead_hours": 12,
+            "expected_valid_time_utc": "2025-08-29T06:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 424520741,
+                "end_inclusive": 425494338,
+                "index_line": "588:424520741:d=2025082818:UGRD:10 m above ground:12 hour fcst:",
+                "sha256": "5dd8085b2bb0ab089d1231b4353ff9d8f301981c34d876ada57c6288e796370b",
+                "http": {
+                  "status": 206,
+                  "etag": "\"b2999b85ff1cc7024b416d4f0046fc35\"",
+                  "content_range": "bytes 424520741-425494338/544628371",
+                  "last_modified": "Thu, 28 Aug 2025 21:37:36 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 425494339,
+                "end_inclusive": 426441108,
+                "index_line": "589:425494339:d=2025082818:VGRD:10 m above ground:12 hour fcst:",
+                "sha256": "040183aabba5456d7d2a59befa6e814b07699da1ee6ea59225f9f0e295640a9e",
+                "http": {
+                  "status": 206,
+                  "etag": "\"b2999b85ff1cc7024b416d4f0046fc35\"",
+                  "content_range": "bytes 425494339-426441108/544628371",
+                  "last_modified": "Thu, 28 Aug 2025 21:37:36 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_HudsonsBay_20250829/raw/wind/gfs.20250828.t18z.f012.10m_uv.grib2",
+            "valid_utc": "2025-08-29T06:00:00+00:00",
+            "grid": {
+              "kind": "regular_ll",
+              "Nx": 1440,
+              "Ny": 721,
+              "uvRelativeToGrid": 0
+            },
+            "vector_basis": "geographic_east_north",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1038240,
+                  "valid": 1038240,
+                  "missing_or_nonfinite": 0,
+                  "min": -23.55806396484375,
+                  "max": 26.18193603515625,
+                  "mean": 0.17275463201246818,
+                  "std": 5.711080024808904
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 7.28193603515625,
+                    "distance_m_approx": 12222.49751926488
+                  },
+                  "CSP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 7.28193603515625,
+                    "distance_m_approx": 4825.743185274233
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1038240,
+                  "valid": 1038240,
+                  "missing_or_nonfinite": 0,
+                  "min": -25.08302734375,
+                  "max": 24.64697265625,
+                  "mean": 0.6660916075522036,
+                  "std": 4.7294537250551345
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 3.66697265625,
+                    "distance_m_approx": 12222.49751926488
+                  },
+                  "CSP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 3.66697265625,
+                    "distance_m_approx": 4825.743185274233
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "GFS",
+            "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20250828/18/atmos/gfs.t18z.pgrb2.0p25.f015",
+            "index_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20250828/18/atmos/gfs.t18z.pgrb2.0p25.f015.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 1922705,
+            "sha256": "2347f4714d124e4280ae637aedbeb2bd1021102fd79540daf757b501540ec7a0",
+            "run_cycle_utc": "2025-08-28T18:00:00+00:00",
+            "lead_hours": 15,
+            "expected_valid_time_utc": "2025-08-29T09:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 422816282,
+                "end_inclusive": 423791429,
+                "index_line": "588:422816282:d=2025082818:UGRD:10 m above ground:15 hour fcst:",
+                "sha256": "86a7c2ed7887c508841fe1cefec10394796093c4174fc3399c1c0819e8b9c81a",
+                "http": {
+                  "status": 206,
+                  "etag": "\"562e4f23cc2327b738512aa398141508\"",
+                  "content_range": "bytes 422816282-423791429/541835730",
+                  "last_modified": "Thu, 28 Aug 2025 21:38:23 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 423791430,
+                "end_inclusive": 424738986,
+                "index_line": "589:423791430:d=2025082818:VGRD:10 m above ground:15 hour fcst:",
+                "sha256": "ea054fce322161b555244616c11697ab6e60c9053c9f07b0e11bb250722b486c",
+                "http": {
+                  "status": 206,
+                  "etag": "\"562e4f23cc2327b738512aa398141508\"",
+                  "content_range": "bytes 423791430-424738986/541835730",
+                  "last_modified": "Thu, 28 Aug 2025 21:38:23 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_HudsonsBay_20250829/raw/wind/gfs.20250828.t18z.f015.10m_uv.grib2",
+            "valid_utc": "2025-08-29T09:00:00+00:00",
+            "grid": {
+              "kind": "regular_ll",
+              "Nx": 1440,
+              "Ny": 721,
+              "uvRelativeToGrid": 0
+            },
+            "vector_basis": "geographic_east_north",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1038240,
+                  "valid": 1038240,
+                  "missing_or_nonfinite": 0,
+                  "min": -23.65432373046875,
+                  "max": 25.25567626953125,
+                  "mean": 0.19292550862818325,
+                  "std": 5.71471367477623
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 1.41567626953125,
+                    "distance_m_approx": 12222.49751926488
+                  },
+                  "CSP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 1.41567626953125,
+                    "distance_m_approx": 4825.743185274233
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1038240,
+                  "valid": 1038240,
+                  "missing_or_nonfinite": 0,
+                  "min": -25.860998535156252,
+                  "max": 25.37900146484375,
+                  "mean": 0.6536416058516095,
+                  "std": 4.7484532068935215
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": -9.99099853515625,
+                    "distance_m_approx": 12222.49751926488
+                  },
+                  "CSP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": -9.99099853515625,
+                    "distance_m_approx": 4825.743185274233
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "GFS",
+            "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20250828/18/atmos/gfs.t18z.pgrb2.0p25.f018",
+            "index_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20250828/18/atmos/gfs.t18z.pgrb2.0p25.f018.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 1926650,
+            "sha256": "8287bccb3f56970926881678ebe62630f4bf2534e7e3a371f9a24b59ad71314e",
+            "run_cycle_utc": "2025-08-28T18:00:00+00:00",
+            "lead_hours": 18,
+            "expected_valid_time_utc": "2025-08-29T12:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 423041953,
+                "end_inclusive": 424016964,
+                "index_line": "588:423041953:d=2025082818:UGRD:10 m above ground:18 hour fcst:",
+                "sha256": "655930eda69a353b89c2444d88cb2528fa5ea571769e771a9397db2b09713338",
+                "http": {
+                  "status": 206,
+                  "etag": "\"b8930327165efe25c1f073779e58ce89\"",
+                  "content_range": "bytes 423041953-424016964/543444941",
+                  "last_modified": "Thu, 28 Aug 2025 21:39:09 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 424016965,
+                "end_inclusive": 424968602,
+                "index_line": "589:424016965:d=2025082818:VGRD:10 m above ground:18 hour fcst:",
+                "sha256": "691dfe4e5d178e89a82f6e5af6096634dbe24dae9eaa036b13f3794fce11ff36",
+                "http": {
+                  "status": 206,
+                  "etag": "\"b8930327165efe25c1f073779e58ce89\"",
+                  "content_range": "bytes 424016965-424968602/543444941",
+                  "last_modified": "Thu, 28 Aug 2025 21:39:09 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_HudsonsBay_20250829/raw/wind/gfs.20250828.t18z.f018.10m_uv.grib2",
+            "valid_utc": "2025-08-29T12:00:00+00:00",
+            "grid": {
+              "kind": "regular_ll",
+              "Nx": 1440,
+              "Ny": 721,
+              "uvRelativeToGrid": 0
+            },
+            "vector_basis": "geographic_east_north",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1038240,
+                  "valid": 1038240,
+                  "missing_or_nonfinite": 0,
+                  "min": -23.364833984375,
+                  "max": 25.005166015625,
+                  "mean": 0.1928818616721569,
+                  "std": 5.73016196829505
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": -0.434833984375,
+                    "distance_m_approx": 12222.49751926488
+                  },
+                  "CSP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": -0.434833984375,
+                    "distance_m_approx": 4825.743185274233
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1038240,
+                  "valid": 1038240,
+                  "missing_or_nonfinite": 0,
+                  "min": -25.80919921875,
+                  "max": 23.220800781250002,
+                  "mean": 0.6436998123025506,
+                  "std": 4.743469408739274
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": -7.80919921875,
+                    "distance_m_approx": 12222.49751926488
+                  },
+                  "CSP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": -7.80919921875,
+                    "distance_m_approx": 4825.743185274233
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "GFS",
+            "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20250828/18/atmos/gfs.t18z.pgrb2.0p25.f021",
+            "index_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20250828/18/atmos/gfs.t18z.pgrb2.0p25.f021.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 1928843,
+            "sha256": "b0249b33322313679480f2aa64e0b0a4d798e2c4eacd8446bab6284504a54be3",
+            "run_cycle_utc": "2025-08-28T18:00:00+00:00",
+            "lead_hours": 21,
+            "expected_valid_time_utc": "2025-08-29T15:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 420683318,
+                "end_inclusive": 421660795,
+                "index_line": "588:420683318:d=2025082818:UGRD:10 m above ground:21 hour fcst:",
+                "sha256": "ce9d9ad2f3e0605788ebccbb7fdc26c836ac41a3d2558f750d1e41a21a34adb0",
+                "http": {
+                  "status": 206,
+                  "etag": "\"f7ccf19895252c656791b779cb6bdc86\"",
+                  "content_range": "bytes 420683318-421660795/537946385",
+                  "last_modified": "Thu, 28 Aug 2025 21:40:03 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 421660796,
+                "end_inclusive": 422612160,
+                "index_line": "589:421660796:d=2025082818:VGRD:10 m above ground:21 hour fcst:",
+                "sha256": "39e78343461880dc82736ed342932a79706c5764354fae8ba72696fac2a5019f",
+                "http": {
+                  "status": 206,
+                  "etag": "\"f7ccf19895252c656791b779cb6bdc86\"",
+                  "content_range": "bytes 421660796-422612160/537946385",
+                  "last_modified": "Thu, 28 Aug 2025 21:40:03 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_HudsonsBay_20250829/raw/wind/gfs.20250828.t18z.f021.10m_uv.grib2",
+            "valid_utc": "2025-08-29T15:00:00+00:00",
+            "grid": {
+              "kind": "regular_ll",
+              "Nx": 1440,
+              "Ny": 721,
+              "uvRelativeToGrid": 0
+            },
+            "vector_basis": "geographic_east_north",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1038240,
+                  "valid": 1038240,
+                  "missing_or_nonfinite": 0,
+                  "min": -20.7503466796875,
+                  "max": 24.1896533203125,
+                  "mean": 0.18873137548278826,
+                  "std": 5.746469797133489
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 0.1096533203125,
+                    "distance_m_approx": 12222.49751926488
+                  },
+                  "CSP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 0.1096533203125,
+                    "distance_m_approx": 4825.743185274233
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1038240,
+                  "valid": 1038240,
+                  "missing_or_nonfinite": 0,
+                  "min": -25.36788330078125,
+                  "max": 23.722116699218752,
+                  "mean": 0.6575877463754768,
+                  "std": 4.747715119586226
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": -7.23788330078125,
+                    "distance_m_approx": 12222.49751926488
+                  },
+                  "CSP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": -7.23788330078125,
+                    "distance_m_approx": 4825.743185274233
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "GFS",
+            "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20250828/18/atmos/gfs.t18z.pgrb2.0p25.f024",
+            "index_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20250828/18/atmos/gfs.t18z.pgrb2.0p25.f024.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 1928057,
+            "sha256": "f0edfe056772055be127c99bfee1032a75048b087d5b4dcb76b33d72631f4664",
+            "run_cycle_utc": "2025-08-28T18:00:00+00:00",
+            "lead_hours": 24,
+            "expected_valid_time_utc": "2025-08-29T18:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 422574296,
+                "end_inclusive": 423553509,
+                "index_line": "588:422574296:d=2025082818:UGRD:10 m above ground:24 hour fcst:",
+                "sha256": "39ee6df9ec6ac1f8ff75396d0c44fb6c151d39b0ab74fefff9453beaaa4ae442",
+                "http": {
+                  "status": 206,
+                  "etag": "\"7e6543f76a40a22b5434ec2ea300bf9f\"",
+                  "content_range": "bytes 422574296-423553509/542689534",
+                  "last_modified": "Thu, 28 Aug 2025 21:40:33 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 423553510,
+                "end_inclusive": 424502352,
+                "index_line": "589:423553510:d=2025082818:VGRD:10 m above ground:24 hour fcst:",
+                "sha256": "9a799b3da9e6e262baa712fce8b778dfc366d552167aa9563b70d54a172074e1",
+                "http": {
+                  "status": 206,
+                  "etag": "\"7e6543f76a40a22b5434ec2ea300bf9f\"",
+                  "content_range": "bytes 423553510-424502352/542689534",
+                  "last_modified": "Thu, 28 Aug 2025 21:40:33 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_HudsonsBay_20250829/raw/wind/gfs.20250828.t18z.f024.10m_uv.grib2",
+            "valid_utc": "2025-08-29T18:00:00+00:00",
+            "grid": {
+              "kind": "regular_ll",
+              "Nx": 1440,
+              "Ny": 721,
+              "uvRelativeToGrid": 0
+            },
+            "vector_basis": "geographic_east_north",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1038240,
+                  "valid": 1038240,
+                  "missing_or_nonfinite": 0,
+                  "min": -18.941007080078126,
+                  "max": 23.748992919921875,
+                  "mean": 0.21439727729589245,
+                  "std": 5.760973736839833
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": -0.8310070800781251,
+                    "distance_m_approx": 12222.49751926488
+                  },
+                  "CSP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": -0.8310070800781251,
+                    "distance_m_approx": 4825.743185274233
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1038240,
+                  "valid": 1038240,
+                  "missing_or_nonfinite": 0,
+                  "min": -24.672121582031252,
+                  "max": 24.60787841796875,
+                  "mean": 0.6564513490829434,
+                  "std": 4.731307991326452
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": -2.8921215820312502,
+                    "distance_m_approx": 12222.49751926488
+                  },
+                  "CSP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": -2.8921215820312502,
+                    "distance_m_approx": 4825.743185274233
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "GFS",
+            "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20250828/18/atmos/gfs.t18z.pgrb2.0p25.f027",
+            "index_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20250828/18/atmos/gfs.t18z.pgrb2.0p25.f027.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 1931188,
+            "sha256": "8efac42b7ecdc199407ba147120e9582c857bd38634e60ea284b09026fc6a774",
+            "run_cycle_utc": "2025-08-28T18:00:00+00:00",
+            "lead_hours": 27,
+            "expected_valid_time_utc": "2025-08-29T21:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 421155729,
+                "end_inclusive": 422134176,
+                "index_line": "588:421155729:d=2025082818:UGRD:10 m above ground:27 hour fcst:",
+                "sha256": "14e5e277b6bb879f0cc2b6941532e863285727daadb459861576f7e0031a5c58",
+                "http": {
+                  "status": 206,
+                  "etag": "\"52e7b0c991d3c15d6aab5e414ca8f512\"",
+                  "content_range": "bytes 421155729-422134176/538989629",
+                  "last_modified": "Thu, 28 Aug 2025 21:41:13 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 422134177,
+                "end_inclusive": 423086916,
+                "index_line": "589:422134177:d=2025082818:VGRD:10 m above ground:27 hour fcst:",
+                "sha256": "a9c768d52360168e870857f61866df3df1d9ddd8e93154399e651a999be6f3a4",
+                "http": {
+                  "status": 206,
+                  "etag": "\"52e7b0c991d3c15d6aab5e414ca8f512\"",
+                  "content_range": "bytes 422134177-423086916/538989629",
+                  "last_modified": "Thu, 28 Aug 2025 21:41:13 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_HudsonsBay_20250829/raw/wind/gfs.20250828.t18z.f027.10m_uv.grib2",
+            "valid_utc": "2025-08-29T21:00:00+00:00",
+            "grid": {
+              "kind": "regular_ll",
+              "Nx": 1440,
+              "Ny": 721,
+              "uvRelativeToGrid": 0
+            },
+            "vector_basis": "geographic_east_north",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1038240,
+                  "valid": 1038240,
+                  "missing_or_nonfinite": 0,
+                  "min": -18.30780029296875,
+                  "max": 22.75219970703125,
+                  "mean": 0.23341219162055493,
+                  "std": 5.78627128475687
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 0.39219970703125,
+                    "distance_m_approx": 12222.49751926488
+                  },
+                  "CSP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 0.39219970703125,
+                    "distance_m_approx": 4825.743185274233
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1038240,
+                  "valid": 1038240,
+                  "missing_or_nonfinite": 0,
+                  "min": -24.02185546875,
+                  "max": 25.36814453125,
+                  "mean": 0.643053454042418,
+                  "std": 4.6887726935737
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 3.21814453125,
+                    "distance_m_approx": 12222.49751926488
+                  },
+                  "CSP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 3.21814453125,
+                    "distance_m_approx": 4825.743185274233
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "GFS",
+            "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20250828/18/atmos/gfs.t18z.pgrb2.0p25.f030",
+            "index_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20250828/18/atmos/gfs.t18z.pgrb2.0p25.f030.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 1920251,
+            "sha256": "08919407eeddf932320ca12d77d18df70a3061c38e666f3a070f609fdf41a0d4",
+            "run_cycle_utc": "2025-08-28T18:00:00+00:00",
+            "lead_hours": 30,
+            "expected_valid_time_utc": "2025-08-30T00:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 421620283,
+                "end_inclusive": 422590853,
+                "index_line": "588:421620283:d=2025082818:UGRD:10 m above ground:30 hour fcst:",
+                "sha256": "4128083cf06e3ba83feb86bc23eefd05ad690c58c694369ac40bdf0073f7e934",
+                "http": {
+                  "status": 206,
+                  "etag": "\"a96f208805caae78e6faa83d5ec6c0d8\"",
+                  "content_range": "bytes 421620283-422590853/540436767",
+                  "last_modified": "Thu, 28 Aug 2025 21:42:05 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 422590854,
+                "end_inclusive": 423540533,
+                "index_line": "589:422590854:d=2025082818:VGRD:10 m above ground:30 hour fcst:",
+                "sha256": "cf0ee93a586c4cdb2afc02694bf5c1f49832141e69b942ac76b488d19ab2f582",
+                "http": {
+                  "status": 206,
+                  "etag": "\"a96f208805caae78e6faa83d5ec6c0d8\"",
+                  "content_range": "bytes 422590854-423540533/540436767",
+                  "last_modified": "Thu, 28 Aug 2025 21:42:05 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_HudsonsBay_20250829/raw/wind/gfs.20250828.t18z.f030.10m_uv.grib2",
+            "valid_utc": "2025-08-30T00:00:00+00:00",
+            "grid": {
+              "kind": "regular_ll",
+              "Nx": 1440,
+              "Ny": 721,
+              "uvRelativeToGrid": 0
+            },
+            "vector_basis": "geographic_east_north",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1038240,
+                  "valid": 1038240,
+                  "missing_or_nonfinite": 0,
+                  "min": -19.46570556640625,
+                  "max": 23.69429443359375,
+                  "mean": 0.22321442319153087,
+                  "std": 5.837240270772398
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 3.5142944335937503,
+                    "distance_m_approx": 12222.49751926488
+                  },
+                  "CSP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 3.5142944335937503,
+                    "distance_m_approx": 4825.743185274233
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1038240,
+                  "valid": 1038240,
+                  "missing_or_nonfinite": 0,
+                  "min": -25.2464111328125,
+                  "max": 25.1235888671875,
+                  "mean": 0.6433610682200165,
+                  "std": 4.650188345743978
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 5.7835888671875,
+                    "distance_m_approx": 12222.49751926488
+                  },
+                  "CSP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 5.7835888671875,
+                    "distance_m_approx": 4825.743185274233
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "GFS",
+            "source_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20250828/18/atmos/gfs.t18z.pgrb2.0p25.f033",
+            "index_url": "https://noaa-gfs-bdp-pds.s3.amazonaws.com/gfs.20250828/18/atmos/gfs.t18z.pgrb2.0p25.f033.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 1916213,
+            "sha256": "94ae1a92c6f5366bf2ddc040007ccf9663b82dfdeaac43f3973ed3cdcf0c0708",
+            "run_cycle_utc": "2025-08-28T18:00:00+00:00",
+            "lead_hours": 33,
+            "expected_valid_time_utc": "2025-08-30T03:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 421814627,
+                "end_inclusive": 422783459,
+                "index_line": "588:421814627:d=2025082818:UGRD:10 m above ground:33 hour fcst:",
+                "sha256": "b933c51db69634b5f32e129fd2e2012bb7c67da5a3cd4f5c92b81d9460f3d5d2",
+                "http": {
+                  "status": 206,
+                  "etag": "\"321abce6198c1e666de71539faa0dfe8\"",
+                  "content_range": "bytes 421814627-422783459/539124092",
+                  "last_modified": "Thu, 28 Aug 2025 21:57:53 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 422783460,
+                "end_inclusive": 423730839,
+                "index_line": "589:422783460:d=2025082818:VGRD:10 m above ground:33 hour fcst:",
+                "sha256": "4a8d575959a7adee28a20ae6708ec135886045a706aea9902cf5d4aa1365de65",
+                "http": {
+                  "status": 206,
+                  "etag": "\"321abce6198c1e666de71539faa0dfe8\"",
+                  "content_range": "bytes 422783460-423730839/539124092",
+                  "last_modified": "Thu, 28 Aug 2025 21:57:53 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_HudsonsBay_20250829/raw/wind/gfs.20250828.t18z.f033.10m_uv.grib2",
+            "valid_utc": "2025-08-30T03:00:00+00:00",
+            "grid": {
+              "kind": "regular_ll",
+              "Nx": 1440,
+              "Ny": 721,
+              "uvRelativeToGrid": 0
+            },
+            "vector_basis": "geographic_east_north",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1038240,
+                  "valid": 1038240,
+                  "missing_or_nonfinite": 0,
+                  "min": -19.607479248046875,
+                  "max": 25.402520751953126,
+                  "mean": 0.2202120949951963,
+                  "std": 5.875808946143713
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 5.932520751953125,
+                    "distance_m_approx": 12222.49751926488
+                  },
+                  "CSP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 5.932520751953125,
+                    "distance_m_approx": 4825.743185274233
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1038240,
+                  "valid": 1038240,
+                  "missing_or_nonfinite": 0,
+                  "min": -23.0162744140625,
+                  "max": 25.683725585937502,
+                  "mean": 0.6113973477652085,
+                  "std": 4.6344158789335825
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 6.7837255859375,
+                    "distance_m_approx": 12222.49751926488
+                  },
+                  "CSP": {
+                    "flat_index": 158038,
+                    "native_component_m_s": 6.7837255859375,
+                    "distance_m_approx": 4825.743185274233
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          }
+        ],
+        "coverage": {
+          "first_utc": "2025-08-28T21:00:00+00:00",
+          "last_utc": "2025-08-30T03:00:00+00:00",
+          "time_count": 11,
+          "interval_seconds": 10800,
+          "required_window_covered": true
+        },
+        "native_variable_names": [
+          "UGRD",
+          "VGRD"
+        ],
+        "units": "m/s",
+        "surface_definition": "10 m above ground",
+        "vector_basis": "geographic_east_north",
+        "run_cycle_utc": [
+          "2025-08-28T18:00:00+00:00"
+        ],
+        "delivery_kind": "byte_exact_original_message_subsets",
+        "full_parent_files_available": false
+      },
+      "current": {
+        "product": "ESPC-D-V02",
+        "status": "verified",
+        "local_files": [
+          {
+            "product": "ESPC-D-V02",
+            "source_url": "https://ncss.hycom.org/thredds/ncss/grid/ESPC-D-V02/ice/2025?var=ssu&var=ssv&var=sic&north=64.0&south=61.5&west=268&east=271.5&horizStride=1&time_start=2025-08-28T21%3A00%3A00Z&time_end=2025-08-28T23%3A00%3A00Z&timeStride=1&addLatLon=true&accept=netcdf4",
+            "source_kind": "official_NCSS_native_grid_subset",
+            "bytes": 78311,
+            "sha256": "c6abc95e224d20d0823b1171e831dc92fed4c9f7b95eca3aa8fbf0544c6afcaa",
+            "headers": {
+              "Content-Type": "application/x-netcdf4",
+              "Last-Modified": null,
+              "Content-Disposition": "attachment; filename=ice_2025.nc4"
+            },
+            "local_path": "data/raw/historical/ASAR_B1_HudsonsBay_20250829/raw/hycom/ESPC-D-V02_surface_20250828.nc",
+            "valid_times_utc": [
+              "2025-08-28T21:00:00+00:00",
+              "2025-08-28T22:00:00+00:00",
+              "2025-08-28T23:00:00+00:00"
+            ],
+            "native_variables": [
+              "ssu",
+              "ssv"
+            ],
+            "auxiliary": [
+              "sic"
+            ],
+            "units": "m/s",
+            "encoding": {
+              "ssu": {
+                "storage": "int16",
+                "scale_factor": 0.0010000000474974513,
+                "add_offset": 0.0,
+                "fill_value": -30000,
+                "unpacking_count": 1,
+                "mask_preserved": true
+              },
+              "ssv": {
+                "storage": "int16",
+                "scale_factor": 0.0010000000474974513,
+                "add_offset": 0.0,
+                "fill_value": -30000,
+                "unpacking_count": 1,
+                "mask_preserved": true
+              },
+              "sic": {
+                "storage": "int16",
+                "scale_factor": 9.999999747378752e-05,
+                "add_offset": 0.0,
+                "fill_value": -30000,
+                "unpacking_count": 1,
+                "mask_preserved": true
+              }
+            },
+            "statistics": {
+              "ssu": {
+                "total": 8505,
+                "valid": 6765,
+                "missing_or_nonfinite": 1740,
+                "min": -0.8660000562667847,
+                "max": 0.1720000058412552,
+                "mean": -0.15159719844422037,
+                "std": 0.11826201772075004
+              },
+              "ssv": {
+                "total": 8505,
+                "valid": 6765,
+                "missing_or_nonfinite": 1740,
+                "min": -0.48500001430511475,
+                "max": 1.062000036239624,
+                "mean": 0.18244849349291553,
+                "std": 0.14194934091855685
+              },
+              "sic": {
+                "total": 8505,
+                "valid": 6765,
+                "missing_or_nonfinite": 1740,
+                "min": 0.0,
+                "max": 0.0,
+                "mean": 0.0,
+                "std": 0.0
+              }
+            },
+            "points": {
+              "LKP": {
+                "bilinear_2x2_stencil_valid_all_times": true,
+                "nearest_lon_lat": [
+                  -90.56005859375,
+                  62.84000015258789
+                ],
+                "east_m_s": [
+                  -0.09400000423192978,
+                  -0.03100000135600567,
+                  0.07600000500679016
+                ],
+                "north_m_s": [
+                  0.2720000147819519,
+                  0.2070000171661377,
+                  0.09600000083446503
+                ],
+                "sea_ice_fraction": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "CSP": {
+                "bilinear_2x2_stencil_valid_all_times": true,
+                "nearest_lon_lat": [
+                  -90.47998046875,
+                  62.79999923706055
+                ],
+                "east_m_s": [
+                  -0.07700000703334808,
+                  -0.052000001072883606,
+                  -0.006000000052154064
+                ],
+                "north_m_s": [
+                  0.2939999997615814,
+                  0.1900000125169754,
+                  0.0650000050663948
+                ],
+                "sea_ice_fraction": [
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "dimensions": {
+              "time": 3,
+              "lat": 63,
+              "lon": 45
+            },
+            "lon_lat_bounds": [
+              -92.0,
+              -88.47998046875,
+              61.52000045776367,
+              64.0
+            ],
+            "vector_basis": "geographic_east_north",
+            "mask_policy": "retain; never fill missing water with zero",
+            "time_units": "hours since 2000-01-01 00:00:00",
+            "time_zone_policy": "CF default zero offset; compared to UTC source records",
+            "ignored_global_time_origin": "2025-12-31 12:00:00",
+            "run_cycle_status": "annual_archive_per_frame_lineage_not_fully_verified",
+            "global_parent_sha256": null
+          },
+          {
+            "product": "ESPC-D-V02",
+            "source_url": "https://ncss.hycom.org/thredds/ncss/grid/ESPC-D-V02/ice/2025?var=ssu&var=ssv&var=sic&north=64.0&south=61.5&west=268&east=271.5&horizStride=1&time_start=2025-08-29T00%3A00%3A00Z&time_end=2025-08-29T23%3A00%3A00Z&timeStride=1&addLatLon=true&accept=netcdf4",
+            "source_kind": "official_NCSS_native_grid_subset",
+            "bytes": 174316,
+            "sha256": "764ba5e77d97a25836d386d351131353e0c76f587054d99370417a2a68113e31",
+            "headers": {
+              "Content-Type": "application/x-netcdf4",
+              "Last-Modified": null,
+              "Content-Disposition": "attachment; filename=ice_2025.nc4"
+            },
+            "local_path": "data/raw/historical/ASAR_B1_HudsonsBay_20250829/raw/hycom/ESPC-D-V02_surface_20250829.nc",
+            "valid_times_utc": [
+              "2025-08-29T00:00:00+00:00",
+              "2025-08-29T01:00:00+00:00",
+              "2025-08-29T02:00:00+00:00",
+              "2025-08-29T03:00:00+00:00",
+              "2025-08-29T04:00:00+00:00",
+              "2025-08-29T05:00:00+00:00",
+              "2025-08-29T06:00:00+00:00",
+              "2025-08-29T07:00:00+00:00",
+              "2025-08-29T08:00:00+00:00",
+              "2025-08-29T09:00:00+00:00",
+              "2025-08-29T10:00:00+00:00",
+              "2025-08-29T11:00:00+00:00",
+              "2025-08-29T12:00:00+00:00",
+              "2025-08-29T13:00:00+00:00",
+              "2025-08-29T14:00:00+00:00",
+              "2025-08-29T15:00:00+00:00",
+              "2025-08-29T16:00:00+00:00",
+              "2025-08-29T17:00:00+00:00",
+              "2025-08-29T18:00:00+00:00",
+              "2025-08-29T19:00:00+00:00",
+              "2025-08-29T20:00:00+00:00",
+              "2025-08-29T21:00:00+00:00",
+              "2025-08-29T22:00:00+00:00",
+              "2025-08-29T23:00:00+00:00"
+            ],
+            "native_variables": [
+              "ssu",
+              "ssv"
+            ],
+            "auxiliary": [
+              "sic"
+            ],
+            "units": "m/s",
+            "encoding": {
+              "ssu": {
+                "storage": "int16",
+                "scale_factor": 0.0010000000474974513,
+                "add_offset": 0.0,
+                "fill_value": -30000,
+                "unpacking_count": 1,
+                "mask_preserved": true
+              },
+              "ssv": {
+                "storage": "int16",
+                "scale_factor": 0.0010000000474974513,
+                "add_offset": 0.0,
+                "fill_value": -30000,
+                "unpacking_count": 1,
+                "mask_preserved": true
+              },
+              "sic": {
+                "storage": "int16",
+                "scale_factor": 9.999999747378752e-05,
+                "add_offset": 0.0,
+                "fill_value": -30000,
+                "unpacking_count": 1,
+                "mask_preserved": true
+              }
+            },
+            "statistics": {
+              "ssu": {
+                "total": 68040,
+                "valid": 54120,
+                "missing_or_nonfinite": 13920,
+                "min": -1.096000075340271,
+                "max": 0.7270000576972961,
+                "mean": 0.03669674973217726,
+                "std": 0.17252710864851337
+              },
+              "ssv": {
+                "total": 68040,
+                "valid": 54120,
+                "missing_or_nonfinite": 13920,
+                "min": -1.812000036239624,
+                "max": 0.89000004529953,
+                "mean": -0.04368601463723832,
+                "std": 0.24537013039497726
+              },
+              "sic": {
+                "total": 68040,
+                "valid": 54120,
+                "missing_or_nonfinite": 13920,
+                "min": 0.0,
+                "max": 0.0,
+                "mean": 0.0,
+                "std": 0.0
+              }
+            },
+            "points": {
+              "LKP": {
+                "bilinear_2x2_stencil_valid_all_times": true,
+                "nearest_lon_lat": [
+                  -90.56005859375,
+                  62.84000015258789
+                ],
+                "east_m_s": [
+                  0.18200001120567322,
+                  0.2760000228881836,
+                  0.3360000252723694,
+                  0.3570000231266022,
+                  0.33500000834465027,
+                  0.2600000202655792,
+                  0.15300001204013824,
+                  0.03200000151991844,
+                  -0.06400000303983688,
+                  -0.08700000494718552,
+                  -0.020000001415610313,
+                  0.06400000303983688,
+                  0.17800000309944153,
+                  0.2240000069141388,
+                  0.23600001633167267,
+                  0.2240000069141388,
+                  0.1940000057220459,
+                  0.13700000941753387,
+                  0.05900000408291817,
+                  -0.026000000536441803,
+                  -0.08900000154972076,
+                  -0.10300000756978989,
+                  -0.06100000441074371,
+                  0.032999999821186066
+                ],
+                "north_m_s": [
+                  -0.03100000135600567,
+                  -0.15400001406669617,
+                  -0.242000013589859,
+                  -0.26900002360343933,
+                  -0.2290000170469284,
+                  -0.12600000202655792,
+                  0.01100000087171793,
+                  0.11900000274181366,
+                  0.17400000989437103,
+                  0.16900001466274261,
+                  0.05000000074505806,
+                  -0.11300000548362732,
+                  -0.3630000054836273,
+                  -0.5120000243186951,
+                  -0.593000054359436,
+                  -0.5890000462532043,
+                  -0.4880000352859497,
+                  -0.3160000145435333,
+                  -0.11900000274181366,
+                  0.05900000408291817,
+                  0.16900001466274261,
+                  0.20600001513957977,
+                  0.15800000727176666,
+                  0.046000003814697266
+                ],
+                "sea_ice_fraction": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "CSP": {
+                "bilinear_2x2_stencil_valid_all_times": true,
+                "nearest_lon_lat": [
+                  -90.47998046875,
+                  62.79999923706055
+                ],
+                "east_m_s": [
+                  0.05100000277161598,
+                  0.11500000208616257,
+                  0.164000004529953,
+                  0.1990000158548355,
+                  0.2110000103712082,
+                  0.17500001192092896,
+                  0.10400000214576721,
+                  0.021000001579523087,
+                  -0.04200000315904617,
+                  -0.04700000211596489,
+                  0.017000000923871994,
+                  0.07700000703334808,
+                  0.1420000046491623,
+                  0.1380000114440918,
+                  0.10500000417232513,
+                  0.0650000050663948,
+                  0.027000000700354576,
+                  -0.023000001907348633,
+                  -0.07900000363588333,
+                  -0.12200000882148743,
+                  -0.125,
+                  -0.07400000095367432,
+                  0.0010000000474974513,
+                  0.08500000089406967
+                ],
+                "north_m_s": [
+                  -0.05900000408291817,
+                  -0.1600000113248825,
+                  -0.20900000631809235,
+                  -0.1940000057220459,
+                  -0.1300000101327896,
+                  -0.021000001579523087,
+                  0.11600000411272049,
+                  0.21300001442432404,
+                  0.2460000067949295,
+                  0.2110000103712082,
+                  0.06300000101327896,
+                  -0.13100001215934753,
+                  -0.4020000100135803,
+                  -0.5380000472068787,
+                  -0.5900000333786011,
+                  -0.5470000505447388,
+                  -0.41200003027915955,
+                  -0.20400001108646393,
+                  0.03100000135600567,
+                  0.242000013589859,
+                  0.36500000953674316,
+                  0.38100001215934753,
+                  0.2800000011920929,
+                  0.10300000756978989
+                ],
+                "sea_ice_fraction": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "dimensions": {
+              "time": 24,
+              "lat": 63,
+              "lon": 45
+            },
+            "lon_lat_bounds": [
+              -92.0,
+              -88.47998046875,
+              61.52000045776367,
+              64.0
+            ],
+            "vector_basis": "geographic_east_north",
+            "mask_policy": "retain; never fill missing water with zero",
+            "time_units": "hours since 2000-01-01 00:00:00",
+            "time_zone_policy": "CF default zero offset; compared to UTC source records",
+            "ignored_global_time_origin": "2025-12-31 12:00:00",
+            "run_cycle_status": "annual_archive_per_frame_lineage_not_fully_verified",
+            "global_parent_sha256": null
+          },
+          {
+            "product": "ESPC-D-V02",
+            "source_url": "https://ncss.hycom.org/thredds/ncss/grid/ESPC-D-V02/ice/2025?var=ssu&var=ssv&var=sic&north=64.0&south=61.5&west=268&east=271.5&horizStride=1&time_start=2025-08-30T00%3A00%3A00Z&time_end=2025-08-30T03%3A00%3A00Z&timeStride=1&addLatLon=true&accept=netcdf4",
+            "source_kind": "official_NCSS_native_grid_subset",
+            "bytes": 95329,
+            "sha256": "a9925344bb3f2eaa4a24342adec50da9df3fb50cae6d5eff6dcf9a0305ea0016",
+            "headers": {
+              "Content-Type": "application/x-netcdf4",
+              "Last-Modified": null,
+              "Content-Disposition": "attachment; filename=ice_2025.nc4"
+            },
+            "local_path": "data/raw/historical/ASAR_B1_HudsonsBay_20250829/raw/hycom/ESPC-D-V02_surface_20250830.nc",
+            "valid_times_utc": [
+              "2025-08-30T00:00:00+00:00",
+              "2025-08-30T01:00:00+00:00",
+              "2025-08-30T02:00:00+00:00",
+              "2025-08-30T03:00:00+00:00"
+            ],
+            "native_variables": [
+              "ssu",
+              "ssv"
+            ],
+            "auxiliary": [
+              "sic"
+            ],
+            "units": "m/s",
+            "encoding": {
+              "ssu": {
+                "storage": "int16",
+                "scale_factor": 0.0010000000474974513,
+                "add_offset": 0.0,
+                "fill_value": -30000,
+                "unpacking_count": 1,
+                "mask_preserved": true
+              },
+              "ssv": {
+                "storage": "int16",
+                "scale_factor": 0.0010000000474974513,
+                "add_offset": 0.0,
+                "fill_value": -30000,
+                "unpacking_count": 1,
+                "mask_preserved": true
+              },
+              "sic": {
+                "storage": "int16",
+                "scale_factor": 9.999999747378752e-05,
+                "add_offset": 0.0,
+                "fill_value": -30000,
+                "unpacking_count": 1,
+                "mask_preserved": true
+              }
+            },
+            "statistics": {
+              "ssu": {
+                "total": 11340,
+                "valid": 9020,
+                "missing_or_nonfinite": 2320,
+                "min": -0.6200000047683716,
+                "max": 0.45900002121925354,
+                "mean": 0.11022494973746715,
+                "std": 0.1345427527606605
+              },
+              "ssv": {
+                "total": 11340,
+                "valid": 9020,
+                "missing_or_nonfinite": 2320,
+                "min": -1.284000039100647,
+                "max": 0.6450000405311584,
+                "mean": -0.14541974075027833,
+                "std": 0.1588519176253294
+              },
+              "sic": {
+                "total": 11340,
+                "valid": 9020,
+                "missing_or_nonfinite": 2320,
+                "min": 0.0,
+                "max": 0.0,
+                "mean": 0.0,
+                "std": 0.0
+              }
+            },
+            "points": {
+              "LKP": {
+                "bilinear_2x2_stencil_valid_all_times": true,
+                "nearest_lon_lat": [
+                  -90.56005859375,
+                  62.84000015258789
+                ],
+                "east_m_s": [
+                  0.14800000190734863,
+                  0.25300002098083496,
+                  0.31700000166893005,
+                  0.3230000138282776
+                ],
+                "north_m_s": [
+                  -0.09700000286102295,
+                  -0.24300001561641693,
+                  -0.36100003123283386,
+                  -0.41200003027915955
+                ],
+                "sea_ice_fraction": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              },
+              "CSP": {
+                "bilinear_2x2_stencil_valid_all_times": true,
+                "nearest_lon_lat": [
+                  -90.47998046875,
+                  62.79999923706055
+                ],
+                "east_m_s": [
+                  0.16500000655651093,
+                  0.2200000137090683,
+                  0.2290000170469284,
+                  0.20000000298023224
+                ],
+                "north_m_s": [
+                  -0.09100000560283661,
+                  -0.2770000100135803,
+                  -0.3970000147819519,
+                  -0.4140000343322754
+                ],
+                "sea_ice_fraction": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "dimensions": {
+              "time": 4,
+              "lat": 63,
+              "lon": 45
+            },
+            "lon_lat_bounds": [
+              -92.0,
+              -88.47998046875,
+              61.52000045776367,
+              64.0
+            ],
+            "vector_basis": "geographic_east_north",
+            "mask_policy": "retain; never fill missing water with zero",
+            "time_units": "hours since 2000-01-01 00:00:00",
+            "time_zone_policy": "CF default zero offset; compared to UTC source records",
+            "ignored_global_time_origin": "2025-12-31 12:00:00",
+            "run_cycle_status": "annual_archive_per_frame_lineage_not_fully_verified",
+            "global_parent_sha256": null
+          }
+        ],
+        "native_variable_names": [
+          "ssu",
+          "ssv"
+        ],
+        "auxiliary": [
+          "sic"
+        ],
+        "units": "m/s",
+        "vector_basis": "geographic_east_north",
+        "run_cycle_utc": null,
+        "run_cycle_status": "annual_archive_per_frame_lineage_not_fully_verified",
+        "delivery_kind": "official_NCSS_native_grid_subset",
+        "coverage": {
+          "first_utc": "2025-08-28T21:00:00+00:00",
+          "last_utc": "2025-08-30T03:00:00+00:00",
+          "time_count": 31,
+          "interval_seconds": 3600,
+          "required_window_covered": true
+        }
+      },
+      "package": {
+        "zip_sha256": "9d79685db24936d2e3906e50b05b89e6faea5907e8b651874ad5f0518887b2b6",
+        "sums_sha256": "fb04fcf592e16e4753ea6367e07e95f93b693983bfe69b078dcaf93a072f3156",
+        "verified_members": 39,
+        "files": {
+          "README_给本地Codex.md": "240746e54834f20050fc8419e447df2e29fd661a543a67be9798a5cd6a87a5a7",
+          "evidence/gfs.20250828.t18z.f003.idx": "5ca1b4caa9bf325387a05935ffeff57c6a35ac0cc12279b52e2d429eaf299bc5",
+          "evidence/gfs.20250828.t18z.f006.idx": "b1cd816f32205ccfac1c0b4bafeda9a4e5dce66601e65e13bce36edc15281730",
+          "evidence/gfs.20250828.t18z.f009.idx": "91d5a8815297dbab5186d790417866b92234fe32bde74bc361d1a178a05520d0",
+          "evidence/gfs.20250828.t18z.f012.idx": "f15282eeff150939ecd25659b633cd1b6573e8efedde749abfb9e0dab16d5777",
+          "evidence/gfs.20250828.t18z.f015.idx": "ca9136c749c0f96c7b54795b27ca9c9c49089c8a5f9127f0af0a611e26aa66bb",
+          "evidence/gfs.20250828.t18z.f018.idx": "4eee8a8db1f34d3923eff8ac1f6e2465035e0a285ccb6fedaf16c8a1e5a32a2b",
+          "evidence/gfs.20250828.t18z.f021.idx": "f9a1447104be548e5a99afe629726ab84ebec5cd4e81e7a8b7b6761399bd7aa4",
+          "evidence/gfs.20250828.t18z.f024.idx": "fe8244c18dadc37fb70444b6bffca04ea15be87b6a613a2fa4f2d08abcb81187",
+          "evidence/gfs.20250828.t18z.f027.idx": "6aea606109721a9d25f5ffcc9afdbcd22c5bbf6e7d8ca4334eccbc411e5a61c2",
+          "evidence/gfs.20250828.t18z.f030.idx": "7efd750f8dd867d07de902048f82c0f2d44d6c6b28705d4f4b6bb9209b26bad7",
+          "evidence/gfs.20250828.t18z.f033.idx": "835ed33bb96cd814097ca9e7ae8a8fe18e4a5d3cc708f36fe5aae19a1744ce4e",
+          "evidence/hycom_ice_2025_dataset.xml": "5cc34995dc59b81fcaa9893dcd929fe07d6217c5ce47bd3c07fa8b14373e049f",
+          "evidence/hycom_native_file_candidates.json": "b3c4040575e404bd102cc5eefff2526ca23d43f2362b0eadedd3e5c013ba65b1",
+          "evidence/hycom_representative_20250828T21.das": "d4fd617e2e2ea1b96efddcadbf2c4247f38a39d6ec1372df420abb30ce16c7a0",
+          "evidence/stage7_scenarios.yaml": "40311df54d7e43dcebdb2e618ebcb81a86add4d83db7a8ac925253ff73f391d6",
+          "historical_sources.json": "effb8fbab6fd41d452d9b3ed731b8e943b27aec58e7ba97610ea55e2010956a1",
+          "hycom_downloads.json": "b834eb193a3dd22bb7db0a5828841ab189058be566d02de40f41ab4f5c32d23e",
+          "noaa_downloads.json": "f43c5af8620bea6486bca7c3072e4e6d4065c9d7bc9440745fe0e33b621e0a5b",
+          "raw/hycom/ESPC-D-V02_surface_20250828.nc": "c6abc95e224d20d0823b1171e831dc92fed4c9f7b95eca3aa8fbf0544c6afcaa",
+          "raw/hycom/ESPC-D-V02_surface_20250829.nc": "764ba5e77d97a25836d386d351131353e0c76f587054d99370417a2a68113e31",
+          "raw/hycom/ESPC-D-V02_surface_20250830.nc": "a9925344bb3f2eaa4a24342adec50da9df3fb50cae6d5eff6dcf9a0305ea0016",
+          "raw/wind/gfs.20250828.t18z.f003.10m_uv.grib2": "a91838d9f73b5e4752302bbdff48b9c9c360951bfa8519152deca6c27091327b",
+          "raw/wind/gfs.20250828.t18z.f006.10m_uv.grib2": "239e8e88c98111c56635e7d4138cbb09a87ca8c824c3ff83ee24cba5dc24414f",
+          "raw/wind/gfs.20250828.t18z.f009.10m_uv.grib2": "b3a133eff053796c6233f1df0c5a80338f1582d1106189a0f4dbedc39bffbfe4",
+          "raw/wind/gfs.20250828.t18z.f012.10m_uv.grib2": "28d442ecd22295a816f7f4c3d3a6d34f8198004c5287d717407e468ef2b61866",
+          "raw/wind/gfs.20250828.t18z.f015.10m_uv.grib2": "2347f4714d124e4280ae637aedbeb2bd1021102fd79540daf757b501540ec7a0",
+          "raw/wind/gfs.20250828.t18z.f018.10m_uv.grib2": "8287bccb3f56970926881678ebe62630f4bf2534e7e3a371f9a24b59ad71314e",
+          "raw/wind/gfs.20250828.t18z.f021.10m_uv.grib2": "b0249b33322313679480f2aa64e0b0a4d798e2c4eacd8446bab6284504a54be3",
+          "raw/wind/gfs.20250828.t18z.f024.10m_uv.grib2": "f0edfe056772055be127c99bfee1032a75048b087d5b4dcb76b33d72631f4664",
+          "raw/wind/gfs.20250828.t18z.f027.10m_uv.grib2": "8efac42b7ecdc199407ba147120e9582c857bd38634e60ea284b09026fc6a774",
+          "raw/wind/gfs.20250828.t18z.f030.10m_uv.grib2": "08919407eeddf932320ca12d77d18df70a3061c38e666f3a070f609fdf41a0d4",
+          "raw/wind/gfs.20250828.t18z.f033.10m_uv.grib2": "94ae1a92c6f5366bf2ddc040007ccf9663b82dfdeaac43f3973ed3cdcf0c0708",
+          "requirements_validation.txt": "8976420e7e81ba75763ae24b6c551941fe37b4f88b2a8f32c14a6145b355be15",
+          "scripts/fetch_noaa.py": "2df7ca1369f43adf33fa32273a76ed88a1199912699f3bba9e7b7577b21eaf75",
+          "scripts/redownload_hycom.py": "809357356b78e06e81aaa5b598f7347629437e8998c5ec3f12617357e7cade07",
+          "scripts/validate_package.py": "66e2c4bfb22a857519c6cee28b318b81339209e33686f550d17dced373d5e313",
+          "scripts/verify_hashes.py": "0cf27656e4b9701f69cac3c81bd637443aea9dad9f593972b9bda6513a1ac1aa",
+          "validation_download_environment.json": "6e993a6e9eeab6d82abdd54c12bd0ccf66b0ed8f81d6f1a1464c0287801717a2"
+        }
+      },
+      "pair_status": "verified",
+      "verification_scope": "B1_delivered_files_local",
+      "forcing_kind": "historical_real",
+      "B2_completed": false,
+      "B3_completed": false,
+      "paper_cycles_verified": false,
+      "real_time_information_constraint": "not_certified",
+      "purpose": "retrospective_environment_reconstruction"
+    }
+  ],
+  "base_manifest": "data/manifests/historical_sources.json",
+  "base_manifest_sha256": "fa6f8c839bf894a3654a74c28e347f598b413e4ae0484bd7d090b718a43fc400"
+}

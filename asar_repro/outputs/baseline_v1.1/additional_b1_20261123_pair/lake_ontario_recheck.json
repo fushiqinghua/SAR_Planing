@@ -1,0 +1,1101 @@
+{
+  "package": {
+    "zip_sha256": "72f7f4473fa81b15de09c1316d41f3b6596471a36c15e4539717ce1f5db0ae78",
+    "sums_sha256": "8ba23e4e7e3d81a0d048ab11d2efa430aa61a0042e594c5271c3203c631c7bc8",
+    "verified_members": 26,
+    "files": {
+      "README_给本地Codex.md": "1f02f6b443191cd595d0b3838dcf94d6340d30d785f3ed9f4788d8d5ff604f04",
+      "evidence/hrrr.20250826.t13z.wrfsfcf00.grib2.idx": "0efc6ced30ed72524ac7dda7cf40fb3f9ce5161a629e2921d582305c3c8e71c3",
+      "evidence/hrrr.20250826.t14z.wrfsfcf00.grib2.idx": "347cdda8e40cce4f1e731df887f043cb570fe017f617388608d248a1d55539f4",
+      "evidence/hrrr.20250826.t15z.wrfsfcf00.grib2.idx": "56153e6b14203cc074519ded1ed06ab78d2824224fc48b1ce710b3a93288c870",
+      "evidence/hrrr.20250826.t16z.wrfsfcf00.grib2.idx": "3487b1c93a412bbe8a8c5a85467b19d3d12c46c22aab7ae31baa70242273b169",
+      "evidence/hrrr.20250826.t17z.wrfsfcf00.grib2.idx": "26cd7ff64877f4c6f474d76766910bebea536effbf1fb22c0dd614f7afdc5908",
+      "evidence/loofs_s3_listing.xml": "5cd2e52e83cf9eef33745f5f4598b8cf669830fb2e64924aabb7ec8fed202291",
+      "evidence_stage7_scenarios.yaml": "40311df54d7e43dcebdb2e618ebcb81a86add4d83db7a8ac925253ff73f391d6",
+      "historical_sources.json": "d1b2de807564f58f6ad716de6f8ee358cb0512c14674d40a596d13b7cd8bbaa1",
+      "raw/hrrr/hrrr.20250826.t13z.f00.10m_uv.grib2": "d23da8d2684adeb56f7b205d84135aecce0a7fbacbe50d94eca933831a524419",
+      "raw/hrrr/hrrr.20250826.t14z.f00.10m_uv.grib2": "e93eb9ebf9995368d535885e97c8442e50630b25e247e6efb938bb02b3ec06e4",
+      "raw/hrrr/hrrr.20250826.t15z.f00.10m_uv.grib2": "644b9d28c24f01aeebc7fb75bcb7cb1468aece6068de5d4c37667e63d424130c",
+      "raw/hrrr/hrrr.20250826.t16z.f00.10m_uv.grib2": "46256f2a7357568baa37e1193120521f3cda5706549e69023d5f274621108654",
+      "raw/hrrr/hrrr.20250826.t17z.f00.10m_uv.grib2": "71beb93fd7c77e25ce6f3a1d75d10198e703b7b436640c0909cf0d51c61cf447",
+      "raw/loofs/loofs.t18z.20250826.fields.n001.nc": "7269134c0240c7f00eeca6e9e6bc39dc40ae49032004f8561c239510fcd7090f",
+      "raw/loofs/loofs.t18z.20250826.fields.n002.nc": "5092a254127774814da296dcc0edb302ca3320c5a8e2bd6f951d09ea25e75484",
+      "raw/loofs/loofs.t18z.20250826.fields.n003.nc": "ec3918e3251852e1646373b0aaa3e29f75232333879dfabcf37a547a3ffef4f3",
+      "raw/loofs/loofs.t18z.20250826.fields.n004.nc": "e16e82ce3149104f6f8d8e2d7ece55de11d1c7a7b1f36c2a9fd20b4714bac8c4",
+      "raw/loofs/loofs.t18z.20250826.fields.n005.nc": "aa575cf91f8ecb84e003389204cae11846fc9a22ac754b2817a4ccb367ee0682",
+      "requirements_validation.txt": "62b60455360e02703a749ddcfe394f880f316f2d450069cdc90b3c76b45c70ee",
+      "scripts/download_lake.py": "92117d5bf18b2d80256dfa72b3e2cd2492d598fa67e3749187f862b3acae896b",
+      "scripts/validate_b1.py": "7dd13bbb3d7e48f359d7f12593f26e88a0d6eb142f79e450b2a56844cc54714a",
+      "scripts/verify_hashes.py": "0cf27656e4b9701f69cac3c81bd637443aea9dad9f593972b9bda6513a1ac1aa",
+      "source_downloads.json": "c77db5755925cac97fc54d9ff5550cb70636e6e9545da6066e18bc8c55be43a6",
+      "validation_download_environment.json": "9a6c660b6be4ecb3d4ec2e4ebd986e02e8a9680ecff7b7996a31a4c4a268d810",
+      "其他场景来源核查.md": "7a8428459d45ed036b26b23ceccde9129033b67ea41861cc623dfe0bff9b44ce"
+    }
+  },
+  "status": "verified_B1_local",
+  "scenario": "lake_ontario",
+  "verified_at_utc": "2026-11-23T05:16:18.747404+00:00",
+  "requested_window_utc": [
+    "2025-08-26T14:45:00.000Z",
+    "2025-08-26T15:52:33.740Z"
+  ],
+  "valid_hours_utc": {
+    "wind": [
+      "2025-08-26T13:00:00+00:00",
+      "2025-08-26T14:00:00+00:00",
+      "2025-08-26T15:00:00+00:00",
+      "2025-08-26T16:00:00+00:00",
+      "2025-08-26T17:00:00+00:00"
+    ],
+    "current": [
+      "2025-08-26T13:00:00+00:00",
+      "2025-08-26T14:00:00+00:00",
+      "2025-08-26T15:00:00+00:00",
+      "2025-08-26T16:00:00+00:00",
+      "2025-08-26T17:00:00+00:00"
+    ]
+  },
+  "files": {
+    "wind": [
+      {
+        "source": {
+          "product": "HRRR",
+          "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t13z.wrfsfcf00.grib2",
+          "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t13z.wrfsfcf00.grib2.idx",
+          "local_path": "raw/hrrr/hrrr.20250826.t13z.f00.10m_uv.grib2",
+          "bytes": 4763230,
+          "sha256": "d23da8d2684adeb56f7b205d84135aecce0a7fbacbe50d94eca933831a524419",
+          "source_kind": "byte_exact_selected_original_grib_messages",
+          "run_cycle_utc": "2025-08-26T13:00:00Z",
+          "forecast_or_analysis": "analysis_f00",
+          "byte_ranges": [
+            {
+              "variable": "UGRD",
+              "level": "10 m above ground",
+              "start": 42197515,
+              "end_inclusive": 44579129,
+              "sha256": "3ee355185cb5794ef35174a030ff4d025155c3f92f0fd3f31b52866ca53c6bef",
+              "index_line": "77:42197515:d=2025082613:UGRD:10 m above ground:anl:",
+              "response": {
+                "http_status": 206,
+                "etag": "\"50783850e0d96efe0507cb26bb88c732\"",
+                "content_range": "bytes 42197515-44579129/141292273",
+                "last_modified": "Tue, 26 Aug 2025 13:51:07 GMT"
+              }
+            },
+            {
+              "variable": "VGRD",
+              "level": "10 m above ground",
+              "start": 44579130,
+              "end_inclusive": 46960744,
+              "sha256": "2a932dfa433967877cf1c93411ae80830c59e736946c27ab72e1f52577f8c734",
+              "index_line": "78:44579130:d=2025082613:VGRD:10 m above ground:anl:",
+              "response": {
+                "http_status": 206,
+                "etag": "\"50783850e0d96efe0507cb26bb88c732\"",
+                "content_range": "bytes 44579130-46960744/141292273",
+                "last_modified": "Tue, 26 Aug 2025 13:51:07 GMT"
+              }
+            }
+          ]
+        },
+        "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t13z.f00.10m_uv.grib2",
+        "valid_utc": "2025-08-26T13:00:00+00:00",
+        "grid": {
+          "Nx": 1799,
+          "Ny": 1059,
+          "grid_type": "Lambert conformal",
+          "radius_m": 6371229,
+          "latitude_origin": 38.5,
+          "central_longitude": 262.5,
+          "standard_parallels": [
+            38.5,
+            38.5
+          ],
+          "first_lon_lat": [
+            237.280472,
+            21.138123
+          ],
+          "spacing_m": [
+            3000.0,
+            3000.0
+          ],
+          "uvRelativeToGrid": 1,
+          "scan_mode": 64,
+          "lon_lat_bounds": [
+            -134.09547973426314,
+            -60.91719277183784,
+            21.138123000000004,
+            52.61565330680793
+          ]
+        },
+        "units": "m/s",
+        "components": {
+          "UGRD": {
+            "statistics": {
+              "count": 1905141,
+              "min": -20.24506187438965,
+              "max": 13.004938125610352,
+              "mean": 0.027898270030108422,
+              "std": 2.5272458245307523,
+              "missing_count": 0
+            },
+            "points": {
+              "LKP": {
+                "flat_index": 1449650,
+                "grid_relative_m_s": 3.6924381256103516
+              },
+              "CSP": {
+                "flat_index": 1449650,
+                "grid_relative_m_s": 3.6924381256103516
+              }
+            }
+          },
+          "VGRD": {
+            "statistics": {
+              "count": 1905141,
+              "min": -12.615965843200684,
+              "max": 20.071534156799316,
+              "mean": -0.3789374880815612,
+              "std": 3.350942754642726,
+              "missing_count": 0
+            },
+            "points": {
+              "LKP": {
+                "flat_index": 1449650,
+                "grid_relative_m_s": 1.7590341567993164
+              },
+              "CSP": {
+                "flat_index": 1449650,
+                "grid_relative_m_s": 1.7590341567993164
+              }
+            }
+          }
+        },
+        "sites_inside_grid": 291
+      },
+      {
+        "source": {
+          "product": "HRRR",
+          "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t14z.wrfsfcf00.grib2",
+          "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t14z.wrfsfcf00.grib2.idx",
+          "local_path": "raw/hrrr/hrrr.20250826.t14z.f00.10m_uv.grib2",
+          "bytes": 4286944,
+          "sha256": "e93eb9ebf9995368d535885e97c8442e50630b25e247e6efb938bb02b3ec06e4",
+          "source_kind": "byte_exact_selected_original_grib_messages",
+          "run_cycle_utc": "2025-08-26T14:00:00Z",
+          "forecast_or_analysis": "analysis_f00",
+          "byte_ranges": [
+            {
+              "variable": "UGRD",
+              "level": "10 m above ground",
+              "start": 42140365,
+              "end_inclusive": 44283836,
+              "sha256": "01d31873869925135772c9800281c5652c27819e78ea8dd1b3c97b0be24e14c7",
+              "index_line": "77:42140365:d=2025082614:UGRD:10 m above ground:anl:",
+              "response": {
+                "http_status": 206,
+                "etag": "\"43a0df77f63343a5929e94ec78b7b1ac\"",
+                "content_range": "bytes 42140365-44283836/144085737",
+                "last_modified": "Tue, 26 Aug 2025 14:52:15 GMT"
+              }
+            },
+            {
+              "variable": "VGRD",
+              "level": "10 m above ground",
+              "start": 44283837,
+              "end_inclusive": 46427308,
+              "sha256": "a902ca85ae2e39a0f89d68be05672a996f3c57c720592d28c5ae082239f769fa",
+              "index_line": "78:44283837:d=2025082614:VGRD:10 m above ground:anl:",
+              "response": {
+                "http_status": 206,
+                "etag": "\"43a0df77f63343a5929e94ec78b7b1ac\"",
+                "content_range": "bytes 44283837-46427308/144085737",
+                "last_modified": "Tue, 26 Aug 2025 14:52:15 GMT"
+              }
+            }
+          ]
+        },
+        "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t14z.f00.10m_uv.grib2",
+        "valid_utc": "2025-08-26T14:00:00+00:00",
+        "grid": {
+          "Nx": 1799,
+          "Ny": 1059,
+          "grid_type": "Lambert conformal",
+          "radius_m": 6371229,
+          "latitude_origin": 38.5,
+          "central_longitude": 262.5,
+          "standard_parallels": [
+            38.5,
+            38.5
+          ],
+          "first_lon_lat": [
+            237.280472,
+            21.138123
+          ],
+          "spacing_m": [
+            3000.0,
+            3000.0
+          ],
+          "uvRelativeToGrid": 1,
+          "scan_mode": 64,
+          "lon_lat_bounds": [
+            -134.09547973426314,
+            -60.91719277183784,
+            21.138123000000004,
+            52.61565330680793
+          ]
+        },
+        "units": "m/s",
+        "components": {
+          "UGRD": {
+            "statistics": {
+              "count": 1905141,
+              "min": -12.20484733581543,
+              "max": 11.98265266418457,
+              "mean": -0.010102990121331456,
+              "std": 2.652368796732809,
+              "missing_count": 0
+            },
+            "points": {
+              "LKP": {
+                "flat_index": 1449650,
+                "grid_relative_m_s": 5.17015266418457
+              },
+              "CSP": {
+                "flat_index": 1449650,
+                "grid_relative_m_s": 5.17015266418457
+              }
+            }
+          },
+          "VGRD": {
+            "statistics": {
+              "count": 1905141,
+              "min": -12.705482482910156,
+              "max": 12.294517517089844,
+              "mean": -0.3207525928390277,
+              "std": 3.3804347577364378,
+              "missing_count": 0
+            },
+            "points": {
+              "LKP": {
+                "flat_index": 1449650,
+                "grid_relative_m_s": 2.7945175170898438
+              },
+              "CSP": {
+                "flat_index": 1449650,
+                "grid_relative_m_s": 2.7945175170898438
+              }
+            }
+          }
+        },
+        "sites_inside_grid": 291
+      },
+      {
+        "source": {
+          "product": "HRRR",
+          "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t15z.wrfsfcf00.grib2",
+          "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t15z.wrfsfcf00.grib2.idx",
+          "local_path": "raw/hrrr/hrrr.20250826.t15z.f00.10m_uv.grib2",
+          "bytes": 4286944,
+          "sha256": "644b9d28c24f01aeebc7fb75bcb7cb1468aece6068de5d4c37667e63d424130c",
+          "source_kind": "byte_exact_selected_original_grib_messages",
+          "run_cycle_utc": "2025-08-26T15:00:00Z",
+          "forecast_or_analysis": "analysis_f00",
+          "byte_ranges": [
+            {
+              "variable": "UGRD",
+              "level": "10 m above ground",
+              "start": 42141801,
+              "end_inclusive": 44285272,
+              "sha256": "5259700b591bf8f744aac6da215654af5543c0f12ce79b9056a69d1b02489cbe",
+              "index_line": "77:42141801:d=2025082615:UGRD:10 m above ground:anl:",
+              "response": {
+                "http_status": 206,
+                "etag": "\"ab9827c2bfd3282ac71052091480ed35\"",
+                "content_range": "bytes 42141801-44285272/146411883",
+                "last_modified": "Tue, 26 Aug 2025 15:54:15 GMT"
+              }
+            },
+            {
+              "variable": "VGRD",
+              "level": "10 m above ground",
+              "start": 44285273,
+              "end_inclusive": 46428744,
+              "sha256": "b3a968f74a17cf183cb27f260a8c1f74a01c30844d92c0b08a57f97e9d6281e1",
+              "index_line": "78:44285273:d=2025082615:VGRD:10 m above ground:anl:",
+              "response": {
+                "http_status": 206,
+                "etag": "\"ab9827c2bfd3282ac71052091480ed35\"",
+                "content_range": "bytes 44285273-46428744/146411883",
+                "last_modified": "Tue, 26 Aug 2025 15:54:15 GMT"
+              }
+            }
+          ]
+        },
+        "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t15z.f00.10m_uv.grib2",
+        "valid_utc": "2025-08-26T15:00:00+00:00",
+        "grid": {
+          "Nx": 1799,
+          "Ny": 1059,
+          "grid_type": "Lambert conformal",
+          "radius_m": 6371229,
+          "latitude_origin": 38.5,
+          "central_longitude": 262.5,
+          "standard_parallels": [
+            38.5,
+            38.5
+          ],
+          "first_lon_lat": [
+            237.280472,
+            21.138123
+          ],
+          "spacing_m": [
+            3000.0,
+            3000.0
+          ],
+          "uvRelativeToGrid": 1,
+          "scan_mode": 64,
+          "lon_lat_bounds": [
+            -134.09547973426314,
+            -60.91719277183784,
+            21.138123000000004,
+            52.61565330680793
+          ]
+        },
+        "units": "m/s",
+        "components": {
+          "UGRD": {
+            "statistics": {
+              "count": 1905141,
+              "min": -12.347668647766113,
+              "max": 11.964831352233887,
+              "mean": -0.004419053641583915,
+              "std": 2.7475845670648646,
+              "missing_count": 0
+            },
+            "points": {
+              "LKP": {
+                "flat_index": 1449650,
+                "grid_relative_m_s": 4.777331352233887
+              },
+              "CSP": {
+                "flat_index": 1449650,
+                "grid_relative_m_s": 4.777331352233887
+              }
+            }
+          },
+          "VGRD": {
+            "statistics": {
+              "count": 1905141,
+              "min": -12.441560745239258,
+              "max": 12.370939254760742,
+              "mean": -0.21115847448869393,
+              "std": 3.417547248897862,
+              "missing_count": 0
+            },
+            "points": {
+              "LKP": {
+                "flat_index": 1449650,
+                "grid_relative_m_s": 2.558439254760742
+              },
+              "CSP": {
+                "flat_index": 1449650,
+                "grid_relative_m_s": 2.558439254760742
+              }
+            }
+          }
+        },
+        "sites_inside_grid": 291
+      },
+      {
+        "source": {
+          "product": "HRRR",
+          "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t16z.wrfsfcf00.grib2",
+          "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t16z.wrfsfcf00.grib2.idx",
+          "local_path": "raw/hrrr/hrrr.20250826.t16z.f00.10m_uv.grib2",
+          "bytes": 4286944,
+          "sha256": "46256f2a7357568baa37e1193120521f3cda5706549e69023d5f274621108654",
+          "source_kind": "byte_exact_selected_original_grib_messages",
+          "run_cycle_utc": "2025-08-26T16:00:00Z",
+          "forecast_or_analysis": "analysis_f00",
+          "byte_ranges": [
+            {
+              "variable": "UGRD",
+              "level": "10 m above ground",
+              "start": 42534354,
+              "end_inclusive": 44677825,
+              "sha256": "cf8be8957d2acf29dc2edf956044bab6708d2b9a0081bba19e01336ab7e1e816",
+              "index_line": "77:42534354:d=2025082616:UGRD:10 m above ground:anl:",
+              "response": {
+                "http_status": 206,
+                "etag": "\"0e923b05a9ce7d792af3af6670a1ee9d\"",
+                "content_range": "bytes 42534354-44677825/148265046",
+                "last_modified": "Tue, 26 Aug 2025 16:52:12 GMT"
+              }
+            },
+            {
+              "variable": "VGRD",
+              "level": "10 m above ground",
+              "start": 44677826,
+              "end_inclusive": 46821297,
+              "sha256": "e35ae666d4a5784ad00aa6d0321b6c3f8e7aad299c9cda13b4e154d612874faa",
+              "index_line": "78:44677826:d=2025082616:VGRD:10 m above ground:anl:",
+              "response": {
+                "http_status": 206,
+                "etag": "\"0e923b05a9ce7d792af3af6670a1ee9d\"",
+                "content_range": "bytes 44677826-46821297/148265046",
+                "last_modified": "Tue, 26 Aug 2025 16:52:12 GMT"
+              }
+            }
+          ]
+        },
+        "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t16z.f00.10m_uv.grib2",
+        "valid_utc": "2025-08-26T16:00:00+00:00",
+        "grid": {
+          "Nx": 1799,
+          "Ny": 1059,
+          "grid_type": "Lambert conformal",
+          "radius_m": 6371229,
+          "latitude_origin": 38.5,
+          "central_longitude": 262.5,
+          "standard_parallels": [
+            38.5,
+            38.5
+          ],
+          "first_lon_lat": [
+            237.280472,
+            21.138123
+          ],
+          "spacing_m": [
+            3000.0,
+            3000.0
+          ],
+          "uvRelativeToGrid": 1,
+          "scan_mode": 64,
+          "lon_lat_bounds": [
+            -134.09547973426314,
+            -60.91719277183784,
+            21.138123000000004,
+            52.61565330680793
+          ]
+        },
+        "units": "m/s",
+        "components": {
+          "UGRD": {
+            "statistics": {
+              "count": 1905141,
+              "min": -10.787864685058594,
+              "max": 13.087135314941406,
+              "mean": -0.004020503709286796,
+              "std": 2.815073899943415,
+              "missing_count": 0
+            },
+            "points": {
+              "LKP": {
+                "flat_index": 1449650,
+                "grid_relative_m_s": 4.149635314941406
+              },
+              "CSP": {
+                "flat_index": 1449650,
+                "grid_relative_m_s": 4.149635314941406
+              }
+            }
+          },
+          "VGRD": {
+            "statistics": {
+              "count": 1905141,
+              "min": -12.590848922729492,
+              "max": 17.596651077270508,
+              "mean": -0.11176961836304372,
+              "std": 3.4394405301471562,
+              "missing_count": 0
+            },
+            "points": {
+              "LKP": {
+                "flat_index": 1449650,
+                "grid_relative_m_s": 3.596651077270508
+              },
+              "CSP": {
+                "flat_index": 1449650,
+                "grid_relative_m_s": 3.596651077270508
+              }
+            }
+          }
+        },
+        "sites_inside_grid": 291
+      },
+      {
+        "source": {
+          "product": "HRRR",
+          "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t17z.wrfsfcf00.grib2",
+          "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t17z.wrfsfcf00.grib2.idx",
+          "local_path": "raw/hrrr/hrrr.20250826.t17z.f00.10m_uv.grib2",
+          "bytes": 4286944,
+          "sha256": "71beb93fd7c77e25ce6f3a1d75d10198e703b7b436640c0909cf0d51c61cf447",
+          "source_kind": "byte_exact_selected_original_grib_messages",
+          "run_cycle_utc": "2025-08-26T17:00:00Z",
+          "forecast_or_analysis": "analysis_f00",
+          "byte_ranges": [
+            {
+              "variable": "UGRD",
+              "level": "10 m above ground",
+              "start": 42473413,
+              "end_inclusive": 44616884,
+              "sha256": "c50059e7fcdf03975e515d5dbc502ad89e3907d7c2a8b2e0eadca21391d254ee",
+              "index_line": "77:42473413:d=2025082617:UGRD:10 m above ground:anl:",
+              "response": {
+                "http_status": 206,
+                "etag": "\"de73af5cae03b769b43f3b25b0f0a89f\"",
+                "content_range": "bytes 42473413-44616884/148192812",
+                "last_modified": "Tue, 26 Aug 2025 17:51:38 GMT"
+              }
+            },
+            {
+              "variable": "VGRD",
+              "level": "10 m above ground",
+              "start": 44616885,
+              "end_inclusive": 46760356,
+              "sha256": "1669bb2747d46323a95a0c88812b3e4d7d076c9f60b64108fa1df577af56fed7",
+              "index_line": "78:44616885:d=2025082617:VGRD:10 m above ground:anl:",
+              "response": {
+                "http_status": 206,
+                "etag": "\"de73af5cae03b769b43f3b25b0f0a89f\"",
+                "content_range": "bytes 44616885-46760356/148192812",
+                "last_modified": "Tue, 26 Aug 2025 17:51:38 GMT"
+              }
+            }
+          ]
+        },
+        "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t17z.f00.10m_uv.grib2",
+        "valid_utc": "2025-08-26T17:00:00+00:00",
+        "grid": {
+          "Nx": 1799,
+          "Ny": 1059,
+          "grid_type": "Lambert conformal",
+          "radius_m": 6371229,
+          "latitude_origin": 38.5,
+          "central_longitude": 262.5,
+          "standard_parallels": [
+            38.5,
+            38.5
+          ],
+          "first_lon_lat": [
+            237.280472,
+            21.138123
+          ],
+          "spacing_m": [
+            3000.0,
+            3000.0
+          ],
+          "uvRelativeToGrid": 1,
+          "scan_mode": 64,
+          "lon_lat_bounds": [
+            -134.09547973426314,
+            -60.91719277183784,
+            21.138123000000004,
+            52.61565330680793
+          ]
+        },
+        "units": "m/s",
+        "components": {
+          "UGRD": {
+            "statistics": {
+              "count": 1905141,
+              "min": -14.91613483428955,
+              "max": 13.95886516571045,
+              "mean": 0.043608466862437446,
+              "std": 2.839642185000508,
+              "missing_count": 0
+            },
+            "points": {
+              "LKP": {
+                "flat_index": 1449650,
+                "grid_relative_m_s": 4.646365165710449
+              },
+              "CSP": {
+                "flat_index": 1449650,
+                "grid_relative_m_s": 4.646365165710449
+              }
+            }
+          },
+          "VGRD": {
+            "statistics": {
+              "count": 1905141,
+              "min": -15.530492782592773,
+              "max": 16.219507217407227,
+              "mean": -0.03232381504653933,
+              "std": 3.4544779486015846,
+              "missing_count": 0
+            },
+            "points": {
+              "LKP": {
+                "flat_index": 1449650,
+                "grid_relative_m_s": 3.0320072174072266
+              },
+              "CSP": {
+                "flat_index": 1449650,
+                "grid_relative_m_s": 3.0320072174072266
+              }
+            }
+          }
+        },
+        "sites_inside_grid": 291
+      }
+    ],
+    "current": [
+      {
+        "source": {
+          "product": "LOOFS",
+          "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n001.nc",
+          "local_path": "raw/loofs/loofs.t18z.20250826.fields.n001.nc",
+          "bytes": 70159473,
+          "sha256": "7269134c0240c7f00eeca6e9e6bc39dc40ae49032004f8561c239510fcd7090f",
+          "source_kind": "complete_original_netcdf",
+          "run_cycle_utc": "2025-08-26T18:00:00Z",
+          "forecast_or_analysis": "nowcast",
+          "response": {
+            "http_status": 200,
+            "etag": "\"7f9e13523b4eaee27347f515bb6bb7fc-9\"",
+            "content_range": null,
+            "last_modified": "Tue, 26 Aug 2025 20:46:32 GMT"
+          }
+        },
+        "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n001.nc",
+        "valid_utc": "2025-08-26T13:00:00+00:00",
+        "model": "FVCOM_4.4.7",
+        "dimensions": {
+          "nele": 64453,
+          "node": 34395,
+          "siglay": 20,
+          "siglev": 21,
+          "three": 3,
+          "time": 1,
+          "DateStrLen": 26,
+          "maxnode": 11,
+          "maxelem": 9,
+          "four": 4
+        },
+        "projection": "proj=utm +zone=16 +datum=NAD83",
+        "units": "meters s-1",
+        "lon_lat_bounds": [
+          -79.80072021484375,
+          -76.05899047851562,
+          43.180450439453125,
+          44.22895431518555
+        ],
+        "top_sigma": -0.02500000037252903,
+        "components": {
+          "u": {
+            "standard_name": "eastward_sea_water_velocity",
+            "statistics": {
+              "count": 64453,
+              "min": -0.9476324915885925,
+              "max": 1.0998893976211548,
+              "mean": 0.09841752129982091,
+              "std": 0.12583724082048084,
+              "missing_count": 0
+            }
+          },
+          "v": {
+            "standard_name": "Northward_sea_water_velocity",
+            "statistics": {
+              "count": 64453,
+              "min": -1.037707805633545,
+              "max": 1.1364567279815674,
+              "mean": -0.008459856512088706,
+              "std": 0.09537492141677698,
+              "missing_count": 0
+            }
+          }
+        },
+        "points": {
+          "LKP": {
+            "face": 44948,
+            "wet": true,
+            "u_m_s": 0.25372686982154846,
+            "v_m_s": 0.0055353641510009766,
+            "top_center_depth_m": 0.45360079040528517
+          },
+          "CSP": {
+            "face": 44949,
+            "wet": true,
+            "u_m_s": 0.1908104121685028,
+            "v_m_s": 0.010419828817248344,
+            "top_center_depth_m": 0.44255931242147045
+          }
+        },
+        "grid_centres": {
+          "total": 289,
+          "wet": 221,
+          "outside_mesh": 68,
+          "dry": 0
+        }
+      },
+      {
+        "source": {
+          "product": "LOOFS",
+          "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n002.nc",
+          "local_path": "raw/loofs/loofs.t18z.20250826.fields.n002.nc",
+          "bytes": 70159473,
+          "sha256": "5092a254127774814da296dcc0edb302ca3320c5a8e2bd6f951d09ea25e75484",
+          "source_kind": "complete_original_netcdf",
+          "run_cycle_utc": "2025-08-26T18:00:00Z",
+          "forecast_or_analysis": "nowcast",
+          "response": {
+            "http_status": 200,
+            "etag": "\"00a1fb49c865d41e06071ecdd5335ae6-9\"",
+            "content_range": null,
+            "last_modified": "Tue, 26 Aug 2025 20:46:32 GMT"
+          }
+        },
+        "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n002.nc",
+        "valid_utc": "2025-08-26T14:00:00+00:00",
+        "model": "FVCOM_4.4.7",
+        "dimensions": {
+          "nele": 64453,
+          "node": 34395,
+          "siglay": 20,
+          "siglev": 21,
+          "three": 3,
+          "time": 1,
+          "DateStrLen": 26,
+          "maxnode": 11,
+          "maxelem": 9,
+          "four": 4
+        },
+        "projection": "proj=utm +zone=16 +datum=NAD83",
+        "units": "meters s-1",
+        "lon_lat_bounds": [
+          -79.80072021484375,
+          -76.05899047851562,
+          43.180450439453125,
+          44.22895431518555
+        ],
+        "top_sigma": -0.02500000037252903,
+        "components": {
+          "u": {
+            "standard_name": "eastward_sea_water_velocity",
+            "statistics": {
+              "count": 64453,
+              "min": -0.9526728391647339,
+              "max": 1.0903857946395874,
+              "mean": 0.09823055328351761,
+              "std": 0.12723724726885896,
+              "missing_count": 0
+            }
+          },
+          "v": {
+            "standard_name": "Northward_sea_water_velocity",
+            "statistics": {
+              "count": 64453,
+              "min": -1.026917576789856,
+              "max": 1.1346678733825684,
+              "mean": -0.013890318884121405,
+              "std": 0.09637019496363419,
+              "missing_count": 0
+            }
+          }
+        },
+        "points": {
+          "LKP": {
+            "face": 44948,
+            "wet": true,
+            "u_m_s": 0.2443476766347885,
+            "v_m_s": 0.008981051854789257,
+            "top_center_depth_m": 0.45391142200298235
+          },
+          "CSP": {
+            "face": 44949,
+            "wet": true,
+            "u_m_s": 0.19446304440498352,
+            "v_m_s": 0.011069354601204395,
+            "top_center_depth_m": 0.4428728795479666
+          }
+        },
+        "grid_centres": {
+          "total": 289,
+          "wet": 221,
+          "outside_mesh": 68,
+          "dry": 0
+        }
+      },
+      {
+        "source": {
+          "product": "LOOFS",
+          "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n003.nc",
+          "local_path": "raw/loofs/loofs.t18z.20250826.fields.n003.nc",
+          "bytes": 70159473,
+          "sha256": "ec3918e3251852e1646373b0aaa3e29f75232333879dfabcf37a547a3ffef4f3",
+          "source_kind": "complete_original_netcdf",
+          "run_cycle_utc": "2025-08-26T18:00:00Z",
+          "forecast_or_analysis": "nowcast",
+          "response": {
+            "cache_reused": true
+          }
+        },
+        "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n003.nc",
+        "valid_utc": "2025-08-26T15:00:00+00:00",
+        "model": "FVCOM_4.4.7",
+        "dimensions": {
+          "nele": 64453,
+          "node": 34395,
+          "siglay": 20,
+          "siglev": 21,
+          "three": 3,
+          "time": 1,
+          "DateStrLen": 26,
+          "maxnode": 11,
+          "maxelem": 9,
+          "four": 4
+        },
+        "projection": "proj=utm +zone=16 +datum=NAD83",
+        "units": "meters s-1",
+        "lon_lat_bounds": [
+          -79.80072021484375,
+          -76.05899047851562,
+          43.180450439453125,
+          44.22895431518555
+        ],
+        "top_sigma": -0.02500000037252903,
+        "components": {
+          "u": {
+            "standard_name": "eastward_sea_water_velocity",
+            "statistics": {
+              "count": 64453,
+              "min": -0.9492155313491821,
+              "max": 1.0915110111236572,
+              "mean": 0.09852920997751725,
+              "std": 0.1304578989058067,
+              "missing_count": 0
+            }
+          },
+          "v": {
+            "standard_name": "Northward_sea_water_velocity",
+            "statistics": {
+              "count": 64453,
+              "min": -1.0222753286361694,
+              "max": 1.1369404792785645,
+              "mean": -0.01923733876006734,
+              "std": 0.09770675281326698,
+              "missing_count": 0
+            }
+          }
+        },
+        "points": {
+          "LKP": {
+            "face": 44948,
+            "wet": true,
+            "u_m_s": 0.24291305243968964,
+            "v_m_s": 0.012337679043412209,
+            "top_center_depth_m": 0.45259071617211966
+          },
+          "CSP": {
+            "face": 44949,
+            "wet": true,
+            "u_m_s": 0.2014521211385727,
+            "v_m_s": 0.013134710490703583,
+            "top_center_depth_m": 0.4415517033371086
+          }
+        },
+        "grid_centres": {
+          "total": 289,
+          "wet": 221,
+          "outside_mesh": 68,
+          "dry": 0
+        }
+      },
+      {
+        "source": {
+          "product": "LOOFS",
+          "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n004.nc",
+          "local_path": "raw/loofs/loofs.t18z.20250826.fields.n004.nc",
+          "bytes": 70159473,
+          "sha256": "e16e82ce3149104f6f8d8e2d7ece55de11d1c7a7b1f36c2a9fd20b4714bac8c4",
+          "source_kind": "complete_original_netcdf",
+          "run_cycle_utc": "2025-08-26T18:00:00Z",
+          "forecast_or_analysis": "nowcast",
+          "response": {
+            "http_status": 200,
+            "etag": "\"319adf6d64e7d518ca2894eb05cf60d7-9\"",
+            "content_range": null,
+            "last_modified": "Tue, 26 Aug 2025 20:46:32 GMT"
+          }
+        },
+        "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n004.nc",
+        "valid_utc": "2025-08-26T16:00:00+00:00",
+        "model": "FVCOM_4.4.7",
+        "dimensions": {
+          "nele": 64453,
+          "node": 34395,
+          "siglay": 20,
+          "siglev": 21,
+          "three": 3,
+          "time": 1,
+          "DateStrLen": 26,
+          "maxnode": 11,
+          "maxelem": 9,
+          "four": 4
+        },
+        "projection": "proj=utm +zone=16 +datum=NAD83",
+        "units": "meters s-1",
+        "lon_lat_bounds": [
+          -79.80072021484375,
+          -76.05899047851562,
+          43.180450439453125,
+          44.22895431518555
+        ],
+        "top_sigma": -0.02500000037252903,
+        "components": {
+          "u": {
+            "standard_name": "eastward_sea_water_velocity",
+            "statistics": {
+              "count": 64453,
+              "min": -0.9413449764251709,
+              "max": 1.0860772132873535,
+              "mean": 0.10022374908449166,
+              "std": 0.1342824350563596,
+              "missing_count": 0
+            }
+          },
+          "v": {
+            "standard_name": "Northward_sea_water_velocity",
+            "statistics": {
+              "count": 64453,
+              "min": -1.0175803899765015,
+              "max": 1.126898169517517,
+              "mean": -0.02263767528122557,
+              "std": 0.09862218792059746,
+              "missing_count": 0
+            }
+          }
+        },
+        "points": {
+          "LKP": {
+            "face": 44948,
+            "wet": true,
+            "u_m_s": 0.2574867308139801,
+            "v_m_s": 0.013083918020129204,
+            "top_center_depth_m": 0.4531366887659334
+          },
+          "CSP": {
+            "face": 44949,
+            "wet": true,
+            "u_m_s": 0.21584579348564148,
+            "v_m_s": 0.012626049108803272,
+            "top_center_depth_m": 0.4421007420932363
+          }
+        },
+        "grid_centres": {
+          "total": 289,
+          "wet": 221,
+          "outside_mesh": 68,
+          "dry": 0
+        }
+      },
+      {
+        "source": {
+          "product": "LOOFS",
+          "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n005.nc",
+          "local_path": "raw/loofs/loofs.t18z.20250826.fields.n005.nc",
+          "bytes": 70159473,
+          "sha256": "aa575cf91f8ecb84e003389204cae11846fc9a22ac754b2817a4ccb367ee0682",
+          "source_kind": "complete_original_netcdf",
+          "run_cycle_utc": "2025-08-26T18:00:00Z",
+          "forecast_or_analysis": "nowcast",
+          "response": {
+            "http_status": 200,
+            "etag": "\"1cb9941135a33f76b0a719400cd991ee-9\"",
+            "content_range": null,
+            "last_modified": "Tue, 26 Aug 2025 20:46:32 GMT"
+          }
+        },
+        "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n005.nc",
+        "valid_utc": "2025-08-26T17:00:00+00:00",
+        "model": "FVCOM_4.4.7",
+        "dimensions": {
+          "nele": 64453,
+          "node": 34395,
+          "siglay": 20,
+          "siglev": 21,
+          "three": 3,
+          "time": 1,
+          "DateStrLen": 26,
+          "maxnode": 11,
+          "maxelem": 9,
+          "four": 4
+        },
+        "projection": "proj=utm +zone=16 +datum=NAD83",
+        "units": "meters s-1",
+        "lon_lat_bounds": [
+          -79.80072021484375,
+          -76.05899047851562,
+          43.180450439453125,
+          44.22895431518555
+        ],
+        "top_sigma": -0.02500000037252903,
+        "components": {
+          "u": {
+            "standard_name": "eastward_sea_water_velocity",
+            "statistics": {
+              "count": 64453,
+              "min": -0.9458081722259521,
+              "max": 1.0786278247833252,
+              "mean": 0.10319710733733661,
+              "std": 0.1337460210894466,
+              "missing_count": 0
+            }
+          },
+          "v": {
+            "standard_name": "Northward_sea_water_velocity",
+            "statistics": {
+              "count": 64453,
+              "min": -1.009087085723877,
+              "max": 1.1273051500320435,
+              "mean": -0.02352608233282201,
+              "std": 0.0997072084188566,
+              "missing_count": 0
+            }
+          }
+        },
+        "points": {
+          "LKP": {
+            "face": 44948,
+            "wet": true,
+            "u_m_s": 0.25630292296409607,
+            "v_m_s": 0.010824218392372131,
+            "top_center_depth_m": 0.4533782455331818
+          },
+          "CSP": {
+            "face": 44949,
+            "wet": true,
+            "u_m_s": 0.20794843137264252,
+            "v_m_s": 0.009390376508235931,
+            "top_center_depth_m": 0.4423425636044526
+          }
+        },
+        "grid_centres": {
+          "total": 289,
+          "wet": 221,
+          "outside_mesh": 68,
+          "dry": 0
+        }
+      }
+    ]
+  },
+  "checksums_verified": 26,
+  "sums_sha256": "8ba23e4e7e3d81a0d048ab11d2efa430aa61a0042e594c5271c3203c631c7bc8",
+  "source_acquired_utc": "2026-11-23T02:42:32.980707+00:00",
+  "mission_config_sha256": "40311df54d7e43dcebdb2e618ebcb81a86add4d83db7a8ac925253ff73f391d6",
+  "interpreter": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+  "versions": {
+    "numpy": "2.4.6",
+    "netCDF4": "1.7.5"
+  },
+  "wind_decoder": "GRIB2 simple packing 5.0 (NumPy); grid projection via pyproj",
+  "comparison": "local wind statistics and LKP/CSP wind and current samples agree with delivered reference",
+  "forcing_kind": "historical_real",
+  "purpose": "retrospective_environment_reconstruction",
+  "paper_cycles_verified": false,
+  "available_at_cst": false
+}

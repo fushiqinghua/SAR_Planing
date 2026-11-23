@@ -1,0 +1,23 @@
+{
+  "stage": "B1_additional_data",
+  "status": "passed",
+  "source_commit": "14878025827bf3341cf6702de96049d46d440a2d",
+  "scenarios": [
+    "arctic_ocean"
+  ],
+  "existing_lake": "reverified identical delivered files; existing B3/B7 unchanged",
+  "B2_completed": false,
+  "B3_completed": false,
+  "frozen_tracked_files": 512,
+  "old_b7_files": 426,
+  "frozen_unchanged": true,
+  "interpreter": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+  "versions": {
+    "numpy": "2.4.6",
+    "netCDF4": "1.7.5",
+    "pyproj": "3.7.2",
+    "opendrift": "1.14.12"
+  },
+  "decoder": "NumPy GRIB2 5.0/5.3, cross-checked against delivered ecCodes records; no installs",
+  "elapsed_s": 7.8561271000653505
+}

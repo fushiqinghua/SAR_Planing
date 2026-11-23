@@ -1,0 +1,7 @@
+{
+  "stage": "B1_additional_data",
+  "status": "blocked",
+  "source_commit": "14878025827bf3341cf6702de96049d46d440a2d",
+  "error": "point outside HYCOM subset",
+  "elapsed_s": 8.032967200037092
+}
