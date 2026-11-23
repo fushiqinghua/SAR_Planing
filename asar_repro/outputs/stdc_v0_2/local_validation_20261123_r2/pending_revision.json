@@ -1,0 +1,18 @@
+{
+  "status": "blocked",
+  "tests_started": false,
+  "read_access_approval_pending": true,
+  "source_sha256": {
+    "scripts/stdc_audit_contract.py": "98b387875745aa5b97acf51e42db531c31d34da1ff27f1a7a7bdfb94978b6782",
+    "scripts/stdc_validation_guards.py": "7cae9ff4807efdc69ad6fef10dbca1ee9d2b15b74147af5ab603226bcfd4cd8d",
+    "scripts/run_stdc_local_stage.py": "54deb8de3f56258d61892edae7677b1b4bac6a24576e6954638ea21c0f6d2d2c",
+    "tests/conftest.py": "9b7b1e1fa40432a7636cf7faad897af069298e18934309b9c07896220b70b204",
+    "tests/test_b4_artifacts.py": "667f4908f0f8b6fcf9e657871e8bfbe825dac871da7eca6857aaf304d6971bc3",
+    "tests/test_b6_comparison.py": "a452bbc4980e24340ab1570684ad1c72d48de1a2e5f1390a9d0b42666ab4ac82",
+    "tests/test_stdc_audit_contract.py": "c1fd0fd4ad37c803155aae50c26e2dd36f2cc1aa7d46eac18be8fbf873f99b71",
+    "tests/test_stdc_validation_guards.py": "6cd5e0a0754cefde1ebae01f1410f4a9e05c4c72f466830c7d6d903ba7f5f9f3"
+  },
+  "expected_new_tests": 28,
+  "expected_full_tests": 281,
+  "counts_executed_this_round": 0
+}

@@ -1,4 +1,4 @@
-"""Sequential local acceptance harness; never repair or ignore a failed stage.
+"""Sequential local acceptance harness; stop on every failed stage.
 
 The delivery is applied unchanged. Extra validation lives outside its algorithm.
 Run stages individually in ORDER so an assertion failure stops the entire sequence.
@@ -54,6 +54,10 @@ def preserved(preflight, patched):
     for name, expected in preflight['baseline_all_preserved'].items():
         require(sha(baseline/name)==expected, 'baseline file modified: '+name)
     for name, expected in preflight['baseline_tracked'].items():
+        if name in preflight.get('authorized_research_changes', {}):
+            require(sha(ROOT/name)==preflight['authorized_research_changes'][name],
+                    'research change differs from reviewed revision: '+name)
+            continue
         if patched and name=='src/asar_repro/heuristic.py':
             continue
         require(sha(ROOT/name)==expected, 'protected research copy modified: '+name)
@@ -62,22 +66,32 @@ def preserved(preflight, patched):
 
 
 def diff_snapshot(folder, tag):
-    (folder/(tag+'.git.diff')).write_bytes(git('diff','--binary'))
+    (folder/(tag+'.git.diff')).write_bytes(git('diff','HEAD','--binary'))
     (folder/(tag+'.git.status')).write_bytes(git('status','--short'))
-    paths=(*PAYLOAD, 'scripts/run_stdc_local_stage.py','scripts/stdc_validation_guards.py')
+    paths=(*PAYLOAD, 'src/asar_repro/heuristic.py', 'scripts/run_stdc_local_stage.py',
+           'scripts/stdc_validation_guards.py', 'scripts/stdc_audit_contract.py',
+           'tests/conftest.py','tests/test_stdc_audit_contract.py','tests/test_stdc_validation_guards.py',
+           'tests/test_b4_artifacts.py','tests/test_b6_comparison.py')
     save(folder/(tag+'.source_sha256.json'),{p:sha(ROOT/p) for p in paths if (ROOT/p).is_file()})
 
 
 def stage(stage, run):
     require(run.is_relative_to(ROOT/'outputs/stdc_v0_2'), 'outputs must stay under research output root')
     preflight=read(run/'00_preflight.json')
-    for previous in ORDER[:ORDER.index(stage)]:
+    order = ORDER
+    if preflight.get('authorized_resume'):
+        require(preflight['previous_attempt_status']=='blocked', 'retain original blocked status')
+        require(bool(preflight.get('user_authorization')), 'explicit resume authorization required')
+        order = ORDER[2:]
+        require(stage in order, 'patch already applied and frozen in prior attempt')
+    for previous in order[:order.index(stage)]:
         require(read(run/previous/'stage.json')['status']=='passed', 'prior stage not passed: '+previous)
     folder=run/stage
     require(not folder.exists(), 'refusing stage overwrite or automatic retry')
     folder.mkdir()
     record=dict(stage=stage,status='running',started_utc=datetime.now(timezone.utc).isoformat(),
-                source_commit=preflight['base_commit'],branch='stdc-research-v0.2',
+                source_commit=git('rev-parse','HEAD').decode().strip(),
+                baseline_commit=preflight['base_commit'],branch='stdc-research-v0.2',
                 interpreter=sys.executable,versions=preflight['versions'],test_total=None)
     seed=dict(dry_run=None,apply=None,new_tests=[5,7,11,13,93,12],
               full_tests='frozen test fixtures and explicit seeds; source hashes in preflight',
@@ -89,7 +103,9 @@ def stage(stage, run):
     commands={
         'dry_run':[str(patch_script),'--repo',str(ROOT),'--dry-run'],
         'apply':[str(patch_script),'--repo',str(ROOT)],
-        'new_tests':['-m','pytest','-x','-q','tests/test_stdc_heuristic.py','--junitxml',str(folder/'pytest.xml')],
+        'new_tests':['-m','pytest','-x','-q','tests/test_stdc_heuristic.py',
+                     'tests/test_stdc_audit_contract.py','tests/test_stdc_validation_guards.py',
+                     '--junitxml',str(folder/'pytest.xml')],
         'full_tests':['-m','pytest','-x','-q','--junitxml',str(folder/'pytest.xml')],
         'random_audit':['scripts/stdc_validation_guards.py','random_audit','--output-dir',str(folder)],
         'small_search':['scripts/stdc_validation_guards.py','small_search','--output-dir',str(folder)],
@@ -106,6 +122,11 @@ def stage(stage, run):
         with (folder/'stdout.txt').open('w',encoding='utf-8') as stdout, (folder/'stderr.txt').open('w',encoding='utf-8') as stderr:
             proc=subprocess.run(record['command'],cwd=ROOT,stdout=stdout,stderr=stderr,timeout=900)
         record['exit_code']=proc.returncode
+        if stage in ('new_tests','full_tests') and (folder/'pytest.xml').is_file():
+            suites=ET.parse(folder/'pytest.xml').getroot()
+            counts={k:sum(int(s.get(k,0)) for s in suites.iter('testsuite'))
+                    for k in ('tests','failures','errors','skipped')}
+            record['test_total']=counts['tests'];record['test_counts']=counts
         require(proc.returncode==0,'stage process failed; see stderr/stdout; STOP')
         if stage=='dry_run':
             spec=importlib.util.spec_from_file_location('delivered_apply',patch_script)
@@ -136,7 +157,8 @@ def stage(stage, run):
             counts={k:sum(int(s.get(k,0)) for s in suites.iter('testsuite')) for k in ('tests','failures','errors','skipped')}
             record['test_total']=counts['tests'];record['test_counts']=counts
             require(counts['failures']==counts['errors']==counts['skipped']==0,'failure/error/skip blocks acceptance')
-            require(counts['tests']==(19 if stage=='new_tests' else 272),'unexpected collection count')
+            expected=preflight.get('expected_test_counts',{'new_tests':19,'full_tests':272})[stage]
+            require(counts['tests']==expected,'unexpected collection count')
         else:
             record['guard_checks']=read(folder/'guard_summary.json')
             require(record['guard_checks']['status']=='passed','guard did not pass')
@@ -148,10 +170,10 @@ def stage(stage, run):
         record['wall_s']=perf_counter()-started
         diff_snapshot(folder,'after')
         save(folder/'stage.json',record)
-        known={name:read(run/name/'stage.json') for name in ORDER if (run/name/'stage.json').exists()}
+        known={name:read(run/name/'stage.json') for name in order if (run/name/'stage.json').exists()}
         save(run/'validation_summary.json',dict(status='blocked' if any(r['status']=='blocked' for r in known.values())
-             else ('passed' if len(known)==len(ORDER) else 'in_progress'),stages=known,
-             not_run=[name for name in ORDER if name not in known]))
+             else ('passed' if len(known)==len(order) else 'in_progress'),stages=known,
+             not_run=[name for name in order if name not in known]))
     print(json.dumps(dict(stage=stage,status=record['status'],exit_code=record.get('exit_code'),
                          tests=record.get('test_counts'),wall_s=record['wall_s'],error=record.get('error')),ensure_ascii=False),flush=True)
     return 0 if record['status']=='passed' else 2

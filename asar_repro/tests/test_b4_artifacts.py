@@ -59,12 +59,12 @@ def test_saved_b4_schema_and_counterexample_evidence():
             assert row["J"] == row["Pd_T"] == row["M_T"] == row["path"] == "null"
 
 
-def test_legacy_source_hashes_and_completion_denominator():
+def test_legacy_source_hashes_and_completion_denominator(archived_source_check):
     audit, rows = read("audit.json"), read("legacy_runs.json")
     for source in audit["legacy_sources"]:
         assert digest(ROOT / source["path"]) == source["sha256"]
     for source, expected in audit["code_sha256"].items():
-        assert digest(ROOT / source) == expected
+        archived_source_check(source, expected)
     assert len(rows) == 32
     stopped = [r for r in rows if r["result_class"] == "aborted_feasible_incumbent"]
     assert len(stopped) == 17

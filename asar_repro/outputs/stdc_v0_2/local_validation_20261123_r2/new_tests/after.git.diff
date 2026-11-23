@@ -1,0 +1,239 @@
+diff --git a/asar_repro/scripts/run_stdc_local_stage.py b/asar_repro/scripts/run_stdc_local_stage.py
+index f0259f1..77db7e8 100644
+--- a/asar_repro/scripts/run_stdc_local_stage.py
++++ b/asar_repro/scripts/run_stdc_local_stage.py
+@@ -1,4 +1,4 @@
+-"""Sequential local acceptance harness; never repair or ignore a failed stage.
++"""Sequential local acceptance harness; stop on every failed stage.
+ 
+ The delivery is applied unchanged. Extra validation lives outside its algorithm.
+ Run stages individually in ORDER so an assertion failure stops the entire sequence.
+@@ -54,6 +54,10 @@ def preserved(preflight, patched):
+     for name, expected in preflight['baseline_all_preserved'].items():
+         require(sha(baseline/name)==expected, 'baseline file modified: '+name)
+     for name, expected in preflight['baseline_tracked'].items():
++        if name in preflight.get('authorized_research_changes', {}):
++            require(sha(ROOT/name)==preflight['authorized_research_changes'][name],
++                    'research change differs from reviewed revision: '+name)
++            continue
+         if patched and name=='src/asar_repro/heuristic.py':
+             continue
+         require(sha(ROOT/name)==expected, 'protected research copy modified: '+name)
+@@ -62,22 +66,32 @@ def preserved(preflight, patched):
+ 
+ 
+ def diff_snapshot(folder, tag):
+-    (folder/(tag+'.git.diff')).write_bytes(git('diff','--binary'))
++    (folder/(tag+'.git.diff')).write_bytes(git('diff','HEAD','--binary'))
+     (folder/(tag+'.git.status')).write_bytes(git('status','--short'))
+-    paths=(*PAYLOAD, 'scripts/run_stdc_local_stage.py','scripts/stdc_validation_guards.py')
++    paths=(*PAYLOAD, 'src/asar_repro/heuristic.py', 'scripts/run_stdc_local_stage.py',
++           'scripts/stdc_validation_guards.py', 'scripts/stdc_audit_contract.py',
++           'tests/conftest.py','tests/test_stdc_audit_contract.py',
++           'tests/test_b4_artifacts.py','tests/test_b6_comparison.py')
+     save(folder/(tag+'.source_sha256.json'),{p:sha(ROOT/p) for p in paths if (ROOT/p).is_file()})
+ 
+ 
+ def stage(stage, run):
+     require(run.is_relative_to(ROOT/'outputs/stdc_v0_2'), 'outputs must stay under research output root')
+     preflight=read(run/'00_preflight.json')
+-    for previous in ORDER[:ORDER.index(stage)]:
++    order = ORDER
++    if preflight.get('authorized_resume'):
++        require(preflight['previous_attempt_status']=='blocked', 'retain original blocked status')
++        require(bool(preflight.get('user_authorization')), 'explicit resume authorization required')
++        order = ORDER[2:]
++        require(stage in order, 'patch already applied and frozen in prior attempt')
++    for previous in order[:order.index(stage)]:
+         require(read(run/previous/'stage.json')['status']=='passed', 'prior stage not passed: '+previous)
+     folder=run/stage
+     require(not folder.exists(), 'refusing stage overwrite or automatic retry')
+     folder.mkdir()
+     record=dict(stage=stage,status='running',started_utc=datetime.now(timezone.utc).isoformat(),
+-                source_commit=preflight['base_commit'],branch='stdc-research-v0.2',
++                source_commit=git('rev-parse','HEAD').decode().strip(),
++                baseline_commit=preflight['base_commit'],branch='stdc-research-v0.2',
+                 interpreter=sys.executable,versions=preflight['versions'],test_total=None)
+     seed=dict(dry_run=None,apply=None,new_tests=[5,7,11,13,93,12],
+               full_tests='frozen test fixtures and explicit seeds; source hashes in preflight',
+@@ -89,7 +103,8 @@ def stage(stage, run):
+     commands={
+         'dry_run':[str(patch_script),'--repo',str(ROOT),'--dry-run'],
+         'apply':[str(patch_script),'--repo',str(ROOT)],
+-        'new_tests':['-m','pytest','-x','-q','tests/test_stdc_heuristic.py','--junitxml',str(folder/'pytest.xml')],
++        'new_tests':['-m','pytest','-x','-q','tests/test_stdc_heuristic.py',
++                     'tests/test_stdc_audit_contract.py','--junitxml',str(folder/'pytest.xml')],
+         'full_tests':['-m','pytest','-x','-q','--junitxml',str(folder/'pytest.xml')],
+         'random_audit':['scripts/stdc_validation_guards.py','random_audit','--output-dir',str(folder)],
+         'small_search':['scripts/stdc_validation_guards.py','small_search','--output-dir',str(folder)],
+@@ -106,6 +121,11 @@ def stage(stage, run):
+         with (folder/'stdout.txt').open('w',encoding='utf-8') as stdout, (folder/'stderr.txt').open('w',encoding='utf-8') as stderr:
+             proc=subprocess.run(record['command'],cwd=ROOT,stdout=stdout,stderr=stderr,timeout=900)
+         record['exit_code']=proc.returncode
++        if stage in ('new_tests','full_tests') and (folder/'pytest.xml').is_file():
++            suites=ET.parse(folder/'pytest.xml').getroot()
++            counts={k:sum(int(s.get(k,0)) for s in suites.iter('testsuite'))
++                    for k in ('tests','failures','errors','skipped')}
++            record['test_total']=counts['tests'];record['test_counts']=counts
+         require(proc.returncode==0,'stage process failed; see stderr/stdout; STOP')
+         if stage=='dry_run':
+             spec=importlib.util.spec_from_file_location('delivered_apply',patch_script)
+@@ -136,7 +156,8 @@ def stage(stage, run):
+             counts={k:sum(int(s.get(k,0)) for s in suites.iter('testsuite')) for k in ('tests','failures','errors','skipped')}
+             record['test_total']=counts['tests'];record['test_counts']=counts
+             require(counts['failures']==counts['errors']==counts['skipped']==0,'failure/error/skip blocks acceptance')
+-            require(counts['tests']==(19 if stage=='new_tests' else 272),'unexpected collection count')
++            expected=preflight.get('expected_test_counts',{'new_tests':19,'full_tests':272})[stage]
++            require(counts['tests']==expected,'unexpected collection count')
+         else:
+             record['guard_checks']=read(folder/'guard_summary.json')
+             require(record['guard_checks']['status']=='passed','guard did not pass')
+@@ -148,10 +169,10 @@ def stage(stage, run):
+         record['wall_s']=perf_counter()-started
+         diff_snapshot(folder,'after')
+         save(folder/'stage.json',record)
+-        known={name:read(run/name/'stage.json') for name in ORDER if (run/name/'stage.json').exists()}
++        known={name:read(run/name/'stage.json') for name in order if (run/name/'stage.json').exists()}
+         save(run/'validation_summary.json',dict(status='blocked' if any(r['status']=='blocked' for r in known.values())
+-             else ('passed' if len(known)==len(ORDER) else 'in_progress'),stages=known,
+-             not_run=[name for name in ORDER if name not in known]))
++             else ('passed' if len(known)==len(order) else 'in_progress'),stages=known,
++             not_run=[name for name in order if name not in known]))
+     print(json.dumps(dict(stage=stage,status=record['status'],exit_code=record.get('exit_code'),
+                          tests=record.get('test_counts'),wall_s=record['wall_s'],error=record.get('error')),ensure_ascii=False),flush=True)
+     return 0 if record['status']=='passed' else 2
+diff --git a/asar_repro/scripts/stdc_audit_contract.py b/asar_repro/scripts/stdc_audit_contract.py
+new file mode 100644
+index 0000000..baf1a0a
+--- /dev/null
++++ b/asar_repro/scripts/stdc_audit_contract.py
+@@ -0,0 +1,35 @@
++"""Separate archived source identity from the explicitly approved research delta.
++
++The B4/B6 recorded hashes remain unchanged. Never resolve a moving branch name
++as the archived source, and never accept an arbitrary current heuristic file.
++"""
++import hashlib
++from pathlib import Path, PurePosixPath
++import subprocess
++
++ROOT = Path(__file__).resolve().parents[1]
++FROZEN_COMMIT = "81b9be9b51625ed9012a69f9cb90e296bf2ec5c2"
++APPROVED_RESEARCH = {
++    "src/asar_repro/heuristic.py":
++        "43f94d7ec3ae69dc67ee4416892ea65aa445498a002905f77d4b1f533b168c0b",
++}
++
++
++def frozen_bytes(source):
++    name = PurePosixPath(str(source).replace("\\", "/"))
++    if name.is_absolute() or ".." in name.parts or ":" in str(name):
++        raise ValueError("source must be a relative repository path")
++    return subprocess.check_output(
++        ["git", "-c", f"safe.directory={ROOT.parent.as_posix()}", "show",
++         f"{FROZEN_COMMIT}:asar_repro/{name}"], cwd=ROOT)
++
++
++def assert_archived_source(source, expected, *, current_root=ROOT):
++    name = str(source).replace("\\", "/")
++    historical = hashlib.sha256(frozen_bytes(name)).hexdigest()
++    assert historical == expected, f"frozen source fingerprint mismatch: {name}"
++    current = hashlib.sha256((current_root / name).read_bytes()).hexdigest()
++    approved = APPROVED_RESEARCH.get(name, expected)
++    assert current == approved, f"unapproved research source change: {name}"
++    return {"source": name, "historical_sha256": historical,
++            "current_sha256": current, "approved_delta": name in APPROVED_RESEARCH}
+diff --git a/asar_repro/tests/conftest.py b/asar_repro/tests/conftest.py
+new file mode 100644
+index 0000000..5b905b0
+--- /dev/null
++++ b/asar_repro/tests/conftest.py
+@@ -0,0 +1,13 @@
++"""Research-only fixture; no skipped tests or changes to numerical evaluation."""
++from pathlib import Path
++import sys
++
++import pytest
++
++sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
++from stdc_audit_contract import assert_archived_source
++
++
++@pytest.fixture
++def archived_source_check():
++    return assert_archived_source
+diff --git a/asar_repro/tests/test_b4_artifacts.py b/asar_repro/tests/test_b4_artifacts.py
+index 20d1351..e6cac44 100644
+--- a/asar_repro/tests/test_b4_artifacts.py
++++ b/asar_repro/tests/test_b4_artifacts.py
+@@ -59,12 +59,12 @@ def test_saved_b4_schema_and_counterexample_evidence():
+             assert row["J"] == row["Pd_T"] == row["M_T"] == row["path"] == "null"
+ 
+ 
+-def test_legacy_source_hashes_and_completion_denominator():
++def test_legacy_source_hashes_and_completion_denominator(archived_source_check):
+     audit, rows = read("audit.json"), read("legacy_runs.json")
+     for source in audit["legacy_sources"]:
+         assert digest(ROOT / source["path"]) == source["sha256"]
+     for source, expected in audit["code_sha256"].items():
+-        assert digest(ROOT / source) == expected
++        archived_source_check(source, expected)
+     assert len(rows) == 32
+     stopped = [r for r in rows if r["result_class"] == "aborted_feasible_incumbent"]
+     assert len(stopped) == 17
+diff --git a/asar_repro/tests/test_b6_comparison.py b/asar_repro/tests/test_b6_comparison.py
+index 67802f8..2addd3f 100644
+--- a/asar_repro/tests/test_b6_comparison.py
++++ b/asar_repro/tests/test_b6_comparison.py
+@@ -93,7 +93,7 @@ def test_saved_step_ledger_and_real_synthetic_separation(experiment):
+     assert len(metrics)==7 and {r["forcing_kind"] for r in metrics}=={"historical_real"}
+ 
+ 
+-def test_manifest_proves_frozen_outputs_untouched():
++def test_manifest_proves_frozen_outputs_untouched(archived_source_check):
+     manifest=b6.read_json(OUTPUT / "run_manifest.json")
+     assert manifest["status"]=="passed" and manifest["protected_after_unchanged"]
+     assert len(manifest["verified_raw_sources"])==10
+@@ -102,7 +102,7 @@ def test_manifest_proves_frozen_outputs_untouched():
+     for name, expected in manifest["artifacts_sha256"].items():
+         assert b6.digest(OUTPUT / name)==expected
+     for name, expected in manifest["code_sha256"].items():
+-        assert b6.digest(ROOT / name)==expected
++        archived_source_check(name, expected)
+ 
+ 
+ def test_output_guard_preserves_old_results(tmp_path):
+diff --git a/asar_repro/tests/test_stdc_audit_contract.py b/asar_repro/tests/test_stdc_audit_contract.py
+new file mode 100644
+index 0000000..762512d
+--- /dev/null
++++ b/asar_repro/tests/test_stdc_audit_contract.py
+@@ -0,0 +1,28 @@
++"""Negative controls for the research/archived-source audit boundary."""
++import hashlib
++from pathlib import Path
++
++import pytest
++
++from stdc_audit_contract import assert_archived_source, frozen_bytes
++
++
++@pytest.mark.parametrize("source", ["src/asar_repro/heuristic.py", "src/asar_repro/objective.py"])
++def test_mutated_current_source_is_rejected(tmp_path, source):
++    expected = hashlib.sha256(frozen_bytes(source)).hexdigest()
++    path = tmp_path / source
++    path.parent.mkdir(parents=True)
++    path.write_bytes(b"unapproved mutation")
++    with pytest.raises(AssertionError, match="unapproved research source"):
++        assert_archived_source(source, expected, current_root=tmp_path)
++
++
++def test_changed_historical_expectation_is_rejected():
++    with pytest.raises(AssertionError, match="frozen source fingerprint"):
++        assert_archived_source("src/asar_repro/heuristic.py", "0" * 64)
++
++
++@pytest.mark.parametrize("source", ["../heuristic.py", "C:/heuristic.py"])
++def test_audit_path_cannot_escape_repository(source):
++    with pytest.raises(ValueError, match="relative repository path"):
++        frozen_bytes(source)

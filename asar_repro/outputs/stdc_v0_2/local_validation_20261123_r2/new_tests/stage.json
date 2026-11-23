@@ -1,0 +1,39 @@
+{
+  "stage": "new_tests",
+  "status": "blocked",
+  "started_utc": "2026-11-23T13:48:16.793842+00:00",
+  "source_commit": "ab8157e3532f57744434235fc5b4eca843cca5f6",
+  "baseline_commit": "81b9be9b51625ed9012a69f9cb90e296bf2ec5c2",
+  "branch": "stdc-research-v0.2",
+  "interpreter": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+  "versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "opendrift": "1.14.12",
+    "pytest": "9.2.0",
+    "netCDF4": "1.7.5"
+  },
+  "test_total": null,
+  "seeds": [
+    5,
+    7,
+    11,
+    13,
+    93,
+    12
+  ],
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "-m",
+    "pytest",
+    "-x",
+    "-q",
+    "tests/test_stdc_heuristic.py",
+    "tests/test_stdc_audit_contract.py",
+    "--junitxml",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\local_validation_20261123_r2\\new_tests\\pytest.xml"
+  ],
+  "error": "[Errno 13] Permission denied: 'E:\\\\毕业设计\\\\终稿研发\\\\new\\\\baseline\\\\SAR_Planing-v1.1\\\\asar_repro\\\\outputs\\\\baseline_v1.1\\\\b6_failed_attempt_01\\\\b6_workers\\\\paper_greedy_1.1.json'",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\run_stdc_local_stage.py\", line 117, in stage\n    preserved(preflight,patched=stage not in ('dry_run','apply'))\n  File \"E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\run_stdc_local_stage.py\", line 55, in preserved\n    require(sha(baseline/name)==expected, 'baseline file modified: '+name)\n            ^^^^^^^^^^^^^^^^^^\n  File \"E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\run_stdc_local_stage.py\", line 36, in sha\n    with path.open('rb') as f:\n         ^^^^^^^^^^^^^^^\n  File \"C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\pathlib.py\", line 1044, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nPermissionError: [Errno 13] Permission denied: 'E:\\\\毕业设计\\\\终稿研发\\\\new\\\\baseline\\\\SAR_Planing-v1.1\\\\asar_repro\\\\outputs\\\\baseline_v1.1\\\\b6_failed_attempt_01\\\\b6_workers\\\\paper_greedy_1.1.json'\n",
+  "wall_s": 0.9949234999949113
+}

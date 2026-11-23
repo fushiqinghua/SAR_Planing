@@ -1,0 +1,13 @@
+{
+  "outputs/stdc_v0_2/local_validation_20261123_r2/00_preflight.json": "f778f1ccae76ab0c777d3ef705cdd63f7d21dc9c455e4983badcd26870fde0d1",
+  "outputs/stdc_v0_2/local_validation_20261123_r2/access_diagnostic.json": "f5b4278d796cc44980792fc3da0f6a78cae922ebf64d45ec9a23013ddb04ef73",
+  "outputs/stdc_v0_2/local_validation_20261123_r2/blocker_report.md": "528bfa3b19059a5906bd205168a0762ec7c7cbdb6f056aa1e2fb3037f4464fc1",
+  "outputs/stdc_v0_2/local_validation_20261123_r2/grant_baseline_read_access.ps1": "af5636f3dbbbd0de366175b60e5841a4bf747e2dcce18e96ddebd418047431e4",
+  "outputs/stdc_v0_2/local_validation_20261123_r2/pending_revision.json": "120d71cf3b53bf6abd133030a0bdcbd81b14987810d68b54969a2198dcc5a4b2",
+  "outputs/stdc_v0_2/local_validation_20261123_r2/source_diff.git.diff": "64ca854c3e4a24e23e6ffe6757e8c3bdaea9fd9654a4b110504f609593e6ee87",
+  "outputs/stdc_v0_2/local_validation_20261123_r2/validation_summary.json": "1e54453732932a7fe33f02e1a9400dff483bd1e4d30bf6990a378433094bf9be",
+  "outputs/stdc_v0_2/local_validation_20261123_r2/new_tests/after.git.diff": "c18142b86c791ade54b5d574bf8fd1d100363055b52c69f5e2d33ead286b262b",
+  "outputs/stdc_v0_2/local_validation_20261123_r2/new_tests/after.git.status": "c316baf6d915fea2d1f9527af709bf538dc76995eb0ce760938532b5ef4dd77d",
+  "outputs/stdc_v0_2/local_validation_20261123_r2/new_tests/after.source_sha256.json": "fb457348d4c52dc1660cc2602fe777bf4736187c006e0704dab436209293015e",
+  "outputs/stdc_v0_2/local_validation_20261123_r2/new_tests/stage.json": "0e090d162780224cdca173858d37d9e3e75e550b15538215421d8b72f9c01fb0"
+}

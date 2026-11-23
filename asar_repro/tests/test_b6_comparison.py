@@ -93,7 +93,7 @@ def test_saved_step_ledger_and_real_synthetic_separation(experiment):
     assert len(metrics)==7 and {r["forcing_kind"] for r in metrics}=={"historical_real"}
 
 
-def test_manifest_proves_frozen_outputs_untouched():
+def test_manifest_proves_frozen_outputs_untouched(archived_source_check):
     manifest=b6.read_json(OUTPUT / "run_manifest.json")
     assert manifest["status"]=="passed" and manifest["protected_after_unchanged"]
     assert len(manifest["verified_raw_sources"])==10
@@ -102,7 +102,7 @@ def test_manifest_proves_frozen_outputs_untouched():
     for name, expected in manifest["artifacts_sha256"].items():
         assert b6.digest(OUTPUT / name)==expected
     for name, expected in manifest["code_sha256"].items():
-        assert b6.digest(ROOT / name)==expected
+        archived_source_check(name, expected)
 
 
 def test_output_guard_preserves_old_results(tmp_path):
