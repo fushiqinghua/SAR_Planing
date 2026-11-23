@@ -1,0 +1,31 @@
+{
+  "status": "blocked",
+  "failed_stage": "full_tests",
+  "failed_test": "tests/test_b4_artifacts.py::test_legacy_source_hashes_and_completion_denominator",
+  "failure_line": 67,
+  "failure_kind": "frozen_baseline_source_hash_assertion_conflicts_with_research_heuristic_patch",
+  "changed_code_hashes": [
+    {
+      "path": "src\\asar_repro\\heuristic.py",
+      "expected": "38e03ceb511c62b7d5d9494206e752647bfaff796e7dc3ba08c195f1445446fc",
+      "actual": "43f94d7ec3ae69dc67ee4416892ea65aa445498a002905f77d4b1f533b168c0b",
+      "matches": false,
+      "baseline_actual": "38e03ceb511c62b7d5d9494206e752647bfaff796e7dc3ba08c195f1445446fc"
+    }
+  ],
+  "counts": {
+    "tests": 34,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0
+  },
+  "new_tests_passed": 19,
+  "not_run": [
+    "random_audit",
+    "small_search",
+    "lake_smoke"
+  ],
+  "no_test_or_expected_hash_modified": true,
+  "no_stage_retry": true,
+  "interpretation": "This is a historical integrity assertion failure. It neither proves an STDC bound violation nor permits continuing past the required stop gate."
+}

@@ -1,0 +1,114 @@
+{
+  "configs/b1_additional_packages.json": {
+    "sha256": "f8569f8d4cd06040ac391d15b1db7b7ae5426e656ccc48b06d181176a700419d",
+    "bytes": 789
+  },
+  "data/manifests/historical_sources_additional_b1.json": {
+    "sha256": "2d306909585ffd95992634ddc1e939d64d9af15c50f94547aadc55ca01f3d8fa",
+    "bytes": 193357
+  },
+  "docs/baseline_v1.1/additional_b1_report.md": {
+    "sha256": "648ee9e7b536c6a6a3cd1e60d777e09b31281f1e110329e7e80c14169770a7c0",
+    "bytes": 6009
+  },
+  "outputs/baseline_v1.1/additional_b1_20261123/frozen_before.json": {
+    "sha256": "0476defbf3a485cd14960896e668b6ca3830d7c93c731db679478406dfa0371f",
+    "bytes": 60811
+  },
+  "outputs/baseline_v1.1/additional_b1_20261123/lake_ontario_recheck.json": {
+    "sha256": "39c36b6142f48db7e619f49aa50c85b19ab13e5fe640c32e74414c7aa82e40bd",
+    "bytes": 39850
+  },
+  "outputs/baseline_v1.1/additional_b1_20261123/summary.json": {
+    "sha256": "33cd3bb76b99dc20aaaa8af24321045912cd741a57e2722e7de7ac6363a5bed4",
+    "bytes": 197
+  },
+  "outputs/baseline_v1.1/additional_b1_20261123_pair/acceptance.json": {
+    "sha256": "1907af6df744480c528c8e01dab0e21e8e6bdedb381bb8beecaa503fe27a5751",
+    "bytes": 404
+  },
+  "outputs/baseline_v1.1/additional_b1_20261123_pair/arctic_ocean_validation.json": {
+    "sha256": "19d071d4abcc54f2cb3d9cf6d80192faea15a78509c6c6a9a085da33323aeb62",
+    "bytes": 67767
+  },
+  "outputs/baseline_v1.1/additional_b1_20261123_pair/bay_of_fundy_validation.json": {
+    "sha256": "6a1a19bb36de5e294c49221267e0d889668757008c822b1d85e810c2c4a1db0b",
+    "bytes": 74687
+  },
+  "outputs/baseline_v1.1/additional_b1_20261123_pair/forcing_coverage.png": {
+    "sha256": "e129946cda104615cecf49a557b2f5374f388c203f84e0b110259fa1f200971e",
+    "bytes": 78230
+  },
+  "outputs/baseline_v1.1/additional_b1_20261123_pair/forcing_times_and_fingerprints.csv": {
+    "sha256": "288224f6102a1b33f8bf21e19ec06d49d3deb201f71de103e7df9619323c08f8",
+    "bytes": 18892
+  },
+  "outputs/baseline_v1.1/additional_b1_20261123_pair/frozen_before.json": {
+    "sha256": "0476defbf3a485cd14960896e668b6ca3830d7c93c731db679478406dfa0371f",
+    "bytes": 60811
+  },
+  "outputs/baseline_v1.1/additional_b1_20261123_pair/full_pytest.json": {
+    "sha256": "98febc5443e1287c91a69eb97e27967b36df5f860fc7f114673e950cab6d05a0",
+    "bytes": 586
+  },
+  "outputs/baseline_v1.1/additional_b1_20261123_pair/full_pytest.txt": {
+    "sha256": "13ecd3b57a7c922235d58dba4edca10260ba3a0fa277d20fa321c600464ed2ff",
+    "bytes": 346
+  },
+  "outputs/baseline_v1.1/additional_b1_20261123_pair/historical_sources_extension.json": {
+    "sha256": "2d306909585ffd95992634ddc1e939d64d9af15c50f94547aadc55ca01f3d8fa",
+    "bytes": 193357
+  },
+  "outputs/baseline_v1.1/additional_b1_20261123_pair/lake_ontario_recheck.json": {
+    "sha256": "225b5e081d951db3eb5773639bcd4f26f8422e3f11c8afff1f8cbbe3f35e839c",
+    "bytes": 39850
+  },
+  "outputs/baseline_v1.1/additional_b1_20261123_pair/report.md": {
+    "sha256": "648ee9e7b536c6a6a3cd1e60d777e09b31281f1e110329e7e80c14169770a7c0",
+    "bytes": 6009
+  },
+  "outputs/baseline_v1.1/additional_b1_20261123_pair/summary.json": {
+    "sha256": "af980e7a5650dcf4dd3893ac14a0feda5a3dff5f1908ce1142f209a564fa0313",
+    "bytes": 725
+  },
+  "outputs/baseline_v1.1/additional_b1_20261123_verified/arctic_ocean_validation.json": {
+    "sha256": "19d071d4abcc54f2cb3d9cf6d80192faea15a78509c6c6a9a085da33323aeb62",
+    "bytes": 67767
+  },
+  "outputs/baseline_v1.1/additional_b1_20261123_verified/frozen_before.json": {
+    "sha256": "0476defbf3a485cd14960896e668b6ca3830d7c93c731db679478406dfa0371f",
+    "bytes": 60811
+  },
+  "outputs/baseline_v1.1/additional_b1_20261123_verified/historical_sources_extension.json": {
+    "sha256": "bc1da376f349a11b88d6a4a1051df0c6ac099260cb6241f26c3b660d5927abd1",
+    "bytes": 117484
+  },
+  "outputs/baseline_v1.1/additional_b1_20261123_verified/lake_ontario_recheck.json": {
+    "sha256": "588e3cbfe0ebb56a32717a419c82bd8318b3072e11fbcc51f248ba2f53ebc853",
+    "bytes": 39850
+  },
+  "outputs/baseline_v1.1/additional_b1_20261123_verified/summary.json": {
+    "sha256": "c917f83ad381c6ae7d93482bec3ae80e7a16afd0566b90deccfc9215f0ce2a2a",
+    "bytes": 706
+  },
+  "scripts/b1_extra_currents.py": {
+    "sha256": "1b1c62a3cc0ab64fa9c02cda7527fa54ea64ce2893f3c456d589395e636160c5",
+    "bytes": 9665
+  },
+  "scripts/b1_gfs.py": {
+    "sha256": "c7cb66fa19d214b8e4b5c782fe49f5e1c7470df6af154696d75dfdef93253515",
+    "bytes": 6042
+  },
+  "scripts/import_additional_b1.py": {
+    "sha256": "025419beb30c2715b1f2258e4162fc7ad2d5c9ba510c9d6db6afc3fa81996507",
+    "bytes": 16272
+  },
+  "scripts/report_additional_b1.py": {
+    "sha256": "6e1af6969c1027350db9276d8b856626d0bc1df1cc290de0aefc93086467ffb0",
+    "bytes": 10643
+  },
+  "tests/test_b1_additional.py": {
+    "sha256": "8b97342bb643782c1c372994d89c772e24c7fc2a4e21fc42f907980468aaf752",
+    "bytes": 7866
+  }
+}

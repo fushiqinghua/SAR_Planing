@@ -1,0 +1,17 @@
+{
+  "scope": "read_only_no_experiment",
+  "reviewers": [
+    "review_stdc_math",
+    "review_stdc_harness"
+  ],
+  "mathematics": "No substantive lower-bound flaw found under stated rectangular grid, >=2 vertices, external nonnegative mass-preserving motion and sensor model; not a completed numerical audit.",
+  "findings": [
+    "Historical source hash gate failed after authorized research heuristic patch; stop enforced.",
+    "search_reporting default algorithm label does not support STDC modes.",
+    "One-cell reachable helper does not fully enforce no-continuation boundary.",
+    "Random audit does not stop on first violation or fail on mass-dominance metric by itself.",
+    "Small search lacks independent returned-path replay and lower-side J check.",
+    "Real smoke needs external frozen protocol, metadata, scorer and configuration identity gate."
+  ],
+  "implemented_followup_guards": false
+}

@@ -1,0 +1,47 @@
+{
+  "stage": "new_tests",
+  "status": "passed",
+  "started_utc": "2026-11-23T14:07:10.632278+00:00",
+  "source_commit": "1beb154881198e53499fa7c767e41604546d9677",
+  "baseline_commit": "81b9be9b51625ed9012a69f9cb90e296bf2ec5c2",
+  "branch": "stdc-research-v0.2",
+  "interpreter": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+  "versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "opendrift": "1.14.12",
+    "pytest": "9.2.0",
+    "netCDF4": "1.7.5"
+  },
+  "test_total": 28,
+  "seeds": [
+    5,
+    7,
+    11,
+    13,
+    93,
+    12
+  ],
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "-m",
+    "pytest",
+    "-x",
+    "-q",
+    "tests/test_stdc_heuristic.py",
+    "tests/test_stdc_audit_contract.py",
+    "tests/test_stdc_validation_guards.py",
+    "--junitxml",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\local_validation_20261123_r5\\new_tests\\pytest.xml",
+    "--basetemp",
+    "C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\stdc_acceptance_tmp_r5\\new_tests"
+  ],
+  "exit_code": 0,
+  "test_counts": {
+    "tests": 28,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "wall_s": 7.1506829999852926
+}

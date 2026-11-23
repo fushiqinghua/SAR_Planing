@@ -1,0 +1,143 @@
+{
+  "status": "blocked",
+  "stages": {
+    "dry_run": {
+      "stage": "dry_run",
+      "status": "passed",
+      "started_utc": "2026-11-23T08:42:38.221036+00:00",
+      "source_commit": "81b9be9b51625ed9012a69f9cb90e296bf2ec5c2",
+      "branch": "stdc-research-v0.2",
+      "interpreter": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+      "versions": {
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "opendrift": "1.14.12",
+        "pytest": "9.2.0",
+        "netCDF4": "1.7.5"
+      },
+      "test_total": null,
+      "seeds": null,
+      "command": [
+        "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+        "E:\\毕业设计\\终稿研发\\new\\baseline\\创新点探索\\STDC_ASAR_v0.2\\patch\\scripts\\apply_stdc_patch.py",
+        "--repo",
+        "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro",
+        "--dry-run"
+      ],
+      "exit_code": 0,
+      "wall_s": 4.738069100072607
+    },
+    "apply": {
+      "stage": "apply",
+      "status": "passed",
+      "started_utc": "2026-11-23T08:43:05.710132+00:00",
+      "source_commit": "81b9be9b51625ed9012a69f9cb90e296bf2ec5c2",
+      "branch": "stdc-research-v0.2",
+      "interpreter": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+      "versions": {
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "opendrift": "1.14.12",
+        "pytest": "9.2.0",
+        "netCDF4": "1.7.5"
+      },
+      "test_total": null,
+      "seeds": null,
+      "command": [
+        "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+        "E:\\毕业设计\\终稿研发\\new\\baseline\\创新点探索\\STDC_ASAR_v0.2\\patch\\scripts\\apply_stdc_patch.py",
+        "--repo",
+        "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro"
+      ],
+      "exit_code": 0,
+      "wall_s": 3.3450402999296784
+    },
+    "new_tests": {
+      "stage": "new_tests",
+      "status": "passed",
+      "started_utc": "2026-11-23T08:43:18.953338+00:00",
+      "source_commit": "81b9be9b51625ed9012a69f9cb90e296bf2ec5c2",
+      "branch": "stdc-research-v0.2",
+      "interpreter": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+      "versions": {
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "opendrift": "1.14.12",
+        "pytest": "9.2.0",
+        "netCDF4": "1.7.5"
+      },
+      "test_total": 19,
+      "seeds": [
+        5,
+        7,
+        11,
+        13,
+        93,
+        12
+      ],
+      "command": [
+        "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+        "-m",
+        "pytest",
+        "-x",
+        "-q",
+        "tests/test_stdc_heuristic.py",
+        "--junitxml",
+        "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\local_validation_20261123\\new_tests\\pytest.xml"
+      ],
+      "exit_code": 0,
+      "test_counts": {
+        "tests": 19,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "wall_s": 12.666574800037779
+    },
+    "full_tests": {
+      "stage": "full_tests",
+      "status": "blocked",
+      "started_utc": "2026-11-23T08:43:53.799946+00:00",
+      "source_commit": "81b9be9b51625ed9012a69f9cb90e296bf2ec5c2",
+      "branch": "stdc-research-v0.2",
+      "interpreter": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+      "versions": {
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "opendrift": "1.14.12",
+        "pytest": "9.2.0",
+        "netCDF4": "1.7.5"
+      },
+      "test_total": 34,
+      "seeds": "frozen test fixtures and explicit seeds; source hashes in preflight",
+      "command": [
+        "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+        "-m",
+        "pytest",
+        "-x",
+        "-q",
+        "--junitxml",
+        "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\local_validation_20261123\\full_tests\\pytest.xml"
+      ],
+      "exit_code": 1,
+      "error": "stage process failed; see stderr/stdout; STOP",
+      "traceback": "Traceback (most recent call last):\n  File \"E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\run_stdc_local_stage.py\", line 109, in stage\n    require(proc.returncode==0,'stage process failed; see stderr/stdout; STOP')\n  File \"E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\run_stdc_local_stage.py\", line 42, in require\n    raise AssertionError(message)\nAssertionError: stage process failed; see stderr/stdout; STOP\n",
+      "wall_s": 31.247320299968123,
+      "test_counts": {
+        "tests": 34,
+        "failures": 1,
+        "errors": 0,
+        "skipped": 0
+      },
+      "test_passed": 33,
+      "expected_collection_count": 272,
+      "collection_count_verified": false,
+      "halt_on_first_failure": true
+    }
+  },
+  "not_run": [
+    "random_audit",
+    "small_search",
+    "lake_smoke"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "baseline_files_checked": 654,
+  "changed_baseline_files": [],
+  "research_protection_mismatches": [],
+  "baseline_ref": "81b9be9b51625ed9012a69f9cb90e296bf2ec5c2",
+  "research_head": "133ea41359d0a4935ef26e3d39fcfcf3f2bccf78",
+  "no_later_experiments_started": true
+}

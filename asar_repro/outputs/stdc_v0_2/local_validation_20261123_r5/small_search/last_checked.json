@@ -1,0 +1,25 @@
+{
+  "seed": 15034,
+  "input_sha256": "983c48656f17c89439120db5fe90424dd5afede73f158302417215beb878c0af",
+  "oracle": 3.116464566042211,
+  "search_wall_s": 0.003934700042009354,
+  "path": [
+    4,
+    5,
+    8,
+    5,
+    2,
+    5
+  ],
+  "J": 3.1167836934893414,
+  "expanded": 5,
+  "generated": 14,
+  "pruned": 0,
+  "peak_open": 10,
+  "heuristic_mode": "stdc_lb",
+  "epsilon": 1.1,
+  "theory_certified": true,
+  "status": "completed",
+  "stop_reason": null,
+  "incumbent_source": "search"
+}

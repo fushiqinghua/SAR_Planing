@@ -1,0 +1,19 @@
+{
+  "status": "blocked",
+  "category": "windows_sandbox_hardlink_permission",
+  "failing_test": "tests/test_b1_inventory.py::test_wind_acquisition_rejects_full_object_or_saves_exact_messages[True]",
+  "source": "scripts/fetch_lake_b1.py:23",
+  "exception": "PermissionError: [WinError 5]",
+  "new_tests_passed": 28,
+  "full_tests_passed": 23,
+  "full_tests_failed": 1,
+  "full_tests_executed": 24,
+  "later_stages_not_run": [
+    "random_audit",
+    "small_search",
+    "lake_smoke"
+  ],
+  "retries_after_failure": 0,
+  "baseline_preserved_files": 654,
+  "baseline_content_changes": 0
+}

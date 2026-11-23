@@ -1,0 +1,7 @@
+M  scripts/run_stdc_local_stage.py
+A  scripts/stdc_audit_contract.py
+A  tests/conftest.py
+M  tests/test_b4_artifacts.py
+M  tests/test_b6_comparison.py
+A  tests/test_stdc_audit_contract.py
+?? outputs/stdc_v0_2/local_validation_20261123_r2/

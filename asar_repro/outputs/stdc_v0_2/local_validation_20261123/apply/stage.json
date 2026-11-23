@@ -1,0 +1,25 @@
+{
+  "stage": "apply",
+  "status": "passed",
+  "started_utc": "2026-11-23T08:43:05.710132+00:00",
+  "source_commit": "81b9be9b51625ed9012a69f9cb90e296bf2ec5c2",
+  "branch": "stdc-research-v0.2",
+  "interpreter": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+  "versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "opendrift": "1.14.12",
+    "pytest": "9.2.0",
+    "netCDF4": "1.7.5"
+  },
+  "test_total": null,
+  "seeds": null,
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\创新点探索\\STDC_ASAR_v0.2\\patch\\scripts\\apply_stdc_patch.py",
+    "--repo",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro"
+  ],
+  "exit_code": 0,
+  "wall_s": 3.3450402999296784
+}

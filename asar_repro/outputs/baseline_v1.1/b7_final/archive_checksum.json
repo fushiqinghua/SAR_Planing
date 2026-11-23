@@ -1,0 +1,9 @@
+{
+  "path": "outputs\\baseline_v1.1\\b7_final\\baseline_v1_1_offline.zip",
+  "sha256": "54af40879e64cce8650086f57c8fad2ab441e992dd53864b1cd3eee5669ad5c4",
+  "bytes": 287452681,
+  "verified_entries": 485,
+  "git_bundle_sha256": "67192eb11afd8c0f74d1518007828f53df63ea461fb91fbde352ec735972d581",
+  "raw_forcing_included": true,
+  "reports": "final report and validation_summary are sidecars generated after ZIP verification"
+}

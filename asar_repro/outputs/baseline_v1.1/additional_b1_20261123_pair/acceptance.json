@@ -1,0 +1,15 @@
+{
+  "stage": "B1_additional_data",
+  "status": "passed",
+  "full_pytest_passed": 248,
+  "pytest_s": 18.86,
+  "frozen_files_unchanged": 512,
+  "scenarios": [
+    "arctic_ocean",
+    "bay_of_fundy"
+  ],
+  "B2_completed": false,
+  "B3_completed": false,
+  "source_commit": "14878025827bf3341cf6702de96049d46d440a2d",
+  "manifest_sha256": "2d306909585ffd95992634ddc1e939d64d9af15c50f94547aadc55ca01f3d8fa"
+}

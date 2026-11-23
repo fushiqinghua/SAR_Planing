@@ -1,0 +1,20 @@
+............                                                             [100%]
+============================== warnings summary ===============================
+tests/test_forcing.py: 22 warnings
+  C:\Users\35448\.conda\envs\maritime-sar\Lib\site-packages\cmocean\cm.py:56: MatplotlibDeprecationWarning: Passing 'N' to ListedColormap is deprecated since 3.11 and will be removed in 3.13. Please ensure the list of passed colors is the required length instead.
+    reg_map = colors.ListedColormap(rgb_with_alpha, N=rgb.shape[0])
+
+tests/test_forcing.py: 22 warnings
+  C:\Users\35448\.conda\envs\maritime-sar\Lib\site-packages\cmocean\cm.py:60: MatplotlibDeprecationWarning: Passing 'N' to ListedColormap is deprecated since 3.11 and will be removed in 3.13. Please ensure the list of passed colors is the required length instead.
+    reg_map_r = colors.ListedColormap(rgb_with_alpha[::-1,:], N=rgb.shape[0])
+
+tests/test_forcing.py: 22 warnings
+  C:\Users\35448\.conda\envs\maritime-sar\Lib\site-packages\cmocean\cm.py:74: MatplotlibDeprecationWarning: Passing 'N' to ListedColormap is deprecated since 3.11 and will be removed in 3.13. Please ensure the list of passed colors is the required length instead.
+    reg_map_i = colors.ListedColormap(rgb_with_alpha, N=rgb_i.shape[0])
+
+tests/test_forcing.py: 22 warnings
+  C:\Users\35448\.conda\envs\maritime-sar\Lib\site-packages\cmocean\cm.py:76: MatplotlibDeprecationWarning: Passing 'N' to ListedColormap is deprecated since 3.11 and will be removed in 3.13. Please ensure the list of passed colors is the required length instead.
+    reg_map_r_i = colors.ListedColormap(rgb_with_alpha[::-1,:], N=rgb_i.shape[0])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+12 passed, 88 warnings in 9.78s

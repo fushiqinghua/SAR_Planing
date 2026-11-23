@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "same_file": true,
+  "sha256": "8beeb99dfe34912977777cb5285d1318d69c3515d43e35a1230526c07aab0aac",
+  "execution": "non-sandbox",
+  "temporary_directory": "E:\\\u6bd5\u4e1a\u8bbe\u8ba1\\\u7ec8\u7a3f\u7814\u53d1\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\local_validation_20261123_r4\\hardlink_probe"
+}

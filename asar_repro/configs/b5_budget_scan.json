@@ -1,0 +1,17 @@
+{
+  "stage": "B5",
+  "archive": "outputs/baseline_v1.1/lake_ontario_real/particles.npz",
+  "archive_sha256": "8b30a87e543f1b33c39e70e1d0054e1750ec046ba2e0b627dd311d9945749456",
+  "metadata": "outputs/baseline_v1.1/lake_ontario_real/metadata.json",
+  "metadata_sha256": "1e96ecea2547ca918dd068b7f86a3d4b680cdc89ad6814b1132ca80cdc5e89fc",
+  "heuristics": ["paper_greedy", "mass_lb"],
+  "epsilon": [1.1, 1.04, 1.0],
+  "max_expansions": [600, 2000, 5000],
+  "max_seconds": [30, 60],
+  "max_open": 20000,
+  "historical_max_open_probe": 2400,
+  "watchdog_grace_s": 60,
+  "threads": 1,
+  "profile": {"heuristic": "paper_greedy", "epsilon": 1.0, "max_expansions": 2000, "max_seconds": 60, "max_open": 20000},
+  "mass_profile": {"heuristic": "mass_lb", "epsilon": 1.0, "max_expansions": 5000, "max_seconds": 60, "max_open": 20000}
+}

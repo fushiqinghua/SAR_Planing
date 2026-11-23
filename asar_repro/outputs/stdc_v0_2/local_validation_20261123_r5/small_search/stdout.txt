@@ -1,0 +1,7 @@
+small cases=5, searches=70
+small cases=10, searches=140
+small cases=15, searches=210
+small cases=20, searches=280
+small cases=25, searches=350
+small cases=30, searches=420
+small cases=35, searches=490

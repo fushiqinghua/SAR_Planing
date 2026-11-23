@@ -1,0 +1,14 @@
+{
+  "status": "blocked",
+  "purpose": "post_stop_archive_only_no_tests",
+  "command": [
+    "git",
+    "diff",
+    "--check"
+  ],
+  "exit_code": 2,
+  "heuristic_crlf_count": 73,
+  "heuristic_lf_count": 73,
+  "source_changed_after_stop": false,
+  "interpretation": "The delivered installer wrote CRLF on Windows. Git flags CR at line endings as whitespace. Payload retained exactly as tested; no normalization or rerun."
+}

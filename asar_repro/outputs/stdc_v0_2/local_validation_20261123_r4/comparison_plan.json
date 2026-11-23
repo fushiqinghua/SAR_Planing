@@ -1,0 +1,38 @@
+{
+  "scope": "paired baseline vs STDC on frozen Lake Ontario input, only after all five validation stages pass",
+  "modes": [
+    "paper_greedy",
+    "mass_lb",
+    "stdc_lb"
+  ],
+  "epsilons": [
+    1.1,
+    1.04,
+    1.0
+  ],
+  "repeats": 3,
+  "planned_runs": 27,
+  "order": "for each epsilon and repeat, rotate the three modes by repeat index",
+  "input": "frozen B3/B7 archive; SHA gate; no Leeway reruns",
+  "limits": {
+    "max_expansions": 5000,
+    "max_open": 20000,
+    "max_seconds": 30
+  },
+  "watchdog_s": 150,
+  "threads": 1,
+  "process": "one fresh child per run",
+  "primary_outcome": "J, lower is better; identical PT initial incumbent",
+  "secondary_outcomes": [
+    "Pd_T",
+    "expanded",
+    "generated",
+    "search_wall_s",
+    "peak memory",
+    "completion",
+    "certificate"
+  ],
+  "analysis": "paired differences within epsilon/repeat; medians and min/max across 3 repeats; no statistical significance claim",
+  "certification": "paper_greedy never certified; STDC/mass only conditional discrete bound on completed search",
+  "failures": "stop on correctness/input/replay assertion; report every budget stop; preserve old attempts"
+}

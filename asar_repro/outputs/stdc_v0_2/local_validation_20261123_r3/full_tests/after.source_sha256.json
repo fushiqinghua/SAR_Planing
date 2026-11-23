@@ -1,0 +1,17 @@
+{
+  "src/asar_repro/stdc_heuristic.py": "c1d8469513bec6612a83e7606d6e18c544938d166be56ffae95fa7a592e7d03d",
+  "tests/test_stdc_heuristic.py": "173c698f97c322c5f70f449e77661db412e8359462e3767d6569be3ec6ede26c",
+  "scripts/run_stdc_random_audit.py": "bc77ff7af1bc0d37f3b6476089212cc72317398e01396a99196d6da5bee6870b",
+  "scripts/run_stdc_small_search.py": "21c050f2bf46ff13072cfe2f0d2c7727d9515a3f7dfd82bd862a40d9bfda4b2c",
+  "scripts/run_stdc_smoke.py": "3116ad207de19891c37904b189fd704c6fa3cf6827774b52701602aeafcb04ef",
+  "scripts/run_stdc_synthetic_bench.py": "274750f6cc2f1299830fe94803c3bb88079dc587d220c31f1653637fd4208c79",
+  "src/asar_repro/heuristic.py": "43f94d7ec3ae69dc67ee4416892ea65aa445498a002905f77d4b1f533b168c0b",
+  "scripts/run_stdc_local_stage.py": "54deb8de3f56258d61892edae7677b1b4bac6a24576e6954638ea21c0f6d2d2c",
+  "scripts/stdc_validation_guards.py": "7cae9ff4807efdc69ad6fef10dbca1ee9d2b15b74147af5ab603226bcfd4cd8d",
+  "scripts/stdc_audit_contract.py": "98b387875745aa5b97acf51e42db531c31d34da1ff27f1a7a7bdfb94978b6782",
+  "tests/conftest.py": "9b7b1e1fa40432a7636cf7faad897af069298e18934309b9c07896220b70b204",
+  "tests/test_stdc_audit_contract.py": "c1fd0fd4ad37c803155aae50c26e2dd36f2cc1aa7d46eac18be8fbf873f99b71",
+  "tests/test_stdc_validation_guards.py": "6cd5e0a0754cefde1ebae01f1410f4a9e05c4c72f466830c7d6d903ba7f5f9f3",
+  "tests/test_b4_artifacts.py": "667f4908f0f8b6fcf9e657871e8bfbe825dac871da7eca6857aaf304d6971bc3",
+  "tests/test_b6_comparison.py": "a452bbc4980e24340ab1570684ad1c72d48de1a2e5f1390a9d0b42666ab4ac82"
+}

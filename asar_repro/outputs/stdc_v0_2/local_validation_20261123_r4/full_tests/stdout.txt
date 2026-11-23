@@ -1,0 +1,25 @@
+...F
+================================== FAILURES ===================================
+_______________ test_cf_storage_unpacks_once_and_preserves_mask _______________
+
+tmp_path = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-stdc-v0.2/asar_repro/outputs/stdc_v0_2/local_validation_20261123_r4/full_tests/pytest_tmp/test_cf_storage_unpacks_once_a0')
+
+    def test_cf_storage_unpacks_once_and_preserves_mask(tmp_path):
+        p=tmp_path/'packed.nc'
+>       with Dataset(p,'w') as d:
+             ^^^^^^^^^^^^^^
+
+tests\test_b1_additional.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+src/netCDF4/_netCDF4.pyx:2525: in netCDF4._netCDF4.Dataset.__init__
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   PermissionError: [Errno 13] Permission denied: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\local_validation_20261123_r4\\full_tests\\pytest_tmp\\test_cf_storage_unpacks_once_a0\\packed.nc'
+
+src/netCDF4/_netCDF4.pyx:2162: PermissionError
+=========================== short test summary info ===========================
+FAILED tests/test_b1_additional.py::test_cf_storage_unpacks_once_and_preserves_mask
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 3 passed in 7.43s

@@ -1,0 +1,3 @@
+Command: C:\Users\35448\.conda\envs\maritime-sar\python.exe scripts/audit_search_results.py
+{"status": "passed", "toy_run_count": 72, "legacy_run_count": 32, "legacy_stop_reasons": {"max_expansions": 17}, "legacy_max_replay_error": 0.0}
+Exit code: 0

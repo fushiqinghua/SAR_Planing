@@ -1,0 +1,1 @@
+{"mode": "paper_greedy", "status": "completed", "stop_reason": null, "J": 17.29389415456, "Pd_T": 0.89737041888, "expanded": 1222, "theory_certified": false, "search_wall_s": 0.9543081000447273, "process_peak_memory_mib": 88.51171875}

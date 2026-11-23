@@ -1,0 +1,1019 @@
+[
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\search.py",
+    "line": 50,
+    "function": "search_asar",
+    "primitive_calls": 1,
+    "calls": 1,
+    "self_s": 0.0143341,
+    "cumulative_s": 3.1807857000000004
+  },
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\search.py",
+    "line": 107,
+    "function": "enqueue",
+    "primitive_calls": 8001,
+    "calls": 8001,
+    "self_s": 0.0199603,
+    "cumulative_s": 3.118218
+  },
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\heuristic.py",
+    "line": 35,
+    "function": "__call__",
+    "primitive_calls": 8001,
+    "calls": 8001,
+    "self_s": 0.8116861000000001,
+    "cumulative_s": 3.0899992000000003
+  },
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\motion.py",
+    "line": 92,
+    "function": "propagate",
+    "primitive_calls": 249862,
+    "calls": 249862,
+    "self_s": 0.09111090000000001,
+    "cumulative_s": 0.494292
+  },
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\motion.py",
+    "line": 100,
+    "function": "sense",
+    "primitive_calls": 255862,
+    "calls": 255862,
+    "self_s": 0.3910229,
+    "cumulative_s": 0.4704012
+  },
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\motion.py",
+    "line": 97,
+    "function": "cell_mass",
+    "primitive_calls": 247813,
+    "calls": 247813,
+    "self_s": 0.3870135,
+    "cumulative_s": 0.40529590000000004
+  },
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\grid.py",
+    "line": 8,
+    "function": "integer",
+    "primitive_calls": 283050,
+    "calls": 283050,
+    "self_s": 0.1046928,
+    "cumulative_s": 0.39856280000000005
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'sum' of 'numpy.ndarray' objects>",
+    "primitive_calls": 263866,
+    "calls": 263866,
+    "self_s": 0.0528457,
+    "cumulative_s": 0.3499911
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 1221,
+    "function": "argmax",
+    "primitive_calls": 247813,
+    "calls": 247813,
+    "self_s": 0.12662610000000002,
+    "cumulative_s": 0.3187718
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\_methods.py",
+    "line": 47,
+    "function": "_sum",
+    "primitive_calls": 263866,
+    "calls": 263866,
+    "self_s": 0.045328900000000005,
+    "cumulative_s": 0.2971454
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method builtins.isinstance>",
+    "primitive_calls": 567291,
+    "calls": 567291,
+    "self_s": 0.0874874,
+    "cumulative_s": 0.2939619
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'reduce' of 'numpy.ufunc' objects>",
+    "primitive_calls": 279939,
+    "calls": 279939,
+    "self_s": 0.2668149,
+    "cumulative_s": 0.2668149
+  },
+  {
+    "file": "<frozen abc>",
+    "line": 117,
+    "function": "__instancecheck__",
+    "primitive_calls": 283050,
+    "calls": 283050,
+    "self_s": 0.040624400000000005,
+    "cumulative_s": 0.2064745
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 48,
+    "function": "_wrapfunc",
+    "primitive_calls": 248994,
+    "calls": 248994,
+    "self_s": 0.08183040000000001,
+    "cumulative_s": 0.193449
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method _abc._abc_instancecheck>",
+    "primitive_calls": 283050,
+    "calls": 283050,
+    "self_s": 0.06399640000000001,
+    "cumulative_s": 0.1658501
+  },
+  {
+    "file": "<frozen abc>",
+    "line": 121,
+    "function": "__subclasscheck__",
+    "primitive_calls": 283050,
+    "calls": 283050,
+    "self_s": 0.039357500000000004,
+    "cumulative_s": 0.1018537
+  },
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\belief.py",
+    "line": 32,
+    "function": "undetected_mass",
+    "primitive_calls": 8001,
+    "calls": 8001,
+    "self_s": 0.0291982,
+    "cumulative_s": 0.09607170000000001
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'argmax' of 'numpy.ndarray' objects>",
+    "primitive_calls": 247813,
+    "calls": 247813,
+    "self_s": 0.08817960000000001,
+    "cumulative_s": 0.08817960000000001
+  },
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\grid.py",
+    "line": 61,
+    "function": "distances_from",
+    "primitive_calls": 52,
+    "calls": 52,
+    "self_s": 0.0162493,
+    "cumulative_s": 0.08795910000000001
+  },
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\grid.py",
+    "line": 39,
+    "function": "neighbors",
+    "primitive_calls": 17077,
+    "calls": 17077,
+    "self_s": 0.0177746,
+    "cumulative_s": 0.0812538
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'copy' of 'numpy.ndarray' objects>",
+    "primitive_calls": 255865,
+    "calls": 255865,
+    "self_s": 0.0793805,
+    "cumulative_s": 0.0793805
+  },
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\grid.py",
+    "line": 33,
+    "function": "coordinates",
+    "primitive_calls": 25182,
+    "calls": 25182,
+    "self_s": 0.013418900000000001,
+    "cumulative_s": 0.06253650000000001
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method _abc._abc_subclasscheck>",
+    "primitive_calls": 283050,
+    "calls": 283050,
+    "self_s": 0.0624962,
+    "cumulative_s": 0.0624962
+  },
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\motion.py",
+    "line": 88,
+    "function": "check_horizon",
+    "primitive_calls": 249863,
+    "calls": 249863,
+    "self_s": 0.0449972,
+    "cumulative_s": 0.058943
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 86,
+    "function": "_wrapreduction_any_all",
+    "primitive_calls": 16021,
+    "calls": 16021,
+    "self_s": 0.0141165,
+    "cumulative_s": 0.0351771
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method builtins.min>",
+    "primitive_calls": 247865,
+    "calls": 247865,
+    "self_s": 0.0314805,
+    "cumulative_s": 0.0314805
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method builtins.len>",
+    "primitive_calls": 513681,
+    "calls": 513681,
+    "self_s": 0.026975100000000002,
+    "cumulative_s": 0.026975100000000002
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 2548,
+    "function": "all",
+    "primitive_calls": 8010,
+    "calls": 8010,
+    "self_s": 0.0041425,
+    "cumulative_s": 0.0231535
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method builtins.getattr>",
+    "primitive_calls": 249009,
+    "calls": 249009,
+    "self_s": 0.0226149,
+    "cumulative_s": 0.0226149
+  },
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\grid.py",
+    "line": 42,
+    "function": "<genexpr>",
+    "primitive_calls": 81849,
+    "calls": 81849,
+    "self_s": 0.0210206,
+    "cumulative_s": 0.0210206
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 2436,
+    "function": "any",
+    "primitive_calls": 8011,
+    "calls": 8011,
+    "self_s": 0.003935,
+    "cumulative_s": 0.0201011
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 1217,
+    "function": "_argmax_dispatcher",
+    "primitive_calls": 247813,
+    "calls": 247813,
+    "self_s": 0.0189561,
+    "cumulative_s": 0.0189561
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\multiarray.py",
+    "line": 906,
+    "function": "bincount",
+    "primitive_calls": 247813,
+    "calls": 247813,
+    "self_s": 0.0182824,
+    "cumulative_s": 0.0182824
+  },
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\belief.py",
+    "line": 11,
+    "function": "float_array",
+    "primitive_calls": 8006,
+    "calls": 8006,
+    "self_s": 0.0055780000000000005,
+    "cumulative_s": 0.011274900000000001
+  },
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\heuristic.py",
+    "line": 49,
+    "function": "<listcomp>",
+    "primitive_calls": 52,
+    "calls": 52,
+    "self_s": 0.0013592,
+    "cumulative_s": 0.0050166
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 88,
+    "function": "<dictcomp>",
+    "primitive_calls": 16021,
+    "calls": 16021,
+    "self_s": 0.0049397,
+    "cumulative_s": 0.0049397
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\lib\\_type_check_impl.py",
+    "line": 270,
+    "function": "iscomplexobj",
+    "primitive_calls": 8006,
+    "calls": 8006,
+    "self_s": 0.0030091000000000002,
+    "cumulative_s": 0.0035952000000000002
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\numeric.py",
+    "line": 679,
+    "function": "flatnonzero",
+    "primitive_calls": 1180,
+    "calls": 1180,
+    "self_s": 0.0009298,
+    "cumulative_s": 0.0035658
+  },
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\grid.py",
+    "line": 23,
+    "function": "size",
+    "primitive_calls": 25239,
+    "calls": 25239,
+    "self_s": 0.003213,
+    "cumulative_s": 0.003213
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method _heapq.heappop>",
+    "primitive_calls": 2001,
+    "calls": 2001,
+    "self_s": 0.0026898,
+    "cumulative_s": 0.0026898
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method _heapq.heappush>",
+    "primitive_calls": 8001,
+    "calls": 8001,
+    "self_s": 0.0024723,
+    "cumulative_s": 0.0024723
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method builtins.divmod>",
+    "primitive_calls": 25182,
+    "calls": 25182,
+    "self_s": 0.0019212,
+    "cumulative_s": 0.0019212
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 1993,
+    "function": "nonzero",
+    "primitive_calls": 1180,
+    "calls": 1180,
+    "self_s": 0.00028500000000000004,
+    "cumulative_s": 0.0015847
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method time.perf_counter>",
+    "primitive_calls": 18006,
+    "calls": 18006,
+    "self_s": 0.0015253,
+    "cumulative_s": 0.0015253
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method numpy.asarray>",
+    "primitive_calls": 8009,
+    "calls": 8009,
+    "self_s": 0.0014343000000000001,
+    "cumulative_s": 0.0014343000000000001
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'items' of 'dict' objects>",
+    "primitive_calls": 16021,
+    "calls": 16021,
+    "self_s": 0.0012448000000000001,
+    "cumulative_s": 0.0012448000000000001
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method builtins.max>",
+    "primitive_calls": 8001,
+    "calls": 8001,
+    "self_s": 0.0012200000000000002,
+    "cumulative_s": 0.0012200000000000002
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 1879,
+    "function": "ravel",
+    "primitive_calls": 1180,
+    "calls": 1180,
+    "self_s": 0.0005295,
+    "cumulative_s": 0.0008816000000000001
+  },
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\search.py",
+    "line": 102,
+    "function": "record",
+    "primitive_calls": 10002,
+    "calls": 10002,
+    "self_s": 0.0008313000000000001,
+    "cumulative_s": 0.0008313000000000001
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'nonzero' of 'numpy.ndarray' objects>",
+    "primitive_calls": 1180,
+    "calls": 1180,
+    "self_s": 0.0008230000000000001,
+    "cumulative_s": 0.0008230000000000001
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 2543,
+    "function": "_all_dispatcher",
+    "primitive_calls": 8010,
+    "calls": 8010,
+    "self_s": 0.0008161,
+    "cumulative_s": 0.0008161
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 2431,
+    "function": "_any_dispatcher",
+    "primitive_calls": 8011,
+    "calls": 8011,
+    "self_s": 0.0008071,
+    "cumulative_s": 0.0008071
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method builtins.next>",
+    "primitive_calls": 8001,
+    "calls": 8001,
+    "self_s": 0.0007787,
+    "cumulative_s": 0.0007787
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'append' of 'collections.deque' objects>",
+    "primitive_calls": 14976,
+    "calls": 14976,
+    "self_s": 0.0007161,
+    "cumulative_s": 0.0007161
+  },
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\objective.py",
+    "line": 29,
+    "function": "score_path",
+    "primitive_calls": 1,
+    "calls": 1,
+    "self_s": 5.5900000000000004e-05,
+    "cumulative_s": 0.0007068
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method math.isfinite>",
+    "primitive_calls": 8003,
+    "calls": 8003,
+    "self_s": 0.0006689,
+    "cumulative_s": 0.0006689
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\lib\\_type_check_impl.py",
+    "line": 171,
+    "function": "_is_type_dispatcher",
+    "primitive_calls": 8006,
+    "calls": 8006,
+    "self_s": 0.0006686,
+    "cumulative_s": 0.0006686
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'popleft' of 'collections.deque' objects>",
+    "primitive_calls": 15028,
+    "calls": 15028,
+    "self_s": 0.0006481000000000001,
+    "cumulative_s": 0.0006481000000000001
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method builtins.issubclass>",
+    "primitive_calls": 8006,
+    "calls": 8006,
+    "self_s": 0.0005849000000000001,
+    "cumulative_s": 0.0005849000000000001
+  },
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\grid.py",
+    "line": 77,
+    "function": "validate_path",
+    "primitive_calls": 1,
+    "calls": 1,
+    "self_s": 2.4200000000000002e-05,
+    "cumulative_s": 0.0003165
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'max' of 'numpy.ndarray' objects>",
+    "primitive_calls": 52,
+    "calls": 52,
+    "self_s": 3.38e-05,
+    "cumulative_s": 0.00019040000000000002
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'ravel' of 'numpy.ndarray' objects>",
+    "primitive_calls": 1180,
+    "calls": 1180,
+    "self_s": 0.00018270000000000002,
+    "cumulative_s": 0.00018270000000000002
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\_methods.py",
+    "line": 39,
+    "function": "_amax",
+    "primitive_calls": 52,
+    "calls": 52,
+    "self_s": 1.91e-05,
+    "cumulative_s": 0.0001566
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\numeric.py",
+    "line": 323,
+    "function": "full",
+    "primitive_calls": 52,
+    "calls": 52,
+    "self_s": 0.0001116,
+    "cumulative_s": 0.0001518
+  },
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\belief.py",
+    "line": 41,
+    "function": "sensor_probabilities",
+    "primitive_calls": 3,
+    "calls": 3,
+    "self_s": 5.8e-06,
+    "cumulative_s": 0.0001055
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\numeric.py",
+    "line": 675,
+    "function": "_flatnonzero_dispatcher",
+    "primitive_calls": 1180,
+    "calls": 1180,
+    "self_s": 9.16e-05,
+    "cumulative_s": 9.16e-05
+  },
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\belief.py",
+    "line": 22,
+    "function": "initial_belief",
+    "primitive_calls": 2,
+    "calls": 2,
+    "self_s": 8.1e-06,
+    "cumulative_s": 8.99e-05
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 1875,
+    "function": "_ravel_dispatcher",
+    "primitive_calls": 1180,
+    "calls": 1180,
+    "self_s": 8.6e-05,
+    "cumulative_s": 8.6e-05
+  },
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\belief.py",
+    "line": 17,
+    "function": "check_probabilities",
+    "primitive_calls": 5,
+    "calls": 5,
+    "self_s": 2.6700000000000002e-05,
+    "cumulative_s": 8.6e-05
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 1989,
+    "function": "_nonzero_dispatcher",
+    "primitive_calls": 1180,
+    "calls": 1180,
+    "self_s": 8.37e-05,
+    "cumulative_s": 8.37e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method numpy.asanyarray>",
+    "primitive_calls": 1181,
+    "calls": 1181,
+    "self_s": 7.86e-05,
+    "cumulative_s": 7.86e-05
+  },
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\heuristic.py",
+    "line": 15,
+    "function": "__init__",
+    "primitive_calls": 1,
+    "calls": 1,
+    "self_s": 5.1e-06,
+    "cumulative_s": 6.390000000000001e-05
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\numeric.py",
+    "line": 2384,
+    "function": "isclose",
+    "primitive_calls": 2,
+    "calls": 2,
+    "self_s": 2.01e-05,
+    "cumulative_s": 4.6500000000000005e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method numpy.empty>",
+    "primitive_calls": 53,
+    "calls": 53,
+    "self_s": 3.55e-05,
+    "cumulative_s": 3.55e-05
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\lib\\_stride_tricks_impl.py",
+    "line": 400,
+    "function": "broadcast_to",
+    "primitive_calls": 3,
+    "calls": 3,
+    "self_s": 4.9000000000000005e-06,
+    "cumulative_s": 2.89e-05
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\lib\\_stride_tricks_impl.py",
+    "line": 373,
+    "function": "_broadcast_to",
+    "primitive_calls": 3,
+    "calls": 3,
+    "self_s": 1.6800000000000002e-05,
+    "cumulative_s": 2.4e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'all' of 'numpy.generic' objects>",
+    "primitive_calls": 7,
+    "calls": 7,
+    "self_s": 5.3e-06,
+    "cumulative_s": 1.55e-05
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'any' of 'numpy.generic' objects>",
+    "primitive_calls": 6,
+    "calls": 6,
+    "self_s": 4.1000000000000006e-06,
+    "cumulative_s": 1.09e-05
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\_methods.py",
+    "line": 64,
+    "function": "_all",
+    "primitive_calls": 7,
+    "calls": 7,
+    "self_s": 2.8000000000000003e-06,
+    "cumulative_s": 1.02e-05
+  },
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\search.py",
+    "line": 86,
+    "function": "finish",
+    "primitive_calls": 1,
+    "calls": 1,
+    "self_s": 3.9e-06,
+    "cumulative_s": 8.5e-06
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\lib\\_function_base_impl.py",
+    "line": 1402,
+    "function": "diff",
+    "primitive_calls": 1,
+    "calls": 1,
+    "self_s": 6.6e-06,
+    "cumulative_s": 7.100000000000001e-06
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\_methods.py",
+    "line": 55,
+    "function": "_any",
+    "primitive_calls": 6,
+    "calls": 6,
+    "self_s": 1.9e-06,
+    "cumulative_s": 6.8e-06
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\multiarray.py",
+    "line": 1085,
+    "function": "copyto",
+    "primitive_calls": 53,
+    "calls": 53,
+    "self_s": 5.500000000000001e-06,
+    "cumulative_s": 5.500000000000001e-06
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 2838,
+    "function": "cumsum",
+    "primitive_calls": 1,
+    "calls": 1,
+    "self_s": 1.7e-06,
+    "cumulative_s": 5.3e-06
+  },
+  {
+    "file": "<string>",
+    "line": 2,
+    "function": "__init__",
+    "primitive_calls": 1,
+    "calls": 1,
+    "self_s": 4.6e-06,
+    "cumulative_s": 4.6e-06
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\_ufunc_config.py",
+    "line": 472,
+    "function": "__enter__",
+    "primitive_calls": 2,
+    "calls": 2,
+    "self_s": 3e-06,
+    "cumulative_s": 4.5e-06
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\numeric.py",
+    "line": 97,
+    "function": "zeros_like",
+    "primitive_calls": 1,
+    "calls": 1,
+    "self_s": 3.6000000000000003e-06,
+    "cumulative_s": 4.1000000000000006e-06
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\numeric.py",
+    "line": 2476,
+    "function": "<genexpr>",
+    "primitive_calls": 10,
+    "calls": 10,
+    "self_s": 2.7e-06,
+    "cumulative_s": 3.4e-06
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\lib\\_function_base_impl.py",
+    "line": 363,
+    "function": "iterable",
+    "primitive_calls": 3,
+    "calls": 3,
+    "self_s": 2.6e-06,
+    "cumulative_s": 3.1000000000000004e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method builtins.any>",
+    "primitive_calls": 3,
+    "calls": 3,
+    "self_s": 1.5e-06,
+    "cumulative_s": 2.5e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'cumsum' of 'numpy.ndarray' objects>",
+    "primitive_calls": 1,
+    "calls": 1,
+    "self_s": 2.4000000000000003e-06,
+    "cumulative_s": 2.4000000000000003e-06
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\_ufunc_config.py",
+    "line": 488,
+    "function": "__exit__",
+    "primitive_calls": 2,
+    "calls": 2,
+    "self_s": 1.5e-06,
+    "cumulative_s": 2.3e-06
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\lib\\_stride_tricks_impl.py",
+    "line": 378,
+    "function": "<genexpr>",
+    "primitive_calls": 6,
+    "calls": 6,
+    "self_s": 1.0000000000000002e-06,
+    "cumulative_s": 1.0000000000000002e-06
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'set' of '_contextvars.ContextVar' objects>",
+    "primitive_calls": 2,
+    "calls": 2,
+    "self_s": 8.000000000000001e-07,
+    "cumulative_s": 8.000000000000001e-07
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'reset' of '_contextvars.ContextVar' objects>",
+    "primitive_calls": 2,
+    "calls": 2,
+    "self_s": 8.000000000000001e-07,
+    "cumulative_s": 8.000000000000001e-07
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\_ufunc_config.py",
+    "line": 462,
+    "function": "__init__",
+    "primitive_calls": 2,
+    "calls": 2,
+    "self_s": 7.000000000000001e-07,
+    "cumulative_s": 7.000000000000001e-07
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\lib\\_stride_tricks_impl.py",
+    "line": 24,
+    "function": "_maybe_view_as_subclass",
+    "primitive_calls": 3,
+    "calls": 3,
+    "self_s": 7.000000000000001e-07,
+    "cumulative_s": 7.000000000000001e-07
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method numpy._core._multiarray_umath._make_extobj>",
+    "primitive_calls": 2,
+    "calls": 2,
+    "self_s": 7.000000000000001e-07,
+    "cumulative_s": 7.000000000000001e-07
+  },
+  {
+    "file": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\src\\asar_repro\\objective.py",
+    "line": 20,
+    "function": "J",
+    "primitive_calls": 1,
+    "calls": 1,
+    "self_s": 5.000000000000001e-07,
+    "cumulative_s": 5.000000000000001e-07
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method builtins.iter>",
+    "primitive_calls": 3,
+    "calls": 3,
+    "self_s": 5.000000000000001e-07,
+    "cumulative_s": 5.000000000000001e-07
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method numpy.array>",
+    "primitive_calls": 3,
+    "calls": 3,
+    "self_s": 5.000000000000001e-07,
+    "cumulative_s": 5.000000000000001e-07
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'disable' of '_lsprof.Profiler' objects>",
+    "primitive_calls": 1,
+    "calls": 1,
+    "self_s": 4.0000000000000003e-07,
+    "cumulative_s": 4.0000000000000003e-07
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method numpy.zeros>",
+    "primitive_calls": 1,
+    "calls": 1,
+    "self_s": 4.0000000000000003e-07,
+    "cumulative_s": 4.0000000000000003e-07
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method '__exit__' of 'numpy.nditer' objects>",
+    "primitive_calls": 3,
+    "calls": 3,
+    "self_s": 4.0000000000000003e-07,
+    "cumulative_s": 4.0000000000000003e-07
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method builtins.abs>",
+    "primitive_calls": 4,
+    "calls": 4,
+    "self_s": 3.0000000000000004e-07,
+    "cumulative_s": 3.0000000000000004e-07
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\numeric.py",
+    "line": 2380,
+    "function": "_isclose_dispatcher",
+    "primitive_calls": 2,
+    "calls": 2,
+    "self_s": 2.0000000000000002e-07,
+    "cumulative_s": 2.0000000000000002e-07
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\lib\\_stride_tricks_impl.py",
+    "line": 396,
+    "function": "_broadcast_to_dispatcher",
+    "primitive_calls": 3,
+    "calls": 3,
+    "self_s": 2.0000000000000002e-07,
+    "cumulative_s": 2.0000000000000002e-07
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<built-in method numpy.lib.array_utils.normalize_axis_index>",
+    "primitive_calls": 1,
+    "calls": 1,
+    "self_s": 2.0000000000000002e-07,
+    "cumulative_s": 2.0000000000000002e-07
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\numeric.py",
+    "line": 91,
+    "function": "_zeros_like_dispatcher",
+    "primitive_calls": 1,
+    "calls": 1,
+    "self_s": 1.0000000000000001e-07,
+    "cumulative_s": 1.0000000000000001e-07
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\fromnumeric.py",
+    "line": 2834,
+    "function": "_cumsum_dispatcher",
+    "primitive_calls": 1,
+    "calls": 1,
+    "self_s": 1.0000000000000001e-07,
+    "cumulative_s": 1.0000000000000001e-07
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\lib\\_function_base_impl.py",
+    "line": 1398,
+    "function": "_diff_dispatcher",
+    "primitive_calls": 1,
+    "calls": 1,
+    "self_s": 1.0000000000000001e-07,
+    "cumulative_s": 1.0000000000000001e-07
+  },
+  {
+    "file": "~",
+    "line": 0,
+    "function": "<method 'append' of 'list' objects>",
+    "primitive_calls": 1,
+    "calls": 1,
+    "self_s": 1.0000000000000001e-07,
+    "cumulative_s": 1.0000000000000001e-07
+  },
+  {
+    "file": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\Lib\\site-packages\\numpy\\_core\\multiarray.py",
+    "line": 115,
+    "function": "empty_like",
+    "primitive_calls": 1,
+    "calls": 1,
+    "self_s": 0.0,
+    "cumulative_s": 0.0
+  }
+]

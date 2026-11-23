@@ -1,0 +1,17 @@
+{
+  "command": [
+    "powershell",
+    "-NoProfile",
+    "-File",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\B7-offline-restore\\checkout\\asar_repro\\scripts\\replay_baseline_v1_1.ps1",
+    "-OutputDir",
+    "outputs/baseline_v1.1/b7_restored_verification"
+  ],
+  "exit_code": 1,
+  "wall_s": 0.27072180004324764,
+  "stdout": "",
+  "stderr": "File E:\\毕业设计\\终稿研发\\new\\baseline\\B7-offline-restore\\checkout\\asar_repro\\scripts\\replay_baseline_v1_1.ps1 cannot be loaded\n because running scripts is disabled on this system. For more information, see about_Execution_Policies at https:/go.mi\ncrosoft.com/fwlink/?LinkID=135170.\n    + CategoryInfo          : SecurityError: (:) [], ParentContainsErrorRecordException\n    + FullyQualifiedErrorId : UnauthorizedAccess\n",
+  "restore_directory": "E:\\毕业设计\\终稿研发\\new\\baseline\\B7-offline-restore\\checkout",
+  "archive_sha256": "2257d28aa6754c19c9fbe5dbba8de4dbb5686d0d829f4253f82fd62624844507",
+  "network_guard": "ASAR_OFFLINE=1 via entrypoint"
+}

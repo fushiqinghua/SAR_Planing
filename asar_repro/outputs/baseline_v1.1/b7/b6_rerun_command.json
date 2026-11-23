@@ -1,0 +1,12 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "scripts/compare_b6.py",
+    "--output-dir",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\asar_repro\\outputs\\baseline_v1.1\\b7\\b6_rerun"
+  ],
+  "exit_code": 0,
+  "wall_s": 18.307249000063166,
+  "stdout": "paper_greedy_eps_1p1 completed None J 17.359684022080003 expanded 107\npaper_greedy_eps_1p04 completed None J 17.29389415456 expanded 1222\npaper_greedy_eps_1 budget_exceeded max_expansions J 20.477608335999996 expanded 5000\nmass_lb_eps_1p1 budget_exceeded max_expansions J 20.477608335999996 expanded 5000\nmass_lb_eps_1p04 budget_exceeded max_expansions J 20.477608335999996 expanded 5000\nmass_lb_eps_1 budget_exceeded max_expansions J 20.477608335999996 expanded 5000\n{'status': 'passed', 'runs': 7, 'search_completed': 2, 'search_aborted': 4, 'max_replay_J_error': 0.0}\n",
+  "stderr": ""
+}

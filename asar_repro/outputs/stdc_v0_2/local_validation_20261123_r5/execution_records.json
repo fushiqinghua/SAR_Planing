@@ -1,0 +1,33 @@
+{
+  "validation_driver": "scripts/run_stdc_local_stage.py",
+  "ordered_stages": [
+    "new_tests",
+    "full_tests",
+    "random_audit",
+    "small_search",
+    "lake_smoke"
+  ],
+  "per_stage_command_records": "Each <stage>/stage.json contains exact child command; stdout/stderr are preserved alongside.",
+  "comparison_command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "scripts/benchmark_stdc_comparison.py",
+    "--run-dir",
+    "outputs/stdc_v0_2/local_validation_20261123_r5"
+  ],
+  "comparison_exit_code": 0,
+  "comparison_logs": "Each paired_comparison/<run_id>/command.json, stdout.txt, stderr.txt",
+  "report_command": [
+    "python",
+    "scripts/report_stdc_comparison.py",
+    "--run-dir",
+    "outputs/stdc_v0_2/local_validation_20261123_r5"
+  ],
+  "report_exit_code": 0,
+  "prior_failures_retained": true,
+  "plot_visual_review": [
+    "real_performance.png",
+    "real_paths.png",
+    "real_survival_cost.png",
+    "toy_efficiency.png"
+  ]
+}
