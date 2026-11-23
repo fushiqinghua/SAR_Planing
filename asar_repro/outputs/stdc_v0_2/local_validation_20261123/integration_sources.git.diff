@@ -1,0 +1,1176 @@
+diff --git a/asar_repro/docs/stdc_v0_2/local_integration_blocked.md b/asar_repro/docs/stdc_v0_2/local_integration_blocked.md
+new file mode 100644
+index 0000000..9e9b28e
+--- /dev/null
++++ b/asar_repro/docs/stdc_v0_2/local_integration_blocked.md
+@@ -0,0 +1,104 @@
++# STDC-A^SAR v0.2 本地接入：blocked
++
++**状态：blocked。全量历史测试首次失败后立即停止；本轮接入未验收通过。**
++
++研究分支为 `stdc-research-v0.2`，独立 worktree：`E:\毕业设计\终稿研发\new\baseline\SAR_Planing-stdc-v0.2`。起点为冻结分支 `baseline-v1.1` 的 `81b9be9b51625ed9012a69f9cb90e296bf2ec5c2`。原基线目录保留原分支与原数据；没有移动其引用，没有修改 B7、评价器、forcing 或原海上搜救程序。
++
++## 本轮实际顺序与结果
++
++| 阶段 | 本机结果 | 测试/案例数量 |
++|---|---|---|
++| 工作树与输入指纹预检 | passed；541 份跟踪文件一致，110 份原始数据逐文件复制后 SHA 相同 | 654 份原基线文件纳入保留核验 |
++| apply_stdc_patch.py --dry-run | passed；4 组锚点各出现 1 次，零源文件变更 | 不适用 |
++| 实际应用交付补丁 | passed；6 份 payload 与交付 SHA 一致，heuristic 改动与预检 diff 相同 | 不适用 |
++| 新测试 | passed | 19 passed，0 failed / 0 skipped |
++| 全量 pytest -x | **blocked** | **33 passed，1 failed**，随后停止 |
++| 160 组随机小图、逐前缀 Oracle | **未执行** | seed 100–179 × 两类为后续原计划，不是实测 |
++| 35 组小图搜索 | **未执行** | seed 15000–15034 为后续原计划 |
++| Lake Ontario mass_lb / stdc_lb 两组 smoke | **未执行** | 冻结粒子 seed=41；没有生成或替换粒子 |
++
++当前基线已有 248 项历史测试。交付新增 19 项，原 MODES 参数化测试另增加 5 项，预计完整收集应为 272 项；因全量在首次失败处终止，**本轮没有验证完整收集/执行总数**。JUnit 记录实际执行 34 项。交付包 results/ 中的镜像环境成绩没有冒充本机结果。
++
++## 阻断原因与原始证据
++
++失败测试：
++
++`tests/test_b4_artifacts.py::test_legacy_source_hashes_and_completion_denominator`，第 67 行。
++
++该测试读取冻结 `outputs/baseline_v1.1/b4/audit.json`，要求当前工作树的代码指纹等于 B4 固定指纹。交付补丁按设计修改研究工作树的 `src/asar_repro/heuristic.py`，因此出现：
++
++- B4 预期与原 baseline 实际 SHA：`38e03ceb511c62b7d5d9494206e752647bfaff796e7dc3ba08c195f1445446fc`
++- 本研究分支应用补丁后的 SHA：`43f94d7ec3ae69dc67ee4416892ea65aa445498a002905f77d4b1f533b168c0b`
++
++B4 审计清单中的其他 8 个代码/配置指纹仍一致。这是历史源码冻结断言与研究接入方式的冲突；它既不等同于 STDC 可采纳性反例，也不能被忽略。没有改写旧 hash、删除/跳过测试、放宽断言、回滚补丁后冒充研究分支测试通过，亦未继续任何后续实验。
++
++证据目录：`outputs/stdc_v0_2/local_validation_20261123/`：
++
++- `blocker.json`：失败位置、两个 hash、实际计数和未执行阶段。
++- `full_tests/stdout.txt`、`stderr.txt`、`pytest.xml`、`stage.json`：完整命令、输出和 pytest 原始失败。
++- `new_tests/`：19 项新测试的命令、stdout/stderr、JUnit 与计数。
++- `dry_run/anchors.json`、`planned_heuristic.diff`：锚点次数及先审阅后应用的差异。
++- 每阶段的 `before.git.diff`、`after.git.diff`、`*.git.status`、`*.source_sha256.json`：阶段快照。
++- `00_preflight.json`、`post_stop_preservation.json`：基线/输入/交付文件指纹及停止后的独立核对。
++- `validation_summary.json`：总状态 blocked。
++- `read_only_review.json`：只读代码审查结论；不冒充测试结果。
++
++## 环境与执行命令
++
++现有解释器：`C:\Users\35448\.conda\envs\maritime-sar\python.exe`。Python 包版本：NumPy 2.4.6、SciPy 1.17.1、OpenDrift 1.14.12、pytest 9.2.0、netCDF4 1.7.5。未安装或升级依赖。执行设置包括单线程 BLAS/OMP、Python 离线 socket 保护、PROJ_NETWORK=OFF、禁止写 pyc 和 pytest cache。
++
++每条真实 subprocess 参数保存在相应 `stage.json`；本轮依次执行的核心命令为：
++
++```powershell
++& $PY '<交付目录>\patch\scripts\apply_stdc_patch.py' --repo '<研究worktree>\asar_repro' --dry-run
++& $PY '<交付目录>\patch\scripts\apply_stdc_patch.py' --repo '<研究worktree>\asar_repro'
++& $PY -m pytest -x -q tests/test_stdc_heuristic.py --junitxml '<run>\new_tests\pytest.xml'
++& $PY -m pytest -x -q --junitxml '<run>\full_tests\pytest.xml'
++```
++
++`-x` 确保第一项失败后退出。新增外围 `scripts/run_stdc_local_stage.py` 按顺序记录日志，拒绝同名阶段覆盖、失败后的推进及无依据重试。后续独立审计 guard 尚未构建，因为本轮在历史测试阶段停止。
++
++准备 worktree 时出现的目录已存在和版本目录后缀解析问题已在测试前修正并记录于 `00_preflight.json/setup_attempts`；没有任何历史测试失败后的重试。
++
++## 文件改动范围
++
++已按交付原样应用：
++
++- `src/asar_repro/heuristic.py`：唯一既有源码变化，4 处模式/委托接入。
++- `src/asar_repro/stdc_heuristic.py`：独立 STDC 实现。
++- `tests/test_stdc_heuristic.py`：新增测试。
++- `scripts/run_stdc_random_audit.py`、`run_stdc_small_search.py`、`run_stdc_smoke.py`、`run_stdc_synthetic_bench.py`：4 份运行脚本；后者未执行。
++
++此外只增加本地阶段日志器、阻断报告和证据。安装脚本本身位于原交付目录，不在 6 份复制 payload 中。没有修改历史测试、B4 审计清单、search.py、objective.py、oracle.py、motion.py、search_reporting.py 或原仿真源码。
++
++## 停止后的数据保留证明
++
++- 原 baseline 分支仍为 `81b9be9b51625ed9012a69f9cb90e296bf2ec5c2`。
++- 654 份原基线受检文件全部未变；研究副本唯一既有源码变化为 heuristic.py，110 份 raw 副本未变。
++- 真实粒子归档 SHA：`8b30a87e543f1b33c39e70e1d0054e1750ec046ba2e0b627dd311d9945749456`。
++- 冻结协议 SHA：`bc18ddcb922231168aef34d8805bd3f7388a2b3ed9c27e9522368141fa469ff7`。
++- 评价器 objective.py SHA：`792077ad3e0286c03f60108f2580ea3b3557e3f5b002bc1a5e2f9f67e48fb2ad`。
++- 上述 SHA 复核是文件保留检查，**不是 Lake Ontario smoke 已执行的证明**。
++
++## 数学范围与尚未解决的问题
++
++只读审查确认交付算法按绝对时间 d+k 传播、按相对步数 k 构造可达集；特殊粒子 bin 保留未探测质量。19 项新测试通过，但指定的大批随机前缀与搜索审计尚未运行，不能据此宣告整体数学验收或真实性能提升。
++
++新模式的条件性离散 ε 界仍依赖至少两个顶点的矩形四邻接无等待图、外生非负质量守恒运动、固定逐格探测概率、特殊质量保留以及搜索真正完成。浮点容差不是形式化误差证明。paper_greedy 未加入 BOUND_MODES，动态 ε 界依旧不能认证；原动态反例测试尚未在本轮完整历史回归中执行到。
++
++只读审查还发现：
++
++1. 原 search_reporting 的通用算法命名不认识 STDC 模式；交付 smoke 自行记录 mode，不受该问题影响。本轮没有改冻结报告/评价接口。
++2. 单格图的 reachable 辅助接口未完全防护；本轮模型前提和指定实验要求至少两个顶点，不扩展该范围。
++3. 交付 random_audit 先累计违规、末尾才抛异常，mass dominance 仅统计；后续必须在外围补首违即停与输入数组归档。
++4. 交付 small_search 未保存并独立重放路径；后续必须补完整路径合法性/J/Pd 核对及 ε=1 双向 Oracle 一致。
++5. 交付 smoke 只相对当前协议验粒子 hash；后续必须先做固定协议、metadata、评价器、17×17/T49/q=.78/PT 指纹门禁，并确保中止无认证。
++6. 默认 smoke 是同进程两组单次检查，不代表独立进程三次重复的性能主实验。
++
++这些仅记录为后续接入问题；本轮未修复以跨过失败门槛。下一轮应先明确研究分支与历史源码冻结测试如何隔离，保留原历史审计的有效性，而不是改旧 hash 使其通过。没有开展创新点二、缓存优化、全消融、合成大图探针或环境 forcing 修改。
++
++## 归档补充
++
++停止后的归档检查发现：交付安装器在 Windows 上将 heuristic.py 写为 CRLF（73 行），git diff --check 返回 2 并将 CR 识别为行尾空白。因此原始 git diff 展示整文件行尾变化；dry_run/planned_heuristic.diff 则展示 4 处逻辑接入。详见 archive_diff_check.json 及对应 stdout/stderr。本轮保留测试时的字节，没有归一化源码或重跑测试。解释器完整版本为 Python 3.11.18（conda-forge，MSC v.1944，64 bit AMD64）。
++
++归档提交仅保存 blocked 的研究快照，不代表接入验收、发布或数学认证。没有推送远程。
+diff --git a/asar_repro/scripts/run_stdc_local_stage.py b/asar_repro/scripts/run_stdc_local_stage.py
+new file mode 100644
+index 0000000..f0259f1
+--- /dev/null
++++ b/asar_repro/scripts/run_stdc_local_stage.py
+@@ -0,0 +1,165 @@
++"""Sequential local acceptance harness; never repair or ignore a failed stage.
++
++The delivery is applied unchanged. Extra validation lives outside its algorithm.
++Run stages individually in ORDER so an assertion failure stops the entire sequence.
++"""
++
++import argparse
++from datetime import datetime, timezone
++import difflib
++import hashlib
++import importlib.util
++import json
++from pathlib import Path
++import subprocess
++import sys
++from time import perf_counter
++import traceback
++import xml.etree.ElementTree as ET
++
++ROOT = Path(__file__).resolve().parents[1]
++ORDER = ('dry_run', 'apply', 'new_tests', 'full_tests', 'random_audit', 'small_search', 'lake_smoke')
++PAYLOAD = ('src/asar_repro/stdc_heuristic.py', 'tests/test_stdc_heuristic.py',
++           'scripts/run_stdc_random_audit.py', 'scripts/run_stdc_small_search.py',
++           'scripts/run_stdc_smoke.py', 'scripts/run_stdc_synthetic_bench.py')
++
++
++def read(path):
++    return json.loads(path.read_bytes())
++
++
++def save(path, data):
++    path.write_text(json.dumps(data, indent=2, ensure_ascii=False, allow_nan=False)+'\n', encoding='utf-8')
++
++
++def sha(path):
++    with path.open('rb') as f:
++        return hashlib.file_digest(f, 'sha256').hexdigest()
++
++
++def require(value, message):
++    if not value:
++        raise AssertionError(message)
++
++
++def git(*args, cwd=ROOT):
++    return subprocess.check_output(['git', *args], cwd=cwd)
++
++
++def preserved(preflight, patched):
++    baseline = Path(preflight['baseline_root'])
++    require(git('branch','--show-current').decode().strip()=='stdc-research-v0.2', 'research branch mismatch')
++    require(git('rev-parse','baseline-v1.1').decode().strip()==preflight['base_commit'], 'baseline branch moved')
++    require(git('branch','--show-current',cwd=baseline).decode().strip()=='baseline-v1.1','baseline checkout changed')
++    for name, expected in preflight['baseline_all_preserved'].items():
++        require(sha(baseline/name)==expected, 'baseline file modified: '+name)
++    for name, expected in preflight['baseline_tracked'].items():
++        if patched and name=='src/asar_repro/heuristic.py':
++            continue
++        require(sha(ROOT/name)==expected, 'protected research copy modified: '+name)
++    for name, expected in preflight['raw_copies'].items():
++        require(sha(ROOT/name)==expected, 'raw forcing copy modified: '+name)
++
++
++def diff_snapshot(folder, tag):
++    (folder/(tag+'.git.diff')).write_bytes(git('diff','--binary'))
++    (folder/(tag+'.git.status')).write_bytes(git('status','--short'))
++    paths=(*PAYLOAD, 'scripts/run_stdc_local_stage.py','scripts/stdc_validation_guards.py')
++    save(folder/(tag+'.source_sha256.json'),{p:sha(ROOT/p) for p in paths if (ROOT/p).is_file()})
++
++
++def stage(stage, run):
++    require(run.is_relative_to(ROOT/'outputs/stdc_v0_2'), 'outputs must stay under research output root')
++    preflight=read(run/'00_preflight.json')
++    for previous in ORDER[:ORDER.index(stage)]:
++        require(read(run/previous/'stage.json')['status']=='passed', 'prior stage not passed: '+previous)
++    folder=run/stage
++    require(not folder.exists(), 'refusing stage overwrite or automatic retry')
++    folder.mkdir()
++    record=dict(stage=stage,status='running',started_utc=datetime.now(timezone.utc).isoformat(),
++                source_commit=preflight['base_commit'],branch='stdc-research-v0.2',
++                interpreter=sys.executable,versions=preflight['versions'],test_total=None)
++    seed=dict(dry_run=None,apply=None,new_tests=[5,7,11,13,93,12],
++              full_tests='frozen test fixtures and explicit seeds; source hashes in preflight',
++              random_audit=dict(matrix=list(range(100,180)),particles=list(range(100,180))),
++              small_search=list(range(15000,15035)),lake_smoke=dict(particle_seed=41,search='deterministic'))
++    record['seeds']=seed[stage]
++    delivery=Path(preflight['delivery_root'])
++    patch_script=delivery/'patch/scripts/apply_stdc_patch.py'
++    commands={
++        'dry_run':[str(patch_script),'--repo',str(ROOT),'--dry-run'],
++        'apply':[str(patch_script),'--repo',str(ROOT)],
++        'new_tests':['-m','pytest','-x','-q','tests/test_stdc_heuristic.py','--junitxml',str(folder/'pytest.xml')],
++        'full_tests':['-m','pytest','-x','-q','--junitxml',str(folder/'pytest.xml')],
++        'random_audit':['scripts/stdc_validation_guards.py','random_audit','--output-dir',str(folder)],
++        'small_search':['scripts/stdc_validation_guards.py','small_search','--output-dir',str(folder)],
++        'lake_smoke':['scripts/stdc_validation_guards.py','lake_smoke','--output-dir',str(folder)],
++    }
++    record['command']=[sys.executable,*commands[stage]]
++    save(folder/'stage.json',record)
++    started=perf_counter()
++    try:
++        preserved(preflight,patched=stage not in ('dry_run','apply'))
++        for name, expected in preflight['delivery_sha256'].items():
++            require(sha(delivery/name)==expected,'delivery changed: '+name)
++        diff_snapshot(folder,'before')
++        with (folder/'stdout.txt').open('w',encoding='utf-8') as stdout, (folder/'stderr.txt').open('w',encoding='utf-8') as stderr:
++            proc=subprocess.run(record['command'],cwd=ROOT,stdout=stdout,stderr=stderr,timeout=900)
++        record['exit_code']=proc.returncode
++        require(proc.returncode==0,'stage process failed; see stderr/stdout; STOP')
++        if stage=='dry_run':
++            spec=importlib.util.spec_from_file_location('delivered_apply',patch_script)
++            module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
++            text=(ROOT/'src/asar_repro/heuristic.py').read_text(encoding='utf-8')
++            anchors=(
++                'from .motion import MatrixMotion, ParticleMotion\n',
++                'MODES = ("zero", "mass_lb", "paper_greedy", "paper_literal_abs_time")\nBOUND_MODES = ("zero", "mass_lb")\n',
++                '        self.mode = mode\n        self._reachable = {}\n',
++                '        b = undetected_mass(belief, self.motion.state_size)\n        if self.mode == "mass_lb":\n')
++            counts=[text.count(a) for a in anchors]
++            require(counts==[1]*4,'patch anchors must occur exactly once')
++            changed=module.patch_heuristic(text)
++            save(folder/'anchors.json',dict(counts=counts,targets=list(PAYLOAD),
++                 only_existing_source_change='src/asar_repro/heuristic.py',
++                 predicted_utf8_lf_sha256=hashlib.sha256(changed.encode()).hexdigest()))
++            (folder/'planned_heuristic.diff').write_text(''.join(difflib.unified_diff(
++                text.splitlines(True),changed.splitlines(True),fromfile='a/src/asar_repro/heuristic.py',
++                tofile='b/src/asar_repro/heuristic.py')),encoding='utf-8')
++        elif stage=='apply':
++            for name in PAYLOAD:
++                require(sha(ROOT/name)==sha(delivery/'patch'/name),'payload differs from delivery: '+name)
++            text=(ROOT/'src/asar_repro/heuristic.py').read_text(encoding='utf-8')
++            require(hashlib.sha256(text.encode()).hexdigest()==read(run/'dry_run/anchors.json')['predicted_utf8_lf_sha256'],
++                    'installed heuristic differs from reviewed patch')
++        elif stage in ('new_tests','full_tests'):
++            suites=ET.parse(folder/'pytest.xml').getroot()
++            counts={k:sum(int(s.get(k,0)) for s in suites.iter('testsuite')) for k in ('tests','failures','errors','skipped')}
++            record['test_total']=counts['tests'];record['test_counts']=counts
++            require(counts['failures']==counts['errors']==counts['skipped']==0,'failure/error/skip blocks acceptance')
++            require(counts['tests']==(19 if stage=='new_tests' else 272),'unexpected collection count')
++        else:
++            record['guard_checks']=read(folder/'guard_summary.json')
++            require(record['guard_checks']['status']=='passed','guard did not pass')
++        preserved(preflight,patched=stage!='dry_run')
++        record['status']='passed'
++    except Exception as exc:
++        record.update(status='blocked',error=str(exc),traceback=traceback.format_exc())
++    finally:
++        record['wall_s']=perf_counter()-started
++        diff_snapshot(folder,'after')
++        save(folder/'stage.json',record)
++        known={name:read(run/name/'stage.json') for name in ORDER if (run/name/'stage.json').exists()}
++        save(run/'validation_summary.json',dict(status='blocked' if any(r['status']=='blocked' for r in known.values())
++             else ('passed' if len(known)==len(ORDER) else 'in_progress'),stages=known,
++             not_run=[name for name in ORDER if name not in known]))
++    print(json.dumps(dict(stage=stage,status=record['status'],exit_code=record.get('exit_code'),
++                         tests=record.get('test_counts'),wall_s=record['wall_s'],error=record.get('error')),ensure_ascii=False),flush=True)
++    return 0 if record['status']=='passed' else 2
++
++
++if __name__=='__main__':
++    parser=argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('stage',choices=ORDER)
++    parser.add_argument('--run-dir',type=Path,default=ROOT/'outputs/stdc_v0_2/local_validation_20261123')
++    args=parser.parse_args()
++    sys.exit(stage(args.stage,args.run_dir.resolve()))
+diff --git a/asar_repro/scripts/run_stdc_random_audit.py b/asar_repro/scripts/run_stdc_random_audit.py
+new file mode 100644
+index 0000000..931a2d1
+--- /dev/null
++++ b/asar_repro/scripts/run_stdc_random_audit.py
+@@ -0,0 +1,127 @@
++"""Independent full-path Oracle audit over frozen-seed random small problems.
++
++Run in an installed / PYTHONPATH-enabled asar_repro checkout.
++Produces one JSON with exact sampled inputs, prefix counts and bound statistics.
++No external historical forcing required.
++"""
++import argparse
++import json
++from pathlib import Path
++from time import perf_counter
++
++import numpy as np
++
++from asar_repro.grid import GridGraph
++from asar_repro.heuristic import Heuristic
++from asar_repro.motion import MatrixMotion, ParticleMotion
++from asar_repro.objective import score_path
++from asar_repro.oracle import enumerate_oracle
++
++
++def paths_prefixes(grid, v, T):
++    todo = [(v,)]
++    while todo:
++        path = todo.pop()
++        yield path
++        if len(path) <= T:
++            todo.extend(path+(next_v,) for next_v in grid.neighbors(path[-1]))
++
++
++def make_case(seed, motion_kind):
++    rng = np.random.default_rng(seed)
++    rows, cols = [(2,2),(2,3),(3,3)][seed%3]
++    T = 3 + seed%3
++    grid = GridGraph(rows, cols)
++    start = (seed//3) % grid.size
++    q = rng.uniform(.05, .99, grid.size)
++    if seed%13 == 0: q[:]=1.
++    elif seed%19 == 0: q[:]=0.
++    if motion_kind == 'matrix':
++        p = rng.dirichlet(np.ones(grid.size))
++        mats = []
++        for t in range(T):
++            P=np.zeros((grid.size,grid.size))
++            for i in range(grid.size):
++                targets=(i,*grid.neighbors(i))
++                P[i,list(targets)] = rng.dirichlet(np.full(len(targets), .8))
++            mats.append(P)
++        motion=MatrixMotion.time_varying(mats)
++        if seed%7 == 0:
++            motion=MatrixMotion.identity(grid.size)
++    else:
++        N=8+seed%13
++        cells = np.zeros((T+1,N),dtype=np.int64)
++        cells[0]=rng.integers(0,grid.size+4,size=N)
++        for t in range(1,T+1):
++            for j,prev in enumerate(cells[t-1]):
++                options=(prev,*grid.neighbors(int(prev))) if prev<grid.size else (prev,)
++                cells[t,j]=rng.choice(options)
++        cells[:,0]=grid.size+3  # always-special, never searchable
++        motion=ParticleMotion(cells,grid.size,np.arange(N)+seed*100)
++        p=rng.dirichlet(np.ones(N))
++    return grid,start,T,p,q,motion
++
++
++def main():
++    parser=argparse.ArgumentParser()
++    parser.add_argument('--cases-per-kind',type=int,default=45)
++    parser.add_argument('--seed-start',type=int,default=100)
++    parser.add_argument('--output',type=Path,default=Path('outputs/stdc_v0_2/random_audit.json'))
++    args=parser.parse_args()
++    modes=('mass_lb','reach_lb','capacity_lb','stepwise_lb','stdc_lb','stdc_radius_lb')
++    counts={'matrix':0,'particles':0}
++    failures=[]
++    gaps={mode:[] for mode in modes}
++    timings={mode:0.0 for mode in modes}
++    roots=[]
++    records=0
++    max_overrun=-float('inf')
++    max_mass_dominance_violation=0.
++    started=perf_counter()
++    for kind in ('matrix','particles'):
++        for index in range(args.cases_per_kind):
++            seed=args.seed_start+index
++            grid,start,T,p,q,motion=make_case(seed,kind)
++            opt=enumerate_oracle(grid,start=start,budget=T,p=p,q=q,motion=motion).J
++            estimators={mode:Heuristic(grid,budget=T,q=q,motion=motion,mode=mode) for mode in modes}
++            for path in paths_prefixes(grid,start,T):
++                d=len(path)-1
++                prefix=score_path(grid,path,start=start,budget=d,p=p,q=q,motion=motion)
++                best=enumerate_oracle(grid,start=start,budget=T,p=p,q=q,motion=motion,prefix=path)
++                oracle=best.J-prefix.J
++                h={}
++                for mode,estimate in estimators.items():
++                    tic=perf_counter()
++                    h[mode]=estimate(path[-1],d,prefix.final_belief)
++                    timings[mode]+=perf_counter()-tic
++                    if h[mode]-oracle>1e-10 or h[mode]<-1e-10:
++                        failures.append(dict(kind=kind,seed=seed,path=list(path),mode=mode,
++                                             h=h[mode],oracle=oracle))
++                    max_overrun=max(max_overrun,h[mode]-oracle)
++                    if d==0 and oracle>1e-10:
++                        gaps[mode].append(h[mode]/oracle)
++                max_mass_dominance_violation=max(max_mass_dominance_violation,
++                             h['mass_lb']-h['stdc_lb'])
++                if h['stdc_lb']+1e-10<h['stdc_radius_lb'] or \
++                   h['stdc_lb']+1e-10<h['stepwise_lb']:
++                    failures.append(dict(kind=kind,seed=seed,path=list(path),mode='dominance',values=h))
++                records+=1
++            roots.append(dict(kind=kind,seed=seed,T=T,grid=[grid.rows,grid.cols],
++                              oracle=opt,values={m:estimators[m](start,0,p) for m in modes}))
++            counts[kind]+=1
++    result=dict(scenario_counts=counts,prefix_evaluations=records,
++                positive_overestimation=max(0.,max_overrun),
++                mass_dominance_violation=max_mass_dominance_violation,
++                violations=len(failures),failures=failures[:10],
++                root_h_over_opt_mean={m:float(np.mean(v)) for m,v in gaps.items()},
++                root_h_over_opt_median={m:float(np.median(v)) for m,v in gaps.items()},
++                heuristic_time_s=timings, total_wall_s=perf_counter()-started,
++                roots=roots)
++    args.output.parent.mkdir(parents=True,exist_ok=True)
++    args.output.write_text(json.dumps(result,indent=2,allow_nan=False),encoding='utf8')
++    print(json.dumps({k:v for k,v in result.items() if k not in ('roots','failures')},indent=2))
++    if failures:
++        raise AssertionError('STDC lower bound/monotonicity counterexample; see output')
++
++if __name__=='__main__':
++    main()
+diff --git a/asar_repro/scripts/run_stdc_small_search.py b/asar_repro/scripts/run_stdc_small_search.py
+new file mode 100644
+index 0000000..fc03fa4
+--- /dev/null
++++ b/asar_repro/scripts/run_stdc_small_search.py
+@@ -0,0 +1,73 @@
++"""Compare Weighted A* with different admissible heuristics on finite small cases.
++
++This measures end-to-end expansion counts and wall time on identical small
++instances while independently checking all paths against the DFS oracle.
++Use statistical interpretation: timings depend on hardware and load.
++"""
++import argparse
++import json
++from pathlib import Path
++from time import perf_counter
++from collections import defaultdict
++import numpy as np
++from asar_repro.grid import GridGraph
++from asar_repro.motion import MatrixMotion
++from asar_repro.search import search_asar
++from asar_repro.oracle import enumerate_oracle
++
++
++def case(seed):
++    rng=np.random.default_rng(seed)
++    grid=GridGraph(2,3) if seed%2 else GridGraph(3,3)
++    T=5
++    p=rng.dirichlet(np.ones(grid.size))
++    q=rng.uniform(.25,.95,size=grid.size)
++    mats=[]
++    for _ in range(T):
++        P=np.zeros((grid.size,grid.size))
++        for i in range(grid.size):
++            nodes=(i,*grid.neighbors(i))
++            P[i,list(nodes)]=rng.dirichlet(np.ones(len(nodes)))
++        mats.append(P)
++    return grid,dict(start=grid.size//2,budget=T,p=p,q=q,motion=MatrixMotion.time_varying(mats))
++
++
++def main():
++    ap=argparse.ArgumentParser()
++    ap.add_argument('--cases',type=int,default=35)
++    ap.add_argument('--seed-start',type=int,default=15000)
++    ap.add_argument('--output',type=Path,default=Path('outputs/stdc_v0_2/small_search.json'))
++    args=ap.parse_args()
++    modes=('zero','mass_lb','reach_lb','capacity_lb','stepwise_lb','stdc_radius_lb','stdc_lb')
++    rows=[]
++    for seed in range(args.seed_start,args.seed_start+args.cases):
++        grid,cfg=case(seed)
++        exact=enumerate_oracle(grid,**cfg).J
++        for epsilon in (1.,1.1):
++            for mode in modes:
++                t0=perf_counter()
++                res=search_asar(grid,**cfg,epsilon=epsilon,heuristic=mode)
++                elapsed=perf_counter()-t0
++                assert res.status=='completed' and res.theory_certified
++                assert res.J <= epsilon*exact+1e-10,(seed,mode,epsilon,res.J,exact)
++                rows.append(dict(seed=seed,epsilon=epsilon,mode=mode,
++                                 J=res.J,oracle=exact,expanded=res.expanded,
++                                 time_s=elapsed))
++    aggregates=[]
++    for eps in (1.,1.1):
++        for mode in modes:
++            dat=[r for r in rows if r['mode']==mode and r['epsilon']==eps]
++            aggregates.append(dict(mode=mode,epsilon=eps,cases=len(dat),
++                 expanded_mean=float(np.mean([r['expanded'] for r in dat])),
++                 expanded_median=float(np.median([r['expanded'] for r in dat])),
++                 time_ms_mean=1000*float(np.mean([r['time_s'] for r in dat])),
++                 relative_cost_mean=float(np.mean([r['J']/r['oracle'] for r in dat]))))
++    result=dict(cases=args.cases,seed_start=args.seed_start,rows=rows,aggregate=aggregates)
++    args.output.parent.mkdir(parents=True,exist_ok=True)
++    args.output.write_text(json.dumps(result,indent=2),encoding='utf8')
++    for item in aggregates:
++        print(f"eps={item['epsilon']:3.1f} {item['mode']:<17} "
++              f"expanded_mean={item['expanded_mean']:7.2f} "
++              f"mean_ms={item['time_ms_mean']:7.2f} J/Oracle={item['relative_cost_mean']:.4f}")
++
++if __name__=='__main__':main()
+diff --git a/asar_repro/scripts/run_stdc_smoke.py b/asar_repro/scripts/run_stdc_smoke.py
+new file mode 100644
+index 0000000..bdd34cd
+--- /dev/null
++++ b/asar_repro/scripts/run_stdc_smoke.py
+@@ -0,0 +1,109 @@
++"""Run STDC on the frozen B7 Lake Ontario NPZ without rerunning OpenDrift.
++
++This script MUST run in a local asar_repro checkout where the historical
++particles.npz and B7 frozen_experiment_protocol.json are present.
++Default: mass_lb vs stdc_lb, epsilon=1.10. Use --full for the complete ablation.
++"""
++from __future__ import annotations
++import argparse
++import hashlib
++import json
++from pathlib import Path
++from time import perf_counter
++from unittest.mock import patch
++
++import numpy as np
++
++from asar_repro.grid import GridGraph
++from asar_repro.heuristic import Heuristic
++from asar_repro.motion import ParticleMotion
++from asar_repro.objective import score_path
++import asar_repro.search as search_module
++
++ROOT = Path(__file__).resolve().parents[1]
++PROTO = ROOT / 'outputs/baseline_v1.1/b7_final/frozen_experiment_protocol.json'
++
++
++def hash_file(path):
++    h = hashlib.sha256()
++    with open(path, 'rb') as f:
++        for block in iter(lambda: f.read(1024*1024), b''):
++            h.update(block)
++    return h.hexdigest()
++
++
++def main():
++    p = argparse.ArgumentParser()
++    p.add_argument('--full', action='store_true', help='all 5 modes x all 3 epsilon values')
++    p.add_argument('--repeat', type=int, default=1, help='repeat per run; set 3 for final timing')
++    p.add_argument('--output', type=Path, default=ROOT/'outputs/stdc_v0_2/lake_results.json')
++    args = p.parse_args()
++    protocol = json.loads(PROTO.read_text(encoding='utf-8'))
++    archive = ROOT / protocol['particle_archive']['path']
++    required = protocol['particle_archive']['sha256']
++    actual = hash_file(archive)
++    if actual != required:
++        raise RuntimeError(f'frozen particle SHA mismatch: {actual} != {required}')
++    cfg = protocol['mission']
++    graph = GridGraph(*cfg['grid_rows_cols'])
++    T = int(cfg['budget'])
++    with np.load(archive, allow_pickle=False) as z:
++        cells = np.asarray(z['cell_ids'])
++        ids = np.asarray(z['trajectory_id'])
++        w = np.asarray(z['initial_weights'])
++    motion = ParticleMotion(cells, graph.size, ids)
++    search_args = dict(start=int(protocol['start_vertex']), budget=T, p=w,
++                       q=cfg['audit_q'], motion=motion)
++    warm_start = tuple(protocol['initial_path'])
++    pt = score_path(graph, warm_start, **search_args)
++    if abs(pt.J - float(protocol['initial_J'])) > 1e-10:
++        raise AssertionError(f'PT J mismatch: {pt.J} vs {protocol["initial_J"]}')
++    modes = ('mass_lb','reach_lb','capacity_lb','stepwise_lb','stdc_lb') if args.full else ('mass_lb','stdc_lb')
++    epsilons = tuple(protocol['epsilon']) if args.full else (1.10,)
++    limits = protocol['search_limits']
++    rows = []
++    for eps in epsilons:
++        for mode in modes:
++            for repeat in range(args.repeat):
++                counter = {'calls':0,'s':0.0}
++                base = search_module.Heuristic
++                def factory(*a, **kw):
++                    h = base(*a, **kw)
++                    def timed(v, d, b, **extra):
++                        st = perf_counter()
++                        try:
++                            return h(v,d,b,**extra)
++                        finally:
++                            counter['calls'] += 1
++                            counter['s'] += perf_counter()-st
++                    return timed
++                with patch.object(search_module, 'Heuristic', new=factory):
++                    t0 = perf_counter()
++                    res = search_module.search_asar(
++                        graph, **search_args, heuristic=mode, epsilon=eps,
++                        initial_path=warm_start, **limits)
++                    elapsed = perf_counter()-t0
++                score = score_path(graph, res.path, **search_args) if res.path is not None else None
++                if score is not None and abs(score.J - res.J) > 1e-10:
++                    raise AssertionError('independent replay failed')
++                row = dict(mode=mode, epsilon=eps, repeat=repeat,
++                           J=res.J, Pd_T=score.pd_final if score else None,
++                           status=res.status, reason=res.stop_reason,
++                           theory_certified=res.theory_certified,
++                           source=res.incumbent_source, expanded=res.expanded,
++                           generated=res.generated, pruned=res.pruned, peak_open=res.peak_open,
++                           heuristic_calls=counter['calls'], heuristic_wall_s=counter['s'],
++                           search_wall_s=elapsed,
++                           path=list(res.path) if res.path is not None else None)
++                rows.append(row)
++                print(f'{mode:<17} eps={eps:.2f} rep={repeat} {res.status:<17} '
++                      f'J={res.J:.6f} expanded={res.expanded} wall={elapsed:.3f}s '
++                      f'cert={res.theory_certified}', flush=True)
++    args.output.parent.mkdir(parents=True, exist_ok=True)
++    args.output.write_text(json.dumps(dict(protocol_sha256=hash_file(PROTO),
++                         particle_sha256=actual, rows=rows), ensure_ascii=False, indent=2),
++                           encoding='utf-8')
++    print('Saved:', args.output)
++
++if __name__ == '__main__':
++    main()
+diff --git a/asar_repro/scripts/run_stdc_synthetic_bench.py b/asar_repro/scripts/run_stdc_synthetic_bench.py
+new file mode 100644
+index 0000000..f56c428
+--- /dev/null
++++ b/asar_repro/scripts/run_stdc_synthetic_bench.py
+@@ -0,0 +1,76 @@
++"""Reproducible *synthetic* large-grid performance probe (NOT Lake Ontario).
++
++Contrasts root-bound evaluation cost and fixed-expansion search work on
++17x17, 500 IDs, 49 steps, without requiring historical forcing archives.
++"""
++import argparse
++import json
++from pathlib import Path
++from time import perf_counter
++
++import numpy as np
++
++from asar_repro.grid import GridGraph
++from asar_repro.motion import ParticleMotion
++from asar_repro.heuristic import Heuristic
++from asar_repro.search import search_asar
++
++
++def synthetic_case(seed=20261123):
++    rng=np.random.default_rng(seed)
++    grid=GridGraph(17,17)
++    T=49
++    N=500
++    rc=np.empty((T+1,N,2),dtype=np.int32)
++    rc[0,:,0]=np.clip(np.round(rng.normal(8,2.2,N)).astype(int),0,16)
++    rc[0,:,1]=np.clip(np.round(rng.normal(8,2.2,N)).astype(int),0,16)
++    for t in range(1,T+1):
++        # smooth but uncertain drift, with a slow eastward tendency
++        step=rng.choice(5,size=N,p=[.45,.1,.13,.20,.12])
++        rc[t]=rc[t-1]
++        rc[t,:,0]=np.clip(rc[t,:,0] + (step==1)-(step==2),0,16)
++        rc[t,:,1]=np.clip(rc[t,:,1] + (step==3)-(step==4),0,16)
++    cells=(rc[:,:,0]*17+rc[:,:,1]).astype(np.int64)
++    # 5% persistently not searchable; do not discard probability mass
++    cells[:, :25]=grid.size + np.arange(25)%4
++    w=rng.dirichlet(np.ones(N))
++    return grid,T,ParticleMotion(cells,grid.size,np.arange(N)),w
++
++
++def main():
++    ap=argparse.ArgumentParser()
++    ap.add_argument('--expansions',type=int,default=200)
++    ap.add_argument('--output',type=Path,default=Path('outputs/stdc_v0_2/synthetic_bench.json'))
++    args=ap.parse_args()
++    grid,T,motion,p=synthetic_case()
++    start=144
++    q=.78
++    # Guaranteed legal but intentionally poor warm start, same for all.
++    initial=(start,)+tuple(start+1 if i%2==0 else start for i in range(T))
++    from asar_repro.objective import score_path
++    pt=score_path(grid,initial,start=start,budget=T,p=p,q=q,motion=motion).J
++    rows=[]
++    for mode in ('mass_lb','reach_lb','capacity_lb','stepwise_lb','stdc_radius_lb','stdc_lb'):
++        est=Heuristic(grid,budget=T,q=q,motion=motion,mode=mode)
++        tic=perf_counter()
++        root_h=est(start,0,p)
++        root_s=perf_counter()-tic
++        tic=perf_counter()
++        run=search_asar(grid,start=start,budget=T,p=p,q=q,motion=motion,heuristic=mode,
++                        epsilon=1.10,initial_path=initial,max_expansions=args.expansions,
++                        max_open=5000,max_seconds=20)
++        elapsed=perf_counter()-tic
++        rows.append(dict(mode=mode,root_h=root_h,root_eval_ms=root_s*1000,
++                         J=run.J,source=run.incumbent_source,status=run.status,
++                         reason=run.stop_reason,expanded=run.expanded,generated=run.generated,
++                         time_s=elapsed,certified=run.theory_certified))
++        print(f'{mode:<17} root_h={root_h:8.4f} h_ms={root_s*1e3:7.2f} '
++              f'expanded={run.expanded:4d} wall_s={elapsed:6.3f} '
++              f'J={run.J:.4f} status={run.status}',flush=True)
++    args.output.parent.mkdir(parents=True,exist_ok=True)
++    args.output.write_text(json.dumps(dict(synthetic_only=True,seed=20261123,grid=[17,17],
++               particle_count=500,budget=49,initial_J=pt,expansion_cap=args.expansions,
++               results=rows),indent=2),encoding='utf8')
++
++if __name__=='__main__':
++    main()
+diff --git a/asar_repro/src/asar_repro/heuristic.py b/asar_repro/src/asar_repro/heuristic.py
+index 9286622..bd8f6f3 100644
+--- a/asar_repro/src/asar_repro/heuristic.py
++++ b/asar_repro/src/asar_repro/heuristic.py
+@@ -1,67 +1,73 @@
+-"""Remaining truncated cost estimates for a path-state with unnormalized belief."""
+-
+-import numpy as np
+-
+-from .belief import sensor_probabilities, undetected_mass
+-from .grid import GridGraph, integer
+-from .motion import MatrixMotion, ParticleMotion
+-
+-
+-MODES = ("zero", "mass_lb", "paper_greedy", "paper_literal_abs_time")
+-BOUND_MODES = ("zero", "mass_lb")
+-
+-
+-class Heuristic:
+-    def __init__(self, grid: GridGraph, *, budget: int, q, motion: MatrixMotion | ParticleMotion, mode: str):
+-        if mode not in MODES:
+-            raise ValueError(f"unknown heuristic: {mode}")
+-        if grid.size != motion.size:
+-            raise ValueError("transition matrix size must match the grid")
+-        self.grid = grid
+-        self.budget = integer(budget, "budget")
+-        if isinstance(motion, ParticleMotion):
+-            motion.check_horizon(self.budget)
+-        self.q = sensor_probabilities(q, grid.size).copy()
+-        self.motion = motion
+-        self.mode = mode
+-        self._reachable = {}
+-        # S_R = a + ... + a^R = a(1 + S_{R-1}); includes a=0 and a=1.
+-        self._mass_factors = [0.0]
+-        if mode == "mass_lb":
+-            a = 1.0 - float(self.q.max())
+-            for _ in range(self.budget):
+-                self._mass_factors.append(a * (1.0 + self._mass_factors[-1]))
+-
+-    def __call__(self, vertex, depth, belief, *, choices=None) -> float:
+-        """Optionally append Algorithm 2's simulated cell IDs to choices."""
+-        self.grid.coordinates(vertex)
+-        depth = integer(depth, "depth")
+-        if depth > self.budget:
+-            raise ValueError("depth exceeds budget")
+-        if depth == self.budget or self.mode == "zero":
+-            return 0.0
+-        b = undetected_mass(belief, self.motion.state_size)
+-        if self.mode == "mass_lb":
+-            return float(b.sum()) * self._mass_factors[self.budget - depth]
+-
+-        if vertex not in self._reachable:
+-            distances = self.grid.distances_from(vertex)
+-            self._reachable[vertex] = [
+-                np.flatnonzero(distances <= k)
+-                for k in range(min(self.budget, int(distances.max())) + 1)
+-            ]
+-        rings = self._reachable[vertex]
+-        total = 0.0
+-        for step in range(depth + 1, self.budget + 1):
+-            prior = self.motion.propagate(b, step=step)
+-            radius = step if self.mode == "paper_literal_abs_time" else step - depth
+-            reachable = rings[min(radius, len(rings) - 1)]
+-            # IDs ascend, so the first maximum implements the deterministic tie rule.
+-            mass = self.motion.cell_mass(prior, step)
+-            gains = self.q[reachable] * mass[reachable]
+-            best = int(reachable[np.argmax(gains)])
+-            b = self.motion.sense(prior, best, self.q, step)
+-            total += float(b.sum())
+-            if choices is not None:
+-                choices.append(best)
+-        return total
++"""Remaining truncated cost estimates for a path-state with unnormalized belief."""
++
++import numpy as np
++
++from .belief import sensor_probabilities, undetected_mass
++from .grid import GridGraph, integer
++from .motion import MatrixMotion, ParticleMotion
++from .stdc_heuristic import STDCHeuristic, STDC_MODES
++
++
++MODES = ("zero", "mass_lb", "paper_greedy", "paper_literal_abs_time") + STDC_MODES
++BOUND_MODES = ("zero", "mass_lb") + STDC_MODES
++
++
++class Heuristic:
++    def __init__(self, grid: GridGraph, *, budget: int, q, motion: MatrixMotion | ParticleMotion, mode: str):
++        if mode not in MODES:
++            raise ValueError(f"unknown heuristic: {mode}")
++        if grid.size != motion.size:
++            raise ValueError("transition matrix size must match the grid")
++        self.grid = grid
++        self.budget = integer(budget, "budget")
++        if isinstance(motion, ParticleMotion):
++            motion.check_horizon(self.budget)
++        self.q = sensor_probabilities(q, grid.size).copy()
++        self.motion = motion
++        self.mode = mode
++        self._stdc = (STDCHeuristic(grid, budget=self.budget, q=self.q,
++                                    motion=motion, mode=mode)
++                      if mode in STDC_MODES else None)
++        self._reachable = {}
++        # S_R = a + ... + a^R = a(1 + S_{R-1}); includes a=0 and a=1.
++        self._mass_factors = [0.0]
++        if mode == "mass_lb":
++            a = 1.0 - float(self.q.max())
++            for _ in range(self.budget):
++                self._mass_factors.append(a * (1.0 + self._mass_factors[-1]))
++
++    def __call__(self, vertex, depth, belief, *, choices=None) -> float:
++        """Optionally append Algorithm 2's simulated cell IDs to choices."""
++        self.grid.coordinates(vertex)
++        depth = integer(depth, "depth")
++        if depth > self.budget:
++            raise ValueError("depth exceeds budget")
++        if depth == self.budget or self.mode == "zero":
++            return 0.0
++        b = undetected_mass(belief, self.motion.state_size)
++        if self._stdc is not None:
++            return self._stdc(vertex, depth, b, choices=choices)
++        if self.mode == "mass_lb":
++            return float(b.sum()) * self._mass_factors[self.budget - depth]
++
++        if vertex not in self._reachable:
++            distances = self.grid.distances_from(vertex)
++            self._reachable[vertex] = [
++                np.flatnonzero(distances <= k)
++                for k in range(min(self.budget, int(distances.max())) + 1)
++            ]
++        rings = self._reachable[vertex]
++        total = 0.0
++        for step in range(depth + 1, self.budget + 1):
++            prior = self.motion.propagate(b, step=step)
++            radius = step if self.mode == "paper_literal_abs_time" else step - depth
++            reachable = rings[min(radius, len(rings) - 1)]
++            # IDs ascend, so the first maximum implements the deterministic tie rule.
++            mass = self.motion.cell_mass(prior, step)
++            gains = self.q[reachable] * mass[reachable]
++            best = int(reachable[np.argmax(gains)])
++            b = self.motion.sense(prior, best, self.q, step)
++            total += float(b.sum())
++            if choices is not None:
++                choices.append(best)
++        return total
+diff --git a/asar_repro/src/asar_repro/stdc_heuristic.py b/asar_repro/src/asar_repro/stdc_heuristic.py
+new file mode 100644
+index 0000000..225c7b4
+--- /dev/null
++++ b/asar_repro/src/asar_repro/stdc_heuristic.py
+@@ -0,0 +1,159 @@
++"""Provably admissible spatio-temporal / detection-capacity lower bounds.
++
++Research extension for A^SAR baseline-v1.1; does NOT replace paper_greedy.
++
++Models and timing must agree with the baseline:
++  * t=0: no sensing; at t=1...T: drift first, then sense one destination;
++  * grid is a four-neighbour rectangular graph, with no waiting;
++  * motion is exogenous, nonnegative and mass-preserving;
++  * non-searchable particle bins retain their undetected mass.
++
++The exact-k reachability formula requires at least TWO grid vertices.
++For a single-vertex grid and a nonzero remainder, no legal completion exists.
++"""
++
++from __future__ import annotations
++
++import numpy as np
++
++from .belief import sensor_probabilities, undetected_mass
++from .grid import GridGraph, integer
++from .motion import MatrixMotion, ParticleMotion
++
++
++STDC_MODES = (
++    "reach_lb",        # relaxed sensor simultaneously covers all exactly-k reachable cells
++    "capacity_lb",     # one-cell-per-step detection capacity, propagated through time
++    "stepwise_lb",     # per-time max(reach bound, capacity bound), no cross-coupling
++    "stdc_lb",         # temporal coupling + exactly-k reachable cells
++    "stdc_radius_lb",  # temporal coupling + dist <= k (ablation only)
++)
++
++
++class STDCHeuristic:
++    """Evaluate admissible remaining truncated expected detection-time costs.
++
++    Each call uses the input node's *path-dependent* undetected belief. A cached
++    (vertex, relative k) reachability set is safe; a cached whole h keyed only
++    by (vertex, depth) would NOT be safe.
++    """
++
++    def __init__(self, grid: GridGraph, *, budget: int, q,
++                 motion: MatrixMotion | ParticleMotion, mode: str = "stdc_lb"):
++        if mode not in STDC_MODES:
++            raise ValueError(f"unknown STDC heuristic: {mode}")
++        if grid.size != motion.size:
++            raise ValueError("motion grid size must match search grid size")
++        self.grid = grid
++        self.budget = integer(budget, "budget")
++        self.q = sensor_probabilities(q, grid.size).copy()
++        self.motion = motion
++        self.mode = mode
++        self._use_exact = mode != "stdc_radius_lb"
++        if isinstance(motion, ParticleMotion):
++            motion.check_horizon(self.budget)
++        self._distances: dict[int, np.ndarray] = {}
++        self._reach: dict[tuple[int, int], np.ndarray] = {}
++        # The native particle array can also represent inactive, land and
++        # outside particles with IDs >= grid.size; they MUST NOT be sensed.
++        self._particle_factors_template = (
++            np.ones(motion.bin_count, dtype=np.float64)
++            if isinstance(motion, ParticleMotion) else None
++        )
++
++    def reachable(self, vertex: int, relative_step: int) -> np.ndarray:
++        """Searchable vertex IDs reachable after exactly k legal moves.
++
++        stdc_radius_lb intentionally uses a superset (<= k) as an ablation.
++        """
++        self.grid.coordinates(vertex)
++        k = integer(relative_step, "relative_step", 1)
++        key = (vertex, k)
++        result = self._reach.get(key)
++        if result is not None:
++            return result
++        if vertex not in self._distances:
++            self._distances[vertex] = self.grid.distances_from(vertex)
++        dist = self._distances[vertex]
++        mask = dist <= k
++        if self._use_exact:
++            mask &= ((k - dist) % 2 == 0)
++        result = np.flatnonzero(mask)
++        # Do not mutate or cache a partially valid answer for a disconnected
++        # or one-cell no-wait graph. Exact-k availability is a model premise.
++        if result.size == 0:
++            raise ValueError("no legal continuation at this remaining step")
++        self._reach[key] = result
++        return result
++
++    def __call__(self, vertex: int, depth: int, belief, *, choices=None) -> float:
++        self.grid.coordinates(vertex)
++        depth = integer(depth, "depth")
++        if depth > self.budget:
++            raise ValueError("depth exceeds search budget")
++        if depth == self.budget:
++            return 0.0
++
++        b = undetected_mass(belief, self.motion.state_size)
++        relaxed = b.copy()  # ideal multi-cell observer belief
++        no_search = b.copy()  # must NEVER be attenuated by future sensing
++        mass0 = float(np.sum(b))
++        capacity_prev = mass0
++        coupled_prev = mass0
++        total = 0.0
++        is_particles = isinstance(self.motion, ParticleMotion)
++
++        for k in range(1, self.budget - depth + 1):
++            t = depth + k  # motion uses ABSOLUTE time; reach uses RELATIVE k
++            reach = self.reachable(vertex, k)
++            qr = self.q[reach]
++            qmax = float(qr.max())
++
++            if is_particles:
++                # OpenDrift particle ID-weight vector is unchanged by drift;
++                # absolute frame t gives each ID's new cell.
++                cells = self.motion.cell_ids[t]
++                if self.mode != "capacity_lb":
++                    factors = self._particle_factors_template.copy()
++                    factors[reach] = 1.0 - qr
++                    relaxed *= factors[cells]
++                    a = float(relaxed.sum())
++                else:
++                    a = 0.0
++                if self.mode != "reach_lb":
++                    mu = self.motion.cell_mass(no_search, t)
++                    u = float(np.max(qr * mu[reach]))
++                else:
++                    u = 0.0
++            else:
++                if self.mode != "capacity_lb":
++                    relaxed = self.motion.propagate(relaxed, step=t)
++                    relaxed[reach] *= (1.0 - qr)
++                    a = float(relaxed.sum())
++                else:
++                    a = 0.0
++                if self.mode != "reach_lb":
++                    no_search = self.motion.propagate(no_search, step=t)
++                    mu = self.motion.cell_mass(no_search, t)
++                    u = float(np.max(qr * mu[reach]))
++                else:
++                    u = 0.0
++
++            if self.mode == "reach_lb":
++                ell = a
++            else:
++                capacity_prev = max((1.0 - qmax) * capacity_prev,
++                                    capacity_prev - u)
++                if self.mode == "capacity_lb":
++                    ell = capacity_prev
++                elif self.mode == "stepwise_lb":
++                    ell = max(a, capacity_prev)
++                else:
++                    coupled_prev = max(a,
++                                       (1.0 - qmax) * coupled_prev,
++                                       coupled_prev - u)
++                    ell = coupled_prev
++            # Round-off is handled by small test tolerances. No epsilon is
++            # added to h: doing so would INVALIDATE admissibility.
++            total += ell
++        return float(total)
+diff --git a/asar_repro/tests/test_stdc_heuristic.py b/asar_repro/tests/test_stdc_heuristic.py
+new file mode 100644
+index 0000000..2008810
+--- /dev/null
++++ b/asar_repro/tests/test_stdc_heuristic.py
+@@ -0,0 +1,170 @@
++"""Oracle and regression tests for the STDC research heuristics.
++
++Runs WITHIN the existing asar_repro package after apply_stdc_patch.py.
++Never requires historical GRIB/NetCDF or OpenDrift integration.
++"""
++import numpy as np
++import pytest
++
++from asar_repro.grid import GridGraph
++from asar_repro.heuristic import Heuristic, BOUND_MODES
++from asar_repro.motion import MatrixMotion, ParticleMotion
++from asar_repro.objective import score_path
++from asar_repro.oracle import enumerate_oracle
++from asar_repro.search import search_asar
++from asar_repro.stdc_heuristic import STDC_MODES
++
++
++@pytest.mark.parametrize('mode', STDC_MODES)
++def test_terminal_returns_zero(mode):
++    grid = GridGraph(3, 3)
++    h = Heuristic(grid, budget=4, q=.78, motion=MatrixMotion.identity(9), mode=mode)
++    assert h(4, 4, np.ones(9)/9) == 0.
++    assert mode in BOUND_MODES
++
++
++def test_exact_k_parity_and_radius_ablation():
++    grid = GridGraph(3, 3)
++    exact = Heuristic(grid, budget=4, q=1., motion=MatrixMotion.identity(9), mode='stdc_lb')._stdc
++    radius = Heuristic(grid, budget=4, q=1., motion=MatrixMotion.identity(9), mode='stdc_radius_lb')._stdc
++    assert set(exact.reachable(4, 1)) == {1, 3, 5, 7}
++    assert set(exact.reachable(4, 2)) == {0, 2, 4, 6, 8}
++    assert set(radius.reachable(4, 2)) == set(range(9))
++    assert 4 not in exact.reachable(4, 1)
++    assert 4 in exact.reachable(4, 2)
++
++
++def test_static_reference_example_and_input_unchanged():
++    grid = GridGraph(3, 3)
++    p = np.zeros(9)
++    p[[0, 5, 7]] = [.2, .3, .5]
++    p_before = p.copy()
++    motion = MatrixMotion.identity(9)
++    args = dict(start=0, budget=4, p=p, q=.78, motion=motion)
++    opt = enumerate_oracle(grid, **args).J
++    values = {mode: Heuristic(grid, budget=4, q=.78, motion=motion, mode=mode)(0, 0, p)
++              for mode in ('mass_lb', *STDC_MODES)}
++    np.testing.assert_array_equal(p, p_before)
++    assert opt == pytest.approx(3.22, abs=1e-10)
++    # Frozen theoretical example, catches time-index and parity mistakes.
++    assert values['stdc_lb'] == pytest.approx(2.596, abs=1e-10)
++    assert values['stdc_radius_lb'] == pytest.approx(2.1656896, abs=1e-9)
++    for mode in STDC_MODES:
++        assert 0 <= values[mode] <= opt + 1e-10
++    assert values['stdc_lb'] >= values['stdc_radius_lb'] - 1e-10
++    assert values['stdc_lb'] >= max(values['mass_lb'], values['reach_lb'],
++                                    values['capacity_lb'], values['stepwise_lb']) - 1e-10
++
++
++def _all_prefixes(grid, start, budget):
++    stack = [(start,)]
++    while stack:
++        path = stack.pop()
++        yield path
++        if len(path) <= budget:
++            stack.extend(path + (u,) for u in grid.neighbors(path[-1]))
++
++
++def _markov(grid, T, seed, stationary):
++    rng = np.random.default_rng(seed)
++    p = rng.dirichlet(np.ones(grid.size) * .9)
++    q = rng.uniform(.2, 1., size=grid.size)
++    if stationary:
++        motion = MatrixMotion.identity(grid.size)
++    else:
++        # Local, stochastic motion with stay-or-step; all rows conserve mass.
++        mats = []
++        for _ in range(T):
++            P = np.zeros((grid.size, grid.size))
++            for i in range(grid.size):
++                nodes = (i, *grid.neighbors(i))
++                P[i, list(nodes)] = rng.dirichlet(np.ones(len(nodes)))
++            mats.append(P)
++        motion = MatrixMotion.time_varying(mats)
++    return p, q, motion
++
++
++@pytest.mark.parametrize('grid,T,seed,stationary', [
++    (GridGraph(2,2), 4, 5, False),
++    (GridGraph(2,3), 4, 7, False),
++    (GridGraph(3,3), 4, 11, True),
++    (GridGraph(3,3), 5, 13, False),
++])
++def test_all_prefixes_matrix_oracle(grid, T, seed, stationary):
++    start = grid.size // 2
++    p, q, motion = _markov(grid, T, seed, stationary)
++    estimators = {mode: Heuristic(grid, budget=T, q=q, motion=motion, mode=mode)
++                  for mode in ('mass_lb', *STDC_MODES)}
++    args = dict(start=start, budget=T, p=p, q=q, motion=motion)
++    for path in _all_prefixes(grid, start, T):
++        d = len(path)-1
++        b = score_path(grid, path, **{**args, 'budget': d}).final_belief
++        oracle = enumerate_oracle(grid, **args, prefix=path).J - score_path(
++            grid, path, **{**args, 'budget': d}).J
++        hs = {mode: h(path[-1], d, b) for mode, h in estimators.items()}
++        for mode, value in hs.items():
++            assert value >= -1e-10, (path, mode, value)
++            assert value <= oracle + 1e-10, (path, mode, value, oracle)
++        assert hs['stdc_lb'] >= hs['mass_lb'] - 1e-10
++        assert hs['stdc_lb'] >= hs['stdc_radius_lb'] - 1e-10
++        assert hs['stdc_lb'] >= hs['stepwise_lb'] - 1e-10
++
++
++def test_particle_id_and_special_bin_oracle():
++    grid = GridGraph(2, 3)
++    T = 4
++    rng = np.random.default_rng(93)
++    # Special-bin indices 6,7,8,9 remain unsensed but retain mass.
++    cell_ids = rng.integers(0, grid.size + 4, size=(T + 1, 16), dtype=np.int64)
++    cell_ids[:, 0] = grid.size  # permanently outside
++    w = rng.dirichlet(np.ones(cell_ids.shape[1]))
++    motion = ParticleMotion(cell_ids, grid.size, np.arange(w.size))
++    q = np.linspace(.1, .95, grid.size)
++    args = dict(start=1, budget=T, p=w, q=q, motion=motion)
++    estimators = {mode: Heuristic(grid, budget=T, q=q, motion=motion, mode=mode)
++                  for mode in ('mass_lb', *STDC_MODES)}
++    for path in _all_prefixes(grid, 1, T):
++        d = len(path)-1
++        prefix = score_path(grid, path, **{**args, 'budget': d})
++        exact = enumerate_oracle(grid, **args, prefix=path).J - prefix.J
++        for mode, est in estimators.items():
++            value = est(path[-1], d, prefix.final_belief)
++            assert value <= exact + 1e-10, (path, mode, value, exact)
++            assert value >= -1e-10
++        stdc = estimators['stdc_lb'](path[-1], d, prefix.final_belief)
++        assert stdc >= estimators['mass_lb'](path[-1], d, prefix.final_belief) - 1e-10
++
++
++@pytest.mark.parametrize('eps', [1.0, 1.04, 1.1])
++@pytest.mark.parametrize('motion_type', ['matrix', 'particles'])
++def test_certification_with_oracle(eps, motion_type):
++    grid, T = GridGraph(2, 3), 4
++    rng = np.random.default_rng(12)
++    if motion_type == 'matrix':
++        p, q, motion = _markov(grid, T, 12, False)
++    else:
++        cells = rng.integers(0, grid.size + 4, size=(T+1, 12), dtype=np.int64)
++        p = rng.dirichlet(np.ones(12))
++        q = .78
++        motion = ParticleMotion(cells, grid.size, np.arange(12))
++    args = dict(start=1, budget=T, p=p, q=q, motion=motion)
++    optimum = enumerate_oracle(grid, **args).J
++    for mode in ('mass_lb', 'reach_lb', 'capacity_lb', 'stepwise_lb', 'stdc_lb'):
++        res = search_asar(grid, **args, heuristic=mode, epsilon=eps)
++        assert res.status == 'completed'
++        assert res.theory_certified is True
++        assert res.J <= eps * optimum + 1e-10
++        assert score_path(grid, res.path, **args).J == pytest.approx(res.J, abs=1e-10)
++
++
++def test_no_faked_certificate_on_budget_stop():
++    grid, T = GridGraph(2, 2), 4
++    p = [.1, .2, .3, .4]
++    args = dict(start=0, budget=T, p=p, q=.78, motion=MatrixMotion.identity(4))
++    initial_path = (0, 1, 0, 1, 0)
++    result = search_asar(grid, **args, heuristic='stdc_lb', epsilon=1.0,
++                         initial_path=initial_path, max_expansions=0)
++    assert result.status == 'budget_exceeded'
++    assert result.stop_reason == 'max_expansions'
++    assert not result.theory_certified
++    assert result.path == initial_path

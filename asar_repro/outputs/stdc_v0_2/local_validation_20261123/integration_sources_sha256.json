@@ -1,0 +1,17 @@
+{
+  "status": "blocked",
+  "scope": "research sources and blocked report only; original baseline unchanged",
+  "branch": "stdc-research-v0.2",
+  "base_commit": "81b9be9b51625ed9012a69f9cb90e296bf2ec5c2",
+  "files": {
+    "src/asar_repro/heuristic.py": "43f94d7ec3ae69dc67ee4416892ea65aa445498a002905f77d4b1f533b168c0b",
+    "src/asar_repro/stdc_heuristic.py": "c1d8469513bec6612a83e7606d6e18c544938d166be56ffae95fa7a592e7d03d",
+    "tests/test_stdc_heuristic.py": "173c698f97c322c5f70f449e77661db412e8359462e3767d6569be3ec6ede26c",
+    "scripts/run_stdc_random_audit.py": "bc77ff7af1bc0d37f3b6476089212cc72317398e01396a99196d6da5bee6870b",
+    "scripts/run_stdc_small_search.py": "21c050f2bf46ff13072cfe2f0d2c7727d9515a3f7dfd82bd862a40d9bfda4b2c",
+    "scripts/run_stdc_smoke.py": "3116ad207de19891c37904b189fd704c6fa3cf6827774b52701602aeafcb04ef",
+    "scripts/run_stdc_synthetic_bench.py": "274750f6cc2f1299830fe94803c3bb88079dc587d220c31f1653637fd4208c79",
+    "scripts/run_stdc_local_stage.py": "8cd49b9c585b7607b0fedabbfc26553fc3c365d476b963290dc942a3d81a16ed",
+    "docs/stdc_v0_2/local_integration_blocked.md": "0081591ef4c7ce34cfeafc28e4906a24ffed1e580b5e43935985aa3666cb50aa"
+  }
+}

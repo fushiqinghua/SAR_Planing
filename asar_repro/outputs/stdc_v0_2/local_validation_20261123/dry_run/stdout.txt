@@ -1,0 +1,8 @@
+Git branch: stdc-research-v0.2; heuristic changed: True
+new: src\asar_repro\stdc_heuristic.py [c1d8469513be]
+new: tests\test_stdc_heuristic.py [173c698f97c3]
+new: scripts\run_stdc_smoke.py [3116ad207de1]
+new: scripts\run_stdc_random_audit.py [bc77ff7af1bc]
+new: scripts\run_stdc_synthetic_bench.py [274750f6cc2f]
+new: scripts\run_stdc_small_search.py [21c050f2bf46]
+DRY RUN: no modifications

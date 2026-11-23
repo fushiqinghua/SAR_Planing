@@ -1,0 +1,20 @@
+{
+  "baseline_branch": "baseline-v1.1",
+  "baseline_ref": "81b9be9b51625ed9012a69f9cb90e296bf2ec5c2",
+  "original_baseline_ref": "81b9be9b51625ed9012a69f9cb90e296bf2ec5c2",
+  "baseline_preserved_files": 654,
+  "changed_baseline_files": [],
+  "research_tracked_changes": [
+    "src/asar_repro/heuristic.py"
+  ],
+  "changed_raw_copies": [],
+  "evaluator_sha256": {
+    "src/asar_repro/objective.py": "792077ad3e0286c03f60108f2580ea3b3557e3f5b002bc1a5e2f9f67e48fb2ad",
+    "src/asar_repro/oracle.py": "93f41213b3352f0bde39ae3a114ba59a6987b05a755eb9c7260b738dc2a47b52",
+    "src/asar_repro/motion.py": "7e74178390ffa34f30f7b987a4d7a2459e8f0ca2646ca3026c97e505f758c2c9",
+    "src/asar_repro/search.py": "ca874a27897323d1f5bff46ce4a69fbdf21016df9a2960dc685f6c6f1336ff93"
+  },
+  "particle_sha256": "8b30a87e543f1b33c39e70e1d0054e1750ec046ba2e0b627dd311d9945749456",
+  "protocol_sha256": "bc18ddcb922231168aef34d8805bd3f7388a2b3ed9c27e9522368141fa469ff7",
+  "real_smoke_executed": false
+}

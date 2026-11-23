@@ -1,0 +1,20 @@
+.................................F
+================================== FAILURES ===================================
+____________ test_legacy_source_hashes_and_completion_denominator _____________
+
+    def test_legacy_source_hashes_and_completion_denominator():
+        audit, rows = read("audit.json"), read("legacy_runs.json")
+        for source in audit["legacy_sources"]:
+            assert digest(ROOT / source["path"]) == source["sha256"]
+        for source, expected in audit["code_sha256"].items():
+>           assert digest(ROOT / source) == expected
+E           AssertionError: assert '43f94d7ec3ae...b1f533b168c0b' == '38e03ceb511c...195f1445446fc'
+E             
+E             - 38e03ceb511c62b7d5d9494206e752647bfaff796e7dc3ba08c195f1445446fc
+E             + 43f94d7ec3ae69dc67ee4416892ea65aa445498a002905f77d4b1f533b168c0b
+
+tests\test_b4_artifacts.py:67: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_b4_artifacts.py::test_legacy_source_hashes_and_completion_denominator
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 33 passed in 25.90s

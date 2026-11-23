@@ -1,0 +1,18 @@
+{
+  "counts": [
+    1,
+    1,
+    1,
+    1
+  ],
+  "targets": [
+    "src/asar_repro/stdc_heuristic.py",
+    "tests/test_stdc_heuristic.py",
+    "scripts/run_stdc_random_audit.py",
+    "scripts/run_stdc_small_search.py",
+    "scripts/run_stdc_smoke.py",
+    "scripts/run_stdc_synthetic_bench.py"
+  ],
+  "only_existing_source_change": "src/asar_repro/heuristic.py",
+  "predicted_utf8_lf_sha256": "03a04b49786dd09d93a19e508daf114a868cc129e0432d149acd121ff3584a0a"
+}

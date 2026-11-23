@@ -1,0 +1,146 @@
+asar_repro/src/asar_repro/heuristic.py:1: trailing whitespace.
++"""Remaining truncated cost estimates for a path-state with unnormalized belief."""
+asar_repro/src/asar_repro/heuristic.py:2: trailing whitespace.
++
+asar_repro/src/asar_repro/heuristic.py:3: trailing whitespace.
++import numpy as np
+asar_repro/src/asar_repro/heuristic.py:4: trailing whitespace.
++
+asar_repro/src/asar_repro/heuristic.py:5: trailing whitespace.
++from .belief import sensor_probabilities, undetected_mass
+asar_repro/src/asar_repro/heuristic.py:6: trailing whitespace.
++from .grid import GridGraph, integer
+asar_repro/src/asar_repro/heuristic.py:7: trailing whitespace.
++from .motion import MatrixMotion, ParticleMotion
+asar_repro/src/asar_repro/heuristic.py:8: trailing whitespace.
++from .stdc_heuristic import STDCHeuristic, STDC_MODES
+asar_repro/src/asar_repro/heuristic.py:9: trailing whitespace.
++
+asar_repro/src/asar_repro/heuristic.py:10: trailing whitespace.
++
+asar_repro/src/asar_repro/heuristic.py:11: trailing whitespace.
++MODES = ("zero", "mass_lb", "paper_greedy", "paper_literal_abs_time") + STDC_MODES
+asar_repro/src/asar_repro/heuristic.py:12: trailing whitespace.
++BOUND_MODES = ("zero", "mass_lb") + STDC_MODES
+asar_repro/src/asar_repro/heuristic.py:13: trailing whitespace.
++
+asar_repro/src/asar_repro/heuristic.py:14: trailing whitespace.
++
+asar_repro/src/asar_repro/heuristic.py:15: trailing whitespace.
++class Heuristic:
+asar_repro/src/asar_repro/heuristic.py:16: trailing whitespace.
++    def __init__(self, grid: GridGraph, *, budget: int, q, motion: MatrixMotion | ParticleMotion, mode: str):
+asar_repro/src/asar_repro/heuristic.py:17: trailing whitespace.
++        if mode not in MODES:
+asar_repro/src/asar_repro/heuristic.py:18: trailing whitespace.
++            raise ValueError(f"unknown heuristic: {mode}")
+asar_repro/src/asar_repro/heuristic.py:19: trailing whitespace.
++        if grid.size != motion.size:
+asar_repro/src/asar_repro/heuristic.py:20: trailing whitespace.
++            raise ValueError("transition matrix size must match the grid")
+asar_repro/src/asar_repro/heuristic.py:21: trailing whitespace.
++        self.grid = grid
+asar_repro/src/asar_repro/heuristic.py:22: trailing whitespace.
++        self.budget = integer(budget, "budget")
+asar_repro/src/asar_repro/heuristic.py:23: trailing whitespace.
++        if isinstance(motion, ParticleMotion):
+asar_repro/src/asar_repro/heuristic.py:24: trailing whitespace.
++            motion.check_horizon(self.budget)
+asar_repro/src/asar_repro/heuristic.py:25: trailing whitespace.
++        self.q = sensor_probabilities(q, grid.size).copy()
+asar_repro/src/asar_repro/heuristic.py:26: trailing whitespace.
++        self.motion = motion
+asar_repro/src/asar_repro/heuristic.py:27: trailing whitespace.
++        self.mode = mode
+asar_repro/src/asar_repro/heuristic.py:28: trailing whitespace.
++        self._stdc = (STDCHeuristic(grid, budget=self.budget, q=self.q,
+asar_repro/src/asar_repro/heuristic.py:29: trailing whitespace.
++                                    motion=motion, mode=mode)
+asar_repro/src/asar_repro/heuristic.py:30: trailing whitespace.
++                      if mode in STDC_MODES else None)
+asar_repro/src/asar_repro/heuristic.py:31: trailing whitespace.
++        self._reachable = {}
+asar_repro/src/asar_repro/heuristic.py:32: trailing whitespace.
++        # S_R = a + ... + a^R = a(1 + S_{R-1}); includes a=0 and a=1.
+asar_repro/src/asar_repro/heuristic.py:33: trailing whitespace.
++        self._mass_factors = [0.0]
+asar_repro/src/asar_repro/heuristic.py:34: trailing whitespace.
++        if mode == "mass_lb":
+asar_repro/src/asar_repro/heuristic.py:35: trailing whitespace.
++            a = 1.0 - float(self.q.max())
+asar_repro/src/asar_repro/heuristic.py:36: trailing whitespace.
++            for _ in range(self.budget):
+asar_repro/src/asar_repro/heuristic.py:37: trailing whitespace.
++                self._mass_factors.append(a * (1.0 + self._mass_factors[-1]))
+asar_repro/src/asar_repro/heuristic.py:38: trailing whitespace.
++
+asar_repro/src/asar_repro/heuristic.py:39: trailing whitespace.
++    def __call__(self, vertex, depth, belief, *, choices=None) -> float:
+asar_repro/src/asar_repro/heuristic.py:40: trailing whitespace.
++        """Optionally append Algorithm 2's simulated cell IDs to choices."""
+asar_repro/src/asar_repro/heuristic.py:41: trailing whitespace.
++        self.grid.coordinates(vertex)
+asar_repro/src/asar_repro/heuristic.py:42: trailing whitespace.
++        depth = integer(depth, "depth")
+asar_repro/src/asar_repro/heuristic.py:43: trailing whitespace.
++        if depth > self.budget:
+asar_repro/src/asar_repro/heuristic.py:44: trailing whitespace.
++            raise ValueError("depth exceeds budget")
+asar_repro/src/asar_repro/heuristic.py:45: trailing whitespace.
++        if depth == self.budget or self.mode == "zero":
+asar_repro/src/asar_repro/heuristic.py:46: trailing whitespace.
++            return 0.0
+asar_repro/src/asar_repro/heuristic.py:47: trailing whitespace.
++        b = undetected_mass(belief, self.motion.state_size)
+asar_repro/src/asar_repro/heuristic.py:48: trailing whitespace.
++        if self._stdc is not None:
+asar_repro/src/asar_repro/heuristic.py:49: trailing whitespace.
++            return self._stdc(vertex, depth, b, choices=choices)
+asar_repro/src/asar_repro/heuristic.py:50: trailing whitespace.
++        if self.mode == "mass_lb":
+asar_repro/src/asar_repro/heuristic.py:51: trailing whitespace.
++            return float(b.sum()) * self._mass_factors[self.budget - depth]
+asar_repro/src/asar_repro/heuristic.py:52: trailing whitespace.
++
+asar_repro/src/asar_repro/heuristic.py:53: trailing whitespace.
++        if vertex not in self._reachable:
+asar_repro/src/asar_repro/heuristic.py:54: trailing whitespace.
++            distances = self.grid.distances_from(vertex)
+asar_repro/src/asar_repro/heuristic.py:55: trailing whitespace.
++            self._reachable[vertex] = [
+asar_repro/src/asar_repro/heuristic.py:56: trailing whitespace.
++                np.flatnonzero(distances <= k)
+asar_repro/src/asar_repro/heuristic.py:57: trailing whitespace.
++                for k in range(min(self.budget, int(distances.max())) + 1)
+asar_repro/src/asar_repro/heuristic.py:58: trailing whitespace.
++            ]
+asar_repro/src/asar_repro/heuristic.py:59: trailing whitespace.
++        rings = self._reachable[vertex]
+asar_repro/src/asar_repro/heuristic.py:60: trailing whitespace.
++        total = 0.0
+asar_repro/src/asar_repro/heuristic.py:61: trailing whitespace.
++        for step in range(depth + 1, self.budget + 1):
+asar_repro/src/asar_repro/heuristic.py:62: trailing whitespace.
++            prior = self.motion.propagate(b, step=step)
+asar_repro/src/asar_repro/heuristic.py:63: trailing whitespace.
++            radius = step if self.mode == "paper_literal_abs_time" else step - depth
+asar_repro/src/asar_repro/heuristic.py:64: trailing whitespace.
++            reachable = rings[min(radius, len(rings) - 1)]
+asar_repro/src/asar_repro/heuristic.py:65: trailing whitespace.
++            # IDs ascend, so the first maximum implements the deterministic tie rule.
+asar_repro/src/asar_repro/heuristic.py:66: trailing whitespace.
++            mass = self.motion.cell_mass(prior, step)
+asar_repro/src/asar_repro/heuristic.py:67: trailing whitespace.
++            gains = self.q[reachable] * mass[reachable]
+asar_repro/src/asar_repro/heuristic.py:68: trailing whitespace.
++            best = int(reachable[np.argmax(gains)])
+asar_repro/src/asar_repro/heuristic.py:69: trailing whitespace.
++            b = self.motion.sense(prior, best, self.q, step)
+asar_repro/src/asar_repro/heuristic.py:70: trailing whitespace.
++            total += float(b.sum())
+asar_repro/src/asar_repro/heuristic.py:71: trailing whitespace.
++            if choices is not None:
+asar_repro/src/asar_repro/heuristic.py:72: trailing whitespace.
++                choices.append(best)
+asar_repro/src/asar_repro/heuristic.py:73: trailing whitespace.
++        return total

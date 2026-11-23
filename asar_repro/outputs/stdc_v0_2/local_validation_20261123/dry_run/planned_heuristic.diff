@@ -1,0 +1,35 @@
+--- a/src/asar_repro/heuristic.py
++++ b/src/asar_repro/heuristic.py
+@@ -5,10 +5,11 @@
+ from .belief import sensor_probabilities, undetected_mass
+ from .grid import GridGraph, integer
+ from .motion import MatrixMotion, ParticleMotion
++from .stdc_heuristic import STDCHeuristic, STDC_MODES
+ 
+ 
+-MODES = ("zero", "mass_lb", "paper_greedy", "paper_literal_abs_time")
+-BOUND_MODES = ("zero", "mass_lb")
++MODES = ("zero", "mass_lb", "paper_greedy", "paper_literal_abs_time") + STDC_MODES
++BOUND_MODES = ("zero", "mass_lb") + STDC_MODES
+ 
+ 
+ class Heuristic:
+@@ -24,6 +25,9 @@
+         self.q = sensor_probabilities(q, grid.size).copy()
+         self.motion = motion
+         self.mode = mode
++        self._stdc = (STDCHeuristic(grid, budget=self.budget, q=self.q,
++                                    motion=motion, mode=mode)
++                      if mode in STDC_MODES else None)
+         self._reachable = {}
+         # S_R = a + ... + a^R = a(1 + S_{R-1}); includes a=0 and a=1.
+         self._mass_factors = [0.0]
+@@ -41,6 +45,8 @@
+         if depth == self.budget or self.mode == "zero":
+             return 0.0
+         b = undetected_mass(belief, self.motion.state_size)
++        if self._stdc is not None:
++            return self._stdc(vertex, depth, b, choices=choices)
+         if self.mode == "mass_lb":
+             return float(b.sum()) * self._mass_factors[self.budget - depth]
+ 
