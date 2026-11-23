@@ -61,7 +61,7 @@ $env:PYTEST_ADDOPTS = '-p no:cacheprovider'
 | [反例 pytest 输出](../../outputs/baseline_v1.1/b0/counterexample_pytest.txt) | `CDF1FD5BF6D9D49F9BA3FE10976A7939BD2B5D273C1145286E690BA3692E786F` |
 | [B0 验收报告](../../outputs/baseline_v1.1/b0/baseline_report.json) | `DBD1E3C09E3881FE16D719AC1EF676F500F8A8E44396D9AF1C260D7508B80C19` |
 
-## B1 · Table I 历史风流文件可得性
+## B1 · Table I 历史风流文件可得性（首次线上探测）
 
 **状态为 `blocked`。** 基于 `baseline-v1.1` 上的 B0 提交 `734380e`，对 Lake Ontario 做了最小文件获取，并逐个探测其余三组备选场景。清单生成和代码回归已完成。实际收取的风场、流场文件各为 0，四组数据均为 `unverified`。完整任务窗口、小时缓冲、来源目录证据和下一次重跑命令见[来源核验说明](source_inventory.md)。
 
@@ -87,9 +87,34 @@ $env:PYTEST_ADDOPTS = '-p no:cacheprovider'
 | [归档清单脚本](../../scripts/inventory_historical.py) | `3B328BBD204C6EC9774A4387DC9497CE2A6DA97A93CF6B98BD58BF16DB9AAF32` |
 | [Lake 最小获取脚本](../../scripts/fetch_lake_b1.py) | `6CEEE3A92FB1B0388BFA35B0A383D4DCB5AC12C69468B561F3EC3211221F0FAA` |
 | [B1 测试](../../tests/test_b1_inventory.py) | `ABFE70ABED4523559100ED9FCF18E26F4027AB9B7EE07847F531EC4BD86E80A8` |
-| [四场景来源清单](../../data/manifests/historical_sources.json) | `12448657F1C2829C48CF0538E8EBEF53F26C8EBF12D5012668221C188775E5C5` |
-| [来源核验说明](source_inventory.md) | `A475EA81CCCDEEB62AAB085EB236ACB79608FE95F9BC00E9D959790B58FB7EA6` |
+| [当时的四场景来源清单](../../outputs/baseline_v1.1/b1/initial_sources.json) | `12448657F1C2829C48CF0538E8EBEF53F26C8EBF12D5012668221C188775E5C5` |
+| 来源核验说明初版（Git `1b9f961`） | `A475EA81CCCDEEB62AAB085EB236ACB79608FE95F9BC00E9D959790B58FB7EA6` |
 | [获取回执](../../outputs/baseline_v1.1/b1/lake_acquisition.json) | `7612D5D99B7A85F90AC022C95D31C33D681C68778B7D81FF4D729BDCB6E47401` |
 | [清单命令输出](../../outputs/baseline_v1.1/b1/inventory.txt) | `8F55B405F5787082854E5567ADAFDDF6EA6FD56FCB53A626AD4A7A37A7BD498B` |
 | [B1 pytest 输出](../../outputs/baseline_v1.1/b1/b1_pytest.txt) | `472BF8A255B3109F013735317AB25E5C93B5ACCA2245A56DFC7A1FC33E6E3D37` |
 | [全量 pytest 输出](../../outputs/baseline_v1.1/b1/full_pytest.txt) | `B41B9CBE82653B8A47C4B6C68565D4F193516D784EFA422A5CCBDF847A35BFDA` |
+
+## B1 · Lake Ontario 手动交付复核
+
+**状态为 `passed`，真实文件对为 1/4。** 用户交付的 ZIP 为 261,221,397 字节，SHA-256 为 `72f7f4473fa81b15de09c1316d41f3b6596471a36c15e4539717ce1f5db0ae78`。解压目录为 `data/raw/historical/ASAR_B1_LakeOntario_20250826/`。本地保留 ZIP 和原始文件，Git 提交收录校验工具、四场景清单和验证记录。
+
+HRRR 五个 f00 文件共 21,911,006 字节，各含两个 10 米风原始消息。LOOFS 五个 18 UTC 循环 nowcast 完整文件共 350,797,365 字节。两组数据均覆盖 2025-08-26 13–17 UTC，间隔 3600 秒。任务时段为 14:45 至 15:52:33.740 UTC。数据支持事后重建；CST 时可用的实时预报回放和原作者起报周期均缺乏证据。
+
+全场风和最浅层流的有效分量均已读取。LKP 和 CSP 每小时均落在湿单元，分别为从零计数的第 44948、44949 号单元。289 个搜索格心中 221 个在湿单元内，68 个在网格外。B2 需验证 HRRR 网格风旋转、LOOFS 单元中心的顶层映射与湿干掩膜，并显式处理域外查询。本轮工作限于数据验收，J、Pd、搜索扩展和粒子质量账本留给后续阶段。
+
+| 用 `maritime-sar` 执行的命令 | 退出码 | 实测结果 |
+|---|---:|---|
+| 随包 `scripts/verify_hashes.py` | 0 | 26/26 个校验项匹配 |
+| 随包 `scripts/validate_b1.py --report …` | 1 | 此解释器缺少 `eccodes`，包内脚本在导入阶段退出 |
+| `scripts/verify_lake_b1.py` | 0 | 本地读取 10 个文件。NumPy 的 GRIB 解码与参考 ecCodes 全场摘要和两个点样值吻合；netCDF4 打开实际 FVCOM 文件验证时空和湿单元 |
+| `-m pytest -q tests/test_b1_inventory.py tests/test_b1_package.py` | 0 | 18 passed，0 failed，0 skipped，3.03 秒 |
+| `-m pytest -q` | 0 | 148 passed，0 failed，0 skipped，12.39 秒 |
+
+新增 [HRRR 编码核验](../../scripts/b1_hrrr.py)、[离线数据包核验与清单合并](../../scripts/verify_lake_b1.py)、[数据包测试](../../tests/test_b1_package.py)。[常规清单入口](../../scripts/inventory_historical.py) 也会复核已解压的数据。Bay of Fundy、Salish Sea、Arctic Ocean 三组清单与首次快照逐项相同。v1.0 已跟踪的 180 个文件的 SHA-256 全部匹配。
+
+| 本次证据 | SHA-256 |
+|---|---|
+| [本地验证 JSON](../../outputs/baseline_v1.1/b1/local/validation_local.json) | `54102833f169a06b280a0e67d5b40991685f7e7a745bd5999cda88cec920153b` |
+| [合并后的来源清单](../../data/manifests/historical_sources.json) | `fa6f8c839bf894a3654a74c28e347f598b413e4ae0484bd7d090b718a43fc400` |
+
+获取回执中的原始 URL、起报周期、HRRR 字节区间及逐文件 SHA-256 在合并后的清单中。详细复跑步骤与各测试输出见[来源说明](source_inventory.md)、[逐文件校验输出](../../outputs/baseline_v1.1/b1/local/hashes.txt)、[本地验收输出](../../outputs/baseline_v1.1/b1/local/verification.txt)、[专项测试](../../outputs/baseline_v1.1/b1/local/package_pytest.txt)和[全量回归](../../outputs/baseline_v1.1/b1/local/full_pytest.txt)。

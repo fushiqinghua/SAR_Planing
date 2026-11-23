@@ -29,6 +29,7 @@ HYCOM_CATALOG = (
 )
 NOAA_DOC = "https://www.ncei.noaa.gov/products/weather-climate-models/co-ops-operational-forecast"
 BYTE_LIMIT = 1024 * 1024
+LAKE_PACKAGE = "ASAR_B1_LakeOntario_20250826"
 
 
 def utc_text(t):
@@ -269,6 +270,12 @@ def inventory(spec, raw):
             if all(record[k]["status"] == "local_files_pending_review" for k in ("wind", "current"))
             else "blocked_pending_file_verification"
         )
+        if name == "lake_ontario" and (raw / LAKE_PACKAGE).is_dir():
+            # A later archive probe can fail while the delivered data are valid.
+            # Recheck the local bytes on every inventory run.
+            from verify_lake_b1 import merge_lake, verify
+
+            merge_lake(record, verify(raw / LAKE_PACKAGE, spec))
         cases.append(record)
     return cases
 
@@ -300,4 +307,8 @@ if __name__ == "__main__":
         print(case["scenario"], *case["requested_window_utc"], case["pair_status"])
     # Zero means two candidate headers can be reviewed for at least one case.
     # It makes no claim about coverage, components or suitability for B2.
-    sys.exit(0 if any(c["pair_status"] == "local_pair_pending_review" for c in cases) else 2)
+    sys.exit(
+        0
+        if any(c["pair_status"] in {"verified", "local_pair_pending_review"} for c in cases)
+        else 2
+    )

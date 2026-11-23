@@ -1,0 +1,27 @@
+PASS README_给本地Codex.md
+PASS evidence/hrrr.20250826.t13z.wrfsfcf00.grib2.idx
+PASS evidence/hrrr.20250826.t14z.wrfsfcf00.grib2.idx
+PASS evidence/hrrr.20250826.t15z.wrfsfcf00.grib2.idx
+PASS evidence/hrrr.20250826.t16z.wrfsfcf00.grib2.idx
+PASS evidence/hrrr.20250826.t17z.wrfsfcf00.grib2.idx
+PASS evidence/loofs_s3_listing.xml
+PASS evidence_stage7_scenarios.yaml
+PASS historical_sources.json
+PASS raw/hrrr/hrrr.20250826.t13z.f00.10m_uv.grib2
+PASS raw/hrrr/hrrr.20250826.t14z.f00.10m_uv.grib2
+PASS raw/hrrr/hrrr.20250826.t15z.f00.10m_uv.grib2
+PASS raw/hrrr/hrrr.20250826.t16z.f00.10m_uv.grib2
+PASS raw/hrrr/hrrr.20250826.t17z.f00.10m_uv.grib2
+PASS raw/loofs/loofs.t18z.20250826.fields.n001.nc
+PASS raw/loofs/loofs.t18z.20250826.fields.n002.nc
+PASS raw/loofs/loofs.t18z.20250826.fields.n003.nc
+PASS raw/loofs/loofs.t18z.20250826.fields.n004.nc
+PASS raw/loofs/loofs.t18z.20250826.fields.n005.nc
+PASS requirements_validation.txt
+PASS scripts/download_lake.py
+PASS scripts/validate_b1.py
+PASS scripts/verify_hashes.py
+PASS source_downloads.json
+PASS validation_download_environment.json
+PASS 其他场景来源核查.md
+26/26 files passed SHA-256 verification
