@@ -1,0 +1,611 @@
+{
+  "methods": [
+    {
+      "name": "ParallelTrack",
+      "implementation": "local dynamic envelope-based PT",
+      "certification": "none"
+    },
+    {
+      "name": "ASAR_paper",
+      "heuristic": "paper_greedy",
+      "epsilon": [
+        1.1,
+        1.04,
+        1.0
+      ],
+      "certification": "none; dynamic counterexample retained"
+    },
+    {
+      "name": "ASAR_mass_lb",
+      "heuristic": "mass_lb",
+      "epsilon": [
+        1.1,
+        1.04,
+        1.0
+      ],
+      "certification": "conditional discrete bound only if search completes; no B6 run completed"
+    },
+    {
+      "name": "zero",
+      "scope": "toy/Oracle reference",
+      "certification": "conditional on model and completed search"
+    },
+    {
+      "name": "ACO_inspired",
+      "scope": "old synthetic only; not run in B6; not ACO_original"
+    }
+  ],
+  "environment": {
+    "interpreter": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "versions": {
+      "python": "3.11.18",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "pyproj": "3.7.2",
+      "opendrift": "1.14.12"
+    },
+    "installed_distributions": [
+      {
+        "name": "adios-db",
+        "version": "1.2.7"
+      },
+      {
+        "name": "annotated-types",
+        "version": "0.8.0"
+      },
+      {
+        "name": "arcosparse",
+        "version": "0.5.1"
+      },
+      {
+        "name": "asar-repro",
+        "version": "0.0.1"
+      },
+      {
+        "name": "bokeh",
+        "version": "3.9.2"
+      },
+      {
+        "name": "boto3",
+        "version": "1.44.7"
+      },
+      {
+        "name": "botocore",
+        "version": "1.44.9"
+      },
+      {
+        "name": "Bottleneck",
+        "version": "1.6.1"
+      },
+      {
+        "name": "branca",
+        "version": "0.8.2"
+      },
+      {
+        "name": "cached-property",
+        "version": "2.0.1"
+      },
+      {
+        "name": "Cartopy",
+        "version": "0.26.0"
+      },
+      {
+        "name": "certifi",
+        "version": "2026.11.20"
+      },
+      {
+        "name": "cf_xarray",
+        "version": "0.11.3"
+      },
+      {
+        "name": "cftime",
+        "version": "1.6.6"
+      },
+      {
+        "name": "charset-normalizer",
+        "version": "3.5.2"
+      },
+      {
+        "name": "click",
+        "version": "8.5.1"
+      },
+      {
+        "name": "cloudpickle",
+        "version": "3.1.3"
+      },
+      {
+        "name": "cmocean",
+        "version": "4.0.3"
+      },
+      {
+        "name": "colorama",
+        "version": "0.4.6"
+      },
+      {
+        "name": "coloredlogs",
+        "version": "15.0.1"
+      },
+      {
+        "name": "colorspacious",
+        "version": "1.1.2"
+      },
+      {
+        "name": "contourpy",
+        "version": "1.3.3"
+      },
+      {
+        "name": "copernicusmarine",
+        "version": "2.5.1"
+      },
+      {
+        "name": "cycler",
+        "version": "0.12.1"
+      },
+      {
+        "name": "cytoolz",
+        "version": "1.2.0"
+      },
+      {
+        "name": "dask",
+        "version": "2026.8.0"
+      },
+      {
+        "name": "Deprecated",
+        "version": "1.3.1"
+      },
+      {
+        "name": "distributed",
+        "version": "2026.8.0"
+      },
+      {
+        "name": "donfig",
+        "version": "0.8.1.post1"
+      },
+      {
+        "name": "exceptiongroup",
+        "version": "1.3.2"
+      },
+      {
+        "name": "folium",
+        "version": "1.0.0"
+      },
+      {
+        "name": "fonttools",
+        "version": "4.68.0"
+      },
+      {
+        "name": "fsspec",
+        "version": "2026.9.0"
+      },
+      {
+        "name": "GDAL",
+        "version": "3.12.3"
+      },
+      {
+        "name": "geojson",
+        "version": "3.3.0"
+      },
+      {
+        "name": "geopandas",
+        "version": "1.2.0"
+      },
+      {
+        "name": "google-crc32c",
+        "version": "1.9.0"
+      },
+      {
+        "name": "h5netcdf",
+        "version": "1.8.3"
+      },
+      {
+        "name": "h5py",
+        "version": "3.16.0"
+      },
+      {
+        "name": "humanfriendly",
+        "version": "10.0"
+      },
+      {
+        "name": "idna",
+        "version": "3.20"
+      },
+      {
+        "name": "importlib_metadata",
+        "version": "10.0.0"
+      },
+      {
+        "name": "iniconfig",
+        "version": "2.3.1"
+      },
+      {
+        "name": "Jinja2",
+        "version": "3.1.6"
+      },
+      {
+        "name": "jmespath",
+        "version": "1.1.0"
+      },
+      {
+        "name": "joblib",
+        "version": "1.6.0"
+      },
+      {
+        "name": "kiwisolver",
+        "version": "1.5.1"
+      },
+      {
+        "name": "locket",
+        "version": "1.0.0"
+      },
+      {
+        "name": "lz4",
+        "version": "4.4.5"
+      },
+      {
+        "name": "mapclassify",
+        "version": "2.10.0"
+      },
+      {
+        "name": "maritime-search-sim",
+        "version": "0.1.0"
+      },
+      {
+        "name": "maritime-search-sim",
+        "version": "0.1.0"
+      },
+      {
+        "name": "MarkupSafe",
+        "version": "3.0.4"
+      },
+      {
+        "name": "matplotlib",
+        "version": "3.11.2"
+      },
+      {
+        "name": "msgpack",
+        "version": "1.2.4"
+      },
+      {
+        "name": "munkres",
+        "version": "1.1.4"
+      },
+      {
+        "name": "narwhals",
+        "version": "2.29.0"
+      },
+      {
+        "name": "nc-time-axis",
+        "version": "1.4.1"
+      },
+      {
+        "name": "netCDF4",
+        "version": "1.7.5"
+      },
+      {
+        "name": "networkx",
+        "version": "3.6.1"
+      },
+      {
+        "name": "numcodecs",
+        "version": "0.16.6"
+      },
+      {
+        "name": "numpy",
+        "version": "2.4.6"
+      },
+      {
+        "name": "opendrift",
+        "version": "1.14.12"
+      },
+      {
+        "name": "packaging",
+        "version": "26.3"
+      },
+      {
+        "name": "pandas",
+        "version": "3.1.1"
+      },
+      {
+        "name": "partd",
+        "version": "1.4.2"
+      },
+      {
+        "name": "pillow",
+        "version": "13.0.0"
+      },
+      {
+        "name": "pip",
+        "version": "26.2.2"
+      },
+      {
+        "name": "pluggy",
+        "version": "1.7.0"
+      },
+      {
+        "name": "psutil",
+        "version": "7.2.2"
+      },
+      {
+        "name": "pyarrow",
+        "version": "26.0.1"
+      },
+      {
+        "name": "pydantic",
+        "version": "2.14.4"
+      },
+      {
+        "name": "pydantic_core",
+        "version": "2.50.5"
+      },
+      {
+        "name": "Pygments",
+        "version": "2.21.0"
+      },
+      {
+        "name": "pykdtree",
+        "version": "1.4.3"
+      },
+      {
+        "name": "pynucos",
+        "version": "3.4.1"
+      },
+      {
+        "name": "pyogrio",
+        "version": "0.12.1"
+      },
+      {
+        "name": "pyparsing",
+        "version": "3.3.3"
+      },
+      {
+        "name": "pyproj",
+        "version": "3.7.2"
+      },
+      {
+        "name": "pyreadline3",
+        "version": "3.5.6"
+      },
+      {
+        "name": "pyshp",
+        "version": "3.1.9"
+      },
+      {
+        "name": "pystac",
+        "version": "1.16.1"
+      },
+      {
+        "name": "pystac-core",
+        "version": "1.16.1"
+      },
+      {
+        "name": "pystac-ext-classification",
+        "version": "2.0.2"
+      },
+      {
+        "name": "pystac-ext-datacube",
+        "version": "2.2.2"
+      },
+      {
+        "name": "pystac-ext-eo",
+        "version": "1.1.2"
+      },
+      {
+        "name": "pystac-ext-file",
+        "version": "2.1.2"
+      },
+      {
+        "name": "pystac-ext-grid",
+        "version": "1.1.2"
+      },
+      {
+        "name": "pystac-ext-item-assets",
+        "version": "1.0.2"
+      },
+      {
+        "name": "pystac-ext-label",
+        "version": "1.0.3"
+      },
+      {
+        "name": "pystac-ext-mgrs",
+        "version": "1.0.2"
+      },
+      {
+        "name": "pystac-ext-mlm",
+        "version": "1.4.2"
+      },
+      {
+        "name": "pystac-ext-pointcloud",
+        "version": "1.0.2"
+      },
+      {
+        "name": "pystac-ext-projection",
+        "version": "2.0.2"
+      },
+      {
+        "name": "pystac-ext-raster",
+        "version": "1.1.2"
+      },
+      {
+        "name": "pystac-ext-render",
+        "version": "2.0.1"
+      },
+      {
+        "name": "pystac-ext-sar",
+        "version": "1.0.2"
+      },
+      {
+        "name": "pystac-ext-sat",
+        "version": "1.0.2"
+      },
+      {
+        "name": "pystac-ext-scientific",
+        "version": "1.0.2"
+      },
+      {
+        "name": "pystac-ext-storage",
+        "version": "2.0.2"
+      },
+      {
+        "name": "pystac-ext-table",
+        "version": "1.2.2"
+      },
+      {
+        "name": "pystac-ext-timestamps",
+        "version": "1.1.2"
+      },
+      {
+        "name": "pystac-ext-version",
+        "version": "1.2.2"
+      },
+      {
+        "name": "pystac-ext-view",
+        "version": "1.0.2"
+      },
+      {
+        "name": "pystac-ext-xarray-assets",
+        "version": "1.0.2"
+      },
+      {
+        "name": "pytest",
+        "version": "9.2.0"
+      },
+      {
+        "name": "python-dateutil",
+        "version": "2.9.0.post0"
+      },
+      {
+        "name": "python-dotenv",
+        "version": "1.2.4"
+      },
+      {
+        "name": "PyYAML",
+        "version": "6.0.3"
+      },
+      {
+        "name": "requests",
+        "version": "2.34.2"
+      },
+      {
+        "name": "roaring-landmask",
+        "version": "0.11.0"
+      },
+      {
+        "name": "s3transfer",
+        "version": "0.19.3"
+      },
+      {
+        "name": "scikit-learn",
+        "version": "1.9.1"
+      },
+      {
+        "name": "scipy",
+        "version": "1.17.1"
+      },
+      {
+        "name": "semver",
+        "version": "3.1.2"
+      },
+      {
+        "name": "setuptools",
+        "version": "84.2.1"
+      },
+      {
+        "name": "shapely",
+        "version": "2.2.0"
+      },
+      {
+        "name": "six",
+        "version": "1.17.0"
+      },
+      {
+        "name": "sortedcontainers",
+        "version": "2.4.0"
+      },
+      {
+        "name": "tblib",
+        "version": "3.2.2"
+      },
+      {
+        "name": "threadpoolctl",
+        "version": "3.8.0"
+      },
+      {
+        "name": "tomli",
+        "version": "2.5.0"
+      },
+      {
+        "name": "toolz",
+        "version": "1.2.0"
+      },
+      {
+        "name": "tornado",
+        "version": "6.6.1"
+      },
+      {
+        "name": "tqdm",
+        "version": "4.70.1"
+      },
+      {
+        "name": "trajan",
+        "version": "0.12.1"
+      },
+      {
+        "name": "typing-inspection",
+        "version": "0.4.5"
+      },
+      {
+        "name": "typing_extensions",
+        "version": "4.16.0"
+      },
+      {
+        "name": "tzdata",
+        "version": "2026.6"
+      },
+      {
+        "name": "unicodedata2",
+        "version": "18.0.0"
+      },
+      {
+        "name": "urllib3",
+        "version": "2.8.0"
+      },
+      {
+        "name": "utm",
+        "version": "0.9.0"
+      },
+      {
+        "name": "wheel",
+        "version": "0.48.0"
+      },
+      {
+        "name": "wrapt",
+        "version": "2.5.2"
+      },
+      {
+        "name": "xarray",
+        "version": "2026.9.0"
+      },
+      {
+        "name": "xhistogram",
+        "version": "0.3.2"
+      },
+      {
+        "name": "xyzservices",
+        "version": "2026.9.1"
+      },
+      {
+        "name": "zarr",
+        "version": "3.1.6"
+      },
+      {
+        "name": "zict",
+        "version": "3.0.0"
+      },
+      {
+        "name": "zipp",
+        "version": "4.1.2"
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\B7-offline-restore-python\\checkout\\asar_repro\\scripts\\replay_baseline_v1_1.py",
+    "--output-dir",
+    "outputs/baseline_v1.1/b7_restored_verification"
+  ],
+  "exit_code": 0,
+  "wall_s": 127.53409810003359,
+  "stdout": "frozen_integrity passed\nfull_pytest passed\ndynamic_counterexample passed\nreal_forcing passed\nconstant_regression passed\nreal_particle_reintegration passed\nall_path_replay passed\nperformance_evidence passed\nb6_offline_rerun passed\nold_outputs_unchanged passed\noffline_archive passed\n{\"status\": \"passed\", \"output\": \"E:\\\\毕业设计\\\\终稿研发\\\\new\\\\baseline\\\\B7-offline-restore-python\\\\checkout\\\\asar_repro\\\\outputs\\\\baseline_v1.1\\\\b7_restored_verification\"}\n",
+  "stderr": "",
+  "restore_directory": "E:\\毕业设计\\终稿研发\\new\\baseline\\B7-offline-restore-python\\checkout",
+  "archive_sha256": "54af40879e64cce8650086f57c8fad2ab441e992dd53864b1cd3eee5669ad5c4",
+  "network_guard": "ASAR_OFFLINE=1 via Python entrypoint"
+}

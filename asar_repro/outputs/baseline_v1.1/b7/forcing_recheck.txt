@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "scenario": "lake_ontario",
+  "checks": {
+    "wind_node_max_error_m_s": 1.6333601138285303e-12,
+    "wind_speed_max_error_m_s": 1.5152323840084136e-12,
+    "current_face_max_error_m_s": 0.0,
+    "wind_check": "B1 ecCodes node vectors rotated using analytical spherical tangent cone convergence",
+    "current_check": "B1 original face speeds at LKP and CSP for each hour",
+    "opendrift_float32_max_error_m_s": 2.2667352972405297e-07
+  },
+  "samples": 4
+}
