@@ -1,0 +1,10 @@
+validated 5/45 window cases; searches=40
+validated 10/45 window cases; searches=80
+validated 15/45 window cases; searches=120
+validated 20/45 window cases; searches=160
+validated 25/45 window cases; searches=200
+validated 30/45 window cases; searches=240
+validated 35/45 window cases; searches=280
+validated 40/45 window cases; searches=320
+validated 45/45 window cases; searches=360
+{"status": "passed", "cases": 45, "searches": 360, "max_absolute_J_minus_oracle": 0.0}

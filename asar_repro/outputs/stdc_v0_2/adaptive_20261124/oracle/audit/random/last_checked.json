@@ -1,0 +1,45 @@
+{
+  "stage": "prefix_bounds",
+  "kind": "particles",
+  "seed": 179,
+  "input_sha256": "acca3dd26ecd824912415038bf74bd34c7673e3d8cb5d2ac16ed2ec9ef819f45",
+  "prefix": [
+    5,
+    8,
+    5,
+    4,
+    5
+  ],
+  "prefix_J": 3.781511033323667,
+  "exact_remaining": 0.6707684120085244,
+  "best_full_path": [
+    5,
+    8,
+    5,
+    4,
+    5,
+    2
+  ],
+  "bounds": {
+    "mass_lb": 0.04208566377631324,
+    "reach_lb": 0.6279995107349167,
+    "capacity_lb": 0.6707684120085244,
+    "stepwise_lb": 0.6707684120085244,
+    "stdc_radius_lb": 0.6707684120085244,
+    "stdc_lb": 0.6707684120085244,
+    "dense_dp": 0.6279995107349167,
+    "compact_dp": 0.6279995107349167,
+    "stdc_compact": 0.6707684120085244
+  },
+  "compact_dense_error": 0.0,
+  "guides": {
+    "reference": 0.6707684120085244,
+    "sparse": 0.6707684120085244,
+    "reference_choices": [
+      2
+    ],
+    "sparse_choices": [
+      2
+    ]
+  }
+}

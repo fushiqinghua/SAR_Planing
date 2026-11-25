@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "stage": "benchmark",
+  "runs": 36,
+  "completed": 6,
+  "budget_exceeded": 30,
+  "certified_full_routes": 0,
+  "conclusion": {
+    "stdc_runs": 9,
+    "stdc_beats_best_J_runs": 3,
+    "best_stdc_J": 17.264874448,
+    "best_reference_J": 17.29389415456
+  },
+  "wall_s": 165.2335393000394
+}

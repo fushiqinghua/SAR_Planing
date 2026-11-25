@@ -1,0 +1,4 @@
+  File "<string>", line 1
+    import numpy as np,json; from asar_repro.grid import GridGraph; from asar_repro.motion import ParticleMotion; from asar_repro.exact_repair import solve_exact_repair; from dataclasses import asdict; g=GridGraph(1,2); rows=[]; exec('for T in (49,60):\n m=ParticleMotion(np.ones((T+1,1),dtype=int),2,np.array([9])); r=solve_exact_repair(g,start=0,budget=T,p=np.array([1.]),q=.78,motion=m,initial_path=tuple(t%2 for t in range(T+1))); rows.append(asdict(r)); assert r.status==\
+                                                                                                                                                                                                                                          ^
+SyntaxError: unterminated string literal (detected at line 1)

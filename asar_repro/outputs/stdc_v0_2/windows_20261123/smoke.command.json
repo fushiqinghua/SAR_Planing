@@ -1,0 +1,13 @@
+{
+  "arguments": [
+    "scripts/run_window_experiments.py",
+    "smoke",
+    "--output-dir",
+    "outputs/stdc_v0_2/windows_20261123/smoke",
+    "--validation-evidence",
+    "outputs/stdc_v0_2/windows_20261123/validation_summary.json"
+  ],
+  "threads": 1,
+  "particle_seed": 41,
+  "executable": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe"
+}

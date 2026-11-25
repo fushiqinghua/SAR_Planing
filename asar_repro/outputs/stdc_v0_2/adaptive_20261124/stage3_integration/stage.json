@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "exit_code": 0,
+  "test_counts": {
+    "tests": 20,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  }
+}

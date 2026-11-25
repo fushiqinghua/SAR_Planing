@@ -1,0 +1,32 @@
+larger-window diagnostic started
+loading lake_ontario
+lake_ontario 10 0 elapsed 1.999898813664913e-06
+lake_ontario 10 10 elapsed 5.027139899902977
+lake_ontario 10 20 elapsed 10.117155599989928
+lake_ontario 10 30 elapsed 13.582456899923272
+lake_ontario finished length 10 windows 40
+lake_ontario 12 0 elapsed 15.50077629997395
+lake_ontario budget_exceeded best 17.264874448 elapsed 90.06410239997786
+loading arctic_ocean
+arctic_ocean 10 0 elapsed 1.800013706088066e-06
+arctic_ocean 10 10 elapsed 3.593904900015332
+arctic_ocean 10 20 elapsed 8.86960730003193
+arctic_ocean 10 30 elapsed 13.475103700067848
+arctic_ocean 10 40 elapsed 15.609680099994875
+arctic_ocean 10 50 elapsed 18.685013300040737
+arctic_ocean finished length 10 windows 51
+arctic_ocean 12 0 elapsed 19.149316200055182
+arctic_ocean 12 10 elapsed 68.28760750009678
+arctic_ocean budget_exceeded best 20.386109349119998 elapsed 90.04409080010373
+loading bay_of_fundy
+bay_of_fundy 10 0 elapsed 1.800013706088066e-06
+bay_of_fundy 10 10 elapsed 0.09608529997058213
+bay_of_fundy 10 20 elapsed 0.5440726999659091
+bay_of_fundy 10 30 elapsed 3.127433000016026
+bay_of_fundy 10 40 elapsed 5.819437999976799
+bay_of_fundy finished length 10 windows 46
+bay_of_fundy 12 0 elapsed 6.82725610001944
+bay_of_fundy 12 10 elapsed 7.020696299965493
+bay_of_fundy 12 20 elapsed 10.539987499942072
+bay_of_fundy 12 30 elapsed 52.441428199992515
+bay_of_fundy budget_exceeded best 45.881082400000004 elapsed 90.0253526000306

@@ -1,0 +1,7 @@
+{
+  "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro",
+  "command": "$PY='C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe'\n$env:PYTHONPATH=(Resolve-Path 'scripts/offline_guard').Path+[IO.Path]::PathSeparator+(Resolve-Path 'src').Path+[IO.Path]::PathSeparator+(Resolve-Path 'scripts').Path\n$env:PATH=(Join-Path (Split-Path $PY) 'Library\\bin')+[IO.Path]::PathSeparator+$env:PATH\n$env:PYTHONDONTWRITEBYTECODE='1'\n$env:PYTHONIOENCODING='utf-8'\n$env:PYTHONUTF8='1'\n$env:ASAR_OFFLINE='1'\n$env:PROJ_NETWORK='OFF'\n$env:OMP_NUM_THREADS='1'\n$env:OPENBLAS_NUM_THREADS='1'\n$env:MKL_NUM_THREADS='1'\n& $PY 'outputs/stdc_v0_2/rollout_limit_diagnosis_20261124/bound_audit/audit_pd_upper.py' 1> 'outputs/stdc_v0_2/rollout_limit_diagnosis_20261124/bound_audit/pd_stdout.txt' 2> 'outputs/stdc_v0_2/rollout_limit_diagnosis_20261124/bound_audit/pd_stderr.txt'\nGet-Content 'outputs/stdc_v0_2/rollout_limit_diagnosis_20261124/bound_audit/pd_stdout.txt'\nGet-Content 'outputs/stdc_v0_2/rollout_limit_diagnosis_20261124/bound_audit/pd_stderr.txt'",
+  "seed": 41,
+  "new_searches": 0,
+  "verification": "all 180 frozen routes actual hit counts <= root exact-time reachability count; original Pd matching within 1e-10"
+}

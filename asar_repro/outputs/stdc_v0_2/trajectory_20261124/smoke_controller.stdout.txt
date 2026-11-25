@@ -1,0 +1,8 @@
+1/8 paper_baseline work J=20.477608336 Pd=0.881063040 max_expansions 0.150s
+2/8 prior_stdc work J=20.477608336 Pd=0.881063040 max_expansions 0.186s
+3/8 compressed_stdc work J=20.477608336 Pd=0.881063040 max_expansions 0.194s
+4/8 dp_only work J=20.477608336 Pd=0.881063040 max_expansions 0.399s
+5/8 stdc_dp work J=20.477608336 Pd=0.881063040 max_expansions 0.476s
+6/8 mid_plain work J=20.477608336 Pd=0.881063040 max_expansions 0.311s
+7/8 mid_diverse work J=20.477608336 Pd=0.881063040 max_expansions 0.350s
+8/8 mid_dp work J=20.477608336 Pd=0.881063040 max_expansions 0.630s

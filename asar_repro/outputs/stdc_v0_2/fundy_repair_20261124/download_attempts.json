@@ -1,0 +1,28 @@
+{
+  "initial_single_connection": {
+    "status": "timeout",
+    "curl_exit_code": 28,
+    "limit_seconds": 180,
+    "received_bytes": 41691746,
+    "file": "original_n005.nc",
+    "valid_input": false
+  },
+  "parallel_range_download": {
+    "status": "verified",
+    "script": "fetch_parent.py",
+    "metadata": "download.json",
+    "file": "verified_parent_n005.nc",
+    "valid_input": true
+  },
+  "noaa_source_tree_lookup": {"http_status": 403},
+  "official_roms_source": {
+    "url": "https://raw.githubusercontent.com/myroms/roms/develop/ROMS/Utility/uv_rotate.F",
+    "local_file": "rotate.F"
+  },
+  "inventory": {
+    "url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/?list-type=2&prefix=gomofs/netcdf/2025/02/14/",
+    "local_file": "noaa_inventory.xml",
+    "entries": 41,
+    "truncated": false
+  }
+}

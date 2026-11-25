@@ -1,0 +1,1 @@
+{"variant": "portfolio_stdc", "protocol": "work", "J": 17.2919684950528, "Pd_T": 0.8949723971136, "status": "budget_exceeded", "stop_reason": "max_open", "work_expanded": 2935, "search_wall_s": 11.028891899972223}

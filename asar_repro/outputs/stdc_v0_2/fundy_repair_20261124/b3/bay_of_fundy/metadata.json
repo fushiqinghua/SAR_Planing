@@ -1,0 +1,2623 @@
+{
+  "status": "passed",
+  "scenario": "bay_of_fundy",
+  "forcing_kind": "historical_real",
+  "experiment_label": "historical_real_native_angle_geography_unverified",
+  "config": {
+    "forcing_kind": "historical_real",
+    "seed": 41,
+    "radius_m": 100,
+    "particles": 500,
+    "incident_utc": "2025-02-14T00:00:00Z",
+    "cst_utc": "2025-02-14T09:00:00Z",
+    "lkp_lon_lat": [
+      -65.3,
+      45.2
+    ],
+    "csp_lon_lat": [
+      -65.072,
+      45.283
+    ],
+    "object_key": "PIW-1",
+    "budget": 55,
+    "grid_rows_cols": [
+      49,
+      61
+    ],
+    "integration_s": 120,
+    "step_s": 37.04,
+    "cell_width_m": 740.8,
+    "output_s": 120,
+    "audit_q": 0.78
+  },
+  "config_hash": "30f23dd66300433e5f82815092d51cf6e205e2f35a08ce409a426009f5ae37fb",
+  "provenance": {
+    "schema": 1,
+    "config": {
+      "forcing_kind": "historical_real",
+      "seed": 41,
+      "radius_m": 100,
+      "particles": 500,
+      "incident_utc": "2025-02-14T00:00:00Z",
+      "cst_utc": "2025-02-14T09:00:00Z",
+      "lkp_lon_lat": [
+        -65.3,
+        45.2
+      ],
+      "csp_lon_lat": [
+        -65.072,
+        45.283
+      ],
+      "object_key": "PIW-1",
+      "budget": 55,
+      "grid_rows_cols": [
+        49,
+        61
+      ],
+      "integration_s": 120,
+      "step_s": 37.04,
+      "cell_width_m": 740.8,
+      "output_s": 120,
+      "audit_q": 0.78
+    },
+    "input_fingerprints": {
+      "manifest_sha256": "2d306909585ffd95992634ddc1e939d64d9af15c50f94547aadc55ca01f3d8fa",
+      "b2_sha256": "bcea17ea7347fcdf3948f1ab86f228369c32597113c088f168b6fb0c91d2237a",
+      "sources": {
+        "wind": [
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250213/conus/hrrr.t23z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250213/conus/hrrr.t23z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "fd5491a2df8723107834e993e3afb4f08313e7ca57ed6c539735b280b7c7a108",
+            "run_cycle_utc": "2025-02-13T23:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-13T23:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 47125288,
+                "end_inclusive": 49506902,
+                "index_line": "77:47125288:d=2025021323:UGRD:10 m above ground:anl:",
+                "sha256": "e837507daad72b6c7a26b0aa001525a2eb56ffb56ed6029978651b4a31171c29",
+                "http": {
+                  "status": 206,
+                  "etag": "\"99aa8bc31895deac6cd04c8f2666cd78\"",
+                  "content_range": "bytes 47125288-49506902/147095456",
+                  "last_modified": "Thu, 13 Feb 2025 23:51:38 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 49506903,
+                "end_inclusive": 51888517,
+                "index_line": "78:49506903:d=2025021323:VGRD:10 m above ground:anl:",
+                "sha256": "e502751fb84a52b43b312ab050b1b6da6dfd6da167593cda97d160f41939c3bc",
+                "http": {
+                  "status": 206,
+                  "etag": "\"99aa8bc31895deac6cd04c8f2666cd78\"",
+                  "content_range": "bytes 49506903-51888517/147095456",
+                  "last_modified": "Thu, 13 Feb 2025 23:51:38 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250213.t23z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-13T23:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -18.545669555664062,
+                  "max": 22.704330444335938,
+                  "mean": 1.2767845304114562,
+                  "std": 4.741055733716479
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": -7.8581695556640625,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": -9.170669555664062,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -16.308229446411133,
+                  "max": 22.754270553588867,
+                  "mean": 0.8458054452320579,
+                  "std": 4.785332163072945
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": -6.120729446411133,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": -3.245729446411133,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t00z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t00z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "077d94569ef61fbf3de8b1537ce42e98810d7e517b3a33041791b36266b346b2",
+            "run_cycle_utc": "2025-02-14T00:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-14T00:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 47396692,
+                "end_inclusive": 49778306,
+                "index_line": "77:47396692:d=2025021400:UGRD:10 m above ground:anl:",
+                "sha256": "4b3b1dfaed7e47c9689718fc148db2524de5f3c1cbca878294ecfe761d331323",
+                "http": {
+                  "status": 206,
+                  "etag": "\"826355a9773af328d087220cf2ee4a6c\"",
+                  "content_range": "bytes 47396692-49778306/143409689",
+                  "last_modified": "Fri, 14 Feb 2025 00:52:26 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 49778307,
+                "end_inclusive": 52159921,
+                "index_line": "78:49778307:d=2025021400:VGRD:10 m above ground:anl:",
+                "sha256": "75227147bfa7d72eba0886cd6f28410b3b23c270fd0042fd7c9a2eb4c9d99da6",
+                "http": {
+                  "status": 206,
+                  "etag": "\"826355a9773af328d087220cf2ee4a6c\"",
+                  "content_range": "bytes 49778307-52159921/143409689",
+                  "last_modified": "Fri, 14 Feb 2025 00:52:26 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250214.t00z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-14T00:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -16.538118362426758,
+                  "max": 22.961881637573242,
+                  "mean": 1.1616831548887585,
+                  "std": 4.784718971304225
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": -8.913118362426758,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": -10.788118362426758,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -15.890950202941895,
+                  "max": 22.421549797058105,
+                  "mean": 0.5788594463176616,
+                  "std": 4.627858456629131
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": -4.8909502029418945,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": -5.3909502029418945,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t01z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t01z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "99389b5e4f126daf00689c40913c2ce5a84ee51990443f44df94f92bb4f246bf",
+            "run_cycle_utc": "2025-02-14T01:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-14T01:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 47118772,
+                "end_inclusive": 49500386,
+                "index_line": "77:47118772:d=2025021401:UGRD:10 m above ground:anl:",
+                "sha256": "4031a9fccfe42e49f81262d062d01e7eec25fdf51a4a57e9fcc532c17c5db20a",
+                "http": {
+                  "status": 206,
+                  "etag": "\"4fe63718f5ad57747f7fb70aac55ab51\"",
+                  "content_range": "bytes 47118772-49500386/140022121",
+                  "last_modified": "Fri, 14 Feb 2025 01:51:25 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 49500387,
+                "end_inclusive": 51882001,
+                "index_line": "78:49500387:d=2025021401:VGRD:10 m above ground:anl:",
+                "sha256": "01529e2534c3d3624b97e9bc87bc87e1fac19eb93b9cc03e9cbd5fa77f307b16",
+                "http": {
+                  "status": 206,
+                  "etag": "\"4fe63718f5ad57747f7fb70aac55ab51\"",
+                  "content_range": "bytes 49500387-51882001/140022121",
+                  "last_modified": "Fri, 14 Feb 2025 01:51:25 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250214.t01z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-14T01:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -19.104801177978516,
+                  "max": 21.020198822021484,
+                  "mean": 1.0824191511204855,
+                  "std": 4.798002576254252
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": -5.417301177978516,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": -6.542301177978516,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -16.550138473510742,
+                  "max": 20.637361526489258,
+                  "mean": 0.31353782393915786,
+                  "std": 4.443720351191023
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": -5.362638473510742,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": -4.737638473510742,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t02z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t02z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "d83cd1decdd37d3d7a31ec09b350d764455779361e411a42a0d185816cfb1654",
+            "run_cycle_utc": "2025-02-14T02:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-14T02:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 47062645,
+                "end_inclusive": 49444259,
+                "index_line": "77:47062645:d=2025021402:UGRD:10 m above ground:anl:",
+                "sha256": "c45857b4d9517e31e87403edcb3c8a18efb0e42c1d95aa7bb8ab69013a1a6ee9",
+                "http": {
+                  "status": 206,
+                  "etag": "\"8a994582e6dd1b00de92dca3e2de9b7d\"",
+                  "content_range": "bytes 47062645-49444259/137866381",
+                  "last_modified": "Fri, 14 Feb 2025 02:51:48 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 49444260,
+                "end_inclusive": 51825874,
+                "index_line": "78:49444260:d=2025021402:VGRD:10 m above ground:anl:",
+                "sha256": "a20819159e03ca48babc96dc665ba20a88fe5f4b40bd9513a94367df22c1e435",
+                "http": {
+                  "status": 206,
+                  "etag": "\"8a994582e6dd1b00de92dca3e2de9b7d\"",
+                  "content_range": "bytes 49444260-51825874/137866381",
+                  "last_modified": "Fri, 14 Feb 2025 02:51:48 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250214.t02z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-14T02:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -20.376628875732422,
+                  "max": 23.310871124267578,
+                  "mean": 1.0595569826896056,
+                  "std": 4.864734904071475
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": -1.7516288757324219,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": -2.126628875732422,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -17.588682174682617,
+                  "max": 19.973817825317383,
+                  "mean": 0.1557934966718915,
+                  "std": 4.389774117807245
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": -5.776182174682617,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": -5.713682174682617,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t03z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t03z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "505a792d9f72fae99e205bdc2e34677a67a3d95810c72cb30eff89ba274429d3",
+            "run_cycle_utc": "2025-02-14T03:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-14T03:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 47084253,
+                "end_inclusive": 49465867,
+                "index_line": "77:47084253:d=2025021403:UGRD:10 m above ground:anl:",
+                "sha256": "06160a299ea471522d323919e9a6633d41c65c1ed08e1619ae981e47557fc4f2",
+                "http": {
+                  "status": 206,
+                  "etag": "\"45fb5a6eaaba86d37b15e011f5364b64\"",
+                  "content_range": "bytes 47084253-49465867/137886947",
+                  "last_modified": "Fri, 14 Feb 2025 03:51:44 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 49465868,
+                "end_inclusive": 51847482,
+                "index_line": "78:49465868:d=2025021403:VGRD:10 m above ground:anl:",
+                "sha256": "c328f3f017efae23c88ce543e3d00251f27dac1132e4096a7221f8a98f934ec5",
+                "http": {
+                  "status": 206,
+                  "etag": "\"45fb5a6eaaba86d37b15e011f5364b64\"",
+                  "content_range": "bytes 49465868-51847482/137886947",
+                  "last_modified": "Fri, 14 Feb 2025 03:51:44 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250214.t03z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-14T03:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -21.099821090698242,
+                  "max": 23.337678909301758,
+                  "mean": 1.1222618155013515,
+                  "std": 4.903263685189936
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 2.400178909301758,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 0.4626789093017578,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -17.73739242553711,
+                  "max": 19.26260757446289,
+                  "mean": 0.04545547128522556,
+                  "std": 4.350131227893933
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": -5.862392425537109,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": -6.924892425537109,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t04z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t04z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "9adff744b72af45533ffb5a1c5b240627e7b04564426765c0dc812ef4ac171cb",
+            "run_cycle_utc": "2025-02-14T04:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-14T04:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 46966639,
+                "end_inclusive": 49348253,
+                "index_line": "77:46966639:d=2025021404:UGRD:10 m above ground:anl:",
+                "sha256": "fd3195c65796429b6b03f4eb2c69ad174cf21290a17cd0c34631a6dd5e892a1a",
+                "http": {
+                  "status": 206,
+                  "etag": "\"e2911b260cd45d41aac294da80d43d50\"",
+                  "content_range": "bytes 46966639-49348253/137933193",
+                  "last_modified": "Fri, 14 Feb 2025 04:51:39 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 49348254,
+                "end_inclusive": 51729868,
+                "index_line": "78:49348254:d=2025021404:VGRD:10 m above ground:anl:",
+                "sha256": "dee85069fa7fa3986b9dd71e4b7053ab19e29705a2f493cca7e34664af48baf0",
+                "http": {
+                  "status": 206,
+                  "etag": "\"e2911b260cd45d41aac294da80d43d50\"",
+                  "content_range": "bytes 49348254-51729868/137933193",
+                  "last_modified": "Fri, 14 Feb 2025 04:51:39 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250214.t04z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-14T04:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -20.792930603027344,
+                  "max": 23.957069396972656,
+                  "mean": 1.1391598892249357,
+                  "std": 4.903392129677877
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 9.332069396972656,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 7.582069396972656,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -17.421741485595703,
+                  "max": 19.140758514404297,
+                  "mean": -0.06102894515906353,
+                  "std": 4.308480610435013
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": -0.6092414855957031,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": -1.4217414855957031,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t05z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t05z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "c9222a436e1df0570d9424bc031d8e854cc93fc6e579eea4605e3255ade37d2a",
+            "run_cycle_utc": "2025-02-14T05:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-14T05:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 46785259,
+                "end_inclusive": 49166873,
+                "index_line": "77:46785259:d=2025021405:UGRD:10 m above ground:anl:",
+                "sha256": "a2192bd970ba42452bfa65306e0a48653c372a5c6f304b5128932692b2dea794",
+                "http": {
+                  "status": 206,
+                  "etag": "\"b1781dd47eec571b23f9ebe56756be28\"",
+                  "content_range": "bytes 46785259-49166873/137846588",
+                  "last_modified": "Fri, 14 Feb 2025 05:51:40 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 49166874,
+                "end_inclusive": 51548488,
+                "index_line": "78:49166874:d=2025021405:VGRD:10 m above ground:anl:",
+                "sha256": "e0fbea4775e21b0c936d678943b3d014b9034517cb47e095fb94ca2f4cdfbd4f",
+                "http": {
+                  "status": 206,
+                  "etag": "\"b1781dd47eec571b23f9ebe56756be28\"",
+                  "content_range": "bytes 49166874-51548488/137846588",
+                  "last_modified": "Fri, 14 Feb 2025 05:51:40 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250214.t05z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-14T05:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -20.660425186157227,
+                  "max": 25.652074813842773,
+                  "mean": 1.2141986277757055,
+                  "std": 4.930357030719856
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 9.652074813842773,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 9.714574813842773,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -17.53615379333496,
+                  "max": 18.40134620666504,
+                  "mean": -0.187858608096703,
+                  "std": 4.271408986835464
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 3.026346206665039,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 3.213846206665039,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t06z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t06z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "93a73a3cb49f6373e3b08731d3f616e15014ad63d81434af55c67e1ae24cb0df",
+            "run_cycle_utc": "2025-02-14T06:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-14T06:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 46978909,
+                "end_inclusive": 49360523,
+                "index_line": "77:46978909:d=2025021406:UGRD:10 m above ground:anl:",
+                "sha256": "114c9450624b6428238796cff19e98132067eb9ff486f94c2e81e4a06a885652",
+                "http": {
+                  "status": 206,
+                  "etag": "\"51e49a83d610ba1cc6332ad146fe8b42\"",
+                  "content_range": "bytes 46978909-49360523/138131929",
+                  "last_modified": "Fri, 14 Feb 2025 06:51:39 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 49360524,
+                "end_inclusive": 51742138,
+                "index_line": "78:49360524:d=2025021406:VGRD:10 m above ground:anl:",
+                "sha256": "04f438d3cde2835657aaf1cb0993a42d33ae16e8add3deea943aa16b113cd1dd",
+                "http": {
+                  "status": 206,
+                  "etag": "\"51e49a83d610ba1cc6332ad146fe8b42\"",
+                  "content_range": "bytes 49360524-51742138/138131929",
+                  "last_modified": "Fri, 14 Feb 2025 06:51:39 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250214.t06z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-14T06:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -19.977453231811523,
+                  "max": 26.960046768188477,
+                  "mean": 1.2655275042599798,
+                  "std": 4.899444237478774
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 11.460046768188477,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 11.772546768188477,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -17.244953155517578,
+                  "max": 17.630046844482422,
+                  "mean": -0.32125183892211356,
+                  "std": 4.254067113126637
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 5.817546844482422,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 6.067546844482422,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t07z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t07z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "ef68aec3acba0ded84866c4cdbfce6972ee8ea9d8cb80c916ccf41f7abf91051",
+            "run_cycle_utc": "2025-02-14T07:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-14T07:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 46434806,
+                "end_inclusive": 48816420,
+                "index_line": "77:46434806:d=2025021407:UGRD:10 m above ground:anl:",
+                "sha256": "b5ab03b83823e130c9ee7df6e49d05f921a3dec38ab01edbff5567747d2b8a60",
+                "http": {
+                  "status": 206,
+                  "etag": "\"111993fbd9124289e8b8d70d6e03bc6a\"",
+                  "content_range": "bytes 46434806-48816420/138084369",
+                  "last_modified": "Fri, 14 Feb 2025 07:51:56 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 48816421,
+                "end_inclusive": 51198035,
+                "index_line": "78:48816421:d=2025021407:VGRD:10 m above ground:anl:",
+                "sha256": "08bae86f2cca606290ca7ecfa7ad35d19565a74f92e9063dab1337706fea7006",
+                "http": {
+                  "status": 206,
+                  "etag": "\"111993fbd9124289e8b8d70d6e03bc6a\"",
+                  "content_range": "bytes 48816421-51198035/138084369",
+                  "last_modified": "Fri, 14 Feb 2025 07:51:56 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250214.t07z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-14T07:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -18.56049919128418,
+                  "max": 25.37700080871582,
+                  "mean": 1.287839953954939,
+                  "std": 4.830957692914478
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 12.81450080871582,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 13.43950080871582,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -17.929821014404297,
+                  "max": 18.882678985595703,
+                  "mean": -0.47087716195453067,
+                  "std": 4.311684652997223
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 5.257678985595703,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 6.382678985595703,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t08z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t08z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "cf3cecac020d31595eb7afcc056f1eb6c395dcc21755740128fde7c052db9a2c",
+            "run_cycle_utc": "2025-02-14T08:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-14T08:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 46427840,
+                "end_inclusive": 48809454,
+                "index_line": "77:46427840:d=2025021408:UGRD:10 m above ground:anl:",
+                "sha256": "18cb21c3d309a0bb9a687f34b971b41c44a182b350f6f8cd252cfc6556113c81",
+                "http": {
+                  "status": 206,
+                  "etag": "\"5411844c6d18b155601a9b28d3395d5c\"",
+                  "content_range": "bytes 46427840-48809454/137834745",
+                  "last_modified": "Fri, 14 Feb 2025 08:51:40 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 48809455,
+                "end_inclusive": 51191069,
+                "index_line": "78:48809455:d=2025021408:VGRD:10 m above ground:anl:",
+                "sha256": "4f64bda066355a2385b510db3f4fc204ecfb13bedf2477235e6548a635942dbe",
+                "http": {
+                  "status": 206,
+                  "etag": "\"5411844c6d18b155601a9b28d3395d5c\"",
+                  "content_range": "bytes 48809455-51191069/137834745",
+                  "last_modified": "Fri, 14 Feb 2025 08:51:40 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250214.t08z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-14T08:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -13.947831153869629,
+                  "max": 26.92716884613037,
+                  "mean": 1.292368029550391,
+                  "std": 4.7845263992355305
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 15.364668846130371,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 14.364668846130371,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -18.471595764160156,
+                  "max": 17.465904235839844,
+                  "mean": -0.6276165980511911,
+                  "std": 4.335459486621177
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 4.090904235839844,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 4.965904235839844,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t09z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t09z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "a0faee65e14aa7d03658a064d0b8d92ea0c08f227dabcc6c29357691a2ce6d43",
+            "run_cycle_utc": "2025-02-14T09:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-14T09:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 46415094,
+                "end_inclusive": 48796708,
+                "index_line": "77:46415094:d=2025021409:UGRD:10 m above ground:anl:",
+                "sha256": "f611456df52d3f1df8fff7cad863b17025444eb8c983c5a8571f97a90f2b4910",
+                "http": {
+                  "status": 206,
+                  "etag": "\"921f3818e41c1bb66a7c756818eeb733\"",
+                  "content_range": "bytes 46415094-48796708/137050316",
+                  "last_modified": "Fri, 14 Feb 2025 09:50:05 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 48796709,
+                "end_inclusive": 51178323,
+                "index_line": "78:48796709:d=2025021409:VGRD:10 m above ground:anl:",
+                "sha256": "55bc1be69bb1d0e7dfa926185f1264a752c6641deeef1bb1b88f77662eee32d3",
+                "http": {
+                  "status": 206,
+                  "etag": "\"921f3818e41c1bb66a7c756818eeb733\"",
+                  "content_range": "bytes 48796709-51178323/137050316",
+                  "last_modified": "Fri, 14 Feb 2025 09:50:05 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250214.t09z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-14T09:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -14.499067306518555,
+                  "max": 27.625932693481445,
+                  "mean": 1.2549792115606846,
+                  "std": 4.797645188418972
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 17.438432693481445,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 16.750932693481445,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -18.288959503173828,
+                  "max": 19.336040496826172,
+                  "mean": -0.791726358750397,
+                  "std": 4.386701542327484
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 4.023540496826172,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 5.523540496826172,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t10z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t10z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "9ee502c48d8d90925480913d978b8222127a21c0545c97eef5f482db6ae7dc12",
+            "run_cycle_utc": "2025-02-14T10:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-14T10:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 46004347,
+                "end_inclusive": 48385961,
+                "index_line": "77:46004347:d=2025021410:UGRD:10 m above ground:anl:",
+                "sha256": "0cd4bd465a229420b4776df07c140b977bfd5a6cc35c859b28dbbc1d09a15b22",
+                "http": {
+                  "status": 206,
+                  "etag": "\"ccf67fd365b9f76ac76f3d79d49ac4ce\"",
+                  "content_range": "bytes 46004347-48385961/136619377",
+                  "last_modified": "Fri, 14 Feb 2025 10:51:22 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 48385962,
+                "end_inclusive": 50767576,
+                "index_line": "78:48385962:d=2025021410:VGRD:10 m above ground:anl:",
+                "sha256": "d8022e85dbc47451e348e787ca6dbc8e580f6606273cb4bf9f64649a9b735323",
+                "http": {
+                  "status": 206,
+                  "etag": "\"ccf67fd365b9f76ac76f3d79d49ac4ce\"",
+                  "content_range": "bytes 48385962-50767576/136619377",
+                  "last_modified": "Fri, 14 Feb 2025 10:51:22 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250214.t10z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-14T10:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -14.28581428527832,
+                  "max": 27.46418571472168,
+                  "mean": 1.2039492020436153,
+                  "std": 4.777449995248061
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 16.71418571472168,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 16.83918571472168,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -17.04294204711914,
+                  "max": 23.08205795288086,
+                  "mean": -0.8624907380034373,
+                  "std": 4.38388628857261
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 2.2695579528808594,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 1.8945579528808594,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          },
+          {
+            "product": "HRRR",
+            "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t11z.wrfsfcf00.grib2",
+            "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250214/conus/hrrr.t11z.wrfsfcf00.grib2.idx",
+            "source_kind": "byte_exact_original_10m_UV_message_subset",
+            "bytes": 4763230,
+            "sha256": "ab073180f7a2c19a0a05859d418c0412cdcdc1abeb3187df2d9e35dbcf8f56a8",
+            "run_cycle_utc": "2025-02-14T11:00:00+00:00",
+            "lead_hours": 0,
+            "expected_valid_time_utc": "2025-02-14T11:00:00+00:00",
+            "byte_ranges": [
+              {
+                "variable": "UGRD",
+                "start": 45809836,
+                "end_inclusive": 48191450,
+                "index_line": "77:45809836:d=2025021411:UGRD:10 m above ground:anl:",
+                "sha256": "d51ff1f19d03d672e1bc70f60cb2257d0cb2e1db8b1fd600863c6b646b6f8822",
+                "http": {
+                  "status": 206,
+                  "etag": "\"05a40207077affbb834a1e395620782d\"",
+                  "content_range": "bytes 45809836-48191450/137238199",
+                  "last_modified": "Fri, 14 Feb 2025 11:50:20 GMT"
+                }
+              },
+              {
+                "variable": "VGRD",
+                "start": 48191451,
+                "end_inclusive": 50573065,
+                "index_line": "78:48191451:d=2025021411:VGRD:10 m above ground:anl:",
+                "sha256": "105ae02a80e7c6fd8bdc0afc63bc0f3d411142694e7e2ed6bd541486eb0f6aab",
+                "http": {
+                  "status": 206,
+                  "etag": "\"05a40207077affbb834a1e395620782d\"",
+                  "content_range": "bytes 48191451-50573065/137238199",
+                  "last_modified": "Fri, 14 Feb 2025 11:50:20 GMT"
+                }
+              }
+            ],
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/raw/wind/hrrr.20250214.t11z.f000.10m_uv.grib2",
+            "valid_utc": "2025-02-14T11:00:00+00:00",
+            "grid": {
+              "kind": "lambert",
+              "Nx": 1799,
+              "Ny": 1059,
+              "uvRelativeToGrid": 1
+            },
+            "vector_basis": "grid_relative_requires_rotation",
+            "units": "m/s",
+            "components": {
+              "10u": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -15.181639671325684,
+                  "max": 23.443360328674316,
+                  "mean": 1.09912045351547,
+                  "std": 4.831502258241056
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 16.755860328674316,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 16.380860328674316,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              },
+              "10v": {
+                "statistics": {
+                  "total": 1905141,
+                  "valid": 1905141,
+                  "missing_or_nonfinite": 0,
+                  "min": -19.222225189208984,
+                  "max": 18.465274810791016,
+                  "mean": -0.9563821689285957,
+                  "std": 4.378346478436841
+                },
+                "points": {
+                  "LKP": {
+                    "flat_index": 1665804,
+                    "native_component_m_s": 3.0902748107910156,
+                    "distance_m_approx": 947.8655861327076
+                  },
+                  "CSP": {
+                    "flat_index": 1674804,
+                    "native_component_m_s": 2.2777748107910156,
+                    "distance_m_approx": 1700.8184437255727
+                  }
+                }
+              }
+            },
+            "full_parent_sha256": null,
+            "reference_comparison": "independent ecCodes download record"
+          }
+        ],
+        "current": [
+          {
+            "bytes": 123073803,
+            "sha256": "eb768c27d14aa22cadb53a46596fbd235fed260e80fe82694bfaa4d3f1fcf5f9",
+            "local_path": "data/raw/historical/ASAR_B1_BayOfFundy_20250214/derived/gomofs_native_surface_20250213T23_20250214T11.nc",
+            "valid_times_utc": [
+              "2025-02-13T23:00:00+00:00",
+              "2025-02-14T00:00:00+00:00",
+              "2025-02-14T01:00:00+00:00",
+              "2025-02-14T02:00:00+00:00",
+              "2025-02-14T03:00:00+00:00",
+              "2025-02-14T04:00:00+00:00",
+              "2025-02-14T05:00:00+00:00",
+              "2025-02-14T06:00:00+00:00",
+              "2025-02-14T07:00:00+00:00",
+              "2025-02-14T08:00:00+00:00",
+              "2025-02-14T09:00:00+00:00",
+              "2025-02-14T10:00:00+00:00",
+              "2025-02-14T11:00:00+00:00"
+            ],
+            "native_variables": {
+              "u_sur": {
+                "units": "meter second-1",
+                "standard_name": "sea_water_surface_x_velocity",
+                "dimensions": [
+                  "ocean_time",
+                  "eta_u",
+                  "xi_u"
+                ],
+                "wet_statistics": {
+                  "total": 9554766,
+                  "valid": 9554766,
+                  "missing_or_nonfinite": 0,
+                  "min": -3.7950799465179443,
+                  "max": 4.477809906005859,
+                  "mean": 0.08065133654598196,
+                  "std": 0.2734061932223136
+                },
+                "whole_array_statistics": {
+                  "total": 11838372,
+                  "valid": 9555026,
+                  "missing_or_nonfinite": 2283346,
+                  "min": -3.7950799465179443,
+                  "max": 4.477809906005859,
+                  "mean": 0.08064914805866111,
+                  "std": 0.2734027983742009
+                }
+              },
+              "v_sur": {
+                "units": "meter second-1",
+                "standard_name": "sea_water_surface_y_velocity",
+                "dimensions": [
+                  "ocean_time",
+                  "eta_v",
+                  "xi_v"
+                ],
+                "wet_statistics": {
+                  "total": 9548682,
+                  "valid": 9548682,
+                  "missing_or_nonfinite": 0,
+                  "min": -2.807901382446289,
+                  "max": 3.042041063308716,
+                  "mean": -0.13111944008554824,
+                  "std": 0.3049864442347845
+                },
+                "whole_array_statistics": {
+                  "total": 11833224,
+                  "valid": 9548864,
+                  "missing_or_nonfinite": 2284360,
+                  "min": -2.807901382446289,
+                  "max": 3.042041063308716,
+                  "mean": -0.13111719312124656,
+                  "std": 0.3049839736162072
+                }
+              }
+            },
+            "points": {
+              "LKP": {
+                "rho": {
+                  "index": [
+                    699,
+                    964
+                  ],
+                  "distance_m_approx": 298.9847857061088,
+                  "always_wet": true
+                },
+                "u": {
+                  "index": [
+                    699,
+                    964
+                  ],
+                  "distance_m_approx": 225.65049496062278,
+                  "always_wet": true,
+                  "native_component_m_s": [
+                    -0.2510182559490204,
+                    0.42799538373947144,
+                    1.0084105730056763,
+                    1.2561886310577393,
+                    1.1024242639541626,
+                    0.7312936186790466,
+                    0.25299179553985596,
+                    -0.31735748052597046,
+                    -0.8369808793067932,
+                    -1.1450990438461304,
+                    -1.113226294517517,
+                    -0.8073537945747375,
+                    -0.2964012622833252
+                  ]
+                },
+                "v": {
+                  "index": [
+                    698,
+                    964
+                  ],
+                  "distance_m_approx": 277.39539144510366,
+                  "always_wet": true,
+                  "native_component_m_s": [
+                    0.07009705156087875,
+                    0.14134904742240906,
+                    0.15987882018089294,
+                    0.11455754190683365,
+                    0.06709077209234238,
+                    0.001943218638189137,
+                    -0.059611883014440536,
+                    -0.11725931614637375,
+                    -0.16275878250598907,
+                    -0.1709623634815216,
+                    -0.1473289132118225,
+                    -0.1214347779750824,
+                    -0.08176517486572266
+                  ]
+                }
+              },
+              "CSP": {
+                "rho": {
+                  "index": [
+                    700,
+                    993
+                  ],
+                  "distance_m_approx": 213.15655789148926,
+                  "always_wet": true
+                },
+                "u": {
+                  "index": [
+                    700,
+                    993
+                  ],
+                  "distance_m_approx": 180.5552794223164,
+                  "always_wet": true,
+                  "native_component_m_s": [
+                    -0.37258315086364746,
+                    0.1730605810880661,
+                    0.6910098195075989,
+                    0.998420238494873,
+                    0.9072570204734802,
+                    0.6363831162452698,
+                    0.2647983729839325,
+                    -0.19034384191036224,
+                    -0.600935697555542,
+                    -0.8614242076873779,
+                    -0.8975811004638672,
+                    -0.7032602429389954,
+                    -0.37939122319221497
+                  ]
+                },
+                "v": {
+                  "index": [
+                    699,
+                    993
+                  ],
+                  "distance_m_approx": 319.4315717405689,
+                  "always_wet": true,
+                  "native_component_m_s": [
+                    0.2403945028781891,
+                    0.25443920493125916,
+                    0.19880518317222595,
+                    0.0425899401307106,
+                    -0.03296569362282753,
+                    -0.06660018861293793,
+                    -0.05814269185066223,
+                    -0.041250068694353104,
+                    -0.04832788556814194,
+                    -0.061978794634342194,
+                    -0.05207204818725586,
+                    0.05691953003406525,
+                    0.13181042671203613
+                  ]
+                }
+              }
+            },
+            "dimensions": {
+              "xi_rho": 1173,
+              "xi_u": 1172,
+              "xi_v": 1173,
+              "xi_psi": 1172,
+              "eta_rho": 777,
+              "eta_u": 777,
+              "eta_v": 776,
+              "eta_psi": 776,
+              "N": 30,
+              "s_rho": 30,
+              "s_w": 31,
+              "tracer": 2,
+              "boundary": 4,
+              "ocean_time": 13
+            },
+            "vector_basis": "ROMS_native_staggered_xi_eta_requires_collocation_and_rotation",
+            "original_parent_files_reverified_locally": false,
+            "extraction_claim_scope": "13 parent comparisons reported by download environment only",
+            "angle_radians_range": [
+              0.5584034008185228,
+              0.5585936368521418
+            ],
+            "source_cycles_utc": [
+              "2025-02-14T00:00:00+00:00",
+              "2025-02-14T00:00:00+00:00",
+              "2025-02-14T06:00:00+00:00",
+              "2025-02-14T06:00:00+00:00",
+              "2025-02-14T06:00:00+00:00",
+              "2025-02-14T06:00:00+00:00",
+              "2025-02-14T06:00:00+00:00",
+              "2025-02-14T06:00:00+00:00",
+              "2025-02-14T12:00:00+00:00",
+              "2025-02-14T12:00:00+00:00",
+              "2025-02-14T12:00:00+00:00",
+              "2025-02-14T12:00:00+00:00",
+              "2025-02-14T12:00:00+00:00"
+            ],
+            "lon_lat_bounds": [
+              -73.0352211,
+              -61.25359535,
+              38.54311465,
+              46.1781025
+            ],
+            "time_units": "seconds since 2016-01-01 00:00:00"
+          }
+        ]
+      },
+      "implementation_sha256": {
+        "src/asar_repro/__init__.py": "157aec5db8dc7ffb10ae1132e79c6605ca4bca4a111d05a08d5ab7ad124989ae",
+        "src/asar_repro/additional_forcing.py": "1a4573ae5c39d94791302c49419e326b704baaf9bb6a91c11c5d0b29fe6a77b1",
+        "src/asar_repro/anytime_search.py": "3a92527d94beb00031f8da742b9a486862186cd0e03e8c567842683b6707024f",
+        "src/asar_repro/belief.py": "cc11028b1ef3a8bf29680a61ddee6262e63be5b2ff00e78075fbab396ac09021",
+        "src/asar_repro/cli.py": "b9d8cf42f7cde47df1c14805b47fa39e08fbf755e8fda8740981c4c10db794d1",
+        "src/asar_repro/forcing.py": "cf9715349d65abda1c3e6d9b09f731bab5ef98708a03d338534fa2800f1f3450",
+        "src/asar_repro/grid.py": "d9794ec80afb764699333e0fa7bd9ef098d3d1360f14a76ae57b5b41f2a547e9",
+        "src/asar_repro/gridding.py": "c684c341f8d0f5cb73d37e240f376fc9e5c42c092f015e3b72c31d4fd0656e43",
+        "src/asar_repro/heuristic.py": "43f94d7ec3ae69dc67ee4416892ea65aa445498a002905f77d4b1f533b168c0b",
+        "src/asar_repro/historical_drift.py": "64fae2f0a0744dc35a3f3b557083c74a2a1b98b1c7572e028012f7d81970b80d",
+        "src/asar_repro/historical_reader.py": "7d7e936ad12de6eb6b7f0bb27a04bb26fa1910cb37949ff03b3f8ed27694535d",
+        "src/asar_repro/hrrr.py": "b770a776dd04af1651930754b22a02cfc1f03a0f3dd1411e6332dc77eeb6337d",
+        "src/asar_repro/lookahead_bound.py": "d2702477eb26aefadd4745b09d14100c11015b99f87ab433f170eb7d3b20bb4c",
+        "src/asar_repro/midpoint_rollout.py": "b3ec70ba722c669e71dfba3b1fdc64ba8db6a500c5e453e444ccb957f95f2d18",
+        "src/asar_repro/motion.py": "7e74178390ffa34f30f7b987a4d7a2459e8f0ca2646ca3026c97e505f758c2c9",
+        "src/asar_repro/objective.py": "792077ad3e0286c03f60108f2580ea3b3557e3f5b002bc1a5e2f9f67e48fb2ad",
+        "src/asar_repro/opendrift_adapter.py": "74c671d7b74cec45fe9702f314236f35d8063571425329ed38da026292f6ca44",
+        "src/asar_repro/oracle.py": "93f41213b3352f0bde39ae3a114ba59a6987b05a755eb9c7260b738dc2a47b52",
+        "src/asar_repro/particle_diagnostic.py": "d451e18c3b1369bf67bb86c9f5ca73391aac0877b43c3236b9ed718d0302f126",
+        "src/asar_repro/particle_dp.py": "2f2d0317b6a556ddc9c8d3041527075d4b0e0675a8da0dc18c1e1d9f80ab8457",
+        "src/asar_repro/planner_adapter.py": "f47e508748daba824e21ec657458cd84657f8ddc405de68f898584c472ef8419",
+        "src/asar_repro/research_particle.py": "b8535aa58eb0ca6dc01c6f148468bdc9eec438797b380fc2c583520ec9ee7d0f",
+        "src/asar_repro/research_search.py": "a461b29da6b64cbb855c6b35c4b11be3f107fd01a125e903e68ea42473b809d9",
+        "src/asar_repro/scenario_baselines.py": "630c417e51285c3f301504596a6d4a04b756a4bca4e46e1533862a202f2c577b",
+        "src/asar_repro/scenarios.py": "8bcb2f9663ab1b26dcb8305a321ede07c31eab6f7ad346e308746842a3a652be",
+        "src/asar_repro/search.py": "868b09203c3a782765f9b4440751d56512e5a24c1a0a44d5706e6a6aa5b34bbc",
+        "src/asar_repro/search_reporting.py": "5e386a054a7ad9e3f6533d74197bca6c37713ea87de53bfd3b29669094eeb1f8",
+        "src/asar_repro/stdc_heuristic.py": "18bee643e5860683cd4dfa9cbf12d9ec7a2c5ee4e2abd7d0895cf9a144cc980f",
+        "src/asar_repro/tail_repair.py": "ca58ffd81c7847ea4a7557ddbab26242055992d53b25d7b590b8940d7ab037bb",
+        "src/asar_repro/toy.py": "5f7430ac3fa4da39c847ef27d6b208a21f35d4584bd04e3f6f83a26e6c38b01d",
+        "src/asar_repro/trajectory_search.py": "0f0125f9c7c46a70a2638dfbf031a8f5409f0230dc0524f5e9798c6aa746622e",
+        "src/asar_repro/visualize.py": "e0a31f4367e986c8558b672ad625219d76f9963e50accea1895bd78707a186a8",
+        "src/asar_repro/window_bounds.py": "67fc3be440e2693ce75dd530f95e995291f068ae7a4d8d16d7c2ece0ed058380",
+        "src/asar_repro/window_search.py": "82ad9c2f9f06842d9045036fdf18a737c5271ef8ee0a8a3956dfeec23f3c5b91",
+        "tests/conftest.py": "9b7b1e1fa40432a7636cf7faad897af069298e18934309b9c07896220b70b204",
+        "tests/test_additional_forcing.py": "e85e1a6bb8cf483a241195816bd787277f1031a5cf2636276743ecfcc162a345",
+        "tests/test_anytime_search.py": "a72f97075aa7602dab7e548cad54b93159065fb13a9e2a39fa73f8b825f770d8",
+        "tests/test_b1_additional.py": "8b97342bb643782c1c372994d89c772e24c7fc2a4e21fc42f907980468aaf752",
+        "tests/test_b1_inventory.py": "abfe70abed4523559100ed9fcf18e26f4027ab9b7ee07847f531ec4bd86e80a8",
+        "tests/test_b1_package.py": "f33e5ceed15e09e4cb9a07e0cd542eadc1e21c732954d2c5ed56cc5800af820d",
+        "tests/test_b4_artifacts.py": "667f4908f0f8b6fcf9e657871e8bfbe825dac871da7eca6857aaf304d6971bc3",
+        "tests/test_b5_benchmark.py": "05c6627ba5da023cffc288003b3e2e962ae411f8c0b25b83f83455cdbda1b5d2",
+        "tests/test_b6_comparison.py": "a452bbc4980e24340ab1570684ad1c72d48de1a2e5f1390a9d0b42666ab4ac82",
+        "tests/test_b7_validation.py": "d7b0e313f09176b7460ba373f4073c31400c8460dbe0b53cd07a93dc92035f52",
+        "tests/test_belief.py": "15125aece9ac4869e665549b625bcf36562c1a020bc8c5decedf156dcb8ff636",
+        "tests/test_forcing.py": "4b82fe498a1e3c7202925ef99b7f5fafe0c38d090e1fea7cd4e7e3cd6ff2fa12",
+        "tests/test_fundy_native_policy.py": "dafbbb7253e2789cf9b6e25e87108688248367dba986a97250954602a1a7ec83",
+        "tests/test_grid.py": "8c3e33bc58d81b394832c40415f5bb77bba04d08d882008e97166d9c214d7e44",
+        "tests/test_heuristic.py": "f163ca0f227f9cb446ad13dd28e6ff72a30a048438c056ee0e0d095c765bb8f4",
+        "tests/test_heuristic_counterexample.py": "9bea5b0ee932f40ef416aaac9b37a7b317a9425cd30f9a59f59370292fc2b1c7",
+        "tests/test_historical_drift.py": "3af349d03383ef1ee6f59303d46fa758420858e703a26e41b0f971fb3647d2bb",
+        "tests/test_lookahead_bound.py": "c95759a6a78b565646cd9ad32c3b375ad671e1d74b1dc12ed50436bde3ef9dd8",
+        "tests/test_midpoint_rollout.py": "ac6d581a2eab34d97c737afe18e1959313d52b4d3b5bf95a4d3bfc3931bd966a",
+        "tests/test_objective.py": "b80a79bf55fe9503f5d5b7e7af0bed2fb0919469fc429e950d7993bae1ca0b11",
+        "tests/test_opendrift_adapter.py": "e6a124c17e1b400989f30413de2b6f8f30ab2a822338b76a17dd2812c33b3b9c",
+        "tests/test_oracle.py": "3ea119c0e82203f76de03d51cbc32a45ff4a06da5924495aa28b3e61fe76b9e4",
+        "tests/test_particle_diagnostic.py": "cdecf0d2cbe4917d6334434cc4c412cb7082c69c77444588e702f865f6654d95",
+        "tests/test_particle_dp.py": "f96a6ca4ed68aab8eb5e7e8664451c3fa6b6f284f2b2adf324bcfdb5b7ccae89",
+        "tests/test_particle_search.py": "c7cb13aa7084619f0ff61a4646c78d676076ae350992f9dbba7add2fbc4a86a1",
+        "tests/test_research_particle.py": "93d7c1799762409fc435b92b9268759686a21737e11e0e6043d8e7f002685330",
+        "tests/test_research_search.py": "957aab8af5f7045ce896d900874356b01676f019a43236210b317f7af9fe3409",
+        "tests/test_search.py": "52f80cf84fc84598ff45baa3d5a2d5b1183b2088ba041ff6f2ec98b0c12e83c3",
+        "tests/test_search_reporting.py": "708e91bdf141a2f5578edea42120fc7cbcf2ed512587e1ac881dd7966d5938d9",
+        "tests/test_search_state_reuse.py": "7f97046b74d9e00e44ad16a196bbbe483a455a9647a78e58415ac460616653a2",
+        "tests/test_smoke.py": "eca995a94c84df33d74789e2d3b90d91380476b9b0f22d5738dc710f83f01887",
+        "tests/test_stage7.py": "eec6f1c66fa5e96d967122ab65f989410be3c803422825ea2eeac491cdab316d",
+        "tests/test_stage8.py": "30a564b30f4634b5ce2615dc3e12315b92ecc646ef8281fe129509d818bfa6d7",
+        "tests/test_stdc_audit_contract.py": "4489e3d3194d16e0ce7f6c95e1f6849c36b552411a46e15c6dbea7bc719f7559",
+        "tests/test_stdc_heuristic.py": "173c698f97c322c5f70f449e77661db412e8359462e3767d6569be3ec6ede26c",
+        "tests/test_stdc_optimization.py": "99d3a9701b8ec387fe6778dc130718efa959eb0a823a71036954c3dfba5f7b0b",
+        "tests/test_stdc_validation_guards.py": "6cd5e0a0754cefde1ebae01f1410f4a9e05c4c72f466830c7d6d903ba7f5f9f3",
+        "tests/test_tail_repair.py": "d8a93fe9b492299605ac9bf4be22fefce4a93984ca4c51f64de98ec7b6d9c736",
+        "tests/test_toy.py": "28f34ed230fa4671df12825da6b78efefe61b153f3c0bd66655e4fbe639c4621",
+        "tests/test_trajectory_search.py": "fb72f220dc571af2e885f351409e7492081789949e099e8b64a0940ed81ff19a",
+        "tests/test_window_bounds.py": "ac3102c1c2ef160c28dedca8b8b29d9611e881d8128c4c706c87c8191b5966ab",
+        "tests/test_window_search.py": "31ae064a917e9a2fa5f4d6745dee90ac4f57fc739bceed5816251369c230cd6f",
+        "scripts/analyze_stdc_trace.py": "b3fb1e66efc3a057a3ebfaa7e0ec8460586318747d18e06b662a8edd3d45381c",
+        "scripts/audit_anytime_search.py": "99985dc2eb02f45040bd91df94f975d5494a2b339adc58c4e18709dbb28f87f5",
+        "scripts/audit_optimization.py": "020f59b5aa6ee3b2f82287c546159a7a26b63d9729cb9084355e05e7525e4ebb",
+        "scripts/audit_search_results.py": "47093d01d604111b8734f25d2e829da158096e566718e0d1aee6c6b73f3992f5",
+        "scripts/audit_trajectory.py": "9549f6ecfcf4c2709f57c2436ec4bc1e590806522f7da21278ad309d47cb8b0b",
+        "scripts/audit_trajectory_planning.py": "596b3e5290659b408fdf500d28b4fb9d2a91d0788838356d0cf8a5eeb23d5ad2",
+        "scripts/audit_window_bounds.py": "b438f09ede4c61d3a10bda084f48ea1215ac6046719c986a99e66eed8d571855",
+        "scripts/audit_window_search.py": "299f140645275981c0fccd054b3a8d244aeab50f876f5ae6d8eafb3faa6b96cc",
+        "scripts/b1_extra_currents.py": "1b1c62a3cc0ab64fa9c02cda7527fa54ea64ce2893f3c456d589395e636160c5",
+        "scripts/b1_gfs.py": "c7cb66fa19d214b8e4b5c782fe49f5e1c7470df6af154696d75dfdef93253515",
+        "scripts/b1_hrrr.py": "8176e6f4b22141b474fb04c0a0466787fc31c9b56f9e5aa012184ae600bfa479",
+        "scripts/benchmark_b5.py": "51f6b5f1a08f231b9eba911df0ccc09e94458384dd9953b0b90a4828b07f685f",
+        "scripts/benchmark_particles.py": "c3a3834a883bbb1654e6a7e25f0bb89d29cde19dd29d6938d4aa6d93b59a5d49",
+        "scripts/benchmark_stdc_comparison.py": "60ed446867df3118b1cd608dffdbd85cfac1c6fa7c6d319fc4d9b87610b91634",
+        "scripts/build_report.py": "1f66cc8681889e05502c8da5e4c4b698ace0ddc955ae973b54ea4b36d108fa02",
+        "scripts/check_env.py": "2603ae4abeed04c969779157c5e8ec4374e6fea1db63f003df5841d146466398",
+        "scripts/compare_additional_real.py": "6fe41bbc30f07b9a1d858045683ff698f6f0dd2afb15ed793e4e1a9d7186d30d",
+        "scripts/compare_available_real.py": "b5a022ce539f3674c40572c7c2aa2aa9cf73240e7e4229e4b4124acf24308270",
+        "scripts/compare_b6.py": "0dd8f5496f340d2351d711e761e040a3da17c8d0721b2fd4633897499a956372",
+        "scripts/diagnose_stdc.py": "90164fe83818941e2f125786d0f02f00bd25384fc1c1fc55b13bb02a6c5a8091",
+        "scripts/fetch_lake_b1.py": "6ceee3a92fb1b0388bfa35b0a383d4dcb5ac12c69468b561f3ec3211221f0faa",
+        "scripts/finalize_trajectory.py": "36eec95763a7b667b9d6f72608e0d59fd2598a32830d9b5b1e29623199f60bac",
+        "scripts/generate_drift.py": "6711064b6c0d23e45716b773d26fd47402653843c1c386703cc53ce50e5c9165",
+        "scripts/generate_historical_drift.py": "f5d0a0ab5b4a9f25f2a151a0cc1ccbf85eab5dbc963f4f98246e6cf98b55cd44",
+        "scripts/generate_stage3_fixture.py": "149199d82a51e5a1f3bca48966f7f6f325aece2749e6bfa80cdd24c644aa1a95",
+        "scripts/import_additional_b1.py": "025419beb30c2715b1f2258e4162fc7ad2d5c9ba510c9d6db6afc3fa81996507",
+        "scripts/inventory_historical.py": "523c97967ade1f04e2c01c06d3f7b13334552e9318bf036a6f2fa7d03c1ac6be",
+        "scripts/offline_guard/sitecustomize.py": "3bc07350962b4ba9e40cecff13218ed8bff7f379b177217364dba0e6f03fd2ce",
+        "scripts/plot_b6.py": "419bcd8096d39524a436e115644fa82fbd596c1d2de887b22b4f3e7905e96a24",
+        "scripts/plot_historical_drift.py": "1d71bdcdc239d5f17d2fe756ffb00df6f25e17c811b1c03bcd69c1417e6e280e",
+        "scripts/replay_baseline_v1_1.py": "87bfb4bd406bd6ce8e0ece7b5990178ed506ee5affdbee9279c5a772112d97cb",
+        "scripts/report_additional_b1.py": "6e1af6969c1027350db9276d8b856626d0bc1df1cc290de0aefc93086467ffb0",
+        "scripts/report_b5.py": "e28a2c4faba800c0f89547d89a7cbf0a34aff78f6b8526527d29e7a195e80431",
+        "scripts/report_baseline_v1_1.py": "32713caa9bf2971a56dcd1fea34c332ab2e9657acaea208ab345ce7c1e2b8654",
+        "scripts/report_stage7.py": "d4e0a10e38e61d4ab2438b5f3ff4cdd4c21486fe070d96ad58691de595ee8366",
+        "scripts/report_stdc_comparison.py": "914ef4188e3739d60b8d66ca61d7159c363fcf6fee830449756630b7c55656db",
+        "scripts/report_stdc_diagnosis.py": "abd8be5a615e6b219fbdb83bd40a8b4e0b3dc1554294512323d2991aac8746bf",
+        "scripts/report_stdc_repair.py": "a185918cecd8fd46dbf23de86286de7417fc753d84d7f8f12a67367c80913524",
+        "scripts/run_additional_real.py": "a0e620b0d5f9e8184daf938c61105cb1d1689979c0bb004c4f1423aeb70cfe7b",
+        "scripts/run_anytime_experiments.py": "8a606ed375aa52b6ba476816285c3af2c9060e314b5764e673cddcf353169796",
+        "scripts/run_anytime_validation.py": "363b0235ffaca443388cdfc101c456152bbf2dee261b0b5e1cb5d90188a539ec",
+        "scripts/run_fundy_native.py": "9e78c2545b5e819b7fc9e855950b6dd7ebffc29bdfb3341ed880e245907d0e32",
+        "scripts/run_optimization_experiments.py": "df56efe98a97c2d25aa400215389cf93533bbaed40a5134b6698595ee28f7dc2",
+        "scripts/run_optimization_validation.py": "bef7056595f1d22681db98f1e355eb7f37b79b9aebb6578e5712b5ed7e4a24f6",
+        "scripts/run_stage7.py": "7bf08949689858d3ae76698c7712a69d1e470ea5da7dde2c2fdf138685258fa7",
+        "scripts/run_stdc_local_stage.py": "28e7f1d23536e4d26e1c9fbe50fb161cb0f0d0a6d2a657358584197db3e02508",
+        "scripts/run_stdc_random_audit.py": "bc77ff7af1bc0d37f3b6476089212cc72317398e01396a99196d6da5bee6870b",
+        "scripts/run_stdc_repair.py": "eea11feecfaed1f983c7a0e262d931a03fa093579325fa25781eda68cb1783ba",
+        "scripts/run_stdc_small_search.py": "21c050f2bf46ff13072cfe2f0d2c7727d9515a3f7dfd82bd862a40d9bfda4b2c",
+        "scripts/run_stdc_smoke.py": "3116ad207de19891c37904b189fd704c6fa3cf6827774b52701602aeafcb04ef",
+        "scripts/run_stdc_synthetic_bench.py": "274750f6cc2f1299830fe94803c3bb88079dc587d220c31f1653637fd4208c79",
+        "scripts/run_toy.py": "797f5b27b9eaa75e49a4d0b8a46ef79c16af6185657e7c9609319367ec758943",
+        "scripts/run_trajectory_diagnostic.py": "91467c26e1435b9f9913e28b51ec67fc05e3245b557a5641ab7ae3b278db127c",
+        "scripts/run_trajectory_experiments.py": "7a6005385050ac075d804b9865f75fe57137a25dadbb3d69595f2c2f492355c7",
+        "scripts/run_trajectory_validation.py": "a9fb82a8d4340128727803995a2129e66e0116a91ac53343a136482e347cbd88",
+        "scripts/run_window_experiments.py": "fc1a2f45b9c85f9e8a2f957cd359d28fcd9715f8ebfcc572cda542dee698ce31",
+        "scripts/run_window_validation.py": "ffa9bcc6aeb3a6c07e1f54832ae3c25281bf5c12fc1975e41a4475c8258ac8c9",
+        "scripts/stage8_metrics.py": "a721de1a966c38f4b877381890ad90cee9f68f63b2ee910d57748bfc7240f086",
+        "scripts/stdc_audit_contract.py": "d763ee5f1821f3f4350d65076c5767fec4f507b9473542b0387ce78815ee9f57",
+        "scripts/stdc_validation_guards.py": "c75e9f4a546aa3d1b337af69021bdec75ed95fb01b16622915e426a3b9e7715e",
+        "scripts/validate_baseline_v1_1.py": "f6de322990b83fec718c2e49916b2c31936725073c31fd9e16576b6e46068199",
+        "scripts/validate_forcing.py": "4208a9f318443499c39632b64a2d4b7508c20a038168cbcc85107a02eda355aa",
+        "scripts/validate_stage2.py": "242aba5463ca8b4c07093c9956e35634ee7806695491ce3545078080460dc81b",
+        "scripts/validate_stage3.py": "d581feb5aaf6f8733f9e55f60cd1ee7000eecb0fe9404bee92d2b6f50a8c6a5f",
+        "scripts/verify_lake_b1.py": "574877bf95b34a82b2a9424370c8222a70e4fb467ff3425c7bf09bc4928fe3b8"
+      }
+    },
+    "versions": {
+      "opendrift": "1.14.12",
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "pyproj": "3.7.2",
+      "netCDF4": "1.7.5",
+      "shapely": "2.2.0"
+    }
+  },
+  "source_sha256": {
+    "src/asar_repro/__init__.py": "157aec5db8dc7ffb10ae1132e79c6605ca4bca4a111d05a08d5ab7ad124989ae",
+    "src/asar_repro/additional_forcing.py": "1a4573ae5c39d94791302c49419e326b704baaf9bb6a91c11c5d0b29fe6a77b1",
+    "src/asar_repro/anytime_search.py": "3a92527d94beb00031f8da742b9a486862186cd0e03e8c567842683b6707024f",
+    "src/asar_repro/belief.py": "cc11028b1ef3a8bf29680a61ddee6262e63be5b2ff00e78075fbab396ac09021",
+    "src/asar_repro/cli.py": "b9d8cf42f7cde47df1c14805b47fa39e08fbf755e8fda8740981c4c10db794d1",
+    "src/asar_repro/forcing.py": "cf9715349d65abda1c3e6d9b09f731bab5ef98708a03d338534fa2800f1f3450",
+    "src/asar_repro/grid.py": "d9794ec80afb764699333e0fa7bd9ef098d3d1360f14a76ae57b5b41f2a547e9",
+    "src/asar_repro/gridding.py": "c684c341f8d0f5cb73d37e240f376fc9e5c42c092f015e3b72c31d4fd0656e43",
+    "src/asar_repro/heuristic.py": "43f94d7ec3ae69dc67ee4416892ea65aa445498a002905f77d4b1f533b168c0b",
+    "src/asar_repro/historical_drift.py": "64fae2f0a0744dc35a3f3b557083c74a2a1b98b1c7572e028012f7d81970b80d",
+    "src/asar_repro/historical_reader.py": "7d7e936ad12de6eb6b7f0bb27a04bb26fa1910cb37949ff03b3f8ed27694535d",
+    "src/asar_repro/hrrr.py": "b770a776dd04af1651930754b22a02cfc1f03a0f3dd1411e6332dc77eeb6337d",
+    "src/asar_repro/lookahead_bound.py": "d2702477eb26aefadd4745b09d14100c11015b99f87ab433f170eb7d3b20bb4c",
+    "src/asar_repro/midpoint_rollout.py": "b3ec70ba722c669e71dfba3b1fdc64ba8db6a500c5e453e444ccb957f95f2d18",
+    "src/asar_repro/motion.py": "7e74178390ffa34f30f7b987a4d7a2459e8f0ca2646ca3026c97e505f758c2c9",
+    "src/asar_repro/objective.py": "792077ad3e0286c03f60108f2580ea3b3557e3f5b002bc1a5e2f9f67e48fb2ad",
+    "src/asar_repro/opendrift_adapter.py": "74c671d7b74cec45fe9702f314236f35d8063571425329ed38da026292f6ca44",
+    "src/asar_repro/oracle.py": "93f41213b3352f0bde39ae3a114ba59a6987b05a755eb9c7260b738dc2a47b52",
+    "src/asar_repro/particle_diagnostic.py": "d451e18c3b1369bf67bb86c9f5ca73391aac0877b43c3236b9ed718d0302f126",
+    "src/asar_repro/particle_dp.py": "2f2d0317b6a556ddc9c8d3041527075d4b0e0675a8da0dc18c1e1d9f80ab8457",
+    "src/asar_repro/planner_adapter.py": "f47e508748daba824e21ec657458cd84657f8ddc405de68f898584c472ef8419",
+    "src/asar_repro/research_particle.py": "b8535aa58eb0ca6dc01c6f148468bdc9eec438797b380fc2c583520ec9ee7d0f",
+    "src/asar_repro/research_search.py": "a461b29da6b64cbb855c6b35c4b11be3f107fd01a125e903e68ea42473b809d9",
+    "src/asar_repro/scenario_baselines.py": "630c417e51285c3f301504596a6d4a04b756a4bca4e46e1533862a202f2c577b",
+    "src/asar_repro/scenarios.py": "8bcb2f9663ab1b26dcb8305a321ede07c31eab6f7ad346e308746842a3a652be",
+    "src/asar_repro/search.py": "868b09203c3a782765f9b4440751d56512e5a24c1a0a44d5706e6a6aa5b34bbc",
+    "src/asar_repro/search_reporting.py": "5e386a054a7ad9e3f6533d74197bca6c37713ea87de53bfd3b29669094eeb1f8",
+    "src/asar_repro/stdc_heuristic.py": "18bee643e5860683cd4dfa9cbf12d9ec7a2c5ee4e2abd7d0895cf9a144cc980f",
+    "src/asar_repro/tail_repair.py": "ca58ffd81c7847ea4a7557ddbab26242055992d53b25d7b590b8940d7ab037bb",
+    "src/asar_repro/toy.py": "5f7430ac3fa4da39c847ef27d6b208a21f35d4584bd04e3f6f83a26e6c38b01d",
+    "src/asar_repro/trajectory_search.py": "0f0125f9c7c46a70a2638dfbf031a8f5409f0230dc0524f5e9798c6aa746622e",
+    "src/asar_repro/visualize.py": "e0a31f4367e986c8558b672ad625219d76f9963e50accea1895bd78707a186a8",
+    "src/asar_repro/window_bounds.py": "67fc3be440e2693ce75dd530f95e995291f068ae7a4d8d16d7c2ece0ed058380",
+    "src/asar_repro/window_search.py": "82ad9c2f9f06842d9045036fdf18a737c5271ef8ee0a8a3956dfeec23f3c5b91",
+    "tests/conftest.py": "9b7b1e1fa40432a7636cf7faad897af069298e18934309b9c07896220b70b204",
+    "tests/test_additional_forcing.py": "e85e1a6bb8cf483a241195816bd787277f1031a5cf2636276743ecfcc162a345",
+    "tests/test_anytime_search.py": "a72f97075aa7602dab7e548cad54b93159065fb13a9e2a39fa73f8b825f770d8",
+    "tests/test_b1_additional.py": "8b97342bb643782c1c372994d89c772e24c7fc2a4e21fc42f907980468aaf752",
+    "tests/test_b1_inventory.py": "abfe70abed4523559100ed9fcf18e26f4027ab9b7ee07847f531ec4bd86e80a8",
+    "tests/test_b1_package.py": "f33e5ceed15e09e4cb9a07e0cd542eadc1e21c732954d2c5ed56cc5800af820d",
+    "tests/test_b4_artifacts.py": "667f4908f0f8b6fcf9e657871e8bfbe825dac871da7eca6857aaf304d6971bc3",
+    "tests/test_b5_benchmark.py": "05c6627ba5da023cffc288003b3e2e962ae411f8c0b25b83f83455cdbda1b5d2",
+    "tests/test_b6_comparison.py": "a452bbc4980e24340ab1570684ad1c72d48de1a2e5f1390a9d0b42666ab4ac82",
+    "tests/test_b7_validation.py": "d7b0e313f09176b7460ba373f4073c31400c8460dbe0b53cd07a93dc92035f52",
+    "tests/test_belief.py": "15125aece9ac4869e665549b625bcf36562c1a020bc8c5decedf156dcb8ff636",
+    "tests/test_forcing.py": "4b82fe498a1e3c7202925ef99b7f5fafe0c38d090e1fea7cd4e7e3cd6ff2fa12",
+    "tests/test_fundy_native_policy.py": "dafbbb7253e2789cf9b6e25e87108688248367dba986a97250954602a1a7ec83",
+    "tests/test_grid.py": "8c3e33bc58d81b394832c40415f5bb77bba04d08d882008e97166d9c214d7e44",
+    "tests/test_heuristic.py": "f163ca0f227f9cb446ad13dd28e6ff72a30a048438c056ee0e0d095c765bb8f4",
+    "tests/test_heuristic_counterexample.py": "9bea5b0ee932f40ef416aaac9b37a7b317a9425cd30f9a59f59370292fc2b1c7",
+    "tests/test_historical_drift.py": "3af349d03383ef1ee6f59303d46fa758420858e703a26e41b0f971fb3647d2bb",
+    "tests/test_lookahead_bound.py": "c95759a6a78b565646cd9ad32c3b375ad671e1d74b1dc12ed50436bde3ef9dd8",
+    "tests/test_midpoint_rollout.py": "ac6d581a2eab34d97c737afe18e1959313d52b4d3b5bf95a4d3bfc3931bd966a",
+    "tests/test_objective.py": "b80a79bf55fe9503f5d5b7e7af0bed2fb0919469fc429e950d7993bae1ca0b11",
+    "tests/test_opendrift_adapter.py": "e6a124c17e1b400989f30413de2b6f8f30ab2a822338b76a17dd2812c33b3b9c",
+    "tests/test_oracle.py": "3ea119c0e82203f76de03d51cbc32a45ff4a06da5924495aa28b3e61fe76b9e4",
+    "tests/test_particle_diagnostic.py": "cdecf0d2cbe4917d6334434cc4c412cb7082c69c77444588e702f865f6654d95",
+    "tests/test_particle_dp.py": "f96a6ca4ed68aab8eb5e7e8664451c3fa6b6f284f2b2adf324bcfdb5b7ccae89",
+    "tests/test_particle_search.py": "c7cb13aa7084619f0ff61a4646c78d676076ae350992f9dbba7add2fbc4a86a1",
+    "tests/test_research_particle.py": "93d7c1799762409fc435b92b9268759686a21737e11e0e6043d8e7f002685330",
+    "tests/test_research_search.py": "957aab8af5f7045ce896d900874356b01676f019a43236210b317f7af9fe3409",
+    "tests/test_search.py": "52f80cf84fc84598ff45baa3d5a2d5b1183b2088ba041ff6f2ec98b0c12e83c3",
+    "tests/test_search_reporting.py": "708e91bdf141a2f5578edea42120fc7cbcf2ed512587e1ac881dd7966d5938d9",
+    "tests/test_search_state_reuse.py": "7f97046b74d9e00e44ad16a196bbbe483a455a9647a78e58415ac460616653a2",
+    "tests/test_smoke.py": "eca995a94c84df33d74789e2d3b90d91380476b9b0f22d5738dc710f83f01887",
+    "tests/test_stage7.py": "eec6f1c66fa5e96d967122ab65f989410be3c803422825ea2eeac491cdab316d",
+    "tests/test_stage8.py": "30a564b30f4634b5ce2615dc3e12315b92ecc646ef8281fe129509d818bfa6d7",
+    "tests/test_stdc_audit_contract.py": "4489e3d3194d16e0ce7f6c95e1f6849c36b552411a46e15c6dbea7bc719f7559",
+    "tests/test_stdc_heuristic.py": "173c698f97c322c5f70f449e77661db412e8359462e3767d6569be3ec6ede26c",
+    "tests/test_stdc_optimization.py": "99d3a9701b8ec387fe6778dc130718efa959eb0a823a71036954c3dfba5f7b0b",
+    "tests/test_stdc_validation_guards.py": "6cd5e0a0754cefde1ebae01f1410f4a9e05c4c72f466830c7d6d903ba7f5f9f3",
+    "tests/test_tail_repair.py": "d8a93fe9b492299605ac9bf4be22fefce4a93984ca4c51f64de98ec7b6d9c736",
+    "tests/test_toy.py": "28f34ed230fa4671df12825da6b78efefe61b153f3c0bd66655e4fbe639c4621",
+    "tests/test_trajectory_search.py": "fb72f220dc571af2e885f351409e7492081789949e099e8b64a0940ed81ff19a",
+    "tests/test_window_bounds.py": "ac3102c1c2ef160c28dedca8b8b29d9611e881d8128c4c706c87c8191b5966ab",
+    "tests/test_window_search.py": "31ae064a917e9a2fa5f4d6745dee90ac4f57fc739bceed5816251369c230cd6f",
+    "scripts/analyze_stdc_trace.py": "b3fb1e66efc3a057a3ebfaa7e0ec8460586318747d18e06b662a8edd3d45381c",
+    "scripts/audit_anytime_search.py": "99985dc2eb02f45040bd91df94f975d5494a2b339adc58c4e18709dbb28f87f5",
+    "scripts/audit_optimization.py": "020f59b5aa6ee3b2f82287c546159a7a26b63d9729cb9084355e05e7525e4ebb",
+    "scripts/audit_search_results.py": "47093d01d604111b8734f25d2e829da158096e566718e0d1aee6c6b73f3992f5",
+    "scripts/audit_trajectory.py": "9549f6ecfcf4c2709f57c2436ec4bc1e590806522f7da21278ad309d47cb8b0b",
+    "scripts/audit_trajectory_planning.py": "596b3e5290659b408fdf500d28b4fb9d2a91d0788838356d0cf8a5eeb23d5ad2",
+    "scripts/audit_window_bounds.py": "b438f09ede4c61d3a10bda084f48ea1215ac6046719c986a99e66eed8d571855",
+    "scripts/audit_window_search.py": "299f140645275981c0fccd054b3a8d244aeab50f876f5ae6d8eafb3faa6b96cc",
+    "scripts/b1_extra_currents.py": "1b1c62a3cc0ab64fa9c02cda7527fa54ea64ce2893f3c456d589395e636160c5",
+    "scripts/b1_gfs.py": "c7cb66fa19d214b8e4b5c782fe49f5e1c7470df6af154696d75dfdef93253515",
+    "scripts/b1_hrrr.py": "8176e6f4b22141b474fb04c0a0466787fc31c9b56f9e5aa012184ae600bfa479",
+    "scripts/benchmark_b5.py": "51f6b5f1a08f231b9eba911df0ccc09e94458384dd9953b0b90a4828b07f685f",
+    "scripts/benchmark_particles.py": "c3a3834a883bbb1654e6a7e25f0bb89d29cde19dd29d6938d4aa6d93b59a5d49",
+    "scripts/benchmark_stdc_comparison.py": "60ed446867df3118b1cd608dffdbd85cfac1c6fa7c6d319fc4d9b87610b91634",
+    "scripts/build_report.py": "1f66cc8681889e05502c8da5e4c4b698ace0ddc955ae973b54ea4b36d108fa02",
+    "scripts/check_env.py": "2603ae4abeed04c969779157c5e8ec4374e6fea1db63f003df5841d146466398",
+    "scripts/compare_additional_real.py": "6fe41bbc30f07b9a1d858045683ff698f6f0dd2afb15ed793e4e1a9d7186d30d",
+    "scripts/compare_available_real.py": "b5a022ce539f3674c40572c7c2aa2aa9cf73240e7e4229e4b4124acf24308270",
+    "scripts/compare_b6.py": "0dd8f5496f340d2351d711e761e040a3da17c8d0721b2fd4633897499a956372",
+    "scripts/diagnose_stdc.py": "90164fe83818941e2f125786d0f02f00bd25384fc1c1fc55b13bb02a6c5a8091",
+    "scripts/fetch_lake_b1.py": "6ceee3a92fb1b0388bfa35b0a383d4dcb5ac12c69468b561f3ec3211221f0faa",
+    "scripts/finalize_trajectory.py": "36eec95763a7b667b9d6f72608e0d59fd2598a32830d9b5b1e29623199f60bac",
+    "scripts/generate_drift.py": "6711064b6c0d23e45716b773d26fd47402653843c1c386703cc53ce50e5c9165",
+    "scripts/generate_historical_drift.py": "f5d0a0ab5b4a9f25f2a151a0cc1ccbf85eab5dbc963f4f98246e6cf98b55cd44",
+    "scripts/generate_stage3_fixture.py": "149199d82a51e5a1f3bca48966f7f6f325aece2749e6bfa80cdd24c644aa1a95",
+    "scripts/import_additional_b1.py": "025419beb30c2715b1f2258e4162fc7ad2d5c9ba510c9d6db6afc3fa81996507",
+    "scripts/inventory_historical.py": "523c97967ade1f04e2c01c06d3f7b13334552e9318bf036a6f2fa7d03c1ac6be",
+    "scripts/offline_guard/sitecustomize.py": "3bc07350962b4ba9e40cecff13218ed8bff7f379b177217364dba0e6f03fd2ce",
+    "scripts/plot_b6.py": "419bcd8096d39524a436e115644fa82fbd596c1d2de887b22b4f3e7905e96a24",
+    "scripts/plot_historical_drift.py": "1d71bdcdc239d5f17d2fe756ffb00df6f25e17c811b1c03bcd69c1417e6e280e",
+    "scripts/replay_baseline_v1_1.py": "87bfb4bd406bd6ce8e0ece7b5990178ed506ee5affdbee9279c5a772112d97cb",
+    "scripts/report_additional_b1.py": "6e1af6969c1027350db9276d8b856626d0bc1df1cc290de0aefc93086467ffb0",
+    "scripts/report_b5.py": "e28a2c4faba800c0f89547d89a7cbf0a34aff78f6b8526527d29e7a195e80431",
+    "scripts/report_baseline_v1_1.py": "32713caa9bf2971a56dcd1fea34c332ab2e9657acaea208ab345ce7c1e2b8654",
+    "scripts/report_stage7.py": "d4e0a10e38e61d4ab2438b5f3ff4cdd4c21486fe070d96ad58691de595ee8366",
+    "scripts/report_stdc_comparison.py": "914ef4188e3739d60b8d66ca61d7159c363fcf6fee830449756630b7c55656db",
+    "scripts/report_stdc_diagnosis.py": "abd8be5a615e6b219fbdb83bd40a8b4e0b3dc1554294512323d2991aac8746bf",
+    "scripts/report_stdc_repair.py": "a185918cecd8fd46dbf23de86286de7417fc753d84d7f8f12a67367c80913524",
+    "scripts/run_additional_real.py": "a0e620b0d5f9e8184daf938c61105cb1d1689979c0bb004c4f1423aeb70cfe7b",
+    "scripts/run_anytime_experiments.py": "8a606ed375aa52b6ba476816285c3af2c9060e314b5764e673cddcf353169796",
+    "scripts/run_anytime_validation.py": "363b0235ffaca443388cdfc101c456152bbf2dee261b0b5e1cb5d90188a539ec",
+    "scripts/run_fundy_native.py": "9e78c2545b5e819b7fc9e855950b6dd7ebffc29bdfb3341ed880e245907d0e32",
+    "scripts/run_optimization_experiments.py": "df56efe98a97c2d25aa400215389cf93533bbaed40a5134b6698595ee28f7dc2",
+    "scripts/run_optimization_validation.py": "bef7056595f1d22681db98f1e355eb7f37b79b9aebb6578e5712b5ed7e4a24f6",
+    "scripts/run_stage7.py": "7bf08949689858d3ae76698c7712a69d1e470ea5da7dde2c2fdf138685258fa7",
+    "scripts/run_stdc_local_stage.py": "28e7f1d23536e4d26e1c9fbe50fb161cb0f0d0a6d2a657358584197db3e02508",
+    "scripts/run_stdc_random_audit.py": "bc77ff7af1bc0d37f3b6476089212cc72317398e01396a99196d6da5bee6870b",
+    "scripts/run_stdc_repair.py": "eea11feecfaed1f983c7a0e262d931a03fa093579325fa25781eda68cb1783ba",
+    "scripts/run_stdc_small_search.py": "21c050f2bf46ff13072cfe2f0d2c7727d9515a3f7dfd82bd862a40d9bfda4b2c",
+    "scripts/run_stdc_smoke.py": "3116ad207de19891c37904b189fd704c6fa3cf6827774b52701602aeafcb04ef",
+    "scripts/run_stdc_synthetic_bench.py": "274750f6cc2f1299830fe94803c3bb88079dc587d220c31f1653637fd4208c79",
+    "scripts/run_toy.py": "797f5b27b9eaa75e49a4d0b8a46ef79c16af6185657e7c9609319367ec758943",
+    "scripts/run_trajectory_diagnostic.py": "91467c26e1435b9f9913e28b51ec67fc05e3245b557a5641ab7ae3b278db127c",
+    "scripts/run_trajectory_experiments.py": "7a6005385050ac075d804b9865f75fe57137a25dadbb3d69595f2c2f492355c7",
+    "scripts/run_trajectory_validation.py": "a9fb82a8d4340128727803995a2129e66e0116a91ac53343a136482e347cbd88",
+    "scripts/run_window_experiments.py": "fc1a2f45b9c85f9e8a2f957cd359d28fcd9715f8ebfcc572cda542dee698ce31",
+    "scripts/run_window_validation.py": "ffa9bcc6aeb3a6c07e1f54832ae3c25281bf5c12fc1975e41a4475c8258ac8c9",
+    "scripts/stage8_metrics.py": "a721de1a966c38f4b877381890ad90cee9f68f63b2ee910d57748bfc7240f086",
+    "scripts/stdc_audit_contract.py": "d763ee5f1821f3f4350d65076c5767fec4f507b9473542b0387ce78815ee9f57",
+    "scripts/stdc_validation_guards.py": "c75e9f4a546aa3d1b337af69021bdec75ed95fb01b16622915e426a3b9e7715e",
+    "scripts/validate_baseline_v1_1.py": "f6de322990b83fec718c2e49916b2c31936725073c31fd9e16576b6e46068199",
+    "scripts/validate_forcing.py": "4208a9f318443499c39632b64a2d4b7508c20a038168cbcc85107a02eda355aa",
+    "scripts/validate_stage2.py": "242aba5463ca8b4c07093c9956e35634ee7806695491ce3545078080460dc81b",
+    "scripts/validate_stage3.py": "d581feb5aaf6f8733f9e55f60cd1ee7000eecb0fe9404bee92d2b6f50a8c6a5f",
+    "scripts/verify_lake_b1.py": "574877bf95b34a82b2a9424370c8222a70e4fb467ff3425c7bf09bc4928fe3b8"
+  },
+  "b2_sha256": "bcea17ea7347fcdf3948f1ab86f228369c32597113c088f168b6fb0c91d2237a",
+  "particle_sha256": "3cb169401cc0c4a98306a2d3535f73e92e5cf31dc6db984eabcd9cc7d4ec9ad0",
+  "model": {
+    "object": {
+      "number": 1,
+      "key": "PIW-1",
+      "description": "Person-in-water (PIW), unknown state (mean values)"
+    },
+    "readers": {
+      "x_wind": [
+        "asar_wind"
+      ],
+      "y_wind": [
+        "asar_wind"
+      ],
+      "x_sea_water_velocity": [
+        "asar_current"
+      ],
+      "y_sea_water_velocity": [
+        "asar_current"
+      ]
+    },
+    "integration_steps": 287,
+    "source_dims": [
+      "trajectory",
+      "time"
+    ]
+  },
+  "opendrift_runs": 1,
+  "cache_replay_variables": 21,
+  "integration_wall_s": 7.604547200025991,
+  "terminal_forcing": [],
+  "initial_mass": 1.0000000000000004,
+  "prior_special_mass_by_step": [
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "land": 0.0,
+      "outside": 0.0,
+      "inactive": 0.0,
+      "unknown": 0.0
+    }
+  ],
+  "max_mass_error": 5.551115123125783e-16,
+  "audit_J": 55.00000000000001,
+  "native_utc": [
+    "2025-02-14T00:00:00Z",
+    "2025-02-14T00:02:00Z",
+    "2025-02-14T00:04:00Z",
+    "2025-02-14T00:06:00Z",
+    "2025-02-14T00:08:00Z",
+    "2025-02-14T00:10:00Z",
+    "2025-02-14T00:12:00Z",
+    "2025-02-14T00:14:00Z",
+    "2025-02-14T00:16:00Z",
+    "2025-02-14T00:18:00Z",
+    "2025-02-14T00:20:00Z",
+    "2025-02-14T00:22:00Z",
+    "2025-02-14T00:24:00Z",
+    "2025-02-14T00:26:00Z",
+    "2025-02-14T00:28:00Z",
+    "2025-02-14T00:30:00Z",
+    "2025-02-14T00:32:00Z",
+    "2025-02-14T00:34:00Z",
+    "2025-02-14T00:36:00Z",
+    "2025-02-14T00:38:00Z",
+    "2025-02-14T00:40:00Z",
+    "2025-02-14T00:42:00Z",
+    "2025-02-14T00:44:00Z",
+    "2025-02-14T00:46:00Z",
+    "2025-02-14T00:48:00Z",
+    "2025-02-14T00:50:00Z",
+    "2025-02-14T00:52:00Z",
+    "2025-02-14T00:54:00Z",
+    "2025-02-14T00:56:00Z",
+    "2025-02-14T00:58:00Z",
+    "2025-02-14T01:00:00Z",
+    "2025-02-14T01:02:00Z",
+    "2025-02-14T01:04:00Z",
+    "2025-02-14T01:06:00Z",
+    "2025-02-14T01:08:00Z",
+    "2025-02-14T01:10:00Z",
+    "2025-02-14T01:12:00Z",
+    "2025-02-14T01:14:00Z",
+    "2025-02-14T01:16:00Z",
+    "2025-02-14T01:18:00Z",
+    "2025-02-14T01:20:00Z",
+    "2025-02-14T01:22:00Z",
+    "2025-02-14T01:24:00Z",
+    "2025-02-14T01:26:00Z",
+    "2025-02-14T01:28:00Z",
+    "2025-02-14T01:30:00Z",
+    "2025-02-14T01:32:00Z",
+    "2025-02-14T01:34:00Z",
+    "2025-02-14T01:36:00Z",
+    "2025-02-14T01:38:00Z",
+    "2025-02-14T01:40:00Z",
+    "2025-02-14T01:42:00Z",
+    "2025-02-14T01:44:00Z",
+    "2025-02-14T01:46:00Z",
+    "2025-02-14T01:48:00Z",
+    "2025-02-14T01:50:00Z",
+    "2025-02-14T01:52:00Z",
+    "2025-02-14T01:54:00Z",
+    "2025-02-14T01:56:00Z",
+    "2025-02-14T01:58:00Z",
+    "2025-02-14T02:00:00Z",
+    "2025-02-14T02:02:00Z",
+    "2025-02-14T02:04:00Z",
+    "2025-02-14T02:06:00Z",
+    "2025-02-14T02:08:00Z",
+    "2025-02-14T02:10:00Z",
+    "2025-02-14T02:12:00Z",
+    "2025-02-14T02:14:00Z",
+    "2025-02-14T02:16:00Z",
+    "2025-02-14T02:18:00Z",
+    "2025-02-14T02:20:00Z",
+    "2025-02-14T02:22:00Z",
+    "2025-02-14T02:24:00Z",
+    "2025-02-14T02:26:00Z",
+    "2025-02-14T02:28:00Z",
+    "2025-02-14T02:30:00Z",
+    "2025-02-14T02:32:00Z",
+    "2025-02-14T02:34:00Z",
+    "2025-02-14T02:36:00Z",
+    "2025-02-14T02:38:00Z",
+    "2025-02-14T02:40:00Z",
+    "2025-02-14T02:42:00Z",
+    "2025-02-14T02:44:00Z",
+    "2025-02-14T02:46:00Z",
+    "2025-02-14T02:48:00Z",
+    "2025-02-14T02:50:00Z",
+    "2025-02-14T02:52:00Z",
+    "2025-02-14T02:54:00Z",
+    "2025-02-14T02:56:00Z",
+    "2025-02-14T02:58:00Z",
+    "2025-02-14T03:00:00Z",
+    "2025-02-14T03:02:00Z",
+    "2025-02-14T03:04:00Z",
+    "2025-02-14T03:06:00Z",
+    "2025-02-14T03:08:00Z",
+    "2025-02-14T03:10:00Z",
+    "2025-02-14T03:12:00Z",
+    "2025-02-14T03:14:00Z",
+    "2025-02-14T03:16:00Z",
+    "2025-02-14T03:18:00Z",
+    "2025-02-14T03:20:00Z",
+    "2025-02-14T03:22:00Z",
+    "2025-02-14T03:24:00Z",
+    "2025-02-14T03:26:00Z",
+    "2025-02-14T03:28:00Z",
+    "2025-02-14T03:30:00Z",
+    "2025-02-14T03:32:00Z",
+    "2025-02-14T03:34:00Z",
+    "2025-02-14T03:36:00Z",
+    "2025-02-14T03:38:00Z",
+    "2025-02-14T03:40:00Z",
+    "2025-02-14T03:42:00Z",
+    "2025-02-14T03:44:00Z",
+    "2025-02-14T03:46:00Z",
+    "2025-02-14T03:48:00Z",
+    "2025-02-14T03:50:00Z",
+    "2025-02-14T03:52:00Z",
+    "2025-02-14T03:54:00Z",
+    "2025-02-14T03:56:00Z",
+    "2025-02-14T03:58:00Z",
+    "2025-02-14T04:00:00Z",
+    "2025-02-14T04:02:00Z",
+    "2025-02-14T04:04:00Z",
+    "2025-02-14T04:06:00Z",
+    "2025-02-14T04:08:00Z",
+    "2025-02-14T04:10:00Z",
+    "2025-02-14T04:12:00Z",
+    "2025-02-14T04:14:00Z",
+    "2025-02-14T04:16:00Z",
+    "2025-02-14T04:18:00Z",
+    "2025-02-14T04:20:00Z",
+    "2025-02-14T04:22:00Z",
+    "2025-02-14T04:24:00Z",
+    "2025-02-14T04:26:00Z",
+    "2025-02-14T04:28:00Z",
+    "2025-02-14T04:30:00Z",
+    "2025-02-14T04:32:00Z",
+    "2025-02-14T04:34:00Z",
+    "2025-02-14T04:36:00Z",
+    "2025-02-14T04:38:00Z",
+    "2025-02-14T04:40:00Z",
+    "2025-02-14T04:42:00Z",
+    "2025-02-14T04:44:00Z",
+    "2025-02-14T04:46:00Z",
+    "2025-02-14T04:48:00Z",
+    "2025-02-14T04:50:00Z",
+    "2025-02-14T04:52:00Z",
+    "2025-02-14T04:54:00Z",
+    "2025-02-14T04:56:00Z",
+    "2025-02-14T04:58:00Z",
+    "2025-02-14T05:00:00Z",
+    "2025-02-14T05:02:00Z",
+    "2025-02-14T05:04:00Z",
+    "2025-02-14T05:06:00Z",
+    "2025-02-14T05:08:00Z",
+    "2025-02-14T05:10:00Z",
+    "2025-02-14T05:12:00Z",
+    "2025-02-14T05:14:00Z",
+    "2025-02-14T05:16:00Z",
+    "2025-02-14T05:18:00Z",
+    "2025-02-14T05:20:00Z",
+    "2025-02-14T05:22:00Z",
+    "2025-02-14T05:24:00Z",
+    "2025-02-14T05:26:00Z",
+    "2025-02-14T05:28:00Z",
+    "2025-02-14T05:30:00Z",
+    "2025-02-14T05:32:00Z",
+    "2025-02-14T05:34:00Z",
+    "2025-02-14T05:36:00Z",
+    "2025-02-14T05:38:00Z",
+    "2025-02-14T05:40:00Z",
+    "2025-02-14T05:42:00Z",
+    "2025-02-14T05:44:00Z",
+    "2025-02-14T05:46:00Z",
+    "2025-02-14T05:48:00Z",
+    "2025-02-14T05:50:00Z",
+    "2025-02-14T05:52:00Z",
+    "2025-02-14T05:54:00Z",
+    "2025-02-14T05:56:00Z",
+    "2025-02-14T05:58:00Z",
+    "2025-02-14T06:00:00Z",
+    "2025-02-14T06:02:00Z",
+    "2025-02-14T06:04:00Z",
+    "2025-02-14T06:06:00Z",
+    "2025-02-14T06:08:00Z",
+    "2025-02-14T06:10:00Z",
+    "2025-02-14T06:12:00Z",
+    "2025-02-14T06:14:00Z",
+    "2025-02-14T06:16:00Z",
+    "2025-02-14T06:18:00Z",
+    "2025-02-14T06:20:00Z",
+    "2025-02-14T06:22:00Z",
+    "2025-02-14T06:24:00Z",
+    "2025-02-14T06:26:00Z",
+    "2025-02-14T06:28:00Z",
+    "2025-02-14T06:30:00Z",
+    "2025-02-14T06:32:00Z",
+    "2025-02-14T06:34:00Z",
+    "2025-02-14T06:36:00Z",
+    "2025-02-14T06:38:00Z",
+    "2025-02-14T06:40:00Z",
+    "2025-02-14T06:42:00Z",
+    "2025-02-14T06:44:00Z",
+    "2025-02-14T06:46:00Z",
+    "2025-02-14T06:48:00Z",
+    "2025-02-14T06:50:00Z",
+    "2025-02-14T06:52:00Z",
+    "2025-02-14T06:54:00Z",
+    "2025-02-14T06:56:00Z",
+    "2025-02-14T06:58:00Z",
+    "2025-02-14T07:00:00Z",
+    "2025-02-14T07:02:00Z",
+    "2025-02-14T07:04:00Z",
+    "2025-02-14T07:06:00Z",
+    "2025-02-14T07:08:00Z",
+    "2025-02-14T07:10:00Z",
+    "2025-02-14T07:12:00Z",
+    "2025-02-14T07:14:00Z",
+    "2025-02-14T07:16:00Z",
+    "2025-02-14T07:18:00Z",
+    "2025-02-14T07:20:00Z",
+    "2025-02-14T07:22:00Z",
+    "2025-02-14T07:24:00Z",
+    "2025-02-14T07:26:00Z",
+    "2025-02-14T07:28:00Z",
+    "2025-02-14T07:30:00Z",
+    "2025-02-14T07:32:00Z",
+    "2025-02-14T07:34:00Z",
+    "2025-02-14T07:36:00Z",
+    "2025-02-14T07:38:00Z",
+    "2025-02-14T07:40:00Z",
+    "2025-02-14T07:42:00Z",
+    "2025-02-14T07:44:00Z",
+    "2025-02-14T07:46:00Z",
+    "2025-02-14T07:48:00Z",
+    "2025-02-14T07:50:00Z",
+    "2025-02-14T07:52:00Z",
+    "2025-02-14T07:54:00Z",
+    "2025-02-14T07:56:00Z",
+    "2025-02-14T07:58:00Z",
+    "2025-02-14T08:00:00Z",
+    "2025-02-14T08:02:00Z",
+    "2025-02-14T08:04:00Z",
+    "2025-02-14T08:06:00Z",
+    "2025-02-14T08:08:00Z",
+    "2025-02-14T08:10:00Z",
+    "2025-02-14T08:12:00Z",
+    "2025-02-14T08:14:00Z",
+    "2025-02-14T08:16:00Z",
+    "2025-02-14T08:18:00Z",
+    "2025-02-14T08:20:00Z",
+    "2025-02-14T08:22:00Z",
+    "2025-02-14T08:24:00Z",
+    "2025-02-14T08:26:00Z",
+    "2025-02-14T08:28:00Z",
+    "2025-02-14T08:30:00Z",
+    "2025-02-14T08:32:00Z",
+    "2025-02-14T08:34:00Z",
+    "2025-02-14T08:36:00Z",
+    "2025-02-14T08:38:00Z",
+    "2025-02-14T08:40:00Z",
+    "2025-02-14T08:42:00Z",
+    "2025-02-14T08:44:00Z",
+    "2025-02-14T08:46:00Z",
+    "2025-02-14T08:48:00Z",
+    "2025-02-14T08:50:00Z",
+    "2025-02-14T08:52:00Z",
+    "2025-02-14T08:54:00Z",
+    "2025-02-14T08:56:00Z",
+    "2025-02-14T08:58:00Z",
+    "2025-02-14T09:00:00Z",
+    "2025-02-14T09:02:00Z",
+    "2025-02-14T09:04:00Z",
+    "2025-02-14T09:06:00Z",
+    "2025-02-14T09:08:00Z",
+    "2025-02-14T09:10:00Z",
+    "2025-02-14T09:12:00Z",
+    "2025-02-14T09:14:00Z",
+    "2025-02-14T09:16:00Z",
+    "2025-02-14T09:18:00Z",
+    "2025-02-14T09:20:00Z",
+    "2025-02-14T09:22:00Z",
+    "2025-02-14T09:24:00Z",
+    "2025-02-14T09:26:00Z",
+    "2025-02-14T09:28:00Z",
+    "2025-02-14T09:30:00Z",
+    "2025-02-14T09:32:00Z",
+    "2025-02-14T09:34:00Z"
+  ],
+  "planning_utc": [
+    "2025-02-14T09:00:00Z",
+    "2025-02-14T09:00:37.04Z",
+    "2025-02-14T09:01:14.08Z",
+    "2025-02-14T09:01:51.12Z",
+    "2025-02-14T09:02:28.16Z",
+    "2025-02-14T09:03:05.2Z",
+    "2025-02-14T09:03:42.24Z",
+    "2025-02-14T09:04:19.28Z",
+    "2025-02-14T09:04:56.32Z",
+    "2025-02-14T09:05:33.36Z",
+    "2025-02-14T09:06:10.4Z",
+    "2025-02-14T09:06:47.44Z",
+    "2025-02-14T09:07:24.48Z",
+    "2025-02-14T09:08:01.52Z",
+    "2025-02-14T09:08:38.56Z",
+    "2025-02-14T09:09:15.6Z",
+    "2025-02-14T09:09:52.64Z",
+    "2025-02-14T09:10:29.68Z",
+    "2025-02-14T09:11:06.72Z",
+    "2025-02-14T09:11:43.76Z",
+    "2025-02-14T09:12:20.8Z",
+    "2025-02-14T09:12:57.84Z",
+    "2025-02-14T09:13:34.88Z",
+    "2025-02-14T09:14:11.92Z",
+    "2025-02-14T09:14:48.96Z",
+    "2025-02-14T09:15:26Z",
+    "2025-02-14T09:16:03.04Z",
+    "2025-02-14T09:16:40.08Z",
+    "2025-02-14T09:17:17.12Z",
+    "2025-02-14T09:17:54.16Z",
+    "2025-02-14T09:18:31.2Z",
+    "2025-02-14T09:19:08.24Z",
+    "2025-02-14T09:19:45.28Z",
+    "2025-02-14T09:20:22.32Z",
+    "2025-02-14T09:20:59.36Z",
+    "2025-02-14T09:21:36.4Z",
+    "2025-02-14T09:22:13.44Z",
+    "2025-02-14T09:22:50.48Z",
+    "2025-02-14T09:23:27.52Z",
+    "2025-02-14T09:24:04.56Z",
+    "2025-02-14T09:24:41.6Z",
+    "2025-02-14T09:25:18.64Z",
+    "2025-02-14T09:25:55.68Z",
+    "2025-02-14T09:26:32.72Z",
+    "2025-02-14T09:27:09.76Z",
+    "2025-02-14T09:27:46.8Z",
+    "2025-02-14T09:28:23.84Z",
+    "2025-02-14T09:29:00.88Z",
+    "2025-02-14T09:29:37.92Z",
+    "2025-02-14T09:30:14.96Z",
+    "2025-02-14T09:30:52Z",
+    "2025-02-14T09:31:29.04Z",
+    "2025-02-14T09:32:06.08Z",
+    "2025-02-14T09:32:43.12Z",
+    "2025-02-14T09:33:20.16Z",
+    "2025-02-14T09:33:57.2Z"
+  ],
+  "data_availability": "B1/B2/B3 local historical validated; author-identical forcing/cycles unproven",
+  "theory_certified": false,
+  "direction_policy": {
+    "mode": "official_native_angle",
+    "geographic_direction_validated": false,
+    "physical_direction_unverified": true,
+    "original_strict_gate_passed": false,
+    "accepted_by_user": "2026-11-24: 按官方 angle 接入，保留未验证标签",
+    "implementation_basis": "ROMS Utility/uv_rotate.F: average native faces then rotate with supplied angle",
+    "original_parent_sha256": "c2879d000da71de2509e5f5194130de8c063256dc9c784a443826474894a378e"
+  },
+  "physical_direction_validated": false
+}

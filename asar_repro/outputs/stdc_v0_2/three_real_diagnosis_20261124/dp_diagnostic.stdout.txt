@@ -1,0 +1,1 @@
+{"status": "passed", "toy_cases": 2, "toy_prefixes": 9, "numerical_assertions": 24, "cone_suffix_value_MiB": {"lake_ontario": 8.354385375976562, "arctic_ocean": 69.07653045654297, "bay_of_fundy": 123.50629425048828}}

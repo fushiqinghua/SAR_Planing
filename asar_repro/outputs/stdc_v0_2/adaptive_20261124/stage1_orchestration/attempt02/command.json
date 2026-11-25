@@ -1,0 +1,11 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "-m",
+    "pytest",
+    "tests/test_adaptive_search.py",
+    "-q",
+    "--junitxml=outputs\\stdc_v0_2\\adaptive_20261124\\stage1_orchestration\\attempt02\\pytest.xml"
+  ],
+  "seed": null
+}

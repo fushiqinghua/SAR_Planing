@@ -1,0 +1,1300 @@
+{
+  "rows": [
+    {
+      "scenario": "lake_ontario",
+      "variant": "paper_baseline",
+      "protocol": "work",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "prior_stdc",
+      "protocol": "work",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "compressed_stdc",
+      "protocol": "work",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "dp_only",
+      "protocol": "work",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "stdc_dp",
+      "protocol": "work",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "mid_plain",
+      "protocol": "work",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "mid_diverse",
+      "protocol": "work",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "mid_dp",
+      "protocol": "work",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "prior_stdc",
+      "protocol": "work",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "compressed_stdc",
+      "protocol": "work",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "dp_only",
+      "protocol": "work",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "stdc_dp",
+      "protocol": "work",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "mid_plain",
+      "protocol": "work",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "mid_diverse",
+      "protocol": "work",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "mid_dp",
+      "protocol": "work",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "paper_baseline",
+      "protocol": "work",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "compressed_stdc",
+      "protocol": "work",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "dp_only",
+      "protocol": "work",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "stdc_dp",
+      "protocol": "work",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "mid_plain",
+      "protocol": "work",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "mid_diverse",
+      "protocol": "work",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "mid_dp",
+      "protocol": "work",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "paper_baseline",
+      "protocol": "work",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "prior_stdc",
+      "protocol": "work",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "paper_baseline",
+      "protocol": "wall",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "prior_stdc",
+      "protocol": "wall",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "compressed_stdc",
+      "protocol": "wall",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "dp_only",
+      "protocol": "wall",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "stdc_dp",
+      "protocol": "wall",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "mid_plain",
+      "protocol": "wall",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "mid_diverse",
+      "protocol": "wall",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "mid_dp",
+      "protocol": "wall",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "prior_stdc",
+      "protocol": "wall",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "compressed_stdc",
+      "protocol": "wall",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "dp_only",
+      "protocol": "wall",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "stdc_dp",
+      "protocol": "wall",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "mid_plain",
+      "protocol": "wall",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "mid_diverse",
+      "protocol": "wall",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "mid_dp",
+      "protocol": "wall",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "paper_baseline",
+      "protocol": "wall",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "compressed_stdc",
+      "protocol": "wall",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "dp_only",
+      "protocol": "wall",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "stdc_dp",
+      "protocol": "wall",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "mid_plain",
+      "protocol": "wall",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "mid_diverse",
+      "protocol": "wall",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "mid_dp",
+      "protocol": "wall",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "paper_baseline",
+      "protocol": "wall",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "lake_ontario",
+      "variant": "prior_stdc",
+      "protocol": "wall",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "paper_baseline",
+      "protocol": "work",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "prior_stdc",
+      "protocol": "work",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "compressed_stdc",
+      "protocol": "work",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "dp_only",
+      "protocol": "work",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "stdc_dp",
+      "protocol": "work",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "mid_plain",
+      "protocol": "work",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "mid_diverse",
+      "protocol": "work",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "mid_dp",
+      "protocol": "work",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "prior_stdc",
+      "protocol": "work",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "compressed_stdc",
+      "protocol": "work",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "dp_only",
+      "protocol": "work",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "stdc_dp",
+      "protocol": "work",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "mid_plain",
+      "protocol": "work",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "mid_diverse",
+      "protocol": "work",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "mid_dp",
+      "protocol": "work",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "paper_baseline",
+      "protocol": "work",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "compressed_stdc",
+      "protocol": "work",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "dp_only",
+      "protocol": "work",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "stdc_dp",
+      "protocol": "work",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "mid_plain",
+      "protocol": "work",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "mid_diverse",
+      "protocol": "work",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "mid_dp",
+      "protocol": "work",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "paper_baseline",
+      "protocol": "work",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "prior_stdc",
+      "protocol": "work",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "paper_baseline",
+      "protocol": "wall",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "prior_stdc",
+      "protocol": "wall",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "compressed_stdc",
+      "protocol": "wall",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "dp_only",
+      "protocol": "wall",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "stdc_dp",
+      "protocol": "wall",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "mid_plain",
+      "protocol": "wall",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "mid_diverse",
+      "protocol": "wall",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "mid_dp",
+      "protocol": "wall",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "prior_stdc",
+      "protocol": "wall",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "compressed_stdc",
+      "protocol": "wall",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "dp_only",
+      "protocol": "wall",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "stdc_dp",
+      "protocol": "wall",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "mid_plain",
+      "protocol": "wall",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "mid_diverse",
+      "protocol": "wall",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "mid_dp",
+      "protocol": "wall",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "paper_baseline",
+      "protocol": "wall",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "compressed_stdc",
+      "protocol": "wall",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "dp_only",
+      "protocol": "wall",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "stdc_dp",
+      "protocol": "wall",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "mid_plain",
+      "protocol": "wall",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "mid_diverse",
+      "protocol": "wall",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "mid_dp",
+      "protocol": "wall",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "paper_baseline",
+      "protocol": "wall",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "arctic_ocean",
+      "variant": "prior_stdc",
+      "protocol": "wall",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "paper_baseline",
+      "protocol": "work",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "prior_stdc",
+      "protocol": "work",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "compressed_stdc",
+      "protocol": "work",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "dp_only",
+      "protocol": "work",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "stdc_dp",
+      "protocol": "work",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "mid_plain",
+      "protocol": "work",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "mid_diverse",
+      "protocol": "work",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "mid_dp",
+      "protocol": "work",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "prior_stdc",
+      "protocol": "work",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "compressed_stdc",
+      "protocol": "work",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "dp_only",
+      "protocol": "work",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "stdc_dp",
+      "protocol": "work",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "mid_plain",
+      "protocol": "work",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "mid_diverse",
+      "protocol": "work",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "mid_dp",
+      "protocol": "work",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "paper_baseline",
+      "protocol": "work",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "compressed_stdc",
+      "protocol": "work",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "dp_only",
+      "protocol": "work",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "stdc_dp",
+      "protocol": "work",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "mid_plain",
+      "protocol": "work",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "mid_diverse",
+      "protocol": "work",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "mid_dp",
+      "protocol": "work",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "paper_baseline",
+      "protocol": "work",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "prior_stdc",
+      "protocol": "work",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "paper_baseline",
+      "protocol": "wall",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "prior_stdc",
+      "protocol": "wall",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "compressed_stdc",
+      "protocol": "wall",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "dp_only",
+      "protocol": "wall",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "stdc_dp",
+      "protocol": "wall",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "mid_plain",
+      "protocol": "wall",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "mid_diverse",
+      "protocol": "wall",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "mid_dp",
+      "protocol": "wall",
+      "repeat": 0,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "prior_stdc",
+      "protocol": "wall",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "compressed_stdc",
+      "protocol": "wall",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "dp_only",
+      "protocol": "wall",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "stdc_dp",
+      "protocol": "wall",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "mid_plain",
+      "protocol": "wall",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "mid_diverse",
+      "protocol": "wall",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "mid_dp",
+      "protocol": "wall",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "paper_baseline",
+      "protocol": "wall",
+      "repeat": 1,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "compressed_stdc",
+      "protocol": "wall",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "dp_only",
+      "protocol": "wall",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "stdc_dp",
+      "protocol": "wall",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "mid_plain",
+      "protocol": "wall",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "mid_diverse",
+      "protocol": "wall",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "mid_dp",
+      "protocol": "wall",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "paper_baseline",
+      "protocol": "wall",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    },
+    {
+      "scenario": "bay_of_fundy",
+      "variant": "prior_stdc",
+      "protocol": "wall",
+      "repeat": 2,
+      "J_error": 0.0,
+      "Pd_error": 0.0,
+      "legal": true
+    }
+  ]
+}

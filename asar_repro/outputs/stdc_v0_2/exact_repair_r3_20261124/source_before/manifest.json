@@ -1,0 +1,10 @@
+{
+  "files": {
+    "src/asar_repro/exact_repair.py": "f36145db5c46c68b862ff26c9d956f03ebda0fa13a64bd99d575b71a0890ebbc",
+    "tests/test_exact_repair.py": "c923436f2a79b5949768f9862d02ecc5aa10cbb1da3aa252d968f3cec3e9cad8",
+    "scripts/audit_exact_repair.py": "094421660d7921ff6e18c7f63fc02ac326690e5e312936cdfe1970d0d4fa1069",
+    "scripts/run_exact_repair_validation.py": "ffa1ac17f612990b45e360ae1b7b896b508a7127fabae6835c2d4e579b210c35",
+    "scripts/run_exact_repair_experiments.py": "654b7e5c2c2080f46407fa1f90a9b73362ea93546f7125eb3c29ada5751cbaaf",
+    "docs/stdc_exact_repair.md": "a95089a7623fedfa70686483c0b35c426488307839005b657906b237de46ea5a"
+  }
+}

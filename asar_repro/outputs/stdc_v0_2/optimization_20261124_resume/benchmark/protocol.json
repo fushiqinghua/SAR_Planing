@@ -1,0 +1,400 @@
+{
+  "variants": [
+    "paper_baseline",
+    "anytime_reference",
+    "fast_zero",
+    "fast_mass",
+    "fast_stdc",
+    "cascade_stdc",
+    "lookahead_stdc",
+    "tail_zero",
+    "tail_stdc",
+    "compressed_stdc",
+    "portfolio_stdc"
+  ],
+  "caps": {
+    "work": {
+      "max_expansions": 5000,
+      "max_open": 20000,
+      "max_seconds": 30.0
+    },
+    "wall": {
+      "max_expansions": null,
+      "max_open": 20000,
+      "max_seconds": 5.0
+    }
+  },
+  "schedule": [
+    [
+      "paper_baseline",
+      "work",
+      0
+    ],
+    [
+      "anytime_reference",
+      "work",
+      0
+    ],
+    [
+      "fast_zero",
+      "work",
+      0
+    ],
+    [
+      "fast_mass",
+      "work",
+      0
+    ],
+    [
+      "fast_stdc",
+      "work",
+      0
+    ],
+    [
+      "cascade_stdc",
+      "work",
+      0
+    ],
+    [
+      "lookahead_stdc",
+      "work",
+      0
+    ],
+    [
+      "tail_zero",
+      "work",
+      0
+    ],
+    [
+      "tail_stdc",
+      "work",
+      0
+    ],
+    [
+      "compressed_stdc",
+      "work",
+      0
+    ],
+    [
+      "portfolio_stdc",
+      "work",
+      0
+    ],
+    [
+      "anytime_reference",
+      "work",
+      1
+    ],
+    [
+      "fast_zero",
+      "work",
+      1
+    ],
+    [
+      "fast_mass",
+      "work",
+      1
+    ],
+    [
+      "fast_stdc",
+      "work",
+      1
+    ],
+    [
+      "cascade_stdc",
+      "work",
+      1
+    ],
+    [
+      "lookahead_stdc",
+      "work",
+      1
+    ],
+    [
+      "tail_zero",
+      "work",
+      1
+    ],
+    [
+      "tail_stdc",
+      "work",
+      1
+    ],
+    [
+      "compressed_stdc",
+      "work",
+      1
+    ],
+    [
+      "portfolio_stdc",
+      "work",
+      1
+    ],
+    [
+      "paper_baseline",
+      "work",
+      1
+    ],
+    [
+      "fast_zero",
+      "work",
+      2
+    ],
+    [
+      "fast_mass",
+      "work",
+      2
+    ],
+    [
+      "fast_stdc",
+      "work",
+      2
+    ],
+    [
+      "cascade_stdc",
+      "work",
+      2
+    ],
+    [
+      "lookahead_stdc",
+      "work",
+      2
+    ],
+    [
+      "tail_zero",
+      "work",
+      2
+    ],
+    [
+      "tail_stdc",
+      "work",
+      2
+    ],
+    [
+      "compressed_stdc",
+      "work",
+      2
+    ],
+    [
+      "portfolio_stdc",
+      "work",
+      2
+    ],
+    [
+      "paper_baseline",
+      "work",
+      2
+    ],
+    [
+      "anytime_reference",
+      "work",
+      2
+    ],
+    [
+      "paper_baseline",
+      "wall",
+      0
+    ],
+    [
+      "anytime_reference",
+      "wall",
+      0
+    ],
+    [
+      "fast_zero",
+      "wall",
+      0
+    ],
+    [
+      "fast_mass",
+      "wall",
+      0
+    ],
+    [
+      "fast_stdc",
+      "wall",
+      0
+    ],
+    [
+      "cascade_stdc",
+      "wall",
+      0
+    ],
+    [
+      "lookahead_stdc",
+      "wall",
+      0
+    ],
+    [
+      "tail_zero",
+      "wall",
+      0
+    ],
+    [
+      "tail_stdc",
+      "wall",
+      0
+    ],
+    [
+      "compressed_stdc",
+      "wall",
+      0
+    ],
+    [
+      "portfolio_stdc",
+      "wall",
+      0
+    ],
+    [
+      "anytime_reference",
+      "wall",
+      1
+    ],
+    [
+      "fast_zero",
+      "wall",
+      1
+    ],
+    [
+      "fast_mass",
+      "wall",
+      1
+    ],
+    [
+      "fast_stdc",
+      "wall",
+      1
+    ],
+    [
+      "cascade_stdc",
+      "wall",
+      1
+    ],
+    [
+      "lookahead_stdc",
+      "wall",
+      1
+    ],
+    [
+      "tail_zero",
+      "wall",
+      1
+    ],
+    [
+      "tail_stdc",
+      "wall",
+      1
+    ],
+    [
+      "compressed_stdc",
+      "wall",
+      1
+    ],
+    [
+      "portfolio_stdc",
+      "wall",
+      1
+    ],
+    [
+      "paper_baseline",
+      "wall",
+      1
+    ],
+    [
+      "fast_zero",
+      "wall",
+      2
+    ],
+    [
+      "fast_mass",
+      "wall",
+      2
+    ],
+    [
+      "fast_stdc",
+      "wall",
+      2
+    ],
+    [
+      "cascade_stdc",
+      "wall",
+      2
+    ],
+    [
+      "lookahead_stdc",
+      "wall",
+      2
+    ],
+    [
+      "tail_zero",
+      "wall",
+      2
+    ],
+    [
+      "tail_stdc",
+      "wall",
+      2
+    ],
+    [
+      "compressed_stdc",
+      "wall",
+      2
+    ],
+    [
+      "portfolio_stdc",
+      "wall",
+      2
+    ],
+    [
+      "paper_baseline",
+      "wall",
+      2
+    ],
+    [
+      "anytime_reference",
+      "wall",
+      2
+    ]
+  ],
+  "seed": 41,
+  "weight": 1.04,
+  "lookahead_horizon": 8,
+  "lookahead_steps": 2,
+  "tail_lengths": [
+    6,
+    10,
+    14
+  ],
+  "tail_seed_fraction": 0.4,
+  "portfolio_every": 8,
+  "environment": {
+    "interpreter": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "python_version": "3.11.18 | packaged by conda-forge | (main, Oct 26 2026, 11:29:07) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "versions": {
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "pytest": "9.2.0",
+      "opendrift": "1.14.12",
+      "psutil": "7.2.2",
+      "matplotlib": "3.11.2",
+      "netCDF4": "1.7.5",
+      "pyproj": "3.7.2"
+    },
+    "version_method": "importlib.metadata only; no OpenDrift import or execution",
+    "environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "PROJ_NETWORK": "OFF",
+      "PYTHONPATH": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\offline_guard;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\src;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    }
+  },
+  "synthetic_validation": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\optimization_20261124_resume\\validation\\validation_summary.json",
+  "validation_sha256": "ae7b5cd6c268382bd1e5162026c1b7711d8ba9ee9122f88a4d880b73e984fce2",
+  "guarantee": "uncertified",
+  "objective": "sum M_t for t=1..T; default min J",
+  "input": "common frozen PT"
+}

@@ -1,0 +1,1327 @@
+[
+  {
+    "run": "arctic_ocean_adaptive_combo_wall_r0",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_adaptive_combo_wall_r0",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_adaptive_combo_wall_r1",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_adaptive_combo_wall_r1",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_adaptive_combo_wall_r2",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_adaptive_combo_wall_r2",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_adaptive_combo_work_r0",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_adaptive_combo_work_r0",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_adaptive_combo_work_r0",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_adaptive_combo_work_r1",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_adaptive_combo_work_r1",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_adaptive_combo_work_r1",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_adaptive_combo_work_r2",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_adaptive_combo_work_r2",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_adaptive_combo_work_r2",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_diverse_wall_r0",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_diverse_wall_r0",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_diverse_wall_r0",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_diverse_wall_r1",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_diverse_wall_r1",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_diverse_wall_r1",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_diverse_wall_r2",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_diverse_wall_r2",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_diverse_wall_r2",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_diverse_work_r0",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_diverse_work_r0",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_diverse_work_r0",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_diverse_work_r1",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_diverse_work_r1",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_diverse_work_r1",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_diverse_work_r2",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_diverse_work_r2",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_diverse_work_r2",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_eager_wall_r0",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_eager_wall_r0",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_eager_wall_r0",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_eager_wall_r1",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_eager_wall_r1",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_eager_wall_r1",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_eager_wall_r2",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_eager_wall_r2",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_eager_wall_r2",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_eager_work_r0",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_eager_work_r0",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_eager_work_r0",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_eager_work_r1",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_eager_work_r1",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_eager_work_r1",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_eager_work_r2",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_eager_work_r2",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_eager_work_r2",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_lazy_wall_r0",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_lazy_wall_r0",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_lazy_wall_r0",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_lazy_wall_r1",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_lazy_wall_r1",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_lazy_wall_r1",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_lazy_wall_r2",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_lazy_wall_r2",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_lazy_wall_r2",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_lazy_work_r0",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_lazy_work_r0",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_lazy_work_r0",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_lazy_work_r1",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_lazy_work_r1",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_lazy_work_r1",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_lazy_work_r2",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_lazy_work_r2",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "arctic_ocean_short_lazy_work_r2",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_wall_r0",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_wall_r0",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_wall_r0",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_wall_r0",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_wall_r1",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_wall_r1",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_wall_r1",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_wall_r1",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_wall_r2",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_wall_r2",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_wall_r2",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_wall_r2",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_work_r0",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_work_r0",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_work_r0",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_work_r0",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_work_r0",
+    "phase": 4,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_work_r1",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_work_r1",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_work_r1",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_work_r1",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_work_r1",
+    "phase": 4,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_work_r2",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_work_r2",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_work_r2",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_work_r2",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_adaptive_combo_work_r2",
+    "phase": 4,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_wall_r0",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_wall_r0",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_wall_r0",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_wall_r0",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_wall_r0",
+    "phase": 4,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_wall_r1",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_wall_r1",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_wall_r1",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_wall_r1",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_wall_r1",
+    "phase": 4,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_wall_r2",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_wall_r2",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_wall_r2",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_wall_r2",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_wall_r2",
+    "phase": 4,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_work_r0",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_work_r0",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_work_r0",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_work_r0",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_work_r0",
+    "phase": 4,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_work_r1",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_work_r1",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_work_r1",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_work_r1",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_work_r1",
+    "phase": 4,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_work_r2",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_work_r2",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_work_r2",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_work_r2",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_diverse_work_r2",
+    "phase": 4,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_wall_r0",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_wall_r0",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_wall_r0",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_wall_r0",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_wall_r1",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_wall_r1",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_wall_r1",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_wall_r1",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_wall_r1",
+    "phase": 4,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_wall_r2",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_wall_r2",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_wall_r2",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_wall_r2",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_wall_r2",
+    "phase": 4,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_work_r0",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_work_r0",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_work_r0",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_work_r0",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_work_r0",
+    "phase": 4,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_work_r1",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_work_r1",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_work_r1",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_work_r1",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_work_r1",
+    "phase": 4,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_work_r2",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_work_r2",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_work_r2",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_work_r2",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_eager_work_r2",
+    "phase": 4,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_wall_r0",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_wall_r0",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_wall_r0",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_wall_r0",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_wall_r0",
+    "phase": 4,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_wall_r1",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_wall_r1",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_wall_r1",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_wall_r1",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_wall_r1",
+    "phase": 4,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_wall_r2",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_wall_r2",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_wall_r2",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_wall_r2",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_work_r0",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_work_r0",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_work_r0",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_work_r0",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_work_r0",
+    "phase": 4,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_work_r1",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_work_r1",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_work_r1",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_work_r1",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_work_r1",
+    "phase": 4,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_work_r2",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_work_r2",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_work_r2",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_work_r2",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "bay_of_fundy_short_lazy_work_r2",
+    "phase": 4,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_adaptive_combo_wall_r0",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_adaptive_combo_wall_r0",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_adaptive_combo_wall_r0",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_adaptive_combo_wall_r1",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_adaptive_combo_wall_r1",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_adaptive_combo_wall_r1",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_adaptive_combo_wall_r2",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_adaptive_combo_wall_r2",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_adaptive_combo_wall_r2",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_adaptive_combo_work_r0",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_adaptive_combo_work_r0",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_adaptive_combo_work_r0",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_adaptive_combo_work_r1",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_adaptive_combo_work_r1",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_adaptive_combo_work_r1",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_adaptive_combo_work_r2",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_adaptive_combo_work_r2",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_adaptive_combo_work_r2",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_diverse_wall_r0",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_diverse_wall_r0",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_diverse_wall_r0",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_diverse_wall_r0",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_diverse_wall_r1",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_diverse_wall_r1",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_diverse_wall_r1",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_diverse_wall_r1",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_diverse_wall_r2",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_diverse_wall_r2",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_diverse_wall_r2",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_diverse_wall_r2",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_diverse_work_r0",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_diverse_work_r0",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_diverse_work_r0",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_diverse_work_r1",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_diverse_work_r1",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_diverse_work_r1",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_diverse_work_r2",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_diverse_work_r2",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_diverse_work_r2",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_eager_wall_r0",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_eager_wall_r0",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_eager_wall_r0",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_eager_wall_r0",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_eager_wall_r1",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_eager_wall_r1",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_eager_wall_r1",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_eager_wall_r1",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_eager_wall_r2",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_eager_wall_r2",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_eager_wall_r2",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_eager_wall_r2",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_eager_work_r0",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_eager_work_r0",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_eager_work_r0",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_eager_work_r1",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_eager_work_r1",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_eager_work_r1",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_eager_work_r2",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_eager_work_r2",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_eager_work_r2",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_lazy_wall_r0",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_lazy_wall_r0",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_lazy_wall_r0",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_lazy_wall_r0",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_lazy_wall_r1",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_lazy_wall_r1",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_lazy_wall_r1",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_lazy_wall_r1",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_lazy_wall_r2",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_lazy_wall_r2",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_lazy_wall_r2",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_lazy_wall_r2",
+    "phase": 3,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_lazy_work_r0",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_lazy_work_r0",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_lazy_work_r0",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_lazy_work_r1",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_lazy_work_r1",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_lazy_work_r1",
+    "phase": 2,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_lazy_work_r2",
+    "phase": 0,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_lazy_work_r2",
+    "phase": 1,
+    "differences": {}
+  },
+  {
+    "run": "lake_ontario_short_lazy_work_r2",
+    "phase": 2,
+    "differences": {}
+  }
+]

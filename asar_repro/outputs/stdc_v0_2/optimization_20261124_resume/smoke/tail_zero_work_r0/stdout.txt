@@ -1,0 +1,1 @@
+{"variant": "tail_zero", "protocol": "work", "J": 17.2919684950528, "Pd_T": 0.8949723971136, "status": "budget_exceeded", "stop_reason": "max_expansions", "work_expanded": 5000, "search_wall_s": 1.6916381999617442}

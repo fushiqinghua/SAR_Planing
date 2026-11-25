@@ -1,0 +1,46 @@
+{
+  "modified_files": [
+    {
+      "path": "src/asar_repro/exact_repair.py",
+      "before_sha256": "f36145db5c46c68b862ff26c9d956f03ebda0fa13a64bd99d575b71a0890ebbc",
+      "after_sha256": "172e00b6e3b276a36c9161d4b3bf6d378dd30a73db276a7715f311556bb30921"
+    },
+    {
+      "path": "tests/test_exact_repair.py",
+      "before_sha256": "c923436f2a79b5949768f9862d02ecc5aa10cbb1da3aa252d968f3cec3e9cad8",
+      "after_sha256": "e3d3792c301d321135281f02d57c372e52fb10e8db01b37e849c3b5fef6c8dc0"
+    },
+    {
+      "path": "scripts/run_exact_repair_validation.py",
+      "before_sha256": "ffa1ac17f612990b45e360ae1b7b896b508a7127fabae6835c2d4e579b210c35",
+      "after_sha256": "2b70c795cbb217fbd8bbd88fa911378abb749994dd4cb905011af7b395747b17"
+    },
+    {
+      "path": "scripts/run_exact_repair_experiments.py",
+      "before_sha256": "654b7e5c2c2080f46407fa1f90a9b73362ea93546f7125eb3c29ada5751cbaaf",
+      "after_sha256": "008988e5c7217bc766b9fc6a2e54c27177e47a6dcf1af386a7276dba4bf51165"
+    },
+    {
+      "path": "docs/stdc_exact_repair.md",
+      "before_sha256": "a95089a7623fedfa70686483c0b35c426488307839005b657906b237de46ea5a",
+      "after_sha256": "d09e6e2dbf27e331c5b703f81d194e819c085d54f240d1da346078bd4131ab7d"
+    }
+  ],
+  "added_files": [
+    {
+      "path": "src/asar_repro/highs_start.py",
+      "sha256": "dc8fe41dfda21312bd55d1adbc1477f44fbb0813b7341a5931da1d720b12b868"
+    },
+    {
+      "path": "scripts/audit_exact_repair_warm.py",
+      "sha256": "0a33687d6a089cc60a102dd20785444c5147b0aa2be90c276863ea750c0e596e"
+    },
+    {
+      "path": "scripts/run_warm_repair_experiments.py",
+      "sha256": "ee7141d375fe074f28304bcbe46b2b0d6c0d082ad7beb990682d4355e4cd0d95"
+    }
+  ],
+  "unchanged_reference_auditor": "094421660d7921ff6e18c7f63fc02ac326690e5e312936cdfe1970d0d4fa1069",
+  "original_objective_scorer_forcing_unchanged": true,
+  "dependencies_changed": false
+}

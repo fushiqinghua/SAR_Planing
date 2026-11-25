@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "outputs/stdc_v0_2/three_real_diagnosis_20261124/estimate_dp_storage.py"
+  ],
+  "python": "3.11.18 | packaged by conda-forge | (main, Oct 26 2026, 11:29:07) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.4.6",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "source_sha256_before": {
+    "src\\asar_repro\\particle_dp.py": "2f2d0317b6a556ddc9c8d3041527075d4b0e0675a8da0dc18c1e1d9f80ab8457",
+    "src\\asar_repro\\stdc_heuristic.py": "18bee643e5860683cd4dfa9cbf12d9ec7a2c5ee4e2abd7d0895cf9a144cc980f",
+    "src\\asar_repro\\research_particle.py": "b8535aa58eb0ca6dc01c6f148468bdc9eec438797b380fc2c583520ec9ee7d0f",
+    "src\\asar_repro\\oracle.py": "93f41213b3352f0bde39ae3a114ba59a6987b05a755eb9c7260b738dc2a47b52",
+    "src\\asar_repro\\objective.py": "792077ad3e0286c03f60108f2580ea3b3557e3f5b002bc1a5e2f9f67e48fb2ad"
+  },
+  "source_sha256_after": {
+    "src\\asar_repro\\particle_dp.py": "2f2d0317b6a556ddc9c8d3041527075d4b0e0675a8da0dc18c1e1d9f80ab8457",
+    "src\\asar_repro\\stdc_heuristic.py": "18bee643e5860683cd4dfa9cbf12d9ec7a2c5ee4e2abd7d0895cf9a144cc980f",
+    "src\\asar_repro\\research_particle.py": "b8535aa58eb0ca6dc01c6f148468bdc9eec438797b380fc2c583520ec9ee7d0f",
+    "src\\asar_repro\\oracle.py": "93f41213b3352f0bde39ae3a114ba59a6987b05a755eb9c7260b738dc2a47b52",
+    "src\\asar_repro\\objective.py": "792077ad3e0286c03f60108f2580ea3b3557e3f5b002bc1a5e2f9f67e48fb2ad"
+  },
+  "production_sources_unchanged": true,
+  "source": "outputs\\stdc_v0_2\\three_real_diagnosis_20261124\\estimate_dp_storage.py",
+  "seed": null,
+  "seed_reason": "Deterministic geometry and hand-constructed toys; archived particle seed remains 41.",
+  "real_searches": 0,
+  "opendrift_runs": 0,
+  "wall_seconds": 0.14702910010237247,
+  "toy_case_count": 2,
+  "toy_prefix_count": 9,
+  "numerical_assertion_count": 24
+}

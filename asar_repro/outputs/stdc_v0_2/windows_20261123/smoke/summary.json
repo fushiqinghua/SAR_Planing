@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "stage": "smoke",
+  "started_utc": "2026-11-23T15:59:23.165760+00:00",
+  "runs": 6,
+  "completed": 4,
+  "budget_exceeded": 2,
+  "certified_full_routes": 0,
+  "conclusion": {
+    "paired_endpoint_runs": 1,
+    "endpoint_J_improved": 0,
+    "endpoint_Pd_improved": 0,
+    "any_window_J_improved": 0
+  },
+  "wall_s": 15.304372899932787
+}

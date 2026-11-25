@@ -1,0 +1,1062 @@
+{
+  "new_searches": 0,
+  "new_opendrift_runs": 0,
+  "source_sha256": "f39133205668206707bc8b1bda022148b5196a70ee37a3e5a6efdc4f70080f42",
+  "scenes": {
+    "lake_ontario": {
+      "particle_sha256": "8b30a87e543f1b33c39e70e1d0054e1750ec046ba2e0b627dd311d9945749456",
+      "physical_direction_unverified": false,
+      "U_best_direct_STDC": 17.264874448,
+      "root_stdc_lower_bound": 9.179977673619849,
+      "root_particle_dp_lower_bound": 5.691508494964135,
+      "L_root_max": 9.179977673619849,
+      "uncertainty_U_minus_L": 8.084896774380152,
+      "uncertainty_fraction_of_U": 0.46828587133552674,
+      "relative_suboptimality_upper_bound_U_over_L_minus_one": 0.8807098515733225,
+      "root_bound_evaluation_wall_s": 0.1884062000317499,
+      "dp_build": {
+        "status": "completed",
+        "stop_reason": null,
+        "wall_s": 0.18593069992493838,
+        "start": 144,
+        "budget": 49,
+        "vertices": 289,
+        "particle_columns": 500,
+        "with_pd_bound": false,
+        "representation": "root cone and exact future suffix groups",
+        "cost_table_bytes": 8760208,
+        "survival_table_bytes": 0,
+        "feasible_table_bytes": 0,
+        "metadata_bytes": 356912,
+        "scratch_bytes": 8500,
+        "numpy_transient_reserve_bytes": 18000,
+        "required_peak_managed_bytes": 9143620,
+        "allocated_peak_managed_bytes": 9143620,
+        "allocated_peak_owned_numpy_bytes": 9125620,
+        "published_table_bytes": 8760208,
+        "published_owned_numpy_bytes": 9121120,
+        "max_memory_bytes": 134217728,
+        "max_seconds": null,
+        "completed_time_layers": 49,
+        "completed_vertex_backups": 5929,
+        "edge_backups": 22448,
+        "particle_edge_backups": 4160168,
+        "uncompressed_particle_edge_backups": 11224000,
+        "deadline_overshoot_s": 0.0,
+        "group_counts_by_depth": [
+          335,
+          328,
+          324,
+          322,
+          319,
+          312,
+          306,
+          301,
+          298,
+          293,
+          290,
+          282,
+          278,
+          273,
+          271,
+          262,
+          257,
+          251,
+          247,
+          242,
+          239,
+          236,
+          230,
+          223,
+          217,
+          214,
+          203,
+          194,
+          187,
+          180,
+          170,
+          163,
+          161,
+          159,
+          155,
+          146,
+          137,
+          132,
+          128,
+          119,
+          111,
+          102,
+          97,
+          89,
+          77,
+          70,
+          59,
+          54,
+          46,
+          1
+        ],
+        "reachable_vertices_by_depth": [
+          1,
+          4,
+          9,
+          16,
+          25,
+          36,
+          49,
+          64,
+          81,
+          96,
+          109,
+          120,
+          129,
+          136,
+          141,
+          144,
+          145,
+          144,
+          145,
+          144,
+          145,
+          144,
+          145,
+          144,
+          145,
+          144,
+          145,
+          144,
+          145,
+          144,
+          145,
+          144,
+          145,
+          144,
+          145,
+          144,
+          145,
+          144,
+          145,
+          144,
+          145,
+          144,
+          145,
+          144,
+          145,
+          144,
+          145,
+          144,
+          145,
+          144
+        ],
+        "memory_scope": "all owned DP NumPy arrays plus reserved NumPy temporaries; excludes caller-owned arrays, Python objects, interpreter and libraries",
+        "work_scope": "preprocessing backups, not search expansions; shared method deadline",
+        "query_scope": "original motion ID order; arbitrary valid undetected weights; no state cache",
+        "global_epsilon_certified": false
+      },
+      "profiles": [
+        {
+          "variant": "prior_stdc",
+          "cap": "work",
+          "J_median": 17.264874448,
+          "Pd_median": 0.897364416,
+          "expanded_median": 5000,
+          "frontier_remaining": [
+            14539,
+            14539,
+            14539
+          ],
+          "stop_reasons": [
+            "max_expansions",
+            "max_expansions",
+            "max_expansions"
+          ],
+          "certificate_fields": [
+            {
+              "bound_mode": "stdc_lb",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "stdc_lb",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "stdc_lb",
+              "theory_certified": false
+            }
+          ]
+        },
+        {
+          "variant": "compact_dp",
+          "cap": "work",
+          "J_median": 17.264874448,
+          "Pd_median": 0.897364416,
+          "expanded_median": 5000,
+          "frontier_remaining": [
+            12838,
+            12838,
+            12838
+          ],
+          "stop_reasons": [
+            "max_expansions",
+            "max_expansions",
+            "max_expansions"
+          ],
+          "certificate_fields": [
+            {
+              "bound_mode": "dp_only",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "dp_only",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "dp_only",
+              "theory_certified": false
+            }
+          ]
+        },
+        {
+          "variant": "adaptive_combo",
+          "cap": "work",
+          "J_median": 17.264874448,
+          "Pd_median": 0.897364416,
+          "expanded_median": 5000,
+          "frontier_remaining": [
+            13427,
+            13427,
+            13427
+          ],
+          "stop_reasons": [
+            "max_expansions",
+            "max_expansions",
+            "max_expansions"
+          ],
+          "certificate_fields": [
+            {
+              "bound_mode": "stdc_dp",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "stdc_dp",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "stdc_dp",
+              "theory_certified": false
+            }
+          ]
+        },
+        {
+          "variant": "prior_stdc",
+          "cap": "wall",
+          "J_median": 17.264874448,
+          "Pd_median": 0.897364416,
+          "expanded_median": 6870,
+          "frontier_remaining": [
+            20000,
+            20000,
+            20000
+          ],
+          "stop_reasons": [
+            "max_open",
+            "max_open",
+            "max_open"
+          ],
+          "certificate_fields": [
+            {
+              "bound_mode": "stdc_lb",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "stdc_lb",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "stdc_lb",
+              "theory_certified": false
+            }
+          ]
+        },
+        {
+          "variant": "compact_dp",
+          "cap": "wall",
+          "J_median": 17.264874448,
+          "Pd_median": 0.897364416,
+          "expanded_median": 9130,
+          "frontier_remaining": [
+            20002,
+            20002,
+            20002
+          ],
+          "stop_reasons": [
+            "max_open",
+            "max_open",
+            "max_open"
+          ],
+          "certificate_fields": [
+            {
+              "bound_mode": "dp_only",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "dp_only",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "dp_only",
+              "theory_certified": false
+            }
+          ]
+        },
+        {
+          "variant": "adaptive_combo",
+          "cap": "wall",
+          "J_median": 17.264874448,
+          "Pd_median": 0.897364416,
+          "expanded_median": 6029,
+          "frontier_remaining": [
+            16957,
+            16143,
+            16431
+          ],
+          "stop_reasons": [
+            "max_seconds",
+            "max_seconds",
+            "max_seconds"
+          ],
+          "certificate_fields": [
+            {
+              "bound_mode": "stdc_dp",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "stdc_dp",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "stdc_dp",
+              "theory_certified": false
+            }
+          ]
+        }
+      ]
+    },
+    "arctic_ocean": {
+      "particle_sha256": "6ed4ca52ecccc9369adae67f7da75477057317599869389224b6ffb488babfb6",
+      "physical_direction_unverified": false,
+      "U_best_direct_STDC": 20.386109349119998,
+      "root_stdc_lower_bound": 10.479531342357696,
+      "root_particle_dp_lower_bound": 5.3818207128814795,
+      "L_root_max": 10.479531342357696,
+      "uncertainty_U_minus_L": 9.906578006762302,
+      "uncertainty_fraction_of_U": 0.48594745751179524,
+      "relative_suboptimality_upper_bound_U_over_L_minus_one": 0.9453264352309776,
+      "root_bound_evaluation_wall_s": 1.8071508000139147,
+      "dp_build": {
+        "status": "completed",
+        "stop_reason": null,
+        "wall_s": 1.8066972000524402,
+        "start": 2762,
+        "budget": 60,
+        "vertices": 5525,
+        "particle_columns": 500,
+        "with_pd_bound": false,
+        "representation": "root cone and exact future suffix groups",
+        "cost_table_bytes": 72431992,
+        "survival_table_bytes": 0,
+        "feasible_table_bytes": 0,
+        "metadata_bytes": 1755276,
+        "scratch_bytes": 8500,
+        "numpy_transient_reserve_bytes": 198900,
+        "required_peak_managed_bytes": 74394668,
+        "allocated_peak_managed_bytes": 74394668,
+        "allocated_peak_owned_numpy_bytes": 74195768,
+        "published_table_bytes": 72431992,
+        "published_owned_numpy_bytes": 74191268,
+        "max_memory_bytes": 134217728,
+        "max_seconds": null,
+        "completed_time_layers": 60,
+        "completed_vertex_backups": 64564,
+        "edge_backups": 257102,
+        "particle_edge_backups": 36108898,
+        "uncompressed_particle_edge_backups": 128551000,
+        "deadline_overshoot_s": 0.0,
+        "group_counts_by_depth": [
+          379,
+          376,
+          369,
+          360,
+          355,
+          351,
+          347,
+          343,
+          338,
+          330,
+          325,
+          322,
+          316,
+          312,
+          306,
+          301,
+          294,
+          288,
+          285,
+          282,
+          276,
+          270,
+          266,
+          259,
+          254,
+          249,
+          244,
+          237,
+          232,
+          225,
+          220,
+          215,
+          207,
+          203,
+          195,
+          190,
+          185,
+          181,
+          173,
+          168,
+          165,
+          164,
+          153,
+          143,
+          141,
+          131,
+          123,
+          115,
+          108,
+          101,
+          98,
+          89,
+          82,
+          81,
+          74,
+          66,
+          62,
+          58,
+          51,
+          46,
+          1
+        ],
+        "reachable_vertices_by_depth": [
+          1,
+          4,
+          9,
+          16,
+          25,
+          36,
+          49,
+          64,
+          81,
+          100,
+          121,
+          144,
+          169,
+          196,
+          225,
+          256,
+          289,
+          324,
+          361,
+          400,
+          441,
+          484,
+          529,
+          576,
+          625,
+          676,
+          729,
+          784,
+          841,
+          900,
+          961,
+          1024,
+          1089,
+          1154,
+          1219,
+          1284,
+          1349,
+          1414,
+          1479,
+          1544,
+          1609,
+          1674,
+          1739,
+          1802,
+          1863,
+          1922,
+          1979,
+          2034,
+          2087,
+          2138,
+          2187,
+          2234,
+          2279,
+          2322,
+          2363,
+          2402,
+          2439,
+          2474,
+          2507,
+          2538,
+          2567
+        ],
+        "memory_scope": "all owned DP NumPy arrays plus reserved NumPy temporaries; excludes caller-owned arrays, Python objects, interpreter and libraries",
+        "work_scope": "preprocessing backups, not search expansions; shared method deadline",
+        "query_scope": "original motion ID order; arbitrary valid undetected weights; no state cache",
+        "global_epsilon_certified": false
+      },
+      "profiles": [
+        {
+          "variant": "prior_stdc",
+          "cap": "work",
+          "J_median": 20.386109349119998,
+          "Pd_median": 0.90858311232,
+          "expanded_median": 5000,
+          "frontier_remaining": [
+            13711,
+            13711,
+            13711
+          ],
+          "stop_reasons": [
+            "max_expansions",
+            "max_expansions",
+            "max_expansions"
+          ],
+          "certificate_fields": [
+            {
+              "bound_mode": "stdc_lb",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "stdc_lb",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "stdc_lb",
+              "theory_certified": false
+            }
+          ]
+        },
+        {
+          "variant": "compact_dp",
+          "cap": "work",
+          "J_median": 20.386109349119998,
+          "Pd_median": 0.90858311232,
+          "expanded_median": 5000,
+          "frontier_remaining": [
+            12660,
+            12660,
+            12660
+          ],
+          "stop_reasons": [
+            "max_expansions",
+            "max_expansions",
+            "max_expansions"
+          ],
+          "certificate_fields": [
+            {
+              "bound_mode": "dp_only",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "dp_only",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "dp_only",
+              "theory_certified": false
+            }
+          ]
+        },
+        {
+          "variant": "adaptive_combo",
+          "cap": "work",
+          "J_median": 20.386109349119998,
+          "Pd_median": 0.90858311232,
+          "expanded_median": 5000,
+          "frontier_remaining": [
+            12825,
+            12825,
+            12825
+          ],
+          "stop_reasons": [
+            "max_expansions",
+            "max_expansions",
+            "max_expansions"
+          ],
+          "certificate_fields": [
+            {
+              "bound_mode": "stdc_dp",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "stdc_dp",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "stdc_dp",
+              "theory_certified": false
+            }
+          ]
+        },
+        {
+          "variant": "prior_stdc",
+          "cap": "wall",
+          "J_median": 20.386109349119998,
+          "Pd_median": 0.90858311232,
+          "expanded_median": 5460,
+          "frontier_remaining": [
+            14609,
+            14872,
+            14925
+          ],
+          "stop_reasons": [
+            "max_seconds",
+            "max_seconds",
+            "max_seconds"
+          ],
+          "certificate_fields": [
+            {
+              "bound_mode": "stdc_lb",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "stdc_lb",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "stdc_lb",
+              "theory_certified": false
+            }
+          ]
+        },
+        {
+          "variant": "compact_dp",
+          "cap": "wall",
+          "J_median": 20.386109349119998,
+          "Pd_median": 0.90858311232,
+          "expanded_median": 7823,
+          "frontier_remaining": [
+            17792,
+            19763,
+            18983
+          ],
+          "stop_reasons": [
+            "max_seconds",
+            "max_seconds",
+            "max_seconds"
+          ],
+          "certificate_fields": [
+            {
+              "bound_mode": "dp_only",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "dp_only",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "dp_only",
+              "theory_certified": false
+            }
+          ]
+        },
+        {
+          "variant": "adaptive_combo",
+          "cap": "wall",
+          "J_median": 20.386109349119998,
+          "Pd_median": 0.90858311232,
+          "expanded_median": 3348,
+          "frontier_remaining": [
+            8026,
+            8807,
+            9146
+          ],
+          "stop_reasons": [
+            "max_seconds",
+            "max_seconds",
+            "max_seconds"
+          ],
+          "certificate_fields": [
+            {
+              "bound_mode": "stdc_dp",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "stdc_dp",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "stdc_dp",
+              "theory_certified": false
+            }
+          ]
+        }
+      ]
+    },
+    "bay_of_fundy": {
+      "particle_sha256": "3cb169401cc0c4a98306a2d3535f73e92e5cf31dc6db984eabcd9cc7d4ec9ad0",
+      "physical_direction_unverified": true,
+      "U_best_direct_STDC": 45.881082400000004,
+      "root_stdc_lower_bound": 42.44824000000001,
+      "root_particle_dp_lower_bound": 24.87100064194488,
+      "L_root_max": 42.44824000000001,
+      "uncertainty_U_minus_L": 3.4328423999999913,
+      "uncertainty_fraction_of_U": 0.07482043187368202,
+      "relative_suboptimality_upper_bound_U_over_L_minus_one": 0.08087125402607964,
+      "root_bound_evaluation_wall_s": 1.3783964000176638,
+      "dp_build": {
+        "status": "completed",
+        "stop_reason": null,
+        "wall_s": 1.3779350999975577,
+        "start": 1494,
+        "budget": 55,
+        "vertices": 2989,
+        "particle_columns": 500,
+        "with_pd_bound": false,
+        "representation": "root cone and exact future suffix groups",
+        "cost_table_bytes": 129505736,
+        "survival_table_bytes": 0,
+        "feasible_table_bytes": 0,
+        "metadata_bytes": 1026344,
+        "scratch_bytes": 8500,
+        "numpy_transient_reserve_bytes": 107604,
+        "required_peak_managed_bytes": 130648184,
+        "allocated_peak_managed_bytes": 130648184,
+        "allocated_peak_owned_numpy_bytes": 130540580,
+        "published_table_bytes": 129505736,
+        "published_owned_numpy_bytes": 130536080,
+        "max_memory_bytes": 134217728,
+        "max_seconds": null,
+        "completed_time_layers": 55,
+        "completed_vertex_backups": 41860,
+        "edge_backups": 165798,
+        "particle_edge_backups": 64212544,
+        "uncompressed_particle_edge_backups": 82899000,
+        "deadline_overshoot_s": 0.0,
+        "group_counts_by_depth": [
+          500,
+          500,
+          500,
+          500,
+          500,
+          500,
+          500,
+          500,
+          500,
+          500,
+          500,
+          500,
+          500,
+          500,
+          500,
+          500,
+          499,
+          499,
+          499,
+          498,
+          498,
+          497,
+          496,
+          496,
+          496,
+          493,
+          491,
+          488,
+          485,
+          481,
+          479,
+          476,
+          475,
+          472,
+          469,
+          464,
+          455,
+          441,
+          436,
+          431,
+          421,
+          408,
+          393,
+          378,
+          366,
+          345,
+          331,
+          314,
+          303,
+          285,
+          256,
+          233,
+          203,
+          191,
+          166,
+          1
+        ],
+        "reachable_vertices_by_depth": [
+          1,
+          4,
+          9,
+          16,
+          25,
+          36,
+          49,
+          64,
+          81,
+          100,
+          121,
+          144,
+          169,
+          196,
+          225,
+          256,
+          289,
+          324,
+          361,
+          400,
+          441,
+          484,
+          529,
+          576,
+          625,
+          674,
+          723,
+          772,
+          821,
+          870,
+          919,
+          966,
+          1011,
+          1054,
+          1095,
+          1134,
+          1171,
+          1206,
+          1239,
+          1270,
+          1299,
+          1326,
+          1351,
+          1374,
+          1395,
+          1414,
+          1431,
+          1446,
+          1459,
+          1470,
+          1479,
+          1486,
+          1491,
+          1494,
+          1495,
+          1494
+        ],
+        "memory_scope": "all owned DP NumPy arrays plus reserved NumPy temporaries; excludes caller-owned arrays, Python objects, interpreter and libraries",
+        "work_scope": "preprocessing backups, not search expansions; shared method deadline",
+        "query_scope": "original motion ID order; arbitrary valid undetected weights; no state cache",
+        "global_epsilon_certified": false
+      },
+      "profiles": [
+        {
+          "variant": "prior_stdc",
+          "cap": "work",
+          "J_median": 45.881082400000004,
+          "Pd_median": 0.41586480000000003,
+          "expanded_median": 5000,
+          "frontier_remaining": [
+            11759,
+            11759,
+            11759
+          ],
+          "stop_reasons": [
+            "max_expansions",
+            "max_expansions",
+            "max_expansions"
+          ],
+          "certificate_fields": [
+            {
+              "bound_mode": "stdc_lb",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "stdc_lb",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "stdc_lb",
+              "theory_certified": false
+            }
+          ]
+        },
+        {
+          "variant": "compact_dp",
+          "cap": "work",
+          "J_median": 45.89234560000001,
+          "Pd_median": 0.4137744000000001,
+          "expanded_median": 5000,
+          "frontier_remaining": [
+            2450,
+            2450,
+            2450
+          ],
+          "stop_reasons": [
+            "max_expansions",
+            "max_expansions",
+            "max_expansions"
+          ],
+          "certificate_fields": [
+            {
+              "bound_mode": "dp_only",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "dp_only",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "dp_only",
+              "theory_certified": false
+            }
+          ]
+        },
+        {
+          "variant": "adaptive_combo",
+          "cap": "work",
+          "J_median": 45.881082400000004,
+          "Pd_median": 0.41586480000000003,
+          "expanded_median": 5000,
+          "frontier_remaining": [
+            10815,
+            10815,
+            10815
+          ],
+          "stop_reasons": [
+            "max_expansions",
+            "max_expansions",
+            "max_expansions"
+          ],
+          "certificate_fields": [
+            {
+              "bound_mode": "stdc_dp",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "stdc_dp",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "stdc_dp",
+              "theory_certified": false
+            }
+          ]
+        },
+        {
+          "variant": "prior_stdc",
+          "cap": "wall",
+          "J_median": 45.881082400000004,
+          "Pd_median": 0.41586480000000003,
+          "expanded_median": 4795,
+          "frontier_remaining": [
+            10580,
+            11281,
+            11461
+          ],
+          "stop_reasons": [
+            "max_seconds",
+            "max_seconds",
+            "max_seconds"
+          ],
+          "certificate_fields": [
+            {
+              "bound_mode": "stdc_lb",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "stdc_lb",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "stdc_lb",
+              "theory_certified": false
+            }
+          ]
+        },
+        {
+          "variant": "compact_dp",
+          "cap": "wall",
+          "J_median": 45.89234560000001,
+          "Pd_median": 0.4137744000000001,
+          "expanded_median": 14111,
+          "frontier_remaining": [
+            5890,
+            6088,
+            5901
+          ],
+          "stop_reasons": [
+            "max_seconds",
+            "max_seconds",
+            "max_seconds"
+          ],
+          "certificate_fields": [
+            {
+              "bound_mode": "dp_only",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "dp_only",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "dp_only",
+              "theory_certified": false
+            }
+          ]
+        },
+        {
+          "variant": "adaptive_combo",
+          "cap": "wall",
+          "J_median": 45.88881999999998,
+          "Pd_median": 0.40276080000000003,
+          "expanded_median": 3852,
+          "frontier_remaining": [
+            8670,
+            8779,
+            9076
+          ],
+          "stop_reasons": [
+            "max_seconds",
+            "max_seconds",
+            "max_seconds"
+          ],
+          "certificate_fields": [
+            {
+              "bound_mode": "stdc_dp",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "stdc_dp",
+              "theory_certified": false
+            },
+            {
+              "bound_mode": "stdc_dp",
+              "theory_certified": false
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "interpretation": {
+    "bounds": "Model-conditional floating numerical root bounds, tested in earlier toy audits. No verified outward-rounded global bound or frontier minimum is produced here.",
+    "gap": "Large U-L is uncertainty, not evidence that a better feasible route exists.",
+    "frontier": "Current saved result stores counts and timing, not remaining path-dependent states/min admissible f. Heap priority uses weighted paper guide and cannot substitute for min admissible f.",
+    "J_Pd": "J=sum(M_t,t=1..T); Pd=1-M_T. Lower J alone need not improve terminal Pd.",
+    "future_test": "Exhaustively solve tiny fixed-window bridge neighborhoods and release endpoint/suffix one restriction at a time, warm starting the same incumbent and charging diagnostic effort separately. Only full-tree bounds establish global near-optimality."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "witnesses": [
+    {
+      "scene": "lake_ontario",
+      "changed_steps": [],
+      "first_divergence": null,
+      "last_difference": null,
+      "terminal_changed": false,
+      "J_improvement": 0.0,
+      "Pd_change": 0.0
+    },
+    {
+      "scene": "arctic_ocean",
+      "changed_steps": [],
+      "first_divergence": null,
+      "last_difference": null,
+      "terminal_changed": false,
+      "J_improvement": 0.0,
+      "Pd_change": 0.0
+    },
+    {
+      "scene": "bay_of_fundy",
+      "changed_steps": [],
+      "first_divergence": null,
+      "last_difference": null,
+      "terminal_changed": false,
+      "J_improvement": 0.0,
+      "Pd_change": 0.0
+    }
+  ],
+  "global_epsilon_certified": false
+}

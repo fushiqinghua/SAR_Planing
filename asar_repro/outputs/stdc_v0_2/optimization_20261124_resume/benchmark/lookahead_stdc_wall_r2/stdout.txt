@@ -1,0 +1,1 @@
+{"variant": "lookahead_stdc", "protocol": "wall", "J": 17.264874448, "Pd_T": 0.897364416, "status": "budget_exceeded", "stop_reason": "max_seconds", "work_expanded": 7149, "search_wall_s": 5.015561499982141}

@@ -1,0 +1,43 @@
+{
+  "status": "passed",
+  "conclusion": "best_observed_baseline_J_improved_with_runtime_and_Pd_tradeoff",
+  "primary_weight": 1.04,
+  "baseline_J": 17.29389415456,
+  "anytime_stdc_J": 17.264874448,
+  "J_reduction_percent": 0.16780319285317194,
+  "baseline_Pd": 0.89737041888,
+  "anytime_stdc_Pd": 0.897364416,
+  "Pd_change_percentage_points": -0.0006002879999966737,
+  "baseline_time_s": 0.9149176999926567,
+  "anytime_stdc_time_s": 4.336257399991155,
+  "time_ratio": 4.739505422210061,
+  "stdc_incremental_J_reduction_percent_vs_zero": 0.010256259760241844,
+  "new_tests": 63,
+  "all_tests": 494,
+  "original_prefix_audit": 18024,
+  "additional_prefix_audit": 12123,
+  "small_searches": 405,
+  "real_smoke_runs": 6,
+  "real_benchmark_runs": 36,
+  "budget_stops": {
+    "max_expansions": 30
+  },
+  "certified_full_routes": 0,
+  "forcing_kind": "historical_real_forcing_allwater",
+  "particle_seed": 41,
+  "scope": "one fixed archive, repeated deterministic quality; repeated timings are not independent scenarios",
+  "preservation": {
+    "status": "passed",
+    "baseline_files": 654,
+    "protected_research_files": 2581,
+    "source_files": 109,
+    "historical_preflight_sha256": "dae1d7ef9586a4dda20d5121542993a8812e7dfbe6fdcc27251e9503a5bb2b0b"
+  },
+  "not_implemented": [
+    "MHA",
+    "equal_actual_wall_time_study",
+    "multi_archive_generalization",
+    "new_forcing",
+    "second_innovation"
+  ]
+}

@@ -1,0 +1,2982 @@
+{
+  "status": "passed",
+  "cases": 160,
+  "prefix_evaluations": 18024,
+  "violations": 0,
+  "max_overestimate": 8.881784197001252e-16,
+  "strictly_improved_prefixes": 1854,
+  "roots": [
+    {
+      "kind": "matrix",
+      "seed": 100,
+      "input_sha256": "d19e0045ec99de871c8553970192027a9f6adfb0df514c0308309e63df6ba6bb",
+      "prefix": [
+        3
+      ],
+      "remaining": 1.9250650158089857,
+      "bounds": {
+        "mass_lb": 0.03601694207766816,
+        "reach_lb": 1.2274966993222727,
+        "capacity_lb": 1.3773208646928328,
+        "stepwise_lb": 1.5234768464860475,
+        "stdc_radius_lb": 1.1957560476403861,
+        "stdc_lb": 1.5234768464860475,
+        "lookahead": 1.8849151775077537
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 101,
+      "input_sha256": "156e64bd85110fa9eb8023f48e5e18351f75bb69f168ab19e6b465ac3975a513",
+      "prefix": [
+        6
+      ],
+      "remaining": 3.9900940310393254,
+      "bounds": {
+        "mass_lb": 0.036499062826929204,
+        "reach_lb": 2.814317884927333,
+        "capacity_lb": 3.5529671118539614,
+        "stepwise_lb": 3.5529671118539614,
+        "stdc_radius_lb": 3.014311636717397,
+        "stdc_lb": 3.5529671118539614,
+        "lookahead": 3.8618888646598073
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 102,
+      "input_sha256": "6c5baa5804a22ab27669c3a64f1f65dc89c80d8cd0e13729b0a06deaf2f3e810",
+      "prefix": [
+        2
+      ],
+      "remaining": 2.5731116826490976,
+      "bounds": {
+        "mass_lb": 0.21184056333622336,
+        "reach_lb": 2.451466149032326,
+        "capacity_lb": 2.544862899004012,
+        "stepwise_lb": 2.544862899004012,
+        "stdc_radius_lb": 1.414094928904069,
+        "stdc_lb": 2.544862899004012,
+        "lookahead": 2.5731116826490976
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 103,
+      "input_sha256": "865984438ae46bf7e6ee5418dd22003afdf6c42088db6d908c98723276799c50",
+      "prefix": [
+        4
+      ],
+      "remaining": 2.70526733968555,
+      "bounds": {
+        "mass_lb": 0.16466429590495427,
+        "reach_lb": 2.215350137245217,
+        "capacity_lb": 2.3265775656591017,
+        "stepwise_lb": 2.4031352166253788,
+        "stdc_radius_lb": 1.8517463686876405,
+        "stdc_lb": 2.4031352166253788,
+        "lookahead": 2.669145028330737
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 104,
+      "input_sha256": "3773b92b314f0ad2929a9ec83562474ca757ce04c6f6082895d85012b26f32ae",
+      "prefix": [
+        7
+      ],
+      "remaining": 3.0485138697424574,
+      "bounds": {
+        "mass_lb": 0.0,
+        "reach_lb": 1.8450760743416976,
+        "capacity_lb": 1.9098342685486052,
+        "stepwise_lb": 2.264041444711693,
+        "stdc_radius_lb": 1.5174193711501498,
+        "stdc_lb": 2.264041444711693,
+        "lookahead": 2.9215976644416286
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 105,
+      "input_sha256": "0028fd3ecadbc57e1b46d999143952b1be75e5dbf86259d533109dac353b332b",
+      "prefix": [
+        3
+      ],
+      "remaining": 2.30911542339111,
+      "bounds": {
+        "mass_lb": 0.018358672092912233,
+        "reach_lb": 2.064668372910428,
+        "capacity_lb": 2.3016474250330825,
+        "stepwise_lb": 2.3016474250330825,
+        "stdc_radius_lb": 1.5752836770063645,
+        "stdc_lb": 2.3016474250330825,
+        "lookahead": 2.30911542339111
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 106,
+      "input_sha256": "129f71d1078d9451dbfebee725420b696877071b388111a61ecd118073afb481",
+      "prefix": [
+        5
+      ],
+      "remaining": 2.884038213320853,
+      "bounds": {
+        "mass_lb": 0.027259990604458467,
+        "reach_lb": 2.5122402053196415,
+        "capacity_lb": 2.6803707113614577,
+        "stepwise_lb": 2.6803707113614577,
+        "stdc_radius_lb": 2.451339645128983,
+        "stdc_lb": 2.6803707113614577,
+        "lookahead": 2.8747696043926947
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 107,
+      "input_sha256": "a7fb6af4af488d7944c2a6c1ee175e4df18b423d6df810096e0c8e05a26c6fcb",
+      "prefix": [
+        8
+      ],
+      "remaining": 3.3322693403519854,
+      "bounds": {
+        "mass_lb": 0.020197295159138505,
+        "reach_lb": 2.531936685451214,
+        "capacity_lb": 2.9594129871194936,
+        "stepwise_lb": 2.9594129871194936,
+        "stdc_radius_lb": 2.891021664191334,
+        "stdc_lb": 2.9594129871194936,
+        "lookahead": 3.278654858629997
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 108,
+      "input_sha256": "ba0004c816e5ec58f093493c22b7d43cbe4c6228cd91cedbbe7989fc3b7bb957",
+      "prefix": [
+        0
+      ],
+      "remaining": 1.6113144325008393,
+      "bounds": {
+        "mass_lb": 0.16956878775910542,
+        "reach_lb": 1.3522061046494114,
+        "capacity_lb": 1.2163500065801052,
+        "stepwise_lb": 1.3641464461026451,
+        "stdc_radius_lb": 1.2469845245801778,
+        "stdc_lb": 1.3641464461026451,
+        "lookahead": 1.6113144325008393
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 109,
+      "input_sha256": "e1612c74d8d7f9c5747913abba13f2c077aeb5202c6775d684f12e4428e80f6f",
+      "prefix": [
+        0
+      ],
+      "remaining": 3.1534441669338955,
+      "bounds": {
+        "mass_lb": 0.18904652743488326,
+        "reach_lb": 2.5829300425363466,
+        "capacity_lb": 3.010674314755665,
+        "stepwise_lb": 3.010674314755665,
+        "stdc_radius_lb": 2.3239456814833326,
+        "stdc_lb": 3.010674314755665,
+        "lookahead": 3.150704310301424
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 110,
+      "input_sha256": "9dfb24f65e4981b6d2da2910ce67f06574b8bf367cdbad87b2c4d9a7e7ce9fe3",
+      "prefix": [
+        0
+      ],
+      "remaining": 3.6501089384112317,
+      "bounds": {
+        "mass_lb": 0.08147460703972595,
+        "reach_lb": 2.8922566434425887,
+        "capacity_lb": 3.324041894192341,
+        "stepwise_lb": 3.324041894192341,
+        "stdc_radius_lb": 3.0713840498753284,
+        "stdc_lb": 3.324041894192341,
+        "lookahead": 3.520206892039498
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 111,
+      "input_sha256": "ba62d0acb4c7177a3c66477fb7e59d921bc485761a152a63a03624871760fa2d",
+      "prefix": [
+        1
+      ],
+      "remaining": 2.567330388987493,
+      "bounds": {
+        "mass_lb": 0.47755904816823036,
+        "reach_lb": 2.471465859808706,
+        "capacity_lb": 2.5306043941962537,
+        "stepwise_lb": 2.5306043941962537,
+        "stdc_radius_lb": 2.2388918277833714,
+        "stdc_lb": 2.5306043941962537,
+        "lookahead": 2.567330388987493
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 112,
+      "input_sha256": "9698749d2f90ef12179d57ae3ef24bf4dde7c9b74cbeae865b980daa77c9a0fc",
+      "prefix": [
+        1
+      ],
+      "remaining": 3.318342986037091,
+      "bounds": {
+        "mass_lb": 0.18541904753226326,
+        "reach_lb": 2.8587208142693727,
+        "capacity_lb": 3.2516286145527484,
+        "stepwise_lb": 3.2516286145527484,
+        "stdc_radius_lb": 2.8964383581073094,
+        "stdc_lb": 3.2516286145527484,
+        "lookahead": 3.3131576394338063
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 113,
+      "input_sha256": "d43ede80e3b9f3090d540a9c04c2db6dbca5aca4854860f0254ab5e0e82b13db",
+      "prefix": [
+        1
+      ],
+      "remaining": 3.255586923573448,
+      "bounds": {
+        "mass_lb": 0.011199676286297899,
+        "reach_lb": 2.7223263378031657,
+        "capacity_lb": 2.791216964408381,
+        "stepwise_lb": 2.8099432429381017,
+        "stdc_radius_lb": 2.52806534037544,
+        "stdc_lb": 2.8099432429381017,
+        "lookahead": 3.22078516155297
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 114,
+      "input_sha256": "f1b4ba9af86208a22c9cc4a720c05345288750551965b5d1333dd75e19268133",
+      "prefix": [
+        2
+      ],
+      "remaining": 3.0,
+      "bounds": {
+        "mass_lb": 3.0,
+        "reach_lb": 3.0,
+        "capacity_lb": 3.0,
+        "stepwise_lb": 3.0,
+        "stdc_radius_lb": 3.0,
+        "stdc_lb": 3.0,
+        "lookahead": 3.0
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 115,
+      "input_sha256": "74f665342fb2b5a5065d77c6ac155d143e7a6739113b4a1c7441cff2d6abcae0",
+      "prefix": [
+        2
+      ],
+      "remaining": 2.6082123602628395,
+      "bounds": {
+        "mass_lb": 0.21650685765527158,
+        "reach_lb": 2.233557361149148,
+        "capacity_lb": 2.438044102816362,
+        "stepwise_lb": 2.438044102816362,
+        "stdc_radius_lb": 2.287137193611498,
+        "stdc_lb": 2.438044102816362,
+        "lookahead": 2.5514835610406363
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 116,
+      "input_sha256": "e9bb40e4f2877e5ea47bbdc18200eb70cd0dffff7971e250545094b22ef4bb67",
+      "prefix": [
+        2
+      ],
+      "remaining": 3.761098076657404,
+      "bounds": {
+        "mass_lb": 0.05291144817271569,
+        "reach_lb": 2.9391387968919136,
+        "capacity_lb": 3.5600204117997722,
+        "stepwise_lb": 3.5600204117997722,
+        "stdc_radius_lb": 3.276562832892301,
+        "stdc_lb": 3.5600204117997722,
+        "lookahead": 3.7109856324211963
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 117,
+      "input_sha256": "862a8252af378e73b9f4dc55b583e05836d07bcfe9f86d4b1ad649cc157fbf8f",
+      "prefix": [
+        3
+      ],
+      "remaining": 1.1501980249283954,
+      "bounds": {
+        "mass_lb": 0.0,
+        "reach_lb": 0.6705773879573986,
+        "capacity_lb": 0.6514586378853897,
+        "stepwise_lb": 1.0041150066629767,
+        "stdc_radius_lb": 0.6514586378853897,
+        "stdc_lb": 1.0041150066629767,
+        "lookahead": 1.1501980249283954
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 118,
+      "input_sha256": "9d581b9e5bb77cccf0788ada245fdfa987458b4d5db773325635a530965bd742",
+      "prefix": [
+        3
+      ],
+      "remaining": 2.6345393001687682,
+      "bounds": {
+        "mass_lb": 0.07375675277218731,
+        "reach_lb": 2.1669307674874494,
+        "capacity_lb": 2.020987235659284,
+        "stepwise_lb": 2.2414630287180155,
+        "stdc_radius_lb": 1.9802805224084818,
+        "stdc_lb": 2.2414630287180155,
+        "lookahead": 2.6282403472016305
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 119,
+      "input_sha256": "f5f33a0ab17e99c2010aa03f0049dfa198b1045ddfd1ac4087dc4aa3448dc95a",
+      "prefix": [
+        3
+      ],
+      "remaining": 3.4375675718600536,
+      "bounds": {
+        "mass_lb": 0.05388959878141785,
+        "reach_lb": 2.037499881324695,
+        "capacity_lb": 3.308865541586402,
+        "stepwise_lb": 3.308865541586402,
+        "stdc_radius_lb": 2.380817127785992,
+        "stdc_lb": 3.308865541586402,
+        "lookahead": 3.3963735644225235
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 120,
+      "input_sha256": "c00a4c18dbfb041c58d889209962a0c157d5e56e9708d06e71c0242b6bb091a8",
+      "prefix": [
+        0
+      ],
+      "remaining": 2.33555603966743,
+      "bounds": {
+        "mass_lb": 0.17244208333078792,
+        "reach_lb": 2.012977346632256,
+        "capacity_lb": 2.3107181076399232,
+        "stepwise_lb": 2.3107181076399232,
+        "stdc_radius_lb": 1.3066725929547265,
+        "stdc_lb": 2.3107181076399232,
+        "lookahead": 2.3355560396674298
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 121,
+      "input_sha256": "b19d353aff1b4b37178e4fd04ec8db5b175bb7c57f932522faf6c533a6e1e738",
+      "prefix": [
+        4
+      ],
+      "remaining": 2.878211363069822,
+      "bounds": {
+        "mass_lb": 0.21220819555279333,
+        "reach_lb": 2.3282703614326308,
+        "capacity_lb": 2.7211137872787683,
+        "stepwise_lb": 2.7211137872787683,
+        "stdc_radius_lb": 2.0202620723491793,
+        "stdc_lb": 2.7211137872787683,
+        "lookahead": 2.8618093252432555
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 122,
+      "input_sha256": "c6e18d188d305a3f89ef5cf0e69fbf134a6d26698efb9c7363015c8e40945078",
+      "prefix": [
+        4
+      ],
+      "remaining": 3.6019127789773995,
+      "bounds": {
+        "mass_lb": 0.10818013750326243,
+        "reach_lb": 2.4465744688634814,
+        "capacity_lb": 3.1026516808495352,
+        "stepwise_lb": 3.1026516808495352,
+        "stdc_radius_lb": 2.8440611717279918,
+        "stdc_lb": 3.1026516808495352,
+        "lookahead": 3.5826369494849484
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 123,
+      "input_sha256": "8e2e4e8c3fc8abbe9acf70a3ff5055f9a7c3dc80e9f8d179bafeef48cc5dd0a4",
+      "prefix": [
+        1
+      ],
+      "remaining": 2.2431968439458676,
+      "bounds": {
+        "mass_lb": 0.43320270131799804,
+        "reach_lb": 1.881022517650155,
+        "capacity_lb": 2.1964469993550213,
+        "stepwise_lb": 2.1964469993550213,
+        "stdc_radius_lb": 1.8761028057313323,
+        "stdc_lb": 2.1964469993550213,
+        "lookahead": 2.2431968439458676
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 124,
+      "input_sha256": "d6af85a62240da01cf960a7b3b53964108f1b32fba264b14fc741baac74b79a2",
+      "prefix": [
+        5
+      ],
+      "remaining": 2.8741939653075863,
+      "bounds": {
+        "mass_lb": 0.040595781623098307,
+        "reach_lb": 2.401607559678831,
+        "capacity_lb": 2.6650735215213497,
+        "stepwise_lb": 2.6650735215213497,
+        "stdc_radius_lb": 1.932993280677425,
+        "stdc_lb": 2.6650735215213497,
+        "lookahead": 2.836305406198911
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 125,
+      "input_sha256": "c0dc178132b8ad27408b21b7c91f19863f897521e11e9e7f5388f5219aeee345",
+      "prefix": [
+        5
+      ],
+      "remaining": 3.8791513914784925,
+      "bounds": {
+        "mass_lb": 0.15096885641460397,
+        "reach_lb": 2.9294797304735534,
+        "capacity_lb": 3.67113169176257,
+        "stepwise_lb": 3.67113169176257,
+        "stdc_radius_lb": 3.18308661822041,
+        "stdc_lb": 3.67113169176257,
+        "lookahead": 3.795279819100085
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 126,
+      "input_sha256": "b9321842137e1fdefbb7d687b64112a089ee3a00058ff69148b7dcfc7d1b87f7",
+      "prefix": [
+        2
+      ],
+      "remaining": 1.3594215511544256,
+      "bounds": {
+        "mass_lb": 0.03060664112348376,
+        "reach_lb": 1.2791588347762424,
+        "capacity_lb": 0.9948574696697743,
+        "stepwise_lb": 1.319587072911325,
+        "stdc_radius_lb": 1.1953832160825,
+        "stdc_lb": 1.319587072911325,
+        "lookahead": 1.3594215511544256
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 127,
+      "input_sha256": "732be8320a57c39f5897bc2cd7bfca012e09dc621b61fca694012aaba4304f54",
+      "prefix": [
+        0
+      ],
+      "remaining": 3.4892268701443383,
+      "bounds": {
+        "mass_lb": 0.10441050045698107,
+        "reach_lb": 3.1627968182102446,
+        "capacity_lb": 3.4414644800615948,
+        "stepwise_lb": 3.4414644800615948,
+        "stdc_radius_lb": 3.1289057847352204,
+        "stdc_lb": 3.4414644800615948,
+        "lookahead": 3.489015603749356
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 128,
+      "input_sha256": "931ae9bf8abf9a25f183c52ba9e572036731d0ab7f24a03939f49573de11e171",
+      "prefix": [
+        6
+      ],
+      "remaining": 3.7906857801098623,
+      "bounds": {
+        "mass_lb": 0.09248100721567526,
+        "reach_lb": 3.0605476052389795,
+        "capacity_lb": 3.5675101554086086,
+        "stepwise_lb": 3.5675101554086086,
+        "stdc_radius_lb": 2.369980469419179,
+        "stdc_lb": 3.5675101554086086,
+        "lookahead": 3.7163935240555706
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 129,
+      "input_sha256": "4626af827cd40ba4d61764d1887d3fcc346f1bbe809e968b21a21934c0c43437",
+      "prefix": [
+        3
+      ],
+      "remaining": 2.207996948913653,
+      "bounds": {
+        "mass_lb": 0.1181279273620287,
+        "reach_lb": 1.9778582578512374,
+        "capacity_lb": 2.056304370510692,
+        "stepwise_lb": 2.129057739388868,
+        "stdc_radius_lb": 2.056304370510692,
+        "stdc_lb": 2.129057739388868,
+        "lookahead": 2.207996948913653
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 130,
+      "input_sha256": "46fed578cbb82d42f309cb02794967fd871e25eb21c86747c295e87678b396a8",
+      "prefix": [
+        1
+      ],
+      "remaining": 1.993184975466257,
+      "bounds": {
+        "mass_lb": 0.0,
+        "reach_lb": 1.3454085137421943,
+        "capacity_lb": 1.5285420852327387,
+        "stepwise_lb": 1.7059209127795911,
+        "stdc_radius_lb": 1.109721173347774,
+        "stdc_lb": 1.7059209127795911,
+        "lookahead": 1.933365655445874
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 131,
+      "input_sha256": "ae0d722d42e2b98f60ce0fc5294bdb82148df8d150bd25b5c842a2ee46ceeaa4",
+      "prefix": [
+        7
+      ],
+      "remaining": 3.7721440454870057,
+      "bounds": {
+        "mass_lb": 0.024155193966511602,
+        "reach_lb": 2.5753112920266097,
+        "capacity_lb": 3.215629300087439,
+        "stepwise_lb": 3.215629300087439,
+        "stdc_radius_lb": 3.0143581876585492,
+        "stdc_lb": 3.215629300087439,
+        "lookahead": 3.6774396123210655
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 132,
+      "input_sha256": "dd55264070474d6c0b9861eacfe7db194a0677615df60bd01e2b72f917cf7e12",
+      "prefix": [
+        0
+      ],
+      "remaining": 2.073647107338873,
+      "bounds": {
+        "mass_lb": 0.13686080334455747,
+        "reach_lb": 1.95705003222096,
+        "capacity_lb": 1.8755122189420264,
+        "stepwise_lb": 1.9810883564057,
+        "stdc_radius_lb": 1.4277656781423804,
+        "stdc_lb": 1.9810883564057,
+        "lookahead": 2.073647107338873
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 133,
+      "input_sha256": "f9e994fead247aac461d9adf64be355046752db8fb86fcf879fe480e511e1083",
+      "prefix": [
+        2
+      ],
+      "remaining": 4.000000000000001,
+      "bounds": {
+        "mass_lb": 4.000000000000001,
+        "reach_lb": 4.000000000000001,
+        "capacity_lb": 4.000000000000001,
+        "stepwise_lb": 4.000000000000001,
+        "stdc_radius_lb": 4.000000000000001,
+        "stdc_lb": 4.000000000000001,
+        "lookahead": 4.000000000000001
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 134,
+      "input_sha256": "e5ae9141c90b292c9e9963bb14b4184a2dac8ef16133c4df18a70c10aac04a3b",
+      "prefix": [
+        8
+      ],
+      "remaining": 3.637007177296026,
+      "bounds": {
+        "mass_lb": 0.04127170073979021,
+        "reach_lb": 2.5720167513500893,
+        "capacity_lb": 3.468639250332019,
+        "stepwise_lb": 3.468639250332019,
+        "stdc_radius_lb": 2.9427311186273717,
+        "stdc_lb": 3.468639250332019,
+        "lookahead": 3.5930376187821116
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 135,
+      "input_sha256": "573cf92d73a9ad1775f7aac123e5b7c02c92e4d5d03a952810f363e21543bb10",
+      "prefix": [
+        1
+      ],
+      "remaining": 1.2846207294045884,
+      "bounds": {
+        "mass_lb": 0.022607206663655736,
+        "reach_lb": 0.9153704966250504,
+        "capacity_lb": 0.9414195037685098,
+        "stepwise_lb": 1.044051968002433,
+        "stdc_radius_lb": 0.7835235882597631,
+        "stdc_lb": 1.044051968002433,
+        "lookahead": 1.2846207294045884
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 136,
+      "input_sha256": "b8032d348798fc11c72f84f35be27f9bb4fec369bdb269577eaaaf712626b757",
+      "prefix": [
+        3
+      ],
+      "remaining": 3.464204168232105,
+      "bounds": {
+        "mass_lb": 0.19628349886555016,
+        "reach_lb": 3.18823048934446,
+        "capacity_lb": 3.371458940673938,
+        "stepwise_lb": 3.371458940673938,
+        "stdc_radius_lb": 2.4583537690846695,
+        "stdc_lb": 3.371458940673938,
+        "lookahead": 3.4633392249604826
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 137,
+      "input_sha256": "abe6bbe7e24f93d3280f24c1200049b1eb3e5fa408925fea309afb68aaec1744",
+      "prefix": [
+        0
+      ],
+      "remaining": 3.8726458132659314,
+      "bounds": {
+        "mass_lb": 0.16727173232065928,
+        "reach_lb": 2.857597509743084,
+        "capacity_lb": 3.6902538752840552,
+        "stepwise_lb": 3.6902538752840552,
+        "stdc_radius_lb": 3.1533956083127137,
+        "stdc_lb": 3.6902538752840552,
+        "lookahead": 3.853497952572456
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 138,
+      "input_sha256": "c02011e9cb51c8985e25e3cdea57788a6fc48065485dc36df1a4f92bf03d6162",
+      "prefix": [
+        2
+      ],
+      "remaining": 1.5885421149162686,
+      "bounds": {
+        "mass_lb": 0.0728091926392605,
+        "reach_lb": 1.3639028545294836,
+        "capacity_lb": 1.365619240158845,
+        "stepwise_lb": 1.4997586476405185,
+        "stdc_radius_lb": 1.005334710795313,
+        "stdc_lb": 1.4997586476405185,
+        "lookahead": 1.5885421149162686
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 139,
+      "input_sha256": "c4f206e9c7dd2014b21ea7cbda7ae752a21cce9d0d96cb1d4181cb59da9640d7",
+      "prefix": [
+        4
+      ],
+      "remaining": 2.9884157570113006,
+      "bounds": {
+        "mass_lb": 0.06067586709036839,
+        "reach_lb": 2.5604567193008156,
+        "capacity_lb": 2.747796860593411,
+        "stepwise_lb": 2.8163493718239407,
+        "stdc_radius_lb": 1.6830188530382642,
+        "stdc_lb": 2.8163493718239407,
+        "lookahead": 2.9403703234034895
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 140,
+      "input_sha256": "293717099298fd5ac9936f27c3dd332a44d00d8c0e4f1c2d65b8ff723865cbef",
+      "prefix": [
+        1
+      ],
+      "remaining": 3.1038587257202646,
+      "bounds": {
+        "mass_lb": 0.3985143412889197,
+        "reach_lb": 1.5116077579649247,
+        "capacity_lb": 2.5380100606954383,
+        "stepwise_lb": 2.5380100606954383,
+        "stdc_radius_lb": 1.973444937235776,
+        "stdc_lb": 2.5380100606954383,
+        "lookahead": 3.0536593227206925
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 141,
+      "input_sha256": "b9b8198393522bfbb46bbc4fd30c7e898ab429c79af63926bc78347268934ff9",
+      "prefix": [
+        3
+      ],
+      "remaining": 1.2700226077614487,
+      "bounds": {
+        "mass_lb": 0.012636198405745796,
+        "reach_lb": 1.1892383157792248,
+        "capacity_lb": 0.8086852404704072,
+        "stepwise_lb": 1.2012702163674287,
+        "stdc_radius_lb": 0.9971323915852718,
+        "stdc_lb": 1.2012702163674287,
+        "lookahead": 1.2700226077614487
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 142,
+      "input_sha256": "eb7a6973a8e74536404404f425cd581e5c75d690133e7133a453370a309808c5",
+      "prefix": [
+        5
+      ],
+      "remaining": 3.0153845396707317,
+      "bounds": {
+        "mass_lb": 0.04925575985282747,
+        "reach_lb": 2.3077670547744358,
+        "capacity_lb": 2.780504646636916,
+        "stepwise_lb": 2.780504646636916,
+        "stdc_radius_lb": 1.8489716682542319,
+        "stdc_lb": 2.780504646636916,
+        "lookahead": 2.9548182408471906
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 143,
+      "input_sha256": "be231e5f9da172081d061ba73a8f972665e89a419bc58f5bfcc592385011d214",
+      "prefix": [
+        2
+      ],
+      "remaining": 2.525820413706513,
+      "bounds": {
+        "mass_lb": 0.0,
+        "reach_lb": 1.4026203511604214,
+        "capacity_lb": 1.6345494393470392,
+        "stepwise_lb": 1.8205407438642902,
+        "stdc_radius_lb": 1.6222850379781044,
+        "stdc_lb": 1.8205407438642902,
+        "lookahead": 2.4494966010476036
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 144,
+      "input_sha256": "c083c52aabd3c296dc6e2d3607377e1edd774c82b03ae848bf28db26c5648dc2",
+      "prefix": [
+        0
+      ],
+      "remaining": 2.0895376226685567,
+      "bounds": {
+        "mass_lb": 0.25533891734214975,
+        "reach_lb": 1.9742692438504252,
+        "capacity_lb": 2.013700143982951,
+        "stepwise_lb": 2.0406220836499003,
+        "stdc_radius_lb": 1.324799165482669,
+        "stdc_lb": 2.0406220836499003,
+        "lookahead": 2.089537622668557
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 145,
+      "input_sha256": "bd0ac34831821a78ba266d52213663f91159563689be135c65dc500a7b3b4eea",
+      "prefix": [
+        0
+      ],
+      "remaining": 2.993296275943607,
+      "bounds": {
+        "mass_lb": 0.1391221089142494,
+        "reach_lb": 2.1534120674997714,
+        "capacity_lb": 2.724654490274872,
+        "stepwise_lb": 2.724654490274872,
+        "stdc_radius_lb": 2.2450393735424994,
+        "stdc_lb": 2.724654490274872,
+        "lookahead": 2.981486319160734
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 146,
+      "input_sha256": "b6a103b9c6c70ae7538112fdc2705876e928a8ec0e18d1c51d3bf1568cfd088f",
+      "prefix": [
+        3
+      ],
+      "remaining": 3.5441557778141366,
+      "bounds": {
+        "mass_lb": 0.11089634108598852,
+        "reach_lb": 2.7804530817086333,
+        "capacity_lb": 3.254551550007595,
+        "stepwise_lb": 3.254551550007595,
+        "stdc_radius_lb": 3.215361576364827,
+        "stdc_lb": 3.254551550007595,
+        "lookahead": 3.460025484501907
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 147,
+      "input_sha256": "09468f09e2189b465fe6146d31ee187ef4e0424e0592d83390fcbbe0495f2882",
+      "prefix": [
+        1
+      ],
+      "remaining": 0.6675253208350662,
+      "bounds": {
+        "mass_lb": 0.02028569400224408,
+        "reach_lb": 0.38878878846156095,
+        "capacity_lb": 0.5417488124424729,
+        "stepwise_lb": 0.5985982468527751,
+        "stdc_radius_lb": 0.3701361125242348,
+        "stdc_lb": 0.5985982468527751,
+        "lookahead": 0.6675253208350662
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 148,
+      "input_sha256": "8ed51620530d5da04980c5963352bbec294a36a1872e8bd168829877b63e225f",
+      "prefix": [
+        1
+      ],
+      "remaining": 2.37283153609073,
+      "bounds": {
+        "mass_lb": 0.06665620452199919,
+        "reach_lb": 1.6947383166082284,
+        "capacity_lb": 2.112365316608389,
+        "stepwise_lb": 2.113063002851603,
+        "stdc_radius_lb": 2.0878628626281106,
+        "stdc_lb": 2.113063002851603,
+        "lookahead": 2.3308143502296863
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 149,
+      "input_sha256": "bcd9d851b10c86e475029f548ff66ce0eef3a47ab9eca8114c94ee217334d659",
+      "prefix": [
+        4
+      ],
+      "remaining": 3.8949743154176506,
+      "bounds": {
+        "mass_lb": 0.01722981523901332,
+        "reach_lb": 2.925486614319291,
+        "capacity_lb": 3.6194490197666753,
+        "stepwise_lb": 3.6194490197666753,
+        "stdc_radius_lb": 3.4053230523931903,
+        "stdc_lb": 3.6194490197666753,
+        "lookahead": 3.811272123533207
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 150,
+      "input_sha256": "512c86aedc1958fd325a398e56203d9650dff2876dceada30eb84ed62e41cfb0",
+      "prefix": [
+        2
+      ],
+      "remaining": 2.246245712970863,
+      "bounds": {
+        "mass_lb": 0.08111712923462593,
+        "reach_lb": 1.9657147446324106,
+        "capacity_lb": 2.1643661716308342,
+        "stepwise_lb": 2.1643661716308342,
+        "stdc_radius_lb": 1.3067794664775834,
+        "stdc_lb": 2.1643661716308342,
+        "lookahead": 2.246245712970863
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 151,
+      "input_sha256": "945f17b84595e606897e193899825958a1d523a620d6118192622518967caf26",
+      "prefix": [
+        2
+      ],
+      "remaining": 3.1915251346947917,
+      "bounds": {
+        "mass_lb": 0.392461668630873,
+        "reach_lb": 2.8363433194609886,
+        "capacity_lb": 3.001301479153107,
+        "stepwise_lb": 3.001301479153107,
+        "stdc_radius_lb": 2.4414412480906678,
+        "stdc_lb": 3.001301479153107,
+        "lookahead": 3.144363610083748
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 152,
+      "input_sha256": "0b39a72c4b7fb461211fa913ba55d1912f9d207bc34d71b783b2499a0cb94319",
+      "prefix": [
+        5
+      ],
+      "remaining": 5.000000000000001,
+      "bounds": {
+        "mass_lb": 5.000000000000001,
+        "reach_lb": 5.000000000000001,
+        "capacity_lb": 5.000000000000001,
+        "stepwise_lb": 5.000000000000001,
+        "stdc_radius_lb": 5.000000000000001,
+        "stdc_lb": 5.000000000000001,
+        "lookahead": 5.000000000000002
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 153,
+      "input_sha256": "01338af97dd8f82be94082082967b259fd05ab4e18f2b9c35ae4e69b8b7795f5",
+      "prefix": [
+        3
+      ],
+      "remaining": 2.19923318374619,
+      "bounds": {
+        "mass_lb": 0.07632017634494753,
+        "reach_lb": 1.7674594937538464,
+        "capacity_lb": 2.057217449278069,
+        "stepwise_lb": 2.057217449278069,
+        "stdc_radius_lb": 0.8448210886277085,
+        "stdc_lb": 2.057217449278069,
+        "lookahead": 2.19923318374619
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 154,
+      "input_sha256": "2385f63f172c3d5bc1165b0d908398c32beeead9518d81aa986d60d5a8c3fae5",
+      "prefix": [
+        3
+      ],
+      "remaining": 3.194274946704273,
+      "bounds": {
+        "mass_lb": 0.10763657148755608,
+        "reach_lb": 2.79627600773858,
+        "capacity_lb": 3.162860595772865,
+        "stepwise_lb": 3.162860595772865,
+        "stdc_radius_lb": 2.92814301354235,
+        "stdc_lb": 3.162860595772865,
+        "lookahead": 3.1903009818912844
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 155,
+      "input_sha256": "75bba37a2dce654d95779223c65f8ca2425a8a4fceb2911bc5f75f9a4077f303",
+      "prefix": [
+        6
+      ],
+      "remaining": 3.6701078970488155,
+      "bounds": {
+        "mass_lb": 0.15831067971269253,
+        "reach_lb": 2.9400238970453323,
+        "capacity_lb": 3.5735310697390164,
+        "stepwise_lb": 3.5735310697390164,
+        "stdc_radius_lb": 3.322404992530453,
+        "stdc_lb": 3.5735310697390164,
+        "lookahead": 3.6211191563891756
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 156,
+      "input_sha256": "3ca167ad662539db57537ce2f6a320614392f33fde42def8bf7b3d7caaae3a3e",
+      "prefix": [
+        0
+      ],
+      "remaining": 1.8406100835755443,
+      "bounds": {
+        "mass_lb": 0.0,
+        "reach_lb": 1.587033156927233,
+        "capacity_lb": 1.5546028611466793,
+        "stepwise_lb": 1.6756116229327094,
+        "stdc_radius_lb": 0.8500911481200614,
+        "stdc_lb": 1.6756116229327094,
+        "lookahead": 1.8406100835755441
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 157,
+      "input_sha256": "1347b7862b4499eba4d6a56eb95e8727470824ace43937c9c6eb9af3aa3b34b7",
+      "prefix": [
+        4
+      ],
+      "remaining": 2.9655397462487603,
+      "bounds": {
+        "mass_lb": 0.11283908971276521,
+        "reach_lb": 2.517430581217546,
+        "capacity_lb": 2.5863431717691476,
+        "stepwise_lb": 2.6463263835667314,
+        "stdc_radius_lb": 2.2172953873399845,
+        "stdc_lb": 2.6463263835667314,
+        "lookahead": 2.952696309740157
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 158,
+      "input_sha256": "afebe85fa21751a17c67835bd1c3e074e1c101a7f7224542ef493eda0e93a6d7",
+      "prefix": [
+        7
+      ],
+      "remaining": 3.046073672754148,
+      "bounds": {
+        "mass_lb": 0.020165054026548293,
+        "reach_lb": 1.7969878377413875,
+        "capacity_lb": 2.479866643335611,
+        "stepwise_lb": 2.479866643335611,
+        "stdc_radius_lb": 2.4377533666740208,
+        "stdc_lb": 2.479866643335611,
+        "lookahead": 2.8104746831826093
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 159,
+      "input_sha256": "d27ea994d45120e6220113f32104aab4eae9e47c499f9127ba88d88804e05856",
+      "prefix": [
+        1
+      ],
+      "remaining": 2.3328354258235073,
+      "bounds": {
+        "mass_lb": 0.2309606438197411,
+        "reach_lb": 2.1218772908307857,
+        "capacity_lb": 2.164126584302428,
+        "stepwise_lb": 2.232499064338452,
+        "stdc_radius_lb": 1.7904038869749188,
+        "stdc_lb": 2.232499064338452,
+        "lookahead": 2.3328354258235073
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 160,
+      "input_sha256": "4b4237be8e34828d3d1be85346f9ba4a46342a8e5679f4ef65dd2d6d8522b2e9",
+      "prefix": [
+        5
+      ],
+      "remaining": 2.798766072086502,
+      "bounds": {
+        "mass_lb": 0.5209759684542362,
+        "reach_lb": 2.1860395771409715,
+        "capacity_lb": 2.5792789617632192,
+        "stepwise_lb": 2.5792789617632192,
+        "stdc_radius_lb": 2.28678702585373,
+        "stdc_lb": 2.5792789617632192,
+        "lookahead": 2.796013089630378
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 161,
+      "input_sha256": "01cafac338ff746a67434b537367fdec3e92d67600cc695affd585fb6fffd7b5",
+      "prefix": [
+        8
+      ],
+      "remaining": 3.9807086126294697,
+      "bounds": {
+        "mass_lb": 0.2585356982705156,
+        "reach_lb": 3.0802758398009984,
+        "capacity_lb": 3.759345468956749,
+        "stepwise_lb": 3.759345468956749,
+        "stdc_radius_lb": 3.4619110583886283,
+        "stdc_lb": 3.759345468956749,
+        "lookahead": 3.8537123176514423
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 162,
+      "input_sha256": "dd48e7117468b7e28465d1f63e998520425897ea3c36d846a77d65836c46a2f9",
+      "prefix": [
+        2
+      ],
+      "remaining": 2.0308178013392535,
+      "bounds": {
+        "mass_lb": 0.22580058247433157,
+        "reach_lb": 1.8986645486865914,
+        "capacity_lb": 1.9322598188358828,
+        "stepwise_lb": 1.939048435676389,
+        "stdc_radius_lb": 1.5231889989167793,
+        "stdc_lb": 1.939048435676389,
+        "lookahead": 2.0308178013392535
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 163,
+      "input_sha256": "6d32d52bfac1fc375fb297094ef11d1fcf713b4ffb9ccbcc33ef7367bf3000a9",
+      "prefix": [
+        0
+      ],
+      "remaining": 2.8903809727914433,
+      "bounds": {
+        "mass_lb": 0.2369314213259503,
+        "reach_lb": 2.2666463189926644,
+        "capacity_lb": 2.52312932896671,
+        "stepwise_lb": 2.52312932896671,
+        "stdc_radius_lb": 2.52312932896671,
+        "stdc_lb": 2.52312932896671,
+        "lookahead": 2.8632628002132767
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 164,
+      "input_sha256": "af9e84af881fd84eb29367d84cee9e9babb30ea27bc8367d2c151bba4988d581",
+      "prefix": [
+        0
+      ],
+      "remaining": 4.160421159538501,
+      "bounds": {
+        "mass_lb": 0.0448774798832935,
+        "reach_lb": 3.7379862997362983,
+        "capacity_lb": 4.0103613897934345,
+        "stepwise_lb": 4.0103613897934345,
+        "stdc_radius_lb": 3.4838667004477064,
+        "stdc_lb": 4.0103613897934345,
+        "lookahead": 4.0696641951232255
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 165,
+      "input_sha256": "36627e040657a297eb581c194a803349e721e92064864ee2b321b8a3f825f3a2",
+      "prefix": [
+        3
+      ],
+      "remaining": 1.051963841416801,
+      "bounds": {
+        "mass_lb": 0.06828554907169086,
+        "reach_lb": 0.9671934297175899,
+        "capacity_lb": 0.5115168940332597,
+        "stepwise_lb": 0.982556820051252,
+        "stdc_radius_lb": 0.5722848593440766,
+        "stdc_lb": 0.982556820051252,
+        "lookahead": 1.051963841416801
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 166,
+      "input_sha256": "ec8e447c5625a8cfbd4e3adcbbf0ac2f5e98b280af630881045bd673e9181caa",
+      "prefix": [
+        1
+      ],
+      "remaining": 2.9500022212670927,
+      "bounds": {
+        "mass_lb": 0.0685927417275354,
+        "reach_lb": 2.291188598522454,
+        "capacity_lb": 2.8355924369103054,
+        "stepwise_lb": 2.8355924369103054,
+        "stdc_radius_lb": 2.192921814465063,
+        "stdc_lb": 2.8355924369103054,
+        "lookahead": 2.93245165731613
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 167,
+      "input_sha256": "b5067ffa74103cc09d9526788892c382c602f468ed8d531274698e7d072f68f6",
+      "prefix": [
+        1
+      ],
+      "remaining": 2.726152143124806,
+      "bounds": {
+        "mass_lb": 0.09329999125573324,
+        "reach_lb": 1.9270459380526925,
+        "capacity_lb": 1.9658716113892818,
+        "stepwise_lb": 2.2395278474857565,
+        "stdc_radius_lb": 1.9658716113892818,
+        "stdc_lb": 2.2395278474857565,
+        "lookahead": 2.5646814199136143
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 168,
+      "input_sha256": "941503bf587ec792b481796db397e971bf862dd0566768496f06a90218694de9",
+      "prefix": [
+        0
+      ],
+      "remaining": 2.4818022658597823,
+      "bounds": {
+        "mass_lb": 0.22090771721941066,
+        "reach_lb": 2.1924547514966974,
+        "capacity_lb": 2.453686722280775,
+        "stepwise_lb": 2.453686722280775,
+        "stdc_radius_lb": 1.9116872228632564,
+        "stdc_lb": 2.453686722280775,
+        "lookahead": 2.4818022658597823
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 169,
+      "input_sha256": "398ac130faac17c904a09e7ef2b1e20904c36bf7b318887c5d3bc7db3ea412d0",
+      "prefix": [
+        2
+      ],
+      "remaining": 2.000937665043506,
+      "bounds": {
+        "mass_lb": 0.0,
+        "reach_lb": 1.5741176691490908,
+        "capacity_lb": 1.6004481859580135,
+        "stepwise_lb": 1.7365824411079847,
+        "stdc_radius_lb": 1.2732581088039363,
+        "stdc_lb": 1.7365824411079847,
+        "lookahead": 1.9451059392569159
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 170,
+      "input_sha256": "037a0819f4d64b05200c841b4c9661e8c4b5b224e3cfd552ab0268deb831429d",
+      "prefix": [
+        2
+      ],
+      "remaining": 3.6621946711316933,
+      "bounds": {
+        "mass_lb": 0.036310337812020414,
+        "reach_lb": 2.8261871003938426,
+        "capacity_lb": 3.2871714377120176,
+        "stepwise_lb": 3.2871714377120176,
+        "stdc_radius_lb": 3.0408004872496295,
+        "stdc_lb": 3.2871714377120176,
+        "lookahead": 3.5325560668197578
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 171,
+      "input_sha256": "ec263f18d34cc6d8e4c4338910e1791406fea186bd7c3813f82d5a5a57851819",
+      "prefix": [
+        1
+      ],
+      "remaining": 3.0,
+      "bounds": {
+        "mass_lb": 3.0,
+        "reach_lb": 3.0,
+        "capacity_lb": 3.0,
+        "stepwise_lb": 3.0,
+        "stdc_radius_lb": 3.0,
+        "stdc_lb": 3.0,
+        "lookahead": 3.0
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 172,
+      "input_sha256": "6f02a0e793d2473d66e762d9b4c528398a7fefa98a269f2df7abac1c792c86ab",
+      "prefix": [
+        3
+      ],
+      "remaining": 2.1234575773827045,
+      "bounds": {
+        "mass_lb": 0.08967362820511857,
+        "reach_lb": 1.8065783176487404,
+        "capacity_lb": 1.8090453382265264,
+        "stepwise_lb": 1.9016413934840428,
+        "stdc_radius_lb": 1.5766073975012147,
+        "stdc_lb": 1.9016413934840428,
+        "lookahead": 2.1113134634004576
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 173,
+      "input_sha256": "30b2faee9fa3b82678dd7444934b9359a953f9b5724c3f1982b5b787db4ca4f5",
+      "prefix": [
+        3
+      ],
+      "remaining": 3.7097566034444815,
+      "bounds": {
+        "mass_lb": 0.12872118291252205,
+        "reach_lb": 2.768766069508989,
+        "capacity_lb": 3.4966925406011384,
+        "stepwise_lb": 3.4966925406011384,
+        "stdc_radius_lb": 3.2392620039644004,
+        "stdc_lb": 3.4966925406011384,
+        "lookahead": 3.615903268680183
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 174,
+      "input_sha256": "0e2ee1c4eb64ea25a8624de5350c099ee76c322de0a39d382d4fc80ea5d08de6",
+      "prefix": [
+        2
+      ],
+      "remaining": 1.750320305818236,
+      "bounds": {
+        "mass_lb": 0.09012436240598587,
+        "reach_lb": 1.4249447094865804,
+        "capacity_lb": 1.475722351025738,
+        "stepwise_lb": 1.5366203871280435,
+        "stdc_radius_lb": 1.3504229061162394,
+        "stdc_lb": 1.5366203871280435,
+        "lookahead": 1.750320305818236
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 175,
+      "input_sha256": "c916794962f633e45007516af10883d3b7b055232feb9b27989457253c405e87",
+      "prefix": [
+        4
+      ],
+      "remaining": 3.235862859136251,
+      "bounds": {
+        "mass_lb": 0.7029833792443497,
+        "reach_lb": 2.502617491754255,
+        "capacity_lb": 2.767324297627125,
+        "stepwise_lb": 2.767324297627125,
+        "stdc_radius_lb": 2.6591303064553156,
+        "stdc_lb": 2.767324297627125,
+        "lookahead": 3.1950144706018797
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 176,
+      "input_sha256": "8d6f8f53d5a40527d1f4bbe9d69023e5777823b0f9d795a92619b8a1e229c731",
+      "prefix": [
+        4
+      ],
+      "remaining": 3.2971335232223367,
+      "bounds": {
+        "mass_lb": 0.08023487451543833,
+        "reach_lb": 2.1529319997570893,
+        "capacity_lb": 2.443343153244376,
+        "stepwise_lb": 2.5089409575711437,
+        "stdc_radius_lb": 2.4350517615907057,
+        "stdc_lb": 2.5089409575711437,
+        "lookahead": 3.1971195044088887
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 177,
+      "input_sha256": "afc0f861d4ab91746ced6ce342168da18b87ac69a1905e12e67f7e3c57624bb1",
+      "prefix": [
+        3
+      ],
+      "remaining": 1.9211040214734911,
+      "bounds": {
+        "mass_lb": 0.6075103556020764,
+        "reach_lb": 1.5491965377052594,
+        "capacity_lb": 1.7082448214192747,
+        "stepwise_lb": 1.7082448214192747,
+        "stdc_radius_lb": 1.7082448214192747,
+        "stdc_lb": 1.7082448214192747,
+        "lookahead": 1.9211040214734911
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 178,
+      "input_sha256": "5d240432164bd7ad6f056b7f28c931dc8eed20a911e015648674de286fc629e8",
+      "prefix": [
+        5
+      ],
+      "remaining": 3.391028485764771,
+      "bounds": {
+        "mass_lb": 0.3059524930566132,
+        "reach_lb": 3.048428318426338,
+        "capacity_lb": 3.3216072984964495,
+        "stepwise_lb": 3.3216072984964495,
+        "stdc_radius_lb": 2.593181224537821,
+        "stdc_lb": 3.3216072984964495,
+        "lookahead": 3.385936235725156
+      }
+    },
+    {
+      "kind": "matrix",
+      "seed": 179,
+      "input_sha256": "cca8f841b09d458c6088cabab9ef53796ed74687ca2c16bb867a8f412f732c4f",
+      "prefix": [
+        5
+      ],
+      "remaining": 3.209065961606673,
+      "bounds": {
+        "mass_lb": 0.048794182689575076,
+        "reach_lb": 2.346564427910237,
+        "capacity_lb": 2.686406609447829,
+        "stepwise_lb": 2.686406609447829,
+        "stdc_radius_lb": 2.3534827718752642,
+        "stdc_lb": 2.686406609447829,
+        "lookahead": 3.1364416302699354
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 100,
+      "input_sha256": "89fe610b20dc9b2567e13612e3e1efc6c79163724b97948a2b2d286441fb259c",
+      "prefix": [
+        3
+      ],
+      "remaining": 3.2549702942205707,
+      "bounds": {
+        "mass_lb": 0.03601694207766815,
+        "reach_lb": 3.247944950729048,
+        "capacity_lb": 3.066625252498079,
+        "stepwise_lb": 3.247944950729048,
+        "stdc_radius_lb": 3.0139616150681006,
+        "stdc_lb": 3.2479607726984345,
+        "lookahead": 3.2549702942205707
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 101,
+      "input_sha256": "0d791d2f429b5b1ada447ed9f8bebdea6e17614d44e6e1a088d05c35090568ad",
+      "prefix": [
+        6
+      ],
+      "remaining": 3.632681302678313,
+      "bounds": {
+        "mass_lb": 0.036499062826929204,
+        "reach_lb": 2.7763991376678705,
+        "capacity_lb": 2.9495652944756676,
+        "stepwise_lb": 3.129717849442801,
+        "stdc_radius_lb": 3.0658233972329336,
+        "stdc_lb": 3.129717849442801,
+        "lookahead": 3.433161381538468
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 102,
+      "input_sha256": "1920a488be30891b7194bd2ea9de1e295be69eba037b76274be6ff366bc08931",
+      "prefix": [
+        2
+      ],
+      "remaining": 2.4322158605893978,
+      "bounds": {
+        "mass_lb": 0.21184056333622345,
+        "reach_lb": 2.372129882487054,
+        "capacity_lb": 2.326983377075201,
+        "stepwise_lb": 2.4007235469493104,
+        "stdc_radius_lb": 2.125344613683458,
+        "stdc_lb": 2.4007235469493104,
+        "lookahead": 2.4322158605893978
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 103,
+      "input_sha256": "bbbe8a484da92d44b94ce85e16b022afdeba33cea7c08e5b2f125637cfa89007",
+      "prefix": [
+        4
+      ],
+      "remaining": 3.3637000084544075,
+      "bounds": {
+        "mass_lb": 0.16466429590495424,
+        "reach_lb": 3.099714146304406,
+        "capacity_lb": 3.290131816919171,
+        "stepwise_lb": 3.290131816919171,
+        "stdc_radius_lb": 2.953764320169365,
+        "stdc_lb": 3.290131816919171,
+        "lookahead": 3.362493419384064
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 104,
+      "input_sha256": "db763d56bc9162240f657d897777934128275a77b4ffc312dd509894136f2b74",
+      "prefix": [
+        7
+      ],
+      "remaining": 3.9596935654360985,
+      "bounds": {
+        "mass_lb": 0.0,
+        "reach_lb": 3.9596935654360985,
+        "capacity_lb": 3.4981936237491036,
+        "stepwise_lb": 3.9596935654360985,
+        "stdc_radius_lb": 2.0943511306048257,
+        "stdc_lb": 3.9596935654360985,
+        "lookahead": 3.9596935654360994
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 105,
+      "input_sha256": "41927b4a63f119bd335bf8cc0d8fe0f0519e7e48dbe652c4b43005450062115c",
+      "prefix": [
+        3
+      ],
+      "remaining": 2.5907857191047223,
+      "bounds": {
+        "mass_lb": 0.01835867209291223,
+        "reach_lb": 2.5829563947580603,
+        "capacity_lb": 2.5622582587524585,
+        "stepwise_lb": 2.5829563947580603,
+        "stdc_radius_lb": 2.101406444804236,
+        "stdc_lb": 2.5829563947580603,
+        "lookahead": 2.5907857191047223
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 106,
+      "input_sha256": "797c98cbf5258382d54671304bf32d5e7fc4f187b21607f2d583ecf96dc2bd22",
+      "prefix": [
+        5
+      ],
+      "remaining": 3.4456142744307505,
+      "bounds": {
+        "mass_lb": 0.027259990604458467,
+        "reach_lb": 3.422605272863189,
+        "capacity_lb": 3.3552949036048183,
+        "stepwise_lb": 3.4229440985970214,
+        "stdc_radius_lb": 2.251691492038992,
+        "stdc_lb": 3.4229440985970214,
+        "lookahead": 3.445614274430751
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 107,
+      "input_sha256": "c52df7f52b8ab6d395169c5c47714f86bd1b71561b740d79ebd01a8e27baef93",
+      "prefix": [
+        8
+      ],
+      "remaining": 3.9123650119397473,
+      "bounds": {
+        "mass_lb": 0.020197295159138505,
+        "reach_lb": 3.722561021153757,
+        "capacity_lb": 3.455328336071667,
+        "stepwise_lb": 3.749995973180041,
+        "stdc_radius_lb": 3.4634618443929206,
+        "stdc_lb": 3.749995973180041,
+        "lookahead": 3.8446949534400012
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 108,
+      "input_sha256": "2bb41a3c0e49778471665fa9ee0bed611f51213d0044fe191831f087c9d54a4e",
+      "prefix": [
+        0
+      ],
+      "remaining": 1.9108992033185694,
+      "bounds": {
+        "mass_lb": 0.1695687877591054,
+        "reach_lb": 1.865044765462083,
+        "capacity_lb": 1.7386940686054326,
+        "stepwise_lb": 1.865044765462083,
+        "stdc_radius_lb": 1.5554603944703085,
+        "stdc_lb": 1.865044765462083,
+        "lookahead": 1.9108992033185697
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 109,
+      "input_sha256": "80f5561aa29bc2a40e7656e304636cf7feffdb7f7f0ecc159172d2bf340d43db",
+      "prefix": [
+        0
+      ],
+      "remaining": 3.379633861388346,
+      "bounds": {
+        "mass_lb": 0.18904652743488332,
+        "reach_lb": 3.186194486930363,
+        "capacity_lb": 3.2100610559438305,
+        "stepwise_lb": 3.285704817772391,
+        "stdc_radius_lb": 3.1986135838860523,
+        "stdc_lb": 3.285704817772391,
+        "lookahead": 3.360090066196469
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 110,
+      "input_sha256": "7327018999a1dc2433e33ac8e79f2f1621f1e93c9118223fd4f0cc1376386d7e",
+      "prefix": [
+        0
+      ],
+      "remaining": 3.9242491084036555,
+      "bounds": {
+        "mass_lb": 0.08147460703972598,
+        "reach_lb": 3.838640761212794,
+        "capacity_lb": 3.7959080272204733,
+        "stepwise_lb": 3.8477647398653514,
+        "stdc_radius_lb": 3.17275238344423,
+        "stdc_lb": 3.851669114275201,
+        "lookahead": 3.8843887208868195
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 111,
+      "input_sha256": "5b3f1df69ded180cd44cccf16ce8fa13631215e6b4c048bab85d24d2484a719d",
+      "prefix": [
+        1
+      ],
+      "remaining": 2.514150404381277,
+      "bounds": {
+        "mass_lb": 0.47755904816823036,
+        "reach_lb": 2.395822751898964,
+        "capacity_lb": 2.470726421376373,
+        "stepwise_lb": 2.470726421376373,
+        "stdc_radius_lb": 2.2758353834788907,
+        "stdc_lb": 2.470726421376373,
+        "lookahead": 2.514150404381277
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 112,
+      "input_sha256": "afb3c2f250ae76efa8fe5c7c4126ce11d0dce85dbd569a3ede18146def0afe76",
+      "prefix": [
+        1
+      ],
+      "remaining": 3.6748110679106967,
+      "bounds": {
+        "mass_lb": 0.18541904753226326,
+        "reach_lb": 3.6094109357602946,
+        "capacity_lb": 3.6425535141712477,
+        "stepwise_lb": 3.6539793124148066,
+        "stdc_radius_lb": 3.5605326371050587,
+        "stdc_lb": 3.6539793124148066,
+        "lookahead": 3.6748110679106967
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 113,
+      "input_sha256": "463311d4e7490b960fe9b7b91f42f03309640324a836e683548755c9feb5ed6f",
+      "prefix": [
+        1
+      ],
+      "remaining": 3.6702669657292764,
+      "bounds": {
+        "mass_lb": 0.011199676286297899,
+        "reach_lb": 3.2205268172035986,
+        "capacity_lb": 3.1885388755688893,
+        "stepwise_lb": 3.3017923972028513,
+        "stdc_radius_lb": 3.2257187333238133,
+        "stdc_lb": 3.3017923972028513,
+        "lookahead": 3.6220654927937552
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 114,
+      "input_sha256": "ee54813f8c01d39632d72c4735a385acd5ef5374e3c6780f3a58d3d2ff77b2e7",
+      "prefix": [
+        2
+      ],
+      "remaining": 3.0,
+      "bounds": {
+        "mass_lb": 3.0,
+        "reach_lb": 3.0,
+        "capacity_lb": 3.0,
+        "stepwise_lb": 3.0,
+        "stdc_radius_lb": 3.0,
+        "stdc_lb": 3.0,
+        "lookahead": 3.0
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 115,
+      "input_sha256": "177a3fd76352d6fa2b0321b7c59efcaf03d7bf43417ad34fb63b56c72357e2f8",
+      "prefix": [
+        2
+      ],
+      "remaining": 2.680515416590031,
+      "bounds": {
+        "mass_lb": 0.21650685765527158,
+        "reach_lb": 2.2996233755607607,
+        "capacity_lb": 2.4350565896974077,
+        "stepwise_lb": 2.4350565896974077,
+        "stdc_radius_lb": 2.3126171065954777,
+        "stdc_lb": 2.4350565896974077,
+        "lookahead": 2.63245450600146
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 116,
+      "input_sha256": "030ddf9bb2ed7f1ad65343144ad116ce57931064facd33e729706ddfbe129e06",
+      "prefix": [
+        2
+      ],
+      "remaining": 3.937752134953974,
+      "bounds": {
+        "mass_lb": 0.05291144817271569,
+        "reach_lb": 3.6201208319117186,
+        "capacity_lb": 3.4889899706102967,
+        "stepwise_lb": 3.7290579792172163,
+        "stdc_radius_lb": 3.5460883326238983,
+        "stdc_lb": 3.7290579792172163,
+        "lookahead": 3.8380262298660504
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 117,
+      "input_sha256": "16c68ff040691a4aa558c7505ba77f28408d713df5d03fa7201830d1bd7af7e7",
+      "prefix": [
+        3
+      ],
+      "remaining": 2.5672204722953618,
+      "bounds": {
+        "mass_lb": 0.0,
+        "reach_lb": 2.543457736416261,
+        "capacity_lb": 2.5672204722953618,
+        "stepwise_lb": 2.5672204722953618,
+        "stdc_radius_lb": 1.9442912874798741,
+        "stdc_lb": 2.5672204722953618,
+        "lookahead": 2.5672204722953618
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 118,
+      "input_sha256": "ed065bb72929fc771fafdc5b2253c786339ee15c5c3a05b0741c305f82e82eee",
+      "prefix": [
+        3
+      ],
+      "remaining": 3.7628267378721842,
+      "bounds": {
+        "mass_lb": 0.07375675277218731,
+        "reach_lb": 3.7628267378721842,
+        "capacity_lb": 3.762826737872184,
+        "stepwise_lb": 3.7628267378721842,
+        "stdc_radius_lb": 3.1198797112312446,
+        "stdc_lb": 3.7628267378721842,
+        "lookahead": 3.7628267378721842
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 119,
+      "input_sha256": "f2ee078f94a77996140bdf3916d2437079c2a452d00b33c62edf602c0c3ffe65",
+      "prefix": [
+        3
+      ],
+      "remaining": 4.370321246527133,
+      "bounds": {
+        "mass_lb": 0.05388959878141784,
+        "reach_lb": 3.8075550014866684,
+        "capacity_lb": 4.1140307416441,
+        "stepwise_lb": 4.1140307416441,
+        "stdc_radius_lb": 3.3615452891618425,
+        "stdc_lb": 4.1140307416441,
+        "lookahead": 4.363881682575581
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 120,
+      "input_sha256": "00f1659c7936c6d309cc0e6e71c1c36374539924685649524d91769137bae694",
+      "prefix": [
+        0
+      ],
+      "remaining": 2.5070240149178593,
+      "bounds": {
+        "mass_lb": 0.17244208333078798,
+        "reach_lb": 2.5070240149178593,
+        "capacity_lb": 2.4907487010611,
+        "stepwise_lb": 2.5070240149178593,
+        "stdc_radius_lb": 2.151189215404223,
+        "stdc_lb": 2.5070240149178593,
+        "lookahead": 2.5070240149178593
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 121,
+      "input_sha256": "8c08c288bbdce4f341ddd0aa29a12efa88da72639d218e99393b61806f48facc",
+      "prefix": [
+        4
+      ],
+      "remaining": 2.6412694985817575,
+      "bounds": {
+        "mass_lb": 0.21220819555279327,
+        "reach_lb": 2.436005887882419,
+        "capacity_lb": 2.1300965128917153,
+        "stepwise_lb": 2.514073140684096,
+        "stdc_radius_lb": 2.373096680441642,
+        "stdc_lb": 2.514073140684096,
+        "lookahead": 2.629269260734786
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 122,
+      "input_sha256": "be939ef3936b83945edc9ecc595a3221112a4ae59abd9d504d313fd254e5b78d",
+      "prefix": [
+        4
+      ],
+      "remaining": 3.735775972748318,
+      "bounds": {
+        "mass_lb": 0.1081801375032624,
+        "reach_lb": 3.6152428188512324,
+        "capacity_lb": 3.0022461749707596,
+        "stepwise_lb": 3.6278035410815033,
+        "stdc_radius_lb": 3.156880987575612,
+        "stdc_lb": 3.6278035410815033,
+        "lookahead": 3.7123592432039016
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 123,
+      "input_sha256": "a1e9e22bafd1f7df754dc4c0dd7901b6fd65802fa26d8e3fff49dc2ff993df7d",
+      "prefix": [
+        1
+      ],
+      "remaining": 2.932423217389302,
+      "bounds": {
+        "mass_lb": 0.4332027013179979,
+        "reach_lb": 2.9179491665311352,
+        "capacity_lb": 2.930914873201044,
+        "stepwise_lb": 2.930914873201044,
+        "stdc_radius_lb": 2.755746126548996,
+        "stdc_lb": 2.930914873201044,
+        "lookahead": 2.932423217389302
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 124,
+      "input_sha256": "8228b00ecfd2d1e0404fd7f195cc04436745fae9d6af86b42237c750fc75da79",
+      "prefix": [
+        5
+      ],
+      "remaining": 2.895140115061535,
+      "bounds": {
+        "mass_lb": 0.04059578162309831,
+        "reach_lb": 2.634232147389768,
+        "capacity_lb": 2.4410083321930904,
+        "stepwise_lb": 2.807058674555824,
+        "stdc_radius_lb": 2.5968774026981096,
+        "stdc_lb": 2.807058674555824,
+        "lookahead": 2.8951401150615355
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 125,
+      "input_sha256": "50ce8d906ff902c08545f03c333d33b1f07ed11a804b0feea144492699afb873",
+      "prefix": [
+        5
+      ],
+      "remaining": 3.8547535288773926,
+      "bounds": {
+        "mass_lb": 0.15096885641460392,
+        "reach_lb": 3.1684440850153845,
+        "capacity_lb": 3.1395355873438673,
+        "stepwise_lb": 3.433357057175413,
+        "stdc_radius_lb": 3.052186605225249,
+        "stdc_lb": 3.433357057175413,
+        "lookahead": 3.6212636429139917
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 126,
+      "input_sha256": "d8ca761a62170303444d3983b0870d5c802af08bc5d1ca1467ee95c6bd34ba7c",
+      "prefix": [
+        2
+      ],
+      "remaining": 2.584772102226145,
+      "bounds": {
+        "mass_lb": 0.03060664112348376,
+        "reach_lb": 2.5827167006741547,
+        "capacity_lb": 2.439482365498627,
+        "stepwise_lb": 2.583401640885433,
+        "stdc_radius_lb": 2.321047725606589,
+        "stdc_lb": 2.583401640885433,
+        "lookahead": 2.5847721022261454
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 127,
+      "input_sha256": "c2cb86ddc3ee94ff183a2d74a0c9a66f2abbc5c9e5fee265382b0d87c4bcff11",
+      "prefix": [
+        0
+      ],
+      "remaining": 3.326432282643971,
+      "bounds": {
+        "mass_lb": 0.10441050045698108,
+        "reach_lb": 3.0334360778122114,
+        "capacity_lb": 3.2336515431222326,
+        "stepwise_lb": 3.2336515431222326,
+        "stdc_radius_lb": 3.005867735903144,
+        "stdc_lb": 3.2336515431222326,
+        "lookahead": 3.326432282643971
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 128,
+      "input_sha256": "5a8847d8cf4b91e9af2cc1b08e063e31fbf73090b63f5b13d19a7a851d5ad656",
+      "prefix": [
+        6
+      ],
+      "remaining": 3.810712337202772,
+      "bounds": {
+        "mass_lb": 0.09248100721567526,
+        "reach_lb": 3.3460929184105135,
+        "capacity_lb": 3.5728661488789806,
+        "stepwise_lb": 3.609825322372533,
+        "stdc_radius_lb": 3.597039005032549,
+        "stdc_lb": 3.609825322372533,
+        "lookahead": 3.684693854031786
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 129,
+      "input_sha256": "c6334ecd505731449150e6574ac6e497aa1bdfd8ab873e71561f6a1f1debf926",
+      "prefix": [
+        3
+      ],
+      "remaining": 2.5130126070905976,
+      "bounds": {
+        "mass_lb": 0.11812792736202865,
+        "reach_lb": 2.4616047640838823,
+        "capacity_lb": 2.431159430349967,
+        "stepwise_lb": 2.476365974007652,
+        "stdc_radius_lb": 1.9893149773939136,
+        "stdc_lb": 2.476365974007652,
+        "lookahead": 2.5130126070905976
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 130,
+      "input_sha256": "a656b1b4bc7b3262746739b8c810fa49ce9d921db967cd3b900bd67ee3254653",
+      "prefix": [
+        1
+      ],
+      "remaining": 2.161477540104496,
+      "bounds": {
+        "mass_lb": 0.0,
+        "reach_lb": 1.6147494852342446,
+        "capacity_lb": 1.0623083924621222,
+        "stepwise_lb": 1.8881135126693704,
+        "stdc_radius_lb": 1.8881135126693704,
+        "stdc_lb": 1.8881135126693704,
+        "lookahead": 2.161477540104496
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 131,
+      "input_sha256": "460c4b288eb3fd015e769dea345829a780debda31a1aac94d9e27cb7ea5f3845",
+      "prefix": [
+        7
+      ],
+      "remaining": 4.52926580802583,
+      "bounds": {
+        "mass_lb": 0.02415519396651161,
+        "reach_lb": 4.52926580802583,
+        "capacity_lb": 4.350451104901374,
+        "stepwise_lb": 4.52926580802583,
+        "stdc_radius_lb": 4.52926580802583,
+        "stdc_lb": 4.52926580802583,
+        "lookahead": 4.529265808025831
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 132,
+      "input_sha256": "a88aea9fd3790c937f3358b26e527322df93a8bf6ede2c6a20b64b1d412cd314",
+      "prefix": [
+        0
+      ],
+      "remaining": 2.6515856972458045,
+      "bounds": {
+        "mass_lb": 0.13686080334455744,
+        "reach_lb": 2.6273902413355836,
+        "capacity_lb": 2.4395149221081427,
+        "stepwise_lb": 2.6273902413355836,
+        "stdc_radius_lb": 2.5621645915686573,
+        "stdc_lb": 2.6273902413355836,
+        "lookahead": 2.6515856972458045
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 133,
+      "input_sha256": "528189992860ba65ec6a171e8d4f15b18d3aeb132a94f05e371dbef2f5e64713",
+      "prefix": [
+        2
+      ],
+      "remaining": 4.0,
+      "bounds": {
+        "mass_lb": 4.0,
+        "reach_lb": 4.0,
+        "capacity_lb": 4.0,
+        "stepwise_lb": 4.0,
+        "stdc_radius_lb": 4.0,
+        "stdc_lb": 4.0,
+        "lookahead": 4.0
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 134,
+      "input_sha256": "a5b9a7c853959ea8c00cbc61e6bd9e8a7bdad5755a052aeb1bd419f8ea05e146",
+      "prefix": [
+        8
+      ],
+      "remaining": 3.8928508012356513,
+      "bounds": {
+        "mass_lb": 0.04127170073979021,
+        "reach_lb": 3.779858938181712,
+        "capacity_lb": 3.5322416977157105,
+        "stepwise_lb": 3.779858938181712,
+        "stdc_radius_lb": 3.610068738253456,
+        "stdc_lb": 3.779858938181712,
+        "lookahead": 3.794514731916366
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 135,
+      "input_sha256": "6828d5e955abef2fd5689e0c036bcd35d106f7cebedfac7765292e81e70f2dd0",
+      "prefix": [
+        1
+      ],
+      "remaining": 2.809356972330305,
+      "bounds": {
+        "mass_lb": 0.022607206663655736,
+        "reach_lb": 2.809356972330305,
+        "capacity_lb": 2.688501951557208,
+        "stepwise_lb": 2.809356972330305,
+        "stdc_radius_lb": 2.6901025025183216,
+        "stdc_lb": 2.809356972330305,
+        "lookahead": 2.809356972330305
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 136,
+      "input_sha256": "331af0882b0516809f85580ba02b8b9f1004aa8fc7d7ab066737170db195a118",
+      "prefix": [
+        3
+      ],
+      "remaining": 3.705370360289427,
+      "bounds": {
+        "mass_lb": 0.1962834988655502,
+        "reach_lb": 3.6204098889848173,
+        "capacity_lb": 3.616435641838439,
+        "stepwise_lb": 3.637765635023194,
+        "stdc_radius_lb": 3.4199152730006346,
+        "stdc_lb": 3.6377656350231944,
+        "lookahead": 3.6925139474904087
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 137,
+      "input_sha256": "c3467ef64b58c77e383f857e53afebb2105bc677d56cce48dc4bd2bd34ff33bf",
+      "prefix": [
+        0
+      ],
+      "remaining": 4.339535393475211,
+      "bounds": {
+        "mass_lb": 0.16727173232065928,
+        "reach_lb": 4.156557364680534,
+        "capacity_lb": 4.1279107000952155,
+        "stepwise_lb": 4.1667359771587815,
+        "stdc_radius_lb": 3.9961191129214058,
+        "stdc_lb": 4.1667359771587815,
+        "lookahead": 4.321780855320184
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 138,
+      "input_sha256": "1a0737ea4744df1be273bfb13b080e7a2bd488097fe77aa15a0e86d2ea2cd39c",
+      "prefix": [
+        2
+      ],
+      "remaining": 2.152706236775744,
+      "bounds": {
+        "mass_lb": 0.0728091926392605,
+        "reach_lb": 2.1102648238901076,
+        "capacity_lb": 2.036770625358354,
+        "stepwise_lb": 2.1102648238901076,
+        "stdc_radius_lb": 1.7239567550099995,
+        "stdc_lb": 2.114228930083404,
+        "lookahead": 2.152706236775744
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 139,
+      "input_sha256": "b3838d7380ad728d23ea60d0f7196a7cbc93916a6e10f834cdcc2191aed58496",
+      "prefix": [
+        4
+      ],
+      "remaining": 2.9844070971463226,
+      "bounds": {
+        "mass_lb": 0.06067586709036839,
+        "reach_lb": 2.816901805859059,
+        "capacity_lb": 2.816624577058337,
+        "stepwise_lb": 2.90094963015017,
+        "stdc_radius_lb": 2.7738779181753066,
+        "stdc_lb": 2.90094963015017,
+        "lookahead": 2.9844070971463226
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 140,
+      "input_sha256": "c3f97153f66fd314f39b1d509c14df36149cf37c1f84cb6188bfe04b773dddfa",
+      "prefix": [
+        1
+      ],
+      "remaining": 3.5451691887095995,
+      "bounds": {
+        "mass_lb": 0.39851434128891966,
+        "reach_lb": 3.0519486133869975,
+        "capacity_lb": 3.171542778073901,
+        "stepwise_lb": 3.193165672801272,
+        "stdc_radius_lb": 2.8806955362460163,
+        "stdc_lb": 3.236411462256015,
+        "lookahead": 3.5451691887095995
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 141,
+      "input_sha256": "25e5984d4a72922158296a743dd18e1bc992bba2abed38dafec7e64f0524a4ec",
+      "prefix": [
+        3
+      ],
+      "remaining": 2.010567517899461,
+      "bounds": {
+        "mass_lb": 0.012636198405745798,
+        "reach_lb": 1.995936401755514,
+        "capacity_lb": 1.7790759299513188,
+        "stepwise_lb": 2.0028080685246827,
+        "stdc_radius_lb": 1.9166757640613101,
+        "stdc_lb": 2.0028080685246827,
+        "lookahead": 2.010567517899461
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 142,
+      "input_sha256": "0534255a8d982dde88379abe92dd600ce596d527859f0f20af183006d9449d06",
+      "prefix": [
+        5
+      ],
+      "remaining": 2.45735099821623,
+      "bounds": {
+        "mass_lb": 0.04925575985282749,
+        "reach_lb": 1.9361485746932663,
+        "capacity_lb": 2.071811013628805,
+        "stepwise_lb": 2.1740931655544555,
+        "stdc_radius_lb": 1.5766366733065076,
+        "stdc_lb": 2.1740931655544555,
+        "lookahead": 2.364101139002604
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 143,
+      "input_sha256": "476daf27f7435ea9612247fbb9f64ff627f193bb79b0078042fc52d93c780cf5",
+      "prefix": [
+        2
+      ],
+      "remaining": 3.058247161486271,
+      "bounds": {
+        "mass_lb": 0.0,
+        "reach_lb": 3.049847490945058,
+        "capacity_lb": 1.0690445449265369,
+        "stepwise_lb": 3.0498474909450586,
+        "stdc_radius_lb": 2.5890501118653915,
+        "stdc_lb": 3.0498474909450586,
+        "lookahead": 3.058247161486271
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 144,
+      "input_sha256": "4c503802116b9f7a016a72e59b42e909e59a3e3d3990c9b3e9972c28350a8b2e",
+      "prefix": [
+        0
+      ],
+      "remaining": 2.7366515021914726,
+      "bounds": {
+        "mass_lb": 0.25533891734214975,
+        "reach_lb": 2.7366515021914726,
+        "capacity_lb": 2.717219256964757,
+        "stepwise_lb": 2.7366515021914726,
+        "stdc_radius_lb": 2.49691873692099,
+        "stdc_lb": 2.7366515021914726,
+        "lookahead": 2.7366515021914726
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 145,
+      "input_sha256": "c6619e0a5c490f7d542b32cda1a6c73aabc73ecd1a06ff4aa64a31b987acf37e",
+      "prefix": [
+        0
+      ],
+      "remaining": 2.812494072935273,
+      "bounds": {
+        "mass_lb": 0.13912210891424942,
+        "reach_lb": 2.683006469679417,
+        "capacity_lb": 2.4543595540631884,
+        "stepwise_lb": 2.683006469679417,
+        "stdc_radius_lb": 2.5352156116333417,
+        "stdc_lb": 2.683006469679417,
+        "lookahead": 2.8124940729352734
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 146,
+      "input_sha256": "ef61267704a8cd4caf49250ff3daf1b642e08a31e233c68a88ab45b9a1f52ba4",
+      "prefix": [
+        3
+      ],
+      "remaining": 4.261660730000406,
+      "bounds": {
+        "mass_lb": 0.11089634108598852,
+        "reach_lb": 4.232834200313205,
+        "capacity_lb": 4.178007756603199,
+        "stepwise_lb": 4.240743041405966,
+        "stdc_radius_lb": 4.039342735277821,
+        "stdc_lb": 4.240743041405966,
+        "lookahead": 4.25735023862906
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 147,
+      "input_sha256": "7e513492d04b554a9240458faa266f3634fa402d8ffef4610be7482dd52ce712",
+      "prefix": [
+        1
+      ],
+      "remaining": 1.3181343013747604,
+      "bounds": {
+        "mass_lb": 0.02028569400224408,
+        "reach_lb": 1.3181343013747604,
+        "capacity_lb": 0.963771415910315,
+        "stepwise_lb": 1.3181343013747606,
+        "stdc_radius_lb": 1.024359266507794,
+        "stdc_lb": 1.3181343013747606,
+        "lookahead": 1.3181343013747606
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 148,
+      "input_sha256": "4a6b78dda715b0947067316ae32d1f011a70ce7c091dd348bcd462d8ecb522af",
+      "prefix": [
+        1
+      ],
+      "remaining": 3.5394134402798625,
+      "bounds": {
+        "mass_lb": 0.06665620452199918,
+        "reach_lb": 3.251314814286471,
+        "capacity_lb": 3.382511899204452,
+        "stepwise_lb": 3.3900351848688794,
+        "stdc_radius_lb": 3.276577916365495,
+        "stdc_lb": 3.3900351848688794,
+        "lookahead": 3.5379935585849394
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 149,
+      "input_sha256": "38d22a6c2e09e5275c56244d7d92a30d385978e5b60b6c10b79d5bf8147855df",
+      "prefix": [
+        4
+      ],
+      "remaining": 4.266184451062275,
+      "bounds": {
+        "mass_lb": 0.017229815239013322,
+        "reach_lb": 3.998728143548849,
+        "capacity_lb": 4.11491491631926,
+        "stepwise_lb": 4.114914916319261,
+        "stdc_radius_lb": 4.074317055775966,
+        "stdc_lb": 4.114914916319261,
+        "lookahead": 4.238073453931081
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 150,
+      "input_sha256": "2ac06fb0be39985568066257ad220d9c1cd22482095d682ab42b9dc65321f0e5",
+      "prefix": [
+        2
+      ],
+      "remaining": 2.6593132255291185,
+      "bounds": {
+        "mass_lb": 0.08111712923462593,
+        "reach_lb": 2.51732154855897,
+        "capacity_lb": 2.5426875189207143,
+        "stepwise_lb": 2.55377899103621,
+        "stdc_radius_lb": 2.4539168637356448,
+        "stdc_lb": 2.55377899103621,
+        "lookahead": 2.6593132255291185
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 151,
+      "input_sha256": "a40504892940ff580e88713c181657c95883ca5fd1e074192f32ced6b7cf2dcd",
+      "prefix": [
+        2
+      ],
+      "remaining": 3.055534608858789,
+      "bounds": {
+        "mass_lb": 0.39246166863087284,
+        "reach_lb": 2.8292024218470084,
+        "capacity_lb": 2.7696100266237984,
+        "stepwise_lb": 2.8789686370569756,
+        "stdc_radius_lb": 2.711865113428668,
+        "stdc_lb": 2.8789686370569756,
+        "lookahead": 3.055534608858789
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 152,
+      "input_sha256": "ccea9d9fe8019e579dc3d83d65573147d37d099e72953d6e500accc841fd70d8",
+      "prefix": [
+        5
+      ],
+      "remaining": 5.0,
+      "bounds": {
+        "mass_lb": 5.0,
+        "reach_lb": 5.0,
+        "capacity_lb": 5.0,
+        "stepwise_lb": 5.0,
+        "stdc_radius_lb": 5.0,
+        "stdc_lb": 5.0,
+        "lookahead": 5.0
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 153,
+      "input_sha256": "89b0028b54d562751fef6328d495a3c646f904309ed8efc17f55acddf40c87b4",
+      "prefix": [
+        3
+      ],
+      "remaining": 2.6245483079093717,
+      "bounds": {
+        "mass_lb": 0.07632017634494753,
+        "reach_lb": 2.576400545769008,
+        "capacity_lb": 2.473725341018053,
+        "stepwise_lb": 2.5926956080326033,
+        "stdc_radius_lb": 2.481907479961916,
+        "stdc_lb": 2.5926956080326033,
+        "lookahead": 2.6245483079093717
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 154,
+      "input_sha256": "d1338d56dce8629006afb843b22e7a771292e568a6db0b0cb2de96d5b5331dd1",
+      "prefix": [
+        3
+      ],
+      "remaining": 3.1191434038126467,
+      "bounds": {
+        "mass_lb": 0.10763657148755608,
+        "reach_lb": 2.853594923872737,
+        "capacity_lb": 2.704800720083723,
+        "stepwise_lb": 2.913182677554324,
+        "stdc_radius_lb": 2.532508166191438,
+        "stdc_lb": 2.913182677554324,
+        "lookahead": 3.1191434038126467
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 155,
+      "input_sha256": "8c816032ccdbf52245e89e078295a0d51368e95ad7f3c51c84f2a83671e66010",
+      "prefix": [
+        6
+      ],
+      "remaining": 3.8079433978913357,
+      "bounds": {
+        "mass_lb": 0.15831067971269247,
+        "reach_lb": 3.5568741302517966,
+        "capacity_lb": 3.548490266441705,
+        "stepwise_lb": 3.6052714191515207,
+        "stdc_radius_lb": 3.3582979457582565,
+        "stdc_lb": 3.6052714191515207,
+        "lookahead": 3.7319719328560605
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 156,
+      "input_sha256": "2e2308ec1bbc414e49a0c8b249699146988695bdfa62dd927bff3484985c80c7",
+      "prefix": [
+        0
+      ],
+      "remaining": 1.718891570989475,
+      "bounds": {
+        "mass_lb": 0.0,
+        "reach_lb": 1.718891570989475,
+        "capacity_lb": 0.9795301810646997,
+        "stepwise_lb": 1.718891570989475,
+        "stdc_radius_lb": 1.718891570989475,
+        "stdc_lb": 1.718891570989475,
+        "lookahead": 1.718891570989475
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 157,
+      "input_sha256": "92f5b5931a0850f4a6c0b8aa94888e1e1c01a98c99f8bdafba6478dac5e0e991",
+      "prefix": [
+        4
+      ],
+      "remaining": 3.5674125473619593,
+      "bounds": {
+        "mass_lb": 0.11283908971276517,
+        "reach_lb": 3.5674125473619593,
+        "capacity_lb": 3.47394605097346,
+        "stepwise_lb": 3.5674125473619593,
+        "stdc_radius_lb": 3.567163053142463,
+        "stdc_lb": 3.5674125473619593,
+        "lookahead": 3.5674125473619593
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 158,
+      "input_sha256": "aa400212c79fa65143d4af4a51d051e75e813992fb8c897a184c8b7e7b0d6680",
+      "prefix": [
+        7
+      ],
+      "remaining": 3.970759312473727,
+      "bounds": {
+        "mass_lb": 0.02016505402654829,
+        "reach_lb": 3.5224893606812095,
+        "capacity_lb": 3.499095373745889,
+        "stepwise_lb": 3.643855247733594,
+        "stdc_radius_lb": 2.9982812055298362,
+        "stdc_lb": 3.643855247733594,
+        "lookahead": 3.9624187580801182
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 159,
+      "input_sha256": "c35bcebf9e505bb9b8837e34d520f672dd8200c36ad610c0fe9c0926145b3dcc",
+      "prefix": [
+        1
+      ],
+      "remaining": 2.6456652308933024,
+      "bounds": {
+        "mass_lb": 0.2309606438197411,
+        "reach_lb": 2.50355146060628,
+        "capacity_lb": 2.5454992879257654,
+        "stepwise_lb": 2.5777166485157315,
+        "stdc_radius_lb": 2.5454992879257654,
+        "stdc_lb": 2.5777166485157315,
+        "lookahead": 2.6456652308933024
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 160,
+      "input_sha256": "ef4137c18b243088ff49aa672cce02b2b34f6a35cc539615031c23cede839255",
+      "prefix": [
+        5
+      ],
+      "remaining": 3.503313006675777,
+      "bounds": {
+        "mass_lb": 0.5209759684542361,
+        "reach_lb": 3.353023486510386,
+        "capacity_lb": 3.470618055743418,
+        "stepwise_lb": 3.470618055743418,
+        "stdc_radius_lb": 3.1266458924441127,
+        "stdc_lb": 3.470618055743418,
+        "lookahead": 3.4706180557434183
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 161,
+      "input_sha256": "331ee71f45c2e5d22a12ba2a019a6abcdcc21e92a5f0e45394eddac670856e3e",
+      "prefix": [
+        8
+      ],
+      "remaining": 3.6840217909543522,
+      "bounds": {
+        "mass_lb": 0.25853569827051565,
+        "reach_lb": 3.3128607621405015,
+        "capacity_lb": 3.353229998010616,
+        "stepwise_lb": 3.39023590533282,
+        "stdc_radius_lb": 3.032619466059384,
+        "stdc_lb": 3.39023590533282,
+        "lookahead": 3.648213261557707
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 162,
+      "input_sha256": "cb12b22dd4241f1d8a3841eed83cb9ad923244bbc03b6ffb04f48f6f8a6e5f4d",
+      "prefix": [
+        2
+      ],
+      "remaining": 2.390678716021782,
+      "bounds": {
+        "mass_lb": 0.2258005824743316,
+        "reach_lb": 2.3761006543515406,
+        "capacity_lb": 2.390678716021782,
+        "stepwise_lb": 2.390678716021782,
+        "stdc_radius_lb": 2.361526222427366,
+        "stdc_lb": 2.390678716021782,
+        "lookahead": 2.390678716021782
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 163,
+      "input_sha256": "14d7d6ca0b72321015c96d34313c20bc7ec23eb3856a486c3ec581bdf4933865",
+      "prefix": [
+        0
+      ],
+      "remaining": 3.3659686322906364,
+      "bounds": {
+        "mass_lb": 0.23693142132595027,
+        "reach_lb": 3.182891265557341,
+        "capacity_lb": 3.1757782933679155,
+        "stepwise_lb": 3.2736492650078226,
+        "stdc_radius_lb": 3.1357426054836726,
+        "stdc_lb": 3.2736492650078226,
+        "lookahead": 3.3597467770397307
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 164,
+      "input_sha256": "f8652570c1ab2e8b223a7fa33eb04e1c54e73958ee9972c702411689f37125e8",
+      "prefix": [
+        0
+      ],
+      "remaining": 4.680672403538528,
+      "bounds": {
+        "mass_lb": 0.044877479883293506,
+        "reach_lb": 4.493387639378333,
+        "capacity_lb": 4.631376137340129,
+        "stepwise_lb": 4.631376137340129,
+        "stdc_radius_lb": 4.492890583853184,
+        "stdc_lb": 4.631376137340129,
+        "lookahead": 4.64459836167085
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 165,
+      "input_sha256": "cdf9462b9b589b2a3e4029e8f641fde59e432f2b9db202dcb8615dd722d37105",
+      "prefix": [
+        3
+      ],
+      "remaining": 2.5602047612240817,
+      "bounds": {
+        "mass_lb": 0.06828554907169088,
+        "reach_lb": 2.5132713342308324,
+        "capacity_lb": 2.5409218416665187,
+        "stepwise_lb": 2.5409218416665187,
+        "stdc_radius_lb": 1.7205403469879963,
+        "stdc_lb": 2.5409218416665187,
+        "lookahead": 2.560204761224082
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 166,
+      "input_sha256": "33a414917eb7d00363f1ae004425c9a711c7dae9c5337401a16735259a990d33",
+      "prefix": [
+        1
+      ],
+      "remaining": 3.305242944131037,
+      "bounds": {
+        "mass_lb": 0.06859274172753542,
+        "reach_lb": 3.0440721814342107,
+        "capacity_lb": 3.0298619963821682,
+        "stepwise_lb": 3.2106166151711677,
+        "stdc_radius_lb": 2.701202651483116,
+        "stdc_lb": 3.2106166151711677,
+        "lookahead": 3.3012313408411997
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 167,
+      "input_sha256": "8d0f7404aa597d1262167fb1015bba69bba008923b43861e9146bbebcf133054",
+      "prefix": [
+        1
+      ],
+      "remaining": 3.957313484748199,
+      "bounds": {
+        "mass_lb": 0.09329999125573324,
+        "reach_lb": 3.601464002604839,
+        "capacity_lb": 3.828252111183728,
+        "stepwise_lb": 3.828252111183728,
+        "stdc_radius_lb": 3.1873180978680486,
+        "stdc_lb": 3.828252111183728,
+        "lookahead": 3.9166094981344086
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 168,
+      "input_sha256": "ce235cc75f5109c5d3baf6c75a119b591ab19ec945ee5b42e6ba8d49bb99d3ac",
+      "prefix": [
+        0
+      ],
+      "remaining": 2.6117283967195197,
+      "bounds": {
+        "mass_lb": 0.22090771721941066,
+        "reach_lb": 2.551120403751765,
+        "capacity_lb": 2.4918177444838614,
+        "stepwise_lb": 2.570171370054611,
+        "stdc_radius_lb": 1.9450219267909037,
+        "stdc_lb": 2.570171370054611,
+        "lookahead": 2.6117283967195197
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 169,
+      "input_sha256": "af262a3bf94142d3e6b1d2c36eb4135f37e18b8bffc697697a324c26850db126",
+      "prefix": [
+        2
+      ],
+      "remaining": 3.6604654107206045,
+      "bounds": {
+        "mass_lb": 0.0,
+        "reach_lb": 3.6604654107206045,
+        "capacity_lb": 3.493728872386937,
+        "stepwise_lb": 3.6604654107206045,
+        "stdc_radius_lb": 3.475315610772743,
+        "stdc_lb": 3.6604654107206045,
+        "lookahead": 3.6604654107206045
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 170,
+      "input_sha256": "46f03c7a51b1294e4976284d7dd3fe0c9cf6cf5f015fb35dd49b58679b767a32",
+      "prefix": [
+        2
+      ],
+      "remaining": 3.0748676731231788,
+      "bounds": {
+        "mass_lb": 0.036310337812020414,
+        "reach_lb": 3.0748370676758743,
+        "capacity_lb": 1.4705862958255074,
+        "stepwise_lb": 3.0748370676758743,
+        "stdc_radius_lb": 2.8297014162862166,
+        "stdc_lb": 3.0748370676758743,
+        "lookahead": 3.0748370676758743
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 171,
+      "input_sha256": "cef31609e34841c178e775ca13615456bc52404e5e653887ad7d92b1edb1a490",
+      "prefix": [
+        1
+      ],
+      "remaining": 3.000000000000001,
+      "bounds": {
+        "mass_lb": 3.000000000000001,
+        "reach_lb": 3.000000000000001,
+        "capacity_lb": 3.000000000000001,
+        "stepwise_lb": 3.000000000000001,
+        "stdc_radius_lb": 3.000000000000001,
+        "stdc_lb": 3.000000000000001,
+        "lookahead": 3.000000000000001
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 172,
+      "input_sha256": "d89891beb2db9d8c20bf77931ad6b02637237a45c16b42c0d56ca4074d8967ac",
+      "prefix": [
+        3
+      ],
+      "remaining": 2.5620154102600425,
+      "bounds": {
+        "mass_lb": 0.08967362820511855,
+        "reach_lb": 2.4282808966798184,
+        "capacity_lb": 2.0301128787555944,
+        "stepwise_lb": 2.4282808966798184,
+        "stdc_radius_lb": 2.3017042820826634,
+        "stdc_lb": 2.4282808966798184,
+        "lookahead": 2.5360658844879613
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 173,
+      "input_sha256": "2e3cfd43ef0b9aba64fff41e1db16bafdc0fcdb6d773d9a23eb66d57f9a0fdc9",
+      "prefix": [
+        3
+      ],
+      "remaining": 4.488934974525497,
+      "bounds": {
+        "mass_lb": 0.12872118291252205,
+        "reach_lb": 4.0982230151032955,
+        "capacity_lb": 4.395852805491976,
+        "stepwise_lb": 4.395852805491976,
+        "stdc_radius_lb": 4.0628687794140435,
+        "stdc_lb": 4.395852805491976,
+        "lookahead": 4.488934974525498
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 174,
+      "input_sha256": "81058c41beb74b06913733f0bc091ec4eb48cd51257db8968bb02896e7f613c6",
+      "prefix": [
+        2
+      ],
+      "remaining": 2.454512385248244,
+      "bounds": {
+        "mass_lb": 0.09012436240598588,
+        "reach_lb": 2.454512385248244,
+        "capacity_lb": 2.1387553861507334,
+        "stepwise_lb": 2.454512385248244,
+        "stdc_radius_lb": 2.439474854034465,
+        "stdc_lb": 2.454512385248244,
+        "lookahead": 2.454512385248244
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 175,
+      "input_sha256": "c3dae66e44b78296fcf1483c28e9a6b9c0a1a18d5bb8675eb4d0721d19259911",
+      "prefix": [
+        4
+      ],
+      "remaining": 3.5879392922647892,
+      "bounds": {
+        "mass_lb": 0.7029833792443496,
+        "reach_lb": 3.44275548283838,
+        "capacity_lb": 3.462851381452046,
+        "stepwise_lb": 3.4819070040357993,
+        "stdc_radius_lb": 3.2115017816249267,
+        "stdc_lb": 3.4819070040357993,
+        "lookahead": 3.5879392922647892
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 176,
+      "input_sha256": "2050038e323b570f5bab71103a0c9fd922b6dfdf34a5d03e24af0936d4c2117d",
+      "prefix": [
+        4
+      ],
+      "remaining": 4.261413167700377,
+      "bounds": {
+        "mass_lb": 0.08023487451543836,
+        "reach_lb": 3.9290647668481737,
+        "capacity_lb": 4.109346500086662,
+        "stepwise_lb": 4.115097667981924,
+        "stdc_radius_lb": 2.705552910670559,
+        "stdc_lb": 4.126600003772446,
+        "lookahead": 4.233344167437233
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 177,
+      "input_sha256": "25a52d197057e1d8d9fd98134128a295aeb04ff7af6a73572db513c716c33b6e",
+      "prefix": [
+        3
+      ],
+      "remaining": 2.706957717375838,
+      "bounds": {
+        "mass_lb": 0.6075103556020763,
+        "reach_lb": 2.608412641081526,
+        "capacity_lb": 2.6878920331357676,
+        "stepwise_lb": 2.6878920331357676,
+        "stdc_radius_lb": 2.2367861639487208,
+        "stdc_lb": 2.6878920331357676,
+        "lookahead": 2.706957717375838
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 178,
+      "input_sha256": "9a93297135364d9a13e22b6807875ab07a5b8d4b8fed9e3fadf98f0863ba5f52",
+      "prefix": [
+        5
+      ],
+      "remaining": 3.6916390884118693,
+      "bounds": {
+        "mass_lb": 0.30595249305661315,
+        "reach_lb": 3.61948686386781,
+        "capacity_lb": 3.6655462690548246,
+        "stepwise_lb": 3.6655462690548246,
+        "stdc_radius_lb": 3.649192814429308,
+        "stdc_lb": 3.6655462690548246,
+        "lookahead": 3.6825616759458883
+      }
+    },
+    {
+      "kind": "particles",
+      "seed": 179,
+      "input_sha256": "acca3dd26ecd824912415038bf74bd34c7673e3d8cb5d2ac16ed2ec9ef819f45",
+      "prefix": [
+        5
+      ],
+      "remaining": 4.119023307774425,
+      "bounds": {
+        "mass_lb": 0.04879418268957508,
+        "reach_lb": 3.6071499795849293,
+        "capacity_lb": 3.7630331448396253,
+        "stepwise_lb": 3.8444319800742104,
+        "stdc_radius_lb": 2.898176507342485,
+        "stdc_lb": 3.8444319800742104,
+        "lookahead": 4.085648600163661
+      }
+    }
+  ],
+  "seeds": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114,
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    142,
+    143,
+    144,
+    145,
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154,
+    155,
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164,
+    165,
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174,
+    175,
+    176,
+    177,
+    178,
+    179
+  ],
+  "data_type": "synthetic_toy",
+  "certified": false,
+  "wall_s": 19.458417500020005,
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "scripts/audit_optimization.py",
+    "random",
+    "--output-dir",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\optimization_20261124_resume\\validation\\random_audit\\audit"
+  ]
+}

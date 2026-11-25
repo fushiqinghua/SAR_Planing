@@ -1,0 +1,43 @@
+Running HiGHS 1.12.0 (git hash: unknown): Copyright (c) 2025 HiGHS under MIT licence terms
+MIP has 17 rows; 12 cols; 39 nonzeros; 9 integer variables (9 binary)
+Coefficient ranges:
+  Matrix  [6e-01, 1e+00]
+  Cost    [3e-01, 6e-01]
+  Bound   [1e+00, 1e+00]
+  RHS     [1e+00, 1e+00]
+
+Presolve is switched off
+
+Solving MIP model with:
+   17 rows
+   12 cols (7 binary, 0 integer, 0 implied int., 3 continuous, 2 domain fixed)
+   39 nonzeros
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic;
+     I => Shifting; J => Feasibility jump; L => Sub-MIP; P => Empty MIP; R => Randomized rounding;
+     S => Solve LP; T => Evaluate node; U => Unbounded; X => User solution; Y => HiGHS solution;
+     Z => ZI Round; l => Trivial lower; p => Trivial point; u => Trivial upper; z => Trivial zero
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+ J       0       0         0 100.00%   -inf            0.3005217391       Large        0      0      0         0     0.0s
+         1       0         1 100.00%   0.3005217391    0.3005217391       0.00%        0      0      0         0     0.0s
+
+Solving report
+  Status            Optimal
+  Primal bound      0.30052173913
+  Dual bound        0.30052173913
+  Gap               0%
+  P-D integral      1.50001142174e-07
+  Solution status   feasible
+                    0.30052173913 (objective)
+                    0 (bound viol.)
+                    0 (int. viol.)
+                    0 (row viol.)
+  Timing            0.01
+  Max sub-MIP depth 0
+  Nodes             1
+  Repair LPs        0
+  LP iterations     0
+{"name": "default_off", "options": {"time_limit": 30.0, "mip_rel_gap": 0.0, "presolve": false, "threads": 1, "random_seed": 0}, "model_sha256": "9ab8f6dfd2a1a9e2739b91d717ad920b3e1aee185bf1e6814621c6085076b63c", "wall_s": 0.013523500063456595, "solver_status": 0, "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)", "J": 3.0744347826086957, "dual": 3.0744347826086957, "solution": [1.0, -0.0, 1.0, -0.0, 1.0, -0.0, -0.0, 1.0, -0.0, 0.3999999999999999, 0.15999999999999992, 0.3999999999999999], "mip_nodes": 1, "known_feasible_J": 3.0744347826086957, "warnings": ["Unrecognized options detected: {'random_seed', 'threads'}. These will be passed to HiGHS verbatim."], "matches_known_optimum": true, "dual_exceeds_known_feasible": false}

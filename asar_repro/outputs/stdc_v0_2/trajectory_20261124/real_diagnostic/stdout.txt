@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "independent_lp_lb": 0.0,
+  "root_stdc_lb": 9.179977673619849,
+  "upper_bound_J": 17.264874448,
+  "remaining_gap": 8.084896774380152
+}

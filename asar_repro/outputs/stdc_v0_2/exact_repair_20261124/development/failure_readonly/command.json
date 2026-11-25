@@ -1,0 +1,9 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "E:/\u6bd5\u4e1a\u8bbe\u8ba1/\u7ec8\u7a3f\u7814\u53d1/new/baseline/SAR_Planing-stdc-v0.2/asar_repro/outputs/stdc_v0_2/exact_repair_20261124/development/failure_readonly/replay_saved_routes.py"
+  ],
+  "cwd": "E:\\\u6bd5\u4e1a\u8bbe\u8ba1\\\u7ec8\u7a3f\u7814\u53d1\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro",
+  "no_solver_calls": true,
+  "no_search_calls": true
+}

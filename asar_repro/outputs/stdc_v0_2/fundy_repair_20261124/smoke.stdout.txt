@@ -1,0 +1,9 @@
+{'bay_of_fundy': {'PT_J': 53.067097600000004, 'PT_Pd': 0.1020551999999999, 'particle_sha256': '3cb169401cc0c4a98306a2d3535f73e92e5cf31dc6db984eabcd9cc7d4ec9ad0'}}
+1/8 bay_of_fundy paper_baseline work J=53.067097600 Pd=0.102055200 max_expansions 0.957s
+2/8 bay_of_fundy prior_stdc work J=53.067097600 Pd=0.102055200 max_expansions 1.483s
+3/8 bay_of_fundy compressed_stdc work J=53.067097600 Pd=0.102055200 max_expansions 1.421s
+4/8 bay_of_fundy dp_only work J=53.067097600 Pd=0.102055200 dp_max_memory_bytes 0.008s
+5/8 bay_of_fundy stdc_dp work J=53.067097600 Pd=0.102055200 dp_max_memory_bytes 0.006s
+6/8 bay_of_fundy mid_plain work J=53.067097600 Pd=0.102055200 max_expansions 2.063s
+7/8 bay_of_fundy mid_diverse work J=53.067097600 Pd=0.102055200 max_expansions 2.388s
+8/8 bay_of_fundy mid_dp work J=53.067097600 Pd=0.102055200 dp_max_memory_bytes 0.005s

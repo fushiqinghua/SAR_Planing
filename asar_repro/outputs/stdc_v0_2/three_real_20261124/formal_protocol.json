@@ -1,0 +1,47 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "outputs/stdc_v0_2/three_real_20261124/run_fundy_benchmark.py"
+  ],
+  "run_dir": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\fundy_repair_20261124",
+  "scenarios": [
+    "bay_of_fundy"
+  ],
+  "variants": [
+    "paper_baseline",
+    "prior_stdc",
+    "compressed_stdc",
+    "dp_only",
+    "stdc_dp",
+    "mid_plain",
+    "mid_diverse",
+    "mid_dp"
+  ],
+  "caps": {
+    "work": {
+      "max_expansions": 5000,
+      "max_open": 20000,
+      "max_seconds": 30.0
+    },
+    "wall": {
+      "max_expansions": null,
+      "max_open": 20000,
+      "max_seconds": 5.0
+    }
+  },
+  "repeats": 3,
+  "seed": 41,
+  "direction_policy": {
+    "mode": "official_native_angle",
+    "geographic_direction_validated": false,
+    "physical_direction_unverified": true,
+    "original_strict_gate_passed": false,
+    "accepted_by_user": "2026-11-24: 按官方 angle 接入，保留未验证标签",
+    "implementation_basis": "ROMS Utility/uv_rotate.F: average native faces then rotate with supplied angle",
+    "original_parent_sha256": "c2879d000da71de2509e5f5194130de8c063256dc9c784a443826474894a378e"
+  },
+  "particle_sha256": "3cb169401cc0c4a98306a2d3535f73e92e5cf31dc6db984eabcd9cc7d4ec9ad0",
+  "previous_fundy_manifest_sha256": "6a361f4a79d770e4d02a7c8984a12a2a744ee0a080dbfb5e508aac8cb76d213f",
+  "scope": "Formal repeats now authorized; earlier repair/smoke reports remain historical records.",
+  "opendrift_runs_this_stage": 0
+}

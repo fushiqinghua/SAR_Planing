@@ -1,0 +1,1 @@
+{"variant": "window_stdc_endpoint_lb", "epsilon": 1.0, "repeat": 2, "status": "completed", "stop_reason": null, "J": 18.331441505920004, "Pd_T": 0.89051265888, "expanded": 4952, "search_wall_s": 2.4155233999481425, "process_peak_memory_mib": 94.05078125, "theory_certified": false}

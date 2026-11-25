@@ -1,0 +1,13 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "scripts/run_window_experiments.py",
+    "smoke",
+    "--output-dir",
+    "outputs/stdc_v0_2/windows_20261123/smoke",
+    "--validation-evidence",
+    "outputs/stdc_v0_2/windows_20261123/validation_summary.json"
+  ],
+  "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro",
+  "started_utc": "2026-11-23T15:59:23.165760+00:00"
+}

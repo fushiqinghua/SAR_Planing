@@ -1,0 +1,10 @@
+?? docs/stdc_window_improvement.md
+?? outputs/stdc_v0_2/windows_20261123/
+?? scripts/audit_window_bounds.py
+?? scripts/audit_window_search.py
+?? scripts/run_window_experiments.py
+?? scripts/run_window_validation.py
+?? src/asar_repro/window_bounds.py
+?? src/asar_repro/window_search.py
+?? tests/test_window_bounds.py
+?? tests/test_window_search.py

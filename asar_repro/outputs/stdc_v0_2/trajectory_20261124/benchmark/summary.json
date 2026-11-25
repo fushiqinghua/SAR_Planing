@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "runs": 48,
+  "completed": 6,
+  "budget_exceeded": 42,
+  "certified": 0,
+  "best_J": 17.264874448,
+  "beat_previous_best": false,
+  "wall_s": 286.1135796000017
+}

@@ -1,0 +1,1 @@
+passed_under_user_authorized_native_angle_policy {'native_tests': {'tests': 2, 'failures': 0, 'errors': 0, 'skipped': 0}, 'full_tests': {'tests': 926, 'failures': 0, 'errors': 0, 'skipped': 0}} 8

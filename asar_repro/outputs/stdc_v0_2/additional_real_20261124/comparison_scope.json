@@ -1,0 +1,86 @@
+{
+  "requested": [
+    "arctic_ocean",
+    "bay_of_fundy"
+  ],
+  "included": [
+    "arctic_ocean"
+  ],
+  "excluded": {
+    "bay_of_fundy": {
+      "status": "blocked",
+      "stage": "B2",
+      "scenario": "bay_of_fundy",
+      "reason": "native ROMS angle / geographic xi orientation conflict",
+      "file": "data\\raw\\historical\\ASAR_B1_BayOfFundy_20250214\\derived\\gomofs_native_surface_20250213T23_20250214T11.nc",
+      "sha256": "eb768c27d14aa22cadb53a46596fbd235fed260e80fe82694bfaa4d3f1fcf5f9",
+      "spherical": 1,
+      "angle_attributes": {
+        "standard_name": "grid_angle_of_rotation_from_east_to_y",
+        "long_name": "angle between XI-axis and EAST",
+        "units": "radians",
+        "grid": "grid",
+        "location": "face",
+        "coordinates": "lon_rho lat_rho",
+        "field": "angle"
+      },
+      "samples": [
+        {
+          "point": "LKP",
+          "rho_index": [
+            699,
+            964
+          ],
+          "file_angle_rad": 0.5585813337914003,
+          "file_angle_deg": 32.00435294103551,
+          "geometric_axes": {
+            "xi": {
+              "east_ccw_deg": 25.098762494247367,
+              "distance_m": 1390.53276524975
+            },
+            "eta": {
+              "east_ccw_deg": 115.08023143589607,
+              "distance_m": 1390.7003149406414
+            }
+          },
+          "local_tangent_deg": 25.16666469824355,
+          "xi_mismatch_deg": 6.905590446788146
+        },
+        {
+          "point": "CSP",
+          "rho_index": [
+            700,
+            993
+          ],
+          "file_angle_rad": 0.5585794410565188,
+          "file_angle_deg": 32.00424449531506,
+          "geometric_axes": {
+            "xi": {
+              "east_ccw_deg": 24.9205589330315,
+              "distance_m": 1390.3083051504573
+            },
+            "eta": {
+              "east_ccw_deg": 114.91975136657375,
+              "distance_m": 1390.314231399008
+            }
+          },
+          "local_tangent_deg": 24.987843602254234,
+          "xi_mismatch_deg": 7.083685562283563
+        }
+      ],
+      "threshold_deg": 2,
+      "threshold_unchanged": true,
+      "source_definition": "angle in radians between XI axis and true east",
+      "sources": [
+        "https://github.com/myroms/roms/blob/develop/ROMS/Modules/mod_grid.F",
+        "https://www.tidesandcurrents.noaa.gov/ofs/ofs_faq.html"
+      ],
+      "parents_reverified_locally": false,
+      "opendrift_runs": 0,
+      "synthetic_substitution": false,
+      "recovery": "Verify the native file angle and velocity basis against original parent/grid metadata; do not choose or recompute a rotation to make this gate pass."
+    }
+  },
+  "overall_status": "blocked",
+  "partial_results_are_not_two_scene_completion": true
+}

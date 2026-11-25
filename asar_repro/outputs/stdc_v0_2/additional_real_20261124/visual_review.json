@@ -1,0 +1,10 @@
+{
+  "status": "passed",
+  "reviewed": [
+    "b3/arctic_ocean/particles.png",
+    "hudson_core_comparison.png",
+    "benchmark/arctic_ocean_work_efficiency.png"
+  ],
+  "corrected": "Core figure preserves full title via tight bounding box; time color and start/end markers distinguish visit ordering; annotated efficiency figure explicitly labels DP memory stops.",
+  "annotated_efficiency": "hudson_efficiency_annotated.png"
+}

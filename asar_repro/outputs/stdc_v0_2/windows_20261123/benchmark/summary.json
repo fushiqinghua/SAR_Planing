@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "stage": "benchmark",
+  "started_utc": "2026-11-23T16:00:07.355514+00:00",
+  "runs": 45,
+  "completed": 18,
+  "budget_exceeded": 27,
+  "certified_full_routes": 0,
+  "conclusion": {
+    "paired_endpoint_runs": 9,
+    "endpoint_J_improved": 3,
+    "endpoint_Pd_improved": 3,
+    "any_window_J_improved": 12
+  },
+  "wall_s": 120.79168640007265
+}

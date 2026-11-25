@@ -1,0 +1,18 @@
+{
+  "initial_attempt": {
+    "status": "externally_interrupted",
+    "exit_code": 1,
+    "stdout_file": "larger_stdout.txt",
+    "stderr_file": "larger_stderr.txt",
+    "reason": "No output observed; parent interrupted optional diagnostic launch. No numerical conclusion from this attempt."
+  },
+  "retry2": {
+    "status": "process_completed",
+    "exit_code": 0,
+    "diagnostic_cap_seconds_per_scene": 90,
+    "all_three_scene_status": "budget_exceeded",
+    "stdout_file": "larger_retry2_stdout.txt",
+    "stderr": "No stderr was emitted in combined terminal capture",
+    "claim": "Completed length10 sweeps; only completed length12 windows counted; no global or same-budget performance conclusion."
+  }
+}

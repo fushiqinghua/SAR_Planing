@@ -1,0 +1,26 @@
+{
+  "interpreter": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+  "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro",
+  "toy_seed": 1041,
+  "archive_seed": 41,
+  "commands": [
+    [
+      "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+      "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\rollout_limit_diagnosis_20261124\\exact_windows\\audit_exact_windows.py"
+    ],
+    [
+      "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+      "-u",
+      "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\rollout_limit_diagnosis_20261124\\exact_windows\\audit_larger_windows.py"
+    ]
+  ],
+  "environment": {
+    "PYTHONPATH": "scripts/offline_guard;src;scripts",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "ASAR_OFFLINE": "1",
+    "PROJ_NETWORK": "OFF",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1"
+  },
+  "note": "first redirected larger-window attempt was interrupted externally after no output; retained empty logs; no result inferred from it; second unbuffered attempt records diagnostic caps separately"
+}

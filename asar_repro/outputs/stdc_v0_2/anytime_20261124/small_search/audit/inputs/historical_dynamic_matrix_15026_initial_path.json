@@ -1,0 +1,14 @@
+{
+  "seed": 15026,
+  "kind": "historical_dynamic_matrix",
+  "initial_path": [
+    4,
+    1,
+    2,
+    5,
+    2,
+    1
+  ],
+  "derivation": "unchanged small_case(seed)",
+  "data_type": "synthetic_toy"
+}

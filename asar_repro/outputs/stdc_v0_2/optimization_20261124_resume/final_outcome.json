@@ -1,0 +1,74 @@
+{
+  "status": "passed",
+  "date": "2026-11-24",
+  "new_tests": 199,
+  "full_tests": 693,
+  "random_cases": 160,
+  "prefix_evaluations": 18024,
+  "bound_violations": 0,
+  "strict_bound_improvements": 1854,
+  "max_bound_overestimate": 8.881784197001252e-16,
+  "small_cases": 45,
+  "small_searches": 320,
+  "max_small_J_error": 0.0,
+  "max_small_replay_error": 0.0,
+  "smoke_runs": 11,
+  "formal_runs": 66,
+  "formal_completed": 6,
+  "formal_budget_exceeded": 60,
+  "epsilon_certified": false,
+  "conclusions": {
+    "work": {
+      "best_observed_median_method": "anytime_reference",
+      "J": 17.264874448,
+      "Pd": 0.897364416,
+      "methods_below_previous_stdc": [],
+      "warning": "descriptive comparison of separately paid runs; no free method selection portfolio"
+    },
+    "wall": {
+      "best_observed_median_method": "anytime_reference",
+      "J": 17.264874448,
+      "Pd": 0.897364416,
+      "methods_below_previous_stdc": [],
+      "warning": "descriptive comparison of separately paid runs; no free method selection portfolio"
+    }
+  },
+  "source_changed_since_blocked": false,
+  "environment_resolution": "same 35448 account and interpreter: hard links denied inside sandbox, allowed outside; unchanged full tests passed outside sandbox",
+  "preservation": {
+    "status": "passed",
+    "baseline_files": 654,
+    "protected_research_files": 3297,
+    "source_files": 120,
+    "historical_preflight_sha256": "dae1d7ef9586a4dda20d5121542993a8812e7dfbe6fdcc27251e9503a5bb2b0b",
+    "pre_edit_preserved": 3199,
+    "prior_blocked_artifacts_preserved": true
+  },
+  "scope": "single frozen historical Lake Ontario all-water approximation; repeats are timing repetitions, not independent scenes",
+  "environment": {
+    "interpreter": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "python_version": "3.11.18 | packaged by conda-forge | (main, Oct 26 2026, 11:29:07) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "versions": {
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "pytest": "9.2.0",
+      "opendrift": "1.14.12",
+      "psutil": "7.2.2",
+      "matplotlib": "3.11.2",
+      "netCDF4": "1.7.5",
+      "pyproj": "3.7.2"
+    },
+    "version_method": "importlib.metadata only; no OpenDrift import or execution",
+    "environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "PROJ_NETWORK": "OFF",
+      "PYTHONPATH": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\offline_guard;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\src;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    }
+  },
+  "old_blocked_record": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\optimization_20261124\\final_outcome.json"
+}

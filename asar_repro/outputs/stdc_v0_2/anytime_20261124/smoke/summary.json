@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "stage": "smoke",
+  "runs": 6,
+  "completed": 1,
+  "budget_exceeded": 5,
+  "certified_full_routes": 0,
+  "conclusion": {
+    "stdc_runs": 3,
+    "stdc_beats_best_J_runs": 1,
+    "best_stdc_J": 17.264874448,
+    "best_reference_J": 17.29389415456
+  },
+  "wall_s": 31.57165120006539
+}

@@ -1,0 +1,1 @@
+{"variant": "paper_baseline", "protocol": "work", "J": 17.29389415456, "Pd_T": 0.89737041888, "status": "completed", "stop_reason": null, "work_expanded": 1222, "search_wall_s": 1.071184100001119}

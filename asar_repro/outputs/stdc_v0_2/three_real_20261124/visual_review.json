@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "reviewed": [
+    "three_scenes_work.png",
+    "fundy_paths_qualified.png"
+  ],
+  "direction_label_visible": true,
+  "min_max_not_confidence_interval": true,
+  "DP_abort_distinguished": true,
+  "correction": "Added x margins to prevent points at extreme values touching axes."
+}

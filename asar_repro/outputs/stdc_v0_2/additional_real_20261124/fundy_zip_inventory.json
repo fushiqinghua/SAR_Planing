@@ -1,0 +1,11 @@
+{
+  "archive": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-v1.1\\ASAR_B1_BayOfFundy_真实风流数据包.zip",
+  "archive_sha256": "fb84cdfd2bc5e7b3805763ef0f1aa6b1fd213d1ca6b64d5560d9aae742ef6375",
+  "netcdf_members": [
+    {
+      "name": "ASAR_B1_BayOfFundy_20250214/derived/gomofs_native_surface_20250213T23_20250214T11.nc",
+      "bytes": 123073803
+    }
+  ],
+  "conclusion": "Only delivered derived netCDF is present; full original parent files absent"
+}

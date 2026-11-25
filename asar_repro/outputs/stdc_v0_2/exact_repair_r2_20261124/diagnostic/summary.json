@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "scenes": 3,
+  "error": null,
+  "budget_aborted_scenes": 0,
+  "global_epsilon_certified": false
+}

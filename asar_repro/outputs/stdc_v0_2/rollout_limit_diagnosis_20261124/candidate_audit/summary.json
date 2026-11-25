@@ -1,0 +1,141 @@
+{
+  "status": "passed",
+  "reconstruction_scope": "Replays saved local expansion allocations and before-slice incumbents without wall-clock deadlines. Does not rerun global search or claim independent experiments.",
+  "original_candidate_paths_logged": false,
+  "source_sha_verified": true,
+  "real_archives_sha_verified": true,
+  "runs": 72,
+  "complete_candidates": 270,
+  "same_as_incumbent": 270,
+  "unique_scene_path_pairs": 8,
+  "unique_scene_incumbent_window_path_pairs": 13,
+  "phase_checks": 265,
+  "phase_mismatches": [],
+  "totals": {
+    "work_expanded": 27444,
+    "bound_calls": 73680,
+    "cheap_bound_calls": 100001,
+    "beam_discarded": 25140,
+    "proposal_resets": 139,
+    "reset_discarded": 6118,
+    "diversity_extra_retained": 9,
+    "windows_started": 481,
+    "windows_completed": 270
+  },
+  "per_scene": {
+    "lake_ontario": {
+      "candidates": 90,
+      "same_as_incumbent": 90,
+      "unique_paths": 3,
+      "intervals": [
+        [
+          3,
+          11
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          15,
+          23
+        ]
+      ],
+      "candidate_lengths": {
+        "8": 81,
+        "6": 9
+      },
+      "available_windows_per_incumbent": 132,
+      "completed_windows_range": [
+        3,
+        5
+      ],
+      "started_unique_interval_range": [
+        3,
+        5
+      ],
+      "max_abs_delta_J": 0.0,
+      "diversity_extra_retained": 0,
+      "beam_discarded": 12786
+    },
+    "arctic_ocean": {
+      "candidates": 90,
+      "same_as_incumbent": 90,
+      "unique_paths": 2,
+      "intervals": [
+        [
+          18,
+          26
+        ],
+        [
+          19,
+          27
+        ],
+        [
+          20,
+          28
+        ]
+      ],
+      "candidate_lengths": {
+        "8": 90
+      },
+      "available_windows_per_incumbent": 165,
+      "completed_windows_range": [
+        2,
+        4
+      ],
+      "started_unique_interval_range": [
+        2,
+        4
+      ],
+      "max_abs_delta_J": 3.552713678800501e-15,
+      "diversity_extra_retained": 0,
+      "beam_discarded": 8154
+    },
+    "bay_of_fundy": {
+      "candidates": 90,
+      "same_as_incumbent": 90,
+      "unique_paths": 3,
+      "intervals": [
+        [
+          19,
+          27
+        ],
+        [
+          20,
+          28
+        ],
+        [
+          24,
+          32
+        ],
+        [
+          25,
+          33
+        ]
+      ],
+      "candidate_lengths": {
+        "8": 90
+      },
+      "available_windows_per_incumbent": 150,
+      "completed_windows_range": [
+        3,
+        4
+      ],
+      "started_unique_interval_range": [
+        5,
+        5
+      ],
+      "max_abs_delta_J": 2.842170943040401e-14,
+      "diversity_extra_retained": 9,
+      "beam_discarded": 4200
+    }
+  },
+  "physical_direction_unverified": {
+    "bay_of_fundy": true
+  }
+}

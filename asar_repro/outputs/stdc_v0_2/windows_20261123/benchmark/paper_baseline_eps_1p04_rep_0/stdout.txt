@@ -1,0 +1,1 @@
+{"variant": "paper_baseline", "epsilon": 1.04, "repeat": 0, "status": "completed", "stop_reason": null, "J": 17.29389415456, "Pd_T": 0.89737041888, "expanded": 1222, "search_wall_s": 0.928953199996613, "process_peak_memory_mib": 89.51171875, "theory_certified": false}

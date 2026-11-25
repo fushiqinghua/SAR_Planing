@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "method_changed": false,
+  "posthoc_descriptive_only": true,
+  "benchmark_runs": 36,
+  "candidate_records": 201,
+  "unique_replayed_paths": 26,
+  "primary_returned_J": 17.264874448,
+  "primary_returned_Pd": 0.897364416,
+  "primary_joint_candidates": 1,
+  "primary_joint_over_max_baseline_Pd": 0,
+  "source_files_checked": 109,
+  "source_preservation": "all validated source hashes unchanged; benchmark and baseline results unchanged",
+  "analysis_wall_s": 1.3209804999642074
+}

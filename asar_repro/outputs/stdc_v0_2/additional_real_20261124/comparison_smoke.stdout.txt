@@ -1,0 +1,8 @@
+1/8 arctic_ocean paper_baseline work J=25.293460991 Pd=0.817636947 max_expansions 0.752s
+2/8 arctic_ocean prior_stdc work J=25.293460991 Pd=0.817636947 max_expansions 1.060s
+3/8 arctic_ocean compressed_stdc work J=25.293460991 Pd=0.817636947 max_expansions 1.170s
+4/8 arctic_ocean dp_only work J=25.293460991 Pd=0.817636947 dp_max_memory_bytes 0.005s
+5/8 arctic_ocean stdc_dp work J=25.293460991 Pd=0.817636947 dp_max_memory_bytes 0.007s
+6/8 arctic_ocean mid_plain work J=25.293460991 Pd=0.817636947 max_seconds 3.007s
+7/8 arctic_ocean mid_diverse work J=25.293460991 Pd=0.817636947 max_expansions 2.774s
+8/8 arctic_ocean mid_dp work J=25.293460991 Pd=0.817636947 dp_max_memory_bytes 0.008s

@@ -1,0 +1,28 @@
+{
+  "status": "passed",
+  "stage": "final_preservation",
+  "command": null,
+  "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro",
+  "driver_command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "scripts/run_trajectory_validation.py",
+    "final_preservation",
+    "--run-dir",
+    "outputs/stdc_v0_2/trajectory_20261124/diagnostic_validation"
+  ],
+  "preservation_before": {
+    "status": "passed",
+    "baseline_files": 654,
+    "protected_research_files": 4010,
+    "source_files": 125,
+    "historical_preflight_sha256": "dae1d7ef9586a4dda20d5121542993a8812e7dfbe6fdcc27251e9503a5bb2b0b"
+  },
+  "preservation_after": {
+    "status": "passed",
+    "baseline_files": 654,
+    "protected_research_files": 4010,
+    "source_files": 125,
+    "historical_preflight_sha256": "dae1d7ef9586a4dda20d5121542993a8812e7dfbe6fdcc27251e9503a5bb2b0b"
+  },
+  "wall_s": 7.755818200064823
+}

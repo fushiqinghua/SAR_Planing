@@ -1,0 +1,26 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "-m",
+    "pytest",
+    "tests/test_exact_repair.py",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=outputs/stdc_v0_2/exact_repair_20261124/development/tests/attempt03/junit.xml"
+  ],
+  "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro",
+  "passed": 71,
+  "failed": 0,
+  "total": 71,
+  "pytest_exit_code": 0,
+  "scope": "final new tests after solver threads/seed/options freeze; independent audit delegated to parent gate",
+  "source_sha256": "8d10e9fb2ff5822b692ebc64b74713f77a8bb6222008c1988c8df5c4870f554b",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "ASAR_OFFLINE": "1",
+    "PROJ_NETWORK": "OFF",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  }
+}

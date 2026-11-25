@@ -1,0 +1,37 @@
+{
+  "name": "default_on",
+  "options": {
+    "time_limit": 30.0,
+    "mip_rel_gap": 0.0,
+    "presolve": true,
+    "threads": 1,
+    "random_seed": 0
+  },
+  "model_sha256": "9ab8f6dfd2a1a9e2739b91d717ad920b3e1aee185bf1e6814621c6085076b63c",
+  "wall_s": 0.010449899942614138,
+  "solver_status": 0,
+  "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "J": 3.0744347826086957,
+  "dual": 3.0744347826086957,
+  "solution": [
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.4,
+    0.16000000000000003,
+    0.4
+  ],
+  "mip_nodes": 0,
+  "known_feasible_J": 3.0744347826086957,
+  "warnings": [
+    "Unrecognized options detected: {'random_seed', 'threads'}. These will be passed to HiGHS verbatim."
+  ],
+  "matches_known_optimum": true,
+  "dual_exceeds_known_feasible": false
+}

@@ -1,0 +1,18 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "-m",
+    "pytest",
+    "tests/test_short_window_rollout.py",
+    "-q",
+    "--junitxml=E:\\\u6bd5\u4e1a\u8bbe\u8ba1\\\u7ec8\u7a3f\u7814\u53d1\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\adaptive_20261124\\stage2_rollout\\attempt02_pytest\\pytest.xml"
+  ],
+  "cwd": "E:\\\u6bd5\u4e1a\u8bbe\u8ba1\\\u7ec8\u7a3f\u7814\u53d1\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro",
+  "seed": 2441,
+  "source_sha256": {
+    "src/asar_repro/short_window_rollout.py": "8c62724ec91bc0a997b6dea743afed237c04432d5fb8dabe79874b1b7d41f67f",
+    "tests/test_short_window_rollout.py": "cfd7d35fe2dd32c4f757bf5136df70c016e46a2a92193f59cdfdc5ec635b0143",
+    "src/asar_repro/objective.py": "792077ad3e0286c03f60108f2580ea3b3557e3f5b002bc1a5e2f9f67e48fb2ad",
+    "src/asar_repro/window_bounds.py": "67fc3be440e2693ce75dd530f95e995291f068ae7a4d8d16d7c2ece0ed058380"
+  }
+}

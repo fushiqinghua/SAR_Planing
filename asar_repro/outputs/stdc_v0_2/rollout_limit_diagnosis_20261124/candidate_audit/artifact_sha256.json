@@ -1,0 +1,42 @@
+[
+  {
+    "file": "analyze_candidates.py",
+    "sha256": "af4bfdb2644c908276450cffa26b050326e26779074cc8227f12648e90047607",
+    "bytes": 7207
+  },
+  {
+    "file": "candidate_records.json",
+    "sha256": "ad43568ef7482746ef4bbd1f3cdfa937dbe9373f5a05f6ff0e4ea754663e9aef",
+    "bytes": 606499
+  },
+  {
+    "file": "phase_checks.json",
+    "sha256": "a0958989f9a60eaadb7b8ce2b2b587df77359dbdff9be680c7cdeb8c52b98900",
+    "bytes": 26488
+  },
+  {
+    "file": "README.md",
+    "sha256": "d2a93173ccb6ffe2bb8b88fbb587bc16906a755d0c2e120e4de357519b56e0fa",
+    "bytes": 2534
+  },
+  {
+    "file": "reconstructed_runs.json",
+    "sha256": "70fdd4d23969dc3265c15bad1c3c28ebea912afaf795f1561af490fcbd9cfa8f",
+    "bytes": 841869
+  },
+  {
+    "file": "stderr.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  {
+    "file": "stdout.txt",
+    "sha256": "1efd54828ddabcb7beffbb1dfb93c19ec66dff966ee45d2079c6ea13fdad523f",
+    "bytes": 5842
+  },
+  {
+    "file": "summary.json",
+    "sha256": "31ac35055405cfd0dbaa25cf5412131c718fee5e5f4a87cc0abd8b19ce70f89e",
+    "bytes": 3032
+  }
+]

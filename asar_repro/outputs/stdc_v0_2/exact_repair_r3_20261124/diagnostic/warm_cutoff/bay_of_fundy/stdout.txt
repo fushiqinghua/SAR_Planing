@@ -1,0 +1,3 @@
+bay_of_fundy late_suffix completed J 45.881082400000004 Pd 0.41586480000000003
+bay_of_fundy long_suffix budget_exceeded J 45.881082400000004 Pd 0.41586480000000003
+bay_of_fundy early_divergence budget_exceeded J 45.881082400000004 Pd 0.41586480000000003

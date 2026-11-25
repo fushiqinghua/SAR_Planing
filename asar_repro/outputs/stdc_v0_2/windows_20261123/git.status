@@ -1,0 +1,11 @@
+?? asar_repro/docs/stdc_window_improvement.md
+?? asar_repro/outputs/stdc_v0_2/windows_20261123/changes.diff
+?? asar_repro/outputs/stdc_v0_2/windows_20261123/preflight.json
+?? asar_repro/scripts/audit_window_bounds.py
+?? asar_repro/scripts/audit_window_search.py
+?? asar_repro/scripts/run_window_experiments.py
+?? asar_repro/scripts/run_window_validation.py
+?? asar_repro/src/asar_repro/window_bounds.py
+?? asar_repro/src/asar_repro/window_search.py
+?? asar_repro/tests/test_window_bounds.py
+?? asar_repro/tests/test_window_search.py

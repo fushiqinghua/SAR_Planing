@@ -1,0 +1,28 @@
+.......................F
+================================== FAILURES ===================================
+______________ test_expired_and_interrupted_builds_never_publish ______________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000014C6679E490>
+
+    def test_expired_and_interrupted_builds_never_publish(monkeypatch):
+        grid, motion, _ = fixture()
+        monkeypatch.setattr(compact_module, "perf_counter", lambda: 5.)
+        expired = CompactParticleDP(grid, start=0, budget=4, q=.78, motion=motion, deadline=5.)
+        assert not expired.ready and expired.stop_reason == "max_seconds"
+        assert expired.build_info["allocated_peak_managed_bytes"] == 0
+        calls = 0
+        def clock():
+            nonlocal calls
+            calls += 1
+            return 0. if calls < 80 else 10.
+        monkeypatch.setattr(compact_module, "perf_counter", clock)
+        partial = CompactParticleDP(grid, start=0, budget=4, q=.78, motion=motion, deadline=5.)
+>       assert not partial.ready and partial.stop_reason == "max_seconds"
+E       assert (not True)
+E        +  where True = <asar_repro.compact_particle_dp.CompactParticleDP object at 0x0000014C66C84410>.ready
+
+tests\test_compact_particle_dp.py:153: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_compact_particle_dp.py::test_expired_and_interrupted_builds_never_publish
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 23 passed in 0.70s

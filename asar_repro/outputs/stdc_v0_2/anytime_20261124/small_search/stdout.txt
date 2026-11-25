@@ -1,0 +1,10 @@
+validated 5/45 anytime cases; searches=45; prefixes=1441
+validated 10/45 anytime cases; searches=90; prefixes=2600
+validated 15/45 anytime cases; searches=135; prefixes=4041
+validated 20/45 anytime cases; searches=180; prefixes=5200
+validated 25/45 anytime cases; searches=225; prefixes=6641
+validated 30/45 anytime cases; searches=270; prefixes=7800
+validated 35/45 anytime cases; searches=315; prefixes=9241
+validated 40/45 anytime cases; searches=360; prefixes=10682
+validated 45/45 anytime cases; searches=405; prefixes=12123
+{"status": "passed", "cases": 45, "searches": 405, "prefix_evaluations": 12123, "max_absolute_J_minus_oracle": 0.0}

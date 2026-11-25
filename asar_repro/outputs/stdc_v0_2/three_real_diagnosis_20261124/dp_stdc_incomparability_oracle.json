@@ -1,0 +1,185 @@
+{
+  "status": "passed",
+  "cases": [
+    {
+      "name": "DP_stronger_due_to_temporal_continuity",
+      "cols": 4,
+      "cells": [
+        [
+          1
+        ],
+        [
+          0
+        ],
+        [
+          3
+        ]
+      ],
+      "belief": [
+        1.0
+      ],
+      "T": 2,
+      "expected_dp": 1.0,
+      "expected_stdc": 0.75,
+      "expected_oracle": 1.0,
+      "dp": 1.0,
+      "stdc": 0.75,
+      "oracle": {
+        "path": [
+          1,
+          0,
+          1
+        ],
+        "J": 1.0,
+        "tied_paths": [
+          [
+            1,
+            0,
+            1
+          ]
+        ],
+        "complete_paths": 3,
+        "expanded": 3,
+        "generated": 5,
+        "peak_open": 2
+      },
+      "prefix_checks": [
+        {
+          "path": [
+            1
+          ],
+          "remaining_oracle_J": 1.0,
+          "dp": 1.0,
+          "stdc": 0.75
+        },
+        {
+          "path": [
+            1,
+            2
+          ],
+          "remaining_oracle_J": 0.5,
+          "dp": 0.5,
+          "stdc": 0.5
+        },
+        {
+          "path": [
+            1,
+            2,
+            3
+          ],
+          "remaining_oracle_J": 0.0,
+          "dp": 0.0,
+          "stdc": 0.0
+        },
+        {
+          "path": [
+            1,
+            2,
+            1
+          ],
+          "remaining_oracle_J": 0.0,
+          "dp": 0.0,
+          "stdc": 0.0
+        },
+        {
+          "path": [
+            1,
+            0
+          ],
+          "remaining_oracle_J": 0.5,
+          "dp": 0.5,
+          "stdc": 0.5
+        },
+        {
+          "path": [
+            1,
+            0,
+            1
+          ],
+          "remaining_oracle_J": 0.0,
+          "dp": 0.0,
+          "stdc": 0.0
+        }
+      ]
+    },
+    {
+      "name": "STDC_stronger_due_to_shared_detection_capacity",
+      "cols": 3,
+      "cells": [
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "belief": [
+        0.5,
+        0.5
+      ],
+      "T": 1,
+      "expected_dp": 0.5,
+      "expected_stdc": 0.75,
+      "expected_oracle": 0.75,
+      "dp": 0.5,
+      "stdc": 0.75,
+      "oracle": {
+        "path": [
+          1,
+          0
+        ],
+        "J": 0.75,
+        "tied_paths": [
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "complete_paths": 2,
+        "expanded": 1,
+        "generated": 2,
+        "peak_open": 2
+      },
+      "prefix_checks": [
+        {
+          "path": [
+            1
+          ],
+          "remaining_oracle_J": 0.75,
+          "dp": 0.5,
+          "stdc": 0.75
+        },
+        {
+          "path": [
+            1,
+            2
+          ],
+          "remaining_oracle_J": 0.0,
+          "dp": 0.0,
+          "stdc": 0.0
+        },
+        {
+          "path": [
+            1,
+            0
+          ],
+          "remaining_oracle_J": 0.0,
+          "dp": 0.0,
+          "stdc": 0.0
+        }
+      ]
+    }
+  ],
+  "case_count": 2,
+  "prefix_count": 9,
+  "numerical_assertion_count": 24,
+  "finding": "Neither lower bound universally dominates the other. This is not a claim of real-scenario quality improvement.",
+  "seed": null,
+  "seed_reason": "Deterministic hand-constructed cases; no RNG used."
+}

@@ -1,0 +1,52 @@
+{
+  "status": "diagnosis_completed_optimization_not_implemented",
+  "date_local": "2026-11-24",
+  "core_audit_command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "outputs\\stdc_v0_2\\three_real_diagnosis_20261124\\audit_core.py"
+  ],
+  "core_audit_exit_code": 0,
+  "core_audit_stderr": "",
+  "historical_rows_checked": 144,
+  "rollout_records_checked": 54,
+  "dp_toy_cases": 2,
+  "dp_toy_prefixes": 9,
+  "dp_numerical_assertions": 24,
+  "new_real_searches": 0,
+  "new_opendrift_runs": 0,
+  "full_pytest_rerun": false,
+  "production_changes": false,
+  "physical_direction_unverified": [
+    "bay_of_fundy"
+  ],
+  "prioritized_experiments": [
+    {
+      "order": 1,
+      "change": "Resumable direct STDC; return unspent rollout work to global frontier; DP setup failure continues STDC with remaining time.",
+      "scope": "Keep common PT initialization and count all overhead. No same-budget superiority guarantee."
+    },
+    {
+      "order": 2,
+      "change": "Preserve quality beam; ablate small additional diversity slots and refresh anchors from missed reachable detection opportunity.",
+      "scope": "Trace candidate survival; distinguish operator diagnostic warm start from paid full benchmark."
+    },
+    {
+      "order": 3,
+      "change": "Measure and reduce guide/bound evaluations and uncapped geometric caches.",
+      "scope": "Original-ID independent replay stays enabled; no depth/vertex-only belief cache."
+    },
+    {
+      "order": 4,
+      "change": "Float64 DP on exact root-time reachability cone with time-dependent identical-future suffix grouping.",
+      "scope": "Only table-size estimate completed; Fundy total managed/RSS may still exceed cap."
+    }
+  ],
+  "validation_protocol": "Dense-vs-compact DP at all toy prefixes, independent Oracle, full historical tests, then same archived SHA/work/wall paired repeats. Any historical/admissibility failure blocks.",
+  "qualifications": [
+    "No evidence proves incumbent is near global optimum.",
+    "Three timing repeats per fixed archive are not independent particle realizations.",
+    "J minimization does not guarantee final Pd improvement.",
+    "DP and STDC are incomparable in general; neither empirical pruning counts nor 9012 prior sampled prefixes prove dominance.",
+    "All real results remain uncertified."
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "returncode": 0,
+  "wall_s": 1.8400068000191823,
+  "counts": {
+    "tests": 10,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  }
+}

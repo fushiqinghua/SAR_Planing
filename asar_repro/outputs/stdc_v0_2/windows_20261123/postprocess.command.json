@@ -1,0 +1,9 @@
+{
+  "command": [
+    "C:/Users/35448/.conda/envs/maritime-sar/python.exe",
+    "outputs\\stdc_v0_2\\windows_20261123\\plot_all_epsilons.py"
+  ],
+  "scope": "saved-result plotting only; no search or drift rerun",
+  "stderr": "additional_figures.stderr.txt",
+  "stdout": "additional_figures.stdout.txt"
+}

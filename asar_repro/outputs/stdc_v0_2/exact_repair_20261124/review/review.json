@@ -1,0 +1,42 @@
+{
+  "status": "review_passed_with_explicit_numerical_limits",
+  "date": "2026-11-24",
+  "reviewed_source": "src/asar_repro/exact_repair.py",
+  "reviewed_source_sha256": "20fceef062b2a1817ab5fcff96b48394d1237bfbeb50b23820f899efb9533ed4",
+  "blocking_findings": [],
+  "checked": [
+    "one shared binary position per absolute time and adjacency enforce one common four-connected route",
+    "fixed prefix includes absolute time a; no sensing at t=0; terminal position remains free",
+    "geometric corridor is union around full supplied suffix, not time-locked singleton endpoints",
+    "future trace grouping uses posterior mass at prefix, preserving different past detections",
+    "zero posterior groups contribute zero; positive special or inaccessible mass remains in objective",
+    "normalized event residual dynamics and binary McCormick constraints are exact for integral positions",
+    "first event uses r=1-q*x; every unobserved absolute time is included in event-span coefficients or constant",
+    "prefix score and constant residual terms are added to both objective and solver numerical dual",
+    "original scorer independently checks full route and strict J acceptance; Pd remains separate",
+    "restricted dual/gap never promoted to global epsilon guarantee",
+    "node_limit=0 returns explicit limit before solver; ordinary solver failure stays blocked",
+    "positive explicit node cap plus exact HiGHS16 solution-limit message is recorded as budget stop while keeping SciPy rawstatus4; arbitrary errors are not accepted",
+    "total build/solve/replay wall and cooperative overshoot reported; model memory estimate excludes native solver RSS",
+    "native numerical options, threads=1, random_seed=0 and SciPy forwarding warnings are recorded"
+  ],
+  "test_review": {
+    "files": ["tests/test_exact_repair.py", "scripts/audit_exact_repair.py"],
+    "independent_oracle": "complete four-neighbor DFS independently constructs corridor and scores full routes; no MILP geometry/grouping/bound reuse",
+    "test_attempt01": "67 passed, one new zero-node-budget status mapping failure; not an admissibility or historical-test failure",
+    "test_attempt02_observed": "71 passed before final positive-node-limit mapping; no assertion weakened; parent must run final frozen-source checks",
+    "parent_gates_still_required": ["frozen-source integrated tests", "independent random Oracle audit", "full historical suite", "real input SHA validation"]
+  },
+  "limits": [
+    "ordinary floating-point MILP optimal status is restricted numerical completion, not a formal proof or global epsilon certificate",
+    "strict 1e-10 objective/replay check can still block a native solver solution on difficult numeric inputs; do not relax silently",
+    "managed model memory estimate is not a hard process RSS cap; parent worker must monitor native solver memory",
+    "a restricted optimum without improvement does not establish global optimality",
+    "MILP node count is not comparable to A-star expansion count",
+    "Fundy physical direction remains unverified"
+  ],
+  "source_modified_by_reviewer": false,
+  "new_document": "docs/stdc_exact_repair.md",
+  "real_search_run_by_reviewer": false,
+  "global_epsilon_certified": false
+}

@@ -1,0 +1,17 @@
+{
+  "lake_ontario": {
+    "path": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\trajectory_20261124\\benchmark",
+    "artifact_manifest_sha256": "5a10b41d9f5e77d82b4ed1e1afb91b6d5ad8f3c367c060343082035eb6091880",
+    "results_sha256": "9609d8c9f53f7c8c61e037b6ae2ffbc928602e110e58c6fcda0dc4ac6c78fea6"
+  },
+  "arctic_ocean": {
+    "path": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\additional_real_20261124\\benchmark",
+    "artifact_manifest_sha256": "b4d3799916ad14c036178d4906f70a15b0c3bbb65d1f2a143259f048d484202f",
+    "results_sha256": "b2aea326daecb2704070b757c3c54565e788296616386e6363f8961a20ab9c89"
+  },
+  "bay_of_fundy": {
+    "path": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\fundy_repair_20261124\\benchmark",
+    "artifact_manifest_sha256": "d963a842da160408c227ea1ee25ec85d2b97870ec0c6709846aa17893cb99703",
+    "results_sha256": "b3e3d19aa8a2207bbb41871eacbc920b36d48c194e9890bdbf71f5b3497fc846"
+  }
+}

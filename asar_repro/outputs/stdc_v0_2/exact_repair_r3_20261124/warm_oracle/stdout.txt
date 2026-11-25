@@ -1,0 +1,7 @@
+seeds 8 checks 96
+seeds 16 checks 192
+seeds 24 checks 288
+seeds 32 checks 384
+seeds 40 checks 480
+seeds 48 checks 576
+warm Oracle passed 576

@@ -1,0 +1,60 @@
+{
+  "kind": "matrix",
+  "seed": 120,
+  "data_type": "synthetic_toy",
+  "motion_label": "static_identity",
+  "grid": {
+    "rows": 2,
+    "cols": 2
+  },
+  "reference_path": [
+    1,
+    3,
+    1,
+    0,
+    2
+  ],
+  "window": [
+    0,
+    3
+  ],
+  "p": [
+    0.42384853761418656,
+    0.17873039238117988,
+    0.21159393950203542,
+    0.18582713050259814
+  ],
+  "q": 0.0,
+  "t0_convention": "frame zero has no observation; first motion/sense is t=1",
+  "motion": {
+    "repeat": true,
+    "matrices": [
+      [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    ]
+  }
+}

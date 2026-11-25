@@ -1,0 +1,27 @@
+{
+  "interpreter": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+  "identity": "jdd\\35448",
+  "probes": [
+    {
+      "folder": "C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\optimization_validation_tmp\\resume_link_probe",
+      "status": "failed",
+      "error": "PermissionError(13, '拒绝访问。')",
+      "winerror": 5
+    },
+    {
+      "folder": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\optimization_20261124_resume\\link_probe",
+      "status": "failed",
+      "error": "PermissionError(13, '拒绝访问。')",
+      "winerror": 5
+    }
+  ],
+  "source_unchanged": true,
+  "old_run_preservation": {
+    "status": "passed",
+    "baseline_files": 654,
+    "protected_research_files": 3255,
+    "source_files": 120,
+    "historical_preflight_sha256": "dae1d7ef9586a4dda20d5121542993a8812e7dfbe6fdcc27251e9503a5bb2b0b"
+  },
+  "policy": "Keep blocked evidence; repeat mandatory unchanged tests in a new run"
+}

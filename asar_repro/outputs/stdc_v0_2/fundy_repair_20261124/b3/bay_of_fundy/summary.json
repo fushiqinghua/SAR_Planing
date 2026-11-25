@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "direction_policy": {
+    "mode": "official_native_angle",
+    "geographic_direction_validated": false,
+    "physical_direction_unverified": true,
+    "original_strict_gate_passed": false,
+    "accepted_by_user": "2026-11-24: 按官方 angle 接入，保留未验证标签",
+    "implementation_basis": "ROMS Utility/uv_rotate.F: average native faces then rotate with supplied angle",
+    "original_parent_sha256": "c2879d000da71de2509e5f5194130de8c063256dc9c784a443826474894a378e"
+  },
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "scripts/run_fundy_native.py",
+    "b3",
+    "--run-dir",
+    "outputs/stdc_v0_2/fundy_repair_20261124"
+  ],
+  "seed": 41,
+  "environment": {
+    "interpreter": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "python_version": "3.11.18 | packaged by conda-forge | (main, Oct 26 2026, 11:29:07) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "versions": {
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "pytest": "9.2.0",
+      "opendrift": "1.14.12",
+      "psutil": "7.2.2",
+      "matplotlib": "3.11.2",
+      "netCDF4": "1.7.5",
+      "pyproj": "3.7.2"
+    },
+    "version_method": "importlib.metadata only; no OpenDrift import or execution",
+    "environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "PROJ_NETWORK": "OFF",
+      "PYTHONPATH": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\offline_guard;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\src;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    }
+  },
+  "preservation_before": {
+    "status": "passed",
+    "preexisting_files": 4696,
+    "baseline_files": 654
+  },
+  "scenario": "bay_of_fundy",
+  "particle_sha256": "3cb169401cc0c4a98306a2d3535f73e92e5cf31dc6db984eabcd9cc7d4ec9ad0",
+  "opendrift_runs": 1,
+  "max_mass_error": 5.551115123125783e-16,
+  "integration_wall_s": 7.604547200025991,
+  "preservation_after": {
+    "status": "passed",
+    "preexisting_files": 4696,
+    "baseline_files": 654
+  }
+}

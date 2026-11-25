@@ -1,0 +1,245 @@
+{
+  "scope": "expected reproduction and controlled diagnosis of known failing toy, no new admissibility gate",
+  "rows": [
+    {
+      "name": "strict_on",
+      "options": {
+        "time_limit": 30.0,
+        "mip_rel_gap": 0.0,
+        "presolve": true,
+        "threads": 1,
+        "random_seed": 0,
+        "mip_abs_gap": 0.0,
+        "mip_feasibility_tolerance": 1e-10,
+        "primal_feasibility_tolerance": 1e-10,
+        "dual_feasibility_tolerance": 1e-10,
+        "small_matrix_value": 1e-12
+      },
+      "model_sha256": "9ab8f6dfd2a1a9e2739b91d717ad920b3e1aee185bf1e6814621c6085076b63c",
+      "wall_s": 0.014486000058241189,
+      "solver_status": 0,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "J": 3.1495652173913045,
+      "dual": 3.1495652173913045,
+      "solution": [
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        0.4,
+        0.4,
+        0.0
+      ],
+      "mip_nodes": 0,
+      "known_feasible_J": 3.0744347826086957,
+      "warnings": [
+        "Unrecognized options detected: {'small_matrix_value', 'primal_feasibility_tolerance', 'threads', 'dual_feasibility_tolerance', 'random_seed', 'mip_feasibility_tolerance', 'mip_abs_gap'}. These will be passed to HiGHS verbatim."
+      ],
+      "matches_known_optimum": false,
+      "dual_exceeds_known_feasible": true
+    },
+    {
+      "name": "strict_off",
+      "options": {
+        "time_limit": 30.0,
+        "mip_rel_gap": 0.0,
+        "presolve": false,
+        "threads": 1,
+        "random_seed": 0,
+        "mip_abs_gap": 0.0,
+        "mip_feasibility_tolerance": 1e-10,
+        "primal_feasibility_tolerance": 1e-10,
+        "dual_feasibility_tolerance": 1e-10,
+        "small_matrix_value": 1e-12
+      },
+      "model_sha256": "9ab8f6dfd2a1a9e2739b91d717ad920b3e1aee185bf1e6814621c6085076b63c",
+      "wall_s": 0.0151538000209257,
+      "solver_status": 0,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "J": 3.0744347826086957,
+      "dual": 3.0744347826086957,
+      "solution": [
+        1.0,
+        -0.0,
+        1.0,
+        -0.0,
+        1.0,
+        -0.0,
+        -0.0,
+        1.0,
+        -0.0,
+        0.3999999999999999,
+        0.15999999999999992,
+        0.3999999999999999
+      ],
+      "mip_nodes": 1,
+      "known_feasible_J": 3.0744347826086957,
+      "warnings": [
+        "Unrecognized options detected: {'small_matrix_value', 'primal_feasibility_tolerance', 'threads', 'dual_feasibility_tolerance', 'random_seed', 'mip_feasibility_tolerance', 'mip_abs_gap'}. These will be passed to HiGHS verbatim."
+      ],
+      "matches_known_optimum": true,
+      "dual_exceeds_known_feasible": false
+    },
+    {
+      "name": "default_on",
+      "options": {
+        "time_limit": 30.0,
+        "mip_rel_gap": 0.0,
+        "presolve": true,
+        "threads": 1,
+        "random_seed": 0
+      },
+      "model_sha256": "9ab8f6dfd2a1a9e2739b91d717ad920b3e1aee185bf1e6814621c6085076b63c",
+      "wall_s": 0.010449899942614138,
+      "solver_status": 0,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "J": 3.0744347826086957,
+      "dual": 3.0744347826086957,
+      "solution": [
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.4,
+        0.16000000000000003,
+        0.4
+      ],
+      "mip_nodes": 0,
+      "known_feasible_J": 3.0744347826086957,
+      "warnings": [
+        "Unrecognized options detected: {'random_seed', 'threads'}. These will be passed to HiGHS verbatim."
+      ],
+      "matches_known_optimum": true,
+      "dual_exceeds_known_feasible": false
+    },
+    {
+      "name": "default_off",
+      "options": {
+        "time_limit": 30.0,
+        "mip_rel_gap": 0.0,
+        "presolve": false,
+        "threads": 1,
+        "random_seed": 0
+      },
+      "model_sha256": "9ab8f6dfd2a1a9e2739b91d717ad920b3e1aee185bf1e6814621c6085076b63c",
+      "wall_s": 0.013523500063456595,
+      "solver_status": 0,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "J": 3.0744347826086957,
+      "dual": 3.0744347826086957,
+      "solution": [
+        1.0,
+        -0.0,
+        1.0,
+        -0.0,
+        1.0,
+        -0.0,
+        -0.0,
+        1.0,
+        -0.0,
+        0.3999999999999999,
+        0.15999999999999992,
+        0.3999999999999999
+      ],
+      "mip_nodes": 1,
+      "known_feasible_J": 3.0744347826086957,
+      "warnings": [
+        "Unrecognized options detected: {'random_seed', 'threads'}. These will be passed to HiGHS verbatim."
+      ],
+      "matches_known_optimum": true,
+      "dual_exceeds_known_feasible": false
+    },
+    {
+      "name": "strict_without_small_value",
+      "options": {
+        "time_limit": 30.0,
+        "mip_rel_gap": 0.0,
+        "presolve": true,
+        "threads": 1,
+        "random_seed": 0,
+        "mip_abs_gap": 0.0,
+        "mip_feasibility_tolerance": 1e-10,
+        "primal_feasibility_tolerance": 1e-10,
+        "dual_feasibility_tolerance": 1e-10
+      },
+      "model_sha256": "9ab8f6dfd2a1a9e2739b91d717ad920b3e1aee185bf1e6814621c6085076b63c",
+      "wall_s": 0.0106853999895975,
+      "solver_status": 0,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "J": 3.0744347826086957,
+      "dual": 3.0744347826086957,
+      "solution": [
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.4,
+        0.16000000000000003,
+        0.4
+      ],
+      "mip_nodes": 0,
+      "known_feasible_J": 3.0744347826086957,
+      "warnings": [
+        "Unrecognized options detected: {'primal_feasibility_tolerance', 'threads', 'dual_feasibility_tolerance', 'random_seed', 'mip_feasibility_tolerance', 'mip_abs_gap'}. These will be passed to HiGHS verbatim."
+      ],
+      "matches_known_optimum": true,
+      "dual_exceeds_known_feasible": false
+    },
+    {
+      "name": "strict_default_feasibility",
+      "options": {
+        "time_limit": 30.0,
+        "mip_rel_gap": 0.0,
+        "presolve": true,
+        "threads": 1,
+        "random_seed": 0,
+        "mip_abs_gap": 0.0,
+        "small_matrix_value": 1e-12
+      },
+      "model_sha256": "9ab8f6dfd2a1a9e2739b91d717ad920b3e1aee185bf1e6814621c6085076b63c",
+      "wall_s": 0.010509400046430528,
+      "solver_status": 0,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "J": 3.0744347826086957,
+      "dual": 3.0744347826086957,
+      "solution": [
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        1.0,
+        0.0,
+        0.0,
+        1.0,
+        0.0,
+        0.4,
+        0.16000000000000003,
+        0.4
+      ],
+      "mip_nodes": 0,
+      "known_feasible_J": 3.0744347826086957,
+      "warnings": [
+        "Unrecognized options detected: {'random_seed', 'small_matrix_value', 'mip_abs_gap', 'threads'}. These will be passed to HiGHS verbatim."
+      ],
+      "matches_known_optimum": true,
+      "dual_exceeds_known_feasible": false
+    }
+  ],
+  "source_unchanged": true,
+  "real_runs": 0
+}

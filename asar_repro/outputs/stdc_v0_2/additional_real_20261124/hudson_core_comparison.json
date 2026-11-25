@@ -1,0 +1,26 @@
+{
+  "scenario": "arctic_ocean",
+  "protocol": "work",
+  "repeat": 0,
+  "particle_sha256": "6ed4ca52ecccc9369adae67f7da75477057317599869389224b6ffb488babfb6",
+  "baseline_J": 20.390881326719995,
+  "stdc_J": 20.386109349119998,
+  "delta_J": -0.004771977599997257,
+  "J_reduction_percent": 0.02340250783444121,
+  "baseline_Pd": 0.90672974496,
+  "stdc_Pd": 0.90858311232,
+  "Pd_increase_percentage_points": 0.1853367359999969,
+  "differing_path_steps": [
+    51,
+    52,
+    53,
+    54,
+    56,
+    57,
+    58,
+    59,
+    60
+  ],
+  "compared_on_identical_inputs": true,
+  "theory_certified": false
+}

@@ -1,0 +1,133 @@
+{
+  "seed": 1059,
+  "prefix_depth": 3,
+  "corridor_radius": 0,
+  "oracle": {
+    "J": 3.0744347826086957,
+    "path": [
+      4,
+      5,
+      2,
+      1,
+      2,
+      5,
+      2,
+      5
+    ],
+    "complete_paths": 6,
+    "feasible_end_vertices": [
+      1,
+      5,
+      7
+    ]
+  },
+  "result": {
+    "path": [
+      4,
+      5,
+      2,
+      1,
+      2,
+      5,
+      8,
+      7
+    ],
+    "J": 3.1495652173913045,
+    "Pd": 0.6573913043478261,
+    "status": "completed",
+    "stop_reason": null,
+    "incumbent_source": "initial_path",
+    "wall_s": 0.009160300018265843,
+    "model_build_s": 0.00044620002154260874,
+    "solve_s": 0.008463800069876015,
+    "restricted_lower_bound": 3.1495652173913045,
+    "restricted_gap": 0.0,
+    "solver_status": 0,
+    "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "stats": {
+      "prefix_depth": 3,
+      "corridor_radius": 0,
+      "endpoint_free": true,
+      "bound_scope": "restricted_subproblem",
+      "bound_kind": "solver numerical dual estimate; not independently certified",
+      "state_merging": false,
+      "objective": "original sum(M_t,t=1..T)",
+      "t0_sensed": false,
+      "initial_J": 3.1495652173913045,
+      "initial_Pd": 0.6573913043478261,
+      "memory_scope": "managed model buffers estimate, excluding native HiGHS workspace and input archive",
+      "max_memory_bytes": 536870912,
+      "max_seconds": 30.0,
+      "node_limit": null,
+      "mip_rel_gap": 0.0,
+      "integrality_atol": 1e-07,
+      "constraint_atol": 1e-07,
+      "replay_atol": 1e-10,
+      "candidate_accepted": false,
+      "real_input_assumed": false,
+      "estimated_peak_model_bytes": 76960,
+      "original_particle_columns": 4,
+      "future_trace_groups": 3,
+      "positive_detectable_groups": 1,
+      "detectable_group_events": 2,
+      "position_binaries": 9,
+      "model_variables": 12,
+      "objective_constant": 2.773913043478261,
+      "free_steps": 4,
+      "layer_sizes": {
+        "4": 1,
+        "5": 3,
+        "6": 2,
+        "7": 3
+      },
+      "group_prefix_mass": 0.5304347826086957,
+      "special_mass_retained": true,
+      "representation": "exact future-trace grouping with event-span residual costs",
+      "model_rows": 17,
+      "model_nnz": 39,
+      "sparse_matrix_bytes": 520,
+      "solver_options": {
+        "time_limit": 29.99955329997465,
+        "mip_rel_gap": 0.0,
+        "presolve": true,
+        "disp": false,
+        "mip_abs_gap": 0.0,
+        "mip_feasibility_tolerance": 1e-10,
+        "primal_feasibility_tolerance": 1e-10,
+        "dual_feasibility_tolerance": 1e-10,
+        "small_matrix_value": 1e-12,
+        "threads": 1,
+        "random_seed": 0
+      },
+      "solver_warnings": [
+        {
+          "category": "RuntimeWarning",
+          "message": "Unrecognized options detected: {'small_matrix_value', 'primal_feasibility_tolerance', 'threads', 'dual_feasibility_tolerance', 'random_seed', 'mip_feasibility_tolerance', 'mip_abs_gap'}. These will be passed to HiGHS verbatim."
+        }
+      ],
+      "solver_mip_node_count": 0,
+      "solver_mip_gap": 0.0,
+      "raw_solver_dual_without_constant": 0.3756521739130435,
+      "max_integrality_error": 0.0,
+      "max_constraint_violation": 0.0,
+      "candidate_path": [
+        4,
+        5,
+        2,
+        1,
+        2,
+        5,
+        2,
+        1
+      ],
+      "candidate_J": 3.1495652173913045,
+      "candidate_Pd": 0.6573913043478261,
+      "solver_objective": 3.1495652173913045,
+      "solver_reported_objective": 3.1495652173913045,
+      "model_replay_error": 0.0,
+      "completion_scope": "restricted numerical optimum at configured MIP gap; not global certificate",
+      "deadline_overshoot_s": 0.0
+    },
+    "theory_certified": false
+  }
+}

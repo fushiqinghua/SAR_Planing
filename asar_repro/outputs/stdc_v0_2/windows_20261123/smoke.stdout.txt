@@ -1,0 +1,6 @@
+[01/6] paper_baseline_eps_1p1_rep_0: completed / None; J=17.359684022; Pd=0.897769043; expanded=107; wall=0.127s
+[02/6] window_zero_eps_1p1_rep_0: budget_exceeded / max_expansions; J=17.359684022; Pd=0.897769043; expanded=5000; wall=0.304s
+[03/6] window_mass_lb_eps_1p1_rep_0: budget_exceeded / max_expansions; J=17.359684022; Pd=0.897769043; expanded=5000; wall=0.313s
+[04/6] window_stdc_lb_eps_1p1_rep_0: completed / None; J=17.359684022; Pd=0.897769043; expanded=4437; wall=0.554s
+[05/6] window_stdc_endpoint_lb_eps_1p1_rep_0: completed / None; J=17.359684022; Pd=0.897769043; expanded=920; wall=0.381s
+[06/6] window_stdc_endpoint_lb_eps_1p0_rep_0: completed / None; J=18.331441506; Pd=0.890512659; expanded=4952; wall=2.419s

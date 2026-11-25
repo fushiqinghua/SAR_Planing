@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "environment": {
+    "interpreter": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "python_version": "3.11.18 | packaged by conda-forge | (main, Oct 26 2026, 11:29:07) [MSC v.1944 64 bit (AMD64)]",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "versions": {
+      "numpy": "2.4.6",
+      "scipy": "1.17.1",
+      "pytest": "9.2.0",
+      "opendrift": "1.14.12",
+      "psutil": "7.2.2",
+      "matplotlib": "3.11.2",
+      "netCDF4": "1.7.5",
+      "pyproj": "3.7.2"
+    },
+    "version_method": "importlib.metadata only; no OpenDrift import or execution",
+    "environment": {
+      "OMP_NUM_THREADS": "1",
+      "OPENBLAS_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "NUMEXPR_NUM_THREADS": "1",
+      "PROJ_NETWORK": "OFF",
+      "PYTHONPATH": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\offline_guard;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\src;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts",
+      "PYTHONDONTWRITEBYTECODE": "1"
+    }
+  },
+  "preservation": {
+    "status": "passed",
+    "research_files_byte_unchanged": 5589,
+    "generated_pytest_cache_changes": 2,
+    "cache_incident_sha256": "ffe4804132a7bbbf6e98a3a27d72149b0597e6c89702f8ede165593bdf76ef5d",
+    "baseline_files": 654,
+    "adaptive_20261124_artifacts": 1493,
+    "rollout_limit_diagnosis_20261124_artifacts": 43,
+    "existing_source_files": 154
+  },
+  "source_commit": "47953dea8a161f51f0830332723e08b71bf7e862",
+  "new_files": [
+    "src/asar_repro/exact_repair.py",
+    "tests/test_exact_repair.py",
+    "scripts/audit_exact_repair.py",
+    "scripts/run_exact_repair_validation.py",
+    "scripts/run_exact_repair_experiments.py"
+  ],
+  "historical_tests": 1114,
+  "seed": 2041,
+  "scope": "standalone exact restricted repair; objective/scorer/forcing frozen"
+}

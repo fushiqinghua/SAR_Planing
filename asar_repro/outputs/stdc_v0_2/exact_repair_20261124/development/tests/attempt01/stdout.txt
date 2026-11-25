@@ -1,0 +1,15 @@
+.................................................F..................     [100%]
+================================== FAILURES ===================================
+_____________ test_zero_node_limit_never_loses_feasible_incumbent _____________
+
+    def test_zero_node_limit_never_loses_feasible_incumbent():
+        grid,cfg,path=case(1043)
+        r=solve_exact_repair(grid,**cfg,initial_path=path,node_limit=0)
+>       assert r.status in ("completed","budget_exceeded")
+E       AssertionError: assert 'blocked' in ('completed', 'budget_exceeded')
+E        +  where 'blocked' = ExactRepairResult(path=(4, 3, 0, 3, 0, 1, 2), J=5.6923076923076925, Pd=0.05128205128205121, status='blocked', stop_rea...'solver_mip_gap': None, 'raw_solver_dual_without_constant': None, 'deadline_overshoot_s': 0.0}, theory_certified=False).status
+
+tests\test_exact_repair.py:186: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_exact_repair.py::test_zero_node_limit_never_loses_feasible_incumbent
+1 failed, 67 passed in 1.88s

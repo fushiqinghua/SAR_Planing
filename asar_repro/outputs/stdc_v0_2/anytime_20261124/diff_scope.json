@@ -1,0 +1,22 @@
+{
+  "tracked": "git diff HEAD --binary",
+  "untracked": "all nonignored files except data/outputs",
+  "historical_artifacts": "all existing tracked/untracked data and outputs protected by preflight SHA-256",
+  "untracked_diff_files": [
+    "asar_repro/docs/stdc_anytime_improvement.md",
+    "asar_repro/docs/stdc_window_improvement.md",
+    "asar_repro/scripts/audit_anytime_search.py",
+    "asar_repro/scripts/audit_window_bounds.py",
+    "asar_repro/scripts/audit_window_search.py",
+    "asar_repro/scripts/run_anytime_experiments.py",
+    "asar_repro/scripts/run_anytime_validation.py",
+    "asar_repro/scripts/run_window_experiments.py",
+    "asar_repro/scripts/run_window_validation.py",
+    "asar_repro/src/asar_repro/anytime_search.py",
+    "asar_repro/src/asar_repro/window_bounds.py",
+    "asar_repro/src/asar_repro/window_search.py",
+    "asar_repro/tests/test_anytime_search.py",
+    "asar_repro/tests/test_window_bounds.py",
+    "asar_repro/tests/test_window_search.py"
+  ]
+}

@@ -1,0 +1,1 @@
+{"status": "passed", "seed": 41, "scenario": "arctic_ocean", "particle_sha256": "6ed4ca52ecccc9369adae67f7da75477057317599869389224b6ffb488babfb6", "opendrift_runs": 1, "max_mass_error": 4.440892098500626e-16, "integration_wall_s": 8.854273600038141, "wall_s": 25.966764700016938}

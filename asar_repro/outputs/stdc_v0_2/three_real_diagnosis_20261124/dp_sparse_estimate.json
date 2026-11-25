@@ -1,0 +1,1088 @@
+{
+  "status": "passed_geometry_and_archive_checks",
+  "scenarios": [
+    {
+      "name": "lake_ontario",
+      "archive": "outputs/baseline_v1.1/lake_ontario_real/particles.npz",
+      "expected_sha256": "8b30a87e543f1b33c39e70e1d0054e1750ec046ba2e0b627dd311d9945749456",
+      "rows": 17,
+      "cols": 17,
+      "T": 49,
+      "start": 144,
+      "physical_direction_unverified": false,
+      "actual_sha256": "8b30a87e543f1b33c39e70e1d0054e1750ec046ba2e0b627dd311d9945749456",
+      "sha256_verified": true,
+      "full_trajectory_groups": 342,
+      "exact_depth_reachable_cell_sum": 5929,
+      "estimates": {
+        "current_dense_value_bytes": 39535200,
+        "start_depth_cone_fixed_groups_value_bytes": 16221744,
+        "full_grid_suffix_groups_value_bytes": 23325768,
+        "cone_suffix_groups_value_bytes": 8760208,
+        "one_possible_dense_int32_vertex_index_bytes": 56644,
+        "one_possible_int32_original_to_suffix_group_bytes": 98000
+      },
+      "value_table_MiB": {
+        "current_dense_value_bytes": 37.703704833984375,
+        "start_depth_cone_fixed_groups_value_bytes": 15.470260620117188,
+        "full_grid_suffix_groups_value_bytes": 22.24518585205078,
+        "cone_suffix_groups_value_bytes": 8.354385375976562
+      },
+      "per_depth": [
+        {
+          "depth": 0,
+          "reachable_vertices": 1,
+          "exact_future_suffix_groups": 335,
+          "fp64_cone_suffix_values_bytes": 2680
+        },
+        {
+          "depth": 1,
+          "reachable_vertices": 4,
+          "exact_future_suffix_groups": 328,
+          "fp64_cone_suffix_values_bytes": 10496
+        },
+        {
+          "depth": 2,
+          "reachable_vertices": 9,
+          "exact_future_suffix_groups": 324,
+          "fp64_cone_suffix_values_bytes": 23328
+        },
+        {
+          "depth": 3,
+          "reachable_vertices": 16,
+          "exact_future_suffix_groups": 322,
+          "fp64_cone_suffix_values_bytes": 41216
+        },
+        {
+          "depth": 4,
+          "reachable_vertices": 25,
+          "exact_future_suffix_groups": 319,
+          "fp64_cone_suffix_values_bytes": 63800
+        },
+        {
+          "depth": 5,
+          "reachable_vertices": 36,
+          "exact_future_suffix_groups": 312,
+          "fp64_cone_suffix_values_bytes": 89856
+        },
+        {
+          "depth": 6,
+          "reachable_vertices": 49,
+          "exact_future_suffix_groups": 306,
+          "fp64_cone_suffix_values_bytes": 119952
+        },
+        {
+          "depth": 7,
+          "reachable_vertices": 64,
+          "exact_future_suffix_groups": 301,
+          "fp64_cone_suffix_values_bytes": 154112
+        },
+        {
+          "depth": 8,
+          "reachable_vertices": 81,
+          "exact_future_suffix_groups": 298,
+          "fp64_cone_suffix_values_bytes": 193104
+        },
+        {
+          "depth": 9,
+          "reachable_vertices": 96,
+          "exact_future_suffix_groups": 293,
+          "fp64_cone_suffix_values_bytes": 225024
+        },
+        {
+          "depth": 10,
+          "reachable_vertices": 109,
+          "exact_future_suffix_groups": 290,
+          "fp64_cone_suffix_values_bytes": 252880
+        },
+        {
+          "depth": 11,
+          "reachable_vertices": 120,
+          "exact_future_suffix_groups": 282,
+          "fp64_cone_suffix_values_bytes": 270720
+        },
+        {
+          "depth": 12,
+          "reachable_vertices": 129,
+          "exact_future_suffix_groups": 278,
+          "fp64_cone_suffix_values_bytes": 286896
+        },
+        {
+          "depth": 13,
+          "reachable_vertices": 136,
+          "exact_future_suffix_groups": 273,
+          "fp64_cone_suffix_values_bytes": 297024
+        },
+        {
+          "depth": 14,
+          "reachable_vertices": 141,
+          "exact_future_suffix_groups": 271,
+          "fp64_cone_suffix_values_bytes": 305688
+        },
+        {
+          "depth": 15,
+          "reachable_vertices": 144,
+          "exact_future_suffix_groups": 262,
+          "fp64_cone_suffix_values_bytes": 301824
+        },
+        {
+          "depth": 16,
+          "reachable_vertices": 145,
+          "exact_future_suffix_groups": 257,
+          "fp64_cone_suffix_values_bytes": 298120
+        },
+        {
+          "depth": 17,
+          "reachable_vertices": 144,
+          "exact_future_suffix_groups": 251,
+          "fp64_cone_suffix_values_bytes": 289152
+        },
+        {
+          "depth": 18,
+          "reachable_vertices": 145,
+          "exact_future_suffix_groups": 247,
+          "fp64_cone_suffix_values_bytes": 286520
+        },
+        {
+          "depth": 19,
+          "reachable_vertices": 144,
+          "exact_future_suffix_groups": 242,
+          "fp64_cone_suffix_values_bytes": 278784
+        },
+        {
+          "depth": 20,
+          "reachable_vertices": 145,
+          "exact_future_suffix_groups": 239,
+          "fp64_cone_suffix_values_bytes": 277240
+        },
+        {
+          "depth": 21,
+          "reachable_vertices": 144,
+          "exact_future_suffix_groups": 236,
+          "fp64_cone_suffix_values_bytes": 271872
+        },
+        {
+          "depth": 22,
+          "reachable_vertices": 145,
+          "exact_future_suffix_groups": 230,
+          "fp64_cone_suffix_values_bytes": 266800
+        },
+        {
+          "depth": 23,
+          "reachable_vertices": 144,
+          "exact_future_suffix_groups": 223,
+          "fp64_cone_suffix_values_bytes": 256896
+        },
+        {
+          "depth": 24,
+          "reachable_vertices": 145,
+          "exact_future_suffix_groups": 217,
+          "fp64_cone_suffix_values_bytes": 251720
+        },
+        {
+          "depth": 25,
+          "reachable_vertices": 144,
+          "exact_future_suffix_groups": 214,
+          "fp64_cone_suffix_values_bytes": 246528
+        },
+        {
+          "depth": 26,
+          "reachable_vertices": 145,
+          "exact_future_suffix_groups": 203,
+          "fp64_cone_suffix_values_bytes": 235480
+        },
+        {
+          "depth": 27,
+          "reachable_vertices": 144,
+          "exact_future_suffix_groups": 194,
+          "fp64_cone_suffix_values_bytes": 223488
+        },
+        {
+          "depth": 28,
+          "reachable_vertices": 145,
+          "exact_future_suffix_groups": 187,
+          "fp64_cone_suffix_values_bytes": 216920
+        },
+        {
+          "depth": 29,
+          "reachable_vertices": 144,
+          "exact_future_suffix_groups": 180,
+          "fp64_cone_suffix_values_bytes": 207360
+        },
+        {
+          "depth": 30,
+          "reachable_vertices": 145,
+          "exact_future_suffix_groups": 170,
+          "fp64_cone_suffix_values_bytes": 197200
+        },
+        {
+          "depth": 31,
+          "reachable_vertices": 144,
+          "exact_future_suffix_groups": 163,
+          "fp64_cone_suffix_values_bytes": 187776
+        },
+        {
+          "depth": 32,
+          "reachable_vertices": 145,
+          "exact_future_suffix_groups": 161,
+          "fp64_cone_suffix_values_bytes": 186760
+        },
+        {
+          "depth": 33,
+          "reachable_vertices": 144,
+          "exact_future_suffix_groups": 159,
+          "fp64_cone_suffix_values_bytes": 183168
+        },
+        {
+          "depth": 34,
+          "reachable_vertices": 145,
+          "exact_future_suffix_groups": 155,
+          "fp64_cone_suffix_values_bytes": 179800
+        },
+        {
+          "depth": 35,
+          "reachable_vertices": 144,
+          "exact_future_suffix_groups": 146,
+          "fp64_cone_suffix_values_bytes": 168192
+        },
+        {
+          "depth": 36,
+          "reachable_vertices": 145,
+          "exact_future_suffix_groups": 137,
+          "fp64_cone_suffix_values_bytes": 158920
+        },
+        {
+          "depth": 37,
+          "reachable_vertices": 144,
+          "exact_future_suffix_groups": 132,
+          "fp64_cone_suffix_values_bytes": 152064
+        },
+        {
+          "depth": 38,
+          "reachable_vertices": 145,
+          "exact_future_suffix_groups": 128,
+          "fp64_cone_suffix_values_bytes": 148480
+        },
+        {
+          "depth": 39,
+          "reachable_vertices": 144,
+          "exact_future_suffix_groups": 119,
+          "fp64_cone_suffix_values_bytes": 137088
+        },
+        {
+          "depth": 40,
+          "reachable_vertices": 145,
+          "exact_future_suffix_groups": 111,
+          "fp64_cone_suffix_values_bytes": 128760
+        },
+        {
+          "depth": 41,
+          "reachable_vertices": 144,
+          "exact_future_suffix_groups": 102,
+          "fp64_cone_suffix_values_bytes": 117504
+        },
+        {
+          "depth": 42,
+          "reachable_vertices": 145,
+          "exact_future_suffix_groups": 97,
+          "fp64_cone_suffix_values_bytes": 112520
+        },
+        {
+          "depth": 43,
+          "reachable_vertices": 144,
+          "exact_future_suffix_groups": 89,
+          "fp64_cone_suffix_values_bytes": 102528
+        },
+        {
+          "depth": 44,
+          "reachable_vertices": 145,
+          "exact_future_suffix_groups": 77,
+          "fp64_cone_suffix_values_bytes": 89320
+        },
+        {
+          "depth": 45,
+          "reachable_vertices": 144,
+          "exact_future_suffix_groups": 70,
+          "fp64_cone_suffix_values_bytes": 80640
+        },
+        {
+          "depth": 46,
+          "reachable_vertices": 145,
+          "exact_future_suffix_groups": 59,
+          "fp64_cone_suffix_values_bytes": 68440
+        },
+        {
+          "depth": 47,
+          "reachable_vertices": 144,
+          "exact_future_suffix_groups": 54,
+          "fp64_cone_suffix_values_bytes": 62208
+        },
+        {
+          "depth": 48,
+          "reachable_vertices": 145,
+          "exact_future_suffix_groups": 46,
+          "fp64_cone_suffix_values_bytes": 53360
+        }
+      ]
+    },
+    {
+      "name": "arctic_ocean",
+      "archive": "outputs\\stdc_v0_2\\additional_real_20261124\\b3\\arctic_ocean\\particles.npz",
+      "expected_sha256": "6ed4ca52ecccc9369adae67f7da75477057317599869389224b6ffb488babfb6",
+      "rows": 65,
+      "cols": 85,
+      "T": 60,
+      "start": 2762,
+      "physical_direction_unverified": false,
+      "actual_sha256": "6ed4ca52ecccc9369adae67f7da75477057317599869389224b6ffb488babfb6",
+      "sha256_verified": true,
+      "full_trajectory_groups": 386,
+      "exact_depth_reachable_cell_sum": 64564,
+      "estimates": {
+        "current_dense_value_bytes": 1040733200,
+        "start_depth_cone_fixed_groups_value_bytes": 199373632,
+        "full_grid_suffix_groups_value_bytes": 578091800,
+        "cone_suffix_groups_value_bytes": 72431992,
+        "one_possible_dense_int32_vertex_index_bytes": 1326000,
+        "one_possible_int32_original_to_suffix_group_bytes": 120000
+      },
+      "value_table_MiB": {
+        "current_dense_value_bytes": 992.5205230712891,
+        "start_depth_cone_fixed_groups_value_bytes": 190.13751220703125,
+        "full_grid_suffix_groups_value_bytes": 551.3113021850586,
+        "cone_suffix_groups_value_bytes": 69.07653045654297
+      },
+      "per_depth": [
+        {
+          "depth": 0,
+          "reachable_vertices": 1,
+          "exact_future_suffix_groups": 379,
+          "fp64_cone_suffix_values_bytes": 3032
+        },
+        {
+          "depth": 1,
+          "reachable_vertices": 4,
+          "exact_future_suffix_groups": 376,
+          "fp64_cone_suffix_values_bytes": 12032
+        },
+        {
+          "depth": 2,
+          "reachable_vertices": 9,
+          "exact_future_suffix_groups": 369,
+          "fp64_cone_suffix_values_bytes": 26568
+        },
+        {
+          "depth": 3,
+          "reachable_vertices": 16,
+          "exact_future_suffix_groups": 360,
+          "fp64_cone_suffix_values_bytes": 46080
+        },
+        {
+          "depth": 4,
+          "reachable_vertices": 25,
+          "exact_future_suffix_groups": 355,
+          "fp64_cone_suffix_values_bytes": 71000
+        },
+        {
+          "depth": 5,
+          "reachable_vertices": 36,
+          "exact_future_suffix_groups": 351,
+          "fp64_cone_suffix_values_bytes": 101088
+        },
+        {
+          "depth": 6,
+          "reachable_vertices": 49,
+          "exact_future_suffix_groups": 347,
+          "fp64_cone_suffix_values_bytes": 136024
+        },
+        {
+          "depth": 7,
+          "reachable_vertices": 64,
+          "exact_future_suffix_groups": 343,
+          "fp64_cone_suffix_values_bytes": 175616
+        },
+        {
+          "depth": 8,
+          "reachable_vertices": 81,
+          "exact_future_suffix_groups": 338,
+          "fp64_cone_suffix_values_bytes": 219024
+        },
+        {
+          "depth": 9,
+          "reachable_vertices": 100,
+          "exact_future_suffix_groups": 330,
+          "fp64_cone_suffix_values_bytes": 264000
+        },
+        {
+          "depth": 10,
+          "reachable_vertices": 121,
+          "exact_future_suffix_groups": 325,
+          "fp64_cone_suffix_values_bytes": 314600
+        },
+        {
+          "depth": 11,
+          "reachable_vertices": 144,
+          "exact_future_suffix_groups": 322,
+          "fp64_cone_suffix_values_bytes": 370944
+        },
+        {
+          "depth": 12,
+          "reachable_vertices": 169,
+          "exact_future_suffix_groups": 316,
+          "fp64_cone_suffix_values_bytes": 427232
+        },
+        {
+          "depth": 13,
+          "reachable_vertices": 196,
+          "exact_future_suffix_groups": 312,
+          "fp64_cone_suffix_values_bytes": 489216
+        },
+        {
+          "depth": 14,
+          "reachable_vertices": 225,
+          "exact_future_suffix_groups": 306,
+          "fp64_cone_suffix_values_bytes": 550800
+        },
+        {
+          "depth": 15,
+          "reachable_vertices": 256,
+          "exact_future_suffix_groups": 301,
+          "fp64_cone_suffix_values_bytes": 616448
+        },
+        {
+          "depth": 16,
+          "reachable_vertices": 289,
+          "exact_future_suffix_groups": 294,
+          "fp64_cone_suffix_values_bytes": 679728
+        },
+        {
+          "depth": 17,
+          "reachable_vertices": 324,
+          "exact_future_suffix_groups": 288,
+          "fp64_cone_suffix_values_bytes": 746496
+        },
+        {
+          "depth": 18,
+          "reachable_vertices": 361,
+          "exact_future_suffix_groups": 285,
+          "fp64_cone_suffix_values_bytes": 823080
+        },
+        {
+          "depth": 19,
+          "reachable_vertices": 400,
+          "exact_future_suffix_groups": 282,
+          "fp64_cone_suffix_values_bytes": 902400
+        },
+        {
+          "depth": 20,
+          "reachable_vertices": 441,
+          "exact_future_suffix_groups": 276,
+          "fp64_cone_suffix_values_bytes": 973728
+        },
+        {
+          "depth": 21,
+          "reachable_vertices": 484,
+          "exact_future_suffix_groups": 270,
+          "fp64_cone_suffix_values_bytes": 1045440
+        },
+        {
+          "depth": 22,
+          "reachable_vertices": 529,
+          "exact_future_suffix_groups": 266,
+          "fp64_cone_suffix_values_bytes": 1125712
+        },
+        {
+          "depth": 23,
+          "reachable_vertices": 576,
+          "exact_future_suffix_groups": 259,
+          "fp64_cone_suffix_values_bytes": 1193472
+        },
+        {
+          "depth": 24,
+          "reachable_vertices": 625,
+          "exact_future_suffix_groups": 254,
+          "fp64_cone_suffix_values_bytes": 1270000
+        },
+        {
+          "depth": 25,
+          "reachable_vertices": 676,
+          "exact_future_suffix_groups": 249,
+          "fp64_cone_suffix_values_bytes": 1346592
+        },
+        {
+          "depth": 26,
+          "reachable_vertices": 729,
+          "exact_future_suffix_groups": 244,
+          "fp64_cone_suffix_values_bytes": 1423008
+        },
+        {
+          "depth": 27,
+          "reachable_vertices": 784,
+          "exact_future_suffix_groups": 237,
+          "fp64_cone_suffix_values_bytes": 1486464
+        },
+        {
+          "depth": 28,
+          "reachable_vertices": 841,
+          "exact_future_suffix_groups": 232,
+          "fp64_cone_suffix_values_bytes": 1560896
+        },
+        {
+          "depth": 29,
+          "reachable_vertices": 900,
+          "exact_future_suffix_groups": 225,
+          "fp64_cone_suffix_values_bytes": 1620000
+        },
+        {
+          "depth": 30,
+          "reachable_vertices": 961,
+          "exact_future_suffix_groups": 220,
+          "fp64_cone_suffix_values_bytes": 1691360
+        },
+        {
+          "depth": 31,
+          "reachable_vertices": 1024,
+          "exact_future_suffix_groups": 215,
+          "fp64_cone_suffix_values_bytes": 1761280
+        },
+        {
+          "depth": 32,
+          "reachable_vertices": 1089,
+          "exact_future_suffix_groups": 207,
+          "fp64_cone_suffix_values_bytes": 1803384
+        },
+        {
+          "depth": 33,
+          "reachable_vertices": 1154,
+          "exact_future_suffix_groups": 203,
+          "fp64_cone_suffix_values_bytes": 1874096
+        },
+        {
+          "depth": 34,
+          "reachable_vertices": 1219,
+          "exact_future_suffix_groups": 195,
+          "fp64_cone_suffix_values_bytes": 1901640
+        },
+        {
+          "depth": 35,
+          "reachable_vertices": 1284,
+          "exact_future_suffix_groups": 190,
+          "fp64_cone_suffix_values_bytes": 1951680
+        },
+        {
+          "depth": 36,
+          "reachable_vertices": 1349,
+          "exact_future_suffix_groups": 185,
+          "fp64_cone_suffix_values_bytes": 1996520
+        },
+        {
+          "depth": 37,
+          "reachable_vertices": 1414,
+          "exact_future_suffix_groups": 181,
+          "fp64_cone_suffix_values_bytes": 2047472
+        },
+        {
+          "depth": 38,
+          "reachable_vertices": 1479,
+          "exact_future_suffix_groups": 173,
+          "fp64_cone_suffix_values_bytes": 2046936
+        },
+        {
+          "depth": 39,
+          "reachable_vertices": 1544,
+          "exact_future_suffix_groups": 168,
+          "fp64_cone_suffix_values_bytes": 2075136
+        },
+        {
+          "depth": 40,
+          "reachable_vertices": 1609,
+          "exact_future_suffix_groups": 165,
+          "fp64_cone_suffix_values_bytes": 2123880
+        },
+        {
+          "depth": 41,
+          "reachable_vertices": 1674,
+          "exact_future_suffix_groups": 164,
+          "fp64_cone_suffix_values_bytes": 2196288
+        },
+        {
+          "depth": 42,
+          "reachable_vertices": 1739,
+          "exact_future_suffix_groups": 153,
+          "fp64_cone_suffix_values_bytes": 2128536
+        },
+        {
+          "depth": 43,
+          "reachable_vertices": 1802,
+          "exact_future_suffix_groups": 143,
+          "fp64_cone_suffix_values_bytes": 2061488
+        },
+        {
+          "depth": 44,
+          "reachable_vertices": 1863,
+          "exact_future_suffix_groups": 141,
+          "fp64_cone_suffix_values_bytes": 2101464
+        },
+        {
+          "depth": 45,
+          "reachable_vertices": 1922,
+          "exact_future_suffix_groups": 131,
+          "fp64_cone_suffix_values_bytes": 2014256
+        },
+        {
+          "depth": 46,
+          "reachable_vertices": 1979,
+          "exact_future_suffix_groups": 123,
+          "fp64_cone_suffix_values_bytes": 1947336
+        },
+        {
+          "depth": 47,
+          "reachable_vertices": 2034,
+          "exact_future_suffix_groups": 115,
+          "fp64_cone_suffix_values_bytes": 1871280
+        },
+        {
+          "depth": 48,
+          "reachable_vertices": 2087,
+          "exact_future_suffix_groups": 108,
+          "fp64_cone_suffix_values_bytes": 1803168
+        },
+        {
+          "depth": 49,
+          "reachable_vertices": 2138,
+          "exact_future_suffix_groups": 101,
+          "fp64_cone_suffix_values_bytes": 1727504
+        },
+        {
+          "depth": 50,
+          "reachable_vertices": 2187,
+          "exact_future_suffix_groups": 98,
+          "fp64_cone_suffix_values_bytes": 1714608
+        },
+        {
+          "depth": 51,
+          "reachable_vertices": 2234,
+          "exact_future_suffix_groups": 89,
+          "fp64_cone_suffix_values_bytes": 1590608
+        },
+        {
+          "depth": 52,
+          "reachable_vertices": 2279,
+          "exact_future_suffix_groups": 82,
+          "fp64_cone_suffix_values_bytes": 1495024
+        },
+        {
+          "depth": 53,
+          "reachable_vertices": 2322,
+          "exact_future_suffix_groups": 81,
+          "fp64_cone_suffix_values_bytes": 1504656
+        },
+        {
+          "depth": 54,
+          "reachable_vertices": 2363,
+          "exact_future_suffix_groups": 74,
+          "fp64_cone_suffix_values_bytes": 1398896
+        },
+        {
+          "depth": 55,
+          "reachable_vertices": 2402,
+          "exact_future_suffix_groups": 66,
+          "fp64_cone_suffix_values_bytes": 1268256
+        },
+        {
+          "depth": 56,
+          "reachable_vertices": 2439,
+          "exact_future_suffix_groups": 62,
+          "fp64_cone_suffix_values_bytes": 1209744
+        },
+        {
+          "depth": 57,
+          "reachable_vertices": 2474,
+          "exact_future_suffix_groups": 58,
+          "fp64_cone_suffix_values_bytes": 1147936
+        },
+        {
+          "depth": 58,
+          "reachable_vertices": 2507,
+          "exact_future_suffix_groups": 51,
+          "fp64_cone_suffix_values_bytes": 1022856
+        },
+        {
+          "depth": 59,
+          "reachable_vertices": 2538,
+          "exact_future_suffix_groups": 46,
+          "fp64_cone_suffix_values_bytes": 933984
+        }
+      ]
+    },
+    {
+      "name": "bay_of_fundy",
+      "archive": "outputs\\stdc_v0_2\\fundy_repair_20261124\\b3\\bay_of_fundy\\particles.npz",
+      "expected_sha256": "3cb169401cc0c4a98306a2d3535f73e92e5cf31dc6db984eabcd9cc7d4ec9ad0",
+      "rows": 49,
+      "cols": 61,
+      "T": 55,
+      "start": 1494,
+      "physical_direction_unverified": true,
+      "actual_sha256": "3cb169401cc0c4a98306a2d3535f73e92e5cf31dc6db984eabcd9cc7d4ec9ad0",
+      "sha256_verified": true,
+      "full_trajectory_groups": 500,
+      "exact_depth_reachable_cell_sum": 41860,
+      "estimates": {
+        "current_dense_value_bytes": 669536000,
+        "start_depth_cone_fixed_groups_value_bytes": 167440000,
+        "full_grid_suffix_groups_value_bytes": 576446584,
+        "cone_suffix_groups_value_bytes": 129505736,
+        "one_possible_dense_int32_vertex_index_bytes": 657580,
+        "one_possible_int32_original_to_suffix_group_bytes": 110000
+      },
+      "value_table_MiB": {
+        "current_dense_value_bytes": 638.519287109375,
+        "start_depth_cone_fixed_groups_value_bytes": 159.6832275390625,
+        "full_grid_suffix_groups_value_bytes": 549.742301940918,
+        "cone_suffix_groups_value_bytes": 123.50629425048828
+      },
+      "per_depth": [
+        {
+          "depth": 0,
+          "reachable_vertices": 1,
+          "exact_future_suffix_groups": 500,
+          "fp64_cone_suffix_values_bytes": 4000
+        },
+        {
+          "depth": 1,
+          "reachable_vertices": 4,
+          "exact_future_suffix_groups": 500,
+          "fp64_cone_suffix_values_bytes": 16000
+        },
+        {
+          "depth": 2,
+          "reachable_vertices": 9,
+          "exact_future_suffix_groups": 500,
+          "fp64_cone_suffix_values_bytes": 36000
+        },
+        {
+          "depth": 3,
+          "reachable_vertices": 16,
+          "exact_future_suffix_groups": 500,
+          "fp64_cone_suffix_values_bytes": 64000
+        },
+        {
+          "depth": 4,
+          "reachable_vertices": 25,
+          "exact_future_suffix_groups": 500,
+          "fp64_cone_suffix_values_bytes": 100000
+        },
+        {
+          "depth": 5,
+          "reachable_vertices": 36,
+          "exact_future_suffix_groups": 500,
+          "fp64_cone_suffix_values_bytes": 144000
+        },
+        {
+          "depth": 6,
+          "reachable_vertices": 49,
+          "exact_future_suffix_groups": 500,
+          "fp64_cone_suffix_values_bytes": 196000
+        },
+        {
+          "depth": 7,
+          "reachable_vertices": 64,
+          "exact_future_suffix_groups": 500,
+          "fp64_cone_suffix_values_bytes": 256000
+        },
+        {
+          "depth": 8,
+          "reachable_vertices": 81,
+          "exact_future_suffix_groups": 500,
+          "fp64_cone_suffix_values_bytes": 324000
+        },
+        {
+          "depth": 9,
+          "reachable_vertices": 100,
+          "exact_future_suffix_groups": 500,
+          "fp64_cone_suffix_values_bytes": 400000
+        },
+        {
+          "depth": 10,
+          "reachable_vertices": 121,
+          "exact_future_suffix_groups": 500,
+          "fp64_cone_suffix_values_bytes": 484000
+        },
+        {
+          "depth": 11,
+          "reachable_vertices": 144,
+          "exact_future_suffix_groups": 500,
+          "fp64_cone_suffix_values_bytes": 576000
+        },
+        {
+          "depth": 12,
+          "reachable_vertices": 169,
+          "exact_future_suffix_groups": 500,
+          "fp64_cone_suffix_values_bytes": 676000
+        },
+        {
+          "depth": 13,
+          "reachable_vertices": 196,
+          "exact_future_suffix_groups": 500,
+          "fp64_cone_suffix_values_bytes": 784000
+        },
+        {
+          "depth": 14,
+          "reachable_vertices": 225,
+          "exact_future_suffix_groups": 500,
+          "fp64_cone_suffix_values_bytes": 900000
+        },
+        {
+          "depth": 15,
+          "reachable_vertices": 256,
+          "exact_future_suffix_groups": 500,
+          "fp64_cone_suffix_values_bytes": 1024000
+        },
+        {
+          "depth": 16,
+          "reachable_vertices": 289,
+          "exact_future_suffix_groups": 499,
+          "fp64_cone_suffix_values_bytes": 1153688
+        },
+        {
+          "depth": 17,
+          "reachable_vertices": 324,
+          "exact_future_suffix_groups": 499,
+          "fp64_cone_suffix_values_bytes": 1293408
+        },
+        {
+          "depth": 18,
+          "reachable_vertices": 361,
+          "exact_future_suffix_groups": 499,
+          "fp64_cone_suffix_values_bytes": 1441112
+        },
+        {
+          "depth": 19,
+          "reachable_vertices": 400,
+          "exact_future_suffix_groups": 498,
+          "fp64_cone_suffix_values_bytes": 1593600
+        },
+        {
+          "depth": 20,
+          "reachable_vertices": 441,
+          "exact_future_suffix_groups": 498,
+          "fp64_cone_suffix_values_bytes": 1756944
+        },
+        {
+          "depth": 21,
+          "reachable_vertices": 484,
+          "exact_future_suffix_groups": 497,
+          "fp64_cone_suffix_values_bytes": 1924384
+        },
+        {
+          "depth": 22,
+          "reachable_vertices": 529,
+          "exact_future_suffix_groups": 496,
+          "fp64_cone_suffix_values_bytes": 2099072
+        },
+        {
+          "depth": 23,
+          "reachable_vertices": 576,
+          "exact_future_suffix_groups": 496,
+          "fp64_cone_suffix_values_bytes": 2285568
+        },
+        {
+          "depth": 24,
+          "reachable_vertices": 625,
+          "exact_future_suffix_groups": 496,
+          "fp64_cone_suffix_values_bytes": 2480000
+        },
+        {
+          "depth": 25,
+          "reachable_vertices": 674,
+          "exact_future_suffix_groups": 493,
+          "fp64_cone_suffix_values_bytes": 2658256
+        },
+        {
+          "depth": 26,
+          "reachable_vertices": 723,
+          "exact_future_suffix_groups": 491,
+          "fp64_cone_suffix_values_bytes": 2839944
+        },
+        {
+          "depth": 27,
+          "reachable_vertices": 772,
+          "exact_future_suffix_groups": 488,
+          "fp64_cone_suffix_values_bytes": 3013888
+        },
+        {
+          "depth": 28,
+          "reachable_vertices": 821,
+          "exact_future_suffix_groups": 485,
+          "fp64_cone_suffix_values_bytes": 3185480
+        },
+        {
+          "depth": 29,
+          "reachable_vertices": 870,
+          "exact_future_suffix_groups": 481,
+          "fp64_cone_suffix_values_bytes": 3347760
+        },
+        {
+          "depth": 30,
+          "reachable_vertices": 919,
+          "exact_future_suffix_groups": 479,
+          "fp64_cone_suffix_values_bytes": 3521608
+        },
+        {
+          "depth": 31,
+          "reachable_vertices": 966,
+          "exact_future_suffix_groups": 476,
+          "fp64_cone_suffix_values_bytes": 3678528
+        },
+        {
+          "depth": 32,
+          "reachable_vertices": 1011,
+          "exact_future_suffix_groups": 475,
+          "fp64_cone_suffix_values_bytes": 3841800
+        },
+        {
+          "depth": 33,
+          "reachable_vertices": 1054,
+          "exact_future_suffix_groups": 472,
+          "fp64_cone_suffix_values_bytes": 3979904
+        },
+        {
+          "depth": 34,
+          "reachable_vertices": 1095,
+          "exact_future_suffix_groups": 469,
+          "fp64_cone_suffix_values_bytes": 4108440
+        },
+        {
+          "depth": 35,
+          "reachable_vertices": 1134,
+          "exact_future_suffix_groups": 464,
+          "fp64_cone_suffix_values_bytes": 4209408
+        },
+        {
+          "depth": 36,
+          "reachable_vertices": 1171,
+          "exact_future_suffix_groups": 455,
+          "fp64_cone_suffix_values_bytes": 4262440
+        },
+        {
+          "depth": 37,
+          "reachable_vertices": 1206,
+          "exact_future_suffix_groups": 441,
+          "fp64_cone_suffix_values_bytes": 4254768
+        },
+        {
+          "depth": 38,
+          "reachable_vertices": 1239,
+          "exact_future_suffix_groups": 436,
+          "fp64_cone_suffix_values_bytes": 4321632
+        },
+        {
+          "depth": 39,
+          "reachable_vertices": 1270,
+          "exact_future_suffix_groups": 431,
+          "fp64_cone_suffix_values_bytes": 4378960
+        },
+        {
+          "depth": 40,
+          "reachable_vertices": 1299,
+          "exact_future_suffix_groups": 421,
+          "fp64_cone_suffix_values_bytes": 4375032
+        },
+        {
+          "depth": 41,
+          "reachable_vertices": 1326,
+          "exact_future_suffix_groups": 408,
+          "fp64_cone_suffix_values_bytes": 4328064
+        },
+        {
+          "depth": 42,
+          "reachable_vertices": 1351,
+          "exact_future_suffix_groups": 393,
+          "fp64_cone_suffix_values_bytes": 4247544
+        },
+        {
+          "depth": 43,
+          "reachable_vertices": 1374,
+          "exact_future_suffix_groups": 378,
+          "fp64_cone_suffix_values_bytes": 4154976
+        },
+        {
+          "depth": 44,
+          "reachable_vertices": 1395,
+          "exact_future_suffix_groups": 366,
+          "fp64_cone_suffix_values_bytes": 4084560
+        },
+        {
+          "depth": 45,
+          "reachable_vertices": 1414,
+          "exact_future_suffix_groups": 345,
+          "fp64_cone_suffix_values_bytes": 3902640
+        },
+        {
+          "depth": 46,
+          "reachable_vertices": 1431,
+          "exact_future_suffix_groups": 331,
+          "fp64_cone_suffix_values_bytes": 3789288
+        },
+        {
+          "depth": 47,
+          "reachable_vertices": 1446,
+          "exact_future_suffix_groups": 314,
+          "fp64_cone_suffix_values_bytes": 3632352
+        },
+        {
+          "depth": 48,
+          "reachable_vertices": 1459,
+          "exact_future_suffix_groups": 303,
+          "fp64_cone_suffix_values_bytes": 3536616
+        },
+        {
+          "depth": 49,
+          "reachable_vertices": 1470,
+          "exact_future_suffix_groups": 285,
+          "fp64_cone_suffix_values_bytes": 3351600
+        },
+        {
+          "depth": 50,
+          "reachable_vertices": 1479,
+          "exact_future_suffix_groups": 256,
+          "fp64_cone_suffix_values_bytes": 3028992
+        },
+        {
+          "depth": 51,
+          "reachable_vertices": 1486,
+          "exact_future_suffix_groups": 233,
+          "fp64_cone_suffix_values_bytes": 2769904
+        },
+        {
+          "depth": 52,
+          "reachable_vertices": 1491,
+          "exact_future_suffix_groups": 203,
+          "fp64_cone_suffix_values_bytes": 2421384
+        },
+        {
+          "depth": 53,
+          "reachable_vertices": 1494,
+          "exact_future_suffix_groups": 191,
+          "fp64_cone_suffix_values_bytes": 2282832
+        },
+        {
+          "depth": 54,
+          "reachable_vertices": 1495,
+          "exact_future_suffix_groups": 166,
+          "fp64_cone_suffix_values_bytes": 1985360
+        }
+      ]
+    }
+  ],
+  "premise": "full rectangular 4-neighbour grid, no wait, frozen start; cells at depth t+1...T determine remaining individual-particle cost",
+  "formula": "R_t={v: Manhattan(start,v)<=t and (t-distance)%2=0}; bytes=8*sum_t |R_t|*G_t; terminal values are implicit zero",
+  "limitations": [
+    "Value-table estimates only, not allocated compressed tables or measured RSS.",
+    "Mapping, indexing, feasibility, temporary arrays, Python/NumPy overhead, search OPEN, and imported libraries are additional.",
+    "Fundy 123.51 MiB of values is close to the 128 MiB managed-DP cap; fitting and runtime benefit are NOT established.",
+    "No new real-scene search or OpenDrift execution.",
+    "Fundy retains physical_direction_unverified=true."
+  ]
+}

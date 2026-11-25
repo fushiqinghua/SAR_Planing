@@ -1,0 +1,17 @@
+{
+  "new_files": [
+    "docs/stdc_optimization_protocol.md",
+    "scripts/audit_optimization.py",
+    "scripts/run_optimization_experiments.py",
+    "scripts/run_optimization_validation.py",
+    "src/asar_repro/lookahead_bound.py",
+    "src/asar_repro/research_particle.py",
+    "src/asar_repro/research_search.py",
+    "src/asar_repro/tail_repair.py",
+    "tests/test_lookahead_bound.py",
+    "tests/test_research_particle.py",
+    "tests/test_research_search.py",
+    "tests/test_tail_repair.py"
+  ],
+  "modified_old_files": []
+}

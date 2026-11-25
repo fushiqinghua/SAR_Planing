@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-stdc-v0.2\asar_repro\scripts\audit_exact_repair.py", line 192, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-stdc-v0.2\asar_repro\scripts\audit_exact_repair.py", line 167, in main
+    errors = check_completed(result, grid, cfg, path, prefix, radius, exact)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-stdc-v0.2\asar_repro\scripts\audit_exact_repair.py", line 125, in check_completed
+    raise AssertionError(f"MILP/DFS objective mismatch: {replay.J} vs {exact['J']}")
+AssertionError: MILP/DFS objective mismatch: 3.1495652173913045 vs 3.0744347826086957
+Traceback (most recent call last):
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-stdc-v0.2\asar_repro\scripts\run_exact_repair_validation.py", line 76, in main
+    require(proc.returncode==0,'gate process failed: blocked')
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-stdc-v0.2\asar_repro\scripts\run_optimization_validation.py", line 35, in require
+    raise AssertionError(message)
+AssertionError: gate process failed: blocked

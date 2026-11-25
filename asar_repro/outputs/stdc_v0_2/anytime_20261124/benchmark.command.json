@@ -1,0 +1,14 @@
+{
+  "arguments": [
+    "scripts/run_anytime_experiments.py",
+    "benchmark",
+    "--output-dir",
+    "outputs/stdc_v0_2/anytime_20261124/benchmark",
+    "--smoke-dir",
+    "outputs/stdc_v0_2/anytime_20261124/smoke"
+  ],
+  "repeats": 3,
+  "executable": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+  "particle_seed": 41,
+  "threads": 1
+}

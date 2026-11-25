@@ -1,0 +1,80 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\audit_window_search.py",
+    "--output-dir",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\windows_20261123\\small_search\\audit"
+  ],
+  "historical_seeds": [
+    15000,
+    15001,
+    15002,
+    15003,
+    15004,
+    15005,
+    15006,
+    15007,
+    15008,
+    15009,
+    15010,
+    15011,
+    15012,
+    15013,
+    15014,
+    15015,
+    15016,
+    15017,
+    15018,
+    15019,
+    15020,
+    15021,
+    15022,
+    15023,
+    15024,
+    15025,
+    15026,
+    15027,
+    15028,
+    15029,
+    15030,
+    15031,
+    15032,
+    15033,
+    15034
+  ],
+  "derived_seeds": [
+    15000,
+    15001,
+    15002,
+    15003,
+    15004
+  ],
+  "expected_case_count": 45,
+  "expected_searches": 360,
+  "historical_input_policy": "35 original small_case(seed) configurations unchanged",
+  "derived_case_counts": {
+    "stationary_first_kernel": 5,
+    "synthetic_particle": 5
+  },
+  "windows": "[0,T] and [1,T-1] with original endpoints and full fixed suffix",
+  "modes": [
+    "zero",
+    "mass_lb",
+    "stdc_lb",
+    "stdc_endpoint_lb"
+  ],
+  "tolerance": 1e-10,
+  "search_limits": null,
+  "data_type": "synthetic_toy",
+  "global_epsilon_certified": false,
+  "scope": "finite numerical optimality for each fixed-endpoint window only",
+  "source_sha256": {
+    "scripts\\audit_window_search.py": "299f140645275981c0fccd054b3a8d244aeab50f876f5ae6d8eafb3faa6b96cc",
+    "scripts\\stdc_validation_guards.py": "c75e9f4a546aa3d1b337af69021bdec75ed95fb01b16622915e426a3b9e7715e",
+    "scripts\\run_stdc_small_search.py": "21c050f2bf46ff13072cfe2f0d2c7727d9515a3f7dfd82bd862a40d9bfda4b2c",
+    "src\\asar_repro\\window_search.py": "82ad9c2f9f06842d9045036fdf18a737c5271ef8ee0a8a3956dfeec23f3c5b91",
+    "src\\asar_repro\\window_bounds.py": "67fc3be440e2693ce75dd530f95e995291f068ae7a4d8d16d7c2ece0ed058380",
+    "src\\asar_repro\\objective.py": "792077ad3e0286c03f60108f2580ea3b3557e3f5b002bc1a5e2f9f67e48fb2ad",
+    "src\\asar_repro\\motion.py": "7e74178390ffa34f30f7b987a4d7a2459e8f0ca2646ca3026c97e505f758c2c9"
+  }
+}

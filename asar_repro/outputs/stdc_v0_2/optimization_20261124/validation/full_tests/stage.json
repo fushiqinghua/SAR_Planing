@@ -1,0 +1,55 @@
+{
+  "status": "blocked",
+  "stage": "full_tests",
+  "started_utc": "2026-11-23T16:55:46.193616+00:00",
+  "driver_command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "scripts/run_optimization_validation.py",
+    "full_tests",
+    "--run-dir",
+    "outputs/stdc_v0_2/optimization_20261124/validation"
+  ],
+  "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro",
+  "timeout_s": 1200,
+  "preservation_before": {
+    "status": "passed",
+    "baseline_files": 654,
+    "protected_research_files": 3255,
+    "source_files": 120,
+    "historical_preflight_sha256": "dae1d7ef9586a4dda20d5121542993a8812e7dfbe6fdcc27251e9503a5bb2b0b"
+  },
+  "child_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "PROJ_NETWORK": "OFF",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\src;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\offline_guard;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\src;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts"
+  },
+  "seeds": "Explicit fixed seeds/fixtures in frozen source_sha256.json; includes particle seed 41",
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "-m",
+    "pytest",
+    "-x",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "tests",
+    "--junitxml",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\optimization_20261124\\validation\\full_tests\\pytest.xml",
+    "--basetemp",
+    "C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\optimization_validation_tmp\\e1f3c59aba04\\full_tests"
+  ],
+  "exit_code": 1,
+  "test_counts": {
+    "tests": 87,
+    "errors": 0,
+    "failures": 1,
+    "skipped": 0
+  },
+  "error": "pytest failure/error/skip: STOP",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\run_optimization_validation.py\", line 287, in stage\n    require(counts['errors'] == counts['failures'] == counts['skipped'] == 0,\n  File \"E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\run_optimization_validation.py\", line 35, in require\n    raise AssertionError(message)\nAssertionError: pytest failure/error/skip: STOP\n",
+  "wall_s": 20.14101150003262
+}

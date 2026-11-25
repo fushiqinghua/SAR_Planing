@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-stdc-v0.2\asar_repro\scripts\run_additional_real.py", line 192, in <module>
+    summary.update((forcing if a.stage=='b2' else particles)(run,a.scenario,out))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-stdc-v0.2\asar_repro\scripts\run_additional_real.py", line 112, in forcing
+    controls=native_controls(bundle,case);readers=build_opendrift_readers(bundle)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-stdc-v0.2\asar_repro\scripts\run_additional_real.py", line 98, in native_controls
+    angle_error=abs(float(longitude(np.rad2deg(a)-(90-az))));require(angle_error<2.,'ROMS angle does not follow physical xi direction')
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-stdc-v0.2\asar_repro\scripts\stdc_validation_guards.py", line 42, in require
+    raise AssertionError(message)
+AssertionError: ROMS angle does not follow physical xi direction

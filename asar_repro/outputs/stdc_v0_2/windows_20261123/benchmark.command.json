@@ -1,0 +1,14 @@
+{
+  "repeats": 3,
+  "particle_seed": 41,
+  "arguments": [
+    "scripts/run_window_experiments.py",
+    "benchmark",
+    "--output-dir",
+    "outputs/stdc_v0_2/windows_20261123/benchmark",
+    "--smoke-dir",
+    "outputs/stdc_v0_2/windows_20261123/smoke"
+  ],
+  "threads": 1,
+  "executable": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe"
+}

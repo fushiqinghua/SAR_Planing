@@ -1,0 +1,17 @@
+{
+  "exit_code": 0,
+  "process_wall_s": 2.635038100066595,
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\run_window_experiments.py",
+    "worker",
+    "--output-dir",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\windows_20261123\\benchmark\\window_mass_lb_eps_1p0_rep_0",
+    "--variant",
+    "window_mass_lb",
+    "--epsilon",
+    "1.0",
+    "--repeat-index",
+    "0"
+  ]
+}

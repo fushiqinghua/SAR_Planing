@@ -1,0 +1,18 @@
+{
+  "status": "recorded",
+  "reason": "Initial new-module pytest invocations used the default cache provider; all later calls disable it. No restoration or claim of byte preservation for these two files.",
+  "files": {
+    "asar_repro/.pytest_cache/v/cache/lastfailed": {
+      "before_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "after_sha256": "4513c431c2a4e80c176276d8f51f47c6325054cc3a9489e35b61e0adb5701059",
+      "classification": "regenerated pytest diagnostic cache, outside baseline/forcing/particles/historical experiment outputs"
+    },
+    "asar_repro/.pytest_cache/v/cache/nodeids": {
+      "before_sha256": "361b633bee9c7c6401a594e0765bc46abeccc2b5697c57de78ca0fb583dce426",
+      "after_sha256": "dac63f81324400c7488db489e10f3db664c959202eaf597cd07aa8acb0a4f8c2",
+      "classification": "regenerated pytest diagnostic cache, outside baseline/forcing/particles/historical experiment outputs"
+    }
+  },
+  "baseline_exception": false,
+  "production_source_exception": false
+}

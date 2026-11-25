@@ -1,0 +1,52 @@
+{
+  "status": "passed",
+  "scenes": [
+    {
+      "scene": "lake_ontario",
+      "windows": 132,
+      "enumerated_paths": 73224,
+      "improving_windows": 0,
+      "improving_paths": 0,
+      "equal_J_paths": 141,
+      "baseline_J": 17.264874448,
+      "best_J": 17.264874448,
+      "max_Pd_at_same_J": 0.897364416,
+      "free_terminal8_best_J": 17.264874448,
+      "free_terminal8_best_Pd": 0.897364416,
+      "free_terminal8_paths": 62322,
+      "wall_s": 1.8302372000180185
+    },
+    {
+      "scene": "arctic_ocean",
+      "windows": 165,
+      "enumerated_paths": 101674,
+      "improving_windows": 0,
+      "improving_paths": 0,
+      "equal_J_paths": 165,
+      "baseline_J": 20.386109349119998,
+      "best_J": 20.386109349119998,
+      "max_Pd_at_same_J": 0.90858311232,
+      "free_terminal8_best_J": 20.386109349119998,
+      "free_terminal8_best_Pd": 0.90858311232,
+      "free_terminal8_paths": 65536,
+      "wall_s": 3.7440503999823704
+    },
+    {
+      "scene": "bay_of_fundy",
+      "windows": 150,
+      "enumerated_paths": 36339,
+      "improving_windows": 0,
+      "improving_paths": 0,
+      "equal_J_paths": 427,
+      "baseline_J": 45.881082400000004,
+      "best_J": 45.881082400000004,
+      "max_Pd_at_same_J": 0.41586480000000003,
+      "free_terminal8_best_J": 45.881082400000004,
+      "free_terminal8_best_Pd": 0.41586480000000003,
+      "free_terminal8_paths": 65536,
+      "wall_s": 1.9159520000685006
+    }
+  ],
+  "source_preservation": true,
+  "theory_certified": false
+}

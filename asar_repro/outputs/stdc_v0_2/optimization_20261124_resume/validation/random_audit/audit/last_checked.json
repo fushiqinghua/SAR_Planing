@@ -1,0 +1,23 @@
+{
+  "kind": "particles",
+  "seed": 179,
+  "input_sha256": "acca3dd26ecd824912415038bf74bd34c7673e3d8cb5d2ac16ed2ec9ef819f45",
+  "prefix": [
+    5,
+    8,
+    7,
+    8,
+    7,
+    8
+  ],
+  "remaining": 0.0,
+  "bounds": {
+    "mass_lb": 0.0,
+    "reach_lb": 0.0,
+    "capacity_lb": 0.0,
+    "stepwise_lb": 0.0,
+    "stdc_radius_lb": 0.0,
+    "stdc_lb": 0.0,
+    "lookahead": 0.0
+  }
+}

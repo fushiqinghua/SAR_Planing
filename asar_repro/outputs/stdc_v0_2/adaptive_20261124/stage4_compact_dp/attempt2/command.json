@@ -1,0 +1,37 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "-m",
+    "pytest",
+    "-x",
+    "-p",
+    "no:cacheprovider",
+    "tests/test_compact_particle_dp.py",
+    "-q",
+    "--junitxml=E:\\\u6bd5\u4e1a\u8bbe\u8ba1\\\u7ec8\u7a3f\u7814\u53d1\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\adaptive_20261124\\stage4_compact_dp\\attempt2\\pytest.xml"
+  ],
+  "cwd": "E:\\\u6bd5\u4e1a\u8bbe\u8ba1\\\u7ec8\u7a3f\u7814\u53d1\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro",
+  "seeds": [
+    7,
+    17,
+    41,
+    829
+  ],
+  "status": "running",
+  "environment": {
+    "PYTHONPATH": "E:\\\u6bd5\u4e1a\u8bbe\u8ba1\\\u7ec8\u7a3f\u7814\u53d1\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\src;E:\\\u6bd5\u4e1a\u8bbe\u8ba1\\\u7ec8\u7a3f\u7814\u53d1\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\offline_guard;E:\\\u6bd5\u4e1a\u8bbe\u8ba1\\\u7ec8\u7a3f\u7814\u53d1\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\src;E:\\\u6bd5\u4e1a\u8bbe\u8ba1\\\u7ec8\u7a3f\u7814\u53d1\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts",
+    "ASAR_OFFLINE": "1",
+    "PROJ_NETWORK": "OFF",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONHASHSEED": "0",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1"
+  },
+  "resolution": "Prior new timeout fixture expired after 80 clock calls, but complete toy construction has 74. Parent independently verified and authorized fixture-only correction to expiry at 30 (grouping) and 62 (DP); no implementation, mathematical assertion or production budget changed.",
+  "source_sha256": {
+    "src/asar_repro/compact_particle_dp.py": "1f8d2ad904d08c4d7f9fc0359e02491d74d8dbe19a516cfe2908c583d6a96967",
+    "tests/test_compact_particle_dp.py": "373b7c8d625f1d846fb83c938edb66028a1546e92c4d353e941794da2239ca69"
+  }
+}

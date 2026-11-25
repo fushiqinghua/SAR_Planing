@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "new_tests": 83,
+  "full_tests": 1197,
+  "oracle_checks": 192,
+  "original_objective_scorer_forcing_unchanged": true,
+  "native_presolve": false,
+  "dependencies_changed": false,
+  "completed_repairs": 3,
+  "budget_exceeded_repairs": 6,
+  "external_aborts": 0,
+  "same_budget_benchmark": false,
+  "global_epsilon_certified": false,
+  "max_candidate_replay_error": 3.197442310920451e-13
+}

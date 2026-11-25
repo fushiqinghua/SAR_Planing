@@ -1,0 +1,7 @@
+{
+  "python": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+  "kind": "import_and_api_smoke",
+  "command": "BurstRollout(GridGraph(1,2),start=0,budget=2,p=[.5,.5],q=.5,motion=MatrixMotion.identity(2),initial_path=(0,1,0)); advance(max_expansions=1); advance()",
+  "seed": null,
+  "exit_code": 0
+}

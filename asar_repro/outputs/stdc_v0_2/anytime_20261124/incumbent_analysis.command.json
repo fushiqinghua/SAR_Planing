@@ -1,0 +1,7 @@
+{
+  "arguments": [
+    "outputs/stdc_v0_2/anytime_20261124/analyze_incumbents.py"
+  ],
+  "purpose": "saved incumbent audit only; no planner rerun",
+  "executable": "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe"
+}

@@ -1,0 +1,8 @@
+﻿variant,baseline,epsilon,repeat,delta_J,J_reduction_percent,delta_Pd,delta_Pd_percentage_points,J_improved,J_worse,Pd_improved,Pd_worse,delta_expanded,time_ratio,delta_peak_memory_mib,variant_status,variant_stop_reason,baseline_status,baseline_stop_reason
+window_zero,paper_baseline,1.1,0,0.0,0.0,0.0,0.0,False,False,False,False,4893,2.3964394322964213,0.45703125,budget_exceeded,max_expansions,completed,
+window_mass_lb,paper_baseline,1.1,0,0.0,0.0,0.0,0.0,False,False,False,False,4893,2.4637720056466215,0.59375,budget_exceeded,max_expansions,completed,
+window_stdc_lb,paper_baseline,1.1,0,0.0,0.0,0.0,0.0,False,False,False,False,4330,4.359796163965638,0.8203125,completed,,completed,
+window_stdc_endpoint_lb,paper_baseline,1.1,0,0.0,0.0,0.0,0.0,False,False,False,False,813,3.0021814637748414,0.875,completed,,completed,
+window_stdc_endpoint_lb,window_zero,1.1,0,0.0,0.0,0.0,0.0,False,False,False,False,-4080,1.2527675113816497,0.41796875,completed,,budget_exceeded,max_expansions
+window_stdc_endpoint_lb,window_mass_lb,1.1,0,0.0,0.0,0.0,0.0,False,False,False,False,-4080,1.2185305527030343,0.28125,completed,,budget_exceeded,max_expansions
+window_stdc_endpoint_lb,window_stdc_lb,1.1,0,0.0,0.0,0.0,0.0,False,False,False,False,-3517,0.6886059235035611,0.0546875,completed,,completed,

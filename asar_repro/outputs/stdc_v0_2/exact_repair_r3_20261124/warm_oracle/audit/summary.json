@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "repair_checks": 576,
+  "synthetic_cases": 48,
+  "complete_path_evaluations": 39689,
+  "max_objective_error": 0.0,
+  "max_replay_error": 0.0,
+  "max_bound_overestimate": 8.881784197001252e-16,
+  "violations": 0,
+  "wall_s": 7.350648200022988,
+  "global_epsilon_certified": false
+}

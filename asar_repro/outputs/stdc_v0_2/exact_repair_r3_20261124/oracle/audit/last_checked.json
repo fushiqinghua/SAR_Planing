@@ -1,0 +1,73 @@
+{
+  "seed": 1088,
+  "prefix_depth": 4,
+  "corridor_radius": 1,
+  "oracle": {
+    "J": 4.0,
+    "path": [
+      4,
+      5,
+      4,
+      3,
+      6
+    ],
+    "complete_paths": 1,
+    "feasible_end_vertices": [
+      6
+    ]
+  },
+  "result": {
+    "path": [
+      4,
+      5,
+      4,
+      3,
+      6
+    ],
+    "J": 4.0,
+    "Pd": 0.0,
+    "status": "completed",
+    "stop_reason": null,
+    "incumbent_source": "initial_path",
+    "wall_s": 0.00012750003952533007,
+    "model_build_s": 0.00012610002886503935,
+    "solve_s": 0.0,
+    "restricted_lower_bound": 4.0,
+    "restricted_gap": 0.0,
+    "solver_status": null,
+    "solver_message": "No free moves; exact original replay of fixed route.",
+    "stats": {
+      "prefix_depth": 4,
+      "corridor_radius": 1,
+      "endpoint_free": true,
+      "bound_scope": "restricted_subproblem",
+      "bound_kind": "solver numerical dual estimate; not independently certified",
+      "state_merging": false,
+      "objective": "original sum(M_t,t=1..T)",
+      "t0_sensed": false,
+      "initial_J": 4.0,
+      "initial_Pd": 0.0,
+      "memory_scope": "managed model buffers estimate, excluding native HiGHS workspace and input archive",
+      "max_memory_bytes": 536870912,
+      "max_seconds": 30.0,
+      "node_limit": null,
+      "mip_rel_gap": 0.0,
+      "integrality_atol": 1e-07,
+      "constraint_atol": 1e-07,
+      "replay_atol": 1e-10,
+      "candidate_accepted": false,
+      "real_input_assumed": false,
+      "warm_start_requested": false,
+      "objective_cutoff_requested": false,
+      "mip_start_submitted": false,
+      "mip_start_roundtrip_verified": false,
+      "native_presolve_policy": "disabled: frozen seed1059 model reproduces a false optimum in bundled HiGHS1.12.0 with presolve and strict native settings; unchanged model with presolve off matches independent DFS; tolerances remain unchanged",
+      "estimated_peak_model_bytes": 4296,
+      "trivial_fixed_path": true,
+      "model_variables": 0,
+      "model_rows": 0,
+      "deadline_overshoot_s": 0.0
+    },
+    "theory_certified": false
+  }
+}

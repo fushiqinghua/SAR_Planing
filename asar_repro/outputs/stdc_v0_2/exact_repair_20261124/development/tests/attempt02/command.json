@@ -1,0 +1,43 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "-m",
+    "pytest",
+    "tests/test_exact_repair.py",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=outputs/stdc_v0_2/exact_repair_20261124/development/tests/attempt02/junit.xml"
+  ],
+  "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro",
+  "passed": 71,
+  "failed": 0,
+  "total": 71,
+  "pytest_exit_code": 0,
+  "scope": "new tests only; added particle permutation and T49/T60 numerical regression; no assertion weakened",
+  "seeds": [
+    1041,
+    1042,
+    1043,
+    1044,
+    1045,
+    1046,
+    1047,
+    1048,
+    1049,
+    1050,
+    1051,
+    1052,
+    1053,
+    1054,
+    1055,
+    1056
+  ],
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "ASAR_OFFLINE": "1",
+    "PROJ_NETWORK": "OFF",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  }
+}

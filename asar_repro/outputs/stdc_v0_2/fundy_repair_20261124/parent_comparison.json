@@ -1,0 +1,117 @@
+{
+  "original_sha256": "c2879d000da71de2509e5f5194130de8c063256dc9c784a443826474894a378e",
+  "subset_sha256": "eb768c27d14aa22cadb53a46596fbd235fed260e80fe82694bfaa4d3f1fcf5f9",
+  "checks": {
+    "angle": {
+      "shape": [
+        777,
+        1173
+      ],
+      "exact_bytes_equal": true
+    },
+    "lon_rho": {
+      "shape": [
+        777,
+        1173
+      ],
+      "exact_bytes_equal": true
+    },
+    "lat_rho": {
+      "shape": [
+        777,
+        1173
+      ],
+      "exact_bytes_equal": true
+    },
+    "lon_u": {
+      "shape": [
+        777,
+        1172
+      ],
+      "exact_bytes_equal": true
+    },
+    "lat_u": {
+      "shape": [
+        777,
+        1172
+      ],
+      "exact_bytes_equal": true
+    },
+    "lon_v": {
+      "shape": [
+        776,
+        1173
+      ],
+      "exact_bytes_equal": true
+    },
+    "lat_v": {
+      "shape": [
+        776,
+        1173
+      ],
+      "exact_bytes_equal": true
+    },
+    "mask_rho": {
+      "shape": [
+        777,
+        1173
+      ],
+      "exact_bytes_equal": true
+    },
+    "mask_u": {
+      "shape": [
+        777,
+        1172
+      ],
+      "exact_bytes_equal": true
+    },
+    "mask_v": {
+      "shape": [
+        776,
+        1173
+      ],
+      "exact_bytes_equal": true
+    },
+    "u_sur": {
+      "shape": [
+        1,
+        777,
+        1172
+      ],
+      "exact_bytes_equal": true
+    },
+    "v_sur": {
+      "shape": [
+        1,
+        776,
+        1173
+      ],
+      "exact_bytes_equal": true
+    },
+    "wetdry_mask_rho": {
+      "shape": [
+        1,
+        777,
+        1173
+      ],
+      "exact_bytes_equal": true
+    },
+    "wetdry_mask_u": {
+      "shape": [
+        1,
+        777,
+        1172
+      ],
+      "exact_bytes_equal": true
+    },
+    "wetdry_mask_v": {
+      "shape": [
+        1,
+        776,
+        1173
+      ],
+      "exact_bytes_equal": true
+    }
+  },
+  "conclusion": "Downloaded original contains the same angle/geography mismatch; not a local extraction/CF decoding error"
+}

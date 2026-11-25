@@ -1,0 +1,30 @@
+{
+  "files": [
+    {
+      "path": "src/asar_repro/exact_repair.py",
+      "sha256": "20fceef062b2a1817ab5fcff96b48394d1237bfbeb50b23820f899efb9533ed4"
+    },
+    {
+      "path": "tests/test_exact_repair.py",
+      "sha256": "ced304c2ec58d9fe80997623840e09cd20608b956158c77a499b542043f5055e"
+    },
+    {
+      "path": "scripts/audit_exact_repair.py",
+      "sha256": "094421660d7921ff6e18c7f63fc02ac326690e5e312936cdfe1970d0d4fa1069"
+    },
+    {
+      "path": "scripts/run_exact_repair_validation.py",
+      "sha256": "b0cdd534737decc284fb22a57cdbb33441548bf68a7043a3e53d1e6fa31de2d8"
+    },
+    {
+      "path": "scripts/run_exact_repair_experiments.py",
+      "sha256": "ed1f93d73b9f45d516cb69ffd3c2bff07d7e1bf48a98551cabaa20ded908c310"
+    },
+    {
+      "path": "docs/stdc_exact_repair.md",
+      "sha256": "bbcc8ea71f0e09264d57a61bbeecd950c578fe09ccbd2fbc5b5080cf806c72a0"
+    }
+  ],
+  "status": "blocked_unvalidated_do_not_use_for_real_search",
+  "existing_source_files_modified": 0
+}

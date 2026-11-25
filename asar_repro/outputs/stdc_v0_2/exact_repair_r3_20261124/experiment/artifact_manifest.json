@@ -1,0 +1,39 @@
+{
+  "files": [
+    {
+      "path": "changes.diff",
+      "bytes": 15119,
+      "sha256": "67227a6becbe4c9676b8e90ef93153509f8e3abfb73bc5695f15fccec8ea386b"
+    },
+    {
+      "path": "diff_scope.json",
+      "bytes": 3899,
+      "sha256": "80f0cebd1a62dd7f81d67137a8ff31848918cef96c21809d0cec1d779b0fa133"
+    },
+    {
+      "path": "git.status",
+      "bytes": 566010,
+      "sha256": "82ad5bf9cd361098ab699f6e097c7e547e17e408c4b8fe3dc0b1efedb3cef528"
+    },
+    {
+      "path": "protocol.json",
+      "bytes": 51065,
+      "sha256": "4931f3a7e685fc37ceb1c39eec6e3d85712c4531533e5ccc16f4bb19bf30c055"
+    },
+    {
+      "path": "source_sha256.json",
+      "bytes": 16874,
+      "sha256": "b1a896bb9b112badd8b22bb8fe15b385b6c47ea1c4831f6d599ee6abfb1e40e5"
+    },
+    {
+      "path": "untracked_files.diff",
+      "bytes": 874540,
+      "sha256": "bda3559c756e533d7b15ea28bca8442fdb7df2b2cf5104ac16873ebc65387343"
+    },
+    {
+      "path": "untracked_sha256.json",
+      "bytes": 954407,
+      "sha256": "796a4d688ea9883ff44328ce41c80de8b2860149e5944cb016647bcb2832c575"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "scene_variant_runs": 6,
+  "error": null,
+  "budget_aborted": 0,
+  "global_epsilon_certified": false
+}

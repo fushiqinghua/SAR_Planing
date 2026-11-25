@@ -1,0 +1,1 @@
+{"variant": "paper_baseline", "guide_weight": 1.0, "status": "budget_exceeded", "stop_reason": "max_expansions", "J": 20.477608335999996, "Pd_T": 0.88106304, "expanded": 5000, "search_wall_s": 5.01490049995482, "beats_best_J": false}

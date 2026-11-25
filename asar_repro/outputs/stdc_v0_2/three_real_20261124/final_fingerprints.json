@@ -1,0 +1,186 @@
+{
+  "files": [
+    {
+      "path": "aggregate.csv",
+      "sha256": "347f6948701662098e9d0d860efda4873ef3ec3247f2c5fc9ca6964537e5cea8",
+      "bytes": 14614
+    },
+    {
+      "path": "aggregate.json",
+      "sha256": "57d0273ab06f6830f3d5867c2e57b36129fc950a555f93760623d26cdb505b96",
+      "bytes": 46187
+    },
+    {
+      "path": "all_runs.csv",
+      "sha256": "4309c005909cd83f3f5e2bf88568d71123ff564a670579991e41e04ddd7b55d4",
+      "bytes": 57076
+    },
+    {
+      "path": "commands.json",
+      "sha256": "b14e59c5603686243e2bf11e5a367df0360c4072e221ab8b0570040a601739a6",
+      "bytes": 1787
+    },
+    {
+      "path": "dp_preprocessing_audit.json",
+      "sha256": "211a0fcbe61f4e8f92624f9e1656a24ce359a53fd94bd0589778690e8e19d0e9",
+      "bytes": 5828
+    },
+    {
+      "path": "environment.json",
+      "sha256": "98d4f8eb135943989c412ac634a7b4df4b61879194aa8bc4707c9075a2941e02",
+      "bytes": 1069
+    },
+    {
+      "path": "final_snapshot/changes.diff",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "final_snapshot/diff_scope.json",
+      "sha256": "a2ed202217923585b991949b9a921e32ba654b6ba3757308f11043eaa5fb5243",
+      "bytes": 2735
+    },
+    {
+      "path": "final_snapshot/git.status",
+      "sha256": "03fd6d96e3dc41868fdd6f528850a846f3971612e9f07669eeb11ede96e5779d",
+      "bytes": 366056
+    },
+    {
+      "path": "final_snapshot/source_sha256.json",
+      "sha256": "8bc01dbbbec71f13b4a28125ce630925e70d77538c958407909595450f2db988",
+      "bytes": 14600
+    },
+    {
+      "path": "final_snapshot/untracked_files.diff",
+      "sha256": "4e4de8a9a8e5dd42a4419fd0de07965a7bba480c477a24657da877a4896b0e7c",
+      "bytes": 618445
+    },
+    {
+      "path": "final_snapshot/untracked_sha256.json",
+      "sha256": "8bc72a2f04fa99fb86c058f6e9bdfd786becefd1757ba00319718b39a53d8989",
+      "bytes": 625079
+    },
+    {
+      "path": "formal_protocol.json",
+      "sha256": "39f447f239db0c94c6aeb3bd4fefe803d14182c59437d9147ab9f5272db6b15b",
+      "bytes": 1611
+    },
+    {
+      "path": "fundy_benchmark.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "fundy_benchmark.stdout.txt",
+      "sha256": "17e7ecba5a0e19136dd0dba940accbc44eb3f510514af2ef2ca3ef0e1ff827a4",
+      "bytes": 4323
+    },
+    {
+      "path": "fundy_paths_qualified.png",
+      "sha256": "67ba8a4113ec89209ee5ca125f94f289894204695d703d3b47434e07a420a12d",
+      "bytes": 180644
+    },
+    {
+      "path": "fundy_wall_survival_qualified.png",
+      "sha256": "6838d3403afb80726819f5f3f2d9f7a6d82da3fdd739642c91497fcb1792d618",
+      "bytes": 110938
+    },
+    {
+      "path": "fundy_work_survival_qualified.png",
+      "sha256": "0bdf1ec57dada7bd1a34e6c483c15a51a20f786e7267521953835954e6bd5e18",
+      "bytes": 112101
+    },
+    {
+      "path": "linked_artifacts.json",
+      "sha256": "b28f98c286e938178104b465f712d2cce38514b4aa7e79ca04e7fe0b4eb41df6",
+      "bytes": 1113
+    },
+    {
+      "path": "paired_comparisons.csv",
+      "sha256": "45bd97314750395d7f0344a63ebb0ef2371b10974e2cc9d7e6bf642b838385e6",
+      "bytes": 31027
+    },
+    {
+      "path": "plot_results.py",
+      "sha256": "993285d8817a2323dcb02eaf757d800188132643e84028a30e62cc1adae919e6",
+      "bytes": 5173
+    },
+    {
+      "path": "plots.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "plots.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "plots_r2.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "plots_r2.stdout.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "provenance.json",
+      "sha256": "07ca8c973da4b8d9426505676b783292339ee1c93b2647c1e316038441f5444d",
+      "bytes": 137659
+    },
+    {
+      "path": "replay_audit.json",
+      "sha256": "8d07ba98380e595f38d3d4415501f91e5bfbb5c7381586298e67be9fb1174ab9",
+      "bytes": 28373
+    },
+    {
+      "path": "run_fundy_benchmark.py",
+      "sha256": "6039713e675e5162ff7d66ff3dc365ccd79a24e922c152cef28e7ffc6b97b99d",
+      "bytes": 1137
+    },
+    {
+      "path": "summarize.py",
+      "sha256": "bf51c24a39102bee570036b1af6c2e2a6b9fd18a1749652fcf2bca0491f39499",
+      "bytes": 15370
+    },
+    {
+      "path": "summary.stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "summary.stdout.txt",
+      "sha256": "725e8daaf95e1a0d2fe0d9b98e0fea3461d63cf1556461dbe8952af609625248",
+      "bytes": 14720
+    },
+    {
+      "path": "three_real_comparison.md",
+      "sha256": "17675f46c04c1d7646c7c992e1f9af8b241335bc8ddf35b357150056553ee239",
+      "bytes": 10907
+    },
+    {
+      "path": "three_scenes_wall.png",
+      "sha256": "1f70a9b2ee11e752cd3aa6e700a3b79beccc444fcde5326eea788268d10d9b04",
+      "bytes": 263861
+    },
+    {
+      "path": "three_scenes_work.png",
+      "sha256": "3b1999c6acdf12c8e52fb6c9bcd3da94a5b9d8da0d4eede1584c25a370acf330",
+      "bytes": 261576
+    },
+    {
+      "path": "validation_summary.json",
+      "sha256": "b022516541c6202f1135f4a28586d0c40e4d4a9cb7041e6d8bf9321ea97d3460",
+      "bytes": 15533
+    },
+    {
+      "path": "visual_review.json",
+      "sha256": "e4518ceb1d3daad0bc6261de67e33b72ef675675fed51056f6db95ed3fe8aa67",
+      "bytes": 316
+    }
+  ],
+  "physical_direction_unverified": true,
+  "scope": "Fundy formal benchmark + three-scene retrospective comparison"
+}

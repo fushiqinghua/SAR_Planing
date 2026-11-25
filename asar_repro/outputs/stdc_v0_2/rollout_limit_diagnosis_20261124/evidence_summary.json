@@ -1,0 +1,487 @@
+{
+  "candidates": {
+    "status": "passed",
+    "reconstruction_scope": "Replays saved local expansion allocations and before-slice incumbents without wall-clock deadlines. Does not rerun global search or claim independent experiments.",
+    "original_candidate_paths_logged": false,
+    "source_sha_verified": true,
+    "real_archives_sha_verified": true,
+    "runs": 72,
+    "complete_candidates": 270,
+    "same_as_incumbent": 270,
+    "unique_scene_path_pairs": 8,
+    "unique_scene_incumbent_window_path_pairs": 13,
+    "phase_checks": 265,
+    "phase_mismatches": [],
+    "totals": {
+      "work_expanded": 27444,
+      "bound_calls": 73680,
+      "cheap_bound_calls": 100001,
+      "beam_discarded": 25140,
+      "proposal_resets": 139,
+      "reset_discarded": 6118,
+      "diversity_extra_retained": 9,
+      "windows_started": 481,
+      "windows_completed": 270
+    },
+    "per_scene": {
+      "lake_ontario": {
+        "candidates": 90,
+        "same_as_incumbent": 90,
+        "unique_paths": 3,
+        "intervals": [
+          [
+            3,
+            11
+          ],
+          [
+            4,
+            12
+          ],
+          [
+            5,
+            11
+          ],
+          [
+            15,
+            23
+          ]
+        ],
+        "candidate_lengths": {
+          "8": 81,
+          "6": 9
+        },
+        "available_windows_per_incumbent": 132,
+        "completed_windows_range": [
+          3,
+          5
+        ],
+        "started_unique_interval_range": [
+          3,
+          5
+        ],
+        "max_abs_delta_J": 0.0,
+        "diversity_extra_retained": 0,
+        "beam_discarded": 12786
+      },
+      "arctic_ocean": {
+        "candidates": 90,
+        "same_as_incumbent": 90,
+        "unique_paths": 2,
+        "intervals": [
+          [
+            18,
+            26
+          ],
+          [
+            19,
+            27
+          ],
+          [
+            20,
+            28
+          ]
+        ],
+        "candidate_lengths": {
+          "8": 90
+        },
+        "available_windows_per_incumbent": 165,
+        "completed_windows_range": [
+          2,
+          4
+        ],
+        "started_unique_interval_range": [
+          2,
+          4
+        ],
+        "max_abs_delta_J": 3.552713678800501e-15,
+        "diversity_extra_retained": 0,
+        "beam_discarded": 8154
+      },
+      "bay_of_fundy": {
+        "candidates": 90,
+        "same_as_incumbent": 90,
+        "unique_paths": 3,
+        "intervals": [
+          [
+            19,
+            27
+          ],
+          [
+            20,
+            28
+          ],
+          [
+            24,
+            32
+          ],
+          [
+            25,
+            33
+          ]
+        ],
+        "candidate_lengths": {
+          "8": 90
+        },
+        "available_windows_per_incumbent": 150,
+        "completed_windows_range": [
+          3,
+          4
+        ],
+        "started_unique_interval_range": [
+          5,
+          5
+        ],
+        "max_abs_delta_J": 2.842170943040401e-14,
+        "diversity_extra_retained": 9,
+        "beam_discarded": 4200
+      }
+    },
+    "physical_direction_unverified": {
+      "bay_of_fundy": true
+    }
+  },
+  "short_windows": {
+    "status": "passed",
+    "scenes": [
+      {
+        "scene": "lake_ontario",
+        "windows": 132,
+        "enumerated_paths": 73224,
+        "improving_windows": 0,
+        "improving_paths": 0,
+        "equal_J_paths": 141,
+        "baseline_J": 17.264874448,
+        "best_J": 17.264874448,
+        "max_Pd_at_same_J": 0.897364416,
+        "free_terminal8_best_J": 17.264874448,
+        "free_terminal8_best_Pd": 0.897364416,
+        "free_terminal8_paths": 62322,
+        "wall_s": 1.8302372000180185
+      },
+      {
+        "scene": "arctic_ocean",
+        "windows": 165,
+        "enumerated_paths": 101674,
+        "improving_windows": 0,
+        "improving_paths": 0,
+        "equal_J_paths": 165,
+        "baseline_J": 20.386109349119998,
+        "best_J": 20.386109349119998,
+        "max_Pd_at_same_J": 0.90858311232,
+        "free_terminal8_best_J": 20.386109349119998,
+        "free_terminal8_best_Pd": 0.90858311232,
+        "free_terminal8_paths": 65536,
+        "wall_s": 3.7440503999823704
+      },
+      {
+        "scene": "bay_of_fundy",
+        "windows": 150,
+        "enumerated_paths": 36339,
+        "improving_windows": 0,
+        "improving_paths": 0,
+        "equal_J_paths": 427,
+        "baseline_J": 45.881082400000004,
+        "best_J": 45.881082400000004,
+        "max_Pd_at_same_J": 0.41586480000000003,
+        "free_terminal8_best_J": 45.881082400000004,
+        "free_terminal8_best_Pd": 0.41586480000000003,
+        "free_terminal8_paths": 65536,
+        "wall_s": 1.9159520000685006
+      }
+    ],
+    "source_preservation": true,
+    "theory_certified": false
+  },
+  "large_windows": {
+    "scenes": [
+      {
+        "scene": "lake_ontario",
+        "status": "budget_exceeded",
+        "stop_reason": "diagnostic_90_second_cap",
+        "wall_s": 90.06410239997786,
+        "windows": 49,
+        "enumerated_paths": 5518241,
+        "improving_windows": 0,
+        "baseline_J": 17.264874448,
+        "best": {
+          "a": 0,
+          "b": 10,
+          "length": 10,
+          "free_endpoint": false,
+          "status": "exhausted",
+          "paths": 5400,
+          "nodes": 12242,
+          "same_J_paths": 3,
+          "improving_paths": 0,
+          "baseline_J": 17.264874448,
+          "baseline_Pd": 0.897364416,
+          "best_J": 17.264874448,
+          "best_Pd": 0.897364416,
+          "best_path": [
+            144,
+            145,
+            146,
+            163,
+            180,
+            181,
+            198,
+            199,
+            182,
+            165,
+            166,
+            183,
+            200,
+            199,
+            216,
+            215,
+            214,
+            197,
+            198,
+            181,
+            164,
+            165,
+            182,
+            183,
+            166,
+            167,
+            184,
+            201,
+            200,
+            217,
+            234,
+            233,
+            232,
+            215,
+            216,
+            199,
+            198,
+            181,
+            164,
+            147,
+            148,
+            149,
+            150,
+            167,
+            168,
+            185,
+            184,
+            201,
+            218,
+            235
+          ],
+          "max_Pd_at_incumbent_J": 0.897364416,
+          "best_alternative_J": 17.264874448,
+          "independent_replay_max_error": 0.0,
+          "wall_s": 0.09099149995017797
+        }
+      },
+      {
+        "scene": "arctic_ocean",
+        "status": "budget_exceeded",
+        "stop_reason": "diagnostic_90_second_cap",
+        "wall_s": 90.04409080010373,
+        "windows": 63,
+        "enumerated_paths": 5794629,
+        "improving_windows": 0,
+        "baseline_J": 20.386109349119998,
+        "best": {
+          "a": 0,
+          "b": 10,
+          "length": 10,
+          "free_endpoint": false,
+          "status": "exhausted",
+          "paths": 9450,
+          "nodes": 19993,
+          "same_J_paths": 1,
+          "improving_paths": 0,
+          "baseline_J": 20.386109349119998,
+          "baseline_Pd": 0.90858311232,
+          "best_J": 20.386109349119998,
+          "best_Pd": 0.90858311232,
+          "best_path": [
+            2762,
+            2763,
+            2764,
+            2765,
+            2766,
+            2767,
+            2852,
+            2851,
+            2850,
+            2935,
+            2936,
+            2937,
+            2938,
+            2853,
+            2768,
+            2769,
+            2854,
+            2855,
+            2940,
+            2939,
+            2938,
+            2937,
+            2852,
+            2767,
+            2682,
+            2681,
+            2766,
+            2851,
+            2850,
+            2849,
+            2764,
+            2679,
+            2680,
+            2681,
+            2682,
+            2683,
+            2684,
+            2769,
+            2768,
+            2853,
+            2854,
+            2855,
+            2940,
+            3025,
+            3024,
+            3023,
+            3022,
+            2937,
+            2936,
+            2935,
+            2850,
+            2849,
+            2764,
+            2763,
+            2764,
+            2765,
+            2766,
+            2851,
+            2852,
+            2767,
+            2682
+          ],
+          "max_Pd_at_incumbent_J": 0.90858311232,
+          "best_alternative_J": 20.594185001299202,
+          "independent_replay_max_error": 0.0,
+          "wall_s": 0.16210730001330376
+        }
+      },
+      {
+        "scene": "bay_of_fundy",
+        "status": "budget_exceeded",
+        "stop_reason": "diagnostic_90_second_cap",
+        "wall_s": 90.0253526000306,
+        "windows": 82,
+        "enumerated_paths": 5912832,
+        "improving_windows": 0,
+        "baseline_J": 45.881082400000004,
+        "best": {
+          "a": 0,
+          "b": 10,
+          "length": 10,
+          "free_endpoint": false,
+          "status": "exhausted",
+          "paths": 45,
+          "nodes": 174,
+          "same_J_paths": 45,
+          "improving_paths": 0,
+          "baseline_J": 45.881082400000004,
+          "baseline_Pd": 0.41586480000000003,
+          "best_J": 45.881082400000004,
+          "best_Pd": 0.41586480000000003,
+          "best_path": [
+            1494,
+            1493,
+            1492,
+            1491,
+            1490,
+            1489,
+            1488,
+            1487,
+            1486,
+            1547,
+            1608,
+            1669,
+            1730,
+            1729,
+            1728,
+            1789,
+            1850,
+            1849,
+            1848,
+            1847,
+            1908,
+            1907,
+            1906,
+            1905,
+            1966,
+            1967,
+            2028,
+            2089,
+            2090,
+            2151,
+            2212,
+            2211,
+            2210,
+            2149,
+            2148,
+            2087,
+            2026,
+            2025,
+            2024,
+            2085,
+            2146,
+            2147,
+            2208,
+            2269,
+            2330,
+            2331,
+            2270,
+            2271,
+            2332,
+            2333,
+            2272,
+            2211,
+            2212,
+            2151,
+            2152,
+            2091
+          ],
+          "max_Pd_at_incumbent_J": 0.41586480000000003,
+          "best_alternative_J": 45.8810824,
+          "independent_replay_max_error": 0.0,
+          "wall_s": 0.006993099930696189
+        }
+      }
+    ],
+    "theory_certified": false
+  },
+  "root_bounds": {
+    "lake_ontario": {
+      "U_best_direct_STDC": 17.264874448,
+      "L_root_max": 9.179977673619849,
+      "uncertainty_fraction_of_U": 0.46828587133552674
+    },
+    "arctic_ocean": {
+      "U_best_direct_STDC": 20.386109349119998,
+      "L_root_max": 10.479531342357696,
+      "uncertainty_fraction_of_U": 0.48594745751179524
+    },
+    "bay_of_fundy": {
+      "U_best_direct_STDC": 45.881082400000004,
+      "L_root_max": 42.44824000000001,
+      "uncertainty_fraction_of_U": 0.07482043187368202
+    }
+  },
+  "conclusions": [
+    "270 reconstructed candidates all equal contemporaneous incumbent",
+    "final direct routes locally stable in tested short neighborhoods",
+    "global near-optimality not established"
+  ],
+  "model_changed": false,
+  "production_code_changed": false,
+  "physical_direction_unverified": [
+    "bay_of_fundy"
+  ]
+}

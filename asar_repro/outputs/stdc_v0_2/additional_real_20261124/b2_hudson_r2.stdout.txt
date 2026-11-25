@@ -1,0 +1,1 @@
+{"status": "passed", "seed": 41, "scenario": "arctic_ocean", "native_control_error": 0.0, "samples": 20, "wall_s": 12.90982509998139}

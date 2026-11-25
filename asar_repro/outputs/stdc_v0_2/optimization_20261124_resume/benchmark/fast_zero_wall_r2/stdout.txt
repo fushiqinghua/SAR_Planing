@@ -1,0 +1,1 @@
+{"variant": "fast_zero", "protocol": "wall", "J": 17.264874448, "Pd_T": 0.897364416, "status": "budget_exceeded", "stop_reason": "max_open", "work_expanded": 43465, "search_wall_s": 4.945366699947044}

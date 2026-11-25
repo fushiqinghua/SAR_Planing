@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "cases": 45,
+  "searches": 320,
+  "max_J_error": 0.0,
+  "max_replay_error": 0.0,
+  "certified": false,
+  "wall_s": 6.2325557000003755,
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "scripts/audit_optimization.py",
+    "small",
+    "--output-dir",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\optimization_20261124_resume\\validation\\small_search\\audit"
+  ]
+}

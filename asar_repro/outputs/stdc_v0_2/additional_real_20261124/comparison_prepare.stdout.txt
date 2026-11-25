@@ -1,0 +1,1 @@
+{'arctic_ocean': {'PT_J': 25.293460991040014, 'PT_Pd': 0.81763694688, 'particle_sha256': '6ed4ca52ecccc9369adae67f7da75477057317599869389224b6ffb488babfb6'}}

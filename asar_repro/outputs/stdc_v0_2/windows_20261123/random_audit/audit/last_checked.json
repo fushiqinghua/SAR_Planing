@@ -1,0 +1,42 @@
+{
+  "record_index": 9102,
+  "check": "prefix_admissibility",
+  "kind": "particle",
+  "seed": 179,
+  "window": [
+    1,
+    5
+  ],
+  "prefix": [
+    8,
+    7,
+    8,
+    7,
+    8,
+    7
+  ],
+  "depth": 5,
+  "feasible": true,
+  "prefix_J": 4.6649942221486675,
+  "oracle_remaining": 0.0,
+  "oracle_best_full_path": [
+    8,
+    7,
+    8,
+    7,
+    8,
+    7
+  ],
+  "h": {
+    "zero": 0.0,
+    "mass_lb": 0.0,
+    "stdc_lb": 0.0,
+    "stdc_endpoint_lb": 0.0
+  },
+  "h_is_positive_infinity": {
+    "zero": false,
+    "mass_lb": false,
+    "stdc_lb": false,
+    "stdc_endpoint_lb": false
+  }
+}

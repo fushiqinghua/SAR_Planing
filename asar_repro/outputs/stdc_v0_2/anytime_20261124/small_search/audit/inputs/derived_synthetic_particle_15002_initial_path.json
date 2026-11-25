@@ -1,0 +1,14 @@
+{
+  "seed": 15002,
+  "kind": "derived_synthetic_particle",
+  "initial_path": [
+    4,
+    7,
+    4,
+    1,
+    4,
+    7
+  ],
+  "derivation": "eight synthetic ID trajectories with four persistent special bins; retain grid, q, start and T",
+  "data_type": "synthetic_toy"
+}

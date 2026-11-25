@@ -1,0 +1,41 @@
+{
+  "status": "passed",
+  "scenes": [
+    {
+      "scene": "arctic_ocean",
+      "submitted": true,
+      "roundtrip_verified": true,
+      "variables": 38,
+      "native_highs": "1.12.0",
+      "original_J": 20.386109349119998,
+      "model_J": 20.386109349119984,
+      "replay_error": 1.4210854715202004e-14,
+      "constraint_violation": 0.0,
+      "cutoff": 20.386109349119998
+    },
+    {
+      "scene": "bay_of_fundy",
+      "submitted": true,
+      "roundtrip_verified": true,
+      "variables": 28,
+      "native_highs": "1.12.0",
+      "original_J": 45.881082400000004,
+      "model_J": 45.881082400000125,
+      "replay_error": 1.2079226507921703e-13,
+      "constraint_violation": 0.0,
+      "cutoff": 45.881082400000125
+    },
+    {
+      "scene": "lake_ontario",
+      "submitted": true,
+      "roundtrip_verified": true,
+      "variables": 26,
+      "native_highs": "1.12.0",
+      "original_J": 17.264874448,
+      "model_J": 17.264874447999993,
+      "replay_error": 7.105427357601002e-15,
+      "constraint_violation": 0.0,
+      "cutoff": 17.264874448
+    }
+  ]
+}

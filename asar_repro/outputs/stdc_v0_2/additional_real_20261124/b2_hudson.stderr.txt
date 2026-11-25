@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-stdc-v0.2\asar_repro\scripts\run_additional_real.py", line 191, in <module>
+    summary.update((forcing if a.stage=='b2' else particles)(run,a.scenario,out))
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-stdc-v0.2\asar_repro\scripts\run_additional_real.py", line 111, in forcing
+    bundle,case=load_additional_forcing(ROOT,name,window=(utc_label(native[0]),utc_label(native[-1])))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-stdc-v0.2\asar_repro\src\asar_repro\additional_forcing.py", line 201, in load_additional_forcing
+    current=hycom_field(root,case['current']['local_files']) if name=='arctic_ocean' else gomofs_field(root,case['current']['local_files'],case)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-stdc-v0.2\asar_repro\src\asar_repro\additional_forcing.py", line 95, in hycom_field
+    with Dataset(root/row['local_path']) as ds:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "src/netCDF4/_netCDF4.pyx", line 2525, in netCDF4._netCDF4.Dataset.__init__
+  File "src/netCDF4/_netCDF4.pyx", line 2162, in netCDF4._netCDF4._ensure_nc_success
+FileNotFoundError: [Errno 2] No such file or directory: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\data\\raw\\historical\\ASAR_B1_HudsonsBay_20250829\\raw\\hycom\\ESPC-D-V02_surface_20250828.nc'

@@ -1,0 +1,153 @@
+{
+  "status": "passed",
+  "rows": [
+    {
+      "kind": "static",
+      "lazy": false,
+      "extra": 0,
+      "endpoint": 0,
+      "free_endpoint_oracle": 2.6889698185408726,
+      "fixed_endpoint_oracle": 2.8969067521708407,
+      "result_J": 2.8969067521708407,
+      "all_legal_paths": 29,
+      "fixed_endpoint_paths": 9
+    },
+    {
+      "kind": "static",
+      "lazy": false,
+      "extra": 4,
+      "endpoint": 0,
+      "free_endpoint_oracle": 2.6889698185408726,
+      "fixed_endpoint_oracle": 2.8969067521708407,
+      "result_J": 2.8969067521708407,
+      "all_legal_paths": 29,
+      "fixed_endpoint_paths": 9
+    },
+    {
+      "kind": "static",
+      "lazy": true,
+      "extra": 0,
+      "endpoint": 0,
+      "free_endpoint_oracle": 2.6889698185408726,
+      "fixed_endpoint_oracle": 2.8969067521708407,
+      "result_J": 2.8969067521708407,
+      "all_legal_paths": 29,
+      "fixed_endpoint_paths": 9
+    },
+    {
+      "kind": "static",
+      "lazy": true,
+      "extra": 4,
+      "endpoint": 0,
+      "free_endpoint_oracle": 2.6889698185408726,
+      "fixed_endpoint_oracle": 2.8969067521708407,
+      "result_J": 2.8969067521708407,
+      "all_legal_paths": 29,
+      "fixed_endpoint_paths": 9
+    },
+    {
+      "kind": "dynamic",
+      "lazy": false,
+      "extra": 0,
+      "endpoint": 0,
+      "free_endpoint_oracle": 3.0359165841889313,
+      "fixed_endpoint_oracle": 3.2542596390078398,
+      "result_J": 3.2542596390078398,
+      "all_legal_paths": 29,
+      "fixed_endpoint_paths": 9
+    },
+    {
+      "kind": "dynamic",
+      "lazy": false,
+      "extra": 4,
+      "endpoint": 0,
+      "free_endpoint_oracle": 3.0359165841889313,
+      "fixed_endpoint_oracle": 3.2542596390078398,
+      "result_J": 3.2542596390078398,
+      "all_legal_paths": 29,
+      "fixed_endpoint_paths": 9
+    },
+    {
+      "kind": "dynamic",
+      "lazy": true,
+      "extra": 0,
+      "endpoint": 0,
+      "free_endpoint_oracle": 3.0359165841889313,
+      "fixed_endpoint_oracle": 3.2542596390078398,
+      "result_J": 3.2542596390078398,
+      "all_legal_paths": 29,
+      "fixed_endpoint_paths": 9
+    },
+    {
+      "kind": "dynamic",
+      "lazy": true,
+      "extra": 4,
+      "endpoint": 0,
+      "free_endpoint_oracle": 3.0359165841889313,
+      "fixed_endpoint_oracle": 3.2542596390078398,
+      "result_J": 3.2542596390078398,
+      "all_legal_paths": 29,
+      "fixed_endpoint_paths": 9
+    },
+    {
+      "kind": "particle",
+      "lazy": false,
+      "extra": 0,
+      "endpoint": 0,
+      "free_endpoint_oracle": 3.223639377163614,
+      "fixed_endpoint_oracle": 3.3583093012470986,
+      "result_J": 3.3583093012470986,
+      "all_legal_paths": 29,
+      "fixed_endpoint_paths": 9
+    },
+    {
+      "kind": "particle",
+      "lazy": false,
+      "extra": 4,
+      "endpoint": 0,
+      "free_endpoint_oracle": 3.223639377163614,
+      "fixed_endpoint_oracle": 3.3583093012470986,
+      "result_J": 3.3583093012470986,
+      "all_legal_paths": 29,
+      "fixed_endpoint_paths": 9
+    },
+    {
+      "kind": "particle",
+      "lazy": true,
+      "extra": 0,
+      "endpoint": 0,
+      "free_endpoint_oracle": 3.223639377163614,
+      "fixed_endpoint_oracle": 3.3583093012470986,
+      "result_J": 3.3583093012470986,
+      "all_legal_paths": 29,
+      "fixed_endpoint_paths": 9
+    },
+    {
+      "kind": "particle",
+      "lazy": true,
+      "extra": 4,
+      "endpoint": 0,
+      "free_endpoint_oracle": 3.223639377163614,
+      "fixed_endpoint_oracle": 3.3583093012470986,
+      "result_J": 3.3583093012470986,
+      "all_legal_paths": 29,
+      "fixed_endpoint_paths": 9
+    },
+    {
+      "kind": "particle_q_extreme",
+      "q": 0.0,
+      "fixed_endpoint_oracle": 3.9999999999999996,
+      "result_J": 3.9999999999999996
+    },
+    {
+      "kind": "particle_q_extreme",
+      "q": 1.0,
+      "fixed_endpoint_oracle": 2.413770925785054,
+      "result_J": 2.413770925785054
+    }
+  ],
+  "source_unchanged": true,
+  "scope": "Independent enumeration of every legal path with same fixed endpoint; existing failing tests compared a different free-endpoint problem.",
+  "algorithm_modified": false,
+  "original_historical_tests_modified": false
+}

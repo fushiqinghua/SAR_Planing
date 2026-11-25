@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "research_files_byte_unchanged": 5589,
+  "generated_pytest_cache_changes": 2,
+  "cache_incident_sha256": "ffe4804132a7bbbf6e98a3a27d72149b0597e6c89702f8ede165593bdf76ef5d",
+  "baseline_files": 654,
+  "adaptive_20261124_artifacts": 1493,
+  "rollout_limit_diagnosis_20261124_artifacts": 43,
+  "existing_source_files": 154,
+  "blocked_round_artifacts": 108,
+  "r2_artifacts": 221
+}

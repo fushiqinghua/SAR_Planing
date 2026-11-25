@@ -1,0 +1,32 @@
+{
+  "status": "blocked_environment",
+  "user": "jdd\\35448",
+  "records": [
+    {
+      "label": "inherited",
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 128,
+      "stdout": "",
+      "stderr": "fatal: detected dubious ownership in repository at 'E:/毕业设计/终稿研发/new/baseline/SAR_Planing-stdc-v0.2'\n'E:/毕业设计/终稿研发/new/baseline/SAR_Planing-stdc-v0.2/.git' is owned by:\n\tjdd/CodexSandboxOffline (S-1-5-21-1404081547-2965153439-1143136812-1004)\nbut the current user is:\n\tJDD/35448 (S-1-5-21-1404081547-2965153439-1143136812-1001)\nTo add an exception for this directory, call:\n\n\tgit config --global --add safe.directory 'E:/毕业设计/终稿研发/new/baseline/SAR_Planing-stdc-v0.2'\n"
+    },
+    {
+      "label": "explicit_safe",
+      "command": [
+        "git",
+        "-c",
+        "safe.directory=E:/毕业设计/终稿研发/new/baseline/SAR_Planing-stdc-v0.2",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "47953dea8a161f51f0830332723e08b71bf7e862\n",
+      "stderr": ""
+    }
+  ],
+  "source_changed": false,
+  "tests_changed": false
+}

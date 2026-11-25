@@ -1,0 +1,1 @@
+{"variant": "window_zero", "epsilon": 1.04, "repeat": 2, "status": "budget_exceeded", "stop_reason": "max_expansions", "J": 17.29389415456, "Pd_T": 0.89737041888, "expanded": 5000, "search_wall_s": 1.0853550999891013, "process_peak_memory_mib": 89.765625, "theory_certified": false}

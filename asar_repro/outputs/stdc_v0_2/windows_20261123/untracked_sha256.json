@@ -1,0 +1,11 @@
+{
+  "asar_repro/docs/stdc_window_improvement.md": "ec9e825010d81036530da78d8147863d7b9a9afc2aef7fe6589cb6946cf47889",
+  "asar_repro/scripts/audit_window_bounds.py": "b438f09ede4c61d3a10bda084f48ea1215ac6046719c986a99e66eed8d571855",
+  "asar_repro/scripts/audit_window_search.py": "299f140645275981c0fccd054b3a8d244aeab50f876f5ae6d8eafb3faa6b96cc",
+  "asar_repro/scripts/run_window_experiments.py": "fc1a2f45b9c85f9e8a2f957cd359d28fcd9715f8ebfcc572cda542dee698ce31",
+  "asar_repro/scripts/run_window_validation.py": "ffa9bcc6aeb3a6c07e1f54832ae3c25281bf5c12fc1975e41a4475c8258ac8c9",
+  "asar_repro/src/asar_repro/window_bounds.py": "67fc3be440e2693ce75dd530f95e995291f068ae7a4d8d16d7c2ece0ed058380",
+  "asar_repro/src/asar_repro/window_search.py": "82ad9c2f9f06842d9045036fdf18a737c5271ef8ee0a8a3956dfeec23f3c5b91",
+  "asar_repro/tests/test_window_bounds.py": "ac3102c1c2ef160c28dedca8b8b29d9611e881d8128c4c706c87c8191b5966ab",
+  "asar_repro/tests/test_window_search.py": "31ae064a917e9a2fa5f4d6745dee90ac4f57fc739bceed5816251369c230cd6f"
+}

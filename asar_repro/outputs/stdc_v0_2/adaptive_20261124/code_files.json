@@ -1,0 +1,56 @@
+{
+  "files": [
+    {
+      "path": "src/asar_repro/adaptive_search.py",
+      "sha256": "dd86e8107ad3adb59e1f93f6487fc7ba23f643d0b74afb4649dee4ab8b4d04b3"
+    },
+    {
+      "path": "src/asar_repro/compact_particle_dp.py",
+      "sha256": "1f8d2ad904d08c4d7f9fc0359e02491d74d8dbe19a516cfe2908c583d6a96967"
+    },
+    {
+      "path": "src/asar_repro/resumable_search.py",
+      "sha256": "f1753f64b2b520a1a7ab51918372013b0738289f667db4121382122733064cc2"
+    },
+    {
+      "path": "src/asar_repro/short_window_rollout.py",
+      "sha256": "8c62724ec91bc0a997b6dea743afed237c04432d5fb8dabe79874b1b7d41f67f"
+    },
+    {
+      "path": "src/asar_repro/sparse_particle_guide.py",
+      "sha256": "b1bc5bb2b76ecb47fe8c0ec14e6717ff004f089fec99b9c6efee0cea079fa71c"
+    },
+    {
+      "path": "tests/test_adaptive_search.py",
+      "sha256": "1361d7602d7643c3e41df372919eed0777e64a88f2d586fec120bab488970aa6"
+    },
+    {
+      "path": "tests/test_compact_particle_dp.py",
+      "sha256": "373b7c8d625f1d846fb83c938edb66028a1546e92c4d353e941794da2239ca69"
+    },
+    {
+      "path": "tests/test_resumable_search.py",
+      "sha256": "332d5245c63e4e2bc8a4ecc28539702b5aaa72e69746e1e1a50fc7424f42c00c"
+    },
+    {
+      "path": "tests/test_short_window_rollout.py",
+      "sha256": "df83a4f0b99df217e4b27a15f85201335e2f22bb28774d926545430f02ed0bee"
+    },
+    {
+      "path": "tests/test_sparse_particle_guide.py",
+      "sha256": "e7f050e748e1a600dff4a2c68c0a2dc85b54faf37688a9cfff1fd63572c1468d"
+    },
+    {
+      "path": "scripts/audit_adaptive.py",
+      "sha256": "a3db1cc4ffa4daf971c52493ad9ca620748fba2f7aa58f5a88435c08ac2591d2"
+    },
+    {
+      "path": "scripts/run_adaptive_experiments.py",
+      "sha256": "7638fe740294c47af20afd9f67674271497b593dfc55a664cff1181e40ea036b"
+    },
+    {
+      "path": "scripts/run_adaptive_validation.py",
+      "sha256": "58ed2ce8d31745f15de47cddceb634362a515199c186733ed32bd14ab2cd5298"
+    }
+  ]
+}

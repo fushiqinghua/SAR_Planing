@@ -1,0 +1,125 @@
+{
+  "kind": "derived_synthetic_particle",
+  "seed": 15004,
+  "window": [
+    1,
+    4
+  ],
+  "mode": "stdc_endpoint_lb",
+  "input_sha256": "0c7ff9b242877cd39a85c65e14752655114976598b77c8e11b2afeb802258528",
+  "route_input_sha256": "391a4ef7dba2db55110823e194e31af27a4b0421e93540e0bb4858a96d57917c",
+  "data_type": "synthetic_toy",
+  "derivation": "eight synthetic ID trajectories with four persistent special bins; retain grid, q, start and T",
+  "reference_path": [
+    4,
+    1,
+    4,
+    5,
+    8,
+    7
+  ],
+  "initial_J": 4.968509881550767,
+  "initial_Pd": 0.03149011844923333,
+  "oracle": {
+    "J": 4.763837437650828,
+    "path": [
+      4,
+      1,
+      2,
+      5,
+      8,
+      7
+    ],
+    "candidate_count": 3
+  },
+  "oracle_wall_s": 0.00036700000055134296,
+  "result": {
+    "path": [
+      4,
+      1,
+      2,
+      5,
+      8,
+      7
+    ],
+    "J": 4.763837437650828,
+    "Pd": 0.08265822942421808,
+    "expanded": 3,
+    "generated": 4,
+    "pruned": 5,
+    "peak_open": 2,
+    "status": "completed",
+    "stop_reason": null,
+    "incumbent_source": "window[1:4]",
+    "theory_certified": false,
+    "seed": {},
+    "windows": [
+      {
+        "a": 1,
+        "b": 4,
+        "mode": "stdc_endpoint_lb",
+        "initial_J": 4.968509881550767,
+        "final_J": 4.763837437650828,
+        "status": "completed",
+        "stop_reason": null,
+        "expanded": 3,
+        "generated": 4,
+        "pruned": 5,
+        "improvements": 1,
+        "peak_open": 2,
+        "wall_s": 0.0006828999612480402,
+        "neighborhood_only": true
+      }
+    ],
+    "improvements": [
+      {
+        "a": 1,
+        "b": 4,
+        "old_J": 4.968509881550767,
+        "J": 4.763837437650828,
+        "old_Pd": 0.03149011844923333,
+        "Pd": 0.08265822942421808,
+        "prediction_error_J": 0.0,
+        "prediction_error_Pd": 0.0,
+        "expanded_total": 3,
+        "elapsed_s": 0.0006894000107422471,
+        "path": [
+          4,
+          1,
+          2,
+          5,
+          8,
+          7
+        ],
+        "source": "window[1:4]"
+      }
+    ],
+    "wall_s": 0.0007879000622779131,
+    "completion_reason": "fixed_window_exhausted_at_tolerance",
+    "heuristic_evaluations": 4,
+    "complete_candidates": 1,
+    "accepted_replays": 1,
+    "deadline_overshoot_s": 0.0
+  },
+  "search_wall_s": 0.0007991999154910445,
+  "replay_J": 4.763837437650828,
+  "replay_Pd": 0.08265822942421808,
+  "J_minus_oracle": 0.0,
+  "J_replay_error": 0.0,
+  "Pd_replay_error": 0.0,
+  "checks": {
+    "completed": true,
+    "no_budget_stop_reason": true,
+    "not_globally_certified": true,
+    "full_absolute_horizon": true,
+    "fixed_prefix_preserved": true,
+    "fixed_endpoint_and_suffix_preserved": true,
+    "J_replay": true,
+    "Pd_replay": true,
+    "optimal_window_J": true,
+    "nonworsening_full_J": true,
+    "initial_no_detection": true,
+    "mass_monotonic": true
+  },
+  "status": "passed"
+}

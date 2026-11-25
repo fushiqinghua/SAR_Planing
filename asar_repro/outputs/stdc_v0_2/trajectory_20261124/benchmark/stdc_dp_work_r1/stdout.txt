@@ -1,0 +1,1 @@
+{"variant": "stdc_dp", "protocol": "work", "J": 17.264874448, "Pd_T": 0.897364416, "status": "budget_exceeded", "stop_reason": "max_expansions", "work_expanded": 5000, "search_wall_s": 4.0920398000162095}

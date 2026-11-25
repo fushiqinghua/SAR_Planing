@@ -1,0 +1,18 @@
+{
+  "cwd": "E:/毕业设计/终稿研发/new/baseline/SAR_Planing-stdc-v0.2/asar_repro",
+  "interpreter": "C:/Users/35448/.conda/envs/maritime-sar/python.exe",
+  "command": ["C:/Users/35448/.conda/envs/maritime-sar/python.exe", "outputs/stdc_v0_2/exact_repair_20261124/development/solver/check_long_toy.py"],
+  "environment": {"PYTHONPATH": "scripts/offline_guard;src", "PYTHONDONTWRITEBYTECODE": "1", "PYTHONUTF8": "1", "ASAR_OFFLINE": "1", "OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1"},
+  "seed": null,
+  "toy_deterministic": true,
+  "actual_horizons": [49, 60],
+  "actual_q": 0.78,
+  "no_real_inputs_used": true,
+  "retained_attempts": {
+    "long_toy.stdout.txt": "Default native tolerance produced blocked/solver_constraint_violation, as designed; no assertion relaxed.",
+    "long_toy_strict.stdout.txt": "Runtime wrapper verified documented strict native options before source correction; passed.",
+    "long_toy_strict_r2.stderr.txt": "Shell quoting caused Python -c SyntaxError before any test ran; retained, replaced with inspectable script.",
+    "long_toy_strict_r3.stdout.txt": "Final inspectable deterministic two-case script passed after source correction."
+  },
+  "highs_option_reference": "https://ergo-code.github.io/HiGHS/dev/options/definitions/"
+}

@@ -1,0 +1,6 @@
+1/6 paper_baseline w=1.04 J=17.293894155 Pd=0.897370419 completed None 0.978s
+2/6 anytime_zero w=1.04 J=17.266645360 Pd=0.896678016 budget_exceeded max_expansions 2.756s
+3/6 anytime_mass w=1.04 J=17.266645360 Pd=0.896678016 budget_exceeded max_expansions 2.738s
+4/6 anytime_stdc w=1.04 J=17.264874448 Pd=0.897364416 budget_exceeded max_expansions 4.198s
+5/6 anytime_stdc w=1.1 J=17.319001780 Pd=0.900067235 budget_exceeded max_expansions 3.249s
+6/6 anytime_stdc w=1.0 J=20.477608336 Pd=0.881063040 budget_exceeded max_expansions 6.493s

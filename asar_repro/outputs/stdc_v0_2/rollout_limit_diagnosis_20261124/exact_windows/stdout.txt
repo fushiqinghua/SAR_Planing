@@ -1,0 +1,12 @@
+lake_ontario length 4 windows 46 improving 0
+lake_ontario length 6 windows 90 improving 0
+lake_ontario length 8 windows 132 improving 0
+{'scene': 'lake_ontario', 'windows': 132, 'enumerated_paths': 73224, 'improving_windows': 0, 'improving_paths': 0, 'equal_J_paths': 141, 'baseline_J': 17.264874448, 'best_J': 17.264874448, 'max_Pd_at_same_J': 0.897364416, 'free_terminal8_best_J': 17.264874448, 'free_terminal8_best_Pd': 0.897364416, 'free_terminal8_paths': 62322, 'wall_s': 1.8302372000180185}
+arctic_ocean length 4 windows 57 improving 0
+arctic_ocean length 6 windows 112 improving 0
+arctic_ocean length 8 windows 165 improving 0
+{'scene': 'arctic_ocean', 'windows': 165, 'enumerated_paths': 101674, 'improving_windows': 0, 'improving_paths': 0, 'equal_J_paths': 165, 'baseline_J': 20.386109349119998, 'best_J': 20.386109349119998, 'max_Pd_at_same_J': 0.90858311232, 'free_terminal8_best_J': 20.386109349119998, 'free_terminal8_best_Pd': 0.90858311232, 'free_terminal8_paths': 65536, 'wall_s': 3.7440503999823704}
+bay_of_fundy length 4 windows 52 improving 0
+bay_of_fundy length 6 windows 102 improving 0
+bay_of_fundy length 8 windows 150 improving 0
+{'scene': 'bay_of_fundy', 'windows': 150, 'enumerated_paths': 36339, 'improving_windows': 0, 'improving_paths': 0, 'equal_J_paths': 427, 'baseline_J': 45.881082400000004, 'best_J': 45.881082400000004, 'max_Pd_at_same_J': 0.41586480000000003, 'free_terminal8_best_J': 45.881082400000004, 'free_terminal8_best_Pd': 0.41586480000000003, 'free_terminal8_paths': 65536, 'wall_s': 1.9159520000685006}

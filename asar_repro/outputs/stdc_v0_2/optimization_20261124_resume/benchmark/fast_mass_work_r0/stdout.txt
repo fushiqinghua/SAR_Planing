@@ -1,0 +1,1 @@
+{"variant": "fast_mass", "protocol": "work", "J": 17.266645360000002, "Pd_T": 0.896678016, "status": "budget_exceeded", "stop_reason": "max_expansions", "work_expanded": 5000, "search_wall_s": 2.8716280999360606}

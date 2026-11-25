@@ -1,0 +1,90 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\audit_anytime_search.py",
+    "--output-dir",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\anytime_20261124\\small_search\\audit"
+  ],
+  "historical_seeds": [
+    15000,
+    15001,
+    15002,
+    15003,
+    15004,
+    15005,
+    15006,
+    15007,
+    15008,
+    15009,
+    15010,
+    15011,
+    15012,
+    15013,
+    15014,
+    15015,
+    15016,
+    15017,
+    15018,
+    15019,
+    15020,
+    15021,
+    15022,
+    15023,
+    15024,
+    15025,
+    15026,
+    15027,
+    15028,
+    15029,
+    15030,
+    15031,
+    15032,
+    15033,
+    15034
+  ],
+  "derived_seeds": [
+    15000,
+    15001,
+    15002,
+    15003,
+    15004
+  ],
+  "expected_cases": 45,
+  "expected_searches": 405,
+  "case_counts": {
+    "historical_dynamic_matrix": 35,
+    "derived_stationary_matrix": 5,
+    "derived_synthetic_particle": 5
+  },
+  "bound_modes": [
+    "zero",
+    "mass_lb",
+    "stdc_lb"
+  ],
+  "guide_weights": [
+    1.0,
+    1.04,
+    1.1
+  ],
+  "initial_path_policy": "same deterministic unoptimized route per seed for all 9 runs",
+  "limits": null,
+  "tolerance": 1e-10,
+  "data_type": "synthetic_toy",
+  "guide_used_for_pruning": false,
+  "guide_used_for_termination": false,
+  "bound_is_unweighted": true,
+  "global_epsilon_certified": false,
+  "scope": "finite numerical global Oracle agreement on these toy inputs only",
+  "source_sha256": {
+    "scripts\\audit_anytime_search.py": "99985dc2eb02f45040bd91df94f975d5494a2b339adc58c4e18709dbb28f87f5",
+    "scripts\\audit_window_search.py": "299f140645275981c0fccd054b3a8d244aeab50f876f5ae6d8eafb3faa6b96cc",
+    "scripts\\stdc_validation_guards.py": "c75e9f4a546aa3d1b337af69021bdec75ed95fb01b16622915e426a3b9e7715e",
+    "scripts\\run_stdc_small_search.py": "21c050f2bf46ff13072cfe2f0d2c7727d9515a3f7dfd82bd862a40d9bfda4b2c",
+    "src\\asar_repro\\anytime_search.py": "3a92527d94beb00031f8da742b9a486862186cd0e03e8c567842683b6707024f",
+    "src\\asar_repro\\heuristic.py": "43f94d7ec3ae69dc67ee4416892ea65aa445498a002905f77d4b1f533b168c0b",
+    "src\\asar_repro\\stdc_heuristic.py": "18bee643e5860683cd4dfa9cbf12d9ec7a2c5ee4e2abd7d0895cf9a144cc980f",
+    "src\\asar_repro\\objective.py": "792077ad3e0286c03f60108f2580ea3b3557e3f5b002bc1a5e2f9f67e48fb2ad",
+    "src\\asar_repro\\oracle.py": "93f41213b3352f0bde39ae3a114ba59a6987b05a755eb9c7260b738dc2a47b52",
+    "src\\asar_repro\\motion.py": "7e74178390ffa34f30f7b987a4d7a2459e8f0ca2646ca3026c97e505f758c2c9"
+  }
+}

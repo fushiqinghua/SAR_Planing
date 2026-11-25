@@ -1,0 +1,1299 @@
+{
+  "files": [
+    {
+      "path": "aggregate.csv",
+      "bytes": 6144,
+      "sha256": "3c9fb9efec68c47b1930b5435b59088be860aa420efefbce45c59fad17b0b88a"
+    },
+    {
+      "path": "aggregate.json",
+      "bytes": 16547,
+      "sha256": "735b171c2fd0ed25c3824f3a29e5d8f2a107e4795ab449a83121550b0dc863dc"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_wall_r0/command.json",
+      "bytes": 1447,
+      "sha256": "b481e570804de7d646f56cdb7160de8e0ed391c4e6596448666aed271d326686"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_wall_r0/raw_result.json",
+      "bytes": 38139,
+      "sha256": "d67138894d411209916cca714ca21a3271df1035ea79bf3b4bef499fc21b40a4"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_wall_r0/result.json",
+      "bytes": 56361,
+      "sha256": "4ea9388cb6a647864380fda0a87bb22c85ef92d304baa2a3c2492613546dbe56"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_wall_r0/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_wall_r0/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_wall_r1/command.json",
+      "bytes": 1447,
+      "sha256": "6e00ea6c3a480b364bfafdf7f8f662e63c57c6ff8231bca419072ea9d835b992"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_wall_r1/raw_result.json",
+      "bytes": 38142,
+      "sha256": "9e0dd8f531b95c4832de5f1d5a5632f1376266173ef6469fc23d71ff094d7f1c"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_wall_r1/result.json",
+      "bytes": 56368,
+      "sha256": "c312f7036e004b8fc67677381674d5359637f7b8ed0424b3d0d037dcf4520a10"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_wall_r1/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_wall_r1/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_wall_r2/command.json",
+      "bytes": 1447,
+      "sha256": "d9cdf0fad5278c993f063b117cb3d3e622b8ea7aed986175240b6179e5e1e196"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_wall_r2/raw_result.json",
+      "bytes": 38142,
+      "sha256": "8f41c1caa0b86cfad57cdb739ae78f15a6caff1229208475cbf315878b497298"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_wall_r2/result.json",
+      "bytes": 56367,
+      "sha256": "8adfea3a8176a9ffd25fd675f69d4f5ec7d0ebcb6640428f29ef58254a733742"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_wall_r2/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_wall_r2/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_work_r0/command.json",
+      "bytes": 1447,
+      "sha256": "2ad45a4ab1853b8db140dc43cdc511688f62ba9ea46ab328af95c1244e267502"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_work_r0/raw_result.json",
+      "bytes": 38129,
+      "sha256": "758a654774f1d8f6b623e4046529a3f6c8510ced715b3261f03c4b11087700a0"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_work_r0/result.json",
+      "bytes": 56337,
+      "sha256": "09b2cd54067da15cc20a6066e2dc4e0365f57339f4ff2dc9b1b19d1a388e5ad3"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_work_r0/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_work_r0/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_work_r1/command.json",
+      "bytes": 1447,
+      "sha256": "4320dc85a1930b9545efd78180bbf4f57dd93effaceded6bccb51c50f982f989"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_work_r1/raw_result.json",
+      "bytes": 38131,
+      "sha256": "60fd8f56a997178969b89d1217e280b24724ee604c80c8c6560c34d2a6e36a89"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_work_r1/result.json",
+      "bytes": 56338,
+      "sha256": "406ad33db1e475ff174a2037b24712f7e54a93713608a3705d60b0ddc21e6b80"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_work_r1/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_work_r1/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_work_r2/command.json",
+      "bytes": 1447,
+      "sha256": "272359c84d224decd8e75085ac14f37a1e28b8c5930ebfd47a3bb71edc389ba2"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_work_r2/raw_result.json",
+      "bytes": 38125,
+      "sha256": "c729831e004f0aeb232c0c644d3474f99374b0b6ad31f991263a5dace74e8ee2"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_work_r2/result.json",
+      "bytes": 56330,
+      "sha256": "ff0f5322b185912787194dd45440f49f87824996fab91d1f9e8763bd5a4cd991"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_work_r2/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_compressed_stdc_work_r2/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_dp_only_wall_r0/command.json",
+      "bytes": 1431,
+      "sha256": "f65ed0920415d9c07cb86658f89665afb4f0d0df58c4dc71c4845723fe2cf576"
+    },
+    {
+      "path": "arctic_ocean_dp_only_wall_r0/raw_result.json",
+      "bytes": 30168,
+      "sha256": "4532e1b70ab2a9cdca0717a3e51528b0170f1021e9c606e2a96ed1b496b67924"
+    },
+    {
+      "path": "arctic_ocean_dp_only_wall_r0/result.json",
+      "bytes": 48733,
+      "sha256": "726337e6382108f34b8a5958a220717670cffa0db022029dc00c0e772decef0e"
+    },
+    {
+      "path": "arctic_ocean_dp_only_wall_r0/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_dp_only_wall_r0/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_dp_only_wall_r1/command.json",
+      "bytes": 1431,
+      "sha256": "e320944c355bdd0d77c14ebd7f04b529a6a4d333f6561dfc10f138967e87fb2d"
+    },
+    {
+      "path": "arctic_ocean_dp_only_wall_r1/raw_result.json",
+      "bytes": 30168,
+      "sha256": "da97f7a13473dbce14f3675aba56c2e48d6453530c9f06eb56d850682cc79d2d"
+    },
+    {
+      "path": "arctic_ocean_dp_only_wall_r1/result.json",
+      "bytes": 48732,
+      "sha256": "6665f58e216ed4394db583cc3849a7911423feca8993d4e930f0eb73d928591f"
+    },
+    {
+      "path": "arctic_ocean_dp_only_wall_r1/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_dp_only_wall_r1/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_dp_only_wall_r2/command.json",
+      "bytes": 1431,
+      "sha256": "fba9735f27cb77c5e5f8e58806575679af79fa173a138a50800f1ad1ebe01155"
+    },
+    {
+      "path": "arctic_ocean_dp_only_wall_r2/raw_result.json",
+      "bytes": 30168,
+      "sha256": "0acf64bad58a26eee6ae31ac4fe9926db41b5ebc3614d71b3f41fb79c525aaf3"
+    },
+    {
+      "path": "arctic_ocean_dp_only_wall_r2/result.json",
+      "bytes": 48731,
+      "sha256": "699e569d23db64be8e44c996473bb781f4855d1e99364cdc893bf20003bb3655"
+    },
+    {
+      "path": "arctic_ocean_dp_only_wall_r2/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_dp_only_wall_r2/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_dp_only_work_r0/command.json",
+      "bytes": 1431,
+      "sha256": "d39ca8153cfdd6c80808229da1dfa3b8d0a7c3e842904f2178d709569c636af3"
+    },
+    {
+      "path": "arctic_ocean_dp_only_work_r0/raw_result.json",
+      "bytes": 30165,
+      "sha256": "8f1c0ebd2b4b2db5a9d487198e0e212f96a512e3c3241da32ea53dcd6acd9b3f"
+    },
+    {
+      "path": "arctic_ocean_dp_only_work_r0/result.json",
+      "bytes": 48727,
+      "sha256": "a101e0759d49dc16e9723f7704bb33a4d81be04c66d2d690d1b8d6da461497e8"
+    },
+    {
+      "path": "arctic_ocean_dp_only_work_r0/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_dp_only_work_r0/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_dp_only_work_r1/command.json",
+      "bytes": 1431,
+      "sha256": "2d8eba1c5e63910b5d349d6de400b91d4ff8db334431985af00958e47ee5d9aa"
+    },
+    {
+      "path": "arctic_ocean_dp_only_work_r1/raw_result.json",
+      "bytes": 30165,
+      "sha256": "588a9fbc1381cd1eb175acc933478986444456fa4f0b1fb1cd8a6595db21d885"
+    },
+    {
+      "path": "arctic_ocean_dp_only_work_r1/result.json",
+      "bytes": 48727,
+      "sha256": "b7fe45821158e854228aac00f2d5414391af967104afc0cb090f130cc396ad7a"
+    },
+    {
+      "path": "arctic_ocean_dp_only_work_r1/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_dp_only_work_r1/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_dp_only_work_r2/command.json",
+      "bytes": 1431,
+      "sha256": "9a1c185a436582db82b751ba014636953ee9629992fd337f453b375132aa1a6d"
+    },
+    {
+      "path": "arctic_ocean_dp_only_work_r2/raw_result.json",
+      "bytes": 30168,
+      "sha256": "9169c2762c84402a488a8211de158aeedc80831b0d65db783d78bda64811c016"
+    },
+    {
+      "path": "arctic_ocean_dp_only_work_r2/result.json",
+      "bytes": 48734,
+      "sha256": "c01ee7f05f3b120ddfd6055d25dd27bd91d6efe2a2e00b5e74f47ac50d86e549"
+    },
+    {
+      "path": "arctic_ocean_dp_only_work_r2/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_dp_only_work_r2/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_wall_r0/command.json",
+      "bytes": 1439,
+      "sha256": "172af2b0d1d059c5052a5450c05395c00d6a37f68afd8b7102e45596d3e6257d"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_wall_r0/raw_result.json",
+      "bytes": 59964,
+      "sha256": "4fbe8623829354d0d326c4c6c458ccbef71f50f260c1671e1179f76c4dacde08"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_wall_r0/result.json",
+      "bytes": 56339,
+      "sha256": "d8786dd788ef24c19cfa5bb3fd7e92f7da3e0578775d1dd0f6453a03cc083699"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_wall_r0/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_wall_r0/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_wall_r1/command.json",
+      "bytes": 1439,
+      "sha256": "a4df0bd63a40992a1c571655327d45ba52121b9db28a1ad62a373cb2ec01f0df"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_wall_r1/raw_result.json",
+      "bytes": 51109,
+      "sha256": "cfd8973bd2782d8e329cb12062cc3fb7533de1795e996e40d83775dfe50e81fe"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_wall_r1/result.json",
+      "bytes": 52541,
+      "sha256": "6c7b2aa79a7e8623783986621047d7be637cf113a3a8f819ccfd37b90c0d7744"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_wall_r1/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_wall_r1/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_wall_r2/command.json",
+      "bytes": 1439,
+      "sha256": "dd6790aef91861719a08f88fddf4d8785317c93c504a7b984a895e7d19f1652b"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_wall_r2/raw_result.json",
+      "bytes": 51102,
+      "sha256": "f09b9e6caa15f2f799140d431f7add86d6e4d25e7caea7671a37bb22146ae46a"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_wall_r2/result.json",
+      "bytes": 52541,
+      "sha256": "5f2b18c8f262f7aa3ff0892894591672a61386e53643ba75e91d1564c2cff9f0"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_wall_r2/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_wall_r2/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_work_r0/command.json",
+      "bytes": 1439,
+      "sha256": "f2244e06d011e3414f80b1ff0c4e3ed39e6ea7de7dab7ec6c571606253c1a6ec"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_work_r0/raw_result.json",
+      "bytes": 71583,
+      "sha256": "68801e73dcda88d6c8310593f8e7f63a8bf798dffacf59128fa5e83535c02c14"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_work_r0/result.json",
+      "bytes": 61407,
+      "sha256": "713c9ce957f90761ed0dde46eec33e58ad86ee0e578124cba3b6052cb4b0cd31"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_work_r0/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_work_r0/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_work_r1/command.json",
+      "bytes": 1439,
+      "sha256": "765d331b00b277dc27414358f0aa326c7f31bc1f8acfce9dc40a05e88df9ead9"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_work_r1/raw_result.json",
+      "bytes": 71586,
+      "sha256": "6b53d7da897ad6df27b6d24fe0af98c74c6136028d2c04b04aec57c215e4f20c"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_work_r1/result.json",
+      "bytes": 61407,
+      "sha256": "ad534230fdfed7945042d5c5c0ada8db74d899630d7c387c441ea227fe2a956b"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_work_r1/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_work_r1/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_work_r2/command.json",
+      "bytes": 1439,
+      "sha256": "b6f82d1ae9a7c3d4e58a7275ece6c7428baec88c9ca106c25680b3c5feaea5f5"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_work_r2/raw_result.json",
+      "bytes": 71579,
+      "sha256": "5af4d172859061fd13ea6bb1850608d84cfd29b013e39e1b5e9299a348315aff"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_work_r2/result.json",
+      "bytes": 61405,
+      "sha256": "fae3c1bcc96c9185b33c6022c5587543ba820a8e805dde2b3492c6fb364cc87b"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_work_r2/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_diverse_work_r2/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_wall_r0/command.json",
+      "bytes": 1429,
+      "sha256": "42d793fa04d4f945bbf3c76b829f1c9784802017ad950928ad246a47427d810d"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_wall_r0/raw_result.json",
+      "bytes": 30166,
+      "sha256": "05b29952417c1164f0a79916bd722d6c2f6353f59d167fef7a251a1573436429"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_wall_r0/result.json",
+      "bytes": 48726,
+      "sha256": "8de405b0f2c0172a2c1f3d359a8dc690bffeb14f7ad1a20205b370cb9babc17b"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_wall_r0/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_wall_r0/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_wall_r1/command.json",
+      "bytes": 1429,
+      "sha256": "f2d93eb15f70efe37afd9343fcec97530a68d274503be9f786cde67b923b0c6c"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_wall_r1/raw_result.json",
+      "bytes": 30167,
+      "sha256": "facf9df776cbc5918b1d16893429e6e50210afc416d33f9a5d95cef8f7c97d5a"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_wall_r1/result.json",
+      "bytes": 48730,
+      "sha256": "688d0999fae287d405ca9c7445fda3f1ce25021a7c682d86611dd3076b903b9c"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_wall_r1/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_wall_r1/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_wall_r2/command.json",
+      "bytes": 1429,
+      "sha256": "c9027b9f2d9fcbb4d089bbd5d0290627bf21b25b1ce11e61857c876be81af083"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_wall_r2/raw_result.json",
+      "bytes": 30168,
+      "sha256": "98ee37cf30dd2553e8f3e030494bbf88f8aaa7033365dd31481dadc722593e95"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_wall_r2/result.json",
+      "bytes": 48729,
+      "sha256": "d95d8bd31501131adffe7568ad98d485c4566292e664f5cec4f8fa082da583d0"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_wall_r2/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_wall_r2/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_work_r0/command.json",
+      "bytes": 1429,
+      "sha256": "fae6aa0ed30b650de39126e9d13c5fd9386d0331ddff3d2d7e3f96d4f8ee2ce4"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_work_r0/raw_result.json",
+      "bytes": 30169,
+      "sha256": "70b1fa47d8080b81533b38bcc55bd04b9c726fd5bfbdb00152cb9f54b3743632"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_work_r0/result.json",
+      "bytes": 48733,
+      "sha256": "0d18f6e25357eb3b4784a0d12d408495dd870dc93187401d1f401a6a957b5141"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_work_r0/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_work_r0/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_work_r1/command.json",
+      "bytes": 1429,
+      "sha256": "744297d5373a096f51f7018f69437154ab6a829ea6ae743a86fe4fd0f76aaf53"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_work_r1/raw_result.json",
+      "bytes": 30169,
+      "sha256": "a38c1e1d3eb9c5a0ed094393bdb8209422a6eb7186709aa0fa17a0e18111f5df"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_work_r1/result.json",
+      "bytes": 48728,
+      "sha256": "fb8dc39aaab0058894940e06deefdb68f9f4058291b40fef7bc21930a0f81d98"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_work_r1/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_work_r1/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_work_r2/command.json",
+      "bytes": 1429,
+      "sha256": "b170eff33da8a9703da43dc13f97ca98c0d38fc277b8def3dc245be3ec947c84"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_work_r2/raw_result.json",
+      "bytes": 30168,
+      "sha256": "00afa079582742efb54e0173ce63e9c739c66551761e8d5b13cb6a87f47c99c9"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_work_r2/result.json",
+      "bytes": 48730,
+      "sha256": "466816dd048db00e7f701500e86cf7d09d773b59c64bc778b1d8c744002fd192"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_work_r2/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_dp_work_r2/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_wall_r0/command.json",
+      "bytes": 1435,
+      "sha256": "251bfa52771b3ca8047a743b990b6f410ecbe8ddc50fdbca7f661190487943d7"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_wall_r0/raw_result.json",
+      "bytes": 59947,
+      "sha256": "fad0d32d8252dea2c3c1507797fab3d4bdf76a821579b15df623c1ebe210e534"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_wall_r0/result.json",
+      "bytes": 56325,
+      "sha256": "fc324d92059a81ed17cb0f90cb3c53d7eb0ed0803d9d2a9e737f03e836280256"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_wall_r0/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_wall_r0/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_wall_r1/command.json",
+      "bytes": 1435,
+      "sha256": "8318e7fdf4899945f975f848172c09883b23cf8e746c0c59fe596d9bb4dfe749"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_wall_r1/raw_result.json",
+      "bytes": 59954,
+      "sha256": "305acb469436fae9bf2504bf432817458ddaae80f31b491f81d04bef86581976"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_wall_r1/result.json",
+      "bytes": 56328,
+      "sha256": "f4736b6e48c07ebb24315c8f5d4b55b331c0d69fd2b9e4cc8bc3a580871b0db7"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_wall_r1/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_wall_r1/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_wall_r2/command.json",
+      "bytes": 1435,
+      "sha256": "647217d65f1c91a21b5df3ae94712f01be32ae1f962a7bd3bb58606dff662969"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_wall_r2/raw_result.json",
+      "bytes": 51077,
+      "sha256": "305b8a52e93db8680777d87112198c3ba0f7056b2ce6c6462f36a68e26748f0b"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_wall_r2/result.json",
+      "bytes": 52525,
+      "sha256": "5ffd7b7dbf871b5d7360f0ae3b6310535677fdf6666a89133b533957607926c5"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_wall_r2/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_wall_r2/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_work_r0/command.json",
+      "bytes": 1435,
+      "sha256": "6ce5db47fbe9ca7d15dc217e511a6338d45021fa4863f8c38c01c332bf0dfe4a"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_work_r0/raw_result.json",
+      "bytes": 71554,
+      "sha256": "f8b0fc4134b57838ccbd429bb0d853c914b4bcc8eabd7fba370a9a68f2834af7"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_work_r0/result.json",
+      "bytes": 61388,
+      "sha256": "522000ae27abcd1a32968cdff1d07c2b15a8fdd74451f954a9a88ea7df771156"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_work_r0/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_work_r0/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_work_r1/command.json",
+      "bytes": 1435,
+      "sha256": "59269642b896f15096bdeab75ddac800e6e495048c770f331e908d39e2207fa4"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_work_r1/raw_result.json",
+      "bytes": 71551,
+      "sha256": "7c582d8e30d3a710652844258364fcbf44611e96d2ab9cb44a0ab567472dd422"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_work_r1/result.json",
+      "bytes": 61389,
+      "sha256": "57dbae3c26c03e5a6e30f941e78342d8659e1af2514ea0c45ec5e6c98dcb85c2"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_work_r1/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_work_r1/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_work_r2/command.json",
+      "bytes": 1435,
+      "sha256": "77b246ec566a75aca7596142197e47966eecf7cdf800dd7be95b6517ca744de0"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_work_r2/raw_result.json",
+      "bytes": 71542,
+      "sha256": "89fe9adb1d7744fadc417924132bf63ce13b6bd2365bc42c648854d43635c030"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_work_r2/result.json",
+      "bytes": 61385,
+      "sha256": "170e60f215d0448799aaa837c4ef9d8467399f1c98ff5b316436da4e981dc8eb"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_work_r2/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_mid_plain_work_r2/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_wall_r0/command.json",
+      "bytes": 1445,
+      "sha256": "2183fc9048157d768959c0b3b25bea1ecfddeffe08c62ce944f05e94016f4d22"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_wall_r0/raw_result.json",
+      "bytes": 1181,
+      "sha256": "82fa02ce14b364e6aaf34794a9ca66baa1c00b6c46aa8b949f65eefa9ac4bd2b"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_wall_r0/result.json",
+      "bytes": 19957,
+      "sha256": "9f979f37efe74684ff43d378f7a2998ef12358dc2fdedf7a7d484b915d6ce840"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_wall_r0/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_wall_r0/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_wall_r1/command.json",
+      "bytes": 1445,
+      "sha256": "285a203840e6236a67656d55e1b98625fc6509da2c76a59be40fe952825f5442"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_wall_r1/raw_result.json",
+      "bytes": 1181,
+      "sha256": "82fa02ce14b364e6aaf34794a9ca66baa1c00b6c46aa8b949f65eefa9ac4bd2b"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_wall_r1/result.json",
+      "bytes": 19960,
+      "sha256": "66288caa320f0297b3000ed25f41f1e8c0e2cdc74538534d1be45ea21f95d81d"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_wall_r1/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_wall_r1/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_wall_r2/command.json",
+      "bytes": 1445,
+      "sha256": "ca9a3a5b6edd23d41bb5ffadfee5d58396df71522b69d793c6acc2bf2c43d9f8"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_wall_r2/raw_result.json",
+      "bytes": 1181,
+      "sha256": "82fa02ce14b364e6aaf34794a9ca66baa1c00b6c46aa8b949f65eefa9ac4bd2b"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_wall_r2/result.json",
+      "bytes": 19959,
+      "sha256": "d7db7b5b2955ac356dda970a37bfff57c8b721304905113e6e7a304da70ae461"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_wall_r2/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_wall_r2/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_work_r0/command.json",
+      "bytes": 1445,
+      "sha256": "b9a65f59b4d878aa45192afe1665cd2dbc448e35c5a677ffc01a46e3d8e9b962"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_work_r0/raw_result.json",
+      "bytes": 1181,
+      "sha256": "82fa02ce14b364e6aaf34794a9ca66baa1c00b6c46aa8b949f65eefa9ac4bd2b"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_work_r0/result.json",
+      "bytes": 19961,
+      "sha256": "3fba2fabfb27800a17a2352323b1ea777abefe8a2032c810f53bfa7fa5ab8b06"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_work_r0/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_work_r0/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_work_r1/command.json",
+      "bytes": 1445,
+      "sha256": "6bc38559556e826989eb825b6291d761fddbdf12175c32dd81e77eca32d012c0"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_work_r1/raw_result.json",
+      "bytes": 1181,
+      "sha256": "82fa02ce14b364e6aaf34794a9ca66baa1c00b6c46aa8b949f65eefa9ac4bd2b"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_work_r1/result.json",
+      "bytes": 19959,
+      "sha256": "8d32ec71a3276a566f3896e5aa585e1d4fb5ffab29779169419e96bdb94845fd"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_work_r1/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_work_r1/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_work_r2/command.json",
+      "bytes": 1445,
+      "sha256": "6e6264ee09bac9dc0316e9e2045ef7c62f1e7552823f2ae8f6ca687d847e460f"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_work_r2/raw_result.json",
+      "bytes": 1181,
+      "sha256": "82fa02ce14b364e6aaf34794a9ca66baa1c00b6c46aa8b949f65eefa9ac4bd2b"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_work_r2/result.json",
+      "bytes": 19960,
+      "sha256": "2551b8f8985734f0ecf0dd13bb25e3b45e062e15304e50827c0b9b0c5767efe2"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_work_r2/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_paper_baseline_work_r2/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_wall_r0/command.json",
+      "bytes": 1437,
+      "sha256": "5952c54314879b2f228dd260dc13b6b6a299fd2150082ef6588cedf5fac4d2ce"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_wall_r0/raw_result.json",
+      "bytes": 14081,
+      "sha256": "e42c626a518963d2a7aa2de57e68e327510fb6c2e21139ec539bf6cd255a0788"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_wall_r0/result.json",
+      "bytes": 32303,
+      "sha256": "803b58e131e4c3d4e21ffde73b2e7f3b12137b3a4d8eb07638e575a924f0a01d"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_wall_r0/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_wall_r0/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_wall_r1/command.json",
+      "bytes": 1437,
+      "sha256": "47d3fa7f2e69e8e732d465075858bafcf0e395e9b9f8f21b88698bda9381a316"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_wall_r1/raw_result.json",
+      "bytes": 14084,
+      "sha256": "a3d295ecd4fd7291bd5f8b8edf8d4e23e31d70d6420378cbc58ab07d308627b4"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_wall_r1/result.json",
+      "bytes": 32305,
+      "sha256": "e73f1957d8d5caa298e5403068425fcd66e23ecd0e453f9ef5a7ad42da444fd8"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_wall_r1/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_wall_r1/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_wall_r2/command.json",
+      "bytes": 1437,
+      "sha256": "e101480e85bb0f3f2fab35534966a739695ce5c1766782adaae6749c5411380e"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_wall_r2/raw_result.json",
+      "bytes": 14079,
+      "sha256": "ad5e134fd813d11c528f1a12a55e6ee53edf0161700ae33838607a512221377f"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_wall_r2/result.json",
+      "bytes": 32300,
+      "sha256": "72af2cab59d3e19e279ac370ac413a0f638e672df760e1bead74f84c8449cfdb"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_wall_r2/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_wall_r2/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_work_r0/command.json",
+      "bytes": 1437,
+      "sha256": "41ef5e0fe0f6f822d6c0fd823d562737de3d3a7f281fca510557488532317a51"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_work_r0/raw_result.json",
+      "bytes": 14066,
+      "sha256": "768d587dd6267470ebcffdd03c0365d5a3fbd3ef8ec33abfc1b51354a3f7da7d"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_work_r0/result.json",
+      "bytes": 32271,
+      "sha256": "da3e870c9531292311a1acee3d947fdc7fcf3695099f84b0fff1fd773d15de75"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_work_r0/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_work_r0/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_work_r1/command.json",
+      "bytes": 1437,
+      "sha256": "597d2372bd8f6d72e341f3030c9b4082e47748b1917803b9ace3e7b9c76b1516"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_work_r1/raw_result.json",
+      "bytes": 14067,
+      "sha256": "99ac9e6df8f2b43c1824cf7d40a027c94fc3f0458cbef35a738cb6caeee976ba"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_work_r1/result.json",
+      "bytes": 32270,
+      "sha256": "db5932f34f94f65d9d96eb965e30de373772088b4be5dde7061dfa1077c75b2f"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_work_r1/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_work_r1/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_work_r2/command.json",
+      "bytes": 1437,
+      "sha256": "d3c5f9ccc6d458ff1c5f66cf2fd5b9e515d04a81435354c3be66d0ba207b64c8"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_work_r2/raw_result.json",
+      "bytes": 14066,
+      "sha256": "993798b2711d5070bdaf59a83cca3667c171825c88f540bc34c070c92cd87417"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_work_r2/result.json",
+      "bytes": 32269,
+      "sha256": "1366b9f169340383a34ea1a28ad67ebcf71359dfc1748b26204e0fb35924e447"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_work_r2/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_prior_stdc_work_r2/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_wall_r0/command.json",
+      "bytes": 1431,
+      "sha256": "5d238dff625d81ece87e0870949e80ac9726223ec9c8cc8912ad5e4b0cc48662"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_wall_r0/raw_result.json",
+      "bytes": 30167,
+      "sha256": "d5c6a0096362a2fc4f8420df446d0b1bbe4c504a50c7a2efc188ee35822cbeea"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_wall_r0/result.json",
+      "bytes": 48723,
+      "sha256": "cb81196905860bc2fe10a7a10422e00e13b0d9a86c3d9e03631daa999dbcf772"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_wall_r0/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_wall_r0/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_wall_r1/command.json",
+      "bytes": 1431,
+      "sha256": "83dd8c16695738cae7fdaf1582b0eb77891c3fbb27af0f24f226f092a5122e01"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_wall_r1/raw_result.json",
+      "bytes": 30168,
+      "sha256": "a3fa7ec84d81faed280b20446dc53214031d7bda1603e3ed5fcfc3e16389fc61"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_wall_r1/result.json",
+      "bytes": 48730,
+      "sha256": "a825f844ac93b5c6268782e148aa077084dd65cd343ac553f3863c9cb1fcaeab"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_wall_r1/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_wall_r1/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_wall_r2/command.json",
+      "bytes": 1431,
+      "sha256": "ad9163bb54f9346324412b1a3d5b4fda6473eb92c41b07d4a5d8e974274acfe5"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_wall_r2/raw_result.json",
+      "bytes": 30166,
+      "sha256": "a52bf1b42a7c67d7fec3412f9afea112d3cac70b6f2cec154719419b72e14225"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_wall_r2/result.json",
+      "bytes": 48729,
+      "sha256": "8774cfaeba6d36bb8cf4220b099baf64b1e27e320d180d2ee2a9ffc5eb680563"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_wall_r2/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_wall_r2/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_work_r0/command.json",
+      "bytes": 1431,
+      "sha256": "bd45a39e9f933e08248375684b0efb4c233f5290d2c90d55defff061f8a805bd"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_work_r0/raw_result.json",
+      "bytes": 30169,
+      "sha256": "a859a817b546e92dcb87e34d532b9b4a5512dd00b6c19888fa9e437992cbb3fc"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_work_r0/result.json",
+      "bytes": 48734,
+      "sha256": "54a8a7aefad98a325c96e99dd0e6b4830aa3991fdcc53bbfd8bb01228086a661"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_work_r0/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_work_r0/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_work_r1/command.json",
+      "bytes": 1431,
+      "sha256": "28da488686842d44c268240e7a0a95a81382ba0dc4f95fce2908bc6ed1f246cc"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_work_r1/raw_result.json",
+      "bytes": 30167,
+      "sha256": "7aa12f07680794c3e9e130258c37fbfe555279484f32fe14853d8b13ff9986dc"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_work_r1/result.json",
+      "bytes": 48732,
+      "sha256": "9b81663fc4ea379204a3a792d1e8eaae9e2b3f98226c12ea33af82c1e0475392"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_work_r1/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_work_r1/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_work_r2/command.json",
+      "bytes": 1431,
+      "sha256": "494202fe02615f745ac18daa93903b76200c281378bde2a4c8f23fce024dd661"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_work_r2/raw_result.json",
+      "bytes": 30166,
+      "sha256": "f2b82e5be55717201d65b8df61c73ee542c69f75dc5c9e4204756dbe21de5787"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_work_r2/result.json",
+      "bytes": 48729,
+      "sha256": "32d736492548a3d2973a39770768786fc89cf6242ef09fece18f65eb594984b5"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_work_r2/stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_stdc_dp_work_r2/stdout.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "arctic_ocean_wall_efficiency.png",
+      "bytes": 69384,
+      "sha256": "f0448f44af525bfdd3612a4111c1a0ccc4ef756fac8d7a182b79a4c9b1af595d"
+    },
+    {
+      "path": "arctic_ocean_wall_paths.png",
+      "bytes": 106383,
+      "sha256": "8e8f226d31977423c65ae15d50f2730fd3b909d3698b3b26c0016d1f5790fec3"
+    },
+    {
+      "path": "arctic_ocean_wall_survival_quality.png",
+      "bytes": 106890,
+      "sha256": "a5bf23801904de6644873bf2820fd7454ea35beb93e07385324a267b3137630f"
+    },
+    {
+      "path": "arctic_ocean_work_efficiency.png",
+      "bytes": 70524,
+      "sha256": "ee8d1b9c2186839fc4d7b06d3e49ab5c6a70f6e6f8adf6b70410dc94412db62b"
+    },
+    {
+      "path": "arctic_ocean_work_paths.png",
+      "bytes": 106592,
+      "sha256": "b37bdd2354b9274ef522326b8b48687c65fc2bec455019364b72214f9457dedd"
+    },
+    {
+      "path": "arctic_ocean_work_survival_quality.png",
+      "bytes": 107502,
+      "sha256": "da34167e900ea05ae753797aa5132785829e53ab3dd84deef018cc1ad8218b11"
+    },
+    {
+      "path": "changes.diff",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "diff_scope.json",
+      "bytes": 2635,
+      "sha256": "fd14728b3e6c4cbf69211b53c2d6282ef95d38fd00872ad98737b4fe87afdeac"
+    },
+    {
+      "path": "git.status",
+      "bytes": 292793,
+      "sha256": "e3c24c990f8f2a896f4562c3150a4f9054f460ebd9e8669225de517936c71043"
+    },
+    {
+      "path": "metrics.csv",
+      "bytes": 45215,
+      "sha256": "b824ddbbd785d8ebeba2e2e69cce3527b633ede9544fc6f3d7e47b18df685fa7"
+    },
+    {
+      "path": "paired_comparisons.csv",
+      "bytes": 14574,
+      "sha256": "ab257231a520a4364a59b1c2109d36e935f16a95e27d93e295be13ea90f15a1d"
+    },
+    {
+      "path": "results.json",
+      "bytes": 2642214,
+      "sha256": "b2aea326daecb2704070b757c3c54565e788296616386e6363f8961a20ab9c89"
+    },
+    {
+      "path": "schedule.json",
+      "bytes": 19156,
+      "sha256": "73c1240d517f013fec3d0548cde1418d64c753cb387829b518f79ed1aa2b609a"
+    },
+    {
+      "path": "source_sha256.json",
+      "bytes": 14390,
+      "sha256": "b1befd7c9797324de201a5088c709955f2d09e9af7995d6f8ee9ef35d8a35bda"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 278,
+      "sha256": "a858b05c79a229007804e8dcacf679e50c7e1fd46d7e5577429ca7df5edaea08"
+    },
+    {
+      "path": "untracked_files.diff",
+      "bytes": 609095,
+      "sha256": "a2f49c74180aac597f0522f930b6ef0c6c5f037c508d262e1d1e1308dd7c9742"
+    },
+    {
+      "path": "untracked_sha256.json",
+      "bytes": 480872,
+      "sha256": "c241f8013bffbeca17d5641e3cdf5a09e8160d7b1afd1eca7e14db5da7d1ce40"
+    }
+  ]
+}

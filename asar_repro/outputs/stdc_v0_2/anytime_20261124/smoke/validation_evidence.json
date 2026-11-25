@@ -1,0 +1,2925 @@
+{
+  "path": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\anytime_20261124\\validation_summary.json",
+  "sha256": "1691a4d6298144c4fdadc1a4c610efe8a755ff870c487176d9686ea3f214e594",
+  "evidence": {
+    "status": "passed",
+    "order": [
+      "new_tests",
+      "full_tests",
+      "random_audit",
+      "small_search"
+    ],
+    "stages": {
+      "new_tests": {
+        "status": "passed",
+        "stage": "new_tests",
+        "started_utc": "2026-11-23T16:19:43.630455+00:00",
+        "driver_command": [
+          "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+          "scripts/run_anytime_validation.py",
+          "new_tests",
+          "--run-dir",
+          "outputs/stdc_v0_2/anytime_20261124"
+        ],
+        "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro",
+        "timeout_s": 1200,
+        "preservation_before": {
+          "status": "passed",
+          "baseline_files": 654,
+          "protected_research_files": 2581,
+          "source_files": 109,
+          "historical_preflight_sha256": "dae1d7ef9586a4dda20d5121542993a8812e7dfbe6fdcc27251e9503a5bb2b0b"
+        },
+        "child_environment": {
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "PROJ_NETWORK": "OFF",
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONPATH": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\src;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\offline_guard;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\src;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts"
+        },
+        "seeds": "Explicit toy seeds/fixtures in frozen tests/test_anytime_search.py",
+        "command": [
+          "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+          "-m",
+          "pytest",
+          "-x",
+          "-q",
+          "-p",
+          "no:cacheprovider",
+          "tests/test_anytime_search.py",
+          "--junitxml",
+          "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\anytime_20261124\\new_tests\\pytest.xml",
+          "--basetemp",
+          "C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\anytime_validation_tmp\\6fe45ca0bd18\\new_tests"
+        ],
+        "exit_code": 0,
+        "test_counts": {
+          "tests": 63,
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0
+        },
+        "preservation_after": {
+          "status": "passed",
+          "baseline_files": 654,
+          "protected_research_files": 2581,
+          "source_files": 109,
+          "historical_preflight_sha256": "dae1d7ef9586a4dda20d5121542993a8812e7dfbe6fdcc27251e9503a5bb2b0b"
+        },
+        "wall_s": 7.187662500073202
+      },
+      "full_tests": {
+        "status": "passed",
+        "stage": "full_tests",
+        "started_utc": "2026-11-23T16:20:01.269343+00:00",
+        "driver_command": [
+          "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+          "scripts/run_anytime_validation.py",
+          "full_tests",
+          "--run-dir",
+          "outputs/stdc_v0_2/anytime_20261124"
+        ],
+        "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro",
+        "timeout_s": 1200,
+        "preservation_before": {
+          "status": "passed",
+          "baseline_files": 654,
+          "protected_research_files": 2581,
+          "source_files": 109,
+          "historical_preflight_sha256": "dae1d7ef9586a4dda20d5121542993a8812e7dfbe6fdcc27251e9503a5bb2b0b"
+        },
+        "child_environment": {
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "PROJ_NETWORK": "OFF",
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONPATH": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\src;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\offline_guard;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\src;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts"
+        },
+        "seeds": "Explicit fixed seeds/fixtures in frozen source_sha256.json; includes particle seed 41",
+        "command": [
+          "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+          "-m",
+          "pytest",
+          "-x",
+          "-q",
+          "-p",
+          "no:cacheprovider",
+          "tests",
+          "--junitxml",
+          "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\anytime_20261124\\full_tests\\pytest.xml",
+          "--basetemp",
+          "C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\anytime_validation_tmp\\6fe45ca0bd18\\full_tests"
+        ],
+        "exit_code": 0,
+        "test_counts": {
+          "tests": 494,
+          "errors": 0,
+          "failures": 0,
+          "skipped": 0
+        },
+        "preservation_after": {
+          "status": "passed",
+          "baseline_files": 654,
+          "protected_research_files": 2581,
+          "source_files": 109,
+          "historical_preflight_sha256": "dae1d7ef9586a4dda20d5121542993a8812e7dfbe6fdcc27251e9503a5bb2b0b"
+        },
+        "wall_s": 39.83778030006215
+      },
+      "random_audit": {
+        "status": "passed",
+        "stage": "random_audit",
+        "started_utc": "2026-11-23T16:20:59.466080+00:00",
+        "driver_command": [
+          "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+          "scripts/run_anytime_validation.py",
+          "random_audit",
+          "--run-dir",
+          "outputs/stdc_v0_2/anytime_20261124"
+        ],
+        "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro",
+        "timeout_s": 1200,
+        "preservation_before": {
+          "status": "passed",
+          "baseline_files": 654,
+          "protected_research_files": 2581,
+          "source_files": 109,
+          "historical_preflight_sha256": "dae1d7ef9586a4dda20d5121542993a8812e7dfbe6fdcc27251e9503a5bb2b0b"
+        },
+        "child_environment": {
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "PROJ_NETWORK": "OFF",
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONPATH": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\src;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\offline_guard;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\src;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts"
+        },
+        "seeds": [
+          100,
+          101,
+          102,
+          103,
+          104,
+          105,
+          106,
+          107,
+          108,
+          109,
+          110,
+          111,
+          112,
+          113,
+          114,
+          115,
+          116,
+          117,
+          118,
+          119,
+          120,
+          121,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127,
+          128,
+          129,
+          130,
+          131,
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143,
+          144,
+          145,
+          146,
+          147,
+          148,
+          149,
+          150,
+          151,
+          152,
+          153,
+          154,
+          155,
+          156,
+          157,
+          158,
+          159,
+          160,
+          161,
+          162,
+          163,
+          164,
+          165,
+          166,
+          167,
+          168,
+          169,
+          170,
+          171,
+          172,
+          173,
+          174,
+          175,
+          176,
+          177,
+          178,
+          179
+        ],
+        "test_counts": null,
+        "command": [
+          "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+          "scripts/stdc_validation_guards.py",
+          "random_audit",
+          "--output-dir",
+          "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\anytime_20261124\\random_audit\\audit"
+        ],
+        "exit_code": 0,
+        "bound_audit": {
+          "status": "passed",
+          "forcing_kind": "synthetic_toy",
+          "scenario_counts": {
+            "matrix": 80,
+            "particles": 80
+          },
+          "prefix_evaluations": 18024,
+          "violations": 0,
+          "positive_overestimation": 8.881784197001252e-16,
+          "mass_and_other_dominance_violation": 0.0,
+          "atol": 1e-10,
+          "roots": [
+            {
+              "kind": "matrix",
+              "seed": 100,
+              "oracle": 1.9250650158089857,
+              "values": {
+                "mass_lb": 0.03601694207766816,
+                "reach_lb": 1.2274966993222727,
+                "capacity_lb": 1.3773208646928328,
+                "stepwise_lb": 1.5234768464860475,
+                "stdc_radius_lb": 1.1957560476403861,
+                "stdc_lb": 1.5234768464860475
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 101,
+              "oracle": 3.9900940310393254,
+              "values": {
+                "mass_lb": 0.036499062826929204,
+                "reach_lb": 2.814317884927333,
+                "capacity_lb": 3.5529671118539614,
+                "stepwise_lb": 3.5529671118539614,
+                "stdc_radius_lb": 3.014311636717397,
+                "stdc_lb": 3.5529671118539614
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 102,
+              "oracle": 2.5731116826490976,
+              "values": {
+                "mass_lb": 0.21184056333622336,
+                "reach_lb": 2.451466149032326,
+                "capacity_lb": 2.544862899004012,
+                "stepwise_lb": 2.544862899004012,
+                "stdc_radius_lb": 1.414094928904069,
+                "stdc_lb": 2.544862899004012
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 103,
+              "oracle": 2.70526733968555,
+              "values": {
+                "mass_lb": 0.16466429590495427,
+                "reach_lb": 2.215350137245217,
+                "capacity_lb": 2.3265775656591017,
+                "stepwise_lb": 2.4031352166253788,
+                "stdc_radius_lb": 1.8517463686876405,
+                "stdc_lb": 2.4031352166253788
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 104,
+              "oracle": 3.0485138697424574,
+              "values": {
+                "mass_lb": 0.0,
+                "reach_lb": 1.8450760743416976,
+                "capacity_lb": 1.9098342685486052,
+                "stepwise_lb": 2.264041444711693,
+                "stdc_radius_lb": 1.5174193711501498,
+                "stdc_lb": 2.264041444711693
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 105,
+              "oracle": 2.30911542339111,
+              "values": {
+                "mass_lb": 0.018358672092912233,
+                "reach_lb": 2.064668372910428,
+                "capacity_lb": 2.3016474250330825,
+                "stepwise_lb": 2.3016474250330825,
+                "stdc_radius_lb": 1.5752836770063645,
+                "stdc_lb": 2.3016474250330825
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 106,
+              "oracle": 2.884038213320853,
+              "values": {
+                "mass_lb": 0.027259990604458467,
+                "reach_lb": 2.5122402053196415,
+                "capacity_lb": 2.6803707113614577,
+                "stepwise_lb": 2.6803707113614577,
+                "stdc_radius_lb": 2.451339645128983,
+                "stdc_lb": 2.6803707113614577
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 107,
+              "oracle": 3.3322693403519854,
+              "values": {
+                "mass_lb": 0.020197295159138505,
+                "reach_lb": 2.531936685451214,
+                "capacity_lb": 2.9594129871194936,
+                "stepwise_lb": 2.9594129871194936,
+                "stdc_radius_lb": 2.891021664191334,
+                "stdc_lb": 2.9594129871194936
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 108,
+              "oracle": 1.6113144325008393,
+              "values": {
+                "mass_lb": 0.16956878775910542,
+                "reach_lb": 1.3522061046494114,
+                "capacity_lb": 1.2163500065801052,
+                "stepwise_lb": 1.3641464461026451,
+                "stdc_radius_lb": 1.2469845245801778,
+                "stdc_lb": 1.3641464461026451
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 109,
+              "oracle": 3.1534441669338955,
+              "values": {
+                "mass_lb": 0.18904652743488326,
+                "reach_lb": 2.5829300425363466,
+                "capacity_lb": 3.010674314755665,
+                "stepwise_lb": 3.010674314755665,
+                "stdc_radius_lb": 2.3239456814833326,
+                "stdc_lb": 3.010674314755665
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 110,
+              "oracle": 3.6501089384112317,
+              "values": {
+                "mass_lb": 0.08147460703972595,
+                "reach_lb": 2.8922566434425887,
+                "capacity_lb": 3.324041894192341,
+                "stepwise_lb": 3.324041894192341,
+                "stdc_radius_lb": 3.0713840498753284,
+                "stdc_lb": 3.324041894192341
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 111,
+              "oracle": 2.567330388987493,
+              "values": {
+                "mass_lb": 0.47755904816823036,
+                "reach_lb": 2.471465859808706,
+                "capacity_lb": 2.5306043941962537,
+                "stepwise_lb": 2.5306043941962537,
+                "stdc_radius_lb": 2.2388918277833714,
+                "stdc_lb": 2.5306043941962537
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 112,
+              "oracle": 3.318342986037091,
+              "values": {
+                "mass_lb": 0.18541904753226326,
+                "reach_lb": 2.8587208142693727,
+                "capacity_lb": 3.2516286145527484,
+                "stepwise_lb": 3.2516286145527484,
+                "stdc_radius_lb": 2.8964383581073094,
+                "stdc_lb": 3.2516286145527484
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 113,
+              "oracle": 3.255586923573448,
+              "values": {
+                "mass_lb": 0.011199676286297899,
+                "reach_lb": 2.7223263378031657,
+                "capacity_lb": 2.791216964408381,
+                "stepwise_lb": 2.8099432429381017,
+                "stdc_radius_lb": 2.52806534037544,
+                "stdc_lb": 2.8099432429381017
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 114,
+              "oracle": 3.0,
+              "values": {
+                "mass_lb": 3.0,
+                "reach_lb": 3.0,
+                "capacity_lb": 3.0,
+                "stepwise_lb": 3.0,
+                "stdc_radius_lb": 3.0,
+                "stdc_lb": 3.0
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 115,
+              "oracle": 2.6082123602628395,
+              "values": {
+                "mass_lb": 0.21650685765527158,
+                "reach_lb": 2.233557361149148,
+                "capacity_lb": 2.438044102816362,
+                "stepwise_lb": 2.438044102816362,
+                "stdc_radius_lb": 2.287137193611498,
+                "stdc_lb": 2.438044102816362
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 116,
+              "oracle": 3.761098076657404,
+              "values": {
+                "mass_lb": 0.05291144817271569,
+                "reach_lb": 2.9391387968919136,
+                "capacity_lb": 3.5600204117997722,
+                "stepwise_lb": 3.5600204117997722,
+                "stdc_radius_lb": 3.276562832892301,
+                "stdc_lb": 3.5600204117997722
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 117,
+              "oracle": 1.1501980249283954,
+              "values": {
+                "mass_lb": 0.0,
+                "reach_lb": 0.6705773879573986,
+                "capacity_lb": 0.6514586378853897,
+                "stepwise_lb": 1.0041150066629767,
+                "stdc_radius_lb": 0.6514586378853897,
+                "stdc_lb": 1.0041150066629767
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 118,
+              "oracle": 2.6345393001687682,
+              "values": {
+                "mass_lb": 0.07375675277218731,
+                "reach_lb": 2.1669307674874494,
+                "capacity_lb": 2.020987235659284,
+                "stepwise_lb": 2.2414630287180155,
+                "stdc_radius_lb": 1.9802805224084818,
+                "stdc_lb": 2.2414630287180155
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 119,
+              "oracle": 3.4375675718600536,
+              "values": {
+                "mass_lb": 0.05388959878141785,
+                "reach_lb": 2.037499881324695,
+                "capacity_lb": 3.308865541586402,
+                "stepwise_lb": 3.308865541586402,
+                "stdc_radius_lb": 2.380817127785992,
+                "stdc_lb": 3.308865541586402
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 120,
+              "oracle": 2.33555603966743,
+              "values": {
+                "mass_lb": 0.17244208333078792,
+                "reach_lb": 2.012977346632256,
+                "capacity_lb": 2.3107181076399232,
+                "stepwise_lb": 2.3107181076399232,
+                "stdc_radius_lb": 1.3066725929547265,
+                "stdc_lb": 2.3107181076399232
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 121,
+              "oracle": 2.878211363069822,
+              "values": {
+                "mass_lb": 0.21220819555279333,
+                "reach_lb": 2.3282703614326308,
+                "capacity_lb": 2.7211137872787683,
+                "stepwise_lb": 2.7211137872787683,
+                "stdc_radius_lb": 2.0202620723491793,
+                "stdc_lb": 2.7211137872787683
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 122,
+              "oracle": 3.6019127789773995,
+              "values": {
+                "mass_lb": 0.10818013750326243,
+                "reach_lb": 2.4465744688634814,
+                "capacity_lb": 3.1026516808495352,
+                "stepwise_lb": 3.1026516808495352,
+                "stdc_radius_lb": 2.8440611717279918,
+                "stdc_lb": 3.1026516808495352
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 123,
+              "oracle": 2.2431968439458676,
+              "values": {
+                "mass_lb": 0.43320270131799804,
+                "reach_lb": 1.881022517650155,
+                "capacity_lb": 2.1964469993550213,
+                "stepwise_lb": 2.1964469993550213,
+                "stdc_radius_lb": 1.8761028057313323,
+                "stdc_lb": 2.1964469993550213
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 124,
+              "oracle": 2.8741939653075863,
+              "values": {
+                "mass_lb": 0.040595781623098307,
+                "reach_lb": 2.401607559678831,
+                "capacity_lb": 2.6650735215213497,
+                "stepwise_lb": 2.6650735215213497,
+                "stdc_radius_lb": 1.932993280677425,
+                "stdc_lb": 2.6650735215213497
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 125,
+              "oracle": 3.8791513914784925,
+              "values": {
+                "mass_lb": 0.15096885641460397,
+                "reach_lb": 2.9294797304735534,
+                "capacity_lb": 3.67113169176257,
+                "stepwise_lb": 3.67113169176257,
+                "stdc_radius_lb": 3.18308661822041,
+                "stdc_lb": 3.67113169176257
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 126,
+              "oracle": 1.3594215511544256,
+              "values": {
+                "mass_lb": 0.03060664112348376,
+                "reach_lb": 1.2791588347762424,
+                "capacity_lb": 0.9948574696697743,
+                "stepwise_lb": 1.319587072911325,
+                "stdc_radius_lb": 1.1953832160825,
+                "stdc_lb": 1.319587072911325
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 127,
+              "oracle": 3.4892268701443383,
+              "values": {
+                "mass_lb": 0.10441050045698107,
+                "reach_lb": 3.1627968182102446,
+                "capacity_lb": 3.4414644800615948,
+                "stepwise_lb": 3.4414644800615948,
+                "stdc_radius_lb": 3.1289057847352204,
+                "stdc_lb": 3.4414644800615948
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 128,
+              "oracle": 3.7906857801098623,
+              "values": {
+                "mass_lb": 0.09248100721567526,
+                "reach_lb": 3.0605476052389795,
+                "capacity_lb": 3.5675101554086086,
+                "stepwise_lb": 3.5675101554086086,
+                "stdc_radius_lb": 2.369980469419179,
+                "stdc_lb": 3.5675101554086086
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 129,
+              "oracle": 2.207996948913653,
+              "values": {
+                "mass_lb": 0.1181279273620287,
+                "reach_lb": 1.9778582578512374,
+                "capacity_lb": 2.056304370510692,
+                "stepwise_lb": 2.129057739388868,
+                "stdc_radius_lb": 2.056304370510692,
+                "stdc_lb": 2.129057739388868
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 130,
+              "oracle": 1.993184975466257,
+              "values": {
+                "mass_lb": 0.0,
+                "reach_lb": 1.3454085137421943,
+                "capacity_lb": 1.5285420852327387,
+                "stepwise_lb": 1.7059209127795911,
+                "stdc_radius_lb": 1.109721173347774,
+                "stdc_lb": 1.7059209127795911
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 131,
+              "oracle": 3.7721440454870057,
+              "values": {
+                "mass_lb": 0.024155193966511602,
+                "reach_lb": 2.5753112920266097,
+                "capacity_lb": 3.215629300087439,
+                "stepwise_lb": 3.215629300087439,
+                "stdc_radius_lb": 3.0143581876585492,
+                "stdc_lb": 3.215629300087439
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 132,
+              "oracle": 2.073647107338873,
+              "values": {
+                "mass_lb": 0.13686080334455747,
+                "reach_lb": 1.95705003222096,
+                "capacity_lb": 1.8755122189420264,
+                "stepwise_lb": 1.9810883564057,
+                "stdc_radius_lb": 1.4277656781423804,
+                "stdc_lb": 1.9810883564057
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 133,
+              "oracle": 4.000000000000001,
+              "values": {
+                "mass_lb": 4.000000000000001,
+                "reach_lb": 4.000000000000001,
+                "capacity_lb": 4.000000000000001,
+                "stepwise_lb": 4.000000000000001,
+                "stdc_radius_lb": 4.000000000000001,
+                "stdc_lb": 4.000000000000001
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 134,
+              "oracle": 3.637007177296026,
+              "values": {
+                "mass_lb": 0.04127170073979021,
+                "reach_lb": 2.5720167513500893,
+                "capacity_lb": 3.468639250332019,
+                "stepwise_lb": 3.468639250332019,
+                "stdc_radius_lb": 2.9427311186273717,
+                "stdc_lb": 3.468639250332019
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 135,
+              "oracle": 1.2846207294045884,
+              "values": {
+                "mass_lb": 0.022607206663655736,
+                "reach_lb": 0.9153704966250504,
+                "capacity_lb": 0.9414195037685098,
+                "stepwise_lb": 1.044051968002433,
+                "stdc_radius_lb": 0.7835235882597631,
+                "stdc_lb": 1.044051968002433
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 136,
+              "oracle": 3.464204168232105,
+              "values": {
+                "mass_lb": 0.19628349886555016,
+                "reach_lb": 3.18823048934446,
+                "capacity_lb": 3.371458940673938,
+                "stepwise_lb": 3.371458940673938,
+                "stdc_radius_lb": 2.4583537690846695,
+                "stdc_lb": 3.371458940673938
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 137,
+              "oracle": 3.8726458132659314,
+              "values": {
+                "mass_lb": 0.16727173232065928,
+                "reach_lb": 2.857597509743084,
+                "capacity_lb": 3.6902538752840552,
+                "stepwise_lb": 3.6902538752840552,
+                "stdc_radius_lb": 3.1533956083127137,
+                "stdc_lb": 3.6902538752840552
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 138,
+              "oracle": 1.5885421149162686,
+              "values": {
+                "mass_lb": 0.0728091926392605,
+                "reach_lb": 1.3639028545294836,
+                "capacity_lb": 1.365619240158845,
+                "stepwise_lb": 1.4997586476405185,
+                "stdc_radius_lb": 1.005334710795313,
+                "stdc_lb": 1.4997586476405185
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 139,
+              "oracle": 2.9884157570113006,
+              "values": {
+                "mass_lb": 0.06067586709036839,
+                "reach_lb": 2.5604567193008156,
+                "capacity_lb": 2.747796860593411,
+                "stepwise_lb": 2.8163493718239407,
+                "stdc_radius_lb": 1.6830188530382642,
+                "stdc_lb": 2.8163493718239407
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 140,
+              "oracle": 3.1038587257202646,
+              "values": {
+                "mass_lb": 0.3985143412889197,
+                "reach_lb": 1.5116077579649247,
+                "capacity_lb": 2.5380100606954383,
+                "stepwise_lb": 2.5380100606954383,
+                "stdc_radius_lb": 1.973444937235776,
+                "stdc_lb": 2.5380100606954383
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 141,
+              "oracle": 1.2700226077614487,
+              "values": {
+                "mass_lb": 0.012636198405745796,
+                "reach_lb": 1.1892383157792248,
+                "capacity_lb": 0.8086852404704072,
+                "stepwise_lb": 1.2012702163674287,
+                "stdc_radius_lb": 0.9971323915852718,
+                "stdc_lb": 1.2012702163674287
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 142,
+              "oracle": 3.0153845396707317,
+              "values": {
+                "mass_lb": 0.04925575985282747,
+                "reach_lb": 2.3077670547744358,
+                "capacity_lb": 2.780504646636916,
+                "stepwise_lb": 2.780504646636916,
+                "stdc_radius_lb": 1.8489716682542319,
+                "stdc_lb": 2.780504646636916
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 143,
+              "oracle": 2.525820413706513,
+              "values": {
+                "mass_lb": 0.0,
+                "reach_lb": 1.4026203511604214,
+                "capacity_lb": 1.6345494393470392,
+                "stepwise_lb": 1.8205407438642902,
+                "stdc_radius_lb": 1.6222850379781044,
+                "stdc_lb": 1.8205407438642902
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 144,
+              "oracle": 2.0895376226685567,
+              "values": {
+                "mass_lb": 0.25533891734214975,
+                "reach_lb": 1.9742692438504252,
+                "capacity_lb": 2.013700143982951,
+                "stepwise_lb": 2.0406220836499003,
+                "stdc_radius_lb": 1.324799165482669,
+                "stdc_lb": 2.0406220836499003
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 145,
+              "oracle": 2.993296275943607,
+              "values": {
+                "mass_lb": 0.1391221089142494,
+                "reach_lb": 2.1534120674997714,
+                "capacity_lb": 2.724654490274872,
+                "stepwise_lb": 2.724654490274872,
+                "stdc_radius_lb": 2.2450393735424994,
+                "stdc_lb": 2.724654490274872
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 146,
+              "oracle": 3.5441557778141366,
+              "values": {
+                "mass_lb": 0.11089634108598852,
+                "reach_lb": 2.7804530817086333,
+                "capacity_lb": 3.254551550007595,
+                "stepwise_lb": 3.254551550007595,
+                "stdc_radius_lb": 3.215361576364827,
+                "stdc_lb": 3.254551550007595
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 147,
+              "oracle": 0.6675253208350662,
+              "values": {
+                "mass_lb": 0.02028569400224408,
+                "reach_lb": 0.38878878846156095,
+                "capacity_lb": 0.5417488124424729,
+                "stepwise_lb": 0.5985982468527751,
+                "stdc_radius_lb": 0.3701361125242348,
+                "stdc_lb": 0.5985982468527751
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 148,
+              "oracle": 2.37283153609073,
+              "values": {
+                "mass_lb": 0.06665620452199919,
+                "reach_lb": 1.6947383166082284,
+                "capacity_lb": 2.112365316608389,
+                "stepwise_lb": 2.113063002851603,
+                "stdc_radius_lb": 2.0878628626281106,
+                "stdc_lb": 2.113063002851603
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 149,
+              "oracle": 3.8949743154176506,
+              "values": {
+                "mass_lb": 0.01722981523901332,
+                "reach_lb": 2.925486614319291,
+                "capacity_lb": 3.6194490197666753,
+                "stepwise_lb": 3.6194490197666753,
+                "stdc_radius_lb": 3.4053230523931903,
+                "stdc_lb": 3.6194490197666753
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 150,
+              "oracle": 2.246245712970863,
+              "values": {
+                "mass_lb": 0.08111712923462593,
+                "reach_lb": 1.9657147446324106,
+                "capacity_lb": 2.1643661716308342,
+                "stepwise_lb": 2.1643661716308342,
+                "stdc_radius_lb": 1.3067794664775834,
+                "stdc_lb": 2.1643661716308342
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 151,
+              "oracle": 3.1915251346947917,
+              "values": {
+                "mass_lb": 0.392461668630873,
+                "reach_lb": 2.8363433194609886,
+                "capacity_lb": 3.001301479153107,
+                "stepwise_lb": 3.001301479153107,
+                "stdc_radius_lb": 2.4414412480906678,
+                "stdc_lb": 3.001301479153107
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 152,
+              "oracle": 5.000000000000001,
+              "values": {
+                "mass_lb": 5.000000000000001,
+                "reach_lb": 5.000000000000001,
+                "capacity_lb": 5.000000000000001,
+                "stepwise_lb": 5.000000000000001,
+                "stdc_radius_lb": 5.000000000000001,
+                "stdc_lb": 5.000000000000001
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 153,
+              "oracle": 2.19923318374619,
+              "values": {
+                "mass_lb": 0.07632017634494753,
+                "reach_lb": 1.7674594937538464,
+                "capacity_lb": 2.057217449278069,
+                "stepwise_lb": 2.057217449278069,
+                "stdc_radius_lb": 0.8448210886277085,
+                "stdc_lb": 2.057217449278069
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 154,
+              "oracle": 3.194274946704273,
+              "values": {
+                "mass_lb": 0.10763657148755608,
+                "reach_lb": 2.79627600773858,
+                "capacity_lb": 3.162860595772865,
+                "stepwise_lb": 3.162860595772865,
+                "stdc_radius_lb": 2.92814301354235,
+                "stdc_lb": 3.162860595772865
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 155,
+              "oracle": 3.6701078970488155,
+              "values": {
+                "mass_lb": 0.15831067971269253,
+                "reach_lb": 2.9400238970453323,
+                "capacity_lb": 3.5735310697390164,
+                "stepwise_lb": 3.5735310697390164,
+                "stdc_radius_lb": 3.322404992530453,
+                "stdc_lb": 3.5735310697390164
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 156,
+              "oracle": 1.8406100835755443,
+              "values": {
+                "mass_lb": 0.0,
+                "reach_lb": 1.587033156927233,
+                "capacity_lb": 1.5546028611466793,
+                "stepwise_lb": 1.6756116229327094,
+                "stdc_radius_lb": 0.8500911481200614,
+                "stdc_lb": 1.6756116229327094
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 157,
+              "oracle": 2.9655397462487603,
+              "values": {
+                "mass_lb": 0.11283908971276521,
+                "reach_lb": 2.517430581217546,
+                "capacity_lb": 2.5863431717691476,
+                "stepwise_lb": 2.6463263835667314,
+                "stdc_radius_lb": 2.2172953873399845,
+                "stdc_lb": 2.6463263835667314
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 158,
+              "oracle": 3.046073672754148,
+              "values": {
+                "mass_lb": 0.020165054026548293,
+                "reach_lb": 1.7969878377413875,
+                "capacity_lb": 2.479866643335611,
+                "stepwise_lb": 2.479866643335611,
+                "stdc_radius_lb": 2.4377533666740208,
+                "stdc_lb": 2.479866643335611
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 159,
+              "oracle": 2.3328354258235073,
+              "values": {
+                "mass_lb": 0.2309606438197411,
+                "reach_lb": 2.1218772908307857,
+                "capacity_lb": 2.164126584302428,
+                "stepwise_lb": 2.232499064338452,
+                "stdc_radius_lb": 1.7904038869749188,
+                "stdc_lb": 2.232499064338452
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 160,
+              "oracle": 2.798766072086502,
+              "values": {
+                "mass_lb": 0.5209759684542362,
+                "reach_lb": 2.1860395771409715,
+                "capacity_lb": 2.5792789617632192,
+                "stepwise_lb": 2.5792789617632192,
+                "stdc_radius_lb": 2.28678702585373,
+                "stdc_lb": 2.5792789617632192
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 161,
+              "oracle": 3.9807086126294697,
+              "values": {
+                "mass_lb": 0.2585356982705156,
+                "reach_lb": 3.0802758398009984,
+                "capacity_lb": 3.759345468956749,
+                "stepwise_lb": 3.759345468956749,
+                "stdc_radius_lb": 3.4619110583886283,
+                "stdc_lb": 3.759345468956749
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 162,
+              "oracle": 2.0308178013392535,
+              "values": {
+                "mass_lb": 0.22580058247433157,
+                "reach_lb": 1.8986645486865914,
+                "capacity_lb": 1.9322598188358828,
+                "stepwise_lb": 1.939048435676389,
+                "stdc_radius_lb": 1.5231889989167793,
+                "stdc_lb": 1.939048435676389
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 163,
+              "oracle": 2.8903809727914433,
+              "values": {
+                "mass_lb": 0.2369314213259503,
+                "reach_lb": 2.2666463189926644,
+                "capacity_lb": 2.52312932896671,
+                "stepwise_lb": 2.52312932896671,
+                "stdc_radius_lb": 2.52312932896671,
+                "stdc_lb": 2.52312932896671
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 164,
+              "oracle": 4.160421159538501,
+              "values": {
+                "mass_lb": 0.0448774798832935,
+                "reach_lb": 3.7379862997362983,
+                "capacity_lb": 4.0103613897934345,
+                "stepwise_lb": 4.0103613897934345,
+                "stdc_radius_lb": 3.4838667004477064,
+                "stdc_lb": 4.0103613897934345
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 165,
+              "oracle": 1.051963841416801,
+              "values": {
+                "mass_lb": 0.06828554907169086,
+                "reach_lb": 0.9671934297175899,
+                "capacity_lb": 0.5115168940332597,
+                "stepwise_lb": 0.982556820051252,
+                "stdc_radius_lb": 0.5722848593440766,
+                "stdc_lb": 0.982556820051252
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 166,
+              "oracle": 2.9500022212670927,
+              "values": {
+                "mass_lb": 0.0685927417275354,
+                "reach_lb": 2.291188598522454,
+                "capacity_lb": 2.8355924369103054,
+                "stepwise_lb": 2.8355924369103054,
+                "stdc_radius_lb": 2.192921814465063,
+                "stdc_lb": 2.8355924369103054
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 167,
+              "oracle": 2.726152143124806,
+              "values": {
+                "mass_lb": 0.09329999125573324,
+                "reach_lb": 1.9270459380526925,
+                "capacity_lb": 1.9658716113892818,
+                "stepwise_lb": 2.2395278474857565,
+                "stdc_radius_lb": 1.9658716113892818,
+                "stdc_lb": 2.2395278474857565
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 168,
+              "oracle": 2.4818022658597823,
+              "values": {
+                "mass_lb": 0.22090771721941066,
+                "reach_lb": 2.1924547514966974,
+                "capacity_lb": 2.453686722280775,
+                "stepwise_lb": 2.453686722280775,
+                "stdc_radius_lb": 1.9116872228632564,
+                "stdc_lb": 2.453686722280775
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 169,
+              "oracle": 2.000937665043506,
+              "values": {
+                "mass_lb": 0.0,
+                "reach_lb": 1.5741176691490908,
+                "capacity_lb": 1.6004481859580135,
+                "stepwise_lb": 1.7365824411079847,
+                "stdc_radius_lb": 1.2732581088039363,
+                "stdc_lb": 1.7365824411079847
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 170,
+              "oracle": 3.6621946711316933,
+              "values": {
+                "mass_lb": 0.036310337812020414,
+                "reach_lb": 2.8261871003938426,
+                "capacity_lb": 3.2871714377120176,
+                "stepwise_lb": 3.2871714377120176,
+                "stdc_radius_lb": 3.0408004872496295,
+                "stdc_lb": 3.2871714377120176
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 171,
+              "oracle": 3.0,
+              "values": {
+                "mass_lb": 3.0,
+                "reach_lb": 3.0,
+                "capacity_lb": 3.0,
+                "stepwise_lb": 3.0,
+                "stdc_radius_lb": 3.0,
+                "stdc_lb": 3.0
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 172,
+              "oracle": 2.1234575773827045,
+              "values": {
+                "mass_lb": 0.08967362820511857,
+                "reach_lb": 1.8065783176487404,
+                "capacity_lb": 1.8090453382265264,
+                "stepwise_lb": 1.9016413934840428,
+                "stdc_radius_lb": 1.5766073975012147,
+                "stdc_lb": 1.9016413934840428
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 173,
+              "oracle": 3.7097566034444815,
+              "values": {
+                "mass_lb": 0.12872118291252205,
+                "reach_lb": 2.768766069508989,
+                "capacity_lb": 3.4966925406011384,
+                "stepwise_lb": 3.4966925406011384,
+                "stdc_radius_lb": 3.2392620039644004,
+                "stdc_lb": 3.4966925406011384
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 174,
+              "oracle": 1.750320305818236,
+              "values": {
+                "mass_lb": 0.09012436240598587,
+                "reach_lb": 1.4249447094865804,
+                "capacity_lb": 1.475722351025738,
+                "stepwise_lb": 1.5366203871280435,
+                "stdc_radius_lb": 1.3504229061162394,
+                "stdc_lb": 1.5366203871280435
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 175,
+              "oracle": 3.235862859136251,
+              "values": {
+                "mass_lb": 0.7029833792443497,
+                "reach_lb": 2.502617491754255,
+                "capacity_lb": 2.767324297627125,
+                "stepwise_lb": 2.767324297627125,
+                "stdc_radius_lb": 2.6591303064553156,
+                "stdc_lb": 2.767324297627125
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 176,
+              "oracle": 3.2971335232223367,
+              "values": {
+                "mass_lb": 0.08023487451543833,
+                "reach_lb": 2.1529319997570893,
+                "capacity_lb": 2.443343153244376,
+                "stepwise_lb": 2.5089409575711437,
+                "stdc_radius_lb": 2.4350517615907057,
+                "stdc_lb": 2.5089409575711437
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 177,
+              "oracle": 1.9211040214734911,
+              "values": {
+                "mass_lb": 0.6075103556020764,
+                "reach_lb": 1.5491965377052594,
+                "capacity_lb": 1.7082448214192747,
+                "stepwise_lb": 1.7082448214192747,
+                "stdc_radius_lb": 1.7082448214192747,
+                "stdc_lb": 1.7082448214192747
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 178,
+              "oracle": 3.391028485764771,
+              "values": {
+                "mass_lb": 0.3059524930566132,
+                "reach_lb": 3.048428318426338,
+                "capacity_lb": 3.3216072984964495,
+                "stepwise_lb": 3.3216072984964495,
+                "stdc_radius_lb": 2.593181224537821,
+                "stdc_lb": 3.3216072984964495
+              }
+            },
+            {
+              "kind": "matrix",
+              "seed": 179,
+              "oracle": 3.209065961606673,
+              "values": {
+                "mass_lb": 0.048794182689575076,
+                "reach_lb": 2.346564427910237,
+                "capacity_lb": 2.686406609447829,
+                "stepwise_lb": 2.686406609447829,
+                "stdc_radius_lb": 2.3534827718752642,
+                "stdc_lb": 2.686406609447829
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 100,
+              "oracle": 3.2549702942205707,
+              "values": {
+                "mass_lb": 0.03601694207766815,
+                "reach_lb": 3.247944950729048,
+                "capacity_lb": 3.066625252498079,
+                "stepwise_lb": 3.247944950729048,
+                "stdc_radius_lb": 3.0139616150681006,
+                "stdc_lb": 3.2479607726984345
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 101,
+              "oracle": 3.632681302678313,
+              "values": {
+                "mass_lb": 0.036499062826929204,
+                "reach_lb": 2.7763991376678705,
+                "capacity_lb": 2.9495652944756676,
+                "stepwise_lb": 3.129717849442801,
+                "stdc_radius_lb": 3.0658233972329336,
+                "stdc_lb": 3.129717849442801
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 102,
+              "oracle": 2.4322158605893978,
+              "values": {
+                "mass_lb": 0.21184056333622345,
+                "reach_lb": 2.372129882487054,
+                "capacity_lb": 2.326983377075201,
+                "stepwise_lb": 2.4007235469493104,
+                "stdc_radius_lb": 2.125344613683458,
+                "stdc_lb": 2.4007235469493104
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 103,
+              "oracle": 3.3637000084544075,
+              "values": {
+                "mass_lb": 0.16466429590495424,
+                "reach_lb": 3.099714146304406,
+                "capacity_lb": 3.290131816919171,
+                "stepwise_lb": 3.290131816919171,
+                "stdc_radius_lb": 2.953764320169365,
+                "stdc_lb": 3.290131816919171
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 104,
+              "oracle": 3.9596935654360985,
+              "values": {
+                "mass_lb": 0.0,
+                "reach_lb": 3.9596935654360985,
+                "capacity_lb": 3.4981936237491036,
+                "stepwise_lb": 3.9596935654360985,
+                "stdc_radius_lb": 2.0943511306048257,
+                "stdc_lb": 3.9596935654360985
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 105,
+              "oracle": 2.5907857191047223,
+              "values": {
+                "mass_lb": 0.01835867209291223,
+                "reach_lb": 2.5829563947580603,
+                "capacity_lb": 2.5622582587524585,
+                "stepwise_lb": 2.5829563947580603,
+                "stdc_radius_lb": 2.101406444804236,
+                "stdc_lb": 2.5829563947580603
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 106,
+              "oracle": 3.4456142744307505,
+              "values": {
+                "mass_lb": 0.027259990604458467,
+                "reach_lb": 3.422605272863189,
+                "capacity_lb": 3.3552949036048183,
+                "stepwise_lb": 3.4229440985970214,
+                "stdc_radius_lb": 2.251691492038992,
+                "stdc_lb": 3.4229440985970214
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 107,
+              "oracle": 3.9123650119397473,
+              "values": {
+                "mass_lb": 0.020197295159138505,
+                "reach_lb": 3.722561021153757,
+                "capacity_lb": 3.455328336071667,
+                "stepwise_lb": 3.749995973180041,
+                "stdc_radius_lb": 3.4634618443929206,
+                "stdc_lb": 3.749995973180041
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 108,
+              "oracle": 1.9108992033185694,
+              "values": {
+                "mass_lb": 0.1695687877591054,
+                "reach_lb": 1.865044765462083,
+                "capacity_lb": 1.7386940686054326,
+                "stepwise_lb": 1.865044765462083,
+                "stdc_radius_lb": 1.5554603944703085,
+                "stdc_lb": 1.865044765462083
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 109,
+              "oracle": 3.379633861388346,
+              "values": {
+                "mass_lb": 0.18904652743488332,
+                "reach_lb": 3.186194486930363,
+                "capacity_lb": 3.2100610559438305,
+                "stepwise_lb": 3.285704817772391,
+                "stdc_radius_lb": 3.1986135838860523,
+                "stdc_lb": 3.285704817772391
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 110,
+              "oracle": 3.9242491084036555,
+              "values": {
+                "mass_lb": 0.08147460703972598,
+                "reach_lb": 3.838640761212794,
+                "capacity_lb": 3.7959080272204733,
+                "stepwise_lb": 3.8477647398653514,
+                "stdc_radius_lb": 3.17275238344423,
+                "stdc_lb": 3.851669114275201
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 111,
+              "oracle": 2.514150404381277,
+              "values": {
+                "mass_lb": 0.47755904816823036,
+                "reach_lb": 2.395822751898964,
+                "capacity_lb": 2.470726421376373,
+                "stepwise_lb": 2.470726421376373,
+                "stdc_radius_lb": 2.2758353834788907,
+                "stdc_lb": 2.470726421376373
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 112,
+              "oracle": 3.6748110679106967,
+              "values": {
+                "mass_lb": 0.18541904753226326,
+                "reach_lb": 3.6094109357602946,
+                "capacity_lb": 3.6425535141712477,
+                "stepwise_lb": 3.6539793124148066,
+                "stdc_radius_lb": 3.5605326371050587,
+                "stdc_lb": 3.6539793124148066
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 113,
+              "oracle": 3.6702669657292764,
+              "values": {
+                "mass_lb": 0.011199676286297899,
+                "reach_lb": 3.2205268172035986,
+                "capacity_lb": 3.1885388755688893,
+                "stepwise_lb": 3.3017923972028513,
+                "stdc_radius_lb": 3.2257187333238133,
+                "stdc_lb": 3.3017923972028513
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 114,
+              "oracle": 3.0,
+              "values": {
+                "mass_lb": 3.0,
+                "reach_lb": 3.0,
+                "capacity_lb": 3.0,
+                "stepwise_lb": 3.0,
+                "stdc_radius_lb": 3.0,
+                "stdc_lb": 3.0
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 115,
+              "oracle": 2.680515416590031,
+              "values": {
+                "mass_lb": 0.21650685765527158,
+                "reach_lb": 2.2996233755607607,
+                "capacity_lb": 2.4350565896974077,
+                "stepwise_lb": 2.4350565896974077,
+                "stdc_radius_lb": 2.3126171065954777,
+                "stdc_lb": 2.4350565896974077
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 116,
+              "oracle": 3.937752134953974,
+              "values": {
+                "mass_lb": 0.05291144817271569,
+                "reach_lb": 3.6201208319117186,
+                "capacity_lb": 3.4889899706102967,
+                "stepwise_lb": 3.7290579792172163,
+                "stdc_radius_lb": 3.5460883326238983,
+                "stdc_lb": 3.7290579792172163
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 117,
+              "oracle": 2.5672204722953618,
+              "values": {
+                "mass_lb": 0.0,
+                "reach_lb": 2.543457736416261,
+                "capacity_lb": 2.5672204722953618,
+                "stepwise_lb": 2.5672204722953618,
+                "stdc_radius_lb": 1.9442912874798741,
+                "stdc_lb": 2.5672204722953618
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 118,
+              "oracle": 3.7628267378721842,
+              "values": {
+                "mass_lb": 0.07375675277218731,
+                "reach_lb": 3.7628267378721842,
+                "capacity_lb": 3.762826737872184,
+                "stepwise_lb": 3.7628267378721842,
+                "stdc_radius_lb": 3.1198797112312446,
+                "stdc_lb": 3.7628267378721842
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 119,
+              "oracle": 4.370321246527133,
+              "values": {
+                "mass_lb": 0.05388959878141784,
+                "reach_lb": 3.8075550014866684,
+                "capacity_lb": 4.1140307416441,
+                "stepwise_lb": 4.1140307416441,
+                "stdc_radius_lb": 3.3615452891618425,
+                "stdc_lb": 4.1140307416441
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 120,
+              "oracle": 2.5070240149178593,
+              "values": {
+                "mass_lb": 0.17244208333078798,
+                "reach_lb": 2.5070240149178593,
+                "capacity_lb": 2.4907487010611,
+                "stepwise_lb": 2.5070240149178593,
+                "stdc_radius_lb": 2.151189215404223,
+                "stdc_lb": 2.5070240149178593
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 121,
+              "oracle": 2.6412694985817575,
+              "values": {
+                "mass_lb": 0.21220819555279327,
+                "reach_lb": 2.436005887882419,
+                "capacity_lb": 2.1300965128917153,
+                "stepwise_lb": 2.514073140684096,
+                "stdc_radius_lb": 2.373096680441642,
+                "stdc_lb": 2.514073140684096
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 122,
+              "oracle": 3.735775972748318,
+              "values": {
+                "mass_lb": 0.1081801375032624,
+                "reach_lb": 3.6152428188512324,
+                "capacity_lb": 3.0022461749707596,
+                "stepwise_lb": 3.6278035410815033,
+                "stdc_radius_lb": 3.156880987575612,
+                "stdc_lb": 3.6278035410815033
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 123,
+              "oracle": 2.932423217389302,
+              "values": {
+                "mass_lb": 0.4332027013179979,
+                "reach_lb": 2.9179491665311352,
+                "capacity_lb": 2.930914873201044,
+                "stepwise_lb": 2.930914873201044,
+                "stdc_radius_lb": 2.755746126548996,
+                "stdc_lb": 2.930914873201044
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 124,
+              "oracle": 2.895140115061535,
+              "values": {
+                "mass_lb": 0.04059578162309831,
+                "reach_lb": 2.634232147389768,
+                "capacity_lb": 2.4410083321930904,
+                "stepwise_lb": 2.807058674555824,
+                "stdc_radius_lb": 2.5968774026981096,
+                "stdc_lb": 2.807058674555824
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 125,
+              "oracle": 3.8547535288773926,
+              "values": {
+                "mass_lb": 0.15096885641460392,
+                "reach_lb": 3.1684440850153845,
+                "capacity_lb": 3.1395355873438673,
+                "stepwise_lb": 3.433357057175413,
+                "stdc_radius_lb": 3.052186605225249,
+                "stdc_lb": 3.433357057175413
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 126,
+              "oracle": 2.584772102226145,
+              "values": {
+                "mass_lb": 0.03060664112348376,
+                "reach_lb": 2.5827167006741547,
+                "capacity_lb": 2.439482365498627,
+                "stepwise_lb": 2.583401640885433,
+                "stdc_radius_lb": 2.321047725606589,
+                "stdc_lb": 2.583401640885433
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 127,
+              "oracle": 3.326432282643971,
+              "values": {
+                "mass_lb": 0.10441050045698108,
+                "reach_lb": 3.0334360778122114,
+                "capacity_lb": 3.2336515431222326,
+                "stepwise_lb": 3.2336515431222326,
+                "stdc_radius_lb": 3.005867735903144,
+                "stdc_lb": 3.2336515431222326
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 128,
+              "oracle": 3.810712337202772,
+              "values": {
+                "mass_lb": 0.09248100721567526,
+                "reach_lb": 3.3460929184105135,
+                "capacity_lb": 3.5728661488789806,
+                "stepwise_lb": 3.609825322372533,
+                "stdc_radius_lb": 3.597039005032549,
+                "stdc_lb": 3.609825322372533
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 129,
+              "oracle": 2.5130126070905976,
+              "values": {
+                "mass_lb": 0.11812792736202865,
+                "reach_lb": 2.4616047640838823,
+                "capacity_lb": 2.431159430349967,
+                "stepwise_lb": 2.476365974007652,
+                "stdc_radius_lb": 1.9893149773939136,
+                "stdc_lb": 2.476365974007652
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 130,
+              "oracle": 2.161477540104496,
+              "values": {
+                "mass_lb": 0.0,
+                "reach_lb": 1.6147494852342446,
+                "capacity_lb": 1.0623083924621222,
+                "stepwise_lb": 1.8881135126693704,
+                "stdc_radius_lb": 1.8881135126693704,
+                "stdc_lb": 1.8881135126693704
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 131,
+              "oracle": 4.52926580802583,
+              "values": {
+                "mass_lb": 0.02415519396651161,
+                "reach_lb": 4.52926580802583,
+                "capacity_lb": 4.350451104901374,
+                "stepwise_lb": 4.52926580802583,
+                "stdc_radius_lb": 4.52926580802583,
+                "stdc_lb": 4.52926580802583
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 132,
+              "oracle": 2.6515856972458045,
+              "values": {
+                "mass_lb": 0.13686080334455744,
+                "reach_lb": 2.6273902413355836,
+                "capacity_lb": 2.4395149221081427,
+                "stepwise_lb": 2.6273902413355836,
+                "stdc_radius_lb": 2.5621645915686573,
+                "stdc_lb": 2.6273902413355836
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 133,
+              "oracle": 4.0,
+              "values": {
+                "mass_lb": 4.0,
+                "reach_lb": 4.0,
+                "capacity_lb": 4.0,
+                "stepwise_lb": 4.0,
+                "stdc_radius_lb": 4.0,
+                "stdc_lb": 4.0
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 134,
+              "oracle": 3.8928508012356513,
+              "values": {
+                "mass_lb": 0.04127170073979021,
+                "reach_lb": 3.779858938181712,
+                "capacity_lb": 3.5322416977157105,
+                "stepwise_lb": 3.779858938181712,
+                "stdc_radius_lb": 3.610068738253456,
+                "stdc_lb": 3.779858938181712
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 135,
+              "oracle": 2.809356972330305,
+              "values": {
+                "mass_lb": 0.022607206663655736,
+                "reach_lb": 2.809356972330305,
+                "capacity_lb": 2.688501951557208,
+                "stepwise_lb": 2.809356972330305,
+                "stdc_radius_lb": 2.6901025025183216,
+                "stdc_lb": 2.809356972330305
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 136,
+              "oracle": 3.705370360289427,
+              "values": {
+                "mass_lb": 0.1962834988655502,
+                "reach_lb": 3.6204098889848173,
+                "capacity_lb": 3.616435641838439,
+                "stepwise_lb": 3.637765635023194,
+                "stdc_radius_lb": 3.4199152730006346,
+                "stdc_lb": 3.6377656350231944
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 137,
+              "oracle": 4.339535393475211,
+              "values": {
+                "mass_lb": 0.16727173232065928,
+                "reach_lb": 4.156557364680534,
+                "capacity_lb": 4.1279107000952155,
+                "stepwise_lb": 4.1667359771587815,
+                "stdc_radius_lb": 3.9961191129214058,
+                "stdc_lb": 4.1667359771587815
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 138,
+              "oracle": 2.152706236775744,
+              "values": {
+                "mass_lb": 0.0728091926392605,
+                "reach_lb": 2.1102648238901076,
+                "capacity_lb": 2.036770625358354,
+                "stepwise_lb": 2.1102648238901076,
+                "stdc_radius_lb": 1.7239567550099995,
+                "stdc_lb": 2.114228930083404
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 139,
+              "oracle": 2.9844070971463226,
+              "values": {
+                "mass_lb": 0.06067586709036839,
+                "reach_lb": 2.816901805859059,
+                "capacity_lb": 2.816624577058337,
+                "stepwise_lb": 2.90094963015017,
+                "stdc_radius_lb": 2.7738779181753066,
+                "stdc_lb": 2.90094963015017
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 140,
+              "oracle": 3.5451691887095995,
+              "values": {
+                "mass_lb": 0.39851434128891966,
+                "reach_lb": 3.0519486133869975,
+                "capacity_lb": 3.171542778073901,
+                "stepwise_lb": 3.193165672801272,
+                "stdc_radius_lb": 2.8806955362460163,
+                "stdc_lb": 3.236411462256015
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 141,
+              "oracle": 2.010567517899461,
+              "values": {
+                "mass_lb": 0.012636198405745798,
+                "reach_lb": 1.995936401755514,
+                "capacity_lb": 1.7790759299513188,
+                "stepwise_lb": 2.0028080685246827,
+                "stdc_radius_lb": 1.9166757640613101,
+                "stdc_lb": 2.0028080685246827
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 142,
+              "oracle": 2.45735099821623,
+              "values": {
+                "mass_lb": 0.04925575985282749,
+                "reach_lb": 1.9361485746932663,
+                "capacity_lb": 2.071811013628805,
+                "stepwise_lb": 2.1740931655544555,
+                "stdc_radius_lb": 1.5766366733065076,
+                "stdc_lb": 2.1740931655544555
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 143,
+              "oracle": 3.058247161486271,
+              "values": {
+                "mass_lb": 0.0,
+                "reach_lb": 3.049847490945058,
+                "capacity_lb": 1.0690445449265369,
+                "stepwise_lb": 3.0498474909450586,
+                "stdc_radius_lb": 2.5890501118653915,
+                "stdc_lb": 3.0498474909450586
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 144,
+              "oracle": 2.7366515021914726,
+              "values": {
+                "mass_lb": 0.25533891734214975,
+                "reach_lb": 2.7366515021914726,
+                "capacity_lb": 2.717219256964757,
+                "stepwise_lb": 2.7366515021914726,
+                "stdc_radius_lb": 2.49691873692099,
+                "stdc_lb": 2.7366515021914726
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 145,
+              "oracle": 2.812494072935273,
+              "values": {
+                "mass_lb": 0.13912210891424942,
+                "reach_lb": 2.683006469679417,
+                "capacity_lb": 2.4543595540631884,
+                "stepwise_lb": 2.683006469679417,
+                "stdc_radius_lb": 2.5352156116333417,
+                "stdc_lb": 2.683006469679417
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 146,
+              "oracle": 4.261660730000406,
+              "values": {
+                "mass_lb": 0.11089634108598852,
+                "reach_lb": 4.232834200313205,
+                "capacity_lb": 4.178007756603199,
+                "stepwise_lb": 4.240743041405966,
+                "stdc_radius_lb": 4.039342735277821,
+                "stdc_lb": 4.240743041405966
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 147,
+              "oracle": 1.3181343013747604,
+              "values": {
+                "mass_lb": 0.02028569400224408,
+                "reach_lb": 1.3181343013747604,
+                "capacity_lb": 0.963771415910315,
+                "stepwise_lb": 1.3181343013747606,
+                "stdc_radius_lb": 1.024359266507794,
+                "stdc_lb": 1.3181343013747606
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 148,
+              "oracle": 3.5394134402798625,
+              "values": {
+                "mass_lb": 0.06665620452199918,
+                "reach_lb": 3.251314814286471,
+                "capacity_lb": 3.382511899204452,
+                "stepwise_lb": 3.3900351848688794,
+                "stdc_radius_lb": 3.276577916365495,
+                "stdc_lb": 3.3900351848688794
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 149,
+              "oracle": 4.266184451062275,
+              "values": {
+                "mass_lb": 0.017229815239013322,
+                "reach_lb": 3.998728143548849,
+                "capacity_lb": 4.11491491631926,
+                "stepwise_lb": 4.114914916319261,
+                "stdc_radius_lb": 4.074317055775966,
+                "stdc_lb": 4.114914916319261
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 150,
+              "oracle": 2.6593132255291185,
+              "values": {
+                "mass_lb": 0.08111712923462593,
+                "reach_lb": 2.51732154855897,
+                "capacity_lb": 2.5426875189207143,
+                "stepwise_lb": 2.55377899103621,
+                "stdc_radius_lb": 2.4539168637356448,
+                "stdc_lb": 2.55377899103621
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 151,
+              "oracle": 3.055534608858789,
+              "values": {
+                "mass_lb": 0.39246166863087284,
+                "reach_lb": 2.8292024218470084,
+                "capacity_lb": 2.7696100266237984,
+                "stepwise_lb": 2.8789686370569756,
+                "stdc_radius_lb": 2.711865113428668,
+                "stdc_lb": 2.8789686370569756
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 152,
+              "oracle": 5.0,
+              "values": {
+                "mass_lb": 5.0,
+                "reach_lb": 5.0,
+                "capacity_lb": 5.0,
+                "stepwise_lb": 5.0,
+                "stdc_radius_lb": 5.0,
+                "stdc_lb": 5.0
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 153,
+              "oracle": 2.6245483079093717,
+              "values": {
+                "mass_lb": 0.07632017634494753,
+                "reach_lb": 2.576400545769008,
+                "capacity_lb": 2.473725341018053,
+                "stepwise_lb": 2.5926956080326033,
+                "stdc_radius_lb": 2.481907479961916,
+                "stdc_lb": 2.5926956080326033
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 154,
+              "oracle": 3.1191434038126467,
+              "values": {
+                "mass_lb": 0.10763657148755608,
+                "reach_lb": 2.853594923872737,
+                "capacity_lb": 2.704800720083723,
+                "stepwise_lb": 2.913182677554324,
+                "stdc_radius_lb": 2.532508166191438,
+                "stdc_lb": 2.913182677554324
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 155,
+              "oracle": 3.8079433978913357,
+              "values": {
+                "mass_lb": 0.15831067971269247,
+                "reach_lb": 3.5568741302517966,
+                "capacity_lb": 3.548490266441705,
+                "stepwise_lb": 3.6052714191515207,
+                "stdc_radius_lb": 3.3582979457582565,
+                "stdc_lb": 3.6052714191515207
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 156,
+              "oracle": 1.718891570989475,
+              "values": {
+                "mass_lb": 0.0,
+                "reach_lb": 1.718891570989475,
+                "capacity_lb": 0.9795301810646997,
+                "stepwise_lb": 1.718891570989475,
+                "stdc_radius_lb": 1.718891570989475,
+                "stdc_lb": 1.718891570989475
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 157,
+              "oracle": 3.5674125473619593,
+              "values": {
+                "mass_lb": 0.11283908971276517,
+                "reach_lb": 3.5674125473619593,
+                "capacity_lb": 3.47394605097346,
+                "stepwise_lb": 3.5674125473619593,
+                "stdc_radius_lb": 3.567163053142463,
+                "stdc_lb": 3.5674125473619593
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 158,
+              "oracle": 3.970759312473727,
+              "values": {
+                "mass_lb": 0.02016505402654829,
+                "reach_lb": 3.5224893606812095,
+                "capacity_lb": 3.499095373745889,
+                "stepwise_lb": 3.643855247733594,
+                "stdc_radius_lb": 2.9982812055298362,
+                "stdc_lb": 3.643855247733594
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 159,
+              "oracle": 2.6456652308933024,
+              "values": {
+                "mass_lb": 0.2309606438197411,
+                "reach_lb": 2.50355146060628,
+                "capacity_lb": 2.5454992879257654,
+                "stepwise_lb": 2.5777166485157315,
+                "stdc_radius_lb": 2.5454992879257654,
+                "stdc_lb": 2.5777166485157315
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 160,
+              "oracle": 3.503313006675777,
+              "values": {
+                "mass_lb": 0.5209759684542361,
+                "reach_lb": 3.353023486510386,
+                "capacity_lb": 3.470618055743418,
+                "stepwise_lb": 3.470618055743418,
+                "stdc_radius_lb": 3.1266458924441127,
+                "stdc_lb": 3.470618055743418
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 161,
+              "oracle": 3.6840217909543522,
+              "values": {
+                "mass_lb": 0.25853569827051565,
+                "reach_lb": 3.3128607621405015,
+                "capacity_lb": 3.353229998010616,
+                "stepwise_lb": 3.39023590533282,
+                "stdc_radius_lb": 3.032619466059384,
+                "stdc_lb": 3.39023590533282
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 162,
+              "oracle": 2.390678716021782,
+              "values": {
+                "mass_lb": 0.2258005824743316,
+                "reach_lb": 2.3761006543515406,
+                "capacity_lb": 2.390678716021782,
+                "stepwise_lb": 2.390678716021782,
+                "stdc_radius_lb": 2.361526222427366,
+                "stdc_lb": 2.390678716021782
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 163,
+              "oracle": 3.3659686322906364,
+              "values": {
+                "mass_lb": 0.23693142132595027,
+                "reach_lb": 3.182891265557341,
+                "capacity_lb": 3.1757782933679155,
+                "stepwise_lb": 3.2736492650078226,
+                "stdc_radius_lb": 3.1357426054836726,
+                "stdc_lb": 3.2736492650078226
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 164,
+              "oracle": 4.680672403538528,
+              "values": {
+                "mass_lb": 0.044877479883293506,
+                "reach_lb": 4.493387639378333,
+                "capacity_lb": 4.631376137340129,
+                "stepwise_lb": 4.631376137340129,
+                "stdc_radius_lb": 4.492890583853184,
+                "stdc_lb": 4.631376137340129
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 165,
+              "oracle": 2.5602047612240817,
+              "values": {
+                "mass_lb": 0.06828554907169088,
+                "reach_lb": 2.5132713342308324,
+                "capacity_lb": 2.5409218416665187,
+                "stepwise_lb": 2.5409218416665187,
+                "stdc_radius_lb": 1.7205403469879963,
+                "stdc_lb": 2.5409218416665187
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 166,
+              "oracle": 3.305242944131037,
+              "values": {
+                "mass_lb": 0.06859274172753542,
+                "reach_lb": 3.0440721814342107,
+                "capacity_lb": 3.0298619963821682,
+                "stepwise_lb": 3.2106166151711677,
+                "stdc_radius_lb": 2.701202651483116,
+                "stdc_lb": 3.2106166151711677
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 167,
+              "oracle": 3.957313484748199,
+              "values": {
+                "mass_lb": 0.09329999125573324,
+                "reach_lb": 3.601464002604839,
+                "capacity_lb": 3.828252111183728,
+                "stepwise_lb": 3.828252111183728,
+                "stdc_radius_lb": 3.1873180978680486,
+                "stdc_lb": 3.828252111183728
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 168,
+              "oracle": 2.6117283967195197,
+              "values": {
+                "mass_lb": 0.22090771721941066,
+                "reach_lb": 2.551120403751765,
+                "capacity_lb": 2.4918177444838614,
+                "stepwise_lb": 2.570171370054611,
+                "stdc_radius_lb": 1.9450219267909037,
+                "stdc_lb": 2.570171370054611
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 169,
+              "oracle": 3.6604654107206045,
+              "values": {
+                "mass_lb": 0.0,
+                "reach_lb": 3.6604654107206045,
+                "capacity_lb": 3.493728872386937,
+                "stepwise_lb": 3.6604654107206045,
+                "stdc_radius_lb": 3.475315610772743,
+                "stdc_lb": 3.6604654107206045
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 170,
+              "oracle": 3.0748676731231788,
+              "values": {
+                "mass_lb": 0.036310337812020414,
+                "reach_lb": 3.0748370676758743,
+                "capacity_lb": 1.4705862958255074,
+                "stepwise_lb": 3.0748370676758743,
+                "stdc_radius_lb": 2.8297014162862166,
+                "stdc_lb": 3.0748370676758743
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 171,
+              "oracle": 3.000000000000001,
+              "values": {
+                "mass_lb": 3.000000000000001,
+                "reach_lb": 3.000000000000001,
+                "capacity_lb": 3.000000000000001,
+                "stepwise_lb": 3.000000000000001,
+                "stdc_radius_lb": 3.000000000000001,
+                "stdc_lb": 3.000000000000001
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 172,
+              "oracle": 2.5620154102600425,
+              "values": {
+                "mass_lb": 0.08967362820511855,
+                "reach_lb": 2.4282808966798184,
+                "capacity_lb": 2.0301128787555944,
+                "stepwise_lb": 2.4282808966798184,
+                "stdc_radius_lb": 2.3017042820826634,
+                "stdc_lb": 2.4282808966798184
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 173,
+              "oracle": 4.488934974525497,
+              "values": {
+                "mass_lb": 0.12872118291252205,
+                "reach_lb": 4.0982230151032955,
+                "capacity_lb": 4.395852805491976,
+                "stepwise_lb": 4.395852805491976,
+                "stdc_radius_lb": 4.0628687794140435,
+                "stdc_lb": 4.395852805491976
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 174,
+              "oracle": 2.454512385248244,
+              "values": {
+                "mass_lb": 0.09012436240598588,
+                "reach_lb": 2.454512385248244,
+                "capacity_lb": 2.1387553861507334,
+                "stepwise_lb": 2.454512385248244,
+                "stdc_radius_lb": 2.439474854034465,
+                "stdc_lb": 2.454512385248244
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 175,
+              "oracle": 3.5879392922647892,
+              "values": {
+                "mass_lb": 0.7029833792443496,
+                "reach_lb": 3.44275548283838,
+                "capacity_lb": 3.462851381452046,
+                "stepwise_lb": 3.4819070040357993,
+                "stdc_radius_lb": 3.2115017816249267,
+                "stdc_lb": 3.4819070040357993
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 176,
+              "oracle": 4.261413167700377,
+              "values": {
+                "mass_lb": 0.08023487451543836,
+                "reach_lb": 3.9290647668481737,
+                "capacity_lb": 4.109346500086662,
+                "stepwise_lb": 4.115097667981924,
+                "stdc_radius_lb": 2.705552910670559,
+                "stdc_lb": 4.126600003772446
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 177,
+              "oracle": 2.706957717375838,
+              "values": {
+                "mass_lb": 0.6075103556020763,
+                "reach_lb": 2.608412641081526,
+                "capacity_lb": 2.6878920331357676,
+                "stepwise_lb": 2.6878920331357676,
+                "stdc_radius_lb": 2.2367861639487208,
+                "stdc_lb": 2.6878920331357676
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 178,
+              "oracle": 3.6916390884118693,
+              "values": {
+                "mass_lb": 0.30595249305661315,
+                "reach_lb": 3.61948686386781,
+                "capacity_lb": 3.6655462690548246,
+                "stepwise_lb": 3.6655462690548246,
+                "stdc_radius_lb": 3.649192814429308,
+                "stdc_lb": 3.6655462690548246
+              }
+            },
+            {
+              "kind": "particles",
+              "seed": 179,
+              "oracle": 4.119023307774425,
+              "values": {
+                "mass_lb": 0.04879418268957508,
+                "reach_lb": 3.6071499795849293,
+                "capacity_lb": 3.7630331448396253,
+                "stepwise_lb": 3.8444319800742104,
+                "stdc_radius_lb": 2.898176507342485,
+                "stdc_lb": 3.8444319800742104
+              }
+            }
+          ],
+          "root_h_over_opt_mean": {
+            "mass_lb": 0.09528397207603642,
+            "reach_lb": 0.8774516815297047,
+            "capacity_lb": 0.8988601662474146,
+            "stepwise_lb": 0.9445409307723047,
+            "stdc_radius_lb": 0.8154298580993681,
+            "stdc_lb": 0.9446517991743143
+          },
+          "heuristic_time_s": {
+            "mass_lb": 0.1283452978823334,
+            "reach_lb": 0.46956079290248454,
+            "capacity_lb": 0.4589201071066782,
+            "stepwise_lb": 0.6074963965220377,
+            "stdc_radius_lb": 0.5828239981783554,
+            "stdc_lb": 0.5844501989195123
+          },
+          "total_wall_s": 27.84251560003031
+        },
+        "audit_summary": {
+          "status": "passed",
+          "cases": 160,
+          "prefix_evaluations": 18024,
+          "violations": 0
+        },
+        "preservation_after": {
+          "status": "passed",
+          "baseline_files": 654,
+          "protected_research_files": 2581,
+          "source_files": 109,
+          "historical_preflight_sha256": "dae1d7ef9586a4dda20d5121542993a8812e7dfbe6fdcc27251e9503a5bb2b0b"
+        },
+        "wall_s": 36.5580230000196
+      },
+      "small_search": {
+        "status": "passed",
+        "stage": "small_search",
+        "started_utc": "2026-11-23T16:21:56.282185+00:00",
+        "driver_command": [
+          "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+          "scripts/run_anytime_validation.py",
+          "small_search",
+          "--run-dir",
+          "outputs/stdc_v0_2/anytime_20261124"
+        ],
+        "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro",
+        "timeout_s": 1200,
+        "preservation_before": {
+          "status": "passed",
+          "baseline_files": 654,
+          "protected_research_files": 2581,
+          "source_files": 109,
+          "historical_preflight_sha256": "dae1d7ef9586a4dda20d5121542993a8812e7dfbe6fdcc27251e9503a5bb2b0b"
+        },
+        "child_environment": {
+          "OMP_NUM_THREADS": "1",
+          "OPENBLAS_NUM_THREADS": "1",
+          "MKL_NUM_THREADS": "1",
+          "NUMEXPR_NUM_THREADS": "1",
+          "PROJ_NETWORK": "OFF",
+          "PYTHONDONTWRITEBYTECODE": "1",
+          "PYTHONPATH": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\src;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\offline_guard;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\src;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts"
+        },
+        "seeds": {
+          "historical": [
+            15000,
+            15001,
+            15002,
+            15003,
+            15004,
+            15005,
+            15006,
+            15007,
+            15008,
+            15009,
+            15010,
+            15011,
+            15012,
+            15013,
+            15014,
+            15015,
+            15016,
+            15017,
+            15018,
+            15019,
+            15020,
+            15021,
+            15022,
+            15023,
+            15024,
+            15025,
+            15026,
+            15027,
+            15028,
+            15029,
+            15030,
+            15031,
+            15032,
+            15033,
+            15034
+          ],
+          "derived": [
+            15000,
+            15001,
+            15002,
+            15003,
+            15004
+          ]
+        },
+        "test_counts": null,
+        "command": [
+          "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+          "scripts/audit_anytime_search.py",
+          "--output-dir",
+          "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\anytime_20261124\\small_search\\audit"
+        ],
+        "exit_code": 0,
+        "audit_summary": {
+          "status": "passed",
+          "cases": 45,
+          "searches": 405,
+          "case_counts": {
+            "historical_dynamic_matrix": 35,
+            "derived_stationary_matrix": 5,
+            "derived_synthetic_particle": 5
+          },
+          "bound_modes": [
+            "zero",
+            "mass_lb",
+            "stdc_lb"
+          ],
+          "guide_weights": [
+            1.0,
+            1.04,
+            1.1
+          ],
+          "tolerance": 1e-10,
+          "prefix_evaluations": 12123,
+          "max_bound_overestimate": {
+            "zero": 0.0,
+            "mass_lb": 0.0,
+            "stdc_lb": 6.661338147750939e-16
+          },
+          "data_type": "synthetic_toy",
+          "global_epsilon_certified": false,
+          "scope": "finite numerical global Oracle agreement; paper guide remains nonadmissible",
+          "independent_final_replays": 405,
+          "max_absolute_J_minus_oracle": 0.0,
+          "max_J_replay_error": 0.0,
+          "max_Pd_replay_error": 0.0,
+          "max_history_J_replay_error": 0.0,
+          "max_history_Pd_replay_error": 0.0,
+          "aggregate": [
+            {
+              "kind": "historical_dynamic_matrix",
+              "guide_weight": 1.0,
+              "bound_mode": "zero",
+              "searches": 35,
+              "mean_expanded": 81.97142857142858,
+              "mean_search_wall_s": 0.019079848578465838,
+              "mean_bound_calls": 81.97142857142858,
+              "mean_guide_calls": 81.97142857142858,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "historical_dynamic_matrix",
+              "guide_weight": 1.0,
+              "bound_mode": "mass_lb",
+              "searches": 35,
+              "mean_expanded": 77.74285714285715,
+              "mean_search_wall_s": 0.019199402853181318,
+              "mean_bound_calls": 81.97142857142858,
+              "mean_guide_calls": 81.97142857142858,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "historical_dynamic_matrix",
+              "guide_weight": 1.0,
+              "bound_mode": "stdc_lb",
+              "searches": 35,
+              "mean_expanded": 7.714285714285714,
+              "mean_search_wall_s": 0.009660360007546841,
+              "mean_bound_calls": 19.428571428571427,
+              "mean_guide_calls": 19.428571428571427,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "historical_dynamic_matrix",
+              "guide_weight": 1.04,
+              "bound_mode": "zero",
+              "searches": 35,
+              "mean_expanded": 81.97142857142858,
+              "mean_search_wall_s": 0.019622731441631912,
+              "mean_bound_calls": 81.97142857142858,
+              "mean_guide_calls": 81.97142857142858,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "historical_dynamic_matrix",
+              "guide_weight": 1.04,
+              "bound_mode": "mass_lb",
+              "searches": 35,
+              "mean_expanded": 77.74285714285715,
+              "mean_search_wall_s": 0.02035778856370598,
+              "mean_bound_calls": 81.97142857142858,
+              "mean_guide_calls": 81.97142857142858,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "historical_dynamic_matrix",
+              "guide_weight": 1.04,
+              "bound_mode": "stdc_lb",
+              "searches": 35,
+              "mean_expanded": 7.428571428571429,
+              "mean_search_wall_s": 0.009473808575421572,
+              "mean_bound_calls": 18.62857142857143,
+              "mean_guide_calls": 18.62857142857143,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "historical_dynamic_matrix",
+              "guide_weight": 1.1,
+              "bound_mode": "zero",
+              "searches": 35,
+              "mean_expanded": 81.97142857142858,
+              "mean_search_wall_s": 0.01939706000432904,
+              "mean_bound_calls": 81.97142857142858,
+              "mean_guide_calls": 81.97142857142858,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "historical_dynamic_matrix",
+              "guide_weight": 1.1,
+              "bound_mode": "mass_lb",
+              "searches": 35,
+              "mean_expanded": 77.74285714285715,
+              "mean_search_wall_s": 0.020772005727381578,
+              "mean_bound_calls": 81.97142857142858,
+              "mean_guide_calls": 81.97142857142858,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "historical_dynamic_matrix",
+              "guide_weight": 1.1,
+              "bound_mode": "stdc_lb",
+              "searches": 35,
+              "mean_expanded": 7.314285714285714,
+              "mean_search_wall_s": 0.009534311424275594,
+              "mean_bound_calls": 17.857142857142858,
+              "mean_guide_calls": 17.857142857142858,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "derived_stationary_matrix",
+              "guide_weight": 1.0,
+              "bound_mode": "zero",
+              "searches": 5,
+              "mean_expanded": 101.4,
+              "mean_search_wall_s": 0.02449707998894155,
+              "mean_bound_calls": 101.4,
+              "mean_guide_calls": 101.4,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "derived_stationary_matrix",
+              "guide_weight": 1.0,
+              "bound_mode": "mass_lb",
+              "searches": 5,
+              "mean_expanded": 98.8,
+              "mean_search_wall_s": 0.024738359986804424,
+              "mean_bound_calls": 101.4,
+              "mean_guide_calls": 101.4,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "derived_stationary_matrix",
+              "guide_weight": 1.0,
+              "bound_mode": "stdc_lb",
+              "searches": 5,
+              "mean_expanded": 6.8,
+              "mean_search_wall_s": 0.010788679984398187,
+              "mean_bound_calls": 18.2,
+              "mean_guide_calls": 18.2,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "derived_stationary_matrix",
+              "guide_weight": 1.04,
+              "bound_mode": "zero",
+              "searches": 5,
+              "mean_expanded": 101.4,
+              "mean_search_wall_s": 0.024717759992927312,
+              "mean_bound_calls": 101.4,
+              "mean_guide_calls": 101.4,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "derived_stationary_matrix",
+              "guide_weight": 1.04,
+              "bound_mode": "mass_lb",
+              "searches": 5,
+              "mean_expanded": 98.8,
+              "mean_search_wall_s": 0.02529080002568662,
+              "mean_bound_calls": 101.4,
+              "mean_guide_calls": 101.4,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "derived_stationary_matrix",
+              "guide_weight": 1.04,
+              "bound_mode": "stdc_lb",
+              "searches": 5,
+              "mean_expanded": 6.8,
+              "mean_search_wall_s": 0.011665179976262152,
+              "mean_bound_calls": 18.2,
+              "mean_guide_calls": 18.2,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "derived_stationary_matrix",
+              "guide_weight": 1.1,
+              "bound_mode": "zero",
+              "searches": 5,
+              "mean_expanded": 101.4,
+              "mean_search_wall_s": 0.02676055997144431,
+              "mean_bound_calls": 101.4,
+              "mean_guide_calls": 101.4,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "derived_stationary_matrix",
+              "guide_weight": 1.1,
+              "bound_mode": "mass_lb",
+              "searches": 5,
+              "mean_expanded": 98.8,
+              "mean_search_wall_s": 0.02454849996138364,
+              "mean_bound_calls": 101.4,
+              "mean_guide_calls": 101.4,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "derived_stationary_matrix",
+              "guide_weight": 1.1,
+              "bound_mode": "stdc_lb",
+              "searches": 5,
+              "mean_expanded": 6.8,
+              "mean_search_wall_s": 0.010145740024745465,
+              "mean_bound_calls": 18.2,
+              "mean_guide_calls": 18.2,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "derived_synthetic_particle",
+              "guide_weight": 1.0,
+              "bound_mode": "zero",
+              "searches": 5,
+              "mean_expanded": 80.4,
+              "mean_search_wall_s": 0.0047584399580955505,
+              "mean_bound_calls": 80.4,
+              "mean_guide_calls": 80.4,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "derived_synthetic_particle",
+              "guide_weight": 1.0,
+              "bound_mode": "mass_lb",
+              "searches": 5,
+              "mean_expanded": 78.0,
+              "mean_search_wall_s": 0.005063959979452193,
+              "mean_bound_calls": 80.4,
+              "mean_guide_calls": 80.4,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "derived_synthetic_particle",
+              "guide_weight": 1.0,
+              "bound_mode": "stdc_lb",
+              "searches": 5,
+              "mean_expanded": 9.6,
+              "mean_search_wall_s": 0.0035378400236368178,
+              "mean_bound_calls": 21.8,
+              "mean_guide_calls": 21.8,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "derived_synthetic_particle",
+              "guide_weight": 1.04,
+              "bound_mode": "zero",
+              "searches": 5,
+              "mean_expanded": 80.4,
+              "mean_search_wall_s": 0.00446493998169899,
+              "mean_bound_calls": 80.4,
+              "mean_guide_calls": 80.4,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "derived_synthetic_particle",
+              "guide_weight": 1.04,
+              "bound_mode": "mass_lb",
+              "searches": 5,
+              "mean_expanded": 78.0,
+              "mean_search_wall_s": 0.005155079998075962,
+              "mean_bound_calls": 80.4,
+              "mean_guide_calls": 80.4,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "derived_synthetic_particle",
+              "guide_weight": 1.04,
+              "bound_mode": "stdc_lb",
+              "searches": 5,
+              "mean_expanded": 8.8,
+              "mean_search_wall_s": 0.003139199991710484,
+              "mean_bound_calls": 19.8,
+              "mean_guide_calls": 19.8,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "derived_synthetic_particle",
+              "guide_weight": 1.1,
+              "bound_mode": "zero",
+              "searches": 5,
+              "mean_expanded": 80.4,
+              "mean_search_wall_s": 0.004723759973421693,
+              "mean_bound_calls": 80.4,
+              "mean_guide_calls": 80.4,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "derived_synthetic_particle",
+              "guide_weight": 1.1,
+              "bound_mode": "mass_lb",
+              "searches": 5,
+              "mean_expanded": 78.0,
+              "mean_search_wall_s": 0.0048683999804779885,
+              "mean_bound_calls": 80.4,
+              "mean_guide_calls": 80.4,
+              "max_absolute_J_minus_oracle": 0.0
+            },
+            {
+              "kind": "derived_synthetic_particle",
+              "guide_weight": 1.1,
+              "bound_mode": "stdc_lb",
+              "searches": 5,
+              "mean_expanded": 8.8,
+              "mean_search_wall_s": 0.003363960003480315,
+              "mean_bound_calls": 19.8,
+              "mean_guide_calls": 19.8,
+              "max_absolute_J_minus_oracle": 0.0
+            }
+          ],
+          "total_wall_s": 20.98359200009145
+        },
+        "preservation_after": {
+          "status": "passed",
+          "baseline_files": 654,
+          "protected_research_files": 2581,
+          "source_files": 109,
+          "historical_preflight_sha256": "dae1d7ef9586a4dda20d5121542993a8812e7dfbe6fdcc27251e9503a5bb2b0b"
+        },
+        "wall_s": 28.80454069992993
+      }
+    },
+    "not_run": [],
+    "preflight_status": "passed",
+    "global_epsilon_certified": false,
+    "source_sha256": {
+      "src/asar_repro/__init__.py": "157aec5db8dc7ffb10ae1132e79c6605ca4bca4a111d05a08d5ab7ad124989ae",
+      "src/asar_repro/anytime_search.py": "3a92527d94beb00031f8da742b9a486862186cd0e03e8c567842683b6707024f",
+      "src/asar_repro/belief.py": "cc11028b1ef3a8bf29680a61ddee6262e63be5b2ff00e78075fbab396ac09021",
+      "src/asar_repro/cli.py": "b9d8cf42f7cde47df1c14805b47fa39e08fbf755e8fda8740981c4c10db794d1",
+      "src/asar_repro/forcing.py": "cf9715349d65abda1c3e6d9b09f731bab5ef98708a03d338534fa2800f1f3450",
+      "src/asar_repro/grid.py": "d9794ec80afb764699333e0fa7bd9ef098d3d1360f14a76ae57b5b41f2a547e9",
+      "src/asar_repro/gridding.py": "c684c341f8d0f5cb73d37e240f376fc9e5c42c092f015e3b72c31d4fd0656e43",
+      "src/asar_repro/heuristic.py": "43f94d7ec3ae69dc67ee4416892ea65aa445498a002905f77d4b1f533b168c0b",
+      "src/asar_repro/historical_drift.py": "64fae2f0a0744dc35a3f3b557083c74a2a1b98b1c7572e028012f7d81970b80d",
+      "src/asar_repro/historical_reader.py": "7d7e936ad12de6eb6b7f0bb27a04bb26fa1910cb37949ff03b3f8ed27694535d",
+      "src/asar_repro/hrrr.py": "b770a776dd04af1651930754b22a02cfc1f03a0f3dd1411e6332dc77eeb6337d",
+      "src/asar_repro/motion.py": "7e74178390ffa34f30f7b987a4d7a2459e8f0ca2646ca3026c97e505f758c2c9",
+      "src/asar_repro/objective.py": "792077ad3e0286c03f60108f2580ea3b3557e3f5b002bc1a5e2f9f67e48fb2ad",
+      "src/asar_repro/opendrift_adapter.py": "74c671d7b74cec45fe9702f314236f35d8063571425329ed38da026292f6ca44",
+      "src/asar_repro/oracle.py": "93f41213b3352f0bde39ae3a114ba59a6987b05a755eb9c7260b738dc2a47b52",
+      "src/asar_repro/planner_adapter.py": "f47e508748daba824e21ec657458cd84657f8ddc405de68f898584c472ef8419",
+      "src/asar_repro/scenario_baselines.py": "630c417e51285c3f301504596a6d4a04b756a4bca4e46e1533862a202f2c577b",
+      "src/asar_repro/scenarios.py": "8bcb2f9663ab1b26dcb8305a321ede07c31eab6f7ad346e308746842a3a652be",
+      "src/asar_repro/search.py": "868b09203c3a782765f9b4440751d56512e5a24c1a0a44d5706e6a6aa5b34bbc",
+      "src/asar_repro/search_reporting.py": "5e386a054a7ad9e3f6533d74197bca6c37713ea87de53bfd3b29669094eeb1f8",
+      "src/asar_repro/stdc_heuristic.py": "18bee643e5860683cd4dfa9cbf12d9ec7a2c5ee4e2abd7d0895cf9a144cc980f",
+      "src/asar_repro/toy.py": "5f7430ac3fa4da39c847ef27d6b208a21f35d4584bd04e3f6f83a26e6c38b01d",
+      "src/asar_repro/visualize.py": "e0a31f4367e986c8558b672ad625219d76f9963e50accea1895bd78707a186a8",
+      "src/asar_repro/window_bounds.py": "67fc3be440e2693ce75dd530f95e995291f068ae7a4d8d16d7c2ece0ed058380",
+      "src/asar_repro/window_search.py": "82ad9c2f9f06842d9045036fdf18a737c5271ef8ee0a8a3956dfeec23f3c5b91",
+      "tests/conftest.py": "9b7b1e1fa40432a7636cf7faad897af069298e18934309b9c07896220b70b204",
+      "tests/test_anytime_search.py": "a72f97075aa7602dab7e548cad54b93159065fb13a9e2a39fa73f8b825f770d8",
+      "tests/test_b1_additional.py": "8b97342bb643782c1c372994d89c772e24c7fc2a4e21fc42f907980468aaf752",
+      "tests/test_b1_inventory.py": "abfe70abed4523559100ed9fcf18e26f4027ab9b7ee07847f531ec4bd86e80a8",
+      "tests/test_b1_package.py": "f33e5ceed15e09e4cb9a07e0cd542eadc1e21c732954d2c5ed56cc5800af820d",
+      "tests/test_b4_artifacts.py": "667f4908f0f8b6fcf9e657871e8bfbe825dac871da7eca6857aaf304d6971bc3",
+      "tests/test_b5_benchmark.py": "05c6627ba5da023cffc288003b3e2e962ae411f8c0b25b83f83455cdbda1b5d2",
+      "tests/test_b6_comparison.py": "a452bbc4980e24340ab1570684ad1c72d48de1a2e5f1390a9d0b42666ab4ac82",
+      "tests/test_b7_validation.py": "d7b0e313f09176b7460ba373f4073c31400c8460dbe0b53cd07a93dc92035f52",
+      "tests/test_belief.py": "15125aece9ac4869e665549b625bcf36562c1a020bc8c5decedf156dcb8ff636",
+      "tests/test_forcing.py": "4b82fe498a1e3c7202925ef99b7f5fafe0c38d090e1fea7cd4e7e3cd6ff2fa12",
+      "tests/test_grid.py": "8c3e33bc58d81b394832c40415f5bb77bba04d08d882008e97166d9c214d7e44",
+      "tests/test_heuristic.py": "f163ca0f227f9cb446ad13dd28e6ff72a30a048438c056ee0e0d095c765bb8f4",
+      "tests/test_heuristic_counterexample.py": "9bea5b0ee932f40ef416aaac9b37a7b317a9425cd30f9a59f59370292fc2b1c7",
+      "tests/test_historical_drift.py": "3af349d03383ef1ee6f59303d46fa758420858e703a26e41b0f971fb3647d2bb",
+      "tests/test_objective.py": "b80a79bf55fe9503f5d5b7e7af0bed2fb0919469fc429e950d7993bae1ca0b11",
+      "tests/test_opendrift_adapter.py": "e6a124c17e1b400989f30413de2b6f8f30ab2a822338b76a17dd2812c33b3b9c",
+      "tests/test_oracle.py": "3ea119c0e82203f76de03d51cbc32a45ff4a06da5924495aa28b3e61fe76b9e4",
+      "tests/test_particle_search.py": "c7cb13aa7084619f0ff61a4646c78d676076ae350992f9dbba7add2fbc4a86a1",
+      "tests/test_search.py": "52f80cf84fc84598ff45baa3d5a2d5b1183b2088ba041ff6f2ec98b0c12e83c3",
+      "tests/test_search_reporting.py": "708e91bdf141a2f5578edea42120fc7cbcf2ed512587e1ac881dd7966d5938d9",
+      "tests/test_search_state_reuse.py": "7f97046b74d9e00e44ad16a196bbbe483a455a9647a78e58415ac460616653a2",
+      "tests/test_smoke.py": "eca995a94c84df33d74789e2d3b90d91380476b9b0f22d5738dc710f83f01887",
+      "tests/test_stage7.py": "eec6f1c66fa5e96d967122ab65f989410be3c803422825ea2eeac491cdab316d",
+      "tests/test_stage8.py": "30a564b30f4634b5ce2615dc3e12315b92ecc646ef8281fe129509d818bfa6d7",
+      "tests/test_stdc_audit_contract.py": "4489e3d3194d16e0ce7f6c95e1f6849c36b552411a46e15c6dbea7bc719f7559",
+      "tests/test_stdc_heuristic.py": "173c698f97c322c5f70f449e77661db412e8359462e3767d6569be3ec6ede26c",
+      "tests/test_stdc_optimization.py": "99d3a9701b8ec387fe6778dc130718efa959eb0a823a71036954c3dfba5f7b0b",
+      "tests/test_stdc_validation_guards.py": "6cd5e0a0754cefde1ebae01f1410f4a9e05c4c72f466830c7d6d903ba7f5f9f3",
+      "tests/test_toy.py": "28f34ed230fa4671df12825da6b78efefe61b153f3c0bd66655e4fbe639c4621",
+      "tests/test_window_bounds.py": "ac3102c1c2ef160c28dedca8b8b29d9611e881d8128c4c706c87c8191b5966ab",
+      "tests/test_window_search.py": "31ae064a917e9a2fa5f4d6745dee90ac4f57fc739bceed5816251369c230cd6f",
+      "scripts/analyze_stdc_trace.py": "b3fb1e66efc3a057a3ebfaa7e0ec8460586318747d18e06b662a8edd3d45381c",
+      "scripts/audit_anytime_search.py": "99985dc2eb02f45040bd91df94f975d5494a2b339adc58c4e18709dbb28f87f5",
+      "scripts/audit_search_results.py": "47093d01d604111b8734f25d2e829da158096e566718e0d1aee6c6b73f3992f5",
+      "scripts/audit_window_bounds.py": "b438f09ede4c61d3a10bda084f48ea1215ac6046719c986a99e66eed8d571855",
+      "scripts/audit_window_search.py": "299f140645275981c0fccd054b3a8d244aeab50f876f5ae6d8eafb3faa6b96cc",
+      "scripts/b1_extra_currents.py": "1b1c62a3cc0ab64fa9c02cda7527fa54ea64ce2893f3c456d589395e636160c5",
+      "scripts/b1_gfs.py": "c7cb66fa19d214b8e4b5c782fe49f5e1c7470df6af154696d75dfdef93253515",
+      "scripts/b1_hrrr.py": "8176e6f4b22141b474fb04c0a0466787fc31c9b56f9e5aa012184ae600bfa479",
+      "scripts/benchmark_b5.py": "51f6b5f1a08f231b9eba911df0ccc09e94458384dd9953b0b90a4828b07f685f",
+      "scripts/benchmark_particles.py": "c3a3834a883bbb1654e6a7e25f0bb89d29cde19dd29d6938d4aa6d93b59a5d49",
+      "scripts/benchmark_stdc_comparison.py": "60ed446867df3118b1cd608dffdbd85cfac1c6fa7c6d319fc4d9b87610b91634",
+      "scripts/build_report.py": "1f66cc8681889e05502c8da5e4c4b698ace0ddc955ae973b54ea4b36d108fa02",
+      "scripts/check_env.py": "2603ae4abeed04c969779157c5e8ec4374e6fea1db63f003df5841d146466398",
+      "scripts/compare_b6.py": "0dd8f5496f340d2351d711e761e040a3da17c8d0721b2fd4633897499a956372",
+      "scripts/diagnose_stdc.py": "90164fe83818941e2f125786d0f02f00bd25384fc1c1fc55b13bb02a6c5a8091",
+      "scripts/fetch_lake_b1.py": "6ceee3a92fb1b0388bfa35b0a383d4dcb5ac12c69468b561f3ec3211221f0faa",
+      "scripts/generate_drift.py": "6711064b6c0d23e45716b773d26fd47402653843c1c386703cc53ce50e5c9165",
+      "scripts/generate_historical_drift.py": "f5d0a0ab5b4a9f25f2a151a0cc1ccbf85eab5dbc963f4f98246e6cf98b55cd44",
+      "scripts/generate_stage3_fixture.py": "149199d82a51e5a1f3bca48966f7f6f325aece2749e6bfa80cdd24c644aa1a95",
+      "scripts/import_additional_b1.py": "025419beb30c2715b1f2258e4162fc7ad2d5c9ba510c9d6db6afc3fa81996507",
+      "scripts/inventory_historical.py": "523c97967ade1f04e2c01c06d3f7b13334552e9318bf036a6f2fa7d03c1ac6be",
+      "scripts/offline_guard/sitecustomize.py": "3bc07350962b4ba9e40cecff13218ed8bff7f379b177217364dba0e6f03fd2ce",
+      "scripts/plot_b6.py": "419bcd8096d39524a436e115644fa82fbd596c1d2de887b22b4f3e7905e96a24",
+      "scripts/plot_historical_drift.py": "1d71bdcdc239d5f17d2fe756ffb00df6f25e17c811b1c03bcd69c1417e6e280e",
+      "scripts/replay_baseline_v1_1.py": "87bfb4bd406bd6ce8e0ece7b5990178ed506ee5affdbee9279c5a772112d97cb",
+      "scripts/report_additional_b1.py": "6e1af6969c1027350db9276d8b856626d0bc1df1cc290de0aefc93086467ffb0",
+      "scripts/report_b5.py": "e28a2c4faba800c0f89547d89a7cbf0a34aff78f6b8526527d29e7a195e80431",
+      "scripts/report_baseline_v1_1.py": "32713caa9bf2971a56dcd1fea34c332ab2e9657acaea208ab345ce7c1e2b8654",
+      "scripts/report_stage7.py": "d4e0a10e38e61d4ab2438b5f3ff4cdd4c21486fe070d96ad58691de595ee8366",
+      "scripts/report_stdc_comparison.py": "914ef4188e3739d60b8d66ca61d7159c363fcf6fee830449756630b7c55656db",
+      "scripts/report_stdc_diagnosis.py": "abd8be5a615e6b219fbdb83bd40a8b4e0b3dc1554294512323d2991aac8746bf",
+      "scripts/report_stdc_repair.py": "a185918cecd8fd46dbf23de86286de7417fc753d84d7f8f12a67367c80913524",
+      "scripts/run_anytime_experiments.py": "8a606ed375aa52b6ba476816285c3af2c9060e314b5764e673cddcf353169796",
+      "scripts/run_anytime_validation.py": "363b0235ffaca443388cdfc101c456152bbf2dee261b0b5e1cb5d90188a539ec",
+      "scripts/run_stage7.py": "7bf08949689858d3ae76698c7712a69d1e470ea5da7dde2c2fdf138685258fa7",
+      "scripts/run_stdc_local_stage.py": "28e7f1d23536e4d26e1c9fbe50fb161cb0f0d0a6d2a657358584197db3e02508",
+      "scripts/run_stdc_random_audit.py": "bc77ff7af1bc0d37f3b6476089212cc72317398e01396a99196d6da5bee6870b",
+      "scripts/run_stdc_repair.py": "eea11feecfaed1f983c7a0e262d931a03fa093579325fa25781eda68cb1783ba",
+      "scripts/run_stdc_small_search.py": "21c050f2bf46ff13072cfe2f0d2c7727d9515a3f7dfd82bd862a40d9bfda4b2c",
+      "scripts/run_stdc_smoke.py": "3116ad207de19891c37904b189fd704c6fa3cf6827774b52701602aeafcb04ef",
+      "scripts/run_stdc_synthetic_bench.py": "274750f6cc2f1299830fe94803c3bb88079dc587d220c31f1653637fd4208c79",
+      "scripts/run_toy.py": "797f5b27b9eaa75e49a4d0b8a46ef79c16af6185657e7c9609319367ec758943",
+      "scripts/run_window_experiments.py": "fc1a2f45b9c85f9e8a2f957cd359d28fcd9715f8ebfcc572cda542dee698ce31",
+      "scripts/run_window_validation.py": "ffa9bcc6aeb3a6c07e1f54832ae3c25281bf5c12fc1975e41a4475c8258ac8c9",
+      "scripts/stage8_metrics.py": "a721de1a966c38f4b877381890ad90cee9f68f63b2ee910d57748bfc7240f086",
+      "scripts/stdc_audit_contract.py": "d763ee5f1821f3f4350d65076c5767fec4f507b9473542b0387ce78815ee9f57",
+      "scripts/stdc_validation_guards.py": "c75e9f4a546aa3d1b337af69021bdec75ed95fb01b16622915e426a3b9e7715e",
+      "scripts/validate_baseline_v1_1.py": "f6de322990b83fec718c2e49916b2c31936725073c31fd9e16576b6e46068199",
+      "scripts/validate_forcing.py": "4208a9f318443499c39632b64a2d4b7508c20a038168cbcc85107a02eda355aa",
+      "scripts/validate_stage2.py": "242aba5463ca8b4c07093c9956e35634ee7806695491ce3545078080460dc81b",
+      "scripts/validate_stage3.py": "d581feb5aaf6f8733f9e55f60cd1ee7000eecb0fe9404bee92d2b6f50a8c6a5f",
+      "scripts/verify_lake_b1.py": "574877bf95b34a82b2a9424370c8222a70e4fb467ff3425c7bf09bc4928fe3b8"
+    },
+    "real_experiments": "separate mandatory archive-SHA-gated runner; not executed by this driver"
+  }
+}

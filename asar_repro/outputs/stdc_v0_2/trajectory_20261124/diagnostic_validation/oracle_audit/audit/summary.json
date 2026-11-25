@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "cases": 12,
+  "milp_searches": 12,
+  "prefix_evaluations": 424,
+  "max_bound_overestimate": 0.0,
+  "max_J_error": 0.0,
+  "violations": 0,
+  "epsilon_certified": false,
+  "seeds": [
+    63000,
+    63001,
+    63002,
+    63003,
+    63004,
+    63005,
+    63006,
+    63007,
+    63008,
+    63009,
+    63010,
+    63011
+  ],
+  "data_type": "synthetic_toy",
+  "wall_s": 0.7892242000671104,
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "scripts/audit_trajectory.py",
+    "diagnostic",
+    "--output-dir",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\trajectory_20261124\\diagnostic_validation\\oracle_audit\\audit"
+  ]
+}

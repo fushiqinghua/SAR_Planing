@@ -1,0 +1,123 @@
+........................................................................ [  7%]
+.............................................F
+================================== FAILURES ===================================
+_________________ test_benchmark_cli_reports_selected_method __________________
+
+tmp_path = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/additional_b2_full_tmp/test_benchmark_cli_reports_sel0')
+
+    def test_benchmark_cli_reports_selected_method(tmp_path):
+>       subprocess.run(
+            [
+                sys.executable,
+                str(ROOT / "scripts/audit_search_results.py"),
+                "--heuristic",
+                "mass_lb",
+                "--output-dir",
+                str(tmp_path),
+            ],
+            cwd=ROOT,
+            check=True,
+            capture_output=True,
+            text=True,
+        )
+
+tests\test_b4_artifacts.py:85: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+input = None, capture_output = True, timeout = None, check = True
+popenargs = (['C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe', 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\a...C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\additional_b2_full_tmp\\test_benchmark_cli_reports_sel0'],)
+kwargs = {'cwd': WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-stdc-v0.2/asar_repro'), 'text': True, 'stdout': -1, 'stderr': -1}
+
+    def run(*popenargs,
+            input=None, capture_output=False, timeout=None, check=False, **kwargs):
+        """Run command with arguments and return a CompletedProcess instance.
+    
+        The returned instance will have attributes args, returncode, stdout and
+        stderr. By default, stdout and stderr are not captured, and those attributes
+        will be None. Pass stdout=PIPE and/or stderr=PIPE in order to capture them,
+        or pass capture_output=True to capture both.
+    
+        If check is True and the exit code was non-zero, it raises a
+        CalledProcessError. The CalledProcessError object will have the return code
+        in the returncode attribute, and output & stderr attributes if those streams
+        were captured.
+    
+        If timeout is given, and the process takes too long, a TimeoutExpired
+        exception will be raised.
+    
+        There is an optional argument "input", allowing you to
+        pass bytes or a string to the subprocess's stdin.  If you use this argument
+        you may not also use the Popen constructor's "stdin" argument, as
+        it will be used internally.
+    
+        By default, all communication is in bytes, and therefore any "input" should
+        be bytes, and the stdout and stderr will be bytes. If in text mode, any
+        "input" should be a string, and stdout and stderr will be strings decoded
+        according to locale encoding, or by "encoding" if set. Text mode is
+        triggered by setting any of text, encoding, errors or universal_newlines.
+    
+        The other arguments are the same as for the Popen constructor.
+        """
+        if input is not None:
+            if kwargs.get('stdin') is not None:
+                raise ValueError('stdin and input arguments may not both be used.')
+            kwargs['stdin'] = PIPE
+    
+        if capture_output:
+            if kwargs.get('stdout') is not None or kwargs.get('stderr') is not None:
+                raise ValueError('stdout and stderr arguments may not be used '
+                                 'with capture_output.')
+            kwargs['stdout'] = PIPE
+            kwargs['stderr'] = PIPE
+    
+        with Popen(*popenargs, **kwargs) as process:
+            try:
+                stdout, stderr = process.communicate(input, timeout=timeout)
+            except TimeoutExpired as exc:
+                process.kill()
+                if _mswindows:
+                    # Windows accumulates the output in a single blocking
+                    # read() call run on child threads, with the timeout
+                    # being done in a join() on those threads.  communicate()
+                    # _after_ kill() is required to collect that and add it
+                    # to the exception.
+                    exc.stdout, exc.stderr = process.communicate()
+                else:
+                    # POSIX _communicate already populated the output so
+                    # far into the TimeoutExpired exception.
+                    process.wait()
+                raise
+            except:  # Including KeyboardInterrupt, communicate handled that.
+                process.kill()
+                # We don't call process.wait() as .__exit__ does that for us.
+                raise
+            retcode = process.poll()
+            if check and retcode:
+>               raise CalledProcessError(retcode, process.args,
+                                         output=stdout, stderr=stderr)
+E               subprocess.CalledProcessError: Command '['C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe', 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\audit_search_results.py', '--heuristic', 'mass_lb', '--output-dir', 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\additional_b2_full_tmp\\test_benchmark_cli_reports_sel0']' returned non-zero exit status 1.
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\subprocess.py:571: CalledProcessError
+============================== warnings summary ===============================
+tests/test_b4_artifacts.py::test_benchmark_cli_reports_selected_method
+  C:\Users\35448\.conda\envs\maritime-sar\Lib\site-packages\_pytest\threadexception.py:54: PytestUnhandledThreadExceptionWarning: Exception in thread Thread-2 (_readerthread)
+  
+  Traceback (most recent call last):
+    File "C:\Users\35448\.conda\envs\maritime-sar\Lib\threading.py", line 1045, in _bootstrap_inner
+      self.run()
+    File "C:\Users\35448\.conda\envs\maritime-sar\Lib\threading.py", line 982, in run
+      self._target(*self._args, **self._kwargs)
+    File "C:\Users\35448\.conda\envs\maritime-sar\Lib\subprocess.py", line 1599, in _readerthread
+      buffer.append(fh.read())
+                    ^^^^^^^^^
+  UnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 65: illegal multibyte sequence
+  
+  Enable tracemalloc to get traceback where the object was allocated.
+  See https://docs.pytest.org/en/stable/how-to/capture-warnings.html#resource-warnings for more info.
+    warnings.warn(pytest.PytestUnhandledThreadExceptionWarning(msg))
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/test_b4_artifacts.py::test_benchmark_cli_reports_selected_method
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed, 117 passed, 1 warning in 14.09s

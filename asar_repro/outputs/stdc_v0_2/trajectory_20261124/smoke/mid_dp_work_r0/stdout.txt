@@ -1,0 +1,1 @@
+{"variant": "mid_dp", "protocol": "work", "J": 20.477608335999996, "Pd_T": 0.88106304, "status": "budget_exceeded", "stop_reason": "max_expansions", "work_expanded": 100, "search_wall_s": 0.6297050999710336}

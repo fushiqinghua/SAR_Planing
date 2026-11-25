@@ -1,0 +1,3 @@
+arctic_ocean late_suffix completed J 20.386109349119998 Pd 0.90858311232
+arctic_ocean long_suffix budget_exceeded J 20.386109349119998 Pd 0.90858311232
+arctic_ocean early_divergence budget_exceeded J 20.386109349119998 Pd 0.90858311232

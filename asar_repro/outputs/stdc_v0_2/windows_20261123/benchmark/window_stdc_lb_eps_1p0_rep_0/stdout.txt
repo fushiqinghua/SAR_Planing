@@ -1,0 +1,1 @@
+{"variant": "window_stdc_lb", "epsilon": 1.0, "repeat": 0, "status": "budget_exceeded", "stop_reason": "max_expansions", "J": 18.74234312224, "Pd_T": 0.88084708608, "expanded": 5000, "search_wall_s": 1.9056234000017866, "process_peak_memory_mib": 94.33984375, "theory_certified": false}

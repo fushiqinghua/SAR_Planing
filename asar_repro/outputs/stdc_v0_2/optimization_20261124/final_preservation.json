@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "baseline_files": 654,
+  "protected_research_files": 3255,
+  "source_files": 120,
+  "historical_preflight_sha256": "dae1d7ef9586a4dda20d5121542993a8812e7dfbe6fdcc27251e9503a5bb2b0b",
+  "pre_edit_files_checked": 3199,
+  "pre_edit_changed": []
+}

@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "runs": 48,
+  "completed": 6,
+  "budget_exceeded": 42,
+  "certified": 0,
+  "max_replay_error": 0.0,
+  "preservation": {
+    "status": "passed",
+    "preexisting_files": 4696,
+    "baseline_files": 654
+  },
+  "wall_s": 505.3420218999963
+}

@@ -1,0 +1,54 @@
+{
+  "status": "passed",
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "scripts/finalize_trajectory.py",
+    "--run-dir",
+    "outputs/stdc_v0_2/trajectory_20261124"
+  ],
+  "theory_certified": false,
+  "preservation": {
+    "status": "passed",
+    "baseline_files": 654,
+    "protected_research_files": 4095,
+    "source_files": 134,
+    "historical_preflight_sha256": "dae1d7ef9586a4dda20d5121542993a8812e7dfbe6fdcc27251e9503a5bb2b0b"
+  },
+  "preexisting_files_unchanged": 3964,
+  "smoke_verified_files": 56,
+  "benchmark_verified_files": 259,
+  "best_J": 17.264874448,
+  "best_Pd": 0.897364416,
+  "best_method": "prior_stdc",
+  "target_J": 17.264874448,
+  "delta_J": 0.0,
+  "beat_previous_best": false,
+  "benchmark": {
+    "status": "passed",
+    "runs": 48,
+    "completed": 6,
+    "budget_exceeded": 42,
+    "certified": 0,
+    "best_J": 17.264874448,
+    "beat_previous_best": false,
+    "wall_s": 286.1135796000017
+  },
+  "added_python_files": [
+    "scripts/audit_trajectory.py",
+    "scripts/audit_trajectory_planning.py",
+    "scripts/finalize_trajectory.py",
+    "scripts/run_trajectory_diagnostic.py",
+    "scripts/run_trajectory_experiments.py",
+    "scripts/run_trajectory_validation.py",
+    "src/asar_repro/midpoint_rollout.py",
+    "src/asar_repro/particle_diagnostic.py",
+    "src/asar_repro/particle_dp.py",
+    "src/asar_repro/trajectory_search.py",
+    "tests/test_midpoint_rollout.py",
+    "tests/test_particle_diagnostic.py",
+    "tests/test_particle_dp.py",
+    "tests/test_trajectory_search.py"
+  ],
+  "diagnostic_test_count": 734,
+  "planning_test_count": 903
+}

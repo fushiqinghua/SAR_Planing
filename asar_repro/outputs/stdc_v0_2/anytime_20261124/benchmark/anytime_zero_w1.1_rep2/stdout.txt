@@ -1,0 +1,1 @@
+{"variant": "anytime_zero", "guide_weight": 1.1, "status": "budget_exceeded", "stop_reason": "max_expansions", "J": 17.33585102848001, "Pd_T": 0.9038273712, "expanded": 5000, "search_wall_s": 0.3307641000719741, "beats_best_J": false}

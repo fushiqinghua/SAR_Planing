@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "implementation_scope": "fixed-time endpoint-preserving windows with exact suffix and four local bound modes",
+  "scientific_conclusion": "partial_budget_regime_improvement_only; best_baseline_J_not_improved",
+  "new_tests": 75,
+  "full_tests": 431,
+  "random_cases": 160,
+  "checked_prefixes": 6760,
+  "small_cases": 45,
+  "small_searches": 360,
+  "smoke_runs": 6,
+  "benchmark_runs": 45,
+  "normal_runs": 18,
+  "budget_stop_reasons": {
+    "max_expansions": 27
+  },
+  "certified_full_routes": 0,
+  "best_baseline_J": 17.29389415456,
+  "best_endpoint_J": 17.29389415456,
+  "baseline_preservation": {
+    "status": "passed",
+    "baseline_files": 654,
+    "protected_research_files": 1864,
+    "source_files": 104,
+    "historical_preflight_sha256": "dae1d7ef9586a4dda20d5121542993a8812e7dfbe6fdcc27251e9503a5bb2b0b"
+  },
+  "unimplemented": [
+    "global anytime/MHA",
+    "other frozen real scenarios",
+    "new forcing",
+    "innovation two"
+  ],
+  "branch": "stdc-research-v0.2",
+  "pushed_to_github": false
+}

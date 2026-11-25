@@ -1,0 +1,14 @@
+{
+  "seed": 15000,
+  "kind": "derived_stationary_matrix",
+  "initial_path": [
+    4,
+    3,
+    0,
+    3,
+    4,
+    3
+  ],
+  "derivation": "repeat the historical first transition kernel; retain grid, p, q, start and T",
+  "data_type": "synthetic_toy"
+}

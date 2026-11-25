@@ -1,0 +1,9 @@
+{
+  "exit_code": 1,
+  "wall_s": 2.718966200016439,
+  "status": "blocked",
+  "tests": 41,
+  "failures": 13,
+  "errors": 0,
+  "skipped": 0
+}

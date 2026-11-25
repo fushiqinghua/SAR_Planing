@@ -1,0 +1,54 @@
+matrix: cases=20 prefixes=2153
+matrix: cases=40 prefixes=4249
+matrix: cases=60 prefixes=6659
+matrix: cases=80 prefixes=9012
+particles: cases=100 prefixes=11165
+particles: cases=120 prefixes=13261
+particles: cases=140 prefixes=15671
+particles: cases=160 prefixes=18024
+small cases=1 searches=3 seed=15000
+small cases=2 searches=6 seed=15001
+small cases=3 searches=9 seed=15002
+small cases=4 searches=12 seed=15003
+small cases=5 searches=15 seed=15004
+small cases=6 searches=18 seed=15005
+small cases=7 searches=21 seed=15006
+small cases=8 searches=24 seed=15007
+small cases=9 searches=27 seed=15008
+small cases=10 searches=30 seed=15009
+small cases=11 searches=33 seed=15010
+small cases=12 searches=36 seed=15011
+small cases=13 searches=39 seed=15012
+small cases=14 searches=42 seed=15013
+small cases=15 searches=45 seed=15014
+small cases=16 searches=48 seed=15015
+small cases=17 searches=51 seed=15016
+small cases=18 searches=54 seed=15017
+small cases=19 searches=57 seed=15018
+small cases=20 searches=60 seed=15019
+small cases=21 searches=63 seed=15020
+small cases=22 searches=66 seed=15021
+small cases=23 searches=69 seed=15022
+small cases=24 searches=72 seed=15023
+small cases=25 searches=75 seed=15024
+small cases=26 searches=78 seed=15025
+small cases=27 searches=81 seed=15026
+small cases=28 searches=84 seed=15027
+small cases=29 searches=87 seed=15028
+small cases=30 searches=90 seed=15029
+small cases=31 searches=93 seed=15030
+small cases=32 searches=96 seed=15031
+small cases=33 searches=99 seed=15032
+small cases=34 searches=102 seed=15033
+small cases=35 searches=105 seed=15034
+small cases=36 searches=108 seed=15000
+small cases=37 searches=111 seed=15001
+small cases=38 searches=114 seed=15002
+small cases=39 searches=117 seed=15003
+small cases=40 searches=120 seed=15004
+small cases=41 searches=125 seed=15000
+small cases=42 searches=130 seed=15001
+small cases=43 searches=135 seed=15002
+small cases=44 searches=140 seed=15003
+small cases=45 searches=145 seed=15004
+{"status": "passed", "stages": ["random", "small"], "wall_s": 28.458339200005867}

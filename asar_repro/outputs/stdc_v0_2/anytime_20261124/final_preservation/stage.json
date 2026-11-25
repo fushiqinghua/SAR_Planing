@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "stage": "final_preservation",
+  "started_utc": "2026-11-23T16:26:31.617234+00:00",
+  "driver_command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "scripts/run_anytime_validation.py",
+    "final_preservation",
+    "--run-dir",
+    "outputs/stdc_v0_2/anytime_20261124"
+  ],
+  "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro",
+  "timeout_s": 1200,
+  "preservation_before": {
+    "status": "passed",
+    "baseline_files": 654,
+    "protected_research_files": 2581,
+    "source_files": 109,
+    "historical_preflight_sha256": "dae1d7ef9586a4dda20d5121542993a8812e7dfbe6fdcc27251e9503a5bb2b0b"
+  },
+  "command": null,
+  "seeds": null,
+  "test_counts": null,
+  "preservation_after": {
+    "status": "passed",
+    "baseline_files": 654,
+    "protected_research_files": 2581,
+    "source_files": 109,
+    "historical_preflight_sha256": "dae1d7ef9586a4dda20d5121542993a8812e7dfbe6fdcc27251e9503a5bb2b0b"
+  },
+  "wall_s": 5.211590399965644
+}

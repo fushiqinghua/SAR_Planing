@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "stage": "new_tests",
+  "started_utc": "2026-11-23T16:55:26.514270+00:00",
+  "driver_command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "scripts/run_optimization_validation.py",
+    "new_tests",
+    "--run-dir",
+    "outputs/stdc_v0_2/optimization_20261124/validation"
+  ],
+  "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro",
+  "timeout_s": 1200,
+  "preservation_before": {
+    "status": "passed",
+    "baseline_files": 654,
+    "protected_research_files": 3255,
+    "source_files": 120,
+    "historical_preflight_sha256": "dae1d7ef9586a4dda20d5121542993a8812e7dfbe6fdcc27251e9503a5bb2b0b"
+  },
+  "child_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "PROJ_NETWORK": "OFF",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONPATH": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\src;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\offline_guard;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\src;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts"
+  },
+  "seeds": "Explicit toy seeds/fixtures in frozen tests/test_anytime_search.py",
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "-m",
+    "pytest",
+    "-x",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "tests/test_research_particle.py",
+    "tests/test_lookahead_bound.py",
+    "tests/test_tail_repair.py",
+    "tests/test_research_search.py",
+    "--junitxml",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\optimization_20261124\\validation\\new_tests\\pytest.xml",
+    "--basetemp",
+    "C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\optimization_validation_tmp\\e1f3c59aba04\\new_tests"
+  ],
+  "exit_code": 0,
+  "test_counts": {
+    "tests": 199,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "preservation_after": {
+    "status": "passed",
+    "baseline_files": 654,
+    "protected_research_files": 3255,
+    "source_files": 120,
+    "historical_preflight_sha256": "dae1d7ef9586a4dda20d5121542993a8812e7dfbe6fdcc27251e9503a5bb2b0b"
+  },
+  "wall_s": 14.21756080002524
+}

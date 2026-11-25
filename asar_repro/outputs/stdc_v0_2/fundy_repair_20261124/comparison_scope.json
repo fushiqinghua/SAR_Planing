@@ -1,0 +1,16 @@
+{
+  "included": [
+    "bay_of_fundy"
+  ],
+  "purpose": "integration smoke only",
+  "direction_policy": {
+    "mode": "official_native_angle",
+    "geographic_direction_validated": false,
+    "physical_direction_unverified": true,
+    "original_strict_gate_passed": false,
+    "accepted_by_user": "2026-11-24: 按官方 angle 接入，保留未验证标签",
+    "implementation_basis": "ROMS Utility/uv_rotate.F: average native faces then rotate with supplied angle",
+    "original_parent_sha256": "c2879d000da71de2509e5f5194130de8c063256dc9c784a443826474894a378e"
+  },
+  "formal_benchmark_not_run": true
+}

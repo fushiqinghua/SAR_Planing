@@ -1,0 +1,84 @@
+{
+  "stage": "smoke",
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "scripts/run_anytime_experiments.py",
+    "smoke",
+    "--output-dir",
+    "outputs/stdc_v0_2/anytime_20261124/smoke",
+    "--validation-evidence",
+    "outputs/stdc_v0_2/anytime_20261124/validation_summary.json"
+  ],
+  "variants": {
+    "paper_baseline": null,
+    "anytime_zero": "zero",
+    "anytime_mass": "mass_lb",
+    "anytime_stdc": "stdc_lb"
+  },
+  "guide_weights": [
+    1.04,
+    1.1,
+    1.0
+  ],
+  "primary_weight": 1.04,
+  "limits": {
+    "max_expansions": 5000,
+    "max_open": 20000,
+    "max_seconds": 30
+  },
+  "seed": 41,
+  "expected_runs": 6,
+  "frozen_best_J": 17.29389415456,
+  "initial_path": "frozen common PT, not free best-baseline warm start",
+  "schedule": [
+    {
+      "variant": "paper_baseline",
+      "guide_weight": 1.04,
+      "repeat": 0
+    },
+    {
+      "variant": "anytime_zero",
+      "guide_weight": 1.04,
+      "repeat": 0
+    },
+    {
+      "variant": "anytime_mass",
+      "guide_weight": 1.04,
+      "repeat": 0
+    },
+    {
+      "variant": "anytime_stdc",
+      "guide_weight": 1.04,
+      "repeat": 0
+    },
+    {
+      "variant": "anytime_stdc",
+      "guide_weight": 1.1,
+      "repeat": 0
+    },
+    {
+      "variant": "anytime_stdc",
+      "guide_weight": 1.0,
+      "repeat": 0
+    }
+  ],
+  "source_sha256": {
+    "src/asar_repro/anytime_search.py": "3a92527d94beb00031f8da742b9a486862186cd0e03e8c567842683b6707024f",
+    "src/asar_repro/search.py": "868b09203c3a782765f9b4440751d56512e5a24c1a0a44d5706e6a6aa5b34bbc",
+    "src/asar_repro/heuristic.py": "43f94d7ec3ae69dc67ee4416892ea65aa445498a002905f77d4b1f533b168c0b",
+    "src/asar_repro/stdc_heuristic.py": "18bee643e5860683cd4dfa9cbf12d9ec7a2c5ee4e2abd7d0895cf9a144cc980f",
+    "src/asar_repro/objective.py": "792077ad3e0286c03f60108f2580ea3b3557e3f5b002bc1a5e2f9f67e48fb2ad",
+    "src/asar_repro/motion.py": "7e74178390ffa34f30f7b987a4d7a2459e8f0ca2646ca3026c97e505f758c2c9",
+    "src/asar_repro/belief.py": "cc11028b1ef3a8bf29680a61ddee6262e63be5b2ff00e78075fbab396ac09021",
+    "src/asar_repro/grid.py": "d9794ec80afb764699333e0fa7bd9ef098d3d1360f14a76ae57b5b41f2a547e9",
+    "scripts/run_anytime_experiments.py": "8a606ed375aa52b6ba476816285c3af2c9060e314b5764e673cddcf353169796",
+    "scripts/stdc_validation_guards.py": "c75e9f4a546aa3d1b337af69021bdec75ed95fb01b16622915e426a3b9e7715e"
+  },
+  "versions": {
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "pytest": "9.2.0",
+    "opendrift": "1.14.12"
+  },
+  "guarantee": "uncertified; guide is ordering only"
+}

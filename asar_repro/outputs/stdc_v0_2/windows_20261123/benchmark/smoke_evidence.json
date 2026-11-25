@@ -1,0 +1,20 @@
+{
+  "path": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\windows_20261123\\smoke",
+  "summary": {
+    "status": "passed",
+    "stage": "smoke",
+    "started_utc": "2026-11-23T15:59:23.165760+00:00",
+    "runs": 6,
+    "completed": 4,
+    "budget_exceeded": 2,
+    "certified_full_routes": 0,
+    "conclusion": {
+      "paired_endpoint_runs": 1,
+      "endpoint_J_improved": 0,
+      "endpoint_Pd_improved": 0,
+      "any_window_J_improved": 0
+    },
+    "wall_s": 15.304372899932787
+  },
+  "summary_sha256": "d1d0448541f0c1f69d9a5ecd9da5c35469444500ffab9267d3675a3c0b2d1c3f"
+}

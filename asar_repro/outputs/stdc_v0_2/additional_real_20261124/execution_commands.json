@@ -1,0 +1,56 @@
+{
+  "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro",
+  "environment_setup_powershell": "$PY='C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe'\n$env:PYTHONPATH=(Resolve-Path 'scripts/offline_guard').Path+[IO.Path]::PathSeparator+(Resolve-Path 'src').Path+[IO.Path]::PathSeparator+(Resolve-Path 'scripts').Path\n$env:PATH=(Join-Path (Split-Path $PY) 'Library\\bin')+[IO.Path]::PathSeparator+$env:PATH\n$env:PYTHONDONTWRITEBYTECODE='1'\n$env:PYTHONIOENCODING='utf-8'\n$env:PYTHONHASHSEED='0'\n$env:ASAR_OFFLINE='1'\n$env:PROJ_NETWORK='OFF'\n$env:OMP_NUM_THREADS='1'\n$env:OPENBLAS_NUM_THREADS='1'\n$env:MKL_NUM_THREADS='1'\n$env:NUMEXPR_NUM_THREADS='1'\n$env:VECLIB_MAXIMUM_THREADS='1'\n$env:GIT_CONFIG_COUNT='2'\n$env:GIT_CONFIG_KEY_0='safe.directory'\n$env:GIT_CONFIG_VALUE_0='E:/毕业设计/终稿研发/new/baseline/SAR_Planing-stdc-v0.2'\n$env:GIT_CONFIG_KEY_1='safe.directory'\n$env:GIT_CONFIG_VALUE_1='E:/毕业设计/终稿研发/new/baseline/SAR_Planing-v1.1'\n$env:PYTHONUTF8='1'",
+  "commands": [
+    {
+      "label": "final_full_tests",
+      "command": "& $PY -m pytest -q -x -p no:cacheprovider --basetemp 'C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/additional_real_final_pytest' --junitxml outputs/stdc_v0_2/additional_real_20261124/final_full_tests.xml",
+      "stdout": "final_full_tests.stdout.txt",
+      "stderr": "final_full_tests.stderr.txt",
+      "exit_code": 0
+    },
+    {
+      "label": "b2_hudson_r2",
+      "command": "& $PY scripts/run_additional_real.py b2 --scenario arctic_ocean --label b2_r2 --run-dir outputs/stdc_v0_2/additional_real_20261124",
+      "stdout": "b2_hudson_r2.stdout.txt",
+      "stderr": "b2_hudson_r2.stderr.txt",
+      "seed": 41
+    },
+    {
+      "label": "b2_fundy_r2",
+      "command": "& $PY scripts/run_additional_real.py b2 --scenario bay_of_fundy --label b2_r2 --run-dir outputs/stdc_v0_2/additional_real_20261124",
+      "stdout": "b2_fundy_r2.stdout.txt",
+      "stderr": "b2_fundy_r2.stderr.txt",
+      "seed": 41
+    },
+    {
+      "label": "b3_hudson",
+      "command": "& $PY scripts/run_additional_real.py b3 --scenario arctic_ocean --run-dir outputs/stdc_v0_2/additional_real_20261124",
+      "stdout": "b3_hudson.stdout.txt",
+      "stderr": "b3_hudson.stderr.txt",
+      "seed": 41
+    },
+    {
+      "label": "comparison_prepare",
+      "command": "& $PY scripts/compare_available_real.py prepare --run-dir outputs/stdc_v0_2/additional_real_20261124",
+      "stdout": "comparison_prepare.stdout.txt",
+      "stderr": "comparison_prepare.stderr.txt",
+      "seed": 41
+    },
+    {
+      "label": "comparison_smoke",
+      "command": "& $PY scripts/compare_available_real.py smoke --run-dir outputs/stdc_v0_2/additional_real_20261124",
+      "stdout": "comparison_smoke.stdout.txt",
+      "stderr": "comparison_smoke.stderr.txt",
+      "seed": 41
+    },
+    {
+      "label": "comparison_benchmark",
+      "command": "& $PY scripts/compare_available_real.py benchmark --run-dir outputs/stdc_v0_2/additional_real_20261124",
+      "stdout": "comparison_benchmark.stdout.txt",
+      "stderr": "comparison_benchmark.stderr.txt",
+      "seed": 41
+    }
+  ],
+  "note": "These are the final verification and actual scene/comparison entry commands. Every worker has its exact argv/cwd/env/watchdog/seed in benchmark/<run>/command.json. Earlier failed attempts and stderr remain saved."
+}

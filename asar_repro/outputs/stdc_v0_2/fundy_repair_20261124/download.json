@@ -1,0 +1,7 @@
+{
+  "url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/gomofs/netcdf/2025/02/14/gomofs.t00z.20250214.2ds.n005.nc",
+  "sha256": "c2879d000da71de2509e5f5194130de8c063256dc9c784a443826474894a378e",
+  "bytes": 171414927,
+  "status": "passed",
+  "method": "HTTP Range; whole-file SHA matches B1 original parent"
+}

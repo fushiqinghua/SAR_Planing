@@ -1,0 +1,31 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\compare_additional_real.py",
+    "worker",
+    "--run-dir",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\fundy_repair_20261124",
+    "--output-dir",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\outputs\\stdc_v0_2\\fundy_repair_20261124\\benchmark\\bay_of_fundy_mid_plain_wall_r1",
+    "--scenario",
+    "bay_of_fundy",
+    "--variant",
+    "mid_plain",
+    "--protocol",
+    "wall",
+    "--repeat",
+    "1"
+  ],
+  "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro",
+  "seed": 41,
+  "watchdog_s": 180,
+  "environment": {
+    "PYTHONPATH": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\src;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts\\offline_guard;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\src;E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro\\scripts",
+    "PYTHONUTF8": "1",
+    "ASAR_OFFLINE": "1",
+    "PROJ_NETWORK": "OFF",
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "GIT_CONFIG_COUNT": "2"
+  }
+}

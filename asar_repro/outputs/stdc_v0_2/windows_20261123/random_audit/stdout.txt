@@ -1,0 +1,9 @@
+validated 20/160 synthetic window cases
+validated 40/160 synthetic window cases
+validated 60/160 synthetic window cases
+validated 80/160 synthetic window cases
+validated 100/160 synthetic window cases
+validated 120/160 synthetic window cases
+validated 140/160 synthetic window cases
+validated 160/160 synthetic window cases
+{"status": "passed", "case_count": 160, "feasible_prefixes": 3618, "infeasible_prefixes": 3142, "max_suffix_cost_error": 1.7763568394002505e-15}

@@ -1,0 +1,29 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "-m",
+    "pytest",
+    "tests/test_exact_repair.py",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=outputs/stdc_v0_2/exact_repair_20261124/development/tests/attempt01/junit.xml"
+  ],
+  "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-stdc-v0.2\\asar_repro",
+  "result": {
+    "passed": 67,
+    "failed": 1,
+    "total": 68,
+    "pytest_exit_code": 1
+  },
+  "failure": "node_limit=0 mapped by SciPy1.17.1 to status4; raw HiGHS Status16 Solution limit reached",
+  "environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "ASAR_OFFLINE": "1",
+    "PROJ_NETWORK": "OFF",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "PYTHONHASHSEED": "0"
+  },
+  "scope": "new tests only; no historical tests or admissibility assertions failed"
+}

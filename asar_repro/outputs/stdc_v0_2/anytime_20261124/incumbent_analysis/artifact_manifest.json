@@ -1,0 +1,44 @@
+{
+  "files": [
+    {
+      "path": "candidate_tradeoffs.csv",
+      "bytes": 174018,
+      "sha256": "2b61452effc5ddaca9552843acd7a0320efa869aed222016fab350686ac4ea37"
+    },
+    {
+      "path": "candidate_tradeoffs.json",
+      "bytes": 477346,
+      "sha256": "63fb1e444eb7ff23a4d52a85282eed6d90968d1b403a145de18f96c1a82bad24"
+    },
+    {
+      "path": "input_gate.json",
+      "bytes": 18165,
+      "sha256": "cb5bf8235153a9327a4c181c51c6d471a0305fb220940c5437affc83a6ef119c"
+    },
+    {
+      "path": "pareto_tradeoffs.png",
+      "bytes": 186715,
+      "sha256": "6b7962cc3a15bd38a0ad2327561553e6ffac04c2f4d170044afca16ef29f199b"
+    },
+    {
+      "path": "per_run_summary.csv",
+      "bytes": 3286,
+      "sha256": "449d898982e5e9e3cfbc5b8e8272a16604822bd5b04940a42db5221370849d6d"
+    },
+    {
+      "path": "summary.json",
+      "bytes": 518,
+      "sha256": "32c37ed82f313dd0a07d5468b5bca5437b12acc4ab831a6adef3fc0d61f90c14"
+    },
+    {
+      "path": "tradeoffs.md",
+      "bytes": 3927,
+      "sha256": "7505e62f2460bdc4c87073f592f40fe177ff0fa398f9fc862d1c228f7d5d1578"
+    },
+    {
+      "path": "unique_path_replays.json",
+      "bytes": 24924,
+      "sha256": "2f4e01f402eb2289a44b044a6971b1998de394db521e6df4b6c24acc9b4ed9d5"
+    }
+  ]
+}
