@@ -1,0 +1,16 @@
+{
+  "task": {
+    "phase": "wall",
+    "scene": "lake_ontario",
+    "bound": "stdc_lb",
+    "seconds": 5.0,
+    "rep": 0
+  },
+  "protocol_sha256": "cc26f547d01a8546cf70f18b016e7c634e2a52ccb16b9476e059faf167afa073",
+  "exit_code": 1,
+  "watchdog_reason": null,
+  "worker_wall_s": 0.4027279660003842,
+  "peak_process_rss_bytes": 60526592,
+  "status": "blocked",
+  "raw_result_sha256": null
+}

@@ -73,7 +73,7 @@ def environment():
     if Path('/proc/cpuinfo').exists():
         cpu_model = next((line.split(':', 1)[1].strip() for line in
             Path('/proc/cpuinfo').read_text().splitlines() if line.startswith('model name')), cpu_model)
-    return dict(python=sys.version, executable=sys.executable,
+    return dict(python=sys.version, executable=os.path.abspath(sys.executable),
                 platform=platform.platform(), machine=platform.machine(),
                 cpu_count=os.cpu_count(), cpu_model=cpu_model,
                 physical_memory_bytes=psutil.virtual_memory().total, numpy=np.__version__,
@@ -401,6 +401,8 @@ def run_task(config, config_path, out, task):
         record = json.loads((folder / "record.json").read_text())
         if record["task"] != task or record["protocol_sha256"] != digest(out / "protocol.json"):
             raise ValueError("resume record conflicts with frozen task/protocol")
+        if record['status'] != 'recorded':
+            raise RuntimeError('previous blocked task preserved; use a new explicitly frozen output directory')
         print("resume", task_key(task), flush=True)
         return
     folder.mkdir(parents=True, exist_ok=True)
@@ -440,6 +442,8 @@ def run_task(config, config_path, out, task):
     result = {} if data is None else data.get("result", {})
     print(task_key(task), record["status"], result.get("status"),
           "J", result.get("J"), "wall", round(record["worker_wall_s"], 3), flush=True)
+    if record['status'] != 'recorded':
+        raise RuntimeError('worker blocked; stage stopped at the first failure, evidence preserved')
 
 
 def tasks(config, stage):
@@ -619,7 +623,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--stage", required=True, choices=["freeze", "benchmark", "events", "pairs", "mip", "event_followup", "summarize", "worker"])
     parser.add_argument("--config", type=Path, default=ROOT / "configs/stdc_final_assessment.json")
-    parser.add_argument("--output", type=Path, default=ROOT / "outputs/stdc_final_assessment_20261125")
+    parser.add_argument("--output", type=Path, default=ROOT / "outputs/stdc_final_assessment_20261125_r1")
     parser.add_argument("--task", type=Path)
     args = parser.parse_args()
     args.config, args.output = args.config.resolve(), args.output.resolve()

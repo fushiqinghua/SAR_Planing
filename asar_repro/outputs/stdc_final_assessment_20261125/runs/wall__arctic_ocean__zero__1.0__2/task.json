@@ -1,0 +1,7 @@
+{
+  "phase": "wall",
+  "scene": "arctic_ocean",
+  "bound": "zero",
+  "seconds": 1.0,
+  "rep": 2
+}

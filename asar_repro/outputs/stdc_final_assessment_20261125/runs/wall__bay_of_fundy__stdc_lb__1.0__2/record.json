@@ -1,0 +1,16 @@
+{
+  "task": {
+    "phase": "wall",
+    "scene": "bay_of_fundy",
+    "bound": "stdc_lb",
+    "seconds": 1.0,
+    "rep": 2
+  },
+  "protocol_sha256": "cc26f547d01a8546cf70f18b016e7c634e2a52ccb16b9476e059faf167afa073",
+  "exit_code": 1,
+  "watchdog_reason": null,
+  "worker_wall_s": 0.5031184679992293,
+  "peak_process_rss_bytes": 62922752,
+  "status": "blocked",
+  "raw_result_sha256": null
+}

@@ -1,0 +1,3868 @@
+{
+  "admissibility": {
+    "capacity_lb": {
+      "checks": 288,
+      "equality_within_tolerance_count": 221,
+      "first_strict_witness": {
+        "case_index": 2,
+        "depth": 0,
+        "lhs": 4.370971107902431,
+        "prefix": [
+          3
+        ],
+        "rhs": 4.242648845894266
+      },
+      "maximum_margin": 0.6471598239233969,
+      "maximum_positive_violation": 8.881784197001252e-16,
+      "strict_dominance_count": 67
+    },
+    "mass_lb": {
+      "checks": 288,
+      "equality_within_tolerance_count": 78,
+      "first_strict_witness": {
+        "case_index": 1,
+        "depth": 0,
+        "lhs": 2.954846409761662,
+        "prefix": [
+          2
+        ],
+        "rhs": 0.0
+      },
+      "maximum_margin": 6.643844290665993,
+      "maximum_positive_violation": 0.0,
+      "strict_dominance_count": 210
+    },
+    "reach_lb": {
+      "checks": 288,
+      "equality_within_tolerance_count": 223,
+      "first_strict_witness": {
+        "case_index": 2,
+        "depth": 0,
+        "lhs": 4.370971107902431,
+        "prefix": [
+          3
+        ],
+        "rhs": 4.048289967144135
+      },
+      "maximum_margin": 0.6308948956906422,
+      "maximum_positive_violation": 4.440892098500626e-16,
+      "strict_dominance_count": 65
+    },
+    "stdc_lb": {
+      "checks": 288,
+      "equality_within_tolerance_count": 244,
+      "first_strict_witness": {
+        "case_index": 2,
+        "depth": 0,
+        "lhs": 4.370971107902431,
+        "prefix": [
+          3
+        ],
+        "rhs": 4.2608722753868555
+      },
+      "maximum_margin": 0.35764341866091076,
+      "maximum_positive_violation": 8.881784197001252e-16,
+      "strict_dominance_count": 44
+    },
+    "stdc_radius_lb": {
+      "checks": 288,
+      "equality_within_tolerance_count": 160,
+      "first_strict_witness": {
+        "case_index": 1,
+        "depth": 0,
+        "lhs": 2.954846409761662,
+        "prefix": [
+          2
+        ],
+        "rhs": 1.980891967049188
+      },
+      "maximum_margin": 3.6982380063519185,
+      "maximum_positive_violation": 4.440892098500626e-16,
+      "strict_dominance_count": 128
+    },
+    "stepwise_lb": {
+      "checks": 288,
+      "equality_within_tolerance_count": 244,
+      "first_strict_witness": {
+        "case_index": 2,
+        "depth": 0,
+        "lhs": 4.370971107902431,
+        "prefix": [
+          3
+        ],
+        "rhs": 4.2608722753868555
+      },
+      "maximum_margin": 0.364527381654308,
+      "maximum_positive_violation": 8.881784197001252e-16,
+      "strict_dominance_count": 44
+    }
+  },
+  "cases": [
+    {
+      "T": 7,
+      "available_distinct_prefixes": 8,
+      "case_index": 0,
+      "grid": [
+        1,
+        2
+      ],
+      "particle_count": 8,
+      "sampled_prefixes": [
+        [
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "sha256": "78eb25df4ecfca1aac098c72cb27d7cb332133f3e9d07c81f69c8d18707ba992"
+    },
+    {
+      "T": 5,
+      "available_distinct_prefixes": 14,
+      "case_index": 1,
+      "grid": [
+        1,
+        3
+      ],
+      "particle_count": 9,
+      "sampled_prefixes": [
+        [
+          2
+        ],
+        [
+          2,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          0,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          0,
+          1
+        ]
+      ],
+      "sha256": "a79ffddd2a35124ceb0f0d79af4bbe0e0e8305766442be21dec6e2ef2b1a463a"
+    },
+    {
+      "T": 6,
+      "available_distinct_prefixes": 127,
+      "case_index": 2,
+      "grid": [
+        2,
+        2
+      ],
+      "particle_count": 10,
+      "sampled_prefixes": [
+        [
+          3
+        ],
+        [
+          3,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          1,
+          3
+        ],
+        [
+          3,
+          2,
+          0,
+          2
+        ],
+        [
+          3,
+          2,
+          3,
+          1,
+          0
+        ],
+        [
+          3,
+          2,
+          3,
+          2,
+          0,
+          1
+        ],
+        [
+          3,
+          1,
+          0,
+          1,
+          3,
+          2
+        ]
+      ],
+      "sha256": "4cbc0b2d15418e49d666b45de4cf962016a69b003f8d4d32f8b166bf117cf932"
+    },
+    {
+      "T": 4,
+      "available_distinct_prefixes": 49,
+      "case_index": 3,
+      "grid": [
+        2,
+        3
+      ],
+      "particle_count": 11,
+      "sampled_prefixes": [
+        [
+          2
+        ],
+        [
+          2,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          5,
+          2
+        ],
+        [
+          2,
+          5,
+          4,
+          1
+        ],
+        [
+          2,
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          4
+        ]
+      ],
+      "sha256": "0118782be75d5bcc6d11cf8950a04961e43b686ad40695adca4c0e8a5d9ba16d"
+    },
+    {
+      "T": 5,
+      "available_distinct_prefixes": 168,
+      "case_index": 4,
+      "grid": [
+        3,
+        2
+      ],
+      "particle_count": 12,
+      "sampled_prefixes": [
+        [
+          2
+        ],
+        [
+          2,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4,
+          5
+        ],
+        [
+          2,
+          4,
+          2,
+          0
+        ],
+        [
+          2,
+          4,
+          5,
+          4,
+          5
+        ],
+        [
+          2,
+          3,
+          2,
+          3,
+          5
+        ],
+        [
+          2,
+          0,
+          2
+        ]
+      ],
+      "sha256": "887d88dbae15eb96c5f027d962955e86944b60dd47c615591c0e2632944b2b07"
+    },
+    {
+      "T": 6,
+      "available_distinct_prefixes": 585,
+      "case_index": 5,
+      "grid": [
+        3,
+        3
+      ],
+      "particle_count": 8,
+      "sampled_prefixes": [
+        [
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          3,
+          6
+        ],
+        [
+          0,
+          3,
+          6,
+          3
+        ],
+        [
+          0,
+          1,
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          1,
+          4,
+          3,
+          4,
+          7
+        ],
+        [
+          0,
+          3,
+          4,
+          1,
+          4
+        ]
+      ],
+      "sha256": "b087e8458787593059f6a61d23886d61f9555f914e5504fb2f30d94001dc1107"
+    },
+    {
+      "T": 7,
+      "available_distinct_prefixes": 8,
+      "case_index": 6,
+      "grid": [
+        1,
+        2
+      ],
+      "particle_count": 9,
+      "sampled_prefixes": [
+        [
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "sha256": "dc7c3fbd5042f8004b6fcec73e6412204b6022ea2a4a1de721a9a288b773efb6"
+    },
+    {
+      "T": 5,
+      "available_distinct_prefixes": 14,
+      "case_index": 7,
+      "grid": [
+        1,
+        3
+      ],
+      "particle_count": 10,
+      "sampled_prefixes": [
+        [
+          2
+        ],
+        [
+          2,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0,
+          1,
+          2
+        ]
+      ],
+      "sha256": "3540a9e9e47d8272af7ea6afd615d2a2de16f3649cc12905f3ac166b55b9ba18"
+    },
+    {
+      "T": 6,
+      "available_distinct_prefixes": 127,
+      "case_index": 8,
+      "grid": [
+        2,
+        2
+      ],
+      "particle_count": 11,
+      "sampled_prefixes": [
+        [
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2,
+          0
+        ],
+        [
+          1,
+          3,
+          2,
+          3,
+          2
+        ],
+        [
+          1,
+          0,
+          2,
+          0,
+          2,
+          3
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "sha256": "1d51e4d4bda8fbc3fc8d73dcd8a014b2daca2f250d3ec40ee56eb96d584acafc"
+    },
+    {
+      "T": 4,
+      "available_distinct_prefixes": 69,
+      "case_index": 9,
+      "grid": [
+        2,
+        3
+      ],
+      "particle_count": 12,
+      "sampled_prefixes": [
+        [
+          4
+        ],
+        [
+          4,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          3,
+          0
+        ],
+        [
+          4,
+          1,
+          2,
+          5
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          3,
+          4,
+          3
+        ],
+        [
+          4,
+          5,
+          2
+        ]
+      ],
+      "sha256": "fd748447bf191cd923747ecb92026e8a77e3c5fa9fecff50d43ffd8fce0d4dd7"
+    },
+    {
+      "T": 5,
+      "available_distinct_prefixes": 168,
+      "case_index": 10,
+      "grid": [
+        3,
+        2
+      ],
+      "particle_count": 8,
+      "sampled_prefixes": [
+        [
+          3
+        ],
+        [
+          3,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          3,
+          1,
+          3,
+          5
+        ],
+        [
+          3,
+          1,
+          3,
+          1,
+          3
+        ],
+        [
+          3,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          2,
+          3,
+          5,
+          4
+        ]
+      ],
+      "sha256": "ef8309f3d1a366e464d983ed973002b9a124be8f419cab18fac57580502d7c46"
+    },
+    {
+      "T": 6,
+      "available_distinct_prefixes": 804,
+      "case_index": 11,
+      "grid": [
+        3,
+        3
+      ],
+      "particle_count": 9,
+      "sampled_prefixes": [
+        [
+          7
+        ],
+        [
+          7,
+          4,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          4,
+          7
+        ],
+        [
+          7,
+          4,
+          3,
+          0
+        ],
+        [
+          7,
+          6,
+          3,
+          6,
+          7
+        ],
+        [
+          7,
+          8,
+          5,
+          4,
+          3,
+          4
+        ],
+        [
+          7,
+          4,
+          5,
+          2,
+          5,
+          2
+        ]
+      ],
+      "sha256": "704f62ed7e05a4d65bca91d9a9b580b7890c4fa7c0709a0f8d5f6c22670689fd"
+    },
+    {
+      "T": 7,
+      "available_distinct_prefixes": 8,
+      "case_index": 12,
+      "grid": [
+        1,
+        2
+      ],
+      "particle_count": 10,
+      "sampled_prefixes": [
+        [
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "sha256": "81f15f3476d08783d15ce965c9291ccf1d21867a8f9c92fa95dfd98934cfa485"
+    },
+    {
+      "T": 5,
+      "available_distinct_prefixes": 14,
+      "case_index": 13,
+      "grid": [
+        1,
+        3
+      ],
+      "particle_count": 11,
+      "sampled_prefixes": [
+        [
+          2
+        ],
+        [
+          2,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          1,
+          0
+        ]
+      ],
+      "sha256": "1fccaeded480dbf1393ce243f1158422739e8ef4b5c59ccab3a64bb443f9cd8a"
+    },
+    {
+      "T": 6,
+      "available_distinct_prefixes": 127,
+      "case_index": 14,
+      "grid": [
+        2,
+        2
+      ],
+      "particle_count": 12,
+      "sampled_prefixes": [
+        [
+          3
+        ],
+        [
+          3,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          3,
+          2,
+          0,
+          1
+        ],
+        [
+          3,
+          2,
+          0,
+          2,
+          0
+        ],
+        [
+          3,
+          1,
+          3,
+          1,
+          0,
+          2
+        ],
+        [
+          3,
+          2,
+          3,
+          1,
+          3,
+          1
+        ]
+      ],
+      "sha256": "00e92fae8f8f555501310241ba63acc65a3fb39370cded42f04da2cca36cc52d"
+    },
+    {
+      "T": 4,
+      "available_distinct_prefixes": 49,
+      "case_index": 15,
+      "grid": [
+        2,
+        3
+      ],
+      "particle_count": 8,
+      "sampled_prefixes": [
+        [
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          3
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          3,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          4,
+          5
+        ]
+      ],
+      "sha256": "2d8bf7be67b9bf4f8d492490f5bb420196e99a17b451b18a3fc209cf6a33847f"
+    },
+    {
+      "T": 5,
+      "available_distinct_prefixes": 119,
+      "case_index": 16,
+      "grid": [
+        3,
+        2
+      ],
+      "particle_count": 9,
+      "sampled_prefixes": [
+        [
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          2,
+          3
+        ],
+        [
+          1,
+          3,
+          1,
+          3,
+          5
+        ],
+        [
+          1,
+          0,
+          2,
+          0,
+          2
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          2
+        ]
+      ],
+      "sha256": "6325a42afe7f539ac6a7be2612fcec97f697bd2d7bdad9d6e93a7be5fa7d8c86"
+    },
+    {
+      "T": 6,
+      "available_distinct_prefixes": 804,
+      "case_index": 17,
+      "grid": [
+        3,
+        3
+      ],
+      "particle_count": 10,
+      "sampled_prefixes": [
+        [
+          5
+        ],
+        [
+          5,
+          2,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          5,
+          8,
+          5
+        ],
+        [
+          5,
+          4,
+          7,
+          6
+        ],
+        [
+          5,
+          8,
+          7,
+          4,
+          3
+        ],
+        [
+          5,
+          4,
+          3,
+          6,
+          3,
+          6
+        ],
+        [
+          5,
+          8,
+          5,
+          4,
+          3,
+          4
+        ]
+      ],
+      "sha256": "fc4466aa69bc0d06768d97a2aebd202719ddba70e71266eb3759c76e370e69e9"
+    },
+    {
+      "T": 7,
+      "available_distinct_prefixes": 8,
+      "case_index": 18,
+      "grid": [
+        1,
+        2
+      ],
+      "particle_count": 11,
+      "sampled_prefixes": [
+        [
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "sha256": "744d35f7b291ac6878dd427b3489eb452eda19b0cd9582f8ba89d19302200843"
+    },
+    {
+      "T": 5,
+      "available_distinct_prefixes": 14,
+      "case_index": 19,
+      "grid": [
+        1,
+        3
+      ],
+      "particle_count": 12,
+      "sampled_prefixes": [
+        [
+          2
+        ],
+        [
+          2,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          0,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          2,
+          1,
+          0
+        ]
+      ],
+      "sha256": "9f033b5cc2b5dcf821055e8b8caa6bc90d56a86a143b6c3a74f8b6e849377edf"
+    },
+    {
+      "T": 6,
+      "available_distinct_prefixes": 127,
+      "case_index": 20,
+      "grid": [
+        2,
+        2
+      ],
+      "particle_count": 8,
+      "sampled_prefixes": [
+        [
+          3
+        ],
+        [
+          3,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          1,
+          3
+        ],
+        [
+          3,
+          2,
+          3,
+          2
+        ],
+        [
+          3,
+          2,
+          3,
+          2,
+          0
+        ],
+        [
+          3,
+          1,
+          3,
+          2,
+          0,
+          1
+        ],
+        [
+          3,
+          1,
+          3,
+          1,
+          3,
+          2
+        ]
+      ],
+      "sha256": "c3a8e690d990491537916b15cc46197eb6293845c3a8a0d785647e106e300dae"
+    },
+    {
+      "T": 4,
+      "available_distinct_prefixes": 69,
+      "case_index": 21,
+      "grid": [
+        2,
+        3
+      ],
+      "particle_count": 9,
+      "sampled_prefixes": [
+        [
+          4
+        ],
+        [
+          4,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          5,
+          4
+        ],
+        [
+          4,
+          5,
+          4,
+          5
+        ],
+        [
+          4,
+          1,
+          0,
+          1
+        ],
+        [
+          4,
+          3,
+          0,
+          3
+        ],
+        [
+          4,
+          1,
+          2,
+          1
+        ]
+      ],
+      "sha256": "51da0661b656570dc84d8ea2905e8d302eb441acdac4b75fc866dc6fc0039b38"
+    },
+    {
+      "T": 5,
+      "available_distinct_prefixes": 119,
+      "case_index": 22,
+      "grid": [
+        3,
+        2
+      ],
+      "particle_count": 10,
+      "sampled_prefixes": [
+        [
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          3
+        ],
+        [
+          0,
+          2,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          3,
+          1,
+          3
+        ],
+        [
+          0,
+          1,
+          3,
+          5,
+          3
+        ],
+        [
+          0,
+          2,
+          4,
+          2,
+          0
+        ]
+      ],
+      "sha256": "085b3a704e611b6bd7355ccf138473b7ed1dec2255d232281f43ba2ee9c52ac6"
+    },
+    {
+      "T": 6,
+      "available_distinct_prefixes": 804,
+      "case_index": 23,
+      "grid": [
+        3,
+        3
+      ],
+      "particle_count": 11,
+      "sampled_prefixes": [
+        [
+          5
+        ],
+        [
+          5,
+          2,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          8,
+          7
+        ],
+        [
+          5,
+          2,
+          1,
+          2
+        ],
+        [
+          5,
+          2,
+          1,
+          4,
+          7
+        ],
+        [
+          5,
+          4,
+          3,
+          6,
+          7,
+          6
+        ],
+        [
+          5,
+          4,
+          5,
+          4,
+          7,
+          6
+        ]
+      ],
+      "sha256": "895885fe1df56a3b52f557f04fa385e9f232659edfea987a682449b54579cd86"
+    },
+    {
+      "T": 7,
+      "available_distinct_prefixes": 8,
+      "case_index": 24,
+      "grid": [
+        1,
+        2
+      ],
+      "particle_count": 12,
+      "sampled_prefixes": [
+        [
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ]
+      ],
+      "sha256": "8bc64275ce810cf84f61a80e4fce2b486b693547cd40f8070f9b6b03aa2504de"
+    },
+    {
+      "T": 5,
+      "available_distinct_prefixes": 21,
+      "case_index": 25,
+      "grid": [
+        1,
+        3
+      ],
+      "particle_count": 8,
+      "sampled_prefixes": [
+        [
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          2,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          1
+        ]
+      ],
+      "sha256": "cab2e85c5e1d8c808b44dd2fa81f8c3b89e17bc738a3fcbf045cfd2512cd786a"
+    },
+    {
+      "T": 6,
+      "available_distinct_prefixes": 127,
+      "case_index": 26,
+      "grid": [
+        2,
+        2
+      ],
+      "particle_count": 9,
+      "sampled_prefixes": [
+        [
+          3
+        ],
+        [
+          3,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          1,
+          3
+        ],
+        [
+          3,
+          2,
+          3,
+          1
+        ],
+        [
+          3,
+          2,
+          0,
+          1,
+          3
+        ],
+        [
+          3,
+          1,
+          3,
+          2,
+          3,
+          1
+        ],
+        [
+          3,
+          2,
+          3,
+          1,
+          3,
+          2
+        ]
+      ],
+      "sha256": "e8e5ae9454bc0d7a4d66085def5279eab407fae9c25f1d10cecf278fd4819aac"
+    },
+    {
+      "T": 4,
+      "available_distinct_prefixes": 49,
+      "case_index": 27,
+      "grid": [
+        2,
+        3
+      ],
+      "particle_count": 10,
+      "sampled_prefixes": [
+        [
+          3
+        ],
+        [
+          3,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          4,
+          5
+        ],
+        [
+          3,
+          4,
+          5,
+          4
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          4,
+          5,
+          2
+        ],
+        [
+          3,
+          4,
+          3,
+          4
+        ]
+      ],
+      "sha256": "547c73f095b0e3b4f7d2b66570f3f7fc049166c0cd3007289dff3183a9384a30"
+    },
+    {
+      "T": 5,
+      "available_distinct_prefixes": 119,
+      "case_index": 28,
+      "grid": [
+        3,
+        2
+      ],
+      "particle_count": 11,
+      "sampled_prefixes": [
+        [
+          4
+        ],
+        [
+          4,
+          2,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          5,
+          3
+        ],
+        [
+          4,
+          5,
+          3,
+          1
+        ],
+        [
+          4,
+          5,
+          3,
+          5,
+          3
+        ],
+        [
+          4,
+          2,
+          4,
+          2,
+          3
+        ],
+        [
+          4,
+          5,
+          3,
+          5,
+          4
+        ]
+      ],
+      "sha256": "6b92e899456b6a1b8166d4551b0239eed451929041e4dcf632147f19262322df"
+    },
+    {
+      "T": 6,
+      "available_distinct_prefixes": 804,
+      "case_index": 29,
+      "grid": [
+        3,
+        3
+      ],
+      "particle_count": 12,
+      "sampled_prefixes": [
+        [
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          4,
+          7
+        ],
+        [
+          1,
+          0,
+          3,
+          0
+        ],
+        [
+          1,
+          2,
+          1,
+          2,
+          1
+        ],
+        [
+          1,
+          2,
+          1,
+          4,
+          5,
+          2
+        ],
+        [
+          1,
+          4,
+          3,
+          0,
+          3,
+          0
+        ]
+      ],
+      "sha256": "172d73890d58e3bec431bae2876dd2c3b28b7c455e96411ee9156ed98d65f229"
+    },
+    {
+      "T": 7,
+      "available_distinct_prefixes": 8,
+      "case_index": 30,
+      "grid": [
+        1,
+        2
+      ],
+      "particle_count": 8,
+      "sampled_prefixes": [
+        [
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "sha256": "dc940c6c2edf01d8a9ca42485d0650d527fc50d770c7510ca0678d9f63aa4b14"
+    },
+    {
+      "T": 5,
+      "available_distinct_prefixes": 14,
+      "case_index": 31,
+      "grid": [
+        1,
+        3
+      ],
+      "particle_count": 9,
+      "sampled_prefixes": [
+        [
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          2,
+          1
+        ],
+        [
+          0,
+          1,
+          2,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          2
+        ],
+        [
+          0,
+          1,
+          2,
+          1,
+          0
+        ]
+      ],
+      "sha256": "aaf6f269b2ce2c0f52304c1e918962837ca338baad313220b4708c98d4acb83a"
+    },
+    {
+      "T": 6,
+      "available_distinct_prefixes": 127,
+      "case_index": 32,
+      "grid": [
+        2,
+        2
+      ],
+      "particle_count": 10,
+      "sampled_prefixes": [
+        [
+          2
+        ],
+        [
+          2,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          0,
+          2
+        ],
+        [
+          2,
+          3,
+          1,
+          3
+        ],
+        [
+          2,
+          3,
+          1,
+          3,
+          1
+        ],
+        [
+          2,
+          3,
+          1,
+          3,
+          2,
+          3
+        ],
+        [
+          2,
+          3,
+          2
+        ]
+      ],
+      "sha256": "2891540b54bedc3c91430774df620ab644bb26632a95fc8c918c658d9e781970"
+    },
+    {
+      "T": 4,
+      "available_distinct_prefixes": 69,
+      "case_index": 33,
+      "grid": [
+        2,
+        3
+      ],
+      "particle_count": 11,
+      "sampled_prefixes": [
+        [
+          4
+        ],
+        [
+          4,
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          3,
+          0
+        ],
+        [
+          4,
+          3,
+          0,
+          1
+        ],
+        [
+          4,
+          3,
+          4,
+          3
+        ],
+        [
+          4,
+          3,
+          4,
+          5
+        ],
+        [
+          4,
+          3,
+          4
+        ]
+      ],
+      "sha256": "9d44d400ca6cb4bb9731b60dcda87fd6a69b3d0c25bb45e98d5ba2f13a5ac2e2"
+    },
+    {
+      "T": 5,
+      "available_distinct_prefixes": 119,
+      "case_index": 34,
+      "grid": [
+        3,
+        2
+      ],
+      "particle_count": 12,
+      "sampled_prefixes": [
+        [
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          2,
+          3
+        ],
+        [
+          0,
+          1,
+          0,
+          2
+        ],
+        [
+          0,
+          1,
+          3,
+          5,
+          4
+        ],
+        [
+          0,
+          1,
+          3,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          1,
+          0
+        ]
+      ],
+      "sha256": "48ba160671aebeee9aabd21038d43d623b69b411e243156a651d00edc63fe18c"
+    },
+    {
+      "T": 6,
+      "available_distinct_prefixes": 804,
+      "case_index": 35,
+      "grid": [
+        3,
+        3
+      ],
+      "particle_count": 8,
+      "sampled_prefixes": [
+        [
+          7
+        ],
+        [
+          7,
+          4,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          6,
+          7
+        ],
+        [
+          7,
+          6,
+          3,
+          4
+        ],
+        [
+          7,
+          8,
+          5,
+          2,
+          5
+        ],
+        [
+          7,
+          4,
+          1,
+          4,
+          3,
+          0
+        ],
+        [
+          7,
+          6,
+          3,
+          4,
+          1,
+          4
+        ]
+      ],
+      "sha256": "262ab744c4cc1d8f133a55bd69d60f3d7ad298929080f099bb129767e1a67c40"
+    }
+  ],
+  "coverage": {
+    "all_four_special_bins_with_positive_mass_models": 36,
+    "all_special_models": 2,
+    "dynamic_models": 34,
+    "interior_prefixes": 216,
+    "nonuniform_q_models": 18,
+    "q_one_models": 6,
+    "q_point78_models": 6,
+    "q_zero_models": 6,
+    "reduced_unnormalized_mass_prefixes": 165,
+    "root_prefixes": 36,
+    "start_has_positive_mass_at_t0_models": 34,
+    "terminal_prefixes": 36
+  },
+  "dominance": {
+    "capacity_ge_mass": {
+      "checks": 288,
+      "equality_within_tolerance_count": 78,
+      "first_strict_witness": {
+        "case_index": 1,
+        "depth": 0,
+        "lhs": 2.9548464097616627,
+        "prefix": [
+          2
+        ],
+        "rhs": 0.0
+      },
+      "maximum_margin": 6.643844290665992,
+      "maximum_positive_violation": 0.0,
+      "strict_dominance_count": 210
+    },
+    "max_reach_capacity_ge_mass": {
+      "checks": 288,
+      "equality_within_tolerance_count": 78,
+      "first_strict_witness": {
+        "case_index": 1,
+        "depth": 0,
+        "lhs": 2.9548464097616627,
+        "prefix": [
+          2
+        ],
+        "rhs": 0.0
+      },
+      "maximum_margin": 6.643844290665992,
+      "maximum_positive_violation": 0.0,
+      "strict_dominance_count": 210
+    },
+    "reach_ge_mass": {
+      "checks": 288,
+      "equality_within_tolerance_count": 78,
+      "first_strict_witness": {
+        "case_index": 1,
+        "depth": 0,
+        "lhs": 2.954846409761662,
+        "prefix": [
+          2
+        ],
+        "rhs": 0.0
+      },
+      "maximum_margin": 6.643844290665992,
+      "maximum_positive_violation": 0.0,
+      "strict_dominance_count": 210
+    },
+    "stdc_exact_ge_radius": {
+      "checks": 288,
+      "equality_within_tolerance_count": 167,
+      "first_strict_witness": {
+        "case_index": 1,
+        "depth": 0,
+        "lhs": 2.9548464097616627,
+        "prefix": [
+          2
+        ],
+        "rhs": 1.980891967049188
+      },
+      "maximum_margin": 3.6982380063519176,
+      "maximum_positive_violation": 0.0,
+      "strict_dominance_count": 121
+    },
+    "stdc_ge_stepwise": {
+      "checks": 288,
+      "equality_within_tolerance_count": 286,
+      "first_strict_witness": {
+        "case_index": 23,
+        "depth": 0,
+        "lhs": 4.945331688114098,
+        "prefix": [
+          5
+        ],
+        "rhs": 4.9384477251207
+      },
+      "maximum_margin": 0.04858954491596412,
+      "maximum_positive_violation": 0.0,
+      "strict_dominance_count": 2
+    },
+    "stepwise_ge_capacity": {
+      "checks": 288,
+      "equality_within_tolerance_count": 244,
+      "first_strict_witness": {
+        "case_index": 2,
+        "depth": 0,
+        "lhs": 4.2608722753868555,
+        "prefix": [
+          3
+        ],
+        "rhs": 4.242648845894266
+      },
+      "maximum_margin": 0.31943209640175674,
+      "maximum_positive_violation": 0.0,
+      "strict_dominance_count": 44
+    },
+    "stepwise_ge_max_reach_capacity": {
+      "checks": 288,
+      "equality_within_tolerance_count": 277,
+      "first_strict_witness": {
+        "case_index": 2,
+        "depth": 0,
+        "lhs": 4.2608722753868555,
+        "prefix": [
+          3
+        ],
+        "rhs": 4.242648845894266
+      },
+      "maximum_margin": 0.14010233653711524,
+      "maximum_positive_violation": 0.0,
+      "strict_dominance_count": 11
+    },
+    "stepwise_ge_reach": {
+      "checks": 288,
+      "equality_within_tolerance_count": 237,
+      "first_strict_witness": {
+        "case_index": 2,
+        "depth": 0,
+        "lhs": 4.2608722753868555,
+        "prefix": [
+          3
+        ],
+        "rhs": 4.048289967144135
+      },
+      "maximum_margin": 0.39422873762781485,
+      "maximum_positive_violation": 0.0,
+      "strict_dominance_count": 51
+    }
+  },
+  "first_violations": [],
+  "independent_mass_formula_maximum_error": 4.440892098500626e-16,
+  "independent_prefix_replay": {
+    "absolute_time": true,
+    "maximum_J_error": 8.881784197001252e-16,
+    "maximum_particle_weight_error": 0.0,
+    "prefix_renormalization": false,
+    "t0_sensing": false
+  },
+  "maximum_positive_inequality_violation": 8.881784197001252e-16,
+  "model_count": 36,
+  "nonnegativity": {
+    "capacity_lb": {
+      "checks": 288,
+      "equality_within_tolerance_count": 36,
+      "first_strict_witness": {
+        "case_index": 0,
+        "depth": 0,
+        "lhs": 7.0,
+        "prefix": [
+          0
+        ],
+        "rhs": 0.0
+      },
+      "maximum_margin": 7.0,
+      "maximum_positive_violation": 0.0,
+      "strict_dominance_count": 252
+    },
+    "mass_lb": {
+      "checks": 288,
+      "equality_within_tolerance_count": 120,
+      "first_strict_witness": {
+        "case_index": 0,
+        "depth": 0,
+        "lhs": 7.0,
+        "prefix": [
+          0
+        ],
+        "rhs": 0.0
+      },
+      "maximum_margin": 7.0,
+      "maximum_positive_violation": 0.0,
+      "strict_dominance_count": 168
+    },
+    "reach_lb": {
+      "checks": 288,
+      "equality_within_tolerance_count": 36,
+      "first_strict_witness": {
+        "case_index": 0,
+        "depth": 0,
+        "lhs": 7.0,
+        "prefix": [
+          0
+        ],
+        "rhs": 0.0
+      },
+      "maximum_margin": 7.0,
+      "maximum_positive_violation": 0.0,
+      "strict_dominance_count": 252
+    },
+    "stdc_lb": {
+      "checks": 288,
+      "equality_within_tolerance_count": 36,
+      "first_strict_witness": {
+        "case_index": 0,
+        "depth": 0,
+        "lhs": 7.0,
+        "prefix": [
+          0
+        ],
+        "rhs": 0.0
+      },
+      "maximum_margin": 7.0,
+      "maximum_positive_violation": 0.0,
+      "strict_dominance_count": 252
+    },
+    "stdc_radius_lb": {
+      "checks": 288,
+      "equality_within_tolerance_count": 36,
+      "first_strict_witness": {
+        "case_index": 0,
+        "depth": 0,
+        "lhs": 7.0,
+        "prefix": [
+          0
+        ],
+        "rhs": 0.0
+      },
+      "maximum_margin": 7.0,
+      "maximum_positive_violation": 0.0,
+      "strict_dominance_count": 252
+    },
+    "stepwise_lb": {
+      "checks": 288,
+      "equality_within_tolerance_count": 36,
+      "first_strict_witness": {
+        "case_index": 0,
+        "depth": 0,
+        "lhs": 7.0,
+        "prefix": [
+          0
+        ],
+        "rhs": 0.0
+      },
+      "maximum_margin": 7.0,
+      "maximum_positive_violation": 0.0,
+      "strict_dominance_count": 252
+    }
+  },
+  "oracle": {
+    "enumerated_suffix_leaves": 6756,
+    "method": "independent exhaustive scalar DFS, without pruning",
+    "uses_package_geometry": false,
+    "uses_package_oracle": false,
+    "uses_package_score_for_oracle": false,
+    "uses_package_search": false,
+    "visited_nodes": 11223
+  },
+  "prefix_evaluations": 288,
+  "quality_gap_scope": {
+    "additive_formula": "U - L0",
+    "basis": "admissible original-root L0 and independently replayed complete feasible U",
+    "comparison_tolerance": 1e-10,
+    "incomplete_or_timeout_OPEN_used": false,
+    "prefix_bounds_are_global_certificates": false,
+    "raw_floating_point_values_retained": true,
+    "relative_formula": "U / L0 - 1, only if L0 > 0",
+    "sampled_audit_is_a_general_mathematical_proof": false,
+    "search_epsilon_certificate_claimed": false
+  },
+  "requested_prefixes_per_model": 8,
+  "root_bound_fraction_of_exact_optimum": {
+    "capacity_lb": {
+      "count": 36,
+      "maximum": 1.0000000000000002,
+      "mean": 0.9716148231959794,
+      "median": 0.9923129025732879,
+      "minimum": 0.8144836332561485
+    },
+    "mass_lb": {
+      "count": 36,
+      "maximum": 1.0,
+      "mean": 0.22169785289863914,
+      "median": 0.04070082596115943,
+      "minimum": 0.0
+    },
+    "reach_lb": {
+      "count": 36,
+      "maximum": 1.0000000000000002,
+      "mean": 0.9824738205436749,
+      "median": 0.9999999999999999,
+      "minimum": 0.8652255095442931
+    },
+    "stdc_lb": {
+      "count": 36,
+      "maximum": 1.0000000000000002,
+      "mean": 0.9900027238361262,
+      "median": 0.9999999999999999,
+      "minimum": 0.9190007734293896
+    },
+    "stdc_radius_lb": {
+      "count": 36,
+      "maximum": 1.0,
+      "mean": 0.8764794297835523,
+      "median": 0.9323892543334922,
+      "minimum": 0.4660269239955818
+    },
+    "stepwise_lb": {
+      "count": 36,
+      "maximum": 1.0000000000000002,
+      "mean": 0.9895797536642159,
+      "median": 0.9999999999999999,
+      "minimum": 0.9050719794880434
+    }
+  },
+  "root_gap_checks": {
+    "exact_optimum_ge_root_L0": {
+      "checks": 36,
+      "equality_within_tolerance_count": 20,
+      "first_strict_witness": {
+        "case_index": 2,
+        "depth": 0,
+        "lhs": 4.370971107902431,
+        "prefix": [
+          3
+        ],
+        "rhs": 4.2608722753868555
+      },
+      "maximum_margin": 0.35764341866091076,
+      "maximum_positive_violation": 8.881784197001252e-16,
+      "strict_dominance_count": 16
+    },
+    "feasible_U_ge_exact_optimum": {
+      "checks": 36,
+      "equality_within_tolerance_count": 14,
+      "first_strict_witness": {
+        "case_index": 2,
+        "depth": 0,
+        "lhs": 5.168887376557256,
+        "prefix": [
+          3
+        ],
+        "rhs": 4.370971107902431
+      },
+      "maximum_margin": 1.1321898095105185,
+      "maximum_positive_violation": 8.881784197001252e-16,
+      "strict_dominance_count": 22
+    }
+  },
+  "roots": [
+    {
+      "actual_additive_suboptimality": 0.0,
+      "additive_suboptimality_upper_bound": 0.0,
+      "case_index": 0,
+      "exact_optimal_path": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "exact_optimum": 7.0,
+      "feasible_U": 7.0,
+      "feasible_path": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "lower_bounds": {
+        "capacity_lb": 7.0,
+        "mass_lb": 7.0,
+        "reach_lb": 7.0,
+        "stdc_lb": 7.0,
+        "stdc_radius_lb": 7.0,
+        "stepwise_lb": 7.0
+      },
+      "relative_suboptimality_upper_bound": 0.0,
+      "root_L0": 7.0
+    },
+    {
+      "actual_additive_suboptimality": 0.0,
+      "additive_suboptimality_upper_bound": -8.881784197001252e-16,
+      "case_index": 1,
+      "exact_optimal_path": [
+        2,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "exact_optimum": 2.954846409761662,
+      "feasible_U": 2.954846409761662,
+      "feasible_path": [
+        2,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "lower_bounds": {
+        "capacity_lb": 2.9548464097616627,
+        "mass_lb": 0.0,
+        "reach_lb": 2.954846409761662,
+        "stdc_lb": 2.9548464097616627,
+        "stdc_radius_lb": 1.980891967049188,
+        "stepwise_lb": 2.9548464097616627
+      },
+      "relative_suboptimality_upper_bound": -3.3306690738754696e-16,
+      "root_L0": 2.9548464097616627
+    },
+    {
+      "actual_additive_suboptimality": 0.7979162686548253,
+      "additive_suboptimality_upper_bound": 0.9080151011704007,
+      "case_index": 2,
+      "exact_optimal_path": [
+        3,
+        2,
+        0,
+        2,
+        0,
+        1,
+        0
+      ],
+      "exact_optimum": 4.370971107902431,
+      "feasible_U": 5.168887376557256,
+      "feasible_path": [
+        3,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "lower_bounds": {
+        "capacity_lb": 4.242648845894266,
+        "mass_lb": 0.2820193031039999,
+        "reach_lb": 4.048289967144135,
+        "stdc_lb": 4.2608722753868555,
+        "stdc_radius_lb": 3.7839084819581004,
+        "stepwise_lb": 4.2608722753868555
+      },
+      "relative_suboptimality_upper_bound": 0.21310544942067278,
+      "root_L0": 4.2608722753868555
+    },
+    {
+      "actual_additive_suboptimality": 0.2852730266253696,
+      "additive_suboptimality_upper_bound": 0.35994924391640604,
+      "case_index": 3,
+      "exact_optimal_path": [
+        2,
+        1,
+        2,
+        5,
+        2
+      ],
+      "exact_optimum": 3.3440675998202547,
+      "feasible_U": 3.6293406264456243,
+      "feasible_path": [
+        2,
+        1,
+        0,
+        1,
+        0
+      ],
+      "lower_bounds": {
+        "capacity_lb": 3.2693913825292182,
+        "mass_lb": 0.0,
+        "reach_lb": 3.1292841974973573,
+        "stdc_lb": 3.2693913825292182,
+        "stdc_radius_lb": 3.2693913825292182,
+        "stepwise_lb": 3.2693913825292182
+      },
+      "relative_suboptimality_upper_bound": 0.110096712752068,
+      "root_L0": 3.2693913825292182
+    },
+    {
+      "actual_additive_suboptimality": 0.3294078019903788,
+      "additive_suboptimality_upper_bound": 0.35669779266814583,
+      "case_index": 4,
+      "exact_optimal_path": [
+        2,
+        4,
+        2,
+        4,
+        2,
+        3
+      ],
+      "exact_optimum": 4.5727864105690585,
+      "feasible_U": 4.902194212559437,
+      "feasible_path": [
+        2,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "lower_bounds": {
+        "capacity_lb": 4.443954594080286,
+        "mass_lb": 0.16019110590728614,
+        "reach_lb": 4.5454964198912915,
+        "stdc_lb": 4.5454964198912915,
+        "stdc_radius_lb": 2.9211204190262814,
+        "stepwise_lb": 4.5454964198912915
+      },
+      "relative_suboptimality_upper_bound": 0.07847279146612474,
+      "root_L0": 4.5454964198912915
+    },
+    {
+      "actual_additive_suboptimality": 1.0522694818091773,
+      "additive_suboptimality_upper_bound": 1.1989991033428637,
+      "case_index": 5,
+      "exact_optimal_path": [
+        0,
+        1,
+        2,
+        1,
+        4,
+        5,
+        2
+      ],
+      "exact_optimum": 4.921145326343274,
+      "feasible_U": 5.973414808152452,
+      "feasible_path": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "lower_bounds": {
+        "capacity_lb": 4.464015198306734,
+        "mass_lb": 0.1313206419145277,
+        "reach_lb": 4.676035863974755,
+        "stdc_lb": 4.774415704809588,
+        "stdc_radius_lb": 4.579715273142888,
+        "stepwise_lb": 4.774415704809588
+      },
+      "relative_suboptimality_upper_bound": 0.251130018304655,
+      "root_L0": 4.774415704809588
+    },
+    {
+      "actual_additive_suboptimality": 0.0,
+      "additive_suboptimality_upper_bound": 0.0,
+      "case_index": 6,
+      "exact_optimal_path": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "exact_optimum": 6.377948644708269,
+      "feasible_U": 6.377948644708269,
+      "feasible_path": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "lower_bounds": {
+        "capacity_lb": 6.377948644708269,
+        "mass_lb": 0.0,
+        "reach_lb": 6.377948644708269,
+        "stdc_lb": 6.377948644708269,
+        "stdc_radius_lb": 6.186101362017603,
+        "stepwise_lb": 6.377948644708269
+      },
+      "relative_suboptimality_upper_bound": 0.0,
+      "root_L0": 6.377948644708269
+    },
+    {
+      "actual_additive_suboptimality": 0.1262183212046084,
+      "additive_suboptimality_upper_bound": 0.1401023365371148,
+      "case_index": 7,
+      "exact_optimal_path": [
+        2,
+        1,
+        0,
+        1,
+        2,
+        1
+      ],
+      "exact_optimum": 3.274031724110286,
+      "feasible_U": 3.4002500453148943,
+      "feasible_path": [
+        2,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "lower_bounds": {
+        "capacity_lb": 3.1160142727720155,
+        "mass_lb": 0.28190592319999996,
+        "reach_lb": 3.1200453722406642,
+        "stdc_lb": 3.2601477087777795,
+        "stdc_radius_lb": 3.0616432758329917,
+        "stepwise_lb": 3.2601477087777795
+      },
+      "relative_suboptimality_upper_bound": 0.04297422971354847,
+      "root_L0": 3.2601477087777795
+    },
+    {
+      "actual_additive_suboptimality": 0.1360018665325997,
+      "additive_suboptimality_upper_bound": 0.14543656798382898,
+      "case_index": 8,
+      "exact_optimal_path": [
+        1,
+        0,
+        1,
+        0,
+        2,
+        3,
+        1
+      ],
+      "exact_optimum": 5.805242057856201,
+      "feasible_U": 5.941243924388801,
+      "feasible_path": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "lower_bounds": {
+        "capacity_lb": 5.795807356404972,
+        "mass_lb": 0.0,
+        "reach_lb": 5.760536598970212,
+        "stdc_lb": 5.795807356404972,
+        "stdc_radius_lb": 3.0721784146395557,
+        "stepwise_lb": 5.795807356404972
+      },
+      "relative_suboptimality_upper_bound": 0.025093409604635353,
+      "root_L0": 5.795807356404972
+    },
+    {
+      "actual_additive_suboptimality": 0.7600461995909411,
+      "additive_suboptimality_upper_bound": 0.8009819572268455,
+      "case_index": 9,
+      "exact_optimal_path": [
+        4,
+        1,
+        4,
+        5,
+        4
+      ],
+      "exact_optimum": 3.2042338889603847,
+      "feasible_U": 3.964280088551326,
+      "feasible_path": [
+        4,
+        1,
+        0,
+        1,
+        0
+      ],
+      "lower_bounds": {
+        "capacity_lb": 3.021054652332472,
+        "mass_lb": 0.8266524500387061,
+        "reach_lb": 3.1632981313244803,
+        "stdc_lb": 3.1632981313244803,
+        "stdc_radius_lb": 3.0795390136317025,
+        "stepwise_lb": 3.1632981313244803
+      },
+      "relative_suboptimality_upper_bound": 0.2532110234236671,
+      "root_L0": 3.1632981313244803
+    },
+    {
+      "actual_additive_suboptimality": 0.02882163428740636,
+      "additive_suboptimality_upper_bound": 0.08082836811162952,
+      "case_index": 10,
+      "exact_optimal_path": [
+        3,
+        1,
+        0,
+        2,
+        0,
+        1
+      ],
+      "exact_optimum": 4.738945093453706,
+      "feasible_U": 4.767766727741113,
+      "feasible_path": [
+        3,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "lower_bounds": {
+        "capacity_lb": 4.684545642916007,
+        "mass_lb": 0.08300166657492358,
+        "reach_lb": 4.6688224573951995,
+        "stdc_lb": 4.686938359629483,
+        "stdc_radius_lb": 3.9521115758112675,
+        "stepwise_lb": 4.686938359629483
+      },
+      "relative_suboptimality_upper_bound": 0.017245451488723917,
+      "root_L0": 4.686938359629483
+    },
+    {
+      "actual_additive_suboptimality": 0.0,
+      "additive_suboptimality_upper_bound": 0.0,
+      "case_index": 11,
+      "exact_optimal_path": [
+        7,
+        4,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "exact_optimum": 5.999999999999999,
+      "feasible_U": 5.999999999999999,
+      "feasible_path": [
+        7,
+        4,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "lower_bounds": {
+        "capacity_lb": 5.999999999999999,
+        "mass_lb": 5.999999999999999,
+        "reach_lb": 5.999999999999999,
+        "stdc_lb": 5.999999999999999,
+        "stdc_radius_lb": 5.999999999999999,
+        "stepwise_lb": 5.999999999999999
+      },
+      "relative_suboptimality_upper_bound": 0.0,
+      "root_L0": 5.999999999999999
+    },
+    {
+      "actual_additive_suboptimality": 0.0,
+      "additive_suboptimality_upper_bound": 8.881784197001252e-16,
+      "case_index": 12,
+      "exact_optimal_path": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "exact_optimum": 6.925888537348873,
+      "feasible_U": 6.925888537348873,
+      "feasible_path": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "lower_bounds": {
+        "capacity_lb": 6.9258885373488726,
+        "mass_lb": 0.28204424668288,
+        "reach_lb": 6.9258885373488726,
+        "stdc_lb": 6.9258885373488726,
+        "stdc_radius_lb": 3.227650530996955,
+        "stepwise_lb": 6.9258885373488726
+      },
+      "relative_suboptimality_upper_bound": 2.220446049250313e-16,
+      "root_L0": 6.9258885373488726
+    },
+    {
+      "actual_additive_suboptimality": 0.5044855048703267,
+      "additive_suboptimality_upper_bound": 0.5044855048703258,
+      "case_index": 13,
+      "exact_optimal_path": [
+        2,
+        1,
+        2,
+        1,
+        0,
+        1
+      ],
+      "exact_optimum": 3.097388915991984,
+      "feasible_U": 3.601874420862311,
+      "feasible_path": [
+        2,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "lower_bounds": {
+        "capacity_lb": 3.0640205763241863,
+        "mass_lb": 0.0,
+        "reach_lb": 3.0973889159919845,
+        "stdc_lb": 3.097388915991985,
+        "stdc_radius_lb": 2.950502193959715,
+        "stepwise_lb": 3.097388915991985
+      },
+      "relative_suboptimality_upper_bound": 0.1628744463653371,
+      "root_L0": 3.097388915991985
+    },
+    {
+      "actual_additive_suboptimality": 0.21152881541835455,
+      "additive_suboptimality_upper_bound": 0.21152881541835544,
+      "case_index": 14,
+      "exact_optimal_path": [
+        3,
+        2,
+        3,
+        1,
+        0,
+        1,
+        3
+      ],
+      "exact_optimum": 5.713539243263966,
+      "feasible_U": 5.925068058682321,
+      "feasible_path": [
+        3,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "lower_bounds": {
+        "capacity_lb": 5.703525309241843,
+        "mass_lb": 0.3087540702977043,
+        "reach_lb": 5.713539243263965,
+        "stdc_lb": 5.713539243263965,
+        "stdc_radius_lb": 4.378493903995214,
+        "stepwise_lb": 5.713539243263965
+      },
+      "relative_suboptimality_upper_bound": 0.03702237902150407,
+      "root_L0": 5.713539243263965
+    },
+    {
+      "actual_additive_suboptimality": 0.004341982637914743,
+      "additive_suboptimality_upper_bound": 0.007005770042273873,
+      "case_index": 15,
+      "exact_optimal_path": [
+        0,
+        1,
+        4,
+        5,
+        2
+      ],
+      "exact_optimum": 3.9838833996088217,
+      "feasible_U": 3.9882253822467364,
+      "feasible_path": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "lower_bounds": {
+        "capacity_lb": 3.9812196122044625,
+        "mass_lb": 0.1620582653619107,
+        "reach_lb": 3.9721087818555576,
+        "stdc_lb": 3.9812196122044625,
+        "stdc_radius_lb": 3.725106067543532,
+        "stepwise_lb": 3.9812196122044625
+      },
+      "relative_suboptimality_upper_bound": 0.001759704493768055,
+      "root_L0": 3.9812196122044625
+    },
+    {
+      "actual_additive_suboptimality": 0.0,
+      "additive_suboptimality_upper_bound": 0.0,
+      "case_index": 16,
+      "exact_optimal_path": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "exact_optimum": 5.000000000000001,
+      "feasible_U": 5.000000000000001,
+      "feasible_path": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "lower_bounds": {
+        "capacity_lb": 5.000000000000001,
+        "mass_lb": 5.000000000000001,
+        "reach_lb": 5.000000000000001,
+        "stdc_lb": 5.000000000000001,
+        "stdc_radius_lb": 5.000000000000001,
+        "stepwise_lb": 5.000000000000001
+      },
+      "relative_suboptimality_upper_bound": 0.0,
+      "root_L0": 5.000000000000001
+    },
+    {
+      "actual_additive_suboptimality": -8.881784197001252e-16,
+      "additive_suboptimality_upper_bound": -8.881784197001252e-16,
+      "case_index": 17,
+      "exact_optimal_path": [
+        5,
+        2,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "exact_optimum": 5.999999999999999,
+      "feasible_U": 5.999999999999998,
+      "feasible_path": [
+        5,
+        2,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "lower_bounds": {
+        "capacity_lb": 5.999999999999999,
+        "mass_lb": 0.0,
+        "reach_lb": 5.999999999999999,
+        "stdc_lb": 5.999999999999999,
+        "stdc_radius_lb": 5.999999999999999,
+        "stepwise_lb": 5.999999999999999
+      },
+      "relative_suboptimality_upper_bound": -1.1102230246251565e-16,
+      "root_L0": 5.999999999999999
+    },
+    {
+      "actual_additive_suboptimality": 0.0,
+      "additive_suboptimality_upper_bound": 0.0,
+      "case_index": 18,
+      "exact_optimal_path": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "exact_optimum": 5.906179467993633,
+      "feasible_U": 5.906179467993633,
+      "feasible_path": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "lower_bounds": {
+        "capacity_lb": 5.697612784224818,
+        "mass_lb": 0.0,
+        "reach_lb": 5.906179467993633,
+        "stdc_lb": 5.906179467993633,
+        "stdc_radius_lb": 5.390291550776337,
+        "stepwise_lb": 5.906179467993633
+      },
+      "relative_suboptimality_upper_bound": 0.0,
+      "root_L0": 5.906179467993633
+    },
+    {
+      "actual_additive_suboptimality": 0.5159734639206661,
+      "additive_suboptimality_upper_bound": 0.5159734639206661,
+      "case_index": 19,
+      "exact_optimal_path": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1
+      ],
+      "exact_optimum": 4.037159051214456,
+      "feasible_U": 4.553132515135122,
+      "feasible_path": [
+        2,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "lower_bounds": {
+        "capacity_lb": 4.037159051214456,
+        "mass_lb": 0.35027567874531773,
+        "reach_lb": 4.037159051214456,
+        "stdc_lb": 4.037159051214456,
+        "stdc_radius_lb": 3.783506219283793,
+        "stepwise_lb": 4.037159051214456
+      },
+      "relative_suboptimality_upper_bound": 0.12780607783224474,
+      "root_L0": 4.037159051214456
+    },
+    {
+      "actual_additive_suboptimality": 0.3493019484471054,
+      "additive_suboptimality_upper_bound": 0.3739710634509974,
+      "case_index": 20,
+      "exact_optimal_path": [
+        3,
+        1,
+        3,
+        1,
+        0,
+        2,
+        0
+      ],
+      "exact_optimum": 5.235794403517817,
+      "feasible_U": 5.585096351964922,
+      "feasible_path": [
+        3,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "lower_bounds": {
+        "capacity_lb": 5.162621897928701,
+        "mass_lb": 0.14473031254476712,
+        "reach_lb": 5.211125288513925,
+        "stdc_lb": 5.211125288513925,
+        "stdc_radius_lb": 3.471195555948413,
+        "stepwise_lb": 5.211125288513925
+      },
+      "relative_suboptimality_upper_bound": 0.0717639747168013,
+      "root_L0": 5.211125288513925
+    },
+    {
+      "actual_additive_suboptimality": 0.0,
+      "additive_suboptimality_upper_bound": 0.0,
+      "case_index": 21,
+      "exact_optimal_path": [
+        4,
+        1,
+        0,
+        1,
+        0
+      ],
+      "exact_optimum": 3.9999999999999996,
+      "feasible_U": 3.9999999999999996,
+      "feasible_path": [
+        4,
+        1,
+        0,
+        1,
+        0
+      ],
+      "lower_bounds": {
+        "capacity_lb": 3.9999999999999996,
+        "mass_lb": 3.9999999999999996,
+        "reach_lb": 3.9999999999999996,
+        "stdc_lb": 3.9999999999999996,
+        "stdc_radius_lb": 3.9999999999999996,
+        "stepwise_lb": 3.9999999999999996
+      },
+      "relative_suboptimality_upper_bound": 0.0,
+      "root_L0": 3.9999999999999996
+    },
+    {
+      "actual_additive_suboptimality": 0.24992755355709662,
+      "additive_suboptimality_upper_bound": 0.24992755355709662,
+      "case_index": 22,
+      "exact_optimal_path": [
+        0,
+        1,
+        3,
+        2,
+        4,
+        2
+      ],
+      "exact_optimum": 4.4718478949928535,
+      "feasible_U": 4.72177544854995,
+      "feasible_path": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "lower_bounds": {
+        "capacity_lb": 4.179226893907315,
+        "mass_lb": 0.0,
+        "reach_lb": 4.4718478949928535,
+        "stdc_lb": 4.4718478949928535,
+        "stdc_radius_lb": 3.833816376956652,
+        "stepwise_lb": 4.4718478949928535
+      },
+      "relative_suboptimality_upper_bound": 0.055889099858906555,
+      "root_L0": 4.4718478949928535
+    },
+    {
+      "actual_additive_suboptimality": 0.6060864256750325,
+      "additive_suboptimality_upper_bound": 0.9637298443359432,
+      "case_index": 23,
+      "exact_optimal_path": [
+        5,
+        4,
+        3,
+        0,
+        3,
+        4,
+        3
+      ],
+      "exact_optimum": 5.302975106775008,
+      "feasible_U": 5.909061532450041,
+      "feasible_path": [
+        5,
+        2,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "lower_bounds": {
+        "capacity_lb": 4.935005743624002,
+        "mass_lb": 0.282019303104,
+        "reach_lb": 4.91109817718249,
+        "stdc_lb": 4.945331688114098,
+        "stdc_radius_lb": 4.761076531541115,
+        "stepwise_lb": 4.9384477251207
+      },
+      "relative_suboptimality_upper_bound": 0.19487668474335673,
+      "root_L0": 4.945331688114098
+    },
+    {
+      "actual_additive_suboptimality": 0.0,
+      "additive_suboptimality_upper_bound": 0.0,
+      "case_index": 24,
+      "exact_optimal_path": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "exact_optimum": 6.9199987369214035,
+      "feasible_U": 6.9199987369214035,
+      "feasible_path": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "lower_bounds": {
+        "capacity_lb": 6.9199987369214035,
+        "mass_lb": 4.973288619924205,
+        "reach_lb": 6.9199987369214035,
+        "stdc_lb": 6.9199987369214035,
+        "stdc_radius_lb": 6.726703803095102,
+        "stepwise_lb": 6.9199987369214035
+      },
+      "relative_suboptimality_upper_bound": 0.0,
+      "root_L0": 6.9199987369214035
+    },
+    {
+      "actual_additive_suboptimality": 0.0460118121497235,
+      "additive_suboptimality_upper_bound": 0.0460118121497235,
+      "case_index": 25,
+      "exact_optimal_path": [
+        1,
+        0,
+        1,
+        2,
+        1,
+        2
+      ],
+      "exact_optimum": 4.646586876456434,
+      "feasible_U": 4.692598688606157,
+      "feasible_path": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "lower_bounds": {
+        "capacity_lb": 4.60150431303438,
+        "mass_lb": 0.13858213962252824,
+        "reach_lb": 4.646586876456434,
+        "stdc_lb": 4.646586876456434,
+        "stdc_radius_lb": 4.444740192279613,
+        "stepwise_lb": 4.646586876456434
+      },
+      "relative_suboptimality_upper_bound": 0.009902281690429282,
+      "root_L0": 4.646586876456434
+    },
+    {
+      "actual_additive_suboptimality": 0.0,
+      "additive_suboptimality_upper_bound": 0.0,
+      "case_index": 26,
+      "exact_optimal_path": [
+        3,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "exact_optimum": 6.0,
+      "feasible_U": 6.0,
+      "feasible_path": [
+        3,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "lower_bounds": {
+        "capacity_lb": 6.0,
+        "mass_lb": 6.0,
+        "reach_lb": 6.0,
+        "stdc_lb": 6.0,
+        "stdc_radius_lb": 6.0,
+        "stepwise_lb": 6.0
+      },
+      "relative_suboptimality_upper_bound": 0.0,
+      "root_L0": 6.0
+    },
+    {
+      "actual_additive_suboptimality": 0.6762746186201736,
+      "additive_suboptimality_upper_bound": 0.6893781568836022,
+      "case_index": 27,
+      "exact_optimal_path": [
+        3,
+        0,
+        1,
+        2,
+        1
+      ],
+      "exact_optimum": 3.213385195256918,
+      "feasible_U": 3.8896598138770915,
+      "feasible_path": [
+        3,
+        0,
+        1,
+        0,
+        1
+      ],
+      "lower_bounds": {
+        "capacity_lb": 3.2002816569934893,
+        "mass_lb": 0.0,
+        "reach_lb": 3.2002816569934893,
+        "stdc_lb": 3.2002816569934893,
+        "stdc_radius_lb": 3.001811768518597,
+        "stepwise_lb": 3.2002816569934893
+      },
+      "relative_suboptimality_upper_bound": 0.2154117139587144,
+      "root_L0": 3.2002816569934893
+    },
+    {
+      "actual_additive_suboptimality": 0.5454223309597754,
+      "additive_suboptimality_upper_bound": 0.8279820108706311,
+      "case_index": 28,
+      "exact_optimal_path": [
+        4,
+        2,
+        0,
+        2,
+        3,
+        1
+      ],
+      "exact_optimum": 3.4884244192694416,
+      "feasible_U": 4.033846750229217,
+      "feasible_path": [
+        4,
+        2,
+        0,
+        1,
+        0,
+        1
+      ],
+      "lower_bounds": {
+        "capacity_lb": 2.8412645953460447,
+        "mass_lb": 0.2819059232,
+        "reach_lb": 3.111548023046694,
+        "stdc_lb": 3.205864739358586,
+        "stdc_radius_lb": 2.499669592430613,
+        "stepwise_lb": 3.157275194442622
+      },
+      "relative_suboptimality_upper_bound": 0.25827103704827237,
+      "root_L0": 3.205864739358586
+    },
+    {
+      "actual_additive_suboptimality": 1.0201136616543076,
+      "additive_suboptimality_upper_bound": 1.3381963090358422,
+      "case_index": 29,
+      "exact_optimal_path": [
+        1,
+        4,
+        7,
+        8,
+        5,
+        2,
+        1
+      ],
+      "exact_optimum": 4.681115050462636,
+      "feasible_U": 5.701228712116944,
+      "feasible_path": [
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "lower_bounds": {
+        "capacity_lb": 4.363032403081101,
+        "mass_lb": 0.0,
+        "reach_lb": 4.050220154771994,
+        "stdc_lb": 4.363032403081101,
+        "stdc_radius_lb": 4.028066355343354,
+        "stepwise_lb": 4.363032403081101
+      },
+      "relative_suboptimality_upper_bound": 0.306712438828286,
+      "root_L0": 4.363032403081101
+    },
+    {
+      "actual_additive_suboptimality": 0.0,
+      "additive_suboptimality_upper_bound": 0.0,
+      "case_index": 30,
+      "exact_optimal_path": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "exact_optimum": 6.686123327776343,
+      "feasible_U": 6.686123327776343,
+      "feasible_path": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "lower_bounds": {
+        "capacity_lb": 6.6482003156433915,
+        "mass_lb": 1.5072144002692116,
+        "reach_lb": 6.686123327776343,
+        "stdc_lb": 6.686123327776343,
+        "stdc_radius_lb": 5.770122525603407,
+        "stepwise_lb": 6.686123327776343
+      },
+      "relative_suboptimality_upper_bound": 0.0,
+      "root_L0": 6.686123327776343
+    },
+    {
+      "actual_additive_suboptimality": 0.0,
+      "additive_suboptimality_upper_bound": 0.0,
+      "case_index": 31,
+      "exact_optimal_path": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "exact_optimum": 4.999999999999999,
+      "feasible_U": 4.999999999999999,
+      "feasible_path": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "lower_bounds": {
+        "capacity_lb": 4.999999999999999,
+        "mass_lb": 4.999999999999999,
+        "reach_lb": 4.999999999999999,
+        "stdc_lb": 4.999999999999999,
+        "stdc_radius_lb": 4.999999999999999,
+        "stepwise_lb": 4.999999999999999
+      },
+      "relative_suboptimality_upper_bound": 0.0,
+      "root_L0": 4.999999999999999
+    },
+    {
+      "actual_additive_suboptimality": 0.93949047654029,
+      "additive_suboptimality_upper_bound": 0.9394904765402909,
+      "case_index": 32,
+      "exact_optimal_path": [
+        2,
+        3,
+        1,
+        0,
+        1,
+        3,
+        1
+      ],
+      "exact_optimum": 4.870028351455022,
+      "feasible_U": 5.809518827995312,
+      "feasible_path": [
+        2,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "lower_bounds": {
+        "capacity_lb": 4.550596255053264,
+        "mass_lb": 0.0,
+        "reach_lb": 4.870028351455021,
+        "stdc_lb": 4.870028351455021,
+        "stdc_radius_lb": 3.8932242388632847,
+        "stepwise_lb": 4.870028351455021
+      },
+      "relative_suboptimality_upper_bound": 0.19291273248123875,
+      "root_L0": 4.870028351455021
+    },
+    {
+      "actual_additive_suboptimality": 0.5704644809373902,
+      "additive_suboptimality_upper_bound": 0.6106212956222681,
+      "case_index": 33,
+      "exact_optimal_path": [
+        4,
+        5,
+        4,
+        1,
+        0
+      ],
+      "exact_optimum": 3.0195542995933597,
+      "feasible_U": 3.59001878053075,
+      "feasible_path": [
+        4,
+        1,
+        0,
+        1,
+        0
+      ],
+      "lower_bounds": {
+        "capacity_lb": 2.701547910710273,
+        "mass_lb": 0.28139055999999996,
+        "reach_lb": 2.979397484908482,
+        "stdc_lb": 2.979397484908482,
+        "stdc_radius_lb": 2.7750025829271316,
+        "stepwise_lb": 2.979397484908482
+      },
+      "relative_suboptimality_upper_bound": 0.2049479126955176,
+      "root_L0": 2.979397484908482
+    },
+    {
+      "actual_additive_suboptimality": 1.1321898095105185,
+      "additive_suboptimality_upper_bound": 1.1606614515564475,
+      "case_index": 34,
+      "exact_optimal_path": [
+        0,
+        2,
+        0,
+        1,
+        3,
+        5
+      ],
+      "exact_optimum": 3.6343015732240254,
+      "feasible_U": 4.766491382734544,
+      "feasible_path": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "lower_bounds": {
+        "capacity_lb": 3.309240321776972,
+        "mass_lb": 0.0,
+        "reach_lb": 3.5868488364808098,
+        "stdc_lb": 3.6058299311780964,
+        "stdc_radius_lb": 3.0222426613616893,
+        "stepwise_lb": 3.6058299311780964
+      },
+      "relative_suboptimality_upper_bound": 0.32188469054535696,
+      "root_L0": 3.6058299311780964
+    },
+    {
+      "actual_additive_suboptimality": 0.0,
+      "additive_suboptimality_upper_bound": 0.0,
+      "case_index": 35,
+      "exact_optimal_path": [
+        7,
+        4,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "exact_optimum": 6.0,
+      "feasible_U": 6.0,
+      "feasible_path": [
+        7,
+        4,
+        1,
+        0,
+        1,
+        0,
+        1
+      ],
+      "lower_bounds": {
+        "capacity_lb": 6.0,
+        "mass_lb": 0.2539112272109797,
+        "reach_lb": 6.0,
+        "stdc_lb": 6.0,
+        "stdc_radius_lb": 6.0,
+        "stepwise_lb": 6.0
+      },
+      "relative_suboptimality_upper_bound": 0.0,
+      "root_L0": 6.0
+    }
+  ],
+  "schema": "stdc_final_independent_theory_audit_v1",
+  "seed": 20261125,
+  "status": "passed",
+  "tolerance": 1e-10,
+  "total_wall_s": 0.17575993299942638,
+  "unique_prefix_evaluations": 288,
+  "violation_count": 0
+}

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/94f4f138960f/SAR_Planing/asar_repro/scripts/run_stdc_final_assessment.py", line 649, in <module>
+    main()
+  File "/workspace/scratch/94f4f138960f/SAR_Planing/asar_repro/scripts/run_stdc_final_assessment.py", line 630, in main
+    verify(args.config, args.output)
+  File "/workspace/scratch/94f4f138960f/SAR_Planing/asar_repro/scripts/run_stdc_final_assessment.py", line 197, in verify
+    raise ValueError(f'frozen execution environment mismatch: {key}')
+ValueError: frozen execution environment mismatch: executable

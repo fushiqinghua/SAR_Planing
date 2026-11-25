@@ -41,6 +41,13 @@ def _particle_cost(cells, weights, depth, suffix, q):
 
 
 class TestFinalAssessmentRunner(unittest.TestCase):
+    def test_interpreter_path_is_normalized_before_environment_comparison(self):
+        from unittest.mock import patch
+        import os
+        with patch.object(_RUNNER.sys, 'executable', '/tmp/example/../venv/bin/python'):
+            self.assertEqual(_RUNNER.environment()['executable'],
+                             os.path.abspath('/tmp/example/../venv/bin/python'))
+
     def test_budget_filter_preserves_seed_and_excludes_late_improvement(self):
         seed = dict(J=10., elapsed_s=0., path=[0])
         history = [dict(J=8., elapsed_s=4.9, path=[1]),
