@@ -1,67 +1,53 @@
 # STDC-A^SAR v0.2 研究分支
 
-本分支基于冻结的 baseline-v1.1 复现开展 STDC 研究。**当前结论：工程缓存降低了旧 STDC 的计算耗时，但同预算下 J/Pd 没有提升，尚未证明 STDC 优于 baseline A^SAR。** 下表中的 baseline 指原 `paper_greedy` 搜索。
+本分支基于冻结的 `baseline-v1.1`，研究 STDC 下界与搜索策略能否改善海上搜救路径。更新于 2026-11-25。
 
-## 本轮核心指标
+[研究交接报告与原始证据索引](asar_repro/RESEARCH_HANDOFF_20261125.md) · [供其他模型使用的分析提示词](asar_repro/docs/research_handoff_20261125/PROMPT_FOR_NEXT_MODEL.md)
 
-数据为本地 SHA-256 校验通过的真实历史 Lake Ontario 粒子归档：17×17 网格、500 粒子、T=49、q=0.78、seed=41。所有方法共用初始 PT、评分器及 `5000 expansions / 20000 OPEN / 30 s` 预算。t=0 不探测，J 越小越好、Pd 越大越好。
+## 当前结果
 
-ε=1.10，每种方法三次独立进程运行；时间和内存取中位数：
+**直接 STDC 的 anytime 搜索在三个固定场景的工作量预算对照中都降低了 J。** Hudsons Bay 和 Bay of Fundy 的 Pd 同时提高，Lake Ontario 的 Pd 略降。Lake Ontario 的 J 从 17.29389415456 降至 17.264874448，降幅约 0.1678%。三组对照中，直接 STDC 的实际搜索时间均更长。后续调度、rollout、单粒子 DP 和受限 MILP 实验尚未把 J 降到直接 STDC 以下。
 
-| 方法 | J↓ | Pd↑ | 耗时（秒） | 进程峰值（MiB） | 扩展数 | 搜索结果 |
-|---|---:|---:|---:|---:|---:|---|
-| baseline：paper_greedy | **17.359684** | **0.897769** | **0.1353** | 70.02 | 107 | completed |
-| 原 STDC | 20.477608 | 0.881063 | 10.3829 | 157.95 | 5000 | max_expansions，返回初始 PT |
-| STDC：几何缓存 + h 缓存 | 20.477608 | 0.881063 | 5.0720 | 189.25 | 5000 | max_expansions，返回初始 PT |
-| STDC：再启用严格状态支配 | 20.477608 | 0.881063 | 6.9368 | 249.08 | 5000 | max_expansions，返回初始 PT |
+下表取自适应实验 `work` 协议的三次运行中位数。各方法从同场景的冻结平行线搜索路径（PT）出发，共用 5000 次扩展、20000 个 OPEN 条目、30 秒的上限。论文基线（`paper_greedy` A^SAR）按自身停止规则完成，直接 STDC（`prior_stdc`）达到扩展上限后返回当前最佳路径。
 
-- 缓存版相对**原 STDC**的耗时中位数降低约 51%；这不是相对 paper baseline 的优势，也不是路径质量改进。
-- ε=1.04：baseline J=17.293894、Pd=0.897370；STDC 缓存版仍为 J=20.477608、Pd=0.881063。
-- ε=1.00：两者均返回初始 PT，J/Pd 相同；缓存版耗时中位数为 4.2079 秒，baseline 为 5.3199 秒。该单场景计时事实不足以证明整体优势。
-- 三次重复用于观察计时波动，不是三个独立场景。进程峰值包含输入校验、预处理和路径回放。
+| 场景 | 论文基线 J↓ / Pd↑ | 直接 STDC J↓ / Pd↑ | 耗时中位数（秒，基线 → STDC） |
+|---|---:|---:|---:|
+| Lake Ontario | 17.293894155 / 0.897370419 | 17.264874448 / 0.897364416 | 0.925 → 3.444 |
+| Hudsons Bay（`arctic_ocean`） | 20.390881327 / 0.906729745 | 20.386109349 / 0.908583112 | 1.282 → 4.741 |
+| Bay of Fundy | 45.903608800 / 0.399984000 | 45.881082400 / 0.415864800 | 1.164 → 5.251 |
 
-**所有预算中止均为 uncertified；paper_greedy 即使完成也不能认证动态 ε 界。本轮 72 次真实对照没有任何认证结果。** 真实历史环境沿用本地场景假设和 PT，不声称复现原作者私有 forcing 或手工 PT。
+[工作量和 5 秒预算的完整对照](asar_repro/outputs/stdc_v0_2/adaptive_20261124/final_report.md) · [逐方法汇总 CSV](asar_repro/outputs/stdc_v0_2/adaptive_20261124/benchmark/aggregate.csv)
 
-![同预算性能对照](asar_repro/outputs/stdc_v0_2/repair_20261123_r2/report/repair_performance.png)
+三个场景均使用真实历史风流数据驱动的 Leeway 模拟粒子归档（每场景 500 粒子，`q=0.78`，`seed=41`），采用 all-water 碰撞近似。Bay of Fundy 使用官方原始网格角度，保留 **物理方向未验证**（`physical_direction_unverified=true`）标签。[三场景数据与实验协议](asar_repro/outputs/stdc_v0_2/three_real_20261124/three_real_comparison.md) · [Fundy 接入记录](asar_repro/outputs/stdc_v0_2/fundy_repair_20261124/repair_report.md)
 
-## 改进内容与适用范围
+## 从早期缓存到热启动
 
-- 缓存与 belief 无关的可达集合、探测参数和粒子因子，保持原下界数值及运算顺序。
-- 增加完整状态 h 的有界 LRU 缓存。键包含深度、位置及完整 belief，不能只按 `(depth,vertex)` 复用。
-- 增加可选严格状态支配：相同完整状态保留更小累计 g，支持重新入队并跳过过期堆项。
-- 保留原搜索行为作为对照。几何加速自动生效；h 缓存和状态支配默认关闭，可分别启用。本场景的工程选择是 `heuristic_cache_size=4096, exact_dominance=False`。
-
-本轮没有增强下界公式。下界偏松、预算内未生成完整路径的问题仍未解决。没有修改冻结 baseline 分支、B7 原始数据、评价器、原仿真程序、规划目标或环境 forcing；没有重新运行 Leeway。
-
-## 验证与记录
-
-- 新增及相关回归：93 项通过；全量：356 项通过，无失败、错误或跳过。
-- 160 个随机 toy 场景、18,024 个路径前缀：无超过 1e-10 的可采纳性违规。
-- 35 组小图、1,120 次搜索：通过独立 DFS Oracle 与路径回放检查。
-- 两组真实 smoke 通过输入/路径检查；完整对照为 8 variants × 3 ε × 3 次重复，共 72 次：12 次 completed、60 次 max_expansions、0 次认证。
-- 首轮因 pytest 临时父目录缺失而停止，原 [blocked 记录](asar_repro/outputs/stdc_v0_2/repair_20261123/validation_summary.json) 保留。修复启动目录后，r2 从新测试重新执行全部验证，未跳过该用例。
-
-| 入口 | 内容 |
+| 研究轮次 | 设计与结果 |
 |---|---|
-| [完整修复报告](asar_repro/outputs/stdc_v0_2/repair_20261123_r2/report/repair_report.md) | 全部 ε、八组消融、状态、来源、内存与局限 |
-| [72 次运行 CSV](asar_repro/outputs/stdc_v0_2/repair_20261123_r2/report/metrics.csv) | J/Pd、耗时、扩展、预算状态、来源和粒子指纹 |
-| [汇总 JSON](asar_repro/outputs/stdc_v0_2/repair_20261123_r2/report/aggregate.json) | 三次重复的统计及配对差值 |
-| [路径与剩余质量图](asar_repro/outputs/stdc_v0_2/repair_20261123_r2/report/repair_paths_survival.png) | 同一评分器独立回放 |
-| [问题归因报告](asar_repro/outputs/stdc_v0_2/diagnosis_20261123/diagnosis_report.md) | 逐节点追踪、下界分解与计算开销 |
-| [修复设计与 API](asar_repro/docs/stdc_v0_2/repair_design.md) | 状态充分性、缓存边界、调用方式 |
-| [代码文件清单](asar_repro/outputs/stdc_v0_2/repair_20261123_r2/code_files.json) | 本轮源代码及 SHA-256 |
-| [执行记录](asar_repro/outputs/stdc_v0_2/repair_20261123_r2/execution_records.json) | 命令、seed、测试总数、重试来源 |
-| [归档指纹](asar_repro/outputs/stdc_v0_2/repair_20261123_r2/sha256_manifest.json) | 报告、日志、JSON、CSV、图片校验 |
-| [冻结文件保护核验](asar_repro/outputs/stdc_v0_2/repair_20261123_r2/final_preservation.json) | baseline 654 个文件与研究目录 1106 个旧文件保持不变 |
+| 缓存与固定窗口 | 复用几何和启发式计算，在固定端点窗口内按精确后缀评分搜索。早期缓存缩短了原 STDC 的耗时，窗口搜索在部分设置下改善路径。[缓存报告](asar_repro/outputs/stdc_v0_2/repair_20261123_r2/report/repair_report.md) · [窗口报告](asar_repro/outputs/stdc_v0_2/windows_20261123/FINAL_REPORT.md) |
+| 全局 anytime 与计算优化 | 首条可行路径之后继续搜索，分开排序和安全剪枝。随后测试快速排序、两步前瞻、等价粒子压缩与尾段修复，部分变体降低了计算开销。[Anytime 报告](asar_repro/outputs/stdc_v0_2/anytime_20261124/FINAL_REPORT.md) · [优化报告](asar_repro/outputs/stdc_v0_2/optimization_20261124_resume/FINAL_REPORT.md) |
+| 中段 rollout、自适应调度与紧凑 DP | 试验中段多样化、预算回退和单粒子下界。紧凑 DP 降低了管理数组内存。自适应轮的八种改进方案与直接 STDC 共配对 144 次，严格 J 胜出 0 次。[中段与 DP 报告](asar_repro/outputs/stdc_v0_2/trajectory_20261124/final_report.md) · [配对结果](asar_repro/outputs/stdc_v0_2/adaptive_20261124/benchmark/paired_comparisons.csv) |
+| 候选诊断 | 重建的 270 个 rollout 候选均等于生成时的当前最佳路径。独立穷举最终直接 STDC 路径的 447 个短窗口，未找到更小 J。[诊断报告](asar_repro/outputs/stdc_v0_2/rollout_limit_diagnosis_20261124/diagnosis_report.md) |
+| 受限 MILP | 固定前缀和走廊，释放终点。首轮 toy 反例触发停止，第二轮关闭本地 HiGHS 的 presolve 后通过回归。第三轮向求解器提交完整 STDC 可行解，并加上包含该解的目标上界。[首轮停止记录](asar_repro/outputs/stdc_v0_2/exact_repair_20261124/final_report.md) · [数值修复报告](asar_repro/outputs/stdc_v0_2/exact_repair_r2_20261124/final_report.md) |
 
-## 离线复跑
+## 最新实验：热启动与目标上界
 
-原机器可在仓库根目录运行以下入口。脚本使用现有 maritime-sar 环境，自动创建新的结果目录，按顺序执行验证，失败即停止。
+第三轮 MILP 对照的冷、热两组都保留同一条已经求得的 STDC 路径作为可行解，每方法每场景另给 300 秒诊断预算。18 个受限子问题中，6 个完成，12 个达到时间上限。三个场景的最终 J/Pd 都等于表中的直接 STDC 值。热启动加上界组的峰值内存高于冷启动组。
 
-```powershell
-powershell -File .\asar_repro\outputs\stdc_v0_2\repair_20261123_r2\replay.ps1
-```
+| 场景 | 额外耗时（秒，冷 → 热） | 峰值内存（MiB，冷 → 热） |
+|---|---:|---:|
+| Lake Ontario | 300.447 → 300.039 | 428.11 → 475.54 |
+| Hudsons Bay | 300.134 → 300.132 | 553.94 → 738.75 |
+| Bay of Fundy | 300.122 → 300.642 | 961.30 → 989.93 |
 
-其他机器需调整解释器、临时目录和本地冻结 baseline 路径，并准备指纹一致的原始 forcing 和粒子归档。GitHub 上的代码、指标与清单不代表所有被忽略的原始风流文件均已上传；真实运行仍必须通过 SHA 门槛，禁止以合成粒子替代。
+[第三轮报告](asar_repro/outputs/stdc_v0_2/exact_repair_r3_20261124/final_report.md) · [对比 CSV](asar_repro/outputs/stdc_v0_2/exact_repair_r3_20261124/diagnostic/comparison.csv) · [耗时与内存图](asar_repro/outputs/stdc_v0_2/exact_repair_r3_20261124/diagnostic/efficiency.png)
 
-原阶段 0–8 的说明保留在 [asar_repro/README.md](asar_repro/README.md)。
+## 验证与复跑
+
+- 目标是最小化搜索第 1 至 T 步的未探测质量之和 J，t=0 不探测。Pd 表示截至第 T 步的累计探测概率，与 J 用同一条路径计算。
+- 真实场景结果均标为未认证。动态 `paper_greedy` 在 anytime 框架中用于排序。MILP 的下界和 gap 仅适用于对应前缀与走廊，当前路径的全局最优性仍待验证。
+- 最新实验归档记录了 **1228 项全量测试、192 组冷启动 Oracle、576 组热启动和上界消融 Oracle**通过，Oracle 最大 J 误差为 0。[验证汇总](asar_repro/outputs/stdc_v0_2/exact_repair_r3_20261124/validation_summary.json) · [研究交接复核](asar_repro/docs/research_handoff_20261125/review.json)
+
+离线复跑使用已有 `maritime-sar` 环境，先按冻结协议核对输入 SHA-256，再写入新的输出目录。各轮报告附有复跑命令和环境记录。大体积原始风流文件及下载分片保存在本地。
+
+[上传与本地保留文件清单](asar_repro/docs/research_handoff_20261125/upload_inventory.json) · [原论文阶段 0–8 复现说明](asar_repro/README.md)
