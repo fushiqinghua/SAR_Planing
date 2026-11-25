@@ -1,0 +1,16 @@
+{
+  "task": {
+    "phase": "pairs",
+    "scene": "arctic_ocean",
+    "depth": 30,
+    "seconds": 12.0,
+    "rep": 0
+  },
+  "protocol_sha256": "2789706d1a34e089655a655ab232b1b4be98ced9e989ddbc6d60b2e7d62ad5f0",
+  "exit_code": 0,
+  "watchdog_reason": null,
+  "worker_wall_s": 0.8049319269994157,
+  "peak_process_rss_bytes": 83197952,
+  "status": "recorded",
+  "raw_result_sha256": "fc482363b5c8b0828677ba3b34873bfa00983bfca31c174f89364e14da1d2b0c"
+}

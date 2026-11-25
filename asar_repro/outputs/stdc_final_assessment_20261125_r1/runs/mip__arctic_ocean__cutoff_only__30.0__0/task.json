@@ -1,0 +1,7 @@
+{
+  "phase": "mip",
+  "scene": "arctic_ocean",
+  "arm": "cutoff_only",
+  "seconds": 30.0,
+  "rep": 0
+}

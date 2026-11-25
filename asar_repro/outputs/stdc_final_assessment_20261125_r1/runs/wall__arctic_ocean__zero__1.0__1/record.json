@@ -1,0 +1,16 @@
+{
+  "task": {
+    "phase": "wall",
+    "scene": "arctic_ocean",
+    "bound": "zero",
+    "seconds": 1.0,
+    "rep": 1
+  },
+  "protocol_sha256": "2789706d1a34e089655a655ab232b1b4be98ced9e989ddbc6d60b2e7d62ad5f0",
+  "exit_code": 0,
+  "watchdog_reason": null,
+  "worker_wall_s": 1.410841969998728,
+  "peak_process_rss_bytes": 126664704,
+  "status": "recorded",
+  "raw_result_sha256": "c6ca90e77e1e8364328c7ec858e84a04cee1aebe21ba21d71256357cc76653c5"
+}

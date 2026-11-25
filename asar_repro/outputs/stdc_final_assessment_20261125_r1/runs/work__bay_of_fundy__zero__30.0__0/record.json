@@ -1,0 +1,17 @@
+{
+  "task": {
+    "phase": "work",
+    "scene": "bay_of_fundy",
+    "bound": "zero",
+    "seconds": 30.0,
+    "expansions": 5000,
+    "rep": 0
+  },
+  "protocol_sha256": "2789706d1a34e089655a655ab232b1b4be98ced9e989ddbc6d60b2e7d62ad5f0",
+  "exit_code": 0,
+  "watchdog_reason": null,
+  "worker_wall_s": 2.0163443499986897,
+  "peak_process_rss_bytes": 169472000,
+  "status": "recorded",
+  "raw_result_sha256": "fc80db4abad7f8cda811f06beca331c111834b1fe36ec5ebfd9784d9783ad137"
+}

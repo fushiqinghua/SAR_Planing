@@ -1,0 +1,87 @@
+{
+  "status": "passed",
+  "grid": [
+    1,
+    4
+  ],
+  "start": 1,
+  "budget": 2,
+  "q": 0.78,
+  "weights": [
+    0.5,
+    0.5
+  ],
+  "particle_cells": [
+    0,
+    3
+  ],
+  "stdc_bound": 0.83,
+  "independent_bound": 0.8299999999998862,
+  "pair_bound": 1.219999999999886,
+  "pair_raw_value": 1.22,
+  "raw_pair_value": 1.22,
+  "exact_DFS": 1.22,
+  "routes": [
+    {
+      "path": [
+        1,
+        0,
+        1
+      ],
+      "independent_J": 1.22,
+      "original_J": 1.22
+    },
+    {
+      "path": [
+        1,
+        2,
+        1
+      ],
+      "independent_J": 2.0,
+      "original_J": 2.0
+    },
+    {
+      "path": [
+        1,
+        2,
+        3
+      ],
+      "independent_J": 1.6099999999999999,
+      "original_J": 1.6099999999999999
+    }
+  ],
+  "pair_stats": {
+    "vertex": 1,
+    "depth": 0,
+    "budget": 2,
+    "remaining_steps": 2,
+    "grid_vertices": 4,
+    "pair_columns": [
+      0,
+      1
+    ],
+    "trajectory_ids": [
+      10,
+      20
+    ],
+    "pair_weights": [
+      0.5,
+      0.5
+    ],
+    "q": 0.78,
+    "estimated_peak_managed_bytes": 1744,
+    "max_memory_bytes": 134217728,
+    "completed_pair_layers": 2,
+    "pair_state_backups": 16,
+    "singleton_state_backups": 16,
+    "no_partial_table_published": true,
+    "state": "relative hit-count delta, min-count common scaling",
+    "memory_scope": "conservative pair-DP buffer reserve; not process RSS",
+    "global_epsilon_certified": false,
+    "deadline_overshoot_s": 0.0,
+    "raw_pair_value": 1.22,
+    "raw_independent_value": 0.83,
+    "downward_guard": 1.1368683772161603e-13,
+    "guard_scope": "floating-point engineering guard; real-arithmetic proof is separate"
+  }
+}

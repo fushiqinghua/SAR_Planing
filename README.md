@@ -2,10 +2,25 @@
 
 本分支 `stdc-final-assessment-20261125` 从 `stdc-research-v0.2` 的 `6167d344` 创建，用一批有限实验决定是否继续投入 STDC 性能研究。原分支和原实验档案保留。
 
+- [本批最终报告：89 次正式运行与投入决定](asar_repro/outputs/stdc_final_assessment_20261125_r1/FINAL_REPORT.md)
 - [本批实验协议与停止规则](asar_repro/docs/stdc_final_assessment/plan.md)
 - [STDC 与共同路线下界的数学论证](asar_repro/docs/stdc_final_assessment/theory.md)
+- [完整复跑说明与环境边界](asar_repro/docs/stdc_final_assessment/reproduce.md)
 - [机器可读配置](asar_repro/configs/stdc_final_assessment.json)
 - [独立执行器](asar_repro/scripts/run_stdc_final_assessment.py)
+
+## 本批结论
+
+**暂停以 STDC 性能调优为主线的投入，保留其下界数学价值与正确实现。** 质量改善至少 0.5% 或到达固定质量至少快 20% 的预设门槛均未通过。两个主场景在同 5 秒预算下，zero、mass、STDC 的最终 J/Pd 相同；达到 `1.001 × 历史参考 J` 的时间，STDC 在 Lake 比 zero / mass 慢 41.30% / 39.46%，在 Hudson 慢 62.43% / 60.43%。这些是本机、同输入的三次计时重复，不是跨机器速度或独立外推结论。
+
+| 主场景 | 5 秒三方法共同 J | 达到预定质量时间：zero / mass / STDC |
+|---|---:|---:|
+| Lake Ontario | 17.264874448 | 2.611 / 2.645 / 3.689 秒 |
+| Hudsons Bay | 20.386109349120 | 1.265 / 1.281 / 2.055 秒 |
+
+每景最多 24 条早期事件候选，实际独特路线数为 17 / 22 / 23，均未突破历史参考。12 个节点的共同路线下界诊断全部完成：Lake 根界从 9.179977674 提升到 9.855297115，关闭约 8.35% 的原 `U-L` 区间，低于预设 10% 门槛；不等于现有路线接近全局最优。Hudson 的四组 MILP 单项消融共 8 次、每次 30 秒，无 J 改善。Fundy 始终保留方向未验证标签，仅作辅助证据。
+
+本批相关回归 **314 项测试及 23 个子测试通过**；独立数学审计覆盖 **288 个前缀、6,756 条穷举后缀**。没有运行或冒称重新完成旧环境的 1228 项全量测试。首轮解释器路径表示差异导致的启动阻塞完整保留，正式结果使用新冻结的 `_r1` 目录；数据、预算及决策门槛未更改。独立档案阶段按门槛 **未触发**。
 
 以下保留上一研究分支的历史结果，新的本机计时不与历史机器直接作速度比。
 
@@ -15,7 +30,7 @@
 
 [研究交接报告与原始证据索引](asar_repro/RESEARCH_HANDOFF_20261125.md) · [供其他模型使用的分析提示词](asar_repro/docs/research_handoff_20261125/PROMPT_FOR_NEXT_MODEL.md)
 
-## 当前结果
+## 历史参考结果
 
 **直接 STDC 的 anytime 搜索在三个固定场景的工作量预算对照中都降低了 J。** Hudsons Bay 和 Bay of Fundy 的 Pd 同时提高，Lake Ontario 的 Pd 略降。Lake Ontario 的 J 从 17.29389415456 降至 17.264874448，降幅约 0.1678%。三组对照中，直接 STDC 的实际搜索时间均更长。后续调度、rollout、单粒子 DP 和受限 MILP 实验尚未把 J 降到直接 STDC 以下。
 
@@ -41,7 +56,7 @@
 | 候选诊断 | 重建的 270 个 rollout 候选均等于生成时的当前最佳路径。独立穷举最终直接 STDC 路径的 447 个短窗口，未找到更小 J。[诊断报告](asar_repro/outputs/stdc_v0_2/rollout_limit_diagnosis_20261124/diagnosis_report.md) |
 | 受限 MILP | 固定前缀和走廊，释放终点。首轮 toy 反例触发停止，第二轮关闭本地 HiGHS 的 presolve 后通过回归。第三轮向求解器提交完整 STDC 可行解，并加上包含该解的目标上界。[首轮停止记录](asar_repro/outputs/stdc_v0_2/exact_repair_20261124/final_report.md) · [数值修复报告](asar_repro/outputs/stdc_v0_2/exact_repair_r2_20261124/final_report.md) |
 
-## 最新实验：热启动与目标上界
+## 历史实验：热启动与目标上界
 
 第三轮 MILP 对照的冷、热两组都保留同一条已经求得的 STDC 路径作为可行解，每方法每场景另给 300 秒诊断预算。18 个受限子问题中，6 个完成，12 个达到时间上限。三个场景的最终 J/Pd 都等于表中的直接 STDC 值。热启动加上界组的峰值内存高于冷启动组。
 

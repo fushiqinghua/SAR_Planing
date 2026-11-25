@@ -1,0 +1,16 @@
+{
+  "task": {
+    "phase": "mip",
+    "scene": "arctic_ocean",
+    "arm": "warm_cutoff",
+    "seconds": 30.0,
+    "rep": 1
+  },
+  "protocol_sha256": "2789706d1a34e089655a655ab232b1b4be98ced9e989ddbc6d60b2e7d62ad5f0",
+  "exit_code": 0,
+  "watchdog_reason": null,
+  "worker_wall_s": 30.498856100999546,
+  "peak_process_rss_bytes": 224215040,
+  "status": "recorded",
+  "raw_result_sha256": "cd7b9bb205b10f674f3b95789c9ee874a573d34902b16d68e4dd13452de2ffdf"
+}

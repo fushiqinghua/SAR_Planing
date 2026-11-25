@@ -1,0 +1,7 @@
+{
+  "phase": "events",
+  "scene": "lake_ontario",
+  "initial": "historical_reference",
+  "seconds": 5.0,
+  "rep": 0
+}

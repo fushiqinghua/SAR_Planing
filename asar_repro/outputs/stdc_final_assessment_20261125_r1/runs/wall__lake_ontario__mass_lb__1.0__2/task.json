@@ -1,0 +1,7 @@
+{
+  "phase": "wall",
+  "scene": "lake_ontario",
+  "bound": "mass_lb",
+  "seconds": 1.0,
+  "rep": 2
+}

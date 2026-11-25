@@ -1,0 +1,171 @@
+{
+  "status": "passed",
+  "original_source_files_checked": 57,
+  "original_source_changed": [],
+  "input_particles_unchanged": true,
+  "pair_upper_bound_checks": [
+    {
+      "task": {
+        "phase": "pairs",
+        "scene": "arctic_ocean",
+        "depth": 0,
+        "seconds": 12.0,
+        "rep": 0
+      },
+      "upper": 20.386109349119998,
+      "ordinary_lower": 10.479531342357696,
+      "combined_lower": 10.479531342357697,
+      "passed": true
+    },
+    {
+      "task": {
+        "phase": "pairs",
+        "scene": "arctic_ocean",
+        "depth": 20,
+        "seconds": 12.0,
+        "rep": 0
+      },
+      "upper": 7.535558149119998,
+      "ordinary_lower": 3.7502834105205345,
+      "combined_lower": 3.7502834105205323,
+      "passed": true
+    },
+    {
+      "task": {
+        "phase": "pairs",
+        "scene": "arctic_ocean",
+        "depth": 30,
+        "seconds": 12.0,
+        "rep": 0
+      },
+      "upper": 4.511146821119997,
+      "ordinary_lower": 2.3841187433494087,
+      "combined_lower": 2.8241182373179403,
+      "passed": true
+    },
+    {
+      "task": {
+        "phase": "pairs",
+        "scene": "arctic_ocean",
+        "depth": 40,
+        "seconds": 12.0,
+        "rep": 0
+      },
+      "upper": 2.4925417491199973,
+      "ordinary_lower": 1.8345756569600011,
+      "combined_lower": 1.85251992511995,
+      "passed": true
+    },
+    {
+      "task": {
+        "phase": "pairs",
+        "scene": "bay_of_fundy",
+        "depth": 0,
+        "seconds": 12.0,
+        "rep": 0
+      },
+      "upper": 45.881082400000004,
+      "ordinary_lower": 42.44824000000001,
+      "combined_lower": 42.44824000000001,
+      "passed": true
+    },
+    {
+      "task": {
+        "phase": "pairs",
+        "scene": "bay_of_fundy",
+        "depth": 18,
+        "seconds": 12.0,
+        "rep": 0
+      },
+      "upper": 27.9434824,
+      "ordinary_lower": 24.847600000000025,
+      "combined_lower": 24.847600000000025,
+      "passed": true
+    },
+    {
+      "task": {
+        "phase": "pairs",
+        "scene": "bay_of_fundy",
+        "depth": 27,
+        "seconds": 12.0,
+        "rep": 0
+      },
+      "upper": 19.6617376,
+      "ordinary_lower": 17.744560000000003,
+      "combined_lower": 17.74456000000001,
+      "passed": true
+    },
+    {
+      "task": {
+        "phase": "pairs",
+        "scene": "bay_of_fundy",
+        "depth": 36,
+        "seconds": 12.0,
+        "rep": 0
+      },
+      "upper": 12.3705304,
+      "ordinary_lower": 11.634865599999996,
+      "combined_lower": 11.634865599999996,
+      "passed": true
+    },
+    {
+      "task": {
+        "phase": "pairs",
+        "scene": "lake_ontario",
+        "depth": 0,
+        "seconds": 12.0,
+        "rep": 0
+      },
+      "upper": 17.264874448,
+      "ordinary_lower": 9.179977673619849,
+      "combined_lower": 9.855297115371673,
+      "passed": true
+    },
+    {
+      "task": {
+        "phase": "pairs",
+        "scene": "lake_ontario",
+        "depth": 16,
+        "seconds": 12.0,
+        "rep": 0
+      },
+      "upper": 6.4416408480000005,
+      "ordinary_lower": 2.720923492348868,
+      "combined_lower": 3.03364775757314,
+      "passed": true
+    },
+    {
+      "task": {
+        "phase": "pairs",
+        "scene": "lake_ontario",
+        "depth": 24,
+        "seconds": 12.0,
+        "rep": 0
+      },
+      "upper": 4.023022576000001,
+      "ordinary_lower": 2.471808890960191,
+      "combined_lower": 2.471808890960192,
+      "passed": true
+    },
+    {
+      "task": {
+        "phase": "pairs",
+        "scene": "lake_ontario",
+        "depth": 32,
+        "seconds": 12.0,
+        "rep": 0
+      },
+      "upper": 2.2803080000000016,
+      "ordinary_lower": 1.6696715840000005,
+      "combined_lower": 1.737073043081168,
+      "passed": true
+    }
+  ],
+  "formal_record_count": 89,
+  "formal_blocked_runs": [],
+  "independent_holdout": "not_triggered",
+  "reference_branches_observed": {
+    "stdc-research-v0.2": "6167d344bd364b0a39a67d310a68e10f1e407851",
+    "baseline-v1.1": "81b9be9b51625ed9012a69f9cb90e296bf2ec5c2"
+  }
+}

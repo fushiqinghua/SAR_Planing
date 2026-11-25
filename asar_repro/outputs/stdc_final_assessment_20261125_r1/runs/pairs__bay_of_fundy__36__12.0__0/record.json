@@ -1,0 +1,16 @@
+{
+  "task": {
+    "phase": "pairs",
+    "scene": "bay_of_fundy",
+    "depth": 36,
+    "seconds": 12.0,
+    "rep": 0
+  },
+  "protocol_sha256": "2789706d1a34e089655a655ab232b1b4be98ced9e989ddbc6d60b2e7d62ad5f0",
+  "exit_code": 0,
+  "watchdog_reason": null,
+  "worker_wall_s": 0.6059818180001457,
+  "peak_process_rss_bytes": 69517312,
+  "status": "recorded",
+  "raw_result_sha256": "18633a0d9cd8b40047db16a49d2f9b2efa93cc0020d9b3ab8a29288f37c1eb60"
+}

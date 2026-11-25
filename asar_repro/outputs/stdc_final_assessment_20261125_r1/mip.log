@@ -1,0 +1,8 @@
+mip__arctic_ocean__cold__30.0__0 recorded budget_exceeded J 20.386109349119998 wall 30.508
+mip__arctic_ocean__warm_only__30.0__0 recorded budget_exceeded J 20.386109349119998 wall 30.606
+mip__arctic_ocean__cutoff_only__30.0__0 recorded budget_exceeded J 20.386109349119998 wall 30.48
+mip__arctic_ocean__warm_cutoff__30.0__0 recorded budget_exceeded J 20.386109349119998 wall 31.278
+mip__arctic_ocean__warm_cutoff__30.0__1 recorded budget_exceeded J 20.386109349119998 wall 30.499
+mip__arctic_ocean__cutoff_only__30.0__1 recorded budget_exceeded J 20.386109349119998 wall 30.473
+mip__arctic_ocean__warm_only__30.0__1 recorded budget_exceeded J 20.386109349119998 wall 30.987
+mip__arctic_ocean__cold__30.0__1 recorded budget_exceeded J 20.386109349119998 wall 30.473

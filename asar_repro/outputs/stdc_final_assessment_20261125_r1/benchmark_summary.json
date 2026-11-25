@@ -1,0 +1,2444 @@
+{
+  "comparisons": [
+    {
+      "phase": "wall",
+      "scene": "arctic_ocean",
+      "bound": "mass_lb",
+      "seconds": 1.0,
+      "total_runs": 3,
+      "valid_runs": 3,
+      "expected_runs": 3,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 25.293460991040014,
+        "min": 25.293460991040014,
+        "max": 25.293460991040014
+      },
+      "Pd": {
+        "median": 0.81763694688,
+        "min": 0.81763694688,
+        "max": 0.81763694688
+      },
+      "expanded": {
+        "median": 195,
+        "min": 138,
+        "max": 336
+      },
+      "generated": {
+        "median": 778,
+        "min": 552,
+        "max": 1343
+      },
+      "pruned": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "peak_open": {
+        "median": 583,
+        "min": 414,
+        "max": 1007
+      },
+      "measured_algorithm_wall_s": {
+        "median": 1.0022770450013923,
+        "min": 1.0021259269997245,
+        "max": 1.0023572970003443
+      },
+      "measured_cpu_s": {
+        "median": 1.000120902,
+        "min": 0.9999252279999999,
+        "max": 1.002110352
+      },
+      "budget_overshoot_s": {
+        "median": 0.0022770450013922527,
+        "min": 0.00212592699972447,
+        "max": 0.0023572970003442606
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        },
+        "near_reference_0.1pct": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        },
+        "reference": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        }
+      },
+      "peak_process_rss_bytes": 129662976,
+      "stat_medians": {
+        "guide_calls": 779,
+        "guide_wall_s": 0.9866479559932486,
+        "bound_calls": 195,
+        "bound_wall_s": 0.003878442998029641,
+        "work_expanded": 195,
+        "cheap_pruned": 0,
+        "bound_pruned": 0
+      }
+    },
+    {
+      "phase": "wall",
+      "scene": "arctic_ocean",
+      "bound": "mass_lb",
+      "seconds": 5.0,
+      "total_runs": 3,
+      "valid_runs": 3,
+      "expected_runs": 3,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 20.386109349119998,
+        "min": 20.386109349119998,
+        "max": 20.386109349119998
+      },
+      "Pd": {
+        "median": 0.90858311232,
+        "min": 0.90858311232,
+        "max": 0.90858311232
+      },
+      "expanded": {
+        "median": 23515,
+        "min": 22459,
+        "max": 25010
+      },
+      "generated": {
+        "median": 94060,
+        "min": 89836,
+        "max": 100039
+      },
+      "pruned": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "peak_open": {
+        "median": 17781,
+        "min": 17284,
+        "max": 18505
+      },
+      "measured_algorithm_wall_s": {
+        "median": 5.016737529000238,
+        "min": 5.015951395000229,
+        "max": 5.017814828001065
+      },
+      "measured_cpu_s": {
+        "median": 5.0078986489999995,
+        "min": 5.002474923,
+        "max": 5.008686387
+      },
+      "budget_overshoot_s": {
+        "median": 0.016737529000238283,
+        "min": 0.01595139500022924,
+        "max": 0.017814828001064598
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.2810409200010326,
+          "all_reached": true
+        },
+        "near_reference_0.1pct": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.2810409200010326,
+          "all_reached": true
+        },
+        "reference": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.7186540690017864,
+          "all_reached": true
+        }
+      },
+      "peak_process_rss_bytes": 258662400,
+      "stat_medians": {
+        "guide_calls": 41296,
+        "guide_wall_s": 3.9851001320766954,
+        "bound_calls": 23515,
+        "bound_wall_s": 0.26879593885132635,
+        "work_expanded": 23515,
+        "cheap_pruned": 0,
+        "bound_pruned": 0
+      }
+    },
+    {
+      "phase": "wall",
+      "scene": "arctic_ocean",
+      "bound": "stdc_lb",
+      "seconds": 1.0,
+      "total_runs": 3,
+      "valid_runs": 3,
+      "expected_runs": 3,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 25.293460991040014,
+        "min": 25.293460991040014,
+        "max": 25.293460991040014
+      },
+      "Pd": {
+        "median": 0.81763694688,
+        "min": 0.81763694688,
+        "max": 0.81763694688
+      },
+      "expanded": {
+        "median": 77,
+        "min": 56,
+        "max": 83
+      },
+      "generated": {
+        "median": 308,
+        "min": 224,
+        "max": 331
+      },
+      "pruned": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "peak_open": {
+        "median": 232,
+        "min": 168,
+        "max": 248
+      },
+      "measured_algorithm_wall_s": {
+        "median": 1.0024028280004131,
+        "min": 1.0023655209988647,
+        "max": 1.0048776829989947
+      },
+      "measured_cpu_s": {
+        "median": 1.002237264,
+        "min": 0.992263157,
+        "max": 1.004848974
+      },
+      "budget_overshoot_s": {
+        "median": 0.0024028280004131375,
+        "min": 0.0023655209988646675,
+        "max": 0.004877682998994715
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        },
+        "near_reference_0.1pct": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        },
+        "reference": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        }
+      },
+      "peak_process_rss_bytes": 138952704,
+      "stat_medians": {
+        "guide_calls": 309,
+        "guide_wall_s": 0.651017120002507,
+        "bound_calls": 78,
+        "bound_wall_s": 0.3455644770001527,
+        "work_expanded": 77,
+        "cheap_pruned": 0,
+        "bound_pruned": 0
+      }
+    },
+    {
+      "phase": "wall",
+      "scene": "arctic_ocean",
+      "bound": "stdc_lb",
+      "seconds": 5.0,
+      "total_runs": 3,
+      "valid_runs": 3,
+      "expected_runs": 3,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 20.386109349119998,
+        "min": 20.386109349119998,
+        "max": 20.386109349119998
+      },
+      "Pd": {
+        "median": 0.90858311232,
+        "min": 0.90858311232,
+        "max": 0.90858311232
+      },
+      "expanded": {
+        "median": 4137,
+        "min": 3961,
+        "max": 4277
+      },
+      "generated": {
+        "median": 16545,
+        "min": 15844,
+        "max": 17108
+      },
+      "pruned": {
+        "median": 855,
+        "min": 778,
+        "max": 902
+      },
+      "peak_open": {
+        "median": 11534,
+        "min": 11086,
+        "max": 11910
+      },
+      "measured_algorithm_wall_s": {
+        "median": 5.012091522999981,
+        "min": 5.011844012999063,
+        "max": 5.013807978000841
+      },
+      "measured_cpu_s": {
+        "median": 5.007709575,
+        "min": 5.002643304,
+        "max": 5.009068422
+      },
+      "budget_overshoot_s": {
+        "median": 0.012091522999980953,
+        "min": 0.011844012999063125,
+        "max": 0.013807978000841103
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 2.055119011001807,
+          "all_reached": true
+        },
+        "near_reference_0.1pct": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 2.055119011001807,
+          "all_reached": true
+        },
+        "reference": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 2.6995093660007115,
+          "all_reached": true
+        }
+      },
+      "peak_process_rss_bytes": 226185216,
+      "stat_medians": {
+        "guide_calls": 16525,
+        "guide_wall_s": 3.103393386998505,
+        "bound_calls": 4992,
+        "bound_wall_s": 1.7163222279959882,
+        "work_expanded": 4137,
+        "cheap_pruned": 0,
+        "bound_pruned": 855
+      }
+    },
+    {
+      "phase": "wall",
+      "scene": "arctic_ocean",
+      "bound": "zero",
+      "seconds": 1.0,
+      "total_runs": 3,
+      "valid_runs": 3,
+      "expected_runs": 3,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 25.293460991040014,
+        "min": 25.293460991040014,
+        "max": 25.293460991040014
+      },
+      "Pd": {
+        "median": 0.81763694688,
+        "min": 0.81763694688,
+        "max": 0.81763694688
+      },
+      "expanded": {
+        "median": 210,
+        "min": 166,
+        "max": 282
+      },
+      "generated": {
+        "median": 840,
+        "min": 664,
+        "max": 1125
+      },
+      "pruned": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "peak_open": {
+        "median": 630,
+        "min": 498,
+        "max": 844
+      },
+      "measured_algorithm_wall_s": {
+        "median": 1.0038537839991477,
+        "min": 1.0021472129992617,
+        "max": 1.0154857319994335
+      },
+      "measured_cpu_s": {
+        "median": 1.002120134,
+        "min": 0.9915909490000001,
+        "max": 1.013855063
+      },
+      "budget_overshoot_s": {
+        "median": 0.0038537839991477085,
+        "min": 0.002147212999261683,
+        "max": 0.015485731999433483
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        },
+        "near_reference_0.1pct": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        },
+        "reference": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        }
+      },
+      "peak_process_rss_bytes": 129306624,
+      "stat_medians": {
+        "guide_calls": 841,
+        "guide_wall_s": 0.9914986559979297,
+        "bound_calls": 210,
+        "bound_wall_s": 0.0007533600219176151,
+        "work_expanded": 210,
+        "cheap_pruned": 0,
+        "bound_pruned": 0
+      }
+    },
+    {
+      "phase": "wall",
+      "scene": "arctic_ocean",
+      "bound": "zero",
+      "seconds": 5.0,
+      "total_runs": 3,
+      "valid_runs": 3,
+      "expected_runs": 3,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 20.386109349119998,
+        "min": 20.386109349119998,
+        "max": 20.386109349119998
+      },
+      "Pd": {
+        "median": 0.90858311232,
+        "min": 0.90858311232,
+        "max": 0.90858311232
+      },
+      "expanded": {
+        "median": 28936,
+        "min": 24138,
+        "max": 29012
+      },
+      "generated": {
+        "median": 115742,
+        "min": 96552,
+        "max": 116047
+      },
+      "pruned": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "peak_open": {
+        "median": 20099,
+        "min": 18040,
+        "max": 20149
+      },
+      "measured_algorithm_wall_s": {
+        "median": 5.017283151999436,
+        "min": 5.015730471999632,
+        "max": 5.019211587999962
+      },
+      "measured_cpu_s": {
+        "median": 5.011321229,
+        "min": 5.002726971,
+        "max": 5.01606312
+      },
+      "budget_overshoot_s": {
+        "median": 0.017283151999436086,
+        "min": 0.015730471999631845,
+        "max": 0.01921158799996192
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.2652173660007975,
+          "all_reached": true
+        },
+        "near_reference_0.1pct": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.2652173660007975,
+          "all_reached": true
+        },
+        "reference": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.7100830050003424,
+          "all_reached": true
+        }
+      },
+      "peak_process_rss_bytes": 267804672,
+      "stat_medians": {
+        "guide_calls": 49033,
+        "guide_wall_s": 4.093985308700212,
+        "bound_calls": 28936,
+        "bound_wall_s": 0.049469265057268785,
+        "work_expanded": 28936,
+        "cheap_pruned": 0,
+        "bound_pruned": 0
+      }
+    },
+    {
+      "phase": "wall",
+      "scene": "bay_of_fundy",
+      "bound": "mass_lb",
+      "seconds": 1.0,
+      "total_runs": 3,
+      "valid_runs": 3,
+      "expected_runs": 3,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 53.067097600000004,
+        "min": 53.067097600000004,
+        "max": 53.067097600000004
+      },
+      "Pd": {
+        "median": 0.1020551999999999,
+        "min": 0.1020551999999999,
+        "max": 0.1020551999999999
+      },
+      "expanded": {
+        "median": 287,
+        "min": 262,
+        "max": 343
+      },
+      "generated": {
+        "median": 1145,
+        "min": 1048,
+        "max": 1371
+      },
+      "pruned": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "peak_open": {
+        "median": 859,
+        "min": 786,
+        "max": 1028
+      },
+      "measured_algorithm_wall_s": {
+        "median": 1.0034493880011723,
+        "min": 1.0031444530013687,
+        "max": 1.005391355998654
+      },
+      "measured_cpu_s": {
+        "median": 1.003068516,
+        "min": 1.0023871940000002,
+        "max": 1.005379725
+      },
+      "budget_overshoot_s": {
+        "median": 0.0034493880011723377,
+        "min": 0.0031444530013686744,
+        "max": 0.005391355998654035
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        },
+        "near_reference_0.1pct": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        },
+        "reference": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        }
+      },
+      "peak_process_rss_bytes": 146497536,
+      "stat_medians": {
+        "guide_calls": 1146,
+        "guide_wall_s": 0.9858338869835279,
+        "bound_calls": 287,
+        "bound_wall_s": 0.0041896559778251685,
+        "work_expanded": 287,
+        "cheap_pruned": 0,
+        "bound_pruned": 0
+      }
+    },
+    {
+      "phase": "wall",
+      "scene": "bay_of_fundy",
+      "bound": "mass_lb",
+      "seconds": 5.0,
+      "total_runs": 3,
+      "valid_runs": 3,
+      "expected_runs": 3,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 45.89234560000001,
+        "min": 45.89234560000001,
+        "max": 45.89234560000001
+      },
+      "Pd": {
+        "median": 0.4137744000000001,
+        "min": 0.4137744000000001,
+        "max": 0.4137744000000001
+      },
+      "expanded": {
+        "median": 57677,
+        "min": 57205,
+        "max": 58884
+      },
+      "generated": {
+        "median": 230707,
+        "min": 228820,
+        "max": 235536
+      },
+      "pruned": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "peak_open": {
+        "median": 1926,
+        "min": 1926,
+        "max": 1939
+      },
+      "measured_algorithm_wall_s": {
+        "median": 5.006627136999668,
+        "min": 5.005881162000151,
+        "max": 5.009651353000663
+      },
+      "measured_cpu_s": {
+        "median": 4.995440986,
+        "min": 4.98707001,
+        "max": 5.0063203860000005
+      },
+      "budget_overshoot_s": {
+        "median": 0.006627136999668437,
+        "min": 0.005881162000150653,
+        "max": 0.009651353000663221
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.1029194349994214,
+          "all_reached": true
+        },
+        "near_reference_0.1pct": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.1029194349994214,
+          "all_reached": true
+        },
+        "reference": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        }
+      },
+      "peak_process_rss_bytes": 205479936,
+      "stat_medians": {
+        "guide_calls": 59604,
+        "guide_wall_s": 2.8987200241244864,
+        "bound_calls": 57677,
+        "bound_wall_s": 0.5768401450150122,
+        "work_expanded": 57677,
+        "cheap_pruned": 0,
+        "bound_pruned": 0
+      }
+    },
+    {
+      "phase": "wall",
+      "scene": "bay_of_fundy",
+      "bound": "stdc_lb",
+      "seconds": 1.0,
+      "total_runs": 3,
+      "valid_runs": 3,
+      "expected_runs": 3,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 53.067097600000004,
+        "min": 53.067097600000004,
+        "max": 53.067097600000004
+      },
+      "Pd": {
+        "median": 0.1020551999999999,
+        "min": 0.1020551999999999,
+        "max": 0.1020551999999999
+      },
+      "expanded": {
+        "median": 41,
+        "min": 36,
+        "max": 46
+      },
+      "generated": {
+        "median": 164,
+        "min": 144,
+        "max": 184
+      },
+      "pruned": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "peak_open": {
+        "median": 124,
+        "min": 109,
+        "max": 139
+      },
+      "measured_algorithm_wall_s": {
+        "median": 1.0055832090001786,
+        "min": 1.0054184429991437,
+        "max": 1.0117569570011256
+      },
+      "measured_cpu_s": {
+        "median": 1.004823856,
+        "min": 1.003683685,
+        "max": 1.006610826
+      },
+      "budget_overshoot_s": {
+        "median": 0.005583209000178613,
+        "min": 0.0054184429991437355,
+        "max": 0.011756957001125556
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        },
+        "near_reference_0.1pct": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        },
+        "reference": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        }
+      },
+      "peak_process_rss_bytes": 151838720,
+      "stat_medians": {
+        "guide_calls": 165,
+        "guide_wall_s": 0.7025648309881944,
+        "bound_calls": 42,
+        "bound_wall_s": 0.2990473740010202,
+        "work_expanded": 41,
+        "cheap_pruned": 0,
+        "bound_pruned": 0
+      }
+    },
+    {
+      "phase": "wall",
+      "scene": "bay_of_fundy",
+      "bound": "stdc_lb",
+      "seconds": 5.0,
+      "total_runs": 3,
+      "valid_runs": 3,
+      "expected_runs": 3,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 45.881082400000004,
+        "min": 45.881082400000004,
+        "max": 45.881082400000004
+      },
+      "Pd": {
+        "median": 0.41586480000000003,
+        "min": 0.41586480000000003,
+        "max": 0.41586480000000003
+      },
+      "expanded": {
+        "median": 4264,
+        "min": 3958,
+        "max": 4278
+      },
+      "generated": {
+        "median": 17053,
+        "min": 15832,
+        "max": 17110
+      },
+      "pruned": {
+        "median": 2760,
+        "min": 2322,
+        "max": 2779
+      },
+      "peak_open": {
+        "median": 9994,
+        "min": 9531,
+        "max": 10017
+      },
+      "measured_algorithm_wall_s": {
+        "median": 5.014906743999745,
+        "min": 5.012576624998474,
+        "max": 5.015948673999446
+      },
+      "measured_cpu_s": {
+        "median": 5.007475902,
+        "min": 5.0038507910000005,
+        "max": 5.012690243
+      },
+      "budget_overshoot_s": {
+        "median": 0.014906743999745231,
+        "min": 0.012576624998473562,
+        "max": 0.015948673999446328
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.6611306269987836,
+          "all_reached": true
+        },
+        "near_reference_0.1pct": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.6611306269987836,
+          "all_reached": true
+        },
+        "reference": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 4.735029132998534,
+          "all_reached": true
+        }
+      },
+      "peak_process_rss_bytes": 243429376,
+      "stat_medians": {
+        "guide_calls": 17018,
+        "guide_wall_s": 3.0130396589702286,
+        "bound_calls": 7024,
+        "bound_wall_s": 1.7964253709415061,
+        "work_expanded": 4264,
+        "cheap_pruned": 0,
+        "bound_pruned": 2760
+      }
+    },
+    {
+      "phase": "wall",
+      "scene": "bay_of_fundy",
+      "bound": "zero",
+      "seconds": 1.0,
+      "total_runs": 3,
+      "valid_runs": 3,
+      "expected_runs": 3,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 53.067097600000004,
+        "min": 53.067097600000004,
+        "max": 53.067097600000004
+      },
+      "Pd": {
+        "median": 0.1020551999999999,
+        "min": 0.1020551999999999,
+        "max": 0.1020551999999999
+      },
+      "expanded": {
+        "median": 300,
+        "min": 173,
+        "max": 322
+      },
+      "generated": {
+        "median": 1200,
+        "min": 691,
+        "max": 1288
+      },
+      "pruned": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "peak_open": {
+        "median": 900,
+        "min": 518,
+        "max": 966
+      },
+      "measured_algorithm_wall_s": {
+        "median": 1.0031124480010476,
+        "min": 1.002830929999618,
+        "max": 1.007170134000262
+      },
+      "measured_cpu_s": {
+        "median": 1.002953448,
+        "min": 1.000673227,
+        "max": 1.007045831
+      },
+      "budget_overshoot_s": {
+        "median": 0.0031124480010475963,
+        "min": 0.0028309299996180926,
+        "max": 0.007170134000261896
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        },
+        "near_reference_0.1pct": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        },
+        "reference": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        }
+      },
+      "peak_process_rss_bytes": 144027648,
+      "stat_medians": {
+        "guide_calls": 1201,
+        "guide_wall_s": 0.9913743290126149,
+        "bound_calls": 300,
+        "bound_wall_s": 0.0009193769947160035,
+        "work_expanded": 300,
+        "cheap_pruned": 0,
+        "bound_pruned": 0
+      }
+    },
+    {
+      "phase": "wall",
+      "scene": "bay_of_fundy",
+      "bound": "zero",
+      "seconds": 5.0,
+      "total_runs": 3,
+      "valid_runs": 3,
+      "expected_runs": 3,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 45.89234560000001,
+        "min": 45.89234560000001,
+        "max": 45.89234560000001
+      },
+      "Pd": {
+        "median": 0.4137744000000001,
+        "min": 0.4137744000000001,
+        "max": 0.4137744000000001
+      },
+      "expanded": {
+        "median": 65930,
+        "min": 64422,
+        "max": 66915
+      },
+      "generated": {
+        "median": 263720,
+        "min": 257688,
+        "max": 267660
+      },
+      "pruned": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "peak_open": {
+        "median": 2041,
+        "min": 2041,
+        "max": 2053
+      },
+      "measured_algorithm_wall_s": {
+        "median": 5.0066501870005595,
+        "min": 5.006466773998909,
+        "max": 5.006911376000062
+      },
+      "measured_cpu_s": {
+        "median": 4.99540886,
+        "min": 4.993568883,
+        "max": 5.001023097999999
+      },
+      "budget_overshoot_s": {
+        "median": 0.0066501870005595265,
+        "min": 0.006466773998909048,
+        "max": 0.006911376000061864
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.1506023020010616,
+          "all_reached": true
+        },
+        "near_reference_0.1pct": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.1506023020010616,
+          "all_reached": true
+        },
+        "reference": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        }
+      },
+      "peak_process_rss_bytes": 207998976,
+      "stat_medians": {
+        "guide_calls": 67961,
+        "guide_wall_s": 3.157044046662122,
+        "bound_calls": 65930,
+        "bound_wall_s": 0.09952174276804726,
+        "work_expanded": 65930,
+        "cheap_pruned": 0,
+        "bound_pruned": 0
+      }
+    },
+    {
+      "phase": "wall",
+      "scene": "lake_ontario",
+      "bound": "mass_lb",
+      "seconds": 1.0,
+      "total_runs": 3,
+      "valid_runs": 3,
+      "expected_runs": 3,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 20.477608335999996,
+        "min": 17.29389415456,
+        "max": 20.477608335999996
+      },
+      "Pd": {
+        "median": 0.88106304,
+        "min": 0.88106304,
+        "max": 0.89737041888
+      },
+      "expanded": {
+        "median": 1114,
+        "min": 1065,
+        "max": 1270
+      },
+      "generated": {
+        "median": 4454,
+        "min": 4258,
+        "max": 5077
+      },
+      "pruned": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "peak_open": {
+        "median": 3340,
+        "min": 3193,
+        "max": 3776
+      },
+      "measured_algorithm_wall_s": {
+        "median": 1.0022885809994477,
+        "min": 1.0020464299996092,
+        "max": 1.0023282090005523
+      },
+      "measured_cpu_s": {
+        "median": 0.9937202439999999,
+        "min": 0.992187679,
+        "max": 1.002152524
+      },
+      "budget_overshoot_s": {
+        "median": 0.0022885809994477313,
+        "min": 0.002046429999609245,
+        "max": 0.002328209000552306
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 1,
+          "total": 3,
+          "censored_valid_runs": 2,
+          "median_reached_s": 0.975019739000345,
+          "all_reached": false
+        },
+        "near_reference_0.1pct": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        },
+        "reference": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        }
+      },
+      "peak_process_rss_bytes": 83267584,
+      "stat_medians": {
+        "guide_calls": 4455,
+        "guide_wall_s": 0.9399497879348928,
+        "bound_calls": 1114,
+        "bound_wall_s": 0.016269421996184974,
+        "work_expanded": 1114,
+        "cheap_pruned": 0,
+        "bound_pruned": 0
+      }
+    },
+    {
+      "phase": "wall",
+      "scene": "lake_ontario",
+      "bound": "mass_lb",
+      "seconds": 5.0,
+      "total_runs": 3,
+      "valid_runs": 3,
+      "expected_runs": 3,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 17.264874448,
+        "min": 17.264874448,
+        "max": 17.264874448
+      },
+      "Pd": {
+        "median": 0.897364416,
+        "min": 0.897364416,
+        "max": 0.897364416
+      },
+      "expanded": {
+        "median": 34465,
+        "min": 34205,
+        "max": 37388
+      },
+      "generated": {
+        "median": 136357,
+        "min": 135327,
+        "max": 147971
+      },
+      "pruned": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "peak_open": {
+        "median": 17317,
+        "min": 17232,
+        "max": 18182
+      },
+      "measured_algorithm_wall_s": {
+        "median": 5.0118313130005845,
+        "min": 5.010992547999194,
+        "max": 5.023249915000633
+      },
+      "measured_cpu_s": {
+        "median": 5.004709179,
+        "min": 5.0028390069999995,
+        "max": 5.018602888
+      },
+      "budget_overshoot_s": {
+        "median": 0.011831313000584487,
+        "min": 0.010992547999194358,
+        "max": 0.023249915000633337
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 0.9741193440004281,
+          "all_reached": true
+        },
+        "near_reference_0.1pct": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 2.645170658999632,
+          "all_reached": true
+        },
+        "reference": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 2.664661052000156,
+          "all_reached": true
+        }
+      },
+      "peak_process_rss_bytes": 153591808,
+      "stat_medians": {
+        "guide_calls": 51783,
+        "guide_wall_s": 3.649455209111693,
+        "bound_calls": 34465,
+        "bound_wall_s": 0.37517588869559404,
+        "work_expanded": 34465,
+        "cheap_pruned": 0,
+        "bound_pruned": 0
+      }
+    },
+    {
+      "phase": "wall",
+      "scene": "lake_ontario",
+      "bound": "stdc_lb",
+      "seconds": 1.0,
+      "total_runs": 3,
+      "valid_runs": 3,
+      "expected_runs": 3,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 20.477608335999996,
+        "min": 20.477608335999996,
+        "max": 20.477608335999996
+      },
+      "Pd": {
+        "median": 0.88106304,
+        "min": 0.88106304,
+        "max": 0.88106304
+      },
+      "expanded": {
+        "median": 852,
+        "min": 834,
+        "max": 879
+      },
+      "generated": {
+        "median": 3407,
+        "min": 3336,
+        "max": 3516
+      },
+      "pruned": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "peak_open": {
+        "median": 2555,
+        "min": 2503,
+        "max": 2638
+      },
+      "measured_algorithm_wall_s": {
+        "median": 1.0041343410011905,
+        "min": 1.003427081999689,
+        "max": 1.005450631999338
+      },
+      "measured_cpu_s": {
+        "median": 1.001599204,
+        "min": 1.001345522,
+        "max": 1.0033834439999998
+      },
+      "budget_overshoot_s": {
+        "median": 0.004134341001190478,
+        "min": 0.0034270819996891078,
+        "max": 0.005450631999337929
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        },
+        "near_reference_0.1pct": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        },
+        "reference": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        }
+      },
+      "peak_process_rss_bytes": 82317312,
+      "stat_medians": {
+        "guide_calls": 3408,
+        "guide_wall_s": 0.7185536540218891,
+        "bound_calls": 852,
+        "bound_wall_s": 0.24856201003058231,
+        "work_expanded": 852,
+        "cheap_pruned": 0,
+        "bound_pruned": 0
+      }
+    },
+    {
+      "phase": "wall",
+      "scene": "lake_ontario",
+      "bound": "stdc_lb",
+      "seconds": 5.0,
+      "total_runs": 3,
+      "valid_runs": 3,
+      "expected_runs": 3,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 17.264874448,
+        "min": 17.264874448,
+        "max": 17.264874448
+      },
+      "Pd": {
+        "median": 0.897364416,
+        "min": 0.897364416,
+        "max": 0.897364416
+      },
+      "expanded": {
+        "median": 5855,
+        "min": 5714,
+        "max": 6318
+      },
+      "generated": {
+        "median": 23420,
+        "min": 22855,
+        "max": 25272
+      },
+      "pruned": {
+        "median": 488,
+        "min": 479,
+        "max": 514
+      },
+      "peak_open": {
+        "median": 17038,
+        "min": 16622,
+        "max": 18401
+      },
+      "measured_algorithm_wall_s": {
+        "median": 5.011339048000082,
+        "min": 5.010154020999835,
+        "max": 5.012134273998527
+      },
+      "measured_cpu_s": {
+        "median": 4.994177821,
+        "min": 4.988443308,
+        "max": 5.002545558
+      },
+      "budget_overshoot_s": {
+        "median": 0.011339048000081675,
+        "min": 0.010154020999834756,
+        "max": 0.012134273998526623
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.3662988640007825,
+          "all_reached": true
+        },
+        "near_reference_0.1pct": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 3.6888411230011116,
+          "all_reached": true
+        },
+        "reference": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 3.7048118420007086,
+          "all_reached": true
+        }
+      },
+      "peak_process_rss_bytes": 158822400,
+      "stat_medians": {
+        "guide_calls": 23381,
+        "guide_wall_s": 3.5156432740041055,
+        "bound_calls": 6344,
+        "bound_wall_s": 1.2386142909781483,
+        "work_expanded": 5855,
+        "cheap_pruned": 0,
+        "bound_pruned": 488
+      }
+    },
+    {
+      "phase": "wall",
+      "scene": "lake_ontario",
+      "bound": "zero",
+      "seconds": 1.0,
+      "total_runs": 3,
+      "valid_runs": 3,
+      "expected_runs": 3,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 20.477608335999996,
+        "min": 20.477608335999996,
+        "max": 20.477608335999996
+      },
+      "Pd": {
+        "median": 0.88106304,
+        "min": 0.88106304,
+        "max": 0.88106304
+      },
+      "expanded": {
+        "median": 1151,
+        "min": 1151,
+        "max": 1222
+      },
+      "generated": {
+        "median": 4603,
+        "min": 4601,
+        "max": 4885
+      },
+      "pruned": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "peak_open": {
+        "median": 3452,
+        "min": 3451,
+        "max": 3664
+      },
+      "measured_algorithm_wall_s": {
+        "median": 1.0026191679990006,
+        "min": 1.0025075849989662,
+        "max": 1.0027328260002832
+      },
+      "measured_cpu_s": {
+        "median": 1.002479674,
+        "min": 1.001202091,
+        "max": 1.0025687030000001
+      },
+      "budget_overshoot_s": {
+        "median": 0.002619167999000638,
+        "min": 0.0025075849989661947,
+        "max": 0.0027328260002832394
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        },
+        "near_reference_0.1pct": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        },
+        "reference": {
+          "reached": 0,
+          "total": 3,
+          "censored_valid_runs": 3,
+          "median_reached_s": null,
+          "all_reached": false
+        }
+      },
+      "peak_process_rss_bytes": 83636224,
+      "stat_medians": {
+        "guide_calls": 4604,
+        "guide_wall_s": 0.9539854279355495,
+        "bound_calls": 1151,
+        "bound_wall_s": 0.003289019985459163,
+        "work_expanded": 1151,
+        "cheap_pruned": 0,
+        "bound_pruned": 0
+      }
+    },
+    {
+      "phase": "wall",
+      "scene": "lake_ontario",
+      "bound": "zero",
+      "seconds": 5.0,
+      "total_runs": 3,
+      "valid_runs": 3,
+      "expected_runs": 3,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 17.264874448,
+        "min": 17.264874448,
+        "max": 17.264874448
+      },
+      "Pd": {
+        "median": 0.897364416,
+        "min": 0.897364416,
+        "max": 0.897364416
+      },
+      "expanded": {
+        "median": 39899,
+        "min": 37570,
+        "max": 41190
+      },
+      "generated": {
+        "median": 157880,
+        "min": 148679,
+        "max": 162974
+      },
+      "pruned": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "peak_open": {
+        "median": 18990,
+        "min": 18270,
+        "max": 19324
+      },
+      "measured_algorithm_wall_s": {
+        "median": 5.012038878001476,
+        "min": 5.011880717000167,
+        "max": 5.012398689999827
+      },
+      "measured_cpu_s": {
+        "median": 5.006839193999999,
+        "min": 5.001617699,
+        "max": 5.0078137
+      },
+      "budget_overshoot_s": {
+        "median": 0.012038878001476405,
+        "min": 0.011880717000167351,
+        "max": 0.012398689999827184
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 0.9715362369988725,
+          "all_reached": true
+        },
+        "near_reference_0.1pct": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 2.6106163099993864,
+          "all_reached": true
+        },
+        "reference": {
+          "reached": 3,
+          "total": 3,
+          "censored_valid_runs": 0,
+          "median_reached_s": 2.6282096479990287,
+          "all_reached": true
+        }
+      },
+      "peak_process_rss_bytes": 159571968,
+      "stat_medians": {
+        "guide_calls": 58882,
+        "guide_wall_s": 3.84499904511722,
+        "bound_calls": 39899,
+        "bound_wall_s": 0.06513850291958079,
+        "work_expanded": 39899,
+        "cheap_pruned": 0,
+        "bound_pruned": 0
+      }
+    },
+    {
+      "phase": "work",
+      "scene": "arctic_ocean",
+      "bound": "mass_lb",
+      "seconds": 30.0,
+      "total_runs": 1,
+      "valid_runs": 1,
+      "expected_runs": 1,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 20.386109349119998,
+        "min": 20.386109349119998,
+        "max": 20.386109349119998
+      },
+      "Pd": {
+        "median": 0.90858311232,
+        "min": 0.90858311232,
+        "max": 0.90858311232
+      },
+      "expanded": {
+        "median": 5000,
+        "min": 5000,
+        "max": 5000
+      },
+      "generated": {
+        "median": 20000,
+        "min": 20000,
+        "max": 20000
+      },
+      "pruned": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "peak_open": {
+        "median": 6682,
+        "min": 6682,
+        "max": 6682
+      },
+      "measured_algorithm_wall_s": {
+        "median": 2.4486529669993615,
+        "min": 2.4486529669993615,
+        "max": 2.4486529669993615
+      },
+      "measured_cpu_s": {
+        "median": 2.445313745,
+        "min": 2.445313745,
+        "max": 2.445313745
+      },
+      "budget_overshoot_s": {
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 1,
+          "total": 1,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.3646165840000322,
+          "all_reached": true
+        },
+        "near_reference_0.1pct": {
+          "reached": 1,
+          "total": 1,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.3646165840000322,
+          "all_reached": true
+        },
+        "reference": {
+          "reached": 1,
+          "total": 1,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.8294435450006858,
+          "all_reached": true
+        }
+      },
+      "peak_process_rss_bytes": 175087616,
+      "stat_medians": {
+        "guide_calls": 11681,
+        "guide_wall_s": 2.2154379319308646,
+        "bound_calls": 5001,
+        "bound_wall_s": 0.05878074796783039,
+        "work_expanded": 5000,
+        "cheap_pruned": 0,
+        "bound_pruned": 0
+      }
+    },
+    {
+      "phase": "work",
+      "scene": "arctic_ocean",
+      "bound": "stdc_lb",
+      "seconds": 30.0,
+      "total_runs": 1,
+      "valid_runs": 1,
+      "expected_runs": 1,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 20.386109349119998,
+        "min": 20.386109349119998,
+        "max": 20.386109349119998
+      },
+      "Pd": {
+        "median": 0.90858311232,
+        "min": 0.90858311232,
+        "max": 0.90858311232
+      },
+      "expanded": {
+        "median": 5000,
+        "min": 5000,
+        "max": 5000
+      },
+      "generated": {
+        "median": 20000,
+        "min": 20000,
+        "max": 20000
+      },
+      "pruned": {
+        "median": 1269,
+        "min": 1269,
+        "max": 1269
+      },
+      "peak_open": {
+        "median": 13712,
+        "min": 13712,
+        "max": 13712
+      },
+      "measured_algorithm_wall_s": {
+        "median": 5.738074892000441,
+        "min": 5.738074892000441,
+        "max": 5.738074892000441
+      },
+      "measured_cpu_s": {
+        "median": 5.729064172,
+        "min": 5.729064172,
+        "max": 5.729064172
+      },
+      "budget_overshoot_s": {
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 1,
+          "total": 1,
+          "censored_valid_runs": 0,
+          "median_reached_s": 2.0363488900002267,
+          "all_reached": true
+        },
+        "near_reference_0.1pct": {
+          "reached": 1,
+          "total": 1,
+          "censored_valid_runs": 0,
+          "median_reached_s": 2.0363488900002267,
+          "all_reached": true
+        },
+        "reference": {
+          "reached": 1,
+          "total": 1,
+          "censored_valid_runs": 0,
+          "median_reached_s": 2.658956711000428,
+          "all_reached": true
+        }
+      },
+      "peak_process_rss_bytes": 235352064,
+      "stat_medians": {
+        "guide_calls": 19981,
+        "guide_wall_s": 3.49641943383358,
+        "bound_calls": 6270,
+        "bound_wall_s": 1.9822634180054592,
+        "work_expanded": 5000,
+        "cheap_pruned": 0,
+        "bound_pruned": 1269
+      }
+    },
+    {
+      "phase": "work",
+      "scene": "arctic_ocean",
+      "bound": "zero",
+      "seconds": 30.0,
+      "total_runs": 1,
+      "valid_runs": 1,
+      "expected_runs": 1,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 20.386109349119998,
+        "min": 20.386109349119998,
+        "max": 20.386109349119998
+      },
+      "Pd": {
+        "median": 0.90858311232,
+        "min": 0.90858311232,
+        "max": 0.90858311232
+      },
+      "expanded": {
+        "median": 5000,
+        "min": 5000,
+        "max": 5000
+      },
+      "generated": {
+        "median": 20000,
+        "min": 20000,
+        "max": 20000
+      },
+      "pruned": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "peak_open": {
+        "median": 6682,
+        "min": 6682,
+        "max": 6682
+      },
+      "measured_algorithm_wall_s": {
+        "median": 2.407628658000249,
+        "min": 2.407628658000249,
+        "max": 2.407628658000249
+      },
+      "measured_cpu_s": {
+        "median": 2.405931914,
+        "min": 2.405931914,
+        "max": 2.405931914
+      },
+      "budget_overshoot_s": {
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 1,
+          "total": 1,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.3063900080014719,
+          "all_reached": true
+        },
+        "near_reference_0.1pct": {
+          "reached": 1,
+          "total": 1,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.3063900080014719,
+          "all_reached": true
+        },
+        "reference": {
+          "reached": 1,
+          "total": 1,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.7934278000011545,
+          "all_reached": true
+        }
+      },
+      "peak_process_rss_bytes": 174338048,
+      "stat_medians": {
+        "guide_calls": 11681,
+        "guide_wall_s": 2.2116921409651695,
+        "bound_calls": 5001,
+        "bound_wall_s": 0.010627614019540488,
+        "work_expanded": 5000,
+        "cheap_pruned": 0,
+        "bound_pruned": 0
+      }
+    },
+    {
+      "phase": "work",
+      "scene": "bay_of_fundy",
+      "bound": "mass_lb",
+      "seconds": 30.0,
+      "total_runs": 1,
+      "valid_runs": 1,
+      "expected_runs": 1,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 45.895278400000024,
+        "min": 45.895278400000024,
+        "max": 45.895278400000024
+      },
+      "Pd": {
+        "median": 0.40900079999999994,
+        "min": 0.40900079999999994,
+        "max": 0.40900079999999994
+      },
+      "expanded": {
+        "median": 5000,
+        "min": 5000,
+        "max": 5000
+      },
+      "generated": {
+        "median": 20000,
+        "min": 20000,
+        "max": 20000
+      },
+      "pruned": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "peak_open": {
+        "median": 1052,
+        "min": 1052,
+        "max": 1052
+      },
+      "measured_algorithm_wall_s": {
+        "median": 1.627893127999414,
+        "min": 1.627893127999414,
+        "max": 1.627893127999414
+      },
+      "measured_cpu_s": {
+        "median": 1.6257677089999998,
+        "min": 1.6257677089999998,
+        "max": 1.6257677089999998
+      },
+      "budget_overshoot_s": {
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 1,
+          "total": 1,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.1369018660006986,
+          "all_reached": true
+        },
+        "near_reference_0.1pct": {
+          "reached": 1,
+          "total": 1,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.1369018660006986,
+          "all_reached": true
+        },
+        "reference": {
+          "reached": 0,
+          "total": 1,
+          "censored_valid_runs": 1,
+          "median_reached_s": null,
+          "all_reached": false
+        }
+      },
+      "peak_process_rss_bytes": 170135552,
+      "stat_medians": {
+        "guide_calls": 6033,
+        "guide_wall_s": 1.4194319848666055,
+        "bound_calls": 5001,
+        "bound_wall_s": 0.05506359297032759,
+        "work_expanded": 5000,
+        "cheap_pruned": 0,
+        "bound_pruned": 0
+      }
+    },
+    {
+      "phase": "work",
+      "scene": "bay_of_fundy",
+      "bound": "stdc_lb",
+      "seconds": 30.0,
+      "total_runs": 1,
+      "valid_runs": 1,
+      "expected_runs": 1,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 45.881082400000004,
+        "min": 45.881082400000004,
+        "max": 45.881082400000004
+      },
+      "Pd": {
+        "median": 0.41586480000000003,
+        "min": 0.41586480000000003,
+        "max": 0.41586480000000003
+      },
+      "expanded": {
+        "median": 5000,
+        "min": 5000,
+        "max": 5000
+      },
+      "generated": {
+        "median": 20000,
+        "min": 20000,
+        "max": 20000
+      },
+      "pruned": {
+        "median": 3205,
+        "min": 3205,
+        "max": 3205
+      },
+      "peak_open": {
+        "median": 11762,
+        "min": 11762,
+        "max": 11762
+      },
+      "measured_algorithm_wall_s": {
+        "median": 5.777650730999085,
+        "min": 5.777650730999085,
+        "max": 5.777650730999085
+      },
+      "measured_cpu_s": {
+        "median": 5.762269798,
+        "min": 5.762269798,
+        "max": 5.762269798
+      },
+      "budget_overshoot_s": {
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 1,
+          "total": 1,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.6830238260008628,
+          "all_reached": true
+        },
+        "near_reference_0.1pct": {
+          "reached": 1,
+          "total": 1,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.6830238260008628,
+          "all_reached": true
+        },
+        "reference": {
+          "reached": 1,
+          "total": 1,
+          "censored_valid_runs": 0,
+          "median_reached_s": 4.921026247000555,
+          "all_reached": true
+        }
+      },
+      "peak_process_rss_bytes": 251125760,
+      "stat_medians": {
+        "guide_calls": 19965,
+        "guide_wall_s": 3.4369223990142928,
+        "bound_calls": 8206,
+        "bound_wall_s": 2.0845861520047038,
+        "work_expanded": 5000,
+        "cheap_pruned": 0,
+        "bound_pruned": 3205
+      }
+    },
+    {
+      "phase": "work",
+      "scene": "bay_of_fundy",
+      "bound": "zero",
+      "seconds": 30.0,
+      "total_runs": 1,
+      "valid_runs": 1,
+      "expected_runs": 1,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 45.895278400000024,
+        "min": 45.895278400000024,
+        "max": 45.895278400000024
+      },
+      "Pd": {
+        "median": 0.40900079999999994,
+        "min": 0.40900079999999994,
+        "max": 0.40900079999999994
+      },
+      "expanded": {
+        "median": 5000,
+        "min": 5000,
+        "max": 5000
+      },
+      "generated": {
+        "median": 20000,
+        "min": 20000,
+        "max": 20000
+      },
+      "pruned": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "peak_open": {
+        "median": 1052,
+        "min": 1052,
+        "max": 1052
+      },
+      "measured_algorithm_wall_s": {
+        "median": 1.549964916001045,
+        "min": 1.549964916001045,
+        "max": 1.549964916001045
+      },
+      "measured_cpu_s": {
+        "median": 1.543576646,
+        "min": 1.543576646,
+        "max": 1.543576646
+      },
+      "budget_overshoot_s": {
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 1,
+          "total": 1,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.1299636910007393,
+          "all_reached": true
+        },
+        "near_reference_0.1pct": {
+          "reached": 1,
+          "total": 1,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.1299636910007393,
+          "all_reached": true
+        },
+        "reference": {
+          "reached": 0,
+          "total": 1,
+          "censored_valid_runs": 1,
+          "median_reached_s": null,
+          "all_reached": false
+        }
+      },
+      "peak_process_rss_bytes": 169472000,
+      "stat_medians": {
+        "guide_calls": 6033,
+        "guide_wall_s": 1.391606488978141,
+        "bound_calls": 5001,
+        "bound_wall_s": 0.008087404046818847,
+        "work_expanded": 5000,
+        "cheap_pruned": 0,
+        "bound_pruned": 0
+      }
+    },
+    {
+      "phase": "work",
+      "scene": "lake_ontario",
+      "bound": "mass_lb",
+      "seconds": 30.0,
+      "total_runs": 1,
+      "valid_runs": 1,
+      "expected_runs": 1,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 17.266645360000002,
+        "min": 17.266645360000002,
+        "max": 17.266645360000002
+      },
+      "Pd": {
+        "median": 0.896678016,
+        "min": 0.896678016,
+        "max": 0.896678016
+      },
+      "expanded": {
+        "median": 5000,
+        "min": 5000,
+        "max": 5000
+      },
+      "generated": {
+        "median": 19932,
+        "min": 19932,
+        "max": 19932
+      },
+      "pruned": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "peak_open": {
+        "median": 12213,
+        "min": 12213,
+        "max": 12213
+      },
+      "measured_algorithm_wall_s": {
+        "median": 2.787638256999344,
+        "min": 2.787638256999344,
+        "max": 2.787638256999344
+      },
+      "measured_cpu_s": {
+        "median": 2.7825437870000003,
+        "min": 2.7825437870000003,
+        "max": 2.7825437870000003
+      },
+      "budget_overshoot_s": {
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 1,
+          "total": 1,
+          "censored_valid_runs": 0,
+          "median_reached_s": 0.9552723130000231,
+          "all_reached": true
+        },
+        "near_reference_0.1pct": {
+          "reached": 1,
+          "total": 1,
+          "censored_valid_runs": 0,
+          "median_reached_s": 2.765932268999677,
+          "all_reached": true
+        },
+        "reference": {
+          "reached": 0,
+          "total": 1,
+          "censored_valid_runs": 1,
+          "median_reached_s": null,
+          "all_reached": false
+        }
+      },
+      "peak_process_rss_bytes": 124567552,
+      "stat_medians": {
+        "guide_calls": 17209,
+        "guide_wall_s": 2.5497432180018222,
+        "bound_calls": 5001,
+        "bound_wall_s": 0.06349094297729607,
+        "work_expanded": 5000,
+        "cheap_pruned": 0,
+        "bound_pruned": 0
+      }
+    },
+    {
+      "phase": "work",
+      "scene": "lake_ontario",
+      "bound": "stdc_lb",
+      "seconds": 30.0,
+      "total_runs": 1,
+      "valid_runs": 1,
+      "expected_runs": 1,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 17.264874448,
+        "min": 17.264874448,
+        "max": 17.264874448
+      },
+      "Pd": {
+        "median": 0.897364416,
+        "min": 0.897364416,
+        "max": 0.897364416
+      },
+      "expanded": {
+        "median": 5000,
+        "min": 5000,
+        "max": 5000
+      },
+      "generated": {
+        "median": 20000,
+        "min": 20000,
+        "max": 20000
+      },
+      "pruned": {
+        "median": 421,
+        "min": 421,
+        "max": 421
+      },
+      "peak_open": {
+        "median": 14540,
+        "min": 14540,
+        "max": 14540
+      },
+      "measured_algorithm_wall_s": {
+        "median": 3.932560328999898,
+        "min": 3.932560328999898,
+        "max": 3.932560328999898
+      },
+      "measured_cpu_s": {
+        "median": 3.9228019830000003,
+        "min": 3.9228019830000003,
+        "max": 3.9228019830000003
+      },
+      "budget_overshoot_s": {
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 1,
+          "total": 1,
+          "censored_valid_runs": 0,
+          "median_reached_s": 1.1874253259993566,
+          "all_reached": true
+        },
+        "near_reference_0.1pct": {
+          "reached": 1,
+          "total": 1,
+          "censored_valid_runs": 0,
+          "median_reached_s": 3.239733169999454,
+          "all_reached": true
+        },
+        "reference": {
+          "reached": 1,
+          "total": 1,
+          "censored_valid_runs": 0,
+          "median_reached_s": 3.25523623799927,
+          "all_reached": true
+        }
+      },
+      "peak_process_rss_bytes": 139603968,
+      "stat_medians": {
+        "guide_calls": 19961,
+        "guide_wall_s": 2.774323096182343,
+        "bound_calls": 5422,
+        "bound_wall_s": 0.9771849330609257,
+        "work_expanded": 5000,
+        "cheap_pruned": 0,
+        "bound_pruned": 421
+      }
+    },
+    {
+      "phase": "work",
+      "scene": "lake_ontario",
+      "bound": "zero",
+      "seconds": 30.0,
+      "total_runs": 1,
+      "valid_runs": 1,
+      "expected_runs": 1,
+      "missing_runs": 0,
+      "blocked_runs": 0,
+      "J": {
+        "median": 17.266645360000002,
+        "min": 17.266645360000002,
+        "max": 17.266645360000002
+      },
+      "Pd": {
+        "median": 0.896678016,
+        "min": 0.896678016,
+        "max": 0.896678016
+      },
+      "expanded": {
+        "median": 5000,
+        "min": 5000,
+        "max": 5000
+      },
+      "generated": {
+        "median": 19932,
+        "min": 19932,
+        "max": 19932
+      },
+      "pruned": {
+        "median": 0,
+        "min": 0,
+        "max": 0
+      },
+      "peak_open": {
+        "median": 12213,
+        "min": 12213,
+        "max": 12213
+      },
+      "measured_algorithm_wall_s": {
+        "median": 2.564095929999894,
+        "min": 2.564095929999894,
+        "max": 2.564095929999894
+      },
+      "measured_cpu_s": {
+        "median": 2.5567394329999997,
+        "min": 2.5567394329999997,
+        "max": 2.5567394329999997
+      },
+      "budget_overshoot_s": {
+        "median": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "targets": {
+        "near_reference_0.5pct": {
+          "reached": 1,
+          "total": 1,
+          "censored_valid_runs": 0,
+          "median_reached_s": 0.963243648999196,
+          "all_reached": true
+        },
+        "near_reference_0.1pct": {
+          "reached": 1,
+          "total": 1,
+          "censored_valid_runs": 0,
+          "median_reached_s": 2.5450426439983858,
+          "all_reached": true
+        },
+        "reference": {
+          "reached": 0,
+          "total": 1,
+          "censored_valid_runs": 1,
+          "median_reached_s": null,
+          "all_reached": false
+        }
+      },
+      "peak_process_rss_bytes": 123342848,
+      "stat_medians": {
+        "guide_calls": 17209,
+        "guide_wall_s": 2.3834667738701683,
+        "bound_calls": 5001,
+        "bound_wall_s": 0.01031624300776457,
+        "work_expanded": 5000,
+        "cheap_pruned": 0,
+        "bound_pruned": 0
+      }
+    }
+  ],
+  "decision": {
+    "quality_screen_pass": false,
+    "runtime_screen_pass": false,
+    "independent_validation": "not_triggered",
+    "per_scene": {
+      "lake_ontario": {
+        "quality_relative_gain": 0.0,
+        "no_quality_regression": true,
+        "target_time_ratios": {
+          "zero": 1.4130154281469185,
+          "mass_lb": 1.3945569486984184
+        },
+        "runtime_pass": false
+      },
+      "arctic_ocean": {
+        "quality_relative_gain": 0.0,
+        "no_quality_regression": true,
+        "target_time_ratios": {
+          "zero": 1.6243209002875096,
+          "mass_lb": 1.6042571153778213
+        },
+        "runtime_pass": false
+      }
+    },
+    "scope": "same frozen archives; no cross-scene generality or optimality proof",
+    "recommendation": "pause_STDC_centric_performance_tuning",
+    "event_strict_reference_witnesses": [],
+    "event_primary_witnesses": [],
+    "pair_root_screen_passes": [],
+    "event_formal_screen_pass": false,
+    "pair_next_step": "not_triggered"
+  },
+  "events": [],
+  "pairs": [],
+  "mip": [],
+  "total_runs": 63,
+  "blocked_runs": []
+}

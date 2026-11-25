@@ -2,6 +2,8 @@
 
 整理日期：2026-11-25。研究分支 `stdc-research-v0.2`。供其他模型阅读的入口，不替代各轮冻结记录。
 
+> 本专用分支已完成最后一批有限实验。当前决策入口为 [89 次正式运行的最终报告](outputs/stdc_final_assessment_20261125_r1/FINAL_REPORT.md)、[冻结门槛](docs/stdc_final_assessment/plan.md) 与 [数学证明](docs/stdc_final_assessment/theory.md)。同 5 秒主场景对照中 STDC 无额外 J 收益，达到既定质量更慢；建议暂停 STDC 性能调优主线。以下内容保留为本批之前的研究历史，不覆盖旧证据。
+
 ## 先读结论
 
 目标始终是降低 J；Pd 独立报告。直接 STDC anytime 已在固定 Lake Ontario 归档上将最佳已测 paper baseline 的 J 从 17.29389415456 降至 17.264874448（约0.167803%），但 Pd 从0.89737041888降至0.897364416，且计算成本增加。后续多轮工程优化、rollout、DP和受限MILP没有进一步突破这个J。Hudsons Bay、Fundy对应直接STDC参考值见下表。

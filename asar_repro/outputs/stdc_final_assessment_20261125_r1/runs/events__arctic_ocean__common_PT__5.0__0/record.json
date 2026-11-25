@@ -1,0 +1,16 @@
+{
+  "task": {
+    "phase": "events",
+    "scene": "arctic_ocean",
+    "initial": "common_PT",
+    "seconds": 5.0,
+    "rep": 0
+  },
+  "protocol_sha256": "2789706d1a34e089655a655ab232b1b4be98ced9e989ddbc6d60b2e7d62ad5f0",
+  "exit_code": 0,
+  "watchdog_reason": null,
+  "worker_wall_s": 0.4027724789993954,
+  "peak_process_rss_bytes": 64212992,
+  "status": "recorded",
+  "raw_result_sha256": "9f6fc193cfa2af7b7afa3e325acbb2b472c2a5d63b3f8eb2f17eaba2bbc558c3"
+}

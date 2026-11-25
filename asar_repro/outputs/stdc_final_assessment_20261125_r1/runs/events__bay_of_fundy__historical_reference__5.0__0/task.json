@@ -1,0 +1,7 @@
+{
+  "phase": "events",
+  "scene": "bay_of_fundy",
+  "initial": "historical_reference",
+  "seconds": 5.0,
+  "rep": 0
+}

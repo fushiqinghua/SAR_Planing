@@ -1,0 +1,32 @@
+{
+  "quality_screen_pass": false,
+  "runtime_screen_pass": false,
+  "independent_validation": "not_triggered",
+  "per_scene": {
+    "lake_ontario": {
+      "quality_relative_gain": 0.0,
+      "no_quality_regression": true,
+      "target_time_ratios": {
+        "zero": 1.4130154281469185,
+        "mass_lb": 1.3945569486984184
+      },
+      "runtime_pass": false
+    },
+    "arctic_ocean": {
+      "quality_relative_gain": 0.0,
+      "no_quality_regression": true,
+      "target_time_ratios": {
+        "zero": 1.6243209002875096,
+        "mass_lb": 1.6042571153778213
+      },
+      "runtime_pass": false
+    }
+  },
+  "scope": "same frozen archives; no cross-scene generality or optimality proof",
+  "recommendation": "pause_STDC_centric_performance_tuning",
+  "event_strict_reference_witnesses": [],
+  "event_primary_witnesses": [],
+  "pair_root_screen_passes": [],
+  "event_formal_screen_pass": false,
+  "pair_next_step": "not_triggered"
+}

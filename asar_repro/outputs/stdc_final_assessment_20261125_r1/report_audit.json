@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "fatal": [],
+  "incomplete": [],
+  "report_generator_sha256": "2cb9cdbc16900656130d9ff7c9690f6ebda0b295720f43bf2842d545d54612aa",
+  "summary_sha256": "2de19a88485ee0bd02efba7be173ac8111876c11a7d5de5e09914f95225bd2d7",
+  "matplotlib_version": "3.10.8",
+  "figure_visual_review": "passed: three panels, zero-based axes, real repetition points and observed min/max, direction label retained",
+  "formal_runs": 89,
+  "numerical_experiments_rerun_for_reporting": false
+}

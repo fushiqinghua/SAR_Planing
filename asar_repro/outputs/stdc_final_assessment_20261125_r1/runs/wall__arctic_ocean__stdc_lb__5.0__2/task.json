@@ -1,0 +1,7 @@
+{
+  "phase": "wall",
+  "scene": "arctic_ocean",
+  "bound": "stdc_lb",
+  "seconds": 5.0,
+  "rep": 2
+}

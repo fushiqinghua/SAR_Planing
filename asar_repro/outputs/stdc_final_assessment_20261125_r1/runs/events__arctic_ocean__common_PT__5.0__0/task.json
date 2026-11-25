@@ -1,0 +1,7 @@
+{
+  "phase": "events",
+  "scene": "arctic_ocean",
+  "initial": "common_PT",
+  "seconds": 5.0,
+  "rep": 0
+}
