@@ -1,4 +1,15 @@
-# STDC-A^SAR v0.2 研究分支
+# STDC 最后一批评估实验
+
+本分支 `stdc-final-assessment-20261125` 从 `stdc-research-v0.2` 的 `6167d344` 创建，用一批有限实验决定是否继续投入 STDC 性能研究。原分支和原实验档案保留。
+
+- [本批实验协议与停止规则](asar_repro/docs/stdc_final_assessment/plan.md)
+- [STDC 与共同路线下界的数学论证](asar_repro/docs/stdc_final_assessment/theory.md)
+- [机器可读配置](asar_repro/configs/stdc_final_assessment.json)
+- [独立执行器](asar_repro/scripts/run_stdc_final_assessment.py)
+
+以下保留上一研究分支的历史结果，新的本机计时不与历史机器直接作速度比。
+
+## STDC-A^SAR v0.2 历史研究状态
 
 本分支基于冻结的 `baseline-v1.1`，研究 STDC 下界与搜索策略能否改善海上搜救路径。更新于 2026-11-25。
 
