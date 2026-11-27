@@ -1,0 +1,10 @@
+{
+  "stage": "H30",
+  "case": "lake_window_late",
+  "scene": "lake_ontario",
+  "footprint": "axis_square",
+  "connectivity": 8,
+  "backend": "selected",
+  "repetition": 2,
+  "seconds": 30
+}

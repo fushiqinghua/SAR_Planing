@@ -1,0 +1,30 @@
+[
+  {
+    "stage": "S30",
+    "case": "hudson_window_late",
+    "backend": "original_paper",
+    "repetition": 0,
+    "seconds": 30
+  },
+  {
+    "stage": "S30",
+    "case": "lake_window_late",
+    "backend": "original_paper",
+    "repetition": 0,
+    "seconds": 30
+  },
+  {
+    "stage": "S30",
+    "case": "hudson_window_early",
+    "backend": "original_paper",
+    "repetition": 0,
+    "seconds": 30
+  },
+  {
+    "stage": "S30",
+    "case": "lake_window_early",
+    "backend": "original_paper",
+    "repetition": 0,
+    "seconds": 30
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "status": "plan_not_results",
+  "stages": {
+    "D5": {
+      "tasks": 48,
+      "algorithm_budget_s": 240
+    },
+    "S30": {
+      "tasks": 4,
+      "algorithm_budget_s": 120
+    },
+    "H30": {
+      "tasks": 48,
+      "algorithm_budget_s": 1440
+    }
+  },
+  "formal_tasks": 100,
+  "formal_algorithm_budget_s": 1800,
+  "P0": {
+    "paired_audits": 8,
+    "expansion_cap_each": 128,
+    "wall_cap_each_s": 30,
+    "performance_evidence": false
+  },
+  "excluded_costs": "pytest, P0 audits, forcing validation, drift generation, loading, startup, audit and IO",
+  "independence_level": "same_forcing_shifted_window_new_seed",
+  "H2": "not_enabled",
+  "long_budget": "not_enabled"
+}

@@ -1,0 +1,24 @@
+{
+  "case_spec": {
+    "base_scene": "arctic_ocean",
+    "cst_utc": "2025-08-30T02:00:00Z",
+    "end_utc": "2025-08-30T02:46:18Z",
+    "id": "hudson_window_late",
+    "lkp_utc": "2025-08-29T02:00:00Z",
+    "seed": 2042
+  },
+  "config_sha256": "16a40a4b584267e4d334f010f1ed4e45aac638b433196476f510ba8b5681bc0e",
+  "files": {
+    "forcing_validation.json": "cfb96de00c8bade5af5653824fc8bdc30609a49c6599d960d09132fd2c108819",
+    "input_validation.json": "31ca03f2b211225676d19061b87262fb9a48f26f3fea8e8d0dd2bf8823ac4633",
+    "mass_audit.json": "3ef32ae6cb02da4869118c332353b2fd1e107dd79eb0e52e1f214297a954c44c",
+    "metadata.json": "7378af9b370e7ad743ae0144da77b6c6340e657474adbb32097c25d28c4f8a97",
+    "particles.npz": "264dedc98fc499be4d35022e23d88e1903bb84d303a2b93b9b96bbf628f3acee",
+    "prepare.log": "5dd13e015a69b15c3b15c5c9e97811777da6a8e903dda67c6c568cbac4cdea67",
+    "request.json": "a2cb26356f493c093c2d4ac4e5814cbaf8be7d0160bd3f19ddb84d08e0ec46a1",
+    "source_fingerprints.json": "6941d21e319f61459f5296cb030c4d421fdf75af411dce88a9ff32b952818880"
+  },
+  "independence_level": "same_forcing_shifted_window_new_seed",
+  "schema_version": 1,
+  "status": "prepared"
+}

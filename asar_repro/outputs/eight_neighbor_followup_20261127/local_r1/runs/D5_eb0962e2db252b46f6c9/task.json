@@ -1,0 +1,9 @@
+{
+  "stage": "D5",
+  "scene": "lake_ontario",
+  "footprint": "heading_square",
+  "connectivity": 8,
+  "backend": "original",
+  "repetition": 1,
+  "seconds": 5
+}

@@ -1,0 +1,41 @@
+{
+  "case_spec": {
+    "base_scene": "arctic_ocean",
+    "cst_utc": "2025-08-30T02:00:00Z",
+    "end_utc": "2025-08-30T02:46:18Z",
+    "id": "hudson_window_late",
+    "lkp_utc": "2025-08-29T02:00:00Z",
+    "seed": 2042
+  },
+  "config": {
+    "audit_q": 0.78,
+    "budget": 60,
+    "cell_width_m": 926.0,
+    "csp_lon_lat": [
+      -90.447,
+      62.786
+    ],
+    "cst_utc": "2025-08-30T02:00:00Z",
+    "forcing_kind": "historical_real",
+    "grid_rows_cols": [
+      65,
+      85
+    ],
+    "incident_utc": "2025-08-29T02:00:00Z",
+    "integration_s": 120,
+    "lkp_lon_lat": [
+      -90.6,
+      62.85
+    ],
+    "object_key": "LIFE-RAFT-DB-10",
+    "output_s": 120,
+    "particles": 500,
+    "radius_m": 100,
+    "seed": 2042,
+    "step_s": 46.3
+  },
+  "independence_level": "same_forcing_shifted_window_new_seed",
+  "requested_utc": "2026-11-27T13:58:32.777041+00:00",
+  "schema_version": 1,
+  "status": "requested"
+}

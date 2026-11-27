@@ -1,0 +1,9 @@
+{
+  "stage": "P0",
+  "scene": "lake_ontario",
+  "footprint": "axis_square",
+  "connectivity": 8,
+  "backend": "paired_audit",
+  "repetition": 0,
+  "seconds": 30
+}

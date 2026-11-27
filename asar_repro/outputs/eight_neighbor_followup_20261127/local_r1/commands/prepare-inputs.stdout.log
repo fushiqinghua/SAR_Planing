@@ -1,0 +1,17 @@
+lake_window_early: validating existing local forcing; no downloads
+lake_window_early: source and native-window checks passed; integrating one fixed seed
+lake_window_early: immutable particle archive prepared; no search executed
+Prepared lake_window_early
+lake_window_late: validating existing local forcing; no downloads
+lake_window_late: source and native-window checks passed; integrating one fixed seed
+lake_window_late: immutable particle archive prepared; no search executed
+Prepared lake_window_late
+hudson_window_early: validating existing local forcing; no downloads
+hudson_window_early: source and native-window checks passed; integrating one fixed seed
+hudson_window_early: immutable particle archive prepared; no search executed
+Prepared hudson_window_early
+hudson_window_late: validating existing local forcing; no downloads
+hudson_window_late: source and native-window checks passed; integrating one fixed seed
+hudson_window_late: immutable particle archive prepared; no search executed
+Prepared hudson_window_late
+Four H1 archives prepared; no H30 search launched

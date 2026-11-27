@@ -1,0 +1,9 @@
+{
+  "stage": "D5",
+  "scene": "arctic_ocean",
+  "footprint": "axis_square",
+  "connectivity": 8,
+  "backend": "cached",
+  "repetition": 0,
+  "seconds": 5
+}

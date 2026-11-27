@@ -1,0 +1,1143 @@
+{
+  "audit_J": 46.999124119360026,
+  "case_spec": {
+    "base_scene": "lake_ontario",
+    "cst_utc": "2025-08-26T16:45:00Z",
+    "end_utc": "2025-08-26T16:52:33.740Z",
+    "id": "lake_window_late",
+    "lkp_utc": "2025-08-26T15:45:00Z",
+    "seed": 1042
+  },
+  "config": {
+    "audit_q": 0.78,
+    "budget": 49,
+    "cell_width_m": 185.2,
+    "csp_lon_lat": [
+      -76.496,
+      44.215
+    ],
+    "cst_utc": "2025-08-26T16:45:00Z",
+    "forcing_kind": "historical_real",
+    "grid_rows_cols": [
+      17,
+      17
+    ],
+    "incident_utc": "2025-08-26T15:45:00Z",
+    "integration_s": 30,
+    "lkp_lon_lat": [
+      -76.5,
+      44.21
+    ],
+    "object_key": "PIW-2",
+    "output_s": 30,
+    "particles": 500,
+    "radius_m": 100,
+    "seed": 1042,
+    "step_s": 9.26
+  },
+  "config_hash": "407784be2b9749e8ee6c3999ce94272ad24b271ae3148b75143b0ddfbd765250",
+  "generation_wall_s": 2.5284706999991613,
+  "independence_level": "same_forcing_shifted_window_new_seed",
+  "initial_mass": 1.0000000000000004,
+  "integration_wall_s": 0.7521347999991121,
+  "max_mass_error": 4.440892098500626e-16,
+  "model": {
+    "integration_steps": 136,
+    "object": {
+      "description": ">PIW, vertical PFD type III conscious",
+      "key": "PIW-2",
+      "number": 2
+    },
+    "readers": {
+      "x_sea_water_velocity": [
+        "asar_current"
+      ],
+      "x_wind": [
+        "asar_wind"
+      ],
+      "y_sea_water_velocity": [
+        "asar_current"
+      ],
+      "y_wind": [
+        "asar_wind"
+      ]
+    },
+    "source_dims": [
+      "trajectory",
+      "time"
+    ]
+  },
+  "model_limitations": [
+    "same historical forcing",
+    "all-water coast approximation",
+    "native forcing masks retained",
+    "square sensor proxy"
+  ],
+  "native_utc": [
+    "2025-08-26T15:45:00Z",
+    "2025-08-26T15:45:30Z",
+    "2025-08-26T15:46:00Z",
+    "2025-08-26T15:46:30Z",
+    "2025-08-26T15:47:00Z",
+    "2025-08-26T15:47:30Z",
+    "2025-08-26T15:48:00Z",
+    "2025-08-26T15:48:30Z",
+    "2025-08-26T15:49:00Z",
+    "2025-08-26T15:49:30Z",
+    "2025-08-26T15:50:00Z",
+    "2025-08-26T15:50:30Z",
+    "2025-08-26T15:51:00Z",
+    "2025-08-26T15:51:30Z",
+    "2025-08-26T15:52:00Z",
+    "2025-08-26T15:52:30Z",
+    "2025-08-26T15:53:00Z",
+    "2025-08-26T15:53:30Z",
+    "2025-08-26T15:54:00Z",
+    "2025-08-26T15:54:30Z",
+    "2025-08-26T15:55:00Z",
+    "2025-08-26T15:55:30Z",
+    "2025-08-26T15:56:00Z",
+    "2025-08-26T15:56:30Z",
+    "2025-08-26T15:57:00Z",
+    "2025-08-26T15:57:30Z",
+    "2025-08-26T15:58:00Z",
+    "2025-08-26T15:58:30Z",
+    "2025-08-26T15:59:00Z",
+    "2025-08-26T15:59:30Z",
+    "2025-08-26T16:00:00Z",
+    "2025-08-26T16:00:30Z",
+    "2025-08-26T16:01:00Z",
+    "2025-08-26T16:01:30Z",
+    "2025-08-26T16:02:00Z",
+    "2025-08-26T16:02:30Z",
+    "2025-08-26T16:03:00Z",
+    "2025-08-26T16:03:30Z",
+    "2025-08-26T16:04:00Z",
+    "2025-08-26T16:04:30Z",
+    "2025-08-26T16:05:00Z",
+    "2025-08-26T16:05:30Z",
+    "2025-08-26T16:06:00Z",
+    "2025-08-26T16:06:30Z",
+    "2025-08-26T16:07:00Z",
+    "2025-08-26T16:07:30Z",
+    "2025-08-26T16:08:00Z",
+    "2025-08-26T16:08:30Z",
+    "2025-08-26T16:09:00Z",
+    "2025-08-26T16:09:30Z",
+    "2025-08-26T16:10:00Z",
+    "2025-08-26T16:10:30Z",
+    "2025-08-26T16:11:00Z",
+    "2025-08-26T16:11:30Z",
+    "2025-08-26T16:12:00Z",
+    "2025-08-26T16:12:30Z",
+    "2025-08-26T16:13:00Z",
+    "2025-08-26T16:13:30Z",
+    "2025-08-26T16:14:00Z",
+    "2025-08-26T16:14:30Z",
+    "2025-08-26T16:15:00Z",
+    "2025-08-26T16:15:30Z",
+    "2025-08-26T16:16:00Z",
+    "2025-08-26T16:16:30Z",
+    "2025-08-26T16:17:00Z",
+    "2025-08-26T16:17:30Z",
+    "2025-08-26T16:18:00Z",
+    "2025-08-26T16:18:30Z",
+    "2025-08-26T16:19:00Z",
+    "2025-08-26T16:19:30Z",
+    "2025-08-26T16:20:00Z",
+    "2025-08-26T16:20:30Z",
+    "2025-08-26T16:21:00Z",
+    "2025-08-26T16:21:30Z",
+    "2025-08-26T16:22:00Z",
+    "2025-08-26T16:22:30Z",
+    "2025-08-26T16:23:00Z",
+    "2025-08-26T16:23:30Z",
+    "2025-08-26T16:24:00Z",
+    "2025-08-26T16:24:30Z",
+    "2025-08-26T16:25:00Z",
+    "2025-08-26T16:25:30Z",
+    "2025-08-26T16:26:00Z",
+    "2025-08-26T16:26:30Z",
+    "2025-08-26T16:27:00Z",
+    "2025-08-26T16:27:30Z",
+    "2025-08-26T16:28:00Z",
+    "2025-08-26T16:28:30Z",
+    "2025-08-26T16:29:00Z",
+    "2025-08-26T16:29:30Z",
+    "2025-08-26T16:30:00Z",
+    "2025-08-26T16:30:30Z",
+    "2025-08-26T16:31:00Z",
+    "2025-08-26T16:31:30Z",
+    "2025-08-26T16:32:00Z",
+    "2025-08-26T16:32:30Z",
+    "2025-08-26T16:33:00Z",
+    "2025-08-26T16:33:30Z",
+    "2025-08-26T16:34:00Z",
+    "2025-08-26T16:34:30Z",
+    "2025-08-26T16:35:00Z",
+    "2025-08-26T16:35:30Z",
+    "2025-08-26T16:36:00Z",
+    "2025-08-26T16:36:30Z",
+    "2025-08-26T16:37:00Z",
+    "2025-08-26T16:37:30Z",
+    "2025-08-26T16:38:00Z",
+    "2025-08-26T16:38:30Z",
+    "2025-08-26T16:39:00Z",
+    "2025-08-26T16:39:30Z",
+    "2025-08-26T16:40:00Z",
+    "2025-08-26T16:40:30Z",
+    "2025-08-26T16:41:00Z",
+    "2025-08-26T16:41:30Z",
+    "2025-08-26T16:42:00Z",
+    "2025-08-26T16:42:30Z",
+    "2025-08-26T16:43:00Z",
+    "2025-08-26T16:43:30Z",
+    "2025-08-26T16:44:00Z",
+    "2025-08-26T16:44:30Z",
+    "2025-08-26T16:45:00Z",
+    "2025-08-26T16:45:30Z",
+    "2025-08-26T16:46:00Z",
+    "2025-08-26T16:46:30Z",
+    "2025-08-26T16:47:00Z",
+    "2025-08-26T16:47:30Z",
+    "2025-08-26T16:48:00Z",
+    "2025-08-26T16:48:30Z",
+    "2025-08-26T16:49:00Z",
+    "2025-08-26T16:49:30Z",
+    "2025-08-26T16:50:00Z",
+    "2025-08-26T16:50:30Z",
+    "2025-08-26T16:51:00Z",
+    "2025-08-26T16:51:30Z",
+    "2025-08-26T16:52:00Z",
+    "2025-08-26T16:52:30Z",
+    "2025-08-26T16:53:00Z"
+  ],
+  "opendrift_runs": 1,
+  "particle_sha256": "9b7aee3e1bd04066435b80229b6a7488ac89b8638dfb7bf8b404951997086863",
+  "planning_utc": [
+    "2025-08-26T16:45:00Z",
+    "2025-08-26T16:45:09.26Z",
+    "2025-08-26T16:45:18.52Z",
+    "2025-08-26T16:45:27.78Z",
+    "2025-08-26T16:45:37.04Z",
+    "2025-08-26T16:45:46.3Z",
+    "2025-08-26T16:45:55.56Z",
+    "2025-08-26T16:46:04.82Z",
+    "2025-08-26T16:46:14.08Z",
+    "2025-08-26T16:46:23.34Z",
+    "2025-08-26T16:46:32.6Z",
+    "2025-08-26T16:46:41.86Z",
+    "2025-08-26T16:46:51.12Z",
+    "2025-08-26T16:47:00.38Z",
+    "2025-08-26T16:47:09.64Z",
+    "2025-08-26T16:47:18.9Z",
+    "2025-08-26T16:47:28.16Z",
+    "2025-08-26T16:47:37.42Z",
+    "2025-08-26T16:47:46.68Z",
+    "2025-08-26T16:47:55.94Z",
+    "2025-08-26T16:48:05.2Z",
+    "2025-08-26T16:48:14.46Z",
+    "2025-08-26T16:48:23.72Z",
+    "2025-08-26T16:48:32.98Z",
+    "2025-08-26T16:48:42.24Z",
+    "2025-08-26T16:48:51.5Z",
+    "2025-08-26T16:49:00.76Z",
+    "2025-08-26T16:49:10.02Z",
+    "2025-08-26T16:49:19.28Z",
+    "2025-08-26T16:49:28.54Z",
+    "2025-08-26T16:49:37.8Z",
+    "2025-08-26T16:49:47.06Z",
+    "2025-08-26T16:49:56.32Z",
+    "2025-08-26T16:50:05.58Z",
+    "2025-08-26T16:50:14.84Z",
+    "2025-08-26T16:50:24.1Z",
+    "2025-08-26T16:50:33.36Z",
+    "2025-08-26T16:50:42.62Z",
+    "2025-08-26T16:50:51.88Z",
+    "2025-08-26T16:51:01.14Z",
+    "2025-08-26T16:51:10.4Z",
+    "2025-08-26T16:51:19.66Z",
+    "2025-08-26T16:51:28.92Z",
+    "2025-08-26T16:51:38.18Z",
+    "2025-08-26T16:51:47.44Z",
+    "2025-08-26T16:51:56.7Z",
+    "2025-08-26T16:52:05.96Z",
+    "2025-08-26T16:52:15.22Z",
+    "2025-08-26T16:52:24.48Z",
+    "2025-08-26T16:52:33.74Z"
+  ],
+  "prior_special_mass_by_step": [
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    },
+    {
+      "inactive": 0.0,
+      "land": 0.0,
+      "outside": 0.0,
+      "unknown": 0.0
+    }
+  ],
+  "provenance": {
+    "config": {
+      "audit_q": 0.78,
+      "budget": 49,
+      "cell_width_m": 185.2,
+      "csp_lon_lat": [
+        -76.496,
+        44.215
+      ],
+      "cst_utc": "2025-08-26T16:45:00Z",
+      "forcing_kind": "historical_real",
+      "grid_rows_cols": [
+        17,
+        17
+      ],
+      "incident_utc": "2025-08-26T15:45:00Z",
+      "integration_s": 30,
+      "lkp_lon_lat": [
+        -76.5,
+        44.21
+      ],
+      "object_key": "PIW-2",
+      "output_s": 30,
+      "particles": 500,
+      "radius_m": 100,
+      "seed": 1042,
+      "step_s": 9.26
+    },
+    "input_fingerprints": {
+      "case_spec": {
+        "base_scene": "lake_ontario",
+        "cst_utc": "2025-08-26T16:45:00Z",
+        "end_utc": "2025-08-26T16:52:33.740Z",
+        "id": "lake_window_late",
+        "lkp_utc": "2025-08-26T15:45:00Z",
+        "seed": 1042
+      },
+      "forcing_inventory": {
+        "b2_audit": {
+          "actual_sha256": "b78f6beabcf396270a06b2305f29bffe2fa989d9af3914e7ffc44de86d94d5bb",
+          "bytes": 35297,
+          "path": "outputs/baseline_v1.1/b2/forcing_audit.json",
+          "sha256": "b78f6beabcf396270a06b2305f29bffe2fa989d9af3914e7ffc44de86d94d5bb",
+          "status": "verified"
+        },
+        "b2_path": "outputs/baseline_v1.1/b2/forcing_audit.json",
+        "b2_sha256": "b78f6beabcf396270a06b2305f29bffe2fa989d9af3914e7ffc44de86d94d5bb",
+        "base_scene": "lake_ontario",
+        "coverage_utc": [
+          "2025-08-26T13:00:00+00:00",
+          "2025-08-26T17:00:00+00:00"
+        ],
+        "errors": [],
+        "manifest": {
+          "actual_sha256": "fa6f8c839bf894a3654a74c28e347f598b413e4ae0484bd7d090b718a43fc400",
+          "bytes": 47602,
+          "path": "data/manifests/historical_sources.json",
+          "sha256": "fa6f8c839bf894a3654a74c28e347f598b413e4ae0484bd7d090b718a43fc400",
+          "status": "verified"
+        },
+        "manifest_path": "data/manifests/historical_sources.json",
+        "manifest_sha256": "fa6f8c839bf894a3654a74c28e347f598b413e4ae0484bd7d090b718a43fc400",
+        "source_records": {
+          "current": [
+            {
+              "bytes": 70159473,
+              "forecast_or_analysis": "nowcast",
+              "full_object_sha256": "7269134c0240c7f00eeca6e9e6bc39dc40ae49032004f8561c239510fcd7090f",
+              "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n001.nc",
+              "product": "LOOFS",
+              "response": {
+                "content_range": null,
+                "etag": "\"7f9e13523b4eaee27347f515bb6bb7fc-9\"",
+                "http_status": 200,
+                "last_modified": "Tue, 26 Aug 2025 20:46:32 GMT"
+              },
+              "run_cycle_utc": "2025-08-26T18:00:00Z",
+              "sha256": "7269134c0240c7f00eeca6e9e6bc39dc40ae49032004f8561c239510fcd7090f",
+              "source_kind": "complete_original_netcdf",
+              "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n001.nc",
+              "subset_sha256": null,
+              "valid_utc": "2025-08-26T13:00:00+00:00"
+            },
+            {
+              "bytes": 70159473,
+              "forecast_or_analysis": "nowcast",
+              "full_object_sha256": "5092a254127774814da296dcc0edb302ca3320c5a8e2bd6f951d09ea25e75484",
+              "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n002.nc",
+              "product": "LOOFS",
+              "response": {
+                "content_range": null,
+                "etag": "\"00a1fb49c865d41e06071ecdd5335ae6-9\"",
+                "http_status": 200,
+                "last_modified": "Tue, 26 Aug 2025 20:46:32 GMT"
+              },
+              "run_cycle_utc": "2025-08-26T18:00:00Z",
+              "sha256": "5092a254127774814da296dcc0edb302ca3320c5a8e2bd6f951d09ea25e75484",
+              "source_kind": "complete_original_netcdf",
+              "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n002.nc",
+              "subset_sha256": null,
+              "valid_utc": "2025-08-26T14:00:00+00:00"
+            },
+            {
+              "bytes": 70159473,
+              "forecast_or_analysis": "nowcast",
+              "full_object_sha256": "ec3918e3251852e1646373b0aaa3e29f75232333879dfabcf37a547a3ffef4f3",
+              "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n003.nc",
+              "product": "LOOFS",
+              "response": {
+                "cache_reused": true
+              },
+              "run_cycle_utc": "2025-08-26T18:00:00Z",
+              "sha256": "ec3918e3251852e1646373b0aaa3e29f75232333879dfabcf37a547a3ffef4f3",
+              "source_kind": "complete_original_netcdf",
+              "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n003.nc",
+              "subset_sha256": null,
+              "valid_utc": "2025-08-26T15:00:00+00:00"
+            },
+            {
+              "bytes": 70159473,
+              "forecast_or_analysis": "nowcast",
+              "full_object_sha256": "e16e82ce3149104f6f8d8e2d7ece55de11d1c7a7b1f36c2a9fd20b4714bac8c4",
+              "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n004.nc",
+              "product": "LOOFS",
+              "response": {
+                "content_range": null,
+                "etag": "\"319adf6d64e7d518ca2894eb05cf60d7-9\"",
+                "http_status": 200,
+                "last_modified": "Tue, 26 Aug 2025 20:46:32 GMT"
+              },
+              "run_cycle_utc": "2025-08-26T18:00:00Z",
+              "sha256": "e16e82ce3149104f6f8d8e2d7ece55de11d1c7a7b1f36c2a9fd20b4714bac8c4",
+              "source_kind": "complete_original_netcdf",
+              "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n004.nc",
+              "subset_sha256": null,
+              "valid_utc": "2025-08-26T16:00:00+00:00"
+            },
+            {
+              "bytes": 70159473,
+              "forecast_or_analysis": "nowcast",
+              "full_object_sha256": "aa575cf91f8ecb84e003389204cae11846fc9a22ac754b2817a4ccb367ee0682",
+              "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n005.nc",
+              "product": "LOOFS",
+              "response": {
+                "content_range": null,
+                "etag": "\"1cb9941135a33f76b0a719400cd991ee-9\"",
+                "http_status": 200,
+                "last_modified": "Tue, 26 Aug 2025 20:46:32 GMT"
+              },
+              "run_cycle_utc": "2025-08-26T18:00:00Z",
+              "sha256": "aa575cf91f8ecb84e003389204cae11846fc9a22ac754b2817a4ccb367ee0682",
+              "source_kind": "complete_original_netcdf",
+              "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/08/26/loofs.t18z.20250826.fields.n005.nc",
+              "subset_sha256": null,
+              "valid_utc": "2025-08-26T17:00:00+00:00"
+            }
+          ],
+          "wind": [
+            {
+              "byte_ranges": [
+                {
+                  "end_inclusive": 44579129,
+                  "index_line": "77:42197515:d=2025082613:UGRD:10 m above ground:anl:",
+                  "level": "10 m above ground",
+                  "response": {
+                    "content_range": "bytes 42197515-44579129/141292273",
+                    "etag": "\"50783850e0d96efe0507cb26bb88c732\"",
+                    "http_status": 206,
+                    "last_modified": "Tue, 26 Aug 2025 13:51:07 GMT"
+                  },
+                  "sha256": "3ee355185cb5794ef35174a030ff4d025155c3f92f0fd3f31b52866ca53c6bef",
+                  "start": 42197515,
+                  "variable": "UGRD"
+                },
+                {
+                  "end_inclusive": 46960744,
+                  "index_line": "78:44579130:d=2025082613:VGRD:10 m above ground:anl:",
+                  "level": "10 m above ground",
+                  "response": {
+                    "content_range": "bytes 44579130-46960744/141292273",
+                    "etag": "\"50783850e0d96efe0507cb26bb88c732\"",
+                    "http_status": 206,
+                    "last_modified": "Tue, 26 Aug 2025 13:51:07 GMT"
+                  },
+                  "sha256": "2a932dfa433967877cf1c93411ae80830c59e736946c27ab72e1f52577f8c734",
+                  "start": 44579130,
+                  "variable": "VGRD"
+                }
+              ],
+              "bytes": 4763230,
+              "forecast_or_analysis": "analysis_f00",
+              "full_object_sha256": null,
+              "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t13z.wrfsfcf00.grib2.idx",
+              "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t13z.f00.10m_uv.grib2",
+              "product": "HRRR",
+              "run_cycle_utc": "2025-08-26T13:00:00Z",
+              "sha256": "d23da8d2684adeb56f7b205d84135aecce0a7fbacbe50d94eca933831a524419",
+              "source_kind": "byte_exact_selected_original_grib_messages",
+              "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t13z.wrfsfcf00.grib2",
+              "subset_sha256": "d23da8d2684adeb56f7b205d84135aecce0a7fbacbe50d94eca933831a524419",
+              "valid_utc": "2025-08-26T13:00:00+00:00"
+            },
+            {
+              "byte_ranges": [
+                {
+                  "end_inclusive": 44283836,
+                  "index_line": "77:42140365:d=2025082614:UGRD:10 m above ground:anl:",
+                  "level": "10 m above ground",
+                  "response": {
+                    "content_range": "bytes 42140365-44283836/144085737",
+                    "etag": "\"43a0df77f63343a5929e94ec78b7b1ac\"",
+                    "http_status": 206,
+                    "last_modified": "Tue, 26 Aug 2025 14:52:15 GMT"
+                  },
+                  "sha256": "01d31873869925135772c9800281c5652c27819e78ea8dd1b3c97b0be24e14c7",
+                  "start": 42140365,
+                  "variable": "UGRD"
+                },
+                {
+                  "end_inclusive": 46427308,
+                  "index_line": "78:44283837:d=2025082614:VGRD:10 m above ground:anl:",
+                  "level": "10 m above ground",
+                  "response": {
+                    "content_range": "bytes 44283837-46427308/144085737",
+                    "etag": "\"43a0df77f63343a5929e94ec78b7b1ac\"",
+                    "http_status": 206,
+                    "last_modified": "Tue, 26 Aug 2025 14:52:15 GMT"
+                  },
+                  "sha256": "a902ca85ae2e39a0f89d68be05672a996f3c57c720592d28c5ae082239f769fa",
+                  "start": 44283837,
+                  "variable": "VGRD"
+                }
+              ],
+              "bytes": 4286944,
+              "forecast_or_analysis": "analysis_f00",
+              "full_object_sha256": null,
+              "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t14z.wrfsfcf00.grib2.idx",
+              "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t14z.f00.10m_uv.grib2",
+              "product": "HRRR",
+              "run_cycle_utc": "2025-08-26T14:00:00Z",
+              "sha256": "e93eb9ebf9995368d535885e97c8442e50630b25e247e6efb938bb02b3ec06e4",
+              "source_kind": "byte_exact_selected_original_grib_messages",
+              "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t14z.wrfsfcf00.grib2",
+              "subset_sha256": "e93eb9ebf9995368d535885e97c8442e50630b25e247e6efb938bb02b3ec06e4",
+              "valid_utc": "2025-08-26T14:00:00+00:00"
+            },
+            {
+              "byte_ranges": [
+                {
+                  "end_inclusive": 44285272,
+                  "index_line": "77:42141801:d=2025082615:UGRD:10 m above ground:anl:",
+                  "level": "10 m above ground",
+                  "response": {
+                    "content_range": "bytes 42141801-44285272/146411883",
+                    "etag": "\"ab9827c2bfd3282ac71052091480ed35\"",
+                    "http_status": 206,
+                    "last_modified": "Tue, 26 Aug 2025 15:54:15 GMT"
+                  },
+                  "sha256": "5259700b591bf8f744aac6da215654af5543c0f12ce79b9056a69d1b02489cbe",
+                  "start": 42141801,
+                  "variable": "UGRD"
+                },
+                {
+                  "end_inclusive": 46428744,
+                  "index_line": "78:44285273:d=2025082615:VGRD:10 m above ground:anl:",
+                  "level": "10 m above ground",
+                  "response": {
+                    "content_range": "bytes 44285273-46428744/146411883",
+                    "etag": "\"ab9827c2bfd3282ac71052091480ed35\"",
+                    "http_status": 206,
+                    "last_modified": "Tue, 26 Aug 2025 15:54:15 GMT"
+                  },
+                  "sha256": "b3a968f74a17cf183cb27f260a8c1f74a01c30844d92c0b08a57f97e9d6281e1",
+                  "start": 44285273,
+                  "variable": "VGRD"
+                }
+              ],
+              "bytes": 4286944,
+              "forecast_or_analysis": "analysis_f00",
+              "full_object_sha256": null,
+              "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t15z.wrfsfcf00.grib2.idx",
+              "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t15z.f00.10m_uv.grib2",
+              "product": "HRRR",
+              "run_cycle_utc": "2025-08-26T15:00:00Z",
+              "sha256": "644b9d28c24f01aeebc7fb75bcb7cb1468aece6068de5d4c37667e63d424130c",
+              "source_kind": "byte_exact_selected_original_grib_messages",
+              "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t15z.wrfsfcf00.grib2",
+              "subset_sha256": "644b9d28c24f01aeebc7fb75bcb7cb1468aece6068de5d4c37667e63d424130c",
+              "valid_utc": "2025-08-26T15:00:00+00:00"
+            },
+            {
+              "byte_ranges": [
+                {
+                  "end_inclusive": 44677825,
+                  "index_line": "77:42534354:d=2025082616:UGRD:10 m above ground:anl:",
+                  "level": "10 m above ground",
+                  "response": {
+                    "content_range": "bytes 42534354-44677825/148265046",
+                    "etag": "\"0e923b05a9ce7d792af3af6670a1ee9d\"",
+                    "http_status": 206,
+                    "last_modified": "Tue, 26 Aug 2025 16:52:12 GMT"
+                  },
+                  "sha256": "cf8be8957d2acf29dc2edf956044bab6708d2b9a0081bba19e01336ab7e1e816",
+                  "start": 42534354,
+                  "variable": "UGRD"
+                },
+                {
+                  "end_inclusive": 46821297,
+                  "index_line": "78:44677826:d=2025082616:VGRD:10 m above ground:anl:",
+                  "level": "10 m above ground",
+                  "response": {
+                    "content_range": "bytes 44677826-46821297/148265046",
+                    "etag": "\"0e923b05a9ce7d792af3af6670a1ee9d\"",
+                    "http_status": 206,
+                    "last_modified": "Tue, 26 Aug 2025 16:52:12 GMT"
+                  },
+                  "sha256": "e35ae666d4a5784ad00aa6d0321b6c3f8e7aad299c9cda13b4e154d612874faa",
+                  "start": 44677826,
+                  "variable": "VGRD"
+                }
+              ],
+              "bytes": 4286944,
+              "forecast_or_analysis": "analysis_f00",
+              "full_object_sha256": null,
+              "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t16z.wrfsfcf00.grib2.idx",
+              "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t16z.f00.10m_uv.grib2",
+              "product": "HRRR",
+              "run_cycle_utc": "2025-08-26T16:00:00Z",
+              "sha256": "46256f2a7357568baa37e1193120521f3cda5706549e69023d5f274621108654",
+              "source_kind": "byte_exact_selected_original_grib_messages",
+              "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t16z.wrfsfcf00.grib2",
+              "subset_sha256": "46256f2a7357568baa37e1193120521f3cda5706549e69023d5f274621108654",
+              "valid_utc": "2025-08-26T16:00:00+00:00"
+            },
+            {
+              "byte_ranges": [
+                {
+                  "end_inclusive": 44616884,
+                  "index_line": "77:42473413:d=2025082617:UGRD:10 m above ground:anl:",
+                  "level": "10 m above ground",
+                  "response": {
+                    "content_range": "bytes 42473413-44616884/148192812",
+                    "etag": "\"de73af5cae03b769b43f3b25b0f0a89f\"",
+                    "http_status": 206,
+                    "last_modified": "Tue, 26 Aug 2025 17:51:38 GMT"
+                  },
+                  "sha256": "c50059e7fcdf03975e515d5dbc502ad89e3907d7c2a8b2e0eadca21391d254ee",
+                  "start": 42473413,
+                  "variable": "UGRD"
+                },
+                {
+                  "end_inclusive": 46760356,
+                  "index_line": "78:44616885:d=2025082617:VGRD:10 m above ground:anl:",
+                  "level": "10 m above ground",
+                  "response": {
+                    "content_range": "bytes 44616885-46760356/148192812",
+                    "etag": "\"de73af5cae03b769b43f3b25b0f0a89f\"",
+                    "http_status": 206,
+                    "last_modified": "Tue, 26 Aug 2025 17:51:38 GMT"
+                  },
+                  "sha256": "1669bb2747d46323a95a0c88812b3e4d7d076c9f60b64108fa1df577af56fed7",
+                  "start": 44616885,
+                  "variable": "VGRD"
+                }
+              ],
+              "bytes": 4286944,
+              "forecast_or_analysis": "analysis_f00",
+              "full_object_sha256": null,
+              "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t17z.wrfsfcf00.grib2.idx",
+              "local_path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t17z.f00.10m_uv.grib2",
+              "product": "HRRR",
+              "run_cycle_utc": "2025-08-26T17:00:00Z",
+              "sha256": "71beb93fd7c77e25ce6f3a1d75d10198e703b7b436640c0909cf0d51c61cf447",
+              "source_kind": "byte_exact_selected_original_grib_messages",
+              "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250826/conus/hrrr.t17z.wrfsfcf00.grib2",
+              "subset_sha256": "71beb93fd7c77e25ce6f3a1d75d10198e703b7b436640c0909cf0d51c61cf447",
+              "valid_utc": "2025-08-26T17:00:00+00:00"
+            }
+          ]
+        },
+        "sources": [
+          {
+            "actual_sha256": "d23da8d2684adeb56f7b205d84135aecce0a7fbacbe50d94eca933831a524419",
+            "bytes": 4763230,
+            "path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t13z.f00.10m_uv.grib2",
+            "role": "wind",
+            "sha256": "d23da8d2684adeb56f7b205d84135aecce0a7fbacbe50d94eca933831a524419",
+            "status": "verified"
+          },
+          {
+            "actual_sha256": "e93eb9ebf9995368d535885e97c8442e50630b25e247e6efb938bb02b3ec06e4",
+            "bytes": 4286944,
+            "path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t14z.f00.10m_uv.grib2",
+            "role": "wind",
+            "sha256": "e93eb9ebf9995368d535885e97c8442e50630b25e247e6efb938bb02b3ec06e4",
+            "status": "verified"
+          },
+          {
+            "actual_sha256": "644b9d28c24f01aeebc7fb75bcb7cb1468aece6068de5d4c37667e63d424130c",
+            "bytes": 4286944,
+            "path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t15z.f00.10m_uv.grib2",
+            "role": "wind",
+            "sha256": "644b9d28c24f01aeebc7fb75bcb7cb1468aece6068de5d4c37667e63d424130c",
+            "status": "verified"
+          },
+          {
+            "actual_sha256": "46256f2a7357568baa37e1193120521f3cda5706549e69023d5f274621108654",
+            "bytes": 4286944,
+            "path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t16z.f00.10m_uv.grib2",
+            "role": "wind",
+            "sha256": "46256f2a7357568baa37e1193120521f3cda5706549e69023d5f274621108654",
+            "status": "verified"
+          },
+          {
+            "actual_sha256": "71beb93fd7c77e25ce6f3a1d75d10198e703b7b436640c0909cf0d51c61cf447",
+            "bytes": 4286944,
+            "path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/hrrr/hrrr.20250826.t17z.f00.10m_uv.grib2",
+            "role": "wind",
+            "sha256": "71beb93fd7c77e25ce6f3a1d75d10198e703b7b436640c0909cf0d51c61cf447",
+            "status": "verified"
+          },
+          {
+            "actual_sha256": "7269134c0240c7f00eeca6e9e6bc39dc40ae49032004f8561c239510fcd7090f",
+            "bytes": 70159473,
+            "path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n001.nc",
+            "role": "current",
+            "sha256": "7269134c0240c7f00eeca6e9e6bc39dc40ae49032004f8561c239510fcd7090f",
+            "status": "verified"
+          },
+          {
+            "actual_sha256": "5092a254127774814da296dcc0edb302ca3320c5a8e2bd6f951d09ea25e75484",
+            "bytes": 70159473,
+            "path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n002.nc",
+            "role": "current",
+            "sha256": "5092a254127774814da296dcc0edb302ca3320c5a8e2bd6f951d09ea25e75484",
+            "status": "verified"
+          },
+          {
+            "actual_sha256": "ec3918e3251852e1646373b0aaa3e29f75232333879dfabcf37a547a3ffef4f3",
+            "bytes": 70159473,
+            "path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n003.nc",
+            "role": "current",
+            "sha256": "ec3918e3251852e1646373b0aaa3e29f75232333879dfabcf37a547a3ffef4f3",
+            "status": "verified"
+          },
+          {
+            "actual_sha256": "e16e82ce3149104f6f8d8e2d7ece55de11d1c7a7b1f36c2a9fd20b4714bac8c4",
+            "bytes": 70159473,
+            "path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n004.nc",
+            "role": "current",
+            "sha256": "e16e82ce3149104f6f8d8e2d7ece55de11d1c7a7b1f36c2a9fd20b4714bac8c4",
+            "status": "verified"
+          },
+          {
+            "actual_sha256": "aa575cf91f8ecb84e003389204cae11846fc9a22ac754b2817a4ccb367ee0682",
+            "bytes": 70159473,
+            "path": "data/raw/historical/ASAR_B1_LakeOntario_20250826/raw/loofs/loofs.t18z.20250826.fields.n005.nc",
+            "role": "current",
+            "sha256": "aa575cf91f8ecb84e003389204cae11846fc9a22ac754b2817a4ccb367ee0682",
+            "status": "verified"
+          }
+        ],
+        "stage7_config": {
+          "actual_sha256": "40311df54d7e43dcebdb2e618ebcb81a86add4d83db7a8ac925253ff73f391d6",
+          "bytes": 2932,
+          "path": "configs/stage7_scenarios.yaml",
+          "sha256": "40311df54d7e43dcebdb2e618ebcb81a86add4d83db7a8ac925253ff73f391d6",
+          "status": "verified"
+        },
+        "status": "ready"
+      },
+      "implementation_sha256": {
+        "scripts/b1_gfs.py": "c7cb66fa19d214b8e4b5c782fe49f5e1c7470df6af154696d75dfdef93253515",
+        "src/asar_repro/additional_forcing.py": "1a4573ae5c39d94791302c49419e326b704baaf9bb6a91c11c5d0b29fe6a77b1",
+        "src/asar_repro/belief.py": "cc11028b1ef3a8bf29680a61ddee6262e63be5b2ff00e78075fbab396ac09021",
+        "src/asar_repro/forcing.py": "cf9715349d65abda1c3e6d9b09f731bab5ef98708a03d338534fa2800f1f3450",
+        "src/asar_repro/grid.py": "d9794ec80afb764699333e0fa7bd9ef098d3d1360f14a76ae57b5b41f2a547e9",
+        "src/asar_repro/gridding.py": "c684c341f8d0f5cb73d37e240f376fc9e5c42c092f015e3b72c31d4fd0656e43",
+        "src/asar_repro/historical_drift.py": "64fae2f0a0744dc35a3f3b557083c74a2a1b98b1c7572e028012f7d81970b80d",
+        "src/asar_repro/historical_reader.py": "7d7e936ad12de6eb6b7f0bb27a04bb26fa1910cb37949ff03b3f8ed27694535d",
+        "src/asar_repro/hrrr.py": "b770a776dd04af1651930754b22a02cfc1f03a0f3dd1411e6332dc77eeb6337d",
+        "src/asar_repro/motion.py": "7e74178390ffa34f30f7b987a4d7a2459e8f0ca2646ca3026c97e505f758c2c9",
+        "src/asar_repro/objective.py": "792077ad3e0286c03f60108f2580ea3b3557e3f5b002bc1a5e2f9f67e48fb2ad",
+        "src/asar_repro/opendrift_adapter.py": "74c671d7b74cec45fe9702f314236f35d8063571425329ed38da026292f6ca44",
+        "src/asar_repro/physical_followup_data.py": "7ef42a3d732531fcd611cbb21d149bdd8b918957b600f520964ef27f67a90ea2",
+        "src/asar_repro/physical_model.py": "dea279468b210922b523c2274433689dde19a1428ed6a2adaf4b32ab750dd14c",
+        "src/asar_repro/scenarios.py": "8bcb2f9663ab1b26dcb8305a321ede07c31eab6f7ad346e308746842a3a652be"
+      },
+      "independence_level": "same_forcing_shifted_window_new_seed"
+    },
+    "schema": 1,
+    "versions": {
+      "netCDF4": "1.7.5",
+      "numpy": "2.4.6",
+      "opendrift": "1.14.12",
+      "pyproj": "3.7.2",
+      "scipy": "1.17.1",
+      "shapely": "2.2.0"
+    }
+  },
+  "schema_version": 1,
+  "searchable_mass_by_step": [
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004,
+    1.0000000000000004
+  ],
+  "source_sha256": {
+    "scripts/b1_gfs.py": "c7cb66fa19d214b8e4b5c782fe49f5e1c7470df6af154696d75dfdef93253515",
+    "src/asar_repro/additional_forcing.py": "1a4573ae5c39d94791302c49419e326b704baaf9bb6a91c11c5d0b29fe6a77b1",
+    "src/asar_repro/belief.py": "cc11028b1ef3a8bf29680a61ddee6262e63be5b2ff00e78075fbab396ac09021",
+    "src/asar_repro/forcing.py": "cf9715349d65abda1c3e6d9b09f731bab5ef98708a03d338534fa2800f1f3450",
+    "src/asar_repro/grid.py": "d9794ec80afb764699333e0fa7bd9ef098d3d1360f14a76ae57b5b41f2a547e9",
+    "src/asar_repro/gridding.py": "c684c341f8d0f5cb73d37e240f376fc9e5c42c092f015e3b72c31d4fd0656e43",
+    "src/asar_repro/historical_drift.py": "64fae2f0a0744dc35a3f3b557083c74a2a1b98b1c7572e028012f7d81970b80d",
+    "src/asar_repro/historical_reader.py": "7d7e936ad12de6eb6b7f0bb27a04bb26fa1910cb37949ff03b3f8ed27694535d",
+    "src/asar_repro/hrrr.py": "b770a776dd04af1651930754b22a02cfc1f03a0f3dd1411e6332dc77eeb6337d",
+    "src/asar_repro/motion.py": "7e74178390ffa34f30f7b987a4d7a2459e8f0ca2646ca3026c97e505f758c2c9",
+    "src/asar_repro/objective.py": "792077ad3e0286c03f60108f2580ea3b3557e3f5b002bc1a5e2f9f67e48fb2ad",
+    "src/asar_repro/opendrift_adapter.py": "74c671d7b74cec45fe9702f314236f35d8063571425329ed38da026292f6ca44",
+    "src/asar_repro/physical_followup_data.py": "7ef42a3d732531fcd611cbb21d149bdd8b918957b600f520964ef27f67a90ea2",
+    "src/asar_repro/physical_model.py": "dea279468b210922b523c2274433689dde19a1428ed6a2adaf4b32ab750dd14c",
+    "src/asar_repro/scenarios.py": "8bcb2f9663ab1b26dcb8305a321ede07c31eab6f7ad346e308746842a3a652be"
+  },
+  "status": "prepared",
+  "terminal_forcing": []
+}

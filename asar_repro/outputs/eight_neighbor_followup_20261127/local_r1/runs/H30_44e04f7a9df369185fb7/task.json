@@ -1,0 +1,10 @@
+{
+  "stage": "H30",
+  "case": "hudson_window_late",
+  "scene": "arctic_ocean",
+  "footprint": "axis_square",
+  "connectivity": 8,
+  "backend": "selected",
+  "repetition": 1,
+  "seconds": 30
+}
