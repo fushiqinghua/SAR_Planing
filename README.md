@@ -1,4 +1,52 @@
-# 八邻接后续实验：加速与同 forcing 预留实例（待本地执行）
+# 下一批：八邻接收益确认、完整路线与发现概率护栏
+
+分支：**eight-neighbor-physical-study-20261127**  
+固定研究参考：**physical_cached_V2_0 / b3ca640de25c1d5b9d1a7449b5ed6053d9e3f3f1**  
+新批交付状态：**prepared_not_run；仅静态核查，测试及实验由用户本地执行。**
+
+上一批已完成：253项测试，8项有限前缀审计，D5 48项、S30 4项、H30 48项有效记录。缓存候选通过原采用门槛；四个同forcing预留实例的主覆盖J均改善，两地区均有收益。但Hudson early的13.49%包含四邻接未找到新完整路线的影响，Lake late的J改善伴随终点Pd下降。下一步专门补强这两处证据，再准备新日期数据验证。
+
+**本轮旧H1全部作为已见开发／诊断数据。**内部参考V2.0绑定上述不可变提交和已有路线；它是论文研究参照，外部baseline身份仍分别记录。新代码以新增文件实现，不修改旧评分器、旧缓存搜索或已上传结果。
+
+## 当前研究入口
+
+| 内容 | 文件 |
+|---|---|
+| 本地拉取、逐步执行、恢复与回传 | [LOCAL_RUNBOOK.md](asar_repro/docs/eight_neighbor_confirmation/LOCAL_RUNBOOK.md) |
+| 固定矩阵、计费和停止范围 | [PLAN.md](asar_repro/docs/eight_neighbor_confirmation/PLAN.md) |
+| 方法采用、图收益与Pd约束的分开判定 | [DECISIONS.md](asar_repro/docs/eight_neighbor_confirmation/DECISIONS.md) |
+| 上一批结果及其解释边界 | [REVIEW_R2.md](asar_repro/docs/eight_neighbor_confirmation/REVIEW_R2.md) |
+| 数学命题、下界后续任务与论文声明边界 | [THEORY_AND_CLAIMS.md](asar_repro/docs/eight_neighbor_confirmation/THEORY_AND_CLAIMS.md) |
+| 新天气日期、数据准入与后续H2预注册 | [H2_PREREGISTRATION.md](asar_repro/docs/eight_neighbor_confirmation/H2_PREREGISTRATION.md) |
+| 固定输入和共同路线来源 | [reference_manifest.json](asar_repro/docs/eight_neighbor_confirmation/reference_manifest.json) |
+| 执行配置与本地入口 | [配置](asar_repro/configs/eight_neighbor_confirmation.json) · [执行器](asar_repro/scripts/run_eight_neighbor_confirmation.py) |
+| 唯一完整路线候选与诊断 | [physical_refinement.py](asar_repro/src/asar_repro/physical_refinement.py) |
+| 回传说明与交付身份 | [RESULTS_TEMPLATE.md](asar_repro/docs/eight_neighbor_confirmation/RESULTS_TEMPLATE.md) · [delivery_manifest.json](asar_repro/docs/eight_neighbor_confirmation/delivery_manifest.json) |
+
+## 本批执行范围
+
+| 阶段 | 主要问题 | 任务数 | 算法预算 |
+|---|---|---:|---:|
+| P0 | 旧输入校验、实际本地测试、代码／环境／路线冻结 | 不计正式搜索任务 | 另计 |
+| D5 | 两个问题实例的短预算与固定目标达成时间 | 24 | 120秒 |
+| D30 | 四例主覆盖与两例axis：诊断缓存控制对照固定补全候选 | 72 | 2160秒 |
+| G30 | Lake late在终点Pd不低于共同参考时是否仍有J收益 | 12 | 360秒 |
+| R120 | Hudson early四／八邻接对称延长预算，各一项重复 | 4 | 480秒 |
+| 合计 | 各阶段独立从共同参考重启 | **112** | **3120秒，52分钟** |
+
+初始化固定为旧H30 repetition 0四邻接最终路线；本次复制和原评分重放计时，历史获得该路线的成本统一单列。所有新候选的构建、缓存、诊断、归档和内部原评分重放均在同一次预算内。保留共同J、同路线Pd、共同观测时钟、20m/s地速、两种方形覆盖代理和四／八邻接同预算对照。
+
+仅测试一个完整路线补全策略及其Pd约束版本。原缓存控制增加诊断，因此不声称与旧墙钟结果逐位复现；新候选包含补全与候选归档，消融归因限于这个固定组合。只返回共同参考不算联合收益，最好的有限预算四邻接路线也不等于其全局最优解。
+
+方法采用需D30全部12组J非退化、至少一个主覆盖组改善≥0.5%、D5目标命中数不下降。未通过就保留冻结参考，保存负结果，不在本批继续搜索参数。H2只完成设计预注册：六个新日期块、每块两个固定seed；数据获取、读取器和覆盖核验尚待准备，**不由当前执行器启动**。
+
+原论文的一般图定义已经允许四／八邻接。因此论文贡献候选集中于物理时间、观测位置和概率更新的一致性、多方向完整路线优化及其受控证据；八邻接本身不作为首次提出的算法，也不自动继承旧ε或STDC最优性保证。
+
+以下保留历史交付说明，其中“待执行”指各自交付时的状态；最新结果以本页当前入口和固定提交为准。
+
+---
+
+# 八邻接后续实验：加速与同 forcing 预留实例（历史交付说明）
 
 分支：**eight-neighbor-physical-study-20261127**  
 本批基点：上一批结果提交 **97dd989a488da8604b97fd287162e1b625310501**  

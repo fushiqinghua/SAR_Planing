@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "batch": "eight-neighbor-confirmation-20261127",
+  "branch": "eight-neighbor-physical-study-20261127",
+  "base_commit": "b3ca640de25c1d5b9d1a7449b5ed6053d9e3f3f1",
+  "delivery_status": "prepared_not_run",
+  "reference_manifest": "docs/eight_neighbor_confirmation/reference_manifest.json",
+  "cases": [
+    {
+      "id": "lake_window_early",
+      "base_scene": "lake_ontario",
+      "lkp_utc": "2025-08-26T13:45:00Z",
+      "cst_utc": "2025-08-26T14:45:00Z",
+      "end_utc": "2025-08-26T14:52:33.740Z",
+      "seed": 1041
+    },
+    {
+      "id": "lake_window_late",
+      "base_scene": "lake_ontario",
+      "lkp_utc": "2025-08-26T15:45:00Z",
+      "cst_utc": "2025-08-26T16:45:00Z",
+      "end_utc": "2025-08-26T16:52:33.740Z",
+      "seed": 1042
+    },
+    {
+      "id": "hudson_window_early",
+      "base_scene": "arctic_ocean",
+      "lkp_utc": "2025-08-28T22:00:00Z",
+      "cst_utc": "2025-08-29T22:00:00Z",
+      "end_utc": "2025-08-29T22:46:18Z",
+      "seed": 2041
+    },
+    {
+      "id": "hudson_window_late",
+      "base_scene": "arctic_ocean",
+      "lkp_utc": "2025-08-29T02:00:00Z",
+      "cst_utc": "2025-08-30T02:00:00Z",
+      "end_utc": "2025-08-30T02:46:18Z",
+      "seed": 2042
+    }
+  ],
+  "primary_footprint": "heading_square",
+  "connectivities": [
+    4,
+    8
+  ],
+  "diagnostic_cases": [
+    "lake_window_late",
+    "hudson_window_early"
+  ],
+  "d30_groups": [
+    {
+      "case": "lake_window_early",
+      "footprint": "heading_square"
+    },
+    {
+      "case": "lake_window_late",
+      "footprint": "heading_square"
+    },
+    {
+      "case": "hudson_window_early",
+      "footprint": "heading_square"
+    },
+    {
+      "case": "hudson_window_late",
+      "footprint": "heading_square"
+    },
+    {
+      "case": "lake_window_late",
+      "footprint": "axis_square"
+    },
+    {
+      "case": "hudson_window_early",
+      "footprint": "axis_square"
+    }
+  ],
+  "stages": {
+    "D5": {
+      "seconds": 5,
+      "repetitions": 3
+    },
+    "D30": {
+      "seconds": 30,
+      "repetitions": 3
+    },
+    "G30": {
+      "seconds": 30,
+      "repetitions": 3
+    },
+    "R120": {
+      "seconds": 120,
+      "repetitions": 1
+    }
+  },
+  "methods": {
+    "diagnostic_cached": {
+      "completion": "none",
+      "objective": "J",
+      "archive": false
+    },
+    "completion_J": {
+      "completion": "greedy",
+      "objective": "J",
+      "archive": true
+    },
+    "completion_pd_guard": {
+      "completion": "greedy",
+      "objective": "J_pd_guard",
+      "archive": true
+    }
+  },
+  "search": {
+    "guide_weight": 1.04,
+    "max_open": 100000
+  },
+  "refinement": {
+    "completion_every": 128,
+    "completion_max_calls": 32,
+    "archive_limit": 512,
+    "pd_tolerance": 1e-08,
+    "archive_history_limit": 8192
+  },
+  "development_targets": [
+    {
+      "case": "lake_window_late",
+      "footprint": "heading_square",
+      "connectivity": 8,
+      "J": 16.8718485741568
+    },
+    {
+      "case": "hudson_window_early",
+      "footprint": "heading_square",
+      "connectivity": 8,
+      "J": 22.790164159180804
+    }
+  ],
+  "decision": {
+    "quality_relative": 1e-08,
+    "min_primary_method_gain": 0.005,
+    "min_improved_primary_groups": 1,
+    "require_target_hit_non_regression": true,
+    "pd_guard_delta": 0.0,
+    "guard_joint_gain_over_reference": 0.005,
+    "graph_winner_relative": 0.005,
+    "guard_graph_positive_relative": 1e-08,
+    "guard_axis_max_regression_relative": 0.005
+  },
+  "tolerance": {
+    "score_absolute": 1e-08,
+    "target_absolute": 1e-08
+  },
+  "validation_tests": [
+    "tests/test_objective.py",
+    "tests/test_particle_search.py",
+    "tests/test_physical_model.py",
+    "tests/test_physical_search.py",
+    "tests/test_eight_neighbor_physical_runner.py",
+    "tests/test_physical_accel.py",
+    "tests/test_physical_followup_data.py",
+    "tests/test_eight_neighbor_followup_runner.py",
+    "tests/test_physical_refinement.py",
+    "tests/test_eight_neighbor_confirmation_runner.py"
+  ],
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "task_order_seed": 20261129,
+  "watchdog": {
+    "rss_limit_bytes": 2147483648,
+    "grace_seconds": 60,
+    "poll_seconds": 0.1
+  },
+  "initialization": "fixed_previous_H30_rep0_four_neighbor_route; historical generation excluded uniformly; copy/replay charged",
+  "dataset_role": "previously_seen_development_and_diagnostics",
+  "H2": "design_preregistered_inputs_and_adapter_not_ready",
+  "runtime_experiments_executed_on_delivery": false,
+  "reference_manifest_canonical_sha256": "17d2aa7062a30b609e447064d4f7c3c9250ed21ae790499a879135c43964dcdf"
+}

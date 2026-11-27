@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "batch": "eight-neighbor-confirmation-20261127",
+  "branch": "eight-neighbor-physical-study-20261127",
+  "base_commit": "b3ca640de25c1d5b9d1a7449b5ed6053d9e3f3f1",
+  "base_tree": "13e937bbd2186b3859470faed297c8a2123a12a8",
+  "delivery_status": "prepared_not_run",
+  "internal_reference": {
+    "name": "physical_cached_V2_0",
+    "commit": "b3ca640de25c1d5b9d1a7449b5ed6053d9e3f3f1",
+    "git_release_or_tag_created": false
+  },
+  "planned_formal_tasks": 112,
+  "planned_algorithm_budget_s": 3120,
+  "stages": {
+    "D5": {
+      "tasks": 24,
+      "seconds_each": 5
+    },
+    "D30": {
+      "tasks": 72,
+      "seconds_each": 30
+    },
+    "G30": {
+      "tasks": 12,
+      "seconds_each": 30
+    },
+    "R120": {
+      "tasks": 4,
+      "seconds_each": 120
+    }
+  },
+  "P0": "actual local validation required before freeze; not executed on delivery",
+  "configuration_canonical_sha256": "07e99d7ecedb454d6274f820bf57c2efc6ea8391f82bcad0a8a7daa615fa8660",
+  "reference_manifest_canonical_sha256": "17d2aa7062a30b609e447064d4f7c3c9250ed21ae790499a879135c43964dcdf",
+  "data_role": "previously_seen_development_and_diagnostics",
+  "H2": "design_preregistered_inputs_and_adapter_not_ready",
+  "H2_planned_later": {
+    "date_blocks": 6,
+    "seeds_per_block": 2,
+    "input_archives": 12,
+    "initializations": 12,
+    "paired_search_tasks": 144,
+    "algorithm_budget_s": 4680,
+    "execution_enabled": false
+  },
+  "validation": {
+    "python_ast_parse": "passed",
+    "json_syntax": "passed",
+    "relative_markdown_links_checked": 82,
+    "original_local_files_checked": 86,
+    "original_source_mismatches": [],
+    "pinned_historical_reference_blobs_verified": 13,
+    "python_ast_test_function_counts": {
+      "asar_repro/scripts/run_eight_neighbor_confirmation.py": 0,
+      "asar_repro/src/asar_repro/physical_refinement.py": 0,
+      "asar_repro/tests/test_eight_neighbor_confirmation_runner.py": 20,
+      "asar_repro/tests/test_physical_refinement.py": 17
+    },
+    "pytest": "not_run",
+    "runtime_imports": "not_run",
+    "solver_runs": "not_run",
+    "scoring_replays": "not_run",
+    "drift_generation": "not_run",
+    "dependency_installation": "not_run"
+  },
+  "protection_policy": {
+    "only_modified_existing_path": "README.md",
+    "added_paths": [
+      "asar_repro/docs/eight_neighbor_confirmation/DECISIONS.md",
+      "asar_repro/docs/eight_neighbor_confirmation/H2_PREREGISTRATION.md",
+      "asar_repro/docs/eight_neighbor_confirmation/LOCAL_RUNBOOK.md",
+      "asar_repro/docs/eight_neighbor_confirmation/PLAN.md",
+      "asar_repro/docs/eight_neighbor_confirmation/RESULTS_TEMPLATE.md",
+      "asar_repro/docs/eight_neighbor_confirmation/REVIEW_R2.md",
+      "asar_repro/docs/eight_neighbor_confirmation/THEORY_AND_CLAIMS.md",
+      "asar_repro/docs/eight_neighbor_confirmation/reference_manifest.json",
+      "asar_repro/configs/eight_neighbor_confirmation.json",
+      "asar_repro/scripts/run_eight_neighbor_confirmation.py",
+      "asar_repro/src/asar_repro/physical_refinement.py",
+      "asar_repro/tests/test_eight_neighbor_confirmation_runner.py",
+      "asar_repro/tests/test_physical_refinement.py",
+      "asar_repro/docs/eight_neighbor_confirmation/delivery_manifest.json"
+    ],
+    "reuse_base_tree": "13e937bbd2186b3859470faed297c8a2123a12a8",
+    "no_deletions": true,
+    "remote_tree_comparison_required_before_ref_update": true
+  },
+  "files_excluding_this_manifest": {
+    "README.md": {
+      "sha256": "06e4c3fbadc5acfd4481ef20d3f0a9db5fd50490b740511f4f753a10f71ad7e7",
+      "git_blob_sha": "ab8af905ef556d13e0af25a7492bf249a23bb0fd",
+      "bytes": 18006
+    },
+    "asar_repro/docs/eight_neighbor_confirmation/DECISIONS.md": {
+      "sha256": "a047f68ea797493feabe9bf08ab2ead6ff5ee31a187358aae034992abb8a690b",
+      "git_blob_sha": "42e81108b53ea6441995b16c33203ed1e028476b",
+      "bytes": 8585
+    },
+    "asar_repro/docs/eight_neighbor_confirmation/H2_PREREGISTRATION.md": {
+      "sha256": "e11a9a1841809559fcd5311ad893c1367033b4a33fe9ddd364c6138ec78e815b",
+      "git_blob_sha": "00632198aa8ff0dcbfed3e167f48a3e58911366c",
+      "bytes": 15735
+    },
+    "asar_repro/docs/eight_neighbor_confirmation/LOCAL_RUNBOOK.md": {
+      "sha256": "f3df7b6c83c41ed653eda8c07ad6d34ec7f82a3b184e8b968d97120f1ffd5c11",
+      "git_blob_sha": "6f90ad310460c210f28d4e0f1b22c45be204db08",
+      "bytes": 9393
+    },
+    "asar_repro/docs/eight_neighbor_confirmation/PLAN.md": {
+      "sha256": "40bad8e81c796d1d2c4e603221c77877d6627e5ed2222ae5b15576f7b27c0f13",
+      "git_blob_sha": "97dcffed9fccc4761c9157385845bd945c238113",
+      "bytes": 10725
+    },
+    "asar_repro/docs/eight_neighbor_confirmation/RESULTS_TEMPLATE.md": {
+      "sha256": "60f23b91ddd9d3b9ce7857e56f67f626361fe0d3731a59d51f4cfdc07cd8599d",
+      "git_blob_sha": "72ca7411b21517caa0b63947ff4477b5e8e92cc3",
+      "bytes": 6227
+    },
+    "asar_repro/docs/eight_neighbor_confirmation/REVIEW_R2.md": {
+      "sha256": "27893b779a38c6493fe40c9c4356af37ce87cfdfe29536edbfb4cf3a97024cd5",
+      "git_blob_sha": "484e15b0818ea5d1eaff5215e2099465028cf8bb",
+      "bytes": 7153
+    },
+    "asar_repro/docs/eight_neighbor_confirmation/THEORY_AND_CLAIMS.md": {
+      "sha256": "175e6dd7761d22adb2d1145009042449593569ac1fc02d87df24a556f8343c96",
+      "git_blob_sha": "cc0eb3428ca642a827ed3cd14af7a57cdb539711",
+      "bytes": 12873
+    },
+    "asar_repro/docs/eight_neighbor_confirmation/reference_manifest.json": {
+      "sha256": "cf84c03ba484f6ee48ee790df8a1260bf6342c8413178bb47b6eec966621c8a4",
+      "git_blob_sha": "cd57847adb78db87a9dc8d5c0536507957410f4e",
+      "bytes": 13371
+    },
+    "asar_repro/configs/eight_neighbor_confirmation.json": {
+      "sha256": "dd857d62f5f6bc2af68830b4eaa8c0e89b027d7b5c1a19a05eb0de8914fbfc1e",
+      "git_blob_sha": "424b0bed91bb52b8507ffa36fb532192308acd1c",
+      "bytes": 4746
+    },
+    "asar_repro/scripts/run_eight_neighbor_confirmation.py": {
+      "sha256": "64f938558407e6a42310a327a03eac7ae96eabcb0f00b522cb60604b1f644b60",
+      "git_blob_sha": "c3a8e897b1e2301d6b41cb79ec54b3892cf468f5",
+      "bytes": 43332
+    },
+    "asar_repro/src/asar_repro/physical_refinement.py": {
+      "sha256": "461aec117a9526e5bc1dd415f277afaea420ff2b9cafa3c10406ec6dd36cdf47",
+      "git_blob_sha": "428b2843b3c109246a5bcc50d023f15511c4bf40",
+      "bytes": 22890
+    },
+    "asar_repro/tests/test_eight_neighbor_confirmation_runner.py": {
+      "sha256": "614776a9bafe41ac9b25395cf40ffe82c82bed409ee9a86bb4cfc63455624e2a",
+      "git_blob_sha": "775a534c06b1c0ea7281e1dc0181f7d6bc6247be",
+      "bytes": 14669
+    },
+    "asar_repro/tests/test_physical_refinement.py": {
+      "sha256": "2315b8992a7b887855ada1c0adefb8e137d55b2f57049b069a0e1a93211ef6c4",
+      "git_blob_sha": "c855362fdd0de115dc6b33b0dad749c43cb8093d",
+      "bytes": 16639
+    }
+  }
+}
