@@ -1,0 +1,6 @@
+# Retain the validated maritime-sar OpenDrift/GRIB environment. Do not upgrade it for this batch.
+-r requirements-physical-study.txt
+PyYAML>=6
+# H1 preparation additionally requires the existing OpenDrift, xarray, netCDF4 and Shapely 2+.
+# The audited repository GRIB decoders are retained; cfgrib/ecCodes are not newly required.
+# Their installed versions are frozen by the runner; this file does not install or upgrade them.

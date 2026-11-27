@@ -1,3 +1,51 @@
+# 八邻接后续实验：加速与同 forcing 预留实例（待本地执行）
+
+分支：**eight-neighbor-physical-study-20261127**  
+本批基点：上一批结果提交 **97dd989a488da8604b97fd287162e1b625310501**  
+本批交付状态：**prepared_not_run；实现、配置、测试和协议已准备，仅静态检查。**
+
+本批回答两个问题：**保持评分和搜索语义一致的缓存实现，能否把已有好路线更稳定地推进到 5 秒预算内；固定实现之后，八邻接的收益能否迁移到同一 forcing 范围内的新任务时段和新粒子 seed？**
+
+## 当前入口
+
+| 内容 | 文件 |
+|---|---|
+| 本地逐条命令、输入恢复、冻结、失败处理和回传 | [LOCAL_RUNBOOK.md](asar_repro/docs/eight_neighbor_followup/LOCAL_RUNBOOK.md) |
+| 上一批结果及本批设计理由 | [REVIEW_R1.md](asar_repro/docs/eight_neighbor_followup/REVIEW_R1.md) |
+| 固定矩阵与计算成本 | [PLAN.md](asar_repro/docs/eight_neighbor_followup/PLAN.md) |
+| 后端采用、预留实例与停止门槛 | [DECISIONS.md](asar_repro/docs/eight_neighbor_followup/DECISIONS.md) |
+| 结果分析模板 | [RESULTS_TEMPLATE.md](asar_repro/docs/eight_neighbor_followup/RESULTS_TEMPLATE.md) |
+| 预注册配置与分阶段执行器 | [配置](asar_repro/configs/eight_neighbor_followup.json) · [执行器](asar_repro/scripts/run_eight_neighbor_followup.py) |
+| 唯一缓存候选与新实例准备器 | [physical_accel.py](asar_repro/src/asar_repro/physical_accel.py) · [physical_followup_data.py](asar_repro/src/asar_repro/physical_followup_data.py) |
+| 交付身份与静态核验 | [delivery_manifest.json](asar_repro/docs/eight_neighbor_followup/delivery_manifest.json) |
+
+## 本批固定规模与执行顺序
+
+| 阶段 | 内容 | 任务数 | 算法预算合计 |
+|---|---|---:|---:|
+| P0 | 8 个测试文件；8 项共同前缀严格数值审计 | 不计正式性能任务 | 另计 |
+| D5 | 2 旧档案 × 2 覆盖 × 2 邻接 × 2 后端 × 3 次，各 5 秒 | 48 | 240 秒 |
+| 锁定后端／准备 H1 | 先按 D5 选择，再生成四份固定时窗和 seed 的档案 | 漂移准备另计 | 另计 |
+| S30 | 每份新档案生成一条共同初始路线，各 30 秒 | 4 | 120 秒 |
+| 冻结 H1／H30 | 4 新实例 × 2 覆盖 × 2 邻接 × 3 次，各 30 秒，只用一个后端 | 48 | 1440 秒 |
+| 正式合计 | 不含 P0、漂移、启动、输入与外部审计 | **100** | **1800 秒，30 分钟** |
+
+沿用原 J、Pd、20 m/s 地速和共同观测时钟。两种方形覆盖仍是未标定的几何代理。四／八邻接和原／缓存后端严格同预算；完整路线重放及缓存建造计入算法时间。S30 生成成本另列，H30 计入同一初始路线的复制与重新评分。
+
+D5 未达到加速采用条件而正确性通过时，H1 回退原后端继续。H1 固定为 Lake 的 ±1 小时时窗及 seed 1041/1042，Hudson 的 ±2 小时时窗及 seed 2041/2042；数据层级为 **same_forcing_shifted_window_new_seed**。这只能检验同 forcing 条件下的新实例迁移，不能写成独立天气或跨海区泛化。原始 forcing 不在 Git 中，必须恢复既有本地 B1 包；执行器不下载或替换数据。
+
+主覆盖至少 2/4 新实例改善 ≥0.5%，四例均不退化，并通过预定 axis 敏感性门槛，才保留有限迁移信号。赢家只来自一个场景时单独标记。H2 新天气、300 秒、Fundy、任意角度与新 STDC 机制没有自动启用。
+
+## 上一批已经执行的结果
+
+上一批已上传：120 项测试通过，A48、B5 24、B30 24 项完整。Lake 在主覆盖下 J 改善约 2.97%；30 秒 axis 改善约 3.17%。Hudson 的主覆盖 30 秒改善约 0.335%，axis 没有改善。正式 B5 状态仍为 `sensor_sensitive`，B30 为 `longer_budget_signal_pending_followup`。新批次尚未运行，不能沿用这些通过数。
+
+[上一批原始分析](asar_repro/outputs/eight_neighbor_physical_20261127/local_r1/ANALYSIS.md) · [结构化汇总](asar_repro/outputs/eight_neighbor_physical_20261127/local_r1/summary.json) · [本批对旧证据的解释](asar_repro/docs/eight_neighbor_followup/REVIEW_R1.md)
+
+以下保留旧批次交付说明原文，其中“待执行”和 `not_run` 是各自最初交付状态；当前已上传结果以上述入口为准。
+
+---
+
 # 四／八邻接物理一致性实验（待本地执行）
 
 分支：**eight-neighbor-physical-study-20261127**  

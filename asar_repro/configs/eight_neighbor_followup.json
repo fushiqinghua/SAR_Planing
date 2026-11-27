@@ -1,0 +1,165 @@
+{
+  "schema_version": 1,
+  "batch": "eight-neighbor-followup-20261127",
+  "branch": "eight-neighbor-physical-study-20261127",
+  "base_commit": "97dd989a488da8604b97fd287162e1b625310501",
+  "delivery_status": "not_run",
+  "previous_config": "configs/eight_neighbor_physical.json",
+  "legacy_config": "configs/solver_paradigm_study.json",
+  "primary_scenes": [
+    "lake_ontario",
+    "arctic_ocean"
+  ],
+  "footprints": [
+    "heading_square",
+    "axis_square"
+  ],
+  "primary_footprint": "heading_square",
+  "connectivities": [
+    4,
+    8
+  ],
+  "backends": [
+    "original",
+    "cached"
+  ],
+  "search": {
+    "guide_weight": 1.04,
+    "max_open": 100000
+  },
+  "cache": {
+    "distance_vector_limit_bytes": 67108864
+  },
+  "audit": {
+    "max_expansions": 128,
+    "max_seconds": 30,
+    "strict_array_equality": true
+  },
+  "stages": {
+    "D5": {
+      "seconds": 5,
+      "repetitions": 3
+    },
+    "S30": {
+      "seconds": 30,
+      "repetitions": 1
+    },
+    "H30": {
+      "seconds": 30,
+      "repetitions": 3
+    }
+  },
+  "initialization": {
+    "method": "parallel_track_then_original_paper_greedy",
+    "epsilon": 1.04,
+    "max_open": 100000,
+    "final_replay_reserve_seconds": 0.25,
+    "scoring_footprint": "axis_square",
+    "generation_cost": "recorded separately; excluded uniformly from H30, which charges seed copying/replay"
+  },
+  "development_targets": [
+    {
+      "scene": "lake_ontario",
+      "footprint": "heading_square",
+      "connectivity": 8,
+      "J": 16.752262696441605
+    },
+    {
+      "scene": "lake_ontario",
+      "footprint": "axis_square",
+      "connectivity": 8,
+      "J": 16.7169314627584
+    },
+    {
+      "scene": "arctic_ocean",
+      "footprint": "heading_square",
+      "connectivity": 8,
+      "J": 20.317725021888
+    }
+  ],
+  "tolerance": {
+    "score_absolute": 1e-8,
+    "quality_relative": 1e-8,
+    "target_absolute": 1e-8
+  },
+  "selection": {
+    "all_groups_non_regression": true,
+    "no_target_hit_count_regression": true,
+    "min_improved_target_hit_groups": 1,
+    "alternative_full_hit_speed_groups": 2,
+    "min_relative_time_reduction": 0.1,
+    "fallback": "original"
+  },
+  "holdout": {
+    "independence_level": "same_forcing_shifted_window_new_seed",
+    "required_cases": 4,
+    "min_primary_winners": 2,
+    "primary_relative_gain": 0.005,
+    "primary_non_regression_relative": 1e-8,
+    "axis_positive_relative": 1e-8,
+    "axis_max_regression_relative": 0.005,
+    "require_axis_positive_on_primary_winner": true,
+    "independent_weather_H2": "not_enabled_requires_new_forcing"
+  },
+  "cases": [
+    {
+      "id": "lake_window_early",
+      "base_scene": "lake_ontario",
+      "lkp_utc": "2025-08-26T13:45:00Z",
+      "cst_utc": "2025-08-26T14:45:00Z",
+      "end_utc": "2025-08-26T14:52:33.740Z",
+      "seed": 1041
+    },
+    {
+      "id": "lake_window_late",
+      "base_scene": "lake_ontario",
+      "lkp_utc": "2025-08-26T15:45:00Z",
+      "cst_utc": "2025-08-26T16:45:00Z",
+      "end_utc": "2025-08-26T16:52:33.740Z",
+      "seed": 1042
+    },
+    {
+      "id": "hudson_window_early",
+      "base_scene": "arctic_ocean",
+      "lkp_utc": "2025-08-28T22:00:00Z",
+      "cst_utc": "2025-08-29T22:00:00Z",
+      "end_utc": "2025-08-29T22:46:18Z",
+      "seed": 2041
+    },
+    {
+      "id": "hudson_window_late",
+      "base_scene": "arctic_ocean",
+      "lkp_utc": "2025-08-29T02:00:00Z",
+      "cst_utc": "2025-08-30T02:00:00Z",
+      "end_utc": "2025-08-30T02:46:18Z",
+      "seed": 2042
+    }
+  ],
+  "validation_tests": [
+    "tests/test_objective.py",
+    "tests/test_particle_search.py",
+    "tests/test_physical_model.py",
+    "tests/test_physical_search.py",
+    "tests/test_eight_neighbor_physical_runner.py",
+    "tests/test_physical_accel.py",
+    "tests/test_physical_followup_data.py",
+    "tests/test_eight_neighbor_followup_runner.py"
+  ],
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "task_order_seed": 20261128,
+  "watchdog": {
+    "rss_limit_bytes": 2147483648,
+    "grace_seconds": 15,
+    "poll_seconds": 0.1
+  },
+  "long_budget": "not_enabled",
+  "fundy": "excluded_physical_direction_unverified",
+  "runtime_experiments_executed_on_delivery": false
+}
+

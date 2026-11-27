@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "batch": "eight-neighbor-followup-20261127",
+  "branch": "eight-neighbor-physical-study-20261127",
+  "base_commit": "97dd989a488da8604b97fd287162e1b625310501",
+  "base_tree": "6899ccd2560670d6e50925c921d9268452de60aa",
+  "delivery_status": "prepared_not_run",
+  "planned_formal_tasks": 100,
+  "planned_algorithm_budget_s": 1800,
+  "stages": {
+    "D5": {
+      "tasks": 48,
+      "seconds_each": 5
+    },
+    "S30": {
+      "tasks": 4,
+      "seconds_each": 30
+    },
+    "H30": {
+      "tasks": 48,
+      "seconds_each": 30
+    }
+  },
+  "P0": {
+    "paired_audits": 8,
+    "max_expansions_each": 128,
+    "wall_cap_each_s": 30,
+    "performance_evidence": false
+  },
+  "independence_level": "same_forcing_shifted_window_new_seed",
+  "configuration_canonical_sha256": "83004137823a037e44b02ffc271d2501dacbe93fad8d749f8fd06eef6b46910a",
+  "validation": {
+    "python_ast_parse": "passed",
+    "python_files": [
+      "asar_repro/scripts/run_eight_neighbor_followup.py",
+      "asar_repro/src/asar_repro/physical_accel.py",
+      "asar_repro/src/asar_repro/physical_followup_data.py",
+      "asar_repro/tests/test_physical_accel.py",
+      "asar_repro/tests/test_physical_followup_data.py",
+      "asar_repro/tests/test_eight_neighbor_followup_runner.py"
+    ],
+    "json_syntax": "passed",
+    "registered_cases_match": "passed",
+    "markdown_links_checked": 69,
+    "code_fences": "balanced",
+    "original_snapshot_files_checked": 86,
+    "original_snapshot_blob_mismatches": 0,
+    "test_function_counts_from_ast": {
+      "asar_repro/tests/test_physical_accel.py": 16,
+      "asar_repro/tests/test_physical_followup_data.py": 16,
+      "asar_repro/tests/test_eight_neighbor_followup_runner.py": 34
+    },
+    "pytest": "not_run",
+    "runtime_imports": "not_run",
+    "equivalence_audits": "not_run",
+    "solver_runs": "not_run",
+    "drift_generation": "not_run",
+    "dependency_installation": "not_run"
+  },
+  "protection_policy": {
+    "only_modified_existing_path": "README.md",
+    "added_paths": [
+      "asar_repro/configs/eight_neighbor_followup.json",
+      "asar_repro/requirements-physical-followup.txt",
+      "asar_repro/scripts/run_eight_neighbor_followup.py",
+      "asar_repro/src/asar_repro/physical_accel.py",
+      "asar_repro/src/asar_repro/physical_followup_data.py",
+      "asar_repro/tests/test_physical_accel.py",
+      "asar_repro/tests/test_physical_followup_data.py",
+      "asar_repro/tests/test_eight_neighbor_followup_runner.py",
+      "asar_repro/docs/eight_neighbor_followup/PLAN.md",
+      "asar_repro/docs/eight_neighbor_followup/DECISIONS.md",
+      "asar_repro/docs/eight_neighbor_followup/RESULTS_TEMPLATE.md",
+      "asar_repro/docs/eight_neighbor_followup/REVIEW_R1.md",
+      "asar_repro/docs/eight_neighbor_followup/LOCAL_RUNBOOK.md",
+      "asar_repro/docs/eight_neighbor_followup/delivery_manifest.json"
+    ],
+    "reuse_base_tree": "6899ccd2560670d6e50925c921d9268452de60aa",
+    "no_deletions": true,
+    "remote_tree_comparison_required_before_ref_update": true
+  },
+  "files_excluding_this_manifest": {
+    "README.md": {
+      "sha256": "5ecb9a898e9770599a346b068e1b554e248f3861c85e23f2ad8b2bcd4bcf422d",
+      "git_blob_sha": "19eb94026aeb1023fb2793fbb466a12a0b8aef13",
+      "bytes": 13367
+    },
+    "asar_repro/configs/eight_neighbor_followup.json": {
+      "sha256": "1b540b529ba6e2de88accaee1d028efe9694dd3b81aabf448f633043d9f58583",
+      "git_blob_sha": "fa62b823005bb59b8279c80f1b4d81ad18c3a6a3",
+      "bytes": 4312
+    },
+    "asar_repro/requirements-physical-followup.txt": {
+      "sha256": "be38f3da16e1cb7a10e376ec82bbb3b2e11939390268c16fe1eded00b28c13c1",
+      "git_blob_sha": "1623aa1f22ebc16ecd0cb869d62d72d2d13438c1",
+      "bytes": 427
+    },
+    "asar_repro/scripts/run_eight_neighbor_followup.py": {
+      "sha256": "60a59a8063dd24e5138ae58318aed406ff7b106c5120e7b704e6779a4d0d82bb",
+      "git_blob_sha": "6a4a3db8bc28c384006bb551f0cdba352ec1bf48",
+      "bytes": 49383
+    },
+    "asar_repro/src/asar_repro/physical_accel.py": {
+      "sha256": "56cc4c6ce2038caf92e252d60201a7ec34e95fef6d8f79cc1019675848aa2255",
+      "git_blob_sha": "e3b115e2cdce31631da459b64500341ed8af1998",
+      "bytes": 29831
+    },
+    "asar_repro/src/asar_repro/physical_followup_data.py": {
+      "sha256": "7ef42a3d732531fcd611cbb21d149bdd8b918957b600f520964ef27f67a90ea2",
+      "git_blob_sha": "5ad1acbb1c4352325e7ee8166cf53ab685be64f1",
+      "bytes": 28352
+    },
+    "asar_repro/tests/test_physical_accel.py": {
+      "sha256": "2f1aa2a4da3990031a019d36f919ddd136c4aea61149e4d860799803aba52a9a",
+      "git_blob_sha": "c6c5303cac736c572650deae3a0d20de06258fc4",
+      "bytes": 14100
+    },
+    "asar_repro/tests/test_physical_followup_data.py": {
+      "sha256": "2967004a472890db54c0b86d2d4cefcb94c978cd7ce452dc529c45d1d3b5d561",
+      "git_blob_sha": "1520ae2ca6c460e5bdd29013bf218dd6335eb301",
+      "bytes": 16056
+    },
+    "asar_repro/tests/test_eight_neighbor_followup_runner.py": {
+      "sha256": "f37c83349b9201c33dff3bad704a98c7eaf30367a1fe48d862e1d634d4926b65",
+      "git_blob_sha": "13b1e407c6a0ebb71f240dd657cf5c85cadc92d9",
+      "bytes": 22224
+    },
+    "asar_repro/docs/eight_neighbor_followup/PLAN.md": {
+      "sha256": "8f4f6dbe7e1a56df6edca72e65864578b5377e9e13d08adc7f89740bd3f40608",
+      "git_blob_sha": "c10a0ea0cc0553cc5c4066859dc52db09ff4be77",
+      "bytes": 10274
+    },
+    "asar_repro/docs/eight_neighbor_followup/DECISIONS.md": {
+      "sha256": "3f77c34f3eb5566acacf922598c13d646363d804a89549e9c963b0823bda4c78",
+      "git_blob_sha": "a3fcfb27157b91ee29a1efca2a49a9266fe1073d",
+      "bytes": 7524
+    },
+    "asar_repro/docs/eight_neighbor_followup/RESULTS_TEMPLATE.md": {
+      "sha256": "28f543376ed88b6b996b47e0f260729bed4542bece79336793965355510d61ca",
+      "git_blob_sha": "46329eba59929977c2fc05dc9a73dc09fc313460",
+      "bytes": 9417
+    },
+    "asar_repro/docs/eight_neighbor_followup/REVIEW_R1.md": {
+      "sha256": "44c233c2c0cc8a4cd0a1c0271980103bdb9bb1bd929593134cc6e8e071f82872",
+      "git_blob_sha": "83059145f4464ae23c9fd89f8b237bccbc5172bb",
+      "bytes": 7793
+    },
+    "asar_repro/docs/eight_neighbor_followup/LOCAL_RUNBOOK.md": {
+      "sha256": "3b0e3e9fbd283fb6f2fcc72f9f71bab2ba1fcc99fcdddd228c01615f7bbb346e",
+      "git_blob_sha": "c251a4563e21f9321d433d533e665ff790e36ebc",
+      "bytes": 12996
+    }
+  },
+  "local_execution_entry": "asar_repro/docs/eight_neighbor_followup/LOCAL_RUNBOOK.md",
+  "not_enabled": [
+    "independent_weather_H2",
+    "C300",
+    "Fundy",
+    "any_angle",
+    "new_STDC_bound"
+  ],
+  "notes": [
+    "All runtime validation and measurements are pending local execution.",
+    "Three repetitions measure timing variability; there are four conditional holdout cases sharing forcing.",
+    "Caches are fresh per solve, construction and full incumbent replay are charged.",
+    "The original scoring and search files and all uploaded results are retained."
+  ]
+}
