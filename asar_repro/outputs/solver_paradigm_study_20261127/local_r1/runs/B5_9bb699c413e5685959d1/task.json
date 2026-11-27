@@ -1,0 +1,8 @@
+{
+  "stage": "B5",
+  "scene": "lake_ontario",
+  "method": "anytime_mass",
+  "seconds": 5,
+  "seed": 0,
+  "repetition": 0
+}

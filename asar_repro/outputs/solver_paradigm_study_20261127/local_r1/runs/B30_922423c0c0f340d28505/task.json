@@ -1,0 +1,8 @@
+{
+  "stage": "B30",
+  "scene": "lake_ontario",
+  "method": "anytime_zero",
+  "seconds": 30,
+  "seed": 0,
+  "repetition": 0
+}

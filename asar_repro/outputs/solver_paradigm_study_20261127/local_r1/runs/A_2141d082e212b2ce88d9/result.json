@@ -1,0 +1,440 @@
+{
+  "task": {
+    "stage": "A",
+    "case": "medium_order_1",
+    "method": "anytime_mass",
+    "seconds": 2,
+    "seed": 20261127,
+    "repetition": 0
+  },
+  "result": {
+    "status": "valid",
+    "method_status": "budget_exceeded",
+    "stop_reason": "max_seconds",
+    "path": [
+      24,
+      17,
+      10,
+      3,
+      2,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      5,
+      6,
+      5,
+      6
+    ],
+    "J": 10.012555759999998,
+    "pd_final": 0.60006024,
+    "survival": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.766,
+      0.766,
+      0.766,
+      0.766,
+      0.766,
+      0.4774,
+      0.4774,
+      0.413908,
+      0.413908,
+      0.39993976
+    ],
+    "history": [
+      {
+        "path": [
+          24,
+          17,
+          10,
+          3,
+          2,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "J": 11.099870055976064,
+        "pd_final": 0.299992516926336,
+        "elapsed_s": 0.0003431999939493835,
+        "source": "common_PT_replay"
+      },
+      {
+        "path": [
+          24,
+          17,
+          10,
+          3,
+          2,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          5,
+          6,
+          5,
+          4
+        ],
+        "J": 10.026523999999997,
+        "Pd": 0.5860920000000001,
+        "expanded": 544,
+        "work_expanded": 544,
+        "generated": 1878,
+        "elapsed_s": 0.12203730001056101,
+        "source": "search",
+        "pd_final": 0.5860920000000001
+      },
+      {
+        "path": [
+          24,
+          17,
+          10,
+          3,
+          2,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          5,
+          6,
+          5,
+          6
+        ],
+        "J": 10.012555759999998,
+        "Pd": 0.60006024,
+        "expanded": 544,
+        "work_expanded": 544,
+        "generated": 1879,
+        "elapsed_s": 0.12218740000389516,
+        "source": "search",
+        "pd_final": 0.60006024
+      }
+    ],
+    "lower_bound": null,
+    "numerical_gap": null,
+    "bound_scope": "full diagnostic instance only",
+    "algorithm_wall_s": 2.0057004999980563,
+    "algorithm_cpu_s": 2.0,
+    "preparation_wall_s": 0.0003431999939493835,
+    "audit_wall_s": 0.0006030999938957393,
+    "budget_overshoot_s": 0.00570049999805633,
+    "raw_solver": {
+      "path": [
+        24,
+        17,
+        10,
+        3,
+        2,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        5,
+        6,
+        5,
+        6
+      ],
+      "J": 10.012555759999998,
+      "Pd": 0.60006024,
+      "expanded": 24454,
+      "generated": 82451,
+      "pruned": 38960,
+      "peak_open": 18258,
+      "status": "budget_exceeded",
+      "stop_reason": "max_seconds",
+      "incumbent_source": "search",
+      "guide_weight": 1.04,
+      "bound_mode": "mass_lb",
+      "theory_certified": false,
+      "incumbent_history": [
+        {
+          "path": [
+            24,
+            17,
+            10,
+            3,
+            2,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "J": 11.099870055976064,
+          "Pd": 0.299992516926336,
+          "expanded": 0,
+          "work_expanded": 0,
+          "generated": 0,
+          "elapsed_s": 0.00029799999902024865,
+          "source": "initial_path"
+        },
+        {
+          "path": [
+            24,
+            17,
+            10,
+            3,
+            2,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            5,
+            6,
+            5,
+            4
+          ],
+          "J": 10.026523999999997,
+          "Pd": 0.5860920000000001,
+          "expanded": 544,
+          "work_expanded": 544,
+          "generated": 1878,
+          "elapsed_s": 0.1162280999997165,
+          "source": "search"
+        },
+        {
+          "path": [
+            24,
+            17,
+            10,
+            3,
+            2,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            5,
+            6,
+            5,
+            6
+          ],
+          "J": 10.012555759999998,
+          "Pd": 0.60006024,
+          "expanded": 544,
+          "work_expanded": 544,
+          "generated": 1879,
+          "elapsed_s": 0.11637819999305066,
+          "source": "search"
+        }
+      ],
+      "stats": {
+        "guide_calls": 45002,
+        "guide_wall_s": 1.3571050018654205,
+        "bound_calls": 26744,
+        "bound_wall_s": 0.23707859888963867,
+        "aux_expanded": 0,
+        "aux_generated": 0,
+        "work_expanded": 24454,
+        "complete_candidates": 780,
+        "candidate_replays": 41,
+        "candidate_replay_wall_s": 0.005138600041391328,
+        "accepted_improvements": 2,
+        "bound_pruned": 2290,
+        "cheap_pruned": 36670,
+        "popped": 26744,
+        "secondary_pops": 0,
+        "secondary_guide_wall_s": 0.0,
+        "stale_entries": 0,
+        "guide_used_for_pruning": false,
+        "guide_used_for_termination": false,
+        "state_merging": false,
+        "bound_is_unweighted": true,
+        "candidate_archive_scope": "nondominated replayed complete candidates encountered, not global Pareto frontier",
+        "frontier_remaining": 18257,
+        "physical_frontier_remaining": 18257,
+        "deadline_overshoot_s": 0.0002376999764237553,
+        "fast_guide": true,
+        "portfolio": false,
+        "cascade": false
+      },
+      "wall_s": 1.9998912999872118,
+      "completion_reason": null,
+      "candidate_archive": []
+    },
+    "worker_environment": {
+      "python": "3.11.18 | packaged by conda-forge | (main, Oct 26 2026, 11:29:07) [MSC v.1944 64 bit (AMD64)]",
+      "executable": "c:\\users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "machine": "",
+      "processor": "",
+      "cpu_count": 32,
+      "memory_total_bytes": 16340455424,
+      "packages": {
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "pytest": "9.2.0",
+        "psutil": "7.2.2"
+      },
+      "scipy_embedded_highs_version": "1.12.0",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1"
+      }
+    },
+    "inputs": {
+      "id": "medium_order_1",
+      "family": "order",
+      "tier": "medium",
+      "grid": {
+        "rows": 7,
+        "cols": 7
+      },
+      "start": 24,
+      "budget": 14,
+      "p": [
+        0.3,
+        0.37,
+        0.13,
+        0.2
+      ],
+      "q": 0.78,
+      "cell_ids": [
+        [
+          0,
+          6,
+          42,
+          48
+        ],
+        [
+          0,
+          6,
+          42,
+          48
+        ],
+        [
+          0,
+          6,
+          42,
+          48
+        ],
+        [
+          1,
+          6,
+          42,
+          47
+        ],
+        [
+          1,
+          6,
+          42,
+          47
+        ],
+        [
+          1,
+          6,
+          42,
+          47
+        ],
+        [
+          0,
+          6,
+          42,
+          48
+        ],
+        [
+          0,
+          6,
+          42,
+          48
+        ],
+        [
+          0,
+          6,
+          42,
+          48
+        ],
+        [
+          1,
+          6,
+          42,
+          47
+        ],
+        [
+          1,
+          6,
+          42,
+          47
+        ],
+        [
+          1,
+          6,
+          42,
+          47
+        ],
+        [
+          0,
+          6,
+          42,
+          48
+        ],
+        [
+          0,
+          6,
+          42,
+          48
+        ],
+        [
+          0,
+          6,
+          42,
+          48
+        ]
+      ],
+      "trajectory_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "initial_path": [
+        24,
+        17,
+        10,
+        3,
+        2,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "scope": "synthetic_diagnostic_only_not_a_real_archive_certificate"
+    },
+    "theory_certified": false
+  }
+}

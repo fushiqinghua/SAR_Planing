@@ -1,0 +1,476 @@
+{
+  "task": {
+    "stage": "A",
+    "case": "medium_order_1",
+    "method": "count_oracle",
+    "seconds": 60,
+    "seed": 0,
+    "repetition": 0
+  },
+  "result": {
+    "status": "valid",
+    "method_status": "optimal_numeric",
+    "stop_reason": "optimal_numeric",
+    "path": [
+      24,
+      23,
+      22,
+      15,
+      8,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      13,
+      6,
+      5,
+      6
+    ],
+    "J": 10.012555759999998,
+    "pd_final": 0.60006024,
+    "survival": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      0.766,
+      0.766,
+      0.766,
+      0.766,
+      0.766,
+      0.4774,
+      0.4774,
+      0.413908,
+      0.413908,
+      0.39993976
+    ],
+    "history": [
+      {
+        "path": [
+          24,
+          17,
+          10,
+          3,
+          2,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "J": 11.099870055976064,
+        "pd_final": 0.299992516926336,
+        "elapsed_s": 0.0002857000072253868,
+        "source": "common_PT_replay"
+      },
+      {
+        "elapsed_s": 0.37951369999791496,
+        "J": 10.012555759999998,
+        "pd_final": 0.60006024,
+        "path": [
+          24,
+          23,
+          22,
+          15,
+          8,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          13,
+          6,
+          5,
+          6
+        ],
+        "source": "milp",
+        "completed_within_budget": true
+      }
+    ],
+    "lower_bound": 10.012555759998978,
+    "numerical_gap": 1.0196288258157438e-12,
+    "bound_scope": "full diagnostic instance only",
+    "algorithm_wall_s": 0.37953079999715555,
+    "algorithm_cpu_s": 0.390625,
+    "preparation_wall_s": 0.0002857000072253868,
+    "audit_wall_s": 0.00044499999785330147,
+    "budget_overshoot_s": 0.0,
+    "raw_solver": {
+      "method": "count_secant_full_flow",
+      "status": "optimal_numeric",
+      "path": [
+        24,
+        23,
+        22,
+        15,
+        8,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        13,
+        6,
+        5,
+        6
+      ],
+      "J": 10.012555759999998,
+      "pd_final": 0.60006024,
+      "survival": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.766,
+        0.766,
+        0.766,
+        0.766,
+        0.766,
+        0.4774,
+        0.4774,
+        0.413908,
+        0.413908,
+        0.39993976
+      ],
+      "initial_J": 11.099870055976064,
+      "initial_completed_s": 0.00020219999714754522,
+      "history": [
+        {
+          "elapsed_s": 0.00020219999714754522,
+          "J": 11.099870055976064,
+          "pd_final": 0.299992516926336,
+          "source": "initial",
+          "path": [
+            24,
+            17,
+            10,
+            3,
+            2,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "completed_within_budget": true
+        },
+        {
+          "elapsed_s": 0.3790253999904962,
+          "J": 10.012555759999998,
+          "pd_final": 0.60006024,
+          "path": [
+            24,
+            23,
+            22,
+            15,
+            8,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            13,
+            6,
+            5,
+            6
+          ],
+          "source": "milp",
+          "completed_within_budget": true
+        }
+      ],
+      "lower_bound": 10.012555759998978,
+      "solver_lower_bound_raw": 10.012555759998978,
+      "lower_bound_elapsed_s": 0.3790391999937128,
+      "global_numeric_gap": 1.0183502097328084e-13,
+      "global_numeric_gap_absolute": 1.0196288258157438e-12,
+      "optimality_scope": "full_fixed_particle_discrete_instance",
+      "formulation_integer_equivalent": true,
+      "formal_certificate": false,
+      "numerical_optimality_checked": true,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "solver_gap_raw": 0.0,
+      "solver_objective_raw": 10.012555759998978,
+      "solver_node_count": 1,
+      "candidate": {
+        "path": [
+          24,
+          23,
+          22,
+          15,
+          8,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          13,
+          6,
+          5,
+          6
+        ],
+        "J": 10.012555759999998,
+        "pd_final": 0.60006024,
+        "survival": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          0.766,
+          0.766,
+          0.766,
+          0.766,
+          0.766,
+          0.4774,
+          0.4774,
+          0.413908,
+          0.413908,
+          0.39993976
+        ],
+        "completed_s": 0.3790253999904962,
+        "completed_within_budget": true
+      },
+      "warnings": [
+        "Unrecognized options detected: {'threads'}. These will be passed to HiGHS verbatim."
+      ],
+      "fatal": false,
+      "model_build_s": 0.0018972999969264492,
+      "solver_s": 0.37631180000607856,
+      "validation_s": 0.0005830000009154901,
+      "elapsed_s": 0.3790424999897368,
+      "max_seconds": 59.999712099990575,
+      "options": {
+        "max_particles": 64,
+        "max_horizon": 24,
+        "max_cells": 100,
+        "max_variables": 50000,
+        "max_constraints": 100000,
+        "max_nonzeros": 1000000,
+        "presolve": false,
+        "mip_rel_gap": 0.0,
+        "node_limit": 100000,
+        "replay_atol": 1e-08,
+        "integrality_atol": 1e-06,
+        "audit_reserve_seconds": 1.0,
+        "threads": 1
+      },
+      "threads_requested": 1,
+      "native_thread_readback_verified": false,
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      },
+      "versions": {
+        "numpy": "2.4.6",
+        "scipy": "1.17.1"
+      },
+      "counts": {
+        "particles": 4,
+        "horizon": 14,
+        "grid_cells": 49,
+        "arcs": 948,
+        "variables": 1060,
+        "flow_rows": 271,
+        "count_rows": 56,
+        "secant_rows": 420,
+        "constraints": 747,
+        "estimated_nonzeros": 6640,
+        "nonzeros": 2812,
+        "minimum_abs_nonzero_coefficient": 2.205918451488042e-09,
+        "coefficients_below_1e_minus_9": 0
+      },
+      "solver_options": {
+        "time_limit": 58.99759269999049,
+        "presolve": false,
+        "mip_rel_gap": 0.0,
+        "node_limit": 100000,
+        "threads": 1
+      },
+      "solver_returned_s": 0.37843399999837857,
+      "primal_count_discrepancy": 2.3354651546014793e-12,
+      "primal_epigraph_violation": 9.045819648889619e-13,
+      "objective_replay_discrepancy": 1.0196288258157438e-12,
+      "objective_epigraph_slack": -1.0196288258157438e-12,
+      "stop_reason": "optimal_numeric",
+      "budget_exceeded": false
+    },
+    "worker_environment": {
+      "python": "3.11.18 | packaged by conda-forge | (main, Oct 26 2026, 11:29:07) [MSC v.1944 64 bit (AMD64)]",
+      "executable": "c:\\users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "machine": "",
+      "processor": "",
+      "cpu_count": 32,
+      "memory_total_bytes": 16340455424,
+      "packages": {
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "pytest": "9.2.0",
+        "psutil": "7.2.2"
+      },
+      "scipy_embedded_highs_version": "1.12.0",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1"
+      }
+    },
+    "inputs": {
+      "id": "medium_order_1",
+      "family": "order",
+      "tier": "medium",
+      "grid": {
+        "rows": 7,
+        "cols": 7
+      },
+      "start": 24,
+      "budget": 14,
+      "p": [
+        0.3,
+        0.37,
+        0.13,
+        0.2
+      ],
+      "q": 0.78,
+      "cell_ids": [
+        [
+          0,
+          6,
+          42,
+          48
+        ],
+        [
+          0,
+          6,
+          42,
+          48
+        ],
+        [
+          0,
+          6,
+          42,
+          48
+        ],
+        [
+          1,
+          6,
+          42,
+          47
+        ],
+        [
+          1,
+          6,
+          42,
+          47
+        ],
+        [
+          1,
+          6,
+          42,
+          47
+        ],
+        [
+          0,
+          6,
+          42,
+          48
+        ],
+        [
+          0,
+          6,
+          42,
+          48
+        ],
+        [
+          0,
+          6,
+          42,
+          48
+        ],
+        [
+          1,
+          6,
+          42,
+          47
+        ],
+        [
+          1,
+          6,
+          42,
+          47
+        ],
+        [
+          1,
+          6,
+          42,
+          47
+        ],
+        [
+          0,
+          6,
+          42,
+          48
+        ],
+        [
+          0,
+          6,
+          42,
+          48
+        ],
+        [
+          0,
+          6,
+          42,
+          48
+        ]
+      ],
+      "trajectory_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "initial_path": [
+        24,
+        17,
+        10,
+        3,
+        2,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "scope": "synthetic_diagnostic_only_not_a_real_archive_certificate"
+    },
+    "theory_certified": false
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "task": {
+    "stage": "A",
+    "case": "tiny_order_0",
+    "method": "anytime_zero",
+    "seconds": 2,
+    "seed": 20261127,
+    "repetition": 0
+  },
+  "result": {
+    "status": "valid",
+    "method_status": "completed",
+    "stop_reason": null,
+    "path": [
+      10,
+      6,
+      2,
+      1,
+      0
+    ],
+    "J": 3.255412,
+    "pd_final": 0.409188,
+    "survival": [
+      1.0,
+      1.0,
+      1.0,
+      0.6646,
+      0.590812
+    ],
+    "history": [
+      {
+        "path": [
+          10,
+          6,
+          2,
+          1,
+          0
+        ],
+        "J": 3.255412,
+        "pd_final": 0.409188,
+        "elapsed_s": 0.00022319999698083848,
+        "source": "common_PT_replay"
+      }
+    ],
+    "lower_bound": null,
+    "numerical_gap": null,
+    "bound_scope": "full diagnostic instance only",
+    "algorithm_wall_s": 0.00391509999462869,
+    "algorithm_cpu_s": 0.0,
+    "preparation_wall_s": 0.00022319999698083848,
+    "audit_wall_s": 0.00021749999723397195,
+    "budget_overshoot_s": 0.0,
+    "raw_solver": {
+      "path": [
+        10,
+        6,
+        2,
+        1,
+        0
+      ],
+      "J": 3.255412,
+      "Pd": 0.409188,
+      "expanded": 65,
+      "generated": 214,
+      "pruned": 0,
+      "peak_open": 27,
+      "status": "completed",
+      "stop_reason": null,
+      "incumbent_source": "initial_path",
+      "guide_weight": 1.04,
+      "bound_mode": "zero",
+      "theory_certified": false,
+      "incumbent_history": [
+        {
+          "path": [
+            10,
+            6,
+            2,
+            1,
+            0
+          ],
+          "J": 3.255412,
+          "Pd": 0.409188,
+          "expanded": 0,
+          "work_expanded": 0,
+          "generated": 0,
+          "elapsed_s": 0.0002229999954579398,
+          "source": "initial_path"
+        }
+      ],
+      "stats": {
+        "guide_calls": 65,
+        "guide_wall_s": 0.001775199969415553,
+        "bound_calls": 65,
+        "bound_wall_s": 0.00011029998131562024,
+        "aux_expanded": 0,
+        "aux_generated": 0,
+        "work_expanded": 65,
+        "complete_candidates": 150,
+        "candidate_replays": 3,
+        "candidate_replay_wall_s": 0.0002590999938547611,
+        "accepted_improvements": 0,
+        "bound_pruned": 0,
+        "cheap_pruned": 0,
+        "popped": 65,
+        "secondary_pops": 0,
+        "secondary_guide_wall_s": 0.0,
+        "stale_entries": 0,
+        "guide_used_for_pruning": false,
+        "guide_used_for_termination": false,
+        "state_merging": false,
+        "bound_is_unweighted": true,
+        "candidate_archive_scope": "nondominated replayed complete candidates encountered, not global Pareto frontier",
+        "frontier_remaining": 0,
+        "physical_frontier_remaining": 0,
+        "deadline_overshoot_s": 0.0,
+        "fast_guide": true,
+        "portfolio": false,
+        "cascade": false
+      },
+      "wall_s": 0.0035816999879898503,
+      "completion_reason": "frontier_exhausted_at_tolerance",
+      "candidate_archive": []
+    },
+    "worker_environment": {
+      "python": "3.11.18 | packaged by conda-forge | (main, Oct 26 2026, 11:29:07) [MSC v.1944 64 bit (AMD64)]",
+      "executable": "c:\\users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "machine": "",
+      "processor": "",
+      "cpu_count": 32,
+      "memory_total_bytes": 16340455424,
+      "packages": {
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "pytest": "9.2.0",
+        "psutil": "7.2.2"
+      },
+      "scipy_embedded_highs_version": "1.12.0",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1"
+      }
+    },
+    "inputs": {
+      "id": "tiny_order_0",
+      "family": "order",
+      "tier": "tiny",
+      "grid": {
+        "rows": 4,
+        "cols": 4
+      },
+      "start": 10,
+      "budget": 4,
+      "p": [
+        0.43,
+        0.31,
+        0.17,
+        0.09
+      ],
+      "q": 0.78,
+      "cell_ids": [
+        [
+          0,
+          3,
+          12,
+          15
+        ],
+        [
+          0,
+          3,
+          12,
+          15
+        ],
+        [
+          1,
+          3,
+          12,
+          14
+        ],
+        [
+          1,
+          3,
+          12,
+          14
+        ],
+        [
+          0,
+          3,
+          12,
+          15
+        ]
+      ],
+      "trajectory_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "initial_path": [
+        10,
+        6,
+        2,
+        1,
+        0
+      ],
+      "scope": "synthetic_diagnostic_only_not_a_real_archive_certificate"
+    },
+    "theory_certified": false
+  }
+}

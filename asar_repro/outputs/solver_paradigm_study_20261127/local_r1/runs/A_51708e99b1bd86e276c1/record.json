@@ -1,0 +1,28 @@
+{
+  "task": {
+    "stage": "A",
+    "case": "tiny_transfer_0",
+    "method": "paper_baseline",
+    "seconds": 2,
+    "seed": 20261127,
+    "repetition": 0
+  },
+  "status": "completed",
+  "protocol_sha256": "d3e335977f93c3d9640fb286c2f02cc953a352aef8b827d2cbba30333342c6a5",
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-solver-paradigm-study-20261127\\asar_repro\\scripts\\run_solver_paradigm_study.py",
+    "_worker",
+    "--config",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-solver-paradigm-study-20261127\\asar_repro\\configs\\solver_paradigm_study.json",
+    "--out",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-solver-paradigm-study-20261127\\asar_repro\\outputs\\solver_paradigm_study_20261127\\local_r1",
+    "--task",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-solver-paradigm-study-20261127\\asar_repro\\outputs\\solver_paradigm_study_20261127\\local_r1\\runs\\A_51708e99b1bd86e276c1\\task.json"
+  ],
+  "returncode": 0,
+  "watchdog_reason": null,
+  "process_wall_s": 1.124302299998817,
+  "peak_rss_bytes": 74928128,
+  "result_sha256": "1c7e021c5b0b7c0198e5ad50fff382b4c12bc0ff2c1064eb3cad221c67e5f5b3"
+}

@@ -1,0 +1,8 @@
+{
+  "stage": "A",
+  "case": "tiny_order_1",
+  "method": "count_oracle",
+  "seconds": 15,
+  "seed": 0,
+  "repetition": 0
+}

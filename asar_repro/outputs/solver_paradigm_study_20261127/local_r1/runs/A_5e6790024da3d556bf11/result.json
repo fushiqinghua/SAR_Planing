@@ -1,0 +1,182 @@
+{
+  "task": {
+    "stage": "A",
+    "case": "tiny_order_0",
+    "method": "dfs",
+    "seconds": 30,
+    "seed": 0,
+    "repetition": 0
+  },
+  "result": {
+    "status": "valid",
+    "method_status": "optimal_enumerated",
+    "stop_reason": null,
+    "path": [
+      10,
+      6,
+      2,
+      1,
+      0
+    ],
+    "J": 3.255412,
+    "pd_final": 0.409188,
+    "survival": [
+      1.0,
+      1.0,
+      1.0,
+      0.6646,
+      0.590812
+    ],
+    "history": [
+      {
+        "path": [
+          10,
+          6,
+          2,
+          1,
+          0
+        ],
+        "J": 3.255412,
+        "pd_final": 0.409188,
+        "elapsed_s": 0.00026780000189319253,
+        "source": "common_PT_replay"
+      }
+    ],
+    "lower_bound": 3.255412,
+    "numerical_gap": 0.0,
+    "bound_scope": "full diagnostic instance only",
+    "algorithm_wall_s": 0.010353299992857501,
+    "algorithm_cpu_s": 0.0,
+    "preparation_wall_s": 0.00026780000189319253,
+    "audit_wall_s": 0.00014760000340174884,
+    "budget_overshoot_s": 0.0,
+    "raw_solver": {
+      "path": [
+        10,
+        6,
+        2,
+        1,
+        0
+      ],
+      "J": 3.255412,
+      "tied_paths": [
+        [
+          10,
+          6,
+          2,
+          1,
+          0
+        ],
+        [
+          10,
+          6,
+          5,
+          1,
+          0
+        ],
+        [
+          10,
+          9,
+          5,
+          1,
+          0
+        ]
+      ],
+      "complete_paths": 150,
+      "expanded": 65,
+      "generated": 214,
+      "peak_open": 11,
+      "status": "optimal_enumerated",
+      "lower_bound": 3.255412,
+      "lower_bound_elapsed_s": 0.010352199999033473
+    },
+    "worker_environment": {
+      "python": "3.11.18 | packaged by conda-forge | (main, Oct 26 2026, 11:29:07) [MSC v.1944 64 bit (AMD64)]",
+      "executable": "c:\\users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "machine": "",
+      "processor": "",
+      "cpu_count": 32,
+      "memory_total_bytes": 16340455424,
+      "packages": {
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "pytest": "9.2.0",
+        "psutil": "7.2.2"
+      },
+      "scipy_embedded_highs_version": "1.12.0",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1"
+      }
+    },
+    "inputs": {
+      "id": "tiny_order_0",
+      "family": "order",
+      "tier": "tiny",
+      "grid": {
+        "rows": 4,
+        "cols": 4
+      },
+      "start": 10,
+      "budget": 4,
+      "p": [
+        0.43,
+        0.31,
+        0.17,
+        0.09
+      ],
+      "q": 0.78,
+      "cell_ids": [
+        [
+          0,
+          3,
+          12,
+          15
+        ],
+        [
+          0,
+          3,
+          12,
+          15
+        ],
+        [
+          1,
+          3,
+          12,
+          14
+        ],
+        [
+          1,
+          3,
+          12,
+          14
+        ],
+        [
+          0,
+          3,
+          12,
+          15
+        ]
+      ],
+      "trajectory_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "initial_path": [
+        10,
+        6,
+        2,
+        1,
+        0
+      ],
+      "scope": "synthetic_diagnostic_only_not_a_real_archive_certificate"
+    },
+    "theory_certified": false
+  }
+}

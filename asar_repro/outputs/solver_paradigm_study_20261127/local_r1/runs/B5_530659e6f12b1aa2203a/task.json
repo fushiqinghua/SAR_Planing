@@ -1,0 +1,8 @@
+{
+  "stage": "B5",
+  "scene": "arctic_ocean",
+  "method": "ils",
+  "seconds": 5,
+  "seed": 20261201,
+  "repetition": 4
+}

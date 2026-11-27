@@ -1,0 +1,175 @@
+{
+  "task": {
+    "stage": "A",
+    "case": "tiny_transfer_0",
+    "method": "paper_baseline",
+    "seconds": 2,
+    "seed": 20261127,
+    "repetition": 0
+  },
+  "result": {
+    "status": "valid",
+    "method_status": "completed",
+    "stop_reason": null,
+    "path": [
+      0,
+      1,
+      2,
+      3,
+      2
+    ],
+    "J": 3.064,
+    "pd_final": 0.46799999999999997,
+    "survival": [
+      1.0,
+      1.0,
+      1.0,
+      0.532,
+      0.532
+    ],
+    "history": [
+      {
+        "path": [
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "J": 4.0,
+        "pd_final": 0.0,
+        "elapsed_s": 0.0002246000076411292,
+        "source": "common_PT_replay"
+      },
+      {
+        "path": [
+          0,
+          1,
+          2,
+          3,
+          2
+        ],
+        "J": 3.064,
+        "pd_final": 0.46799999999999997,
+        "elapsed_s": 0.0012671000004047528,
+        "source": "paper_return_and_full_replay"
+      }
+    ],
+    "lower_bound": null,
+    "numerical_gap": null,
+    "bound_scope": "full diagnostic instance only",
+    "algorithm_wall_s": 0.0012677000049734488,
+    "algorithm_cpu_s": 0.0,
+    "preparation_wall_s": 0.0002246000076411292,
+    "audit_wall_s": 0.0002562000008765608,
+    "budget_overshoot_s": 0.0,
+    "raw_solver": {
+      "path": [
+        0,
+        1,
+        2,
+        3,
+        2
+      ],
+      "J": 3.064,
+      "expanded": 4,
+      "generated": 10,
+      "pruned": 3,
+      "peak_open": 4,
+      "heuristic_mode": "paper_greedy",
+      "epsilon": 1.04,
+      "theory_certified": false,
+      "status": "completed",
+      "stop_reason": null,
+      "incumbent_source": "search"
+    },
+    "worker_environment": {
+      "python": "3.11.18 | packaged by conda-forge | (main, Oct 26 2026, 11:29:07) [MSC v.1944 64 bit (AMD64)]",
+      "executable": "c:\\users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "machine": "",
+      "processor": "",
+      "cpu_count": 32,
+      "memory_total_bytes": 16340455424,
+      "packages": {
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "pytest": "9.2.0",
+        "psutil": "7.2.2"
+      },
+      "scipy_embedded_highs_version": "1.12.0",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1"
+      }
+    },
+    "inputs": {
+      "id": "tiny_transfer_0",
+      "family": "transfer",
+      "tier": "tiny",
+      "grid": {
+        "rows": 4,
+        "cols": 4
+      },
+      "start": 0,
+      "budget": 4,
+      "p": [
+        0.1,
+        0.6,
+        0.25,
+        0.05
+      ],
+      "q": 0.78,
+      "cell_ids": [
+        [
+          4,
+          3,
+          15,
+          12
+        ],
+        [
+          4,
+          3,
+          15,
+          12
+        ],
+        [
+          4,
+          3,
+          15,
+          12
+        ],
+        [
+          4,
+          3,
+          15,
+          12
+        ],
+        [
+          4,
+          3,
+          15,
+          12
+        ]
+      ],
+      "trajectory_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "initial_path": [
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "scope": "synthetic_diagnostic_only_not_a_real_archive_certificate"
+    },
+    "theory_certified": false
+  }
+}

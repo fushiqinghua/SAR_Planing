@@ -1,0 +1,8 @@
+{
+  "stage": "A",
+  "case": "tiny_transfer_0",
+  "method": "anytime_zero",
+  "seconds": 2,
+  "seed": 20261127,
+  "repetition": 0
+}

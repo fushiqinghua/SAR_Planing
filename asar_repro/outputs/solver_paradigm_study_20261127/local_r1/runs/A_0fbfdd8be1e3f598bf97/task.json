@@ -1,0 +1,8 @@
+{
+  "stage": "A",
+  "case": "medium_transfer_1",
+  "method": "count_oracle",
+  "seconds": 60,
+  "seed": 0,
+  "repetition": 0
+}

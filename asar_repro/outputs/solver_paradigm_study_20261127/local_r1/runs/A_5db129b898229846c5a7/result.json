@@ -1,0 +1,323 @@
+{
+  "task": {
+    "stage": "A",
+    "case": "tiny_order_1",
+    "method": "count_oracle",
+    "seconds": 15,
+    "seed": 0,
+    "repetition": 0
+  },
+  "result": {
+    "status": "valid",
+    "method_status": "optimal_numeric",
+    "stop_reason": "optimal_numeric",
+    "path": [
+      10,
+      11,
+      7,
+      3,
+      2,
+      1
+    ],
+    "J": 3.9002000000000003,
+    "pd_final": 0.5226,
+    "survival": [
+      1.0,
+      1.0,
+      1.0,
+      0.7114,
+      0.7114,
+      0.4774
+    ],
+    "history": [
+      {
+        "path": [
+          10,
+          6,
+          2,
+          1,
+          0,
+          1
+        ],
+        "J": 4.24652,
+        "pd_final": 0.28547999999999996,
+        "elapsed_s": 0.000348599991411902,
+        "source": "common_PT_replay"
+      },
+      {
+        "elapsed_s": 0.019880299994838424,
+        "J": 3.9002000000000003,
+        "pd_final": 0.5226,
+        "path": [
+          10,
+          11,
+          7,
+          3,
+          2,
+          1
+        ],
+        "source": "milp",
+        "completed_within_budget": true
+      }
+    ],
+    "lower_bound": 3.9002,
+    "numerical_gap": 4.440892098500626e-16,
+    "bound_scope": "full diagnostic instance only",
+    "algorithm_wall_s": 0.01990319999458734,
+    "algorithm_cpu_s": 0.03125,
+    "preparation_wall_s": 0.000348599991411902,
+    "audit_wall_s": 0.0005154999962542206,
+    "budget_overshoot_s": 0.0,
+    "raw_solver": {
+      "method": "count_secant_full_flow",
+      "status": "optimal_numeric",
+      "path": [
+        10,
+        11,
+        7,
+        3,
+        2,
+        1
+      ],
+      "J": 3.9002000000000003,
+      "pd_final": 0.5226,
+      "survival": [
+        1.0,
+        1.0,
+        1.0,
+        0.7114,
+        0.7114,
+        0.4774
+      ],
+      "initial_J": 4.24652,
+      "initial_completed_s": 0.0001720000000204891,
+      "history": [
+        {
+          "elapsed_s": 0.0001720000000204891,
+          "J": 4.24652,
+          "pd_final": 0.28547999999999996,
+          "source": "initial",
+          "path": [
+            10,
+            6,
+            2,
+            1,
+            0,
+            1
+          ],
+          "completed_within_budget": true
+        },
+        {
+          "elapsed_s": 0.01950310000393074,
+          "J": 3.9002000000000003,
+          "pd_final": 0.5226,
+          "path": [
+            10,
+            11,
+            7,
+            3,
+            2,
+            1
+          ],
+          "source": "milp",
+          "completed_within_budget": true
+        }
+      ],
+      "lower_bound": 3.9002,
+      "solver_lower_bound_raw": 3.9002,
+      "lower_bound_elapsed_s": 0.019522100003086962,
+      "global_numeric_gap": 1.138631890287838e-16,
+      "global_numeric_gap_absolute": 4.440892098500626e-16,
+      "optimality_scope": "full_fixed_particle_discrete_instance",
+      "formulation_integer_equivalent": true,
+      "formal_certificate": false,
+      "numerical_optimality_checked": true,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "solver_gap_raw": 0.0,
+      "solver_objective_raw": 3.9002,
+      "solver_node_count": 1,
+      "candidate": {
+        "path": [
+          10,
+          11,
+          7,
+          3,
+          2,
+          1
+        ],
+        "J": 3.9002000000000003,
+        "pd_final": 0.5226,
+        "survival": [
+          1.0,
+          1.0,
+          1.0,
+          0.7114,
+          0.7114,
+          0.4774
+        ],
+        "completed_s": 0.01950310000393074,
+        "completed_within_budget": true
+      },
+      "warnings": [
+        "Unrecognized options detected: {'threads'}. These will be passed to HiGHS verbatim."
+      ],
+      "fatal": false,
+      "model_build_s": 0.0006377999961841851,
+      "solver_s": 0.018104799994034693,
+      "validation_s": 0.000564200003282167,
+      "elapsed_s": 0.019526000003679655,
+      "max_seconds": 14.999648900004104,
+      "options": {
+        "max_particles": 64,
+        "max_horizon": 24,
+        "max_cells": 100,
+        "max_variables": 50000,
+        "max_constraints": 100000,
+        "max_nonzeros": 1000000,
+        "presolve": false,
+        "mip_rel_gap": 0.0,
+        "node_limit": 100000,
+        "replay_atol": 1e-08,
+        "integrality_atol": 1e-06,
+        "audit_reserve_seconds": 0.29999297800008207,
+        "threads": 1
+      },
+      "threads_requested": 1,
+      "native_thread_readback_verified": false,
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      },
+      "versions": {
+        "numpy": "2.4.6",
+        "scipy": "1.17.1"
+      },
+      "counts": {
+        "particles": 4,
+        "horizon": 5,
+        "grid_cells": 16,
+        "arcs": 88,
+        "variables": 128,
+        "flow_rows": 28,
+        "count_rows": 20,
+        "secant_rows": 60,
+        "constraints": 108,
+        "estimated_nonzeros": 688,
+        "nonzeros": 329,
+        "minimum_abs_nonzero_coefficient": 0.001827196799999999,
+        "coefficients_below_1e_minus_9": 0
+      },
+      "solver_options": {
+        "time_limit": 14.698825022007222,
+        "presolve": false,
+        "mip_rel_gap": 0.0,
+        "node_limit": 100000,
+        "threads": 1
+      },
+      "solver_returned_s": 0.018937400003778748,
+      "primal_count_discrepancy": 0.0,
+      "primal_epigraph_violation": 0.0,
+      "objective_replay_discrepancy": 4.440892098500626e-16,
+      "objective_epigraph_slack": -4.440892098500626e-16,
+      "stop_reason": "optimal_numeric",
+      "budget_exceeded": false
+    },
+    "worker_environment": {
+      "python": "3.11.18 | packaged by conda-forge | (main, Oct 26 2026, 11:29:07) [MSC v.1944 64 bit (AMD64)]",
+      "executable": "c:\\users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "machine": "",
+      "processor": "",
+      "cpu_count": 32,
+      "memory_total_bytes": 16340455424,
+      "packages": {
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "pytest": "9.2.0",
+        "psutil": "7.2.2"
+      },
+      "scipy_embedded_highs_version": "1.12.0",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1"
+      }
+    },
+    "inputs": {
+      "id": "tiny_order_1",
+      "family": "order",
+      "tier": "tiny",
+      "grid": {
+        "rows": 4,
+        "cols": 4
+      },
+      "start": 10,
+      "budget": 5,
+      "p": [
+        0.3,
+        0.37,
+        0.13,
+        0.2
+      ],
+      "q": 0.78,
+      "cell_ids": [
+        [
+          0,
+          3,
+          12,
+          15
+        ],
+        [
+          0,
+          3,
+          12,
+          15
+        ],
+        [
+          0,
+          3,
+          12,
+          15
+        ],
+        [
+          1,
+          3,
+          12,
+          14
+        ],
+        [
+          1,
+          3,
+          12,
+          14
+        ],
+        [
+          1,
+          3,
+          12,
+          14
+        ]
+      ],
+      "trajectory_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "initial_path": [
+        10,
+        6,
+        2,
+        1,
+        0,
+        1
+      ],
+      "scope": "synthetic_diagnostic_only_not_a_real_archive_certificate"
+    },
+    "theory_certified": false
+  }
+}

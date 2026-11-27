@@ -1,0 +1,8 @@
+{
+  "stage": "A",
+  "case": "tiny_repeat_1",
+  "method": "dfs",
+  "seconds": 30,
+  "seed": 0,
+  "repetition": 0
+}

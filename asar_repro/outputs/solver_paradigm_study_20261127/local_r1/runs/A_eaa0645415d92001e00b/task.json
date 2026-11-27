@@ -1,0 +1,8 @@
+{
+  "stage": "A",
+  "case": "medium_transfer_1",
+  "method": "cem",
+  "seconds": 2,
+  "seed": 20261127,
+  "repetition": 0
+}

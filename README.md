@@ -2,7 +2,9 @@
 
 分支：**solver-paradigm-study-20261127**  
 基点：STDC 最终评估提交 **12b16441fbc5cae8539dcd247d46f7c27d5b8f12**  
-交付状态：**not_run —— 设计、实现和本地执行入口已准备；新算法、pytest、toy 与真实场景实验均未在本轮执行。**
+本地执行状态：**P0、A、B5、B30 已完成，C300 未触发。** 冻结源码为 `a349daf`。A 阶段 9 个 tiny 实例的 count 与独立 DFS 一致。Lake 与 Hudson 的 5 秒筛选中，ILS 和 CEM 均未通过质量或时间门槛。
+
+[结果分析与逐次证据](asar_repro/outputs/solver_paradigm_study_20261127/local_r1/ANALYSIS.md) · [逐次指标 CSV](asar_repro/outputs/solver_paradigm_study_20261127/local_r1/comparison.csv) · [C300 筛选记录](asar_repro/outputs/solver_paradigm_study_20261127/local_r1/C300_selection.json)
 
 本批回答两个问题：保持原来的粒子、探测、运动与 J 指标，改换完整路线求解机制能否找到更好的路线；在可控制的小中规模实例上，已有解到底离最优还有多远。
 
@@ -59,5 +61,5 @@ Fundy 的物理方向未验证标签继续保留，本批不进入主要矩阵�
 - [历史研究交接](asar_repro/RESEARCH_HANDOFF_20261125.md)
 - [原论文阶段 0–8 复现入口](asar_repro/README.md)
 
-本分支没有改动原有算法源码、原粒子输入或历史实验产物。新源文件尚待用户本地执行验证。
+本地验证证据和原始运行记录见上方结果入口。初次交付时的 `not_run` 状态保留在设计文档中。
 

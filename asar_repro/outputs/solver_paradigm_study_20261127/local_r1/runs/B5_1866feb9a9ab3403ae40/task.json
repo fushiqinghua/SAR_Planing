@@ -1,0 +1,8 @@
+{
+  "stage": "B5",
+  "scene": "arctic_ocean",
+  "method": "anytime_zero",
+  "seconds": 5,
+  "seed": 0,
+  "repetition": 0
+}

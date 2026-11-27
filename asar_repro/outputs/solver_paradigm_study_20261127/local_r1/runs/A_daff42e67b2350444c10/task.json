@@ -1,0 +1,8 @@
+{
+  "stage": "A",
+  "case": "tiny_repeat_1",
+  "method": "paper_baseline",
+  "seconds": 2,
+  "seed": 20261127,
+  "repetition": 0
+}

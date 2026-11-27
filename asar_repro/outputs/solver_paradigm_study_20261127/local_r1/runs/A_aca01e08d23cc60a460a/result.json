@@ -1,0 +1,511 @@
+{
+  "task": {
+    "stage": "A",
+    "case": "medium_repeat_2",
+    "method": "count_oracle",
+    "seconds": 60,
+    "seed": 0,
+    "repetition": 0
+  },
+  "result": {
+    "status": "valid",
+    "method_status": "optimal_numeric",
+    "stop_reason": "optimal_numeric",
+    "path": [
+      24,
+      17,
+      24,
+      17,
+      16,
+      23,
+      24,
+      17,
+      18,
+      19,
+      12,
+      13,
+      6,
+      5,
+      6,
+      13,
+      6
+    ],
+    "J": 3.619222240000001,
+    "pd_final": 0.96956496,
+    "survival": [
+      1.0,
+      0.688,
+      0.3916,
+      0.32296,
+      0.32296,
+      0.25775200000000004,
+      0.24340624,
+      0.22830544,
+      0.22830544,
+      0.22830544,
+      0.22830544,
+      0.22830544,
+      0.07230544,
+      0.07230544,
+      0.037985439999999995,
+      0.037985439999999995,
+      0.030435039999999997
+    ],
+    "history": [
+      {
+        "path": [
+          24,
+          17,
+          10,
+          3,
+          2,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "J": 11.008000000000001,
+        "pd_final": 0.31200000000000006,
+        "elapsed_s": 0.00032900000223889947,
+        "source": "common_PT_replay"
+      },
+      {
+        "elapsed_s": 1.3693778999877395,
+        "J": 3.619222240000001,
+        "pd_final": 0.96956496,
+        "path": [
+          24,
+          17,
+          24,
+          17,
+          16,
+          23,
+          24,
+          17,
+          18,
+          19,
+          12,
+          13,
+          6,
+          5,
+          6,
+          13,
+          6
+        ],
+        "source": "milp",
+        "completed_within_budget": true
+      }
+    ],
+    "lower_bound": 3.6192222399977374,
+    "numerical_gap": 2.263522702605769e-12,
+    "bound_scope": "full diagnostic instance only",
+    "algorithm_wall_s": 1.3693954999907874,
+    "algorithm_cpu_s": 1.375,
+    "preparation_wall_s": 0.00032900000223889947,
+    "audit_wall_s": 0.00048400000378023833,
+    "budget_overshoot_s": 0.0,
+    "raw_solver": {
+      "method": "count_secant_full_flow",
+      "status": "optimal_numeric",
+      "path": [
+        24,
+        17,
+        24,
+        17,
+        16,
+        23,
+        24,
+        17,
+        18,
+        19,
+        12,
+        13,
+        6,
+        5,
+        6,
+        13,
+        6
+      ],
+      "J": 3.619222240000001,
+      "pd_final": 0.96956496,
+      "survival": [
+        1.0,
+        0.688,
+        0.3916,
+        0.32296,
+        0.32296,
+        0.25775200000000004,
+        0.24340624,
+        0.22830544,
+        0.22830544,
+        0.22830544,
+        0.22830544,
+        0.22830544,
+        0.07230544,
+        0.07230544,
+        0.037985439999999995,
+        0.037985439999999995,
+        0.030435039999999997
+      ],
+      "initial_J": 11.008000000000001,
+      "initial_completed_s": 0.00020929999300278723,
+      "history": [
+        {
+          "elapsed_s": 0.00020929999300278723,
+          "J": 11.008000000000001,
+          "pd_final": 0.31200000000000006,
+          "source": "initial",
+          "path": [
+            24,
+            17,
+            10,
+            3,
+            2,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            0
+          ],
+          "completed_within_budget": true
+        },
+        {
+          "elapsed_s": 1.3689196999912383,
+          "J": 3.619222240000001,
+          "pd_final": 0.96956496,
+          "path": [
+            24,
+            17,
+            24,
+            17,
+            16,
+            23,
+            24,
+            17,
+            18,
+            19,
+            12,
+            13,
+            6,
+            5,
+            6,
+            13,
+            6
+          ],
+          "source": "milp",
+          "completed_within_budget": true
+        }
+      ],
+      "lower_bound": 3.6192222399977374,
+      "solver_lower_bound_raw": 3.6192222399977374,
+      "lower_bound_elapsed_s": 1.3689336999959778,
+      "global_numeric_gap": 6.254168858682103e-13,
+      "global_numeric_gap_absolute": 2.263522702605769e-12,
+      "optimality_scope": "full_fixed_particle_discrete_instance",
+      "formulation_integer_equivalent": true,
+      "formal_certificate": false,
+      "numerical_optimality_checked": true,
+      "solver_status": 0,
+      "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "solver_gap_raw": 0.0,
+      "solver_objective_raw": 3.6192222399977374,
+      "solver_node_count": 1,
+      "candidate": {
+        "path": [
+          24,
+          17,
+          24,
+          17,
+          16,
+          23,
+          24,
+          17,
+          18,
+          19,
+          12,
+          13,
+          6,
+          5,
+          6,
+          13,
+          6
+        ],
+        "J": 3.619222240000001,
+        "pd_final": 0.96956496,
+        "survival": [
+          1.0,
+          0.688,
+          0.3916,
+          0.32296,
+          0.32296,
+          0.25775200000000004,
+          0.24340624,
+          0.22830544,
+          0.22830544,
+          0.22830544,
+          0.22830544,
+          0.22830544,
+          0.07230544,
+          0.07230544,
+          0.037985439999999995,
+          0.037985439999999995,
+          0.030435039999999997
+        ],
+        "completed_s": 1.3689196999912383,
+        "completed_within_budget": true
+      },
+      "warnings": [
+        "Tiny secant coefficients are retained in the submitted matrix; solver numerical preprocessing may treat them differently. Replay and independent tiny-instance enumeration remain necessary.",
+        "Unrecognized options detected: {'threads'}. These will be passed to HiGHS verbatim."
+      ],
+      "fatal": false,
+      "model_build_s": 0.002170699997805059,
+      "solver_s": 1.3659958000062034,
+      "validation_s": 0.0005156999977771193,
+      "elapsed_s": 1.3689372999942861,
+      "max_seconds": 59.999668999997084,
+      "options": {
+        "max_particles": 64,
+        "max_horizon": 24,
+        "max_cells": 100,
+        "max_variables": 50000,
+        "max_constraints": 100000,
+        "max_nonzeros": 1000000,
+        "presolve": false,
+        "mip_rel_gap": 0.0,
+        "node_limit": 100000,
+        "replay_atol": 1e-08,
+        "integrality_atol": 1e-06,
+        "audit_reserve_seconds": 1.0,
+        "threads": 1
+      },
+      "threads_requested": 1,
+      "native_thread_readback_verified": false,
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1"
+      },
+      "versions": {
+        "numpy": "2.4.6",
+        "scipy": "1.17.1"
+      },
+      "counts": {
+        "particles": 4,
+        "horizon": 16,
+        "grid_cells": 49,
+        "arcs": 1116,
+        "variables": 1244,
+        "flow_rows": 320,
+        "count_rows": 64,
+        "secant_rows": 544,
+        "constraints": 928,
+        "estimated_nonzeros": 7912,
+        "nonzeros": 3430,
+        "minimum_abs_nonzero_coefficient": 1.0676645305202122e-10,
+        "coefficients_below_1e_minus_9": 12
+      },
+      "solver_options": {
+        "time_limit": 58.997268999999505,
+        "presolve": false,
+        "mip_rel_gap": 0.0,
+        "node_limit": 100000,
+        "threads": 1
+      },
+      "solver_returned_s": 1.3683974000014132,
+      "primal_count_discrepancy": 4.985567514381728e-11,
+      "primal_epigraph_violation": 3.0860869415505476e-12,
+      "objective_replay_discrepancy": 2.2639667918156192e-12,
+      "objective_epigraph_slack": -2.2639667918156192e-12,
+      "stop_reason": "optimal_numeric",
+      "budget_exceeded": false
+    },
+    "worker_environment": {
+      "python": "3.11.18 | packaged by conda-forge | (main, Oct 26 2026, 11:29:07) [MSC v.1944 64 bit (AMD64)]",
+      "executable": "c:\\users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "machine": "",
+      "processor": "",
+      "cpu_count": 32,
+      "memory_total_bytes": 16340455424,
+      "packages": {
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "pytest": "9.2.0",
+        "psutil": "7.2.2"
+      },
+      "scipy_embedded_highs_version": "1.12.0",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1"
+      }
+    },
+    "inputs": {
+      "id": "medium_repeat_2",
+      "family": "repeat",
+      "tier": "medium",
+      "grid": {
+        "rows": 7,
+        "cols": 7
+      },
+      "start": 24,
+      "budget": 16,
+      "p": [
+        0.38,
+        0.4,
+        0.2,
+        0.02
+      ],
+      "q": 0.78,
+      "cell_ids": [
+        [
+          23,
+          17,
+          6,
+          49
+        ],
+        [
+          23,
+          17,
+          6,
+          49
+        ],
+        [
+          24,
+          17,
+          6,
+          49
+        ],
+        [
+          24,
+          17,
+          6,
+          49
+        ],
+        [
+          23,
+          17,
+          6,
+          49
+        ],
+        [
+          23,
+          17,
+          6,
+          49
+        ],
+        [
+          24,
+          17,
+          6,
+          49
+        ],
+        [
+          24,
+          17,
+          6,
+          49
+        ],
+        [
+          23,
+          17,
+          6,
+          49
+        ],
+        [
+          23,
+          17,
+          6,
+          49
+        ],
+        [
+          24,
+          17,
+          6,
+          49
+        ],
+        [
+          24,
+          17,
+          6,
+          49
+        ],
+        [
+          23,
+          17,
+          6,
+          49
+        ],
+        [
+          23,
+          17,
+          6,
+          49
+        ],
+        [
+          24,
+          17,
+          6,
+          49
+        ],
+        [
+          24,
+          17,
+          6,
+          49
+        ],
+        [
+          23,
+          17,
+          6,
+          49
+        ]
+      ],
+      "trajectory_ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "initial_path": [
+        24,
+        17,
+        10,
+        3,
+        2,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "scope": "synthetic_diagnostic_only_not_a_real_archive_certificate"
+    },
+    "theory_certified": false
+  }
+}

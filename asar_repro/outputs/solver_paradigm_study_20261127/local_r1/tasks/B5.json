@@ -1,0 +1,306 @@
+[
+  {
+    "stage": "B5",
+    "scene": "arctic_ocean",
+    "method": "anytime_mass",
+    "seconds": 5,
+    "seed": 0,
+    "repetition": 1
+  },
+  {
+    "stage": "B5",
+    "scene": "arctic_ocean",
+    "method": "cem",
+    "seconds": 5,
+    "seed": 20261127,
+    "repetition": 0
+  },
+  {
+    "stage": "B5",
+    "scene": "arctic_ocean",
+    "method": "anytime_zero",
+    "seconds": 5,
+    "seed": 0,
+    "repetition": 1
+  },
+  {
+    "stage": "B5",
+    "scene": "lake_ontario",
+    "method": "paper_baseline",
+    "seconds": 5,
+    "seed": 0,
+    "repetition": 2
+  },
+  {
+    "stage": "B5",
+    "scene": "arctic_ocean",
+    "method": "anytime_zero",
+    "seconds": 5,
+    "seed": 0,
+    "repetition": 0
+  },
+  {
+    "stage": "B5",
+    "scene": "lake_ontario",
+    "method": "anytime_zero",
+    "seconds": 5,
+    "seed": 0,
+    "repetition": 2
+  },
+  {
+    "stage": "B5",
+    "scene": "lake_ontario",
+    "method": "anytime_zero",
+    "seconds": 5,
+    "seed": 0,
+    "repetition": 0
+  },
+  {
+    "stage": "B5",
+    "scene": "arctic_ocean",
+    "method": "ils",
+    "seconds": 5,
+    "seed": 20261129,
+    "repetition": 2
+  },
+  {
+    "stage": "B5",
+    "scene": "lake_ontario",
+    "method": "cem",
+    "seconds": 5,
+    "seed": 20261130,
+    "repetition": 3
+  },
+  {
+    "stage": "B5",
+    "scene": "arctic_ocean",
+    "method": "cem",
+    "seconds": 5,
+    "seed": 20261128,
+    "repetition": 1
+  },
+  {
+    "stage": "B5",
+    "scene": "arctic_ocean",
+    "method": "anytime_mass",
+    "seconds": 5,
+    "seed": 0,
+    "repetition": 2
+  },
+  {
+    "stage": "B5",
+    "scene": "lake_ontario",
+    "method": "cem",
+    "seconds": 5,
+    "seed": 20261201,
+    "repetition": 4
+  },
+  {
+    "stage": "B5",
+    "scene": "lake_ontario",
+    "method": "ils",
+    "seconds": 5,
+    "seed": 20261128,
+    "repetition": 1
+  },
+  {
+    "stage": "B5",
+    "scene": "arctic_ocean",
+    "method": "ils",
+    "seconds": 5,
+    "seed": 20261128,
+    "repetition": 1
+  },
+  {
+    "stage": "B5",
+    "scene": "lake_ontario",
+    "method": "ils",
+    "seconds": 5,
+    "seed": 20261127,
+    "repetition": 0
+  },
+  {
+    "stage": "B5",
+    "scene": "lake_ontario",
+    "method": "ils",
+    "seconds": 5,
+    "seed": 20261130,
+    "repetition": 3
+  },
+  {
+    "stage": "B5",
+    "scene": "arctic_ocean",
+    "method": "ils",
+    "seconds": 5,
+    "seed": 20261130,
+    "repetition": 3
+  },
+  {
+    "stage": "B5",
+    "scene": "arctic_ocean",
+    "method": "paper_baseline",
+    "seconds": 5,
+    "seed": 0,
+    "repetition": 1
+  },
+  {
+    "stage": "B5",
+    "scene": "arctic_ocean",
+    "method": "cem",
+    "seconds": 5,
+    "seed": 20261130,
+    "repetition": 3
+  },
+  {
+    "stage": "B5",
+    "scene": "lake_ontario",
+    "method": "paper_baseline",
+    "seconds": 5,
+    "seed": 0,
+    "repetition": 1
+  },
+  {
+    "stage": "B5",
+    "scene": "lake_ontario",
+    "method": "anytime_zero",
+    "seconds": 5,
+    "seed": 0,
+    "repetition": 1
+  },
+  {
+    "stage": "B5",
+    "scene": "arctic_ocean",
+    "method": "cem",
+    "seconds": 5,
+    "seed": 20261129,
+    "repetition": 2
+  },
+  {
+    "stage": "B5",
+    "scene": "lake_ontario",
+    "method": "cem",
+    "seconds": 5,
+    "seed": 20261127,
+    "repetition": 0
+  },
+  {
+    "stage": "B5",
+    "scene": "arctic_ocean",
+    "method": "paper_baseline",
+    "seconds": 5,
+    "seed": 0,
+    "repetition": 2
+  },
+  {
+    "stage": "B5",
+    "scene": "lake_ontario",
+    "method": "anytime_mass",
+    "seconds": 5,
+    "seed": 0,
+    "repetition": 0
+  },
+  {
+    "stage": "B5",
+    "scene": "lake_ontario",
+    "method": "cem",
+    "seconds": 5,
+    "seed": 20261128,
+    "repetition": 1
+  },
+  {
+    "stage": "B5",
+    "scene": "lake_ontario",
+    "method": "anytime_mass",
+    "seconds": 5,
+    "seed": 0,
+    "repetition": 2
+  },
+  {
+    "stage": "B5",
+    "scene": "lake_ontario",
+    "method": "ils",
+    "seconds": 5,
+    "seed": 20261201,
+    "repetition": 4
+  },
+  {
+    "stage": "B5",
+    "scene": "lake_ontario",
+    "method": "anytime_mass",
+    "seconds": 5,
+    "seed": 0,
+    "repetition": 1
+  },
+  {
+    "stage": "B5",
+    "scene": "lake_ontario",
+    "method": "ils",
+    "seconds": 5,
+    "seed": 20261129,
+    "repetition": 2
+  },
+  {
+    "stage": "B5",
+    "scene": "lake_ontario",
+    "method": "cem",
+    "seconds": 5,
+    "seed": 20261129,
+    "repetition": 2
+  },
+  {
+    "stage": "B5",
+    "scene": "arctic_ocean",
+    "method": "anytime_mass",
+    "seconds": 5,
+    "seed": 0,
+    "repetition": 0
+  },
+  {
+    "stage": "B5",
+    "scene": "arctic_ocean",
+    "method": "cem",
+    "seconds": 5,
+    "seed": 20261201,
+    "repetition": 4
+  },
+  {
+    "stage": "B5",
+    "scene": "arctic_ocean",
+    "method": "ils",
+    "seconds": 5,
+    "seed": 20261127,
+    "repetition": 0
+  },
+  {
+    "stage": "B5",
+    "scene": "arctic_ocean",
+    "method": "paper_baseline",
+    "seconds": 5,
+    "seed": 0,
+    "repetition": 0
+  },
+  {
+    "stage": "B5",
+    "scene": "arctic_ocean",
+    "method": "anytime_zero",
+    "seconds": 5,
+    "seed": 0,
+    "repetition": 2
+  },
+  {
+    "stage": "B5",
+    "scene": "arctic_ocean",
+    "method": "ils",
+    "seconds": 5,
+    "seed": 20261201,
+    "repetition": 4
+  },
+  {
+    "stage": "B5",
+    "scene": "lake_ontario",
+    "method": "paper_baseline",
+    "seconds": 5,
+    "seed": 0,
+    "repetition": 0
+  }
+]
