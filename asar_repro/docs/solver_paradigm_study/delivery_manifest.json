@@ -1,0 +1,40 @@
+{
+  "delivery_status": "not_run",
+  "prepared_date": "2026-11-27",
+  "branch": "solver-paradigm-study-20261127",
+  "base_commit": "12b16441fbc5cae8539dcd247d46f7c27d5b8f12",
+  "static_review": {
+    "python_ast_files": 6,
+    "json_files": 2,
+    "relative_document_links": "checked_against_base_tree_and_new_files",
+    "protected_baseline_files": 45,
+    "line_ending_rule": "canonical LF SHA256 anchored to base Git blobs"
+  },
+  "executed": {
+    "algorithm_search": false,
+    "pytest": false,
+    "toy_enumeration": false,
+    "milp": false,
+    "real_scene_experiments": false
+  },
+  "local_runtime_validation_required": true,
+  "files_sha256": {
+    "README.md": "bc91523836e18989cd22989108009d24e64494690e50f06e53f4553b9a8d434f",
+    "asar_repro/requirements-solver-study.txt": "583f1b76796c7f3e89f3b107feb9803f8b2aed146ade2d34d8fa6ed45502ae55",
+    "asar_repro/configs/solver_paradigm_study.json": "d85d881375e1969b212136f48543da6ef4e9274508015b98b976e6be4e3fbf7f",
+    "asar_repro/scripts/run_solver_paradigm_study.py": "f05258a1913dd515cbc10b2d82f9b29978235e8f50c8055d5bc20c6ec005cba9",
+    "asar_repro/src/asar_repro/route_optimizers.py": "ba29ec9adf093d76c56f100e7b4434c1ec198bd868a71327619eed11e2824e6a",
+    "asar_repro/src/asar_repro/count_oracle.py": "7f54e0252e4657995d6b6fdecd9045dfcbb7fd90b715381f804f65cad3bc865c",
+    "asar_repro/tests/test_route_optimizers.py": "eb7b12ca759b53e18260492ecb560a8e866917209e93f5ceb7daded99493b0a0",
+    "asar_repro/tests/test_count_oracle.py": "50cbe509ea28a1714d99680aed7165f265494780d4086fe66069f942dc1dacce",
+    "asar_repro/tests/test_solver_paradigm_study.py": "30594178cf88b8535aa001e71b2ad2517e27bddcc9a696f0864d9c9ad48a2e37",
+    "asar_repro/docs/solver_paradigm_study/LOCAL_RUNBOOK.md": "95960def12f5c1d1dd035adb9c067bc3cd2ea958cd06d8386d8ae12da33c104b",
+    "asar_repro/docs/solver_paradigm_study/count_model.md": "dd1953572a77b42ec2625aabdb940a4e81844108f248e9453744df728edac682",
+    "asar_repro/docs/solver_paradigm_study/decisions.md": "1ce2abf55c997c90f937ef4b6118c9133124d6db5af8ce57740f9ab717f2275e",
+    "asar_repro/docs/solver_paradigm_study/literature.md": "a481f795657e975825fcdcdada8598628a740e1848ffe67175bab20371de5ab9",
+    "asar_repro/docs/solver_paradigm_study/plan.md": "b46462ceb5f2f47bc393f32ea056f1985e5c5b25428a9081dcf9bd94917a7b76",
+    "asar_repro/docs/solver_paradigm_study/results_template.md": "3fcd317201e7a52358c121ef898ce4d8069eb0a7ce69bdf7771cefd4430eaa64",
+    "asar_repro/docs/solver_paradigm_study/route_methods.md": "888d7bf2322add8a28f22f0708c7e37a78c9e3c151f742b57a57f969a04751e0",
+    "asar_repro/docs/solver_paradigm_study/base_source_inventory.json": "55c680fe21097400cd946bdbed08a1e2fc984fb4b231563b4b861eaaf2e70fa5"
+  }
+}

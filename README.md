@@ -1,79 +1,63 @@
-# STDC 最后一批评估实验
+# 同一模型下的完整路线求解实验
 
-本分支 `stdc-final-assessment-20261125` 从 `stdc-research-v0.2` 的 `6167d344` 创建，用一批有限实验决定是否继续投入 STDC 性能研究。原分支和原实验档案保留。
+分支：**solver-paradigm-study-20261127**  
+基点：STDC 最终评估提交 **12b16441fbc5cae8539dcd247d46f7c27d5b8f12**  
+交付状态：**not_run —— 设计、实现和本地执行入口已准备；新算法、pytest、toy 与真实场景实验均未在本轮执行。**
 
-- [本批最终报告：89 次正式运行与投入决定](asar_repro/outputs/stdc_final_assessment_20261125_r1/FINAL_REPORT.md)
-- [本批实验协议与停止规则](asar_repro/docs/stdc_final_assessment/plan.md)
-- [STDC 与共同路线下界的数学论证](asar_repro/docs/stdc_final_assessment/theory.md)
-- [完整复跑说明与环境边界](asar_repro/docs/stdc_final_assessment/reproduce.md)
-- [机器可读配置](asar_repro/configs/stdc_final_assessment.json)
-- [独立执行器](asar_repro/scripts/run_stdc_final_assessment.py)
+本批回答两个问题：保持原来的粒子、探测、运动与 J 指标，改换完整路线求解机制能否找到更好的路线；在可控制的小中规模实例上，已有解到底离最优还有多远。
 
-## 本批结论
+## 从这里开始
 
-**暂停以 STDC 性能调优为主线的投入，保留其下界数学价值与正确实现。** 质量改善至少 0.5% 或到达固定质量至少快 20% 的预设门槛均未通过。两个主场景在同 5 秒预算下，zero、mass、STDC 的最终 J/Pd 相同；达到 `1.001 × 历史参考 J` 的时间，STDC 在 Lake 比 zero / mass 慢 41.30% / 39.46%，在 Hudson 慢 62.43% / 60.43%。这些是本机、同输入的三次计时重复，不是跨机器速度或独立外推结论。
+1. 阅读[本地运行说明](asar_repro/docs/solver_paradigm_study/LOCAL_RUNBOOK.md)，在已有 maritime-sar 环境执行 P0。
+2. 按[实验协议](asar_repro/docs/solver_paradigm_study/plan.md)依次执行 A、B5、B30。
+3. 仅在自动筛选触发时运行 C300；按[判断与停止规则](asar_repro/docs/solver_paradigm_study/decisions.md)解释结果。
+4. 汇总原始记录，填写[结果分析模板](asar_repro/docs/solver_paradigm_study/results_template.md)，将结果推回本分支。
 
-| 主场景 | 5 秒三方法共同 J | 达到预定质量时间：zero / mass / STDC |
-|---|---:|---:|
-| Lake Ontario | 17.264874448 | 2.611 / 2.645 / 3.689 秒 |
-| Hudsons Bay | 20.386109349120 | 1.265 / 1.281 / 2.055 秒 |
+**不要把本次静态检查、上一批测试成绩或历史最好值写成新算法已验证的结果。** 本地 validate 和 A 阶段会检查原评分一致性、完整路线合法性和 count 模型数值结果；失败时后续正式阶段被阻断。
 
-每景最多 24 条早期事件候选，实际独特路线数为 17 / 22 / 23，均未突破历史参考。12 个节点的共同路线下界诊断全部完成：Lake 根界从 9.179977674 提升到 9.855297115，关闭约 8.35% 的原 `U-L` 区间，低于预设 10% 门槛；不等于现有路线接近全局最优。Hudson 的四组 MILP 单项消融共 8 次、每次 30 秒，无 J 改善。Fundy 始终保留方向未验证标签，仅作辅助证据。
+## 已准备的内容
 
-本批相关回归 **314 项测试及 23 个子测试通过**；独立数学审计覆盖 **288 个前缀、6,756 条穷举后缀**。没有运行或冒称重新完成旧环境的 1228 项全量测试。首轮解释器路径表示差异导致的启动阻塞完整保留，正式结果使用新冻结的 `_r1` 目录；数据、预算及决策门槛未更改。独立档案阶段按门槛 **未触发**。
-
-以下保留上一研究分支的历史结果，新的本机计时不与历史机器直接作速度比。
-
-## STDC-A^SAR v0.2 历史研究状态
-
-本分支基于冻结的 `baseline-v1.1`，研究 STDC 下界与搜索策略能否改善海上搜救路径。更新于 2026-11-25。
-
-[研究交接报告与原始证据索引](asar_repro/RESEARCH_HANDOFF_20261125.md) · [供其他模型使用的分析提示词](asar_repro/docs/research_handoff_20261125/PROMPT_FOR_NEXT_MODEL.md)
-
-## 历史参考结果
-
-**直接 STDC 的 anytime 搜索在三个固定场景的工作量预算对照中都降低了 J。** Hudsons Bay 和 Bay of Fundy 的 Pd 同时提高，Lake Ontario 的 Pd 略降。Lake Ontario 的 J 从 17.29389415456 降至 17.264874448，降幅约 0.1678%。三组对照中，直接 STDC 的实际搜索时间均更长。后续调度、rollout、单粒子 DP 和受限 MILP 实验尚未把 J 降到直接 STDC 以下。
-
-下表取自适应实验 `work` 协议的三次运行中位数。各方法从同场景的冻结平行线搜索路径（PT）出发，共用 5000 次扩展、20000 个 OPEN 条目、30 秒的上限。论文基线（`paper_greedy` A^SAR）按自身停止规则完成，直接 STDC（`prior_stdc`）达到扩展上限后返回当前最佳路径。
-
-| 场景 | 论文基线 J↓ / Pd↑ | 直接 STDC J↓ / Pd↑ | 耗时中位数（秒，基线 → STDC） |
-|---|---:|---:|---:|
-| Lake Ontario | 17.293894155 / 0.897370419 | 17.264874448 / 0.897364416 | 0.925 → 3.444 |
-| Hudsons Bay（`arctic_ocean`） | 20.390881327 / 0.906729745 | 20.386109349 / 0.908583112 | 1.282 → 4.741 |
-| Bay of Fundy | 45.903608800 / 0.399984000 | 45.881082400 / 0.415864800 | 1.164 → 5.251 |
-
-[工作量和 5 秒预算的完整对照](asar_repro/outputs/stdc_v0_2/adaptive_20261124/final_report.md) · [逐方法汇总 CSV](asar_repro/outputs/stdc_v0_2/adaptive_20261124/benchmark/aggregate.csv)
-
-三个场景均使用真实历史风流数据驱动的 Leeway 模拟粒子归档（每场景 500 粒子，`q=0.78`，`seed=41`），采用 all-water 碰撞近似。Bay of Fundy 使用官方原始网格角度，保留 **物理方向未验证**（`physical_direction_unverified=true`）标签。[三场景数据与实验协议](asar_repro/outputs/stdc_v0_2/three_real_20261124/three_real_comparison.md) · [Fundy 接入记录](asar_repro/outputs/stdc_v0_2/fundy_repair_20261124/repair_report.md)
-
-## 从早期缓存到热启动
-
-| 研究轮次 | 设计与结果 |
+| 内容 | 入口 |
 |---|---|
-| 缓存与固定窗口 | 复用几何和启发式计算，在固定端点窗口内按精确后缀评分搜索。早期缓存缩短了原 STDC 的耗时，窗口搜索在部分设置下改善路径。[缓存报告](asar_repro/outputs/stdc_v0_2/repair_20261123_r2/report/repair_report.md) · [窗口报告](asar_repro/outputs/stdc_v0_2/windows_20261123/FINAL_REPORT.md) |
-| 全局 anytime 与计算优化 | 首条可行路径之后继续搜索，分开排序和安全剪枝。随后测试快速排序、两步前瞻、等价粒子压缩与尾段修复，部分变体降低了计算开销。[Anytime 报告](asar_repro/outputs/stdc_v0_2/anytime_20261124/FINAL_REPORT.md) · [优化报告](asar_repro/outputs/stdc_v0_2/optimization_20261124_resume/FINAL_REPORT.md) |
-| 中段 rollout、自适应调度与紧凑 DP | 试验中段多样化、预算回退和单粒子下界。紧凑 DP 降低了管理数组内存。自适应轮的八种改进方案与直接 STDC 共配对 144 次，严格 J 胜出 0 次。[中段与 DP 报告](asar_repro/outputs/stdc_v0_2/trajectory_20261124/final_report.md) · [配对结果](asar_repro/outputs/stdc_v0_2/adaptive_20261124/benchmark/paired_comparisons.csv) |
-| 候选诊断 | 重建的 270 个 rollout 候选均等于生成时的当前最佳路径。独立穷举最终直接 STDC 路径的 447 个短窗口，未找到更小 J。[诊断报告](asar_repro/outputs/stdc_v0_2/rollout_limit_diagnosis_20261124/diagnosis_report.md) |
-| 受限 MILP | 固定前缀和走廊，释放终点。首轮 toy 反例触发停止，第二轮关闭本地 HiGHS 的 presolve 后通过回归。第三轮向求解器提交完整 STDC 可行解，并加上包含该解的目标上界。[首轮停止记录](asar_repro/outputs/stdc_v0_2/exact_repair_20261124/final_report.md) · [数值修复报告](asar_repro/outputs/stdc_v0_2/exact_repair_r2_20261124/final_report.md) |
+| 有限实验协议、预算和顺序 | [plan.md](asar_repro/docs/solver_paradigm_study/plan.md) |
+| Windows / Linux 本地命令、失败处理与回传 | [LOCAL_RUNBOOK.md](asar_repro/docs/solver_paradigm_study/LOCAL_RUNBOOK.md) |
+| ILS 与完整时域 CEM 的实际机制、参数 | [route_methods.md](asar_repro/docs/solver_paradigm_study/route_methods.md) |
+| 完整单位流、命中次数与整数割线数学模型 | [count_model.md](asar_repro/docs/solver_paradigm_study/count_model.md) |
+| 质量、时间、延长诊断与停止门槛 | [decisions.md](asar_repro/docs/solver_paradigm_study/decisions.md) |
+| 原始论文与适用边界 | [literature.md](asar_repro/docs/solver_paradigm_study/literature.md) |
+| 冻结配置与输入指纹 | [solver_paradigm_study.json](asar_repro/configs/solver_paradigm_study.json) |
+| 独立本地执行器 | [run_solver_paradigm_study.py](asar_repro/scripts/run_solver_paradigm_study.py) |
+| ILS / CEM 源码 | [route_optimizers.py](asar_repro/src/asar_repro/route_optimizers.py) |
+| 小中规模数值标尺 | [count_oracle.py](asar_repro/src/asar_repro/count_oracle.py) |
 
-## 历史实验：热启动与目标上界
+## 固定的实验规模
 
-第三轮 MILP 对照的冷、热两组都保留同一条已经求得的 STDC 路径作为可行解，每方法每场景另给 300 秒诊断预算。18 个受限子问题中，6 个完成，12 个达到时间上限。三个场景的最终 J/Pd 都等于表中的直接 STDC 值。热启动加上界组的峰值内存高于冷启动组。
+| 阶段 | 内容 | 任务数 | 算法预算合计 |
+|---|---|---:|---:|
+| P0 | 本地依赖、输入、测试与冻结 | 不作为性能实验 | 取决于本地验证 |
+| A | 18 个诊断实例；五种路径方法、count；tiny 加独立 DFS | 117 | 1125 秒 |
+| B5 | Lake / Hudson，5 秒，确定性各 3 次、随机各 5 seeds | 38 | 190 秒 |
+| B30 | 同矩阵独立运行 30 秒 | 38 | 1140 秒 |
+| C300 | B30 信号触发的有限延长诊断 | 最多 8 | 最多 2400 秒 |
+| H | 独立档案验证 | 未设计、未启用 | 不自动执行 |
 
-| 场景 | 额外耗时（秒，冷 → 热） | 峰值内存（MiB，冷 → 热） |
-|---|---:|---:|
-| Lake Ontario | 300.447 → 300.039 | 428.11 → 475.54 |
-| Hudsons Bay | 300.134 → 300.132 | 553.94 → 738.75 |
-| Bay of Fundy | 300.122 → 300.642 | 961.30 → 989.93 |
+A+B5+B30 的算法上限合计 **2455 秒（40 分 55 秒）**。这不是总运行时间承诺：进程启动、输入与哈希检查、测试、结果审计、I/O、报告及 watchdog 余量另计。某些方法会提前完成；失败会停止阶段。
 
-[第三轮报告](asar_repro/outputs/stdc_v0_2/exact_repair_r3_20261124/final_report.md) · [对比 CSV](asar_repro/outputs/stdc_v0_2/exact_repair_r3_20261124/diagnostic/comparison.csv) · [耗时与内存图](asar_repro/outputs/stdc_v0_2/exact_repair_r3_20261124/diagnostic/efficiency.png)
+## 方法与共同契约
 
-## 验证与复跑
+主要对照为 paper_baseline、anytime_zero、anytime_mass；新候选为 ILS 和完整 T 步 CEM。count 模型仅在诊断实例运行，没有自动对 500 粒子真实场景启动完整 MILP。
 
-- 目标是最小化搜索第 1 至 T 步的未探测质量之和 J，t=0 不探测。Pd 表示截至第 T 步的累计探测概率，与 J 用同一条路径计算。
-- 真实场景结果均标为未认证。动态 `paper_greedy` 在 anytime 框架中用于排序。MILP 的下界和 gap 仅适用于对应前缀与走廊，当前路径的全局最优性仍待验证。
-- 最新实验归档记录了 **1228 项全量测试、192 组冷启动 Oracle、576 组热启动和上界消融 Oracle**通过，Oracle 最大 J 误差为 0。[验证汇总](asar_repro/outputs/stdc_v0_2/exact_repair_r3_20261124/validation_summary.json) · [研究交接复核](asar_repro/docs/research_handoff_20261125/review.json)
+所有方法保持四邻移动、无等待、固定起点、自由终点、t=0 不探测、原粒子身份与特殊 bins、未发现质量不归一化；最小化原 J，Pd 使用同一路线单列。正式比较均由冻结共同 PT 起步，计时包含路径复制和原评分复算；共同 PT 的原离线生成成本统一不计。历史参考只用于重放核验与目标阈值，不交给新方法热启动。
 
-离线复跑使用已有 `maritime-sar` 环境，先按冻结协议核对输入 SHA-256，再写入新的输出目录。各轮报告附有复跑命令和环境记录。大体积原始风流文件及下载分片保存在本地。
+Fundy 的物理方向未验证标签继续保留，本批不进入主要矩阵。Frank–Wolfe、ALNS 自适应权重、学习方法、新场景和独立档案属于后续候选，未自动启用。
 
-[上传与本地保留文件清单](asar_repro/docs/research_handoff_20261125/upload_inventory.json) · [原论文阶段 0–8 复现说明](asar_repro/README.md)
+## 继承的研究结论
+
+上一批结论仍是：暂停以 STDC 性能微调为中心的投入，保留其数学下界和审计价值。两个主场景同 5 秒预算的 zero/mass/STDC 最终质量相同，STDC 达到同质量更慢；该结论没有证明全局近最优，也未检验完不同路线求解范式。
+
+- [上一批完整报告与原始记录](asar_repro/outputs/stdc_final_assessment_20261125_r1/FINAL_REPORT.md)
+- [历史研究交接](asar_repro/RESEARCH_HANDOFF_20261125.md)
+- [原论文阶段 0–8 复现入口](asar_repro/README.md)
+
+本分支没有改动原有算法源码、原粒子输入或历史实验产物。新源文件尚待用户本地执行验证。
+
