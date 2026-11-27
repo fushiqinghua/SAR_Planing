@@ -1,0 +1,38 @@
+[
+  {
+    "stage": "R120",
+    "case": "hudson_window_early",
+    "footprint": "heading_square",
+    "connectivity": 8,
+    "method": "diagnostic_cached",
+    "repetition": 0,
+    "seconds": 120
+  },
+  {
+    "stage": "R120",
+    "case": "hudson_window_early",
+    "footprint": "heading_square",
+    "connectivity": 4,
+    "method": "diagnostic_cached",
+    "repetition": 0,
+    "seconds": 120
+  },
+  {
+    "stage": "R120",
+    "case": "hudson_window_early",
+    "footprint": "axis_square",
+    "connectivity": 8,
+    "method": "diagnostic_cached",
+    "repetition": 0,
+    "seconds": 120
+  },
+  {
+    "stage": "R120",
+    "case": "hudson_window_early",
+    "footprint": "axis_square",
+    "connectivity": 4,
+    "method": "diagnostic_cached",
+    "repetition": 0,
+    "seconds": 120
+  }
+]

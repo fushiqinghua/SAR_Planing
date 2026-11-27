@@ -1,0 +1,533 @@
+{
+  "status": "complete",
+  "plan": {
+    "status": "plan_not_results",
+    "stages": {
+      "D5": {
+        "tasks": 24,
+        "algorithm_budget_s": 120
+      },
+      "D30": {
+        "tasks": 72,
+        "algorithm_budget_s": 2160
+      },
+      "G30": {
+        "tasks": 12,
+        "algorithm_budget_s": 360
+      },
+      "R120": {
+        "tasks": 4,
+        "algorithm_budget_s": 480
+      }
+    },
+    "formal_tasks": 112,
+    "formal_algorithm_budget_s": 3120,
+    "data_role": "previously_seen_development_and_diagnostics",
+    "H2": "design_preregistered_inputs_and_adapter_not_ready",
+    "initialization": "fixed_previous_H30_rep0_four_neighbor_route; historical generation excluded uniformly; copy/replay charged",
+    "R120": "separate restarts, one repetition, quality diagnostics, not an equal-30s comparison",
+    "excluded_costs": "local pytest, input loading, process startup, independent audits and IO"
+  },
+  "stages": {
+    "D5": {
+      "stage": "D5",
+      "planned": 24,
+      "completed": 24,
+      "status": "complete",
+      "missing": [],
+      "errors": []
+    },
+    "D30": {
+      "stage": "D30",
+      "planned": 72,
+      "completed": 72,
+      "status": "complete",
+      "missing": [],
+      "errors": []
+    },
+    "G30": {
+      "stage": "G30",
+      "planned": 12,
+      "completed": 12,
+      "status": "complete",
+      "missing": [],
+      "errors": []
+    },
+    "R120": {
+      "stage": "R120",
+      "planned": 4,
+      "completed": 4,
+      "status": "complete",
+      "missing": [],
+      "errors": []
+    }
+  },
+  "reference_commit": "b3ca640de25c1d5b9d1a7449b5ed6053d9e3f3f1",
+  "data_role": "previously_seen_development_and_diagnostics",
+  "method_decision": {
+    "status": "completion_development_screen_passed",
+    "selected_method_for_H2": "completion_J",
+    "quality_protected": true,
+    "improved_primary_groups": 1,
+    "target_hit_counts_protected": true,
+    "comparisons": [
+      {
+        "case": "lake_window_early",
+        "footprint": "heading_square",
+        "connectivity": 4,
+        "control_J": 17.151955582719996,
+        "candidate_J": 17.151955582719996,
+        "relative_gain": 0.0
+      },
+      {
+        "case": "lake_window_early",
+        "footprint": "heading_square",
+        "connectivity": 8,
+        "control_J": 16.7442149402368,
+        "candidate_J": 16.7442149402368,
+        "relative_gain": 0.0
+      },
+      {
+        "case": "lake_window_late",
+        "footprint": "heading_square",
+        "connectivity": 4,
+        "control_J": 17.276096663679997,
+        "candidate_J": 17.276096663679997,
+        "relative_gain": 0.0
+      },
+      {
+        "case": "lake_window_late",
+        "footprint": "heading_square",
+        "connectivity": 8,
+        "control_J": 16.8718485741568,
+        "candidate_J": 16.8718485741568,
+        "relative_gain": 0.0
+      },
+      {
+        "case": "hudson_window_early",
+        "footprint": "heading_square",
+        "connectivity": 4,
+        "control_J": 26.344691039999994,
+        "candidate_J": 23.13390364512,
+        "relative_gain": 0.12187606945190405
+      },
+      {
+        "case": "hudson_window_early",
+        "footprint": "heading_square",
+        "connectivity": 8,
+        "control_J": 22.790164159180804,
+        "candidate_J": 22.790164159180804,
+        "relative_gain": 0.0
+      },
+      {
+        "case": "hudson_window_late",
+        "footprint": "heading_square",
+        "connectivity": 4,
+        "control_J": 20.337375787276805,
+        "candidate_J": 20.337375787276805,
+        "relative_gain": 0.0
+      },
+      {
+        "case": "hudson_window_late",
+        "footprint": "heading_square",
+        "connectivity": 8,
+        "control_J": 19.8157903675968,
+        "candidate_J": 19.8157903675968,
+        "relative_gain": 0.0
+      },
+      {
+        "case": "lake_window_late",
+        "footprint": "axis_square",
+        "connectivity": 4,
+        "control_J": 17.276096663679997,
+        "candidate_J": 17.276096663679997,
+        "relative_gain": 0.0
+      },
+      {
+        "case": "lake_window_late",
+        "footprint": "axis_square",
+        "connectivity": 8,
+        "control_J": 17.176060142118406,
+        "candidate_J": 17.176060142118406,
+        "relative_gain": 0.0
+      },
+      {
+        "case": "hudson_window_early",
+        "footprint": "axis_square",
+        "connectivity": 4,
+        "control_J": 26.344691039999994,
+        "candidate_J": 23.13390364512,
+        "relative_gain": 0.12187606945190405
+      },
+      {
+        "case": "hudson_window_early",
+        "footprint": "axis_square",
+        "connectivity": 8,
+        "control_J": 22.840425949440014,
+        "candidate_J": 22.840425949440014,
+        "relative_gain": 0.0
+      }
+    ],
+    "targets": [
+      {
+        "target": {
+          "case": "lake_window_late",
+          "footprint": "heading_square",
+          "connectivity": 8,
+          "J": 16.8718485741568
+        },
+        "methods": {
+          "diagnostic_cached": {
+            "times_s": [
+              null,
+              null,
+              null
+            ],
+            "hit_count": 0,
+            "median_if_all_hit_s": null,
+            "non_hit": "right_censored_at_5s_not_a_measured_target_time"
+          },
+          "completion_J": {
+            "times_s": [
+              null,
+              null,
+              null
+            ],
+            "hit_count": 0,
+            "median_if_all_hit_s": null,
+            "non_hit": "right_censored_at_5s_not_a_measured_target_time"
+          }
+        },
+        "relative_time_reduction": null
+      },
+      {
+        "target": {
+          "case": "hudson_window_early",
+          "footprint": "heading_square",
+          "connectivity": 8,
+          "J": 22.790164159180804
+        },
+        "methods": {
+          "diagnostic_cached": {
+            "times_s": [
+              null,
+              null,
+              null
+            ],
+            "hit_count": 0,
+            "median_if_all_hit_s": null,
+            "non_hit": "right_censored_at_5s_not_a_measured_target_time"
+          },
+          "completion_J": {
+            "times_s": [
+              null,
+              null,
+              null
+            ],
+            "hit_count": 0,
+            "median_if_all_hit_s": null,
+            "non_hit": "right_censored_at_5s_not_a_measured_target_time"
+          }
+        },
+        "relative_time_reduction": null
+      }
+    ],
+    "independence_claim": false
+  },
+  "graph_comparisons": [
+    {
+      "method": "diagnostic_cached",
+      "case": "lake_window_early",
+      "footprint": "heading_square",
+      "J4": 17.151955582719996,
+      "J8": 16.7442149402368,
+      "relative_J_gain": 0.023772253870222172,
+      "Pd4": 0.90976508064,
+      "Pd8": 0.9179162111808,
+      "delta_Pd_pp": 0.8151130540800078,
+      "winner": true,
+      "role": "observed_development_data_not_independent_transfer"
+    },
+    {
+      "method": "diagnostic_cached",
+      "case": "lake_window_late",
+      "footprint": "heading_square",
+      "J4": 17.276096663679997,
+      "J8": 16.8718485741568,
+      "relative_J_gain": 0.023399272265769294,
+      "Pd4": 0.90625594176,
+      "Pd8": 0.897995257536,
+      "delta_Pd_pp": -0.8260684224000059,
+      "winner": true,
+      "role": "observed_development_data_not_independent_transfer"
+    },
+    {
+      "method": "diagnostic_cached",
+      "case": "hudson_window_early",
+      "footprint": "heading_square",
+      "J4": 26.344691039999994,
+      "J8": 22.790164159180804,
+      "relative_J_gain": 0.13492384007928718,
+      "Pd4": 0.82485936,
+      "Pd8": 0.8953627340736,
+      "delta_Pd_pp": 7.050337407359997,
+      "winner": true,
+      "role": "observed_development_data_not_independent_transfer"
+    },
+    {
+      "method": "diagnostic_cached",
+      "case": "hudson_window_late",
+      "footprint": "heading_square",
+      "J4": 20.337375787276805,
+      "J8": 19.8157903675968,
+      "relative_J_gain": 0.02564664316260074,
+      "Pd4": 0.917093437728,
+      "Pd8": 0.9218181455808,
+      "delta_Pd_pp": 0.4724707852799992,
+      "winner": true,
+      "role": "observed_development_data_not_independent_transfer"
+    },
+    {
+      "method": "diagnostic_cached",
+      "case": "lake_window_late",
+      "footprint": "axis_square",
+      "J4": 17.276096663679997,
+      "J8": 17.176060142118406,
+      "relative_J_gain": 0.005790458545644802,
+      "Pd4": 0.90625594176,
+      "Pd8": 0.9004885321536,
+      "delta_Pd_pp": -0.5767409606399987,
+      "winner": true,
+      "role": "observed_development_data_not_independent_transfer"
+    },
+    {
+      "method": "diagnostic_cached",
+      "case": "hudson_window_early",
+      "footprint": "axis_square",
+      "J4": 26.344691039999994,
+      "J8": 22.840425949440014,
+      "relative_J_gain": 0.13301598736684142,
+      "Pd4": 0.82485936,
+      "Pd8": 0.88711697568,
+      "delta_Pd_pp": 6.225761567999999,
+      "winner": true,
+      "role": "observed_development_data_not_independent_transfer"
+    },
+    {
+      "method": "completion_J",
+      "case": "lake_window_early",
+      "footprint": "heading_square",
+      "J4": 17.151955582719996,
+      "J8": 16.7442149402368,
+      "relative_J_gain": 0.023772253870222172,
+      "Pd4": 0.90976508064,
+      "Pd8": 0.9179162111808,
+      "delta_Pd_pp": 0.8151130540800078,
+      "winner": true,
+      "role": "observed_development_data_not_independent_transfer"
+    },
+    {
+      "method": "completion_J",
+      "case": "lake_window_late",
+      "footprint": "heading_square",
+      "J4": 17.276096663679997,
+      "J8": 16.8718485741568,
+      "relative_J_gain": 0.023399272265769294,
+      "Pd4": 0.90625594176,
+      "Pd8": 0.897995257536,
+      "delta_Pd_pp": -0.8260684224000059,
+      "winner": true,
+      "role": "observed_development_data_not_independent_transfer"
+    },
+    {
+      "method": "completion_J",
+      "case": "hudson_window_early",
+      "footprint": "heading_square",
+      "J4": 23.13390364512,
+      "J8": 22.790164159180804,
+      "relative_J_gain": 0.014858689273209028,
+      "Pd4": 0.87471587424,
+      "Pd8": 0.8953627340736,
+      "delta_Pd_pp": 2.064685983360004,
+      "winner": true,
+      "role": "observed_development_data_not_independent_transfer"
+    },
+    {
+      "method": "completion_J",
+      "case": "hudson_window_late",
+      "footprint": "heading_square",
+      "J4": 20.337375787276805,
+      "J8": 19.8157903675968,
+      "relative_J_gain": 0.02564664316260074,
+      "Pd4": 0.917093437728,
+      "Pd8": 0.9218181455808,
+      "delta_Pd_pp": 0.4724707852799992,
+      "winner": true,
+      "role": "observed_development_data_not_independent_transfer"
+    },
+    {
+      "method": "completion_J",
+      "case": "lake_window_late",
+      "footprint": "axis_square",
+      "J4": 17.276096663679997,
+      "J8": 17.176060142118406,
+      "relative_J_gain": 0.005790458545644802,
+      "Pd4": 0.90625594176,
+      "Pd8": 0.9004885321536,
+      "delta_Pd_pp": -0.5767409606399987,
+      "winner": true,
+      "role": "observed_development_data_not_independent_transfer"
+    },
+    {
+      "method": "completion_J",
+      "case": "hudson_window_early",
+      "footprint": "axis_square",
+      "J4": 23.13390364512,
+      "J8": 22.840425949440014,
+      "relative_J_gain": 0.01268604296888276,
+      "Pd4": 0.87471587424,
+      "Pd8": 0.88711697568,
+      "delta_Pd_pp": 1.2401101440000062,
+      "winner": true,
+      "role": "observed_development_data_not_independent_transfer"
+    }
+  ],
+  "guard_decision": {
+    "status": "feasible_without_required_joint_graph_gain",
+    "all_repetitions_feasible": true,
+    "primary_joint_gain": false,
+    "guarded_graph_signal": false,
+    "comparisons": [
+      {
+        "footprint": "heading_square",
+        "pd_floor": 0.90625594176,
+        "reference_J": 17.276096663679997,
+        "methods_by_connectivity": {
+          "4": {
+            "J": 17.276096663679997,
+            "pd_final": 0.90625594176,
+            "all_repetitions_feasible": true,
+            "relative_gain_over_reference": 0.0,
+            "joint_gain_over_reference": false,
+            "J_only_J": 17.276096663679997,
+            "J_only_pd": 0.90625594176,
+            "J_cost_of_guard": 0.0
+          },
+          "8": {
+            "J": 17.276096663679997,
+            "pd_final": 0.90625594176,
+            "all_repetitions_feasible": true,
+            "relative_gain_over_reference": 0.0,
+            "joint_gain_over_reference": false,
+            "J_only_J": 16.8718485741568,
+            "J_only_pd": 0.897995257536,
+            "J_cost_of_guard": 0.4042480895231968
+          }
+        },
+        "relative_J_gain_8_over_4": 0.0
+      },
+      {
+        "footprint": "axis_square",
+        "pd_floor": 0.90625594176,
+        "reference_J": 17.276096663679997,
+        "methods_by_connectivity": {
+          "4": {
+            "J": 17.276096663679997,
+            "pd_final": 0.90625594176,
+            "all_repetitions_feasible": true,
+            "relative_gain_over_reference": 0.0,
+            "joint_gain_over_reference": false,
+            "J_only_J": 17.276096663679997,
+            "J_only_pd": 0.90625594176,
+            "J_cost_of_guard": 0.0
+          },
+          "8": {
+            "J": 17.276096663679997,
+            "pd_final": 0.90625594176,
+            "all_repetitions_feasible": true,
+            "relative_gain_over_reference": 0.0,
+            "joint_gain_over_reference": false,
+            "J_only_J": 17.176060142118406,
+            "J_only_pd": 0.9004885321536,
+            "J_cost_of_guard": 0.10003652156159148
+          }
+        },
+        "relative_J_gain_8_over_4": 0.0
+      }
+    ],
+    "scope": "new constrained objective; does not relabel the previous J-only study"
+  },
+  "strong_four_reference": {
+    "status": "diagnostic_only",
+    "comparisons": [
+      {
+        "footprint": "heading_square",
+        "best_known_four_J": 23.13390364512,
+        "source_run": "D5_b904d754a8d6847d5ed1",
+        "comparisons": [
+          {
+            "method": "diagnostic_cached",
+            "median_8_neighbor_30s_J": 22.790164159180804,
+            "relative_gain_vs_best_known_four": 0.014858689273209028
+          },
+          {
+            "method": "completion_J",
+            "median_8_neighbor_30s_J": 22.790164159180804,
+            "relative_gain_vs_best_known_four": 0.014858689273209028
+          }
+        ]
+      },
+      {
+        "footprint": "axis_square",
+        "best_known_four_J": 23.13390364512,
+        "source_run": "D30_102cda6fbe149fe271b5",
+        "comparisons": [
+          {
+            "method": "diagnostic_cached",
+            "median_8_neighbor_30s_J": 22.840425949440014,
+            "relative_gain_vs_best_known_four": 0.01268604296888276
+          },
+          {
+            "method": "completion_J",
+            "median_8_neighbor_30s_J": 22.840425949440014,
+            "relative_gain_vs_best_known_four": 0.01268604296888276
+          }
+        ]
+      }
+    ],
+    "r120_paired_comparisons": [
+      {
+        "footprint": "heading_square",
+        "J4": 26.344691039999994,
+        "J8": 22.7900798782464,
+        "relative_J_gain": 0.1349270392412845,
+        "delta_Pd_pp": 6.695577757439997,
+        "stop_reasons": [
+          "max_open",
+          "max_open"
+        ],
+        "repetitions": 1,
+        "significance_claim": false
+      },
+      {
+        "footprint": "axis_square",
+        "J4": 26.344691039999994,
+        "J8": 22.840425949440014,
+        "relative_J_gain": 0.13301598736684142,
+        "delta_Pd_pp": 6.225761567999999,
+        "stop_reasons": [
+          "max_open",
+          "max_open"
+        ],
+        "repetitions": 1,
+        "significance_claim": false
+      }
+    ],
+    "meaning": "best observed feasible four-neighbor route is an upper bound on its minimum J, not a lower bound or optimum",
+    "budget_warning": "mixed 5/30/120s reference pool; cannot claim equal-budget speed or topology optimality gap"
+  },
+  "H2": "design_preregistered_inputs_and_adapter_not_ready",
+  "no_global_or_epsilon_certificate": true,
+  "H2_method_freeze_ready": true,
+  "algorithm_budget_is_not_end_to_end_runtime": true
+}

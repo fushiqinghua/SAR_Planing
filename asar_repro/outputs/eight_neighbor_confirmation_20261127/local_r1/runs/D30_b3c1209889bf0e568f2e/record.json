@@ -1,0 +1,33 @@
+{
+  "task": {
+    "stage": "D30",
+    "case": "hudson_window_early",
+    "footprint": "heading_square",
+    "connectivity": 8,
+    "method": "completion_J",
+    "repetition": 1,
+    "seconds": 30
+  },
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\scripts\\run_eight_neighbor_confirmation.py",
+    "_worker",
+    "--config",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\configs\\eight_neighbor_confirmation.json",
+    "--out",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\outputs\\eight_neighbor_confirmation_20261127\\local_r1",
+    "--task",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\outputs\\eight_neighbor_confirmation_20261127\\local_r1\\runs\\D30_b3c1209889bf0e568f2e\\task.json",
+    "--result",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\outputs\\eight_neighbor_confirmation_20261127\\local_r1\\runs\\D30_b3c1209889bf0e568f2e\\result.json"
+  ],
+  "frozen_evidence": {
+    "protocol_sha256": "8d6747a2beaf884d625681abb557282c9c27f71f308d97a9d47858d57fbc46ac"
+  },
+  "status": "completed",
+  "returncode": 0,
+  "watchdog": null,
+  "process_wall_s": 31.625497100001667,
+  "peak_rss_bytes": 424243200,
+  "result_sha256": "8e3b1465fc0c91143edb745fff980d9c0f82982349e36cacf7f5799b2646d191"
+}

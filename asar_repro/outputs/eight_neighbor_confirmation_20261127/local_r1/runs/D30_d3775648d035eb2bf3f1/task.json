@@ -1,0 +1,9 @@
+{
+  "stage": "D30",
+  "case": "lake_window_late",
+  "footprint": "axis_square",
+  "connectivity": 4,
+  "method": "completion_J",
+  "repetition": 0,
+  "seconds": 30
+}

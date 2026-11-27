@@ -1,0 +1,28 @@
+{
+  "status": "plan_not_results",
+  "stages": {
+    "D5": {
+      "tasks": 24,
+      "algorithm_budget_s": 120
+    },
+    "D30": {
+      "tasks": 72,
+      "algorithm_budget_s": 2160
+    },
+    "G30": {
+      "tasks": 12,
+      "algorithm_budget_s": 360
+    },
+    "R120": {
+      "tasks": 4,
+      "algorithm_budget_s": 480
+    }
+  },
+  "formal_tasks": 112,
+  "formal_algorithm_budget_s": 3120,
+  "data_role": "previously_seen_development_and_diagnostics",
+  "H2": "design_preregistered_inputs_and_adapter_not_ready",
+  "initialization": "fixed_previous_H30_rep0_four_neighbor_route; historical generation excluded uniformly; copy/replay charged",
+  "R120": "separate restarts, one repetition, quality diagnostics, not an equal-30s comparison",
+  "excluded_costs": "local pytest, input loading, process startup, independent audits and IO"
+}

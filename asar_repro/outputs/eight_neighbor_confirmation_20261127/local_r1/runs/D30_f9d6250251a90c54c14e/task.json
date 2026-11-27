@@ -1,0 +1,9 @@
+{
+  "stage": "D30",
+  "case": "hudson_window_early",
+  "footprint": "axis_square",
+  "connectivity": 8,
+  "method": "diagnostic_cached",
+  "repetition": 2,
+  "seconds": 30
+}

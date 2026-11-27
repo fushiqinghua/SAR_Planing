@@ -1,0 +1,9 @@
+{
+  "stage": "D5",
+  "case": "lake_window_late",
+  "footprint": "heading_square",
+  "connectivity": 4,
+  "method": "diagnostic_cached",
+  "repetition": 1,
+  "seconds": 5
+}

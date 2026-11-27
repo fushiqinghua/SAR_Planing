@@ -1,0 +1,15 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\scripts\\run_eight_neighbor_confirmation.py",
+    "run",
+    "--stage",
+    "D5",
+    "--out",
+    "outputs/eight_neighbor_confirmation_20261127/local_r1"
+  ],
+  "started_utc": "2026-11-27T15:24:25.297393+00:00",
+  "status": "completed",
+  "returncode": 0,
+  "finished_utc": "2026-11-27T15:27:05.684470+00:00"
+}

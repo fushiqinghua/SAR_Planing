@@ -1,0 +1,9 @@
+{
+  "stage": "R120",
+  "case": "hudson_window_early",
+  "footprint": "heading_square",
+  "connectivity": 8,
+  "method": "diagnostic_cached",
+  "repetition": 0,
+  "seconds": 120
+}
