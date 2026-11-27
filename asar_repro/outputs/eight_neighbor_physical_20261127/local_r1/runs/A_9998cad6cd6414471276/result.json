@@ -1,0 +1,1207 @@
+{
+  "task": {
+    "stage": "A",
+    "case": "repeat_detection",
+    "footprint": "heading_square",
+    "connectivity": 4,
+    "method": "oracle",
+    "seconds": 10,
+    "repetition": 0
+  },
+  "result": {
+    "status": "valid",
+    "method_status": "optimal_enumerated",
+    "stop_reason": "all_routes_enumerated_and_replay_verified",
+    "J": 1.68262,
+    "pd_final": 0.79638,
+    "physical_replay": {
+      "model": "constant_speed_common_clock_square_proxy_v1",
+      "sensor_model_status": "controlled_geometric_proxy_not_camera_calibrated",
+      "footprint": "heading_square",
+      "connectivity": 4,
+      "J": 1.68262,
+      "pd_final": 0.79638,
+      "J_time_scaled_s": 1.68262,
+      "J_time_scaled_interpretation": "fixed-clock post-observation sum, not exact continuous-time MTTD",
+      "survival": [
+        1.0,
+        0.8049999999999999,
+        0.376,
+        0.29800000000000004,
+        0.20362
+      ],
+      "final_weights": [
+        0.026619999999999994,
+        0.05499999999999999,
+        0.1,
+        0.022
+      ],
+      "waypoints": [
+        4,
+        5,
+        4,
+        1,
+        4
+      ],
+      "path": [
+        4,
+        5,
+        4,
+        1,
+        4
+      ],
+      "waypoint_semantics": "motion commands; a terminal partial edge may not reach its last waypoint",
+      "planned_arrival_times_s": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "arrival_times_s": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "observation_times_s": [
+        1.0,
+        2.0,
+        3.0,
+        4.0
+      ],
+      "observations": [
+        {
+          "tick": 1,
+          "time_s": 1.0,
+          "aircraft_xy": [
+            1.0,
+            0.0
+          ],
+          "heading_xy": [
+            1.0,
+            0.0
+          ],
+          "source_vertex": 4,
+          "target_vertex": 5,
+          "fraction_of_edge": 1.0,
+          "sensed_particle_indices": [
+            1
+          ],
+          "sensed_trajectory_ids": [
+            1
+          ],
+          "mass_before": 1.0,
+          "mass_after": 0.8049999999999999,
+          "detected_mass": 0.19500000000000006,
+          "cumulative_J": 0.8049999999999999
+        },
+        {
+          "tick": 2,
+          "time_s": 2.0,
+          "aircraft_xy": [
+            0.0,
+            0.0
+          ],
+          "heading_xy": [
+            -1.0,
+            0.0
+          ],
+          "source_vertex": 5,
+          "target_vertex": 4,
+          "fraction_of_edge": 1.0,
+          "sensed_particle_indices": [
+            0
+          ],
+          "sensed_trajectory_ids": [
+            0
+          ],
+          "mass_before": 0.8049999999999999,
+          "mass_after": 0.376,
+          "detected_mass": 0.42899999999999994,
+          "cumulative_J": 1.181
+        },
+        {
+          "tick": 3,
+          "time_s": 3.0,
+          "aircraft_xy": [
+            0.0,
+            1.0
+          ],
+          "heading_xy": [
+            0.0,
+            1.0
+          ],
+          "source_vertex": 4,
+          "target_vertex": 1,
+          "fraction_of_edge": 1.0,
+          "sensed_particle_indices": [
+            3
+          ],
+          "sensed_trajectory_ids": [
+            3
+          ],
+          "mass_before": 0.376,
+          "mass_after": 0.29800000000000004,
+          "detected_mass": 0.07799999999999996,
+          "cumulative_J": 1.479
+        },
+        {
+          "tick": 4,
+          "time_s": 4.0,
+          "aircraft_xy": [
+            0.0,
+            0.0
+          ],
+          "heading_xy": [
+            0.0,
+            -1.0
+          ],
+          "source_vertex": 1,
+          "target_vertex": 4,
+          "fraction_of_edge": 1.0,
+          "sensed_particle_indices": [
+            0
+          ],
+          "sensed_trajectory_ids": [
+            0
+          ],
+          "mass_before": 0.29800000000000004,
+          "mass_after": 0.20362,
+          "detected_mass": 0.09438000000000005,
+          "cumulative_J": 1.68262
+        }
+      ],
+      "segments": [
+        {
+          "source_vertex": 4,
+          "target_vertex": 5,
+          "start_time_s": 0.0,
+          "planned_arrival_time_s": 1.0,
+          "end_time_s": 1.0,
+          "full_edge_duration_s": 1.0,
+          "start_xy": [
+            0.0,
+            0.0
+          ],
+          "target_xy": [
+            1.0,
+            0.0
+          ],
+          "actual_end_xy": [
+            1.0,
+            0.0
+          ],
+          "diagonal": false,
+          "partial": false,
+          "flown_distance_m": 1.0
+        },
+        {
+          "source_vertex": 5,
+          "target_vertex": 4,
+          "start_time_s": 1.0,
+          "planned_arrival_time_s": 2.0,
+          "end_time_s": 2.0,
+          "full_edge_duration_s": 1.0,
+          "start_xy": [
+            1.0,
+            0.0
+          ],
+          "target_xy": [
+            0.0,
+            0.0
+          ],
+          "actual_end_xy": [
+            0.0,
+            0.0
+          ],
+          "diagonal": false,
+          "partial": false,
+          "flown_distance_m": 1.0
+        },
+        {
+          "source_vertex": 4,
+          "target_vertex": 1,
+          "start_time_s": 2.0,
+          "planned_arrival_time_s": 3.0,
+          "end_time_s": 3.0,
+          "full_edge_duration_s": 1.0,
+          "start_xy": [
+            0.0,
+            0.0
+          ],
+          "target_xy": [
+            0.0,
+            1.0
+          ],
+          "actual_end_xy": [
+            0.0,
+            1.0
+          ],
+          "diagonal": false,
+          "partial": false,
+          "flown_distance_m": 1.0
+        },
+        {
+          "source_vertex": 1,
+          "target_vertex": 4,
+          "start_time_s": 3.0,
+          "planned_arrival_time_s": 4.0,
+          "end_time_s": 4.0,
+          "full_edge_duration_s": 1.0,
+          "start_xy": [
+            0.0,
+            1.0
+          ],
+          "target_xy": [
+            0.0,
+            0.0
+          ],
+          "actual_end_xy": [
+            0.0,
+            0.0
+          ],
+          "diagonal": false,
+          "partial": false,
+          "flown_distance_m": 1.0
+        }
+      ],
+      "physical_duration_s": 4.0,
+      "horizon_s": 4.0,
+      "observation_count": 4,
+      "delta_s": 1.0,
+      "speed_m_s": 1.0,
+      "distance_m": 4.0,
+      "diagonal_distance_m": 0.0,
+      "diagonal_distance_fraction": 0.0,
+      "diagonal_edge_count": 0,
+      "final_xy": [
+        0.0,
+        0.0
+      ],
+      "last_edge_partial": false,
+      "trajectory_identity": "provided_ids",
+      "formal_certificate": false
+    },
+    "history": [
+      {
+        "elapsed_s": 0.00010449999899719842,
+        "source": "enumeration",
+        "J": 3.65368,
+        "pd_final": 0.09516000000000002,
+        "waypoints": [
+          4,
+          1,
+          0,
+          1,
+          0
+        ],
+        "path": [
+          4,
+          1,
+          0,
+          1,
+          0
+        ]
+      },
+      {
+        "elapsed_s": 0.00019569999949453631,
+        "source": "enumeration",
+        "J": 3.2246799999999998,
+        "pd_final": 0.52416,
+        "waypoints": [
+          4,
+          1,
+          0,
+          1,
+          4
+        ],
+        "path": [
+          4,
+          1,
+          0,
+          1,
+          4
+        ]
+      },
+      {
+        "elapsed_s": 0.0002750999992713332,
+        "source": "enumeration",
+        "J": 3.103,
+        "pd_final": 0.585,
+        "waypoints": [
+          4,
+          1,
+          0,
+          3,
+          4
+        ],
+        "path": [
+          4,
+          1,
+          0,
+          3,
+          4
+        ]
+      },
+      {
+        "elapsed_s": 0.00048719999904278666,
+        "source": "enumeration",
+        "J": 2.869,
+        "pd_final": 0.702,
+        "waypoints": [
+          4,
+          1,
+          2,
+          5,
+          4
+        ],
+        "path": [
+          4,
+          1,
+          2,
+          5,
+          4
+        ]
+      },
+      {
+        "elapsed_s": 0.0005579999997280538,
+        "source": "enumeration",
+        "J": 2.36668,
+        "pd_final": 0.52416,
+        "waypoints": [
+          4,
+          1,
+          4,
+          1,
+          0
+        ],
+        "path": [
+          4,
+          1,
+          4,
+          1,
+          0
+        ]
+      },
+      {
+        "elapsed_s": 0.0006233999993128236,
+        "source": "enumeration",
+        "J": 2.2723,
+        "pd_final": 0.6185400000000001,
+        "waypoints": [
+          4,
+          1,
+          4,
+          1,
+          4
+        ],
+        "path": [
+          4,
+          1,
+          4,
+          1,
+          4
+        ]
+      },
+      {
+        "elapsed_s": 0.0006592999989152304,
+        "source": "enumeration",
+        "J": 2.245,
+        "pd_final": 0.585,
+        "waypoints": [
+          4,
+          1,
+          4,
+          3,
+          0
+        ],
+        "path": [
+          4,
+          1,
+          4,
+          3,
+          0
+        ]
+      },
+      {
+        "elapsed_s": 0.0006914999994478421,
+        "source": "enumeration",
+        "J": 2.15062,
+        "pd_final": 0.67938,
+        "waypoints": [
+          4,
+          1,
+          4,
+          3,
+          4
+        ],
+        "path": [
+          4,
+          1,
+          4,
+          3,
+          4
+        ]
+      },
+      {
+        "elapsed_s": 0.0007611999990331242,
+        "source": "enumeration",
+        "J": 2.011,
+        "pd_final": 0.702,
+        "waypoints": [
+          4,
+          1,
+          4,
+          5,
+          2
+        ],
+        "path": [
+          4,
+          1,
+          4,
+          5,
+          2
+        ]
+      },
+      {
+        "elapsed_s": 0.000796799999079667,
+        "source": "enumeration",
+        "J": 1.91662,
+        "pd_final": 0.79638,
+        "waypoints": [
+          4,
+          1,
+          4,
+          5,
+          4
+        ],
+        "path": [
+          4,
+          1,
+          4,
+          5,
+          4
+        ]
+      },
+      {
+        "elapsed_s": 0.0019707999990714598,
+        "source": "enumeration",
+        "J": 1.7770000000000001,
+        "pd_final": 0.702,
+        "waypoints": [
+          4,
+          5,
+          4,
+          1,
+          0
+        ],
+        "path": [
+          4,
+          5,
+          4,
+          1,
+          0
+        ]
+      },
+      {
+        "elapsed_s": 0.0020335999988674303,
+        "source": "enumeration",
+        "J": 1.68262,
+        "pd_final": 0.79638,
+        "waypoints": [
+          4,
+          5,
+          4,
+          1,
+          4
+        ],
+        "path": [
+          4,
+          5,
+          4,
+          1,
+          4
+        ]
+      }
+    ],
+    "raw_solver": {
+      "algorithm": "independent_tiny_physical_enumeration_v1",
+      "connectivity": 4,
+      "footprint": "heading_square",
+      "status": "optimal_enumerated",
+      "stop_reason": "all_routes_enumerated_and_replay_verified",
+      "error": null,
+      "max_seconds": 10.0,
+      "enumeration_complete": true,
+      "enumeration_complete_elapsed_s": 0.003303800000139745,
+      "proof_elapsed_s": 0.0037308999999368098,
+      "numerical_optimum_established": true,
+      "global_optimality_certified": false,
+      "formal_certificate": false,
+      "lower_bound": 1.68262,
+      "gap": 0.0,
+      "guard": {
+        "max_ticks": 6,
+        "max_particles": 16,
+        "max_vertices": 36
+      },
+      "best": {
+        "evaluator": "independent_scalar_physical_replay_v1",
+        "J": 1.68262,
+        "pd_final": 0.79638,
+        "J_time_scaled_s": 1.68262,
+        "final_weights": [
+          0.026619999999999994,
+          0.05499999999999999,
+          0.1,
+          0.022
+        ],
+        "survival": [
+          1.0,
+          0.8049999999999999,
+          0.376,
+          0.29800000000000004,
+          0.20362
+        ],
+        "waypoints": [
+          4,
+          5,
+          4,
+          1,
+          4
+        ],
+        "path": [
+          4,
+          5,
+          4,
+          1,
+          4
+        ],
+        "footprint": "heading_square",
+        "connectivity": 4,
+        "observation_times_s": [
+          1.0,
+          2.0,
+          3.0,
+          4.0
+        ],
+        "observation_count": 4,
+        "horizon_s": 4.0,
+        "physical_duration_s": 4.0,
+        "planned_arrival_times_s": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0
+        ],
+        "arrival_times_s": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0
+        ],
+        "distance_m": 4.0,
+        "diagonal_distance_m": 0.0,
+        "diagonal_distance_fraction": 0.0,
+        "final_xy": [
+          0.0,
+          0.0
+        ],
+        "last_edge_partial": false,
+        "formal_certificate": false
+      },
+      "model_audit": {
+        "model": "constant_speed_common_clock_square_proxy_v1",
+        "sensor_model_status": "controlled_geometric_proxy_not_camera_calibrated",
+        "footprint": "heading_square",
+        "connectivity": 4,
+        "J": 1.68262,
+        "pd_final": 0.79638,
+        "J_time_scaled_s": 1.68262,
+        "J_time_scaled_interpretation": "fixed-clock post-observation sum, not exact continuous-time MTTD",
+        "survival": [
+          1.0,
+          0.8049999999999999,
+          0.376,
+          0.29800000000000004,
+          0.20362
+        ],
+        "final_weights": [
+          0.026619999999999994,
+          0.05499999999999999,
+          0.1,
+          0.022
+        ],
+        "waypoints": [
+          4,
+          5,
+          4,
+          1,
+          4
+        ],
+        "path": [
+          4,
+          5,
+          4,
+          1,
+          4
+        ],
+        "waypoint_semantics": "motion commands; a terminal partial edge may not reach its last waypoint",
+        "planned_arrival_times_s": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0
+        ],
+        "arrival_times_s": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0
+        ],
+        "observation_times_s": [
+          1.0,
+          2.0,
+          3.0,
+          4.0
+        ],
+        "observations": [
+          {
+            "tick": 1,
+            "time_s": 1.0,
+            "aircraft_xy": [
+              1.0,
+              0.0
+            ],
+            "heading_xy": [
+              1.0,
+              0.0
+            ],
+            "source_vertex": 4,
+            "target_vertex": 5,
+            "fraction_of_edge": 1.0,
+            "sensed_particle_indices": [
+              1
+            ],
+            "sensed_trajectory_ids": [
+              1
+            ],
+            "mass_before": 1.0,
+            "mass_after": 0.8049999999999999,
+            "detected_mass": 0.19500000000000006,
+            "cumulative_J": 0.8049999999999999
+          },
+          {
+            "tick": 2,
+            "time_s": 2.0,
+            "aircraft_xy": [
+              0.0,
+              0.0
+            ],
+            "heading_xy": [
+              -1.0,
+              0.0
+            ],
+            "source_vertex": 5,
+            "target_vertex": 4,
+            "fraction_of_edge": 1.0,
+            "sensed_particle_indices": [
+              0
+            ],
+            "sensed_trajectory_ids": [
+              0
+            ],
+            "mass_before": 0.8049999999999999,
+            "mass_after": 0.376,
+            "detected_mass": 0.42899999999999994,
+            "cumulative_J": 1.181
+          },
+          {
+            "tick": 3,
+            "time_s": 3.0,
+            "aircraft_xy": [
+              0.0,
+              1.0
+            ],
+            "heading_xy": [
+              0.0,
+              1.0
+            ],
+            "source_vertex": 4,
+            "target_vertex": 1,
+            "fraction_of_edge": 1.0,
+            "sensed_particle_indices": [
+              3
+            ],
+            "sensed_trajectory_ids": [
+              3
+            ],
+            "mass_before": 0.376,
+            "mass_after": 0.29800000000000004,
+            "detected_mass": 0.07799999999999996,
+            "cumulative_J": 1.479
+          },
+          {
+            "tick": 4,
+            "time_s": 4.0,
+            "aircraft_xy": [
+              0.0,
+              0.0
+            ],
+            "heading_xy": [
+              0.0,
+              -1.0
+            ],
+            "source_vertex": 1,
+            "target_vertex": 4,
+            "fraction_of_edge": 1.0,
+            "sensed_particle_indices": [
+              0
+            ],
+            "sensed_trajectory_ids": [
+              0
+            ],
+            "mass_before": 0.29800000000000004,
+            "mass_after": 0.20362,
+            "detected_mass": 0.09438000000000005,
+            "cumulative_J": 1.68262
+          }
+        ],
+        "segments": [
+          {
+            "source_vertex": 4,
+            "target_vertex": 5,
+            "start_time_s": 0.0,
+            "planned_arrival_time_s": 1.0,
+            "end_time_s": 1.0,
+            "full_edge_duration_s": 1.0,
+            "start_xy": [
+              0.0,
+              0.0
+            ],
+            "target_xy": [
+              1.0,
+              0.0
+            ],
+            "actual_end_xy": [
+              1.0,
+              0.0
+            ],
+            "diagonal": false,
+            "partial": false,
+            "flown_distance_m": 1.0
+          },
+          {
+            "source_vertex": 5,
+            "target_vertex": 4,
+            "start_time_s": 1.0,
+            "planned_arrival_time_s": 2.0,
+            "end_time_s": 2.0,
+            "full_edge_duration_s": 1.0,
+            "start_xy": [
+              1.0,
+              0.0
+            ],
+            "target_xy": [
+              0.0,
+              0.0
+            ],
+            "actual_end_xy": [
+              0.0,
+              0.0
+            ],
+            "diagonal": false,
+            "partial": false,
+            "flown_distance_m": 1.0
+          },
+          {
+            "source_vertex": 4,
+            "target_vertex": 1,
+            "start_time_s": 2.0,
+            "planned_arrival_time_s": 3.0,
+            "end_time_s": 3.0,
+            "full_edge_duration_s": 1.0,
+            "start_xy": [
+              0.0,
+              0.0
+            ],
+            "target_xy": [
+              0.0,
+              1.0
+            ],
+            "actual_end_xy": [
+              0.0,
+              1.0
+            ],
+            "diagonal": false,
+            "partial": false,
+            "flown_distance_m": 1.0
+          },
+          {
+            "source_vertex": 1,
+            "target_vertex": 4,
+            "start_time_s": 3.0,
+            "planned_arrival_time_s": 4.0,
+            "end_time_s": 4.0,
+            "full_edge_duration_s": 1.0,
+            "start_xy": [
+              0.0,
+              1.0
+            ],
+            "target_xy": [
+              0.0,
+              0.0
+            ],
+            "actual_end_xy": [
+              0.0,
+              0.0
+            ],
+            "diagonal": false,
+            "partial": false,
+            "flown_distance_m": 1.0
+          }
+        ],
+        "physical_duration_s": 4.0,
+        "horizon_s": 4.0,
+        "observation_count": 4,
+        "delta_s": 1.0,
+        "speed_m_s": 1.0,
+        "distance_m": 4.0,
+        "diagonal_distance_m": 0.0,
+        "diagonal_distance_fraction": 0.0,
+        "diagonal_edge_count": 0,
+        "final_xy": [
+          0.0,
+          0.0
+        ],
+        "last_edge_partial": false,
+        "trajectory_identity": "provided_ids",
+        "formal_certificate": false
+      },
+      "history": [
+        {
+          "elapsed_s": 0.00010010000005422626,
+          "source": "enumeration",
+          "J": 3.65368,
+          "pd_final": 0.09516000000000002,
+          "waypoints": [
+            4,
+            1,
+            0,
+            1,
+            0
+          ],
+          "path": [
+            4,
+            1,
+            0,
+            1,
+            0
+          ]
+        },
+        {
+          "elapsed_s": 0.00019130000055156415,
+          "source": "enumeration",
+          "J": 3.2246799999999998,
+          "pd_final": 0.52416,
+          "waypoints": [
+            4,
+            1,
+            0,
+            1,
+            4
+          ],
+          "path": [
+            4,
+            1,
+            0,
+            1,
+            4
+          ]
+        },
+        {
+          "elapsed_s": 0.00027070000032836106,
+          "source": "enumeration",
+          "J": 3.103,
+          "pd_final": 0.585,
+          "waypoints": [
+            4,
+            1,
+            0,
+            3,
+            4
+          ],
+          "path": [
+            4,
+            1,
+            0,
+            3,
+            4
+          ]
+        },
+        {
+          "elapsed_s": 0.0004828000000998145,
+          "source": "enumeration",
+          "J": 2.869,
+          "pd_final": 0.702,
+          "waypoints": [
+            4,
+            1,
+            2,
+            5,
+            4
+          ],
+          "path": [
+            4,
+            1,
+            2,
+            5,
+            4
+          ]
+        },
+        {
+          "elapsed_s": 0.0005536000007850816,
+          "source": "enumeration",
+          "J": 2.36668,
+          "pd_final": 0.52416,
+          "waypoints": [
+            4,
+            1,
+            4,
+            1,
+            0
+          ],
+          "path": [
+            4,
+            1,
+            4,
+            1,
+            0
+          ]
+        },
+        {
+          "elapsed_s": 0.0006190000003698515,
+          "source": "enumeration",
+          "J": 2.2723,
+          "pd_final": 0.6185400000000001,
+          "waypoints": [
+            4,
+            1,
+            4,
+            1,
+            4
+          ],
+          "path": [
+            4,
+            1,
+            4,
+            1,
+            4
+          ]
+        },
+        {
+          "elapsed_s": 0.0006548999999722582,
+          "source": "enumeration",
+          "J": 2.245,
+          "pd_final": 0.585,
+          "waypoints": [
+            4,
+            1,
+            4,
+            3,
+            0
+          ],
+          "path": [
+            4,
+            1,
+            4,
+            3,
+            0
+          ]
+        },
+        {
+          "elapsed_s": 0.00068710000050487,
+          "source": "enumeration",
+          "J": 2.15062,
+          "pd_final": 0.67938,
+          "waypoints": [
+            4,
+            1,
+            4,
+            3,
+            4
+          ],
+          "path": [
+            4,
+            1,
+            4,
+            3,
+            4
+          ]
+        },
+        {
+          "elapsed_s": 0.000756800000090152,
+          "source": "enumeration",
+          "J": 2.011,
+          "pd_final": 0.702,
+          "waypoints": [
+            4,
+            1,
+            4,
+            5,
+            2
+          ],
+          "path": [
+            4,
+            1,
+            4,
+            5,
+            2
+          ]
+        },
+        {
+          "elapsed_s": 0.0007924000001366949,
+          "source": "enumeration",
+          "J": 1.91662,
+          "pd_final": 0.79638,
+          "waypoints": [
+            4,
+            1,
+            4,
+            5,
+            4
+          ],
+          "path": [
+            4,
+            1,
+            4,
+            5,
+            4
+          ]
+        },
+        {
+          "elapsed_s": 0.0019664000001284876,
+          "source": "enumeration",
+          "J": 1.7770000000000001,
+          "pd_final": 0.702,
+          "waypoints": [
+            4,
+            5,
+            4,
+            1,
+            0
+          ],
+          "path": [
+            4,
+            5,
+            4,
+            1,
+            0
+          ]
+        },
+        {
+          "elapsed_s": 0.002029199999924458,
+          "source": "enumeration",
+          "J": 1.68262,
+          "pd_final": 0.79638,
+          "waypoints": [
+            4,
+            5,
+            4,
+            1,
+            4
+          ],
+          "path": [
+            4,
+            5,
+            4,
+            1,
+            4
+          ]
+        }
+      ],
+      "late_candidates": [],
+      "stats": {
+        "visited": 145,
+        "complete_routes": 96,
+        "scored_routes": 96,
+        "maximum_depth": 4,
+        "final_audit_s": 0.0004230999993524165
+      },
+      "J": 1.68262,
+      "pd_final": 0.79638,
+      "path": [
+        4,
+        5,
+        4,
+        1,
+        4
+      ],
+      "waypoints": [
+        4,
+        5,
+        4,
+        1,
+        4
+      ],
+      "survival": [
+        1.0,
+        0.8049999999999999,
+        0.376,
+        0.29800000000000004,
+        0.20362
+      ],
+      "wall_s": 0.0037343000003602356,
+      "elapsed_s": 0.0037343000003602356,
+      "deadline_overshoot_s": 0.0
+    },
+    "best_found_elapsed_s": 0.0020335999988674303,
+    "initial_J": null,
+    "improvement_from_initial_J": null,
+    "algorithm_wall_s": 0.0037386999993032077,
+    "algorithm_cpu_s": 0.0,
+    "inner_wall_s": 0.0037343000003602356,
+    "conservative_clock_offset_s": 4.399998942972161e-06,
+    "audit_wall_s": 0.0031509999998888816,
+    "budget_overshoot_s": 0.0,
+    "numerical_optimum_complete": true,
+    "lower_bound": 1.68262,
+    "proof_elapsed_s": 0.003735299998879782,
+    "inputs": {
+      "case_id": "repeat_detection",
+      "case_sha256": "dca0c143d7a9b1ef60e1e76501afa43bb048d177c8d70b82f2f9a2b2cfda9d62"
+    },
+    "environment": {
+      "python": "3.11.18 | packaged by conda-forge | (main, Oct 26 2026, 11:29:07) [MSC v.1944 64 bit (AMD64)]",
+      "executable": "c:\\users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "machine": "",
+      "processor": "",
+      "cpu_count": 32,
+      "memory_total_bytes": 16340455424,
+      "packages": {
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "pytest": "9.2.0",
+        "psutil": "7.2.2",
+        "pyproj": "3.7.2"
+      },
+      "scipy_embedded_highs_version": "1.12.0",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1"
+      }
+    },
+    "sensor_model_status": "controlled_geometric_proxy_not_camera_calibrated",
+    "formal_optimality_certificate": false
+  }
+}

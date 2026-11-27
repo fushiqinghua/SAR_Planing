@@ -1,0 +1,9 @@
+{
+  "stage": "A",
+  "case": "late_drift",
+  "footprint": "heading_square",
+  "connectivity": 4,
+  "method": "oracle",
+  "seconds": 10,
+  "repetition": 0
+}

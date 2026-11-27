@@ -1,0 +1,9 @@
+{
+  "stage": "A",
+  "case": "turning_footprint",
+  "footprint": "heading_square",
+  "connectivity": 8,
+  "method": "oracle",
+  "seconds": 10,
+  "repetition": 0
+}

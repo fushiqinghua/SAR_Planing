@@ -1,0 +1,539 @@
+{
+  "batch": "eight-neighbor-physical-study-20261127",
+  "stage_status": {
+    "A": {
+      "stage": "A",
+      "planned": 48,
+      "completed": 48,
+      "status": "complete",
+      "missing": [],
+      "errors": []
+    },
+    "B5": {
+      "stage": "B5",
+      "planned": 24,
+      "completed": 24,
+      "status": "complete",
+      "missing": [],
+      "errors": []
+    },
+    "B30": {
+      "stage": "B30",
+      "planned": 24,
+      "completed": 24,
+      "status": "complete",
+      "missing": [],
+      "errors": []
+    }
+  },
+  "diagnostic_gate": {
+    "passed": true,
+    "same_speed_diagonal_witness": true,
+    "cases": [
+      {
+        "case": "coverage_tradeoff",
+        "footprint": "heading_square",
+        "optima": {
+          "4": 0.635,
+          "8": 0.635
+        },
+        "errors": [],
+        "passed": true
+      },
+      {
+        "case": "coverage_tradeoff",
+        "footprint": "axis_square",
+        "optima": {
+          "4": 0.635,
+          "8": 0.635
+        },
+        "errors": [],
+        "passed": true
+      },
+      {
+        "case": "diagonal_intercept",
+        "footprint": "heading_square",
+        "optima": {
+          "4": 1.298,
+          "8": 0.83
+        },
+        "errors": [],
+        "passed": true
+      },
+      {
+        "case": "diagonal_intercept",
+        "footprint": "axis_square",
+        "optima": {
+          "4": 1.298,
+          "8": 0.7878799999999999
+        },
+        "errors": [],
+        "passed": true
+      },
+      {
+        "case": "late_drift",
+        "footprint": "heading_square",
+        "optima": {
+          "4": 1.6272399999999998,
+          "8": 1.6272399999999998
+        },
+        "errors": [],
+        "passed": true
+      },
+      {
+        "case": "late_drift",
+        "footprint": "axis_square",
+        "optima": {
+          "4": 1.6272399999999998,
+          "8": 1.6272399999999998
+        },
+        "errors": [],
+        "passed": true
+      },
+      {
+        "case": "repeat_detection",
+        "footprint": "heading_square",
+        "optima": {
+          "4": 1.68262,
+          "8": 1.68262
+        },
+        "errors": [],
+        "passed": true
+      },
+      {
+        "case": "repeat_detection",
+        "footprint": "axis_square",
+        "optima": {
+          "4": 1.68262,
+          "8": 1.68262
+        },
+        "errors": [],
+        "passed": true
+      },
+      {
+        "case": "special_mass",
+        "footprint": "heading_square",
+        "optima": {
+          "4": 1.9953600000000002,
+          "8": 1.9080000000000001
+        },
+        "errors": [],
+        "passed": true
+      },
+      {
+        "case": "special_mass",
+        "footprint": "axis_square",
+        "optima": {
+          "4": 1.9953600000000002,
+          "8": 1.83936
+        },
+        "errors": [],
+        "passed": true
+      },
+      {
+        "case": "turning_footprint",
+        "footprint": "heading_square",
+        "optima": {
+          "4": 1.62252,
+          "8": 0.9393335999999999
+        },
+        "errors": [],
+        "passed": true
+      },
+      {
+        "case": "turning_footprint",
+        "footprint": "axis_square",
+        "optima": {
+          "4": 1.62252,
+          "8": 1.2876192
+        },
+        "errors": [],
+        "passed": true
+      }
+    ],
+    "scope": "enumerated diagnostic problems only; numerical checks, no real-scene certificate"
+  },
+  "decisions": {
+    "B5": {
+      "status": "sensor_sensitive",
+      "main_quality_pass": true,
+      "sensitivity_pass": false,
+      "primary_improvement_scenes": [
+        "lake_ontario"
+      ],
+      "comparisons": {
+        "heading_square": {
+          "lake_ontario": {
+            "J4_median": 17.264874448,
+            "J8_median": 16.752262696441605,
+            "relative_gain": 0.029691021101967974
+          },
+          "arctic_ocean": {
+            "J4_median": 20.386109349119998,
+            "J8_median": 20.386109349119998,
+            "relative_gain": 0.0
+          }
+        },
+        "axis_square": {
+          "lake_ontario": {
+            "J4_median": 17.264874448,
+            "J8_median": 17.264874448,
+            "relative_gain": 0.0
+          },
+          "arctic_ocean": {
+            "J4_median": 20.386109349119998,
+            "J8_median": 20.386109349119998,
+            "relative_gain": 0.0
+          }
+        }
+      },
+      "claim": "motion-model screening under two uncalibrated proxies, not solver novelty"
+    },
+    "B30": {
+      "status": "longer_budget_signal_pending_followup",
+      "main_quality_pass": true,
+      "sensitivity_pass": true,
+      "primary_improvement_scenes": [
+        "lake_ontario"
+      ],
+      "comparisons": {
+        "heading_square": {
+          "lake_ontario": {
+            "J4_median": 17.264874448,
+            "J8_median": 16.752262696441605,
+            "relative_gain": 0.029691021101967974
+          },
+          "arctic_ocean": {
+            "J4_median": 20.386109349119998,
+            "J8_median": 20.317725021888,
+            "relative_gain": 0.0033544570011320796
+          }
+        },
+        "axis_square": {
+          "lake_ontario": {
+            "J4_median": 17.264874448,
+            "J8_median": 16.7169314627584,
+            "relative_gain": 0.03173744395836461
+          },
+          "arctic_ocean": {
+            "J4_median": 20.386109349119998,
+            "J8_median": 20.386109349119998,
+            "relative_gain": 0.0
+          }
+        }
+      },
+      "claim": "motion-model screening under two uncalibrated proxies, not solver novelty"
+    }
+  },
+  "aggregates": [
+    {
+      "stage": "B30",
+      "scene": "arctic_ocean",
+      "footprint": "axis_square",
+      "connectivity": 4,
+      "n": 3,
+      "planned": 3,
+      "J_median": 20.386109349119998,
+      "J_min": 20.386109349119998,
+      "J_max": 20.386109349119998,
+      "Pd_median": 0.90858311232,
+      "initial_J_median": 20.386109349119998,
+      "improvement_from_initial_J_median": 0.0,
+      "algorithm_wall_median_s": 30.131044799999472,
+      "algorithm_cpu_median_s": 30.0625,
+      "best_found_elapsed_median_s": 0.13516859999890585,
+      "diagonal_distance_fraction_median": 0.0,
+      "peak_rss_median_bytes": 506322944
+    },
+    {
+      "stage": "B30",
+      "scene": "arctic_ocean",
+      "footprint": "axis_square",
+      "connectivity": 8,
+      "n": 3,
+      "planned": 3,
+      "J_median": 20.386109349119998,
+      "J_min": 20.386109349119998,
+      "J_max": 20.386109349119998,
+      "Pd_median": 0.90858311232,
+      "initial_J_median": 20.386109349119998,
+      "improvement_from_initial_J_median": 0.0,
+      "algorithm_wall_median_s": 30.081769699999313,
+      "algorithm_cpu_median_s": 29.9375,
+      "best_found_elapsed_median_s": 0.08572629999889614,
+      "diagonal_distance_fraction_median": 0.0,
+      "peak_rss_median_bytes": 352182272
+    },
+    {
+      "stage": "B30",
+      "scene": "arctic_ocean",
+      "footprint": "heading_square",
+      "connectivity": 4,
+      "n": 3,
+      "planned": 3,
+      "J_median": 20.386109349119998,
+      "J_min": 20.386109349119998,
+      "J_max": 20.386109349119998,
+      "Pd_median": 0.90858311232,
+      "initial_J_median": 20.386109349119998,
+      "improvement_from_initial_J_median": 0.0,
+      "algorithm_wall_median_s": 30.119063300000562,
+      "algorithm_cpu_median_s": 30.03125,
+      "best_found_elapsed_median_s": 0.12314490000062506,
+      "diagonal_distance_fraction_median": 0.0,
+      "peak_rss_median_bytes": 505671680
+    },
+    {
+      "stage": "B30",
+      "scene": "arctic_ocean",
+      "footprint": "heading_square",
+      "connectivity": 8,
+      "n": 3,
+      "planned": 3,
+      "J_median": 20.317725021888,
+      "J_min": 20.317725021888,
+      "J_max": 20.317725021888,
+      "Pd_median": 0.9105654265344,
+      "initial_J_median": 20.386109349119998,
+      "improvement_from_initial_J_median": 0.06838432723199972,
+      "algorithm_wall_median_s": 30.088243299999704,
+      "algorithm_cpu_median_s": 29.90625,
+      "best_found_elapsed_median_s": 5.829197299999578,
+      "diagonal_distance_fraction_median": 0.377123616632825,
+      "peak_rss_median_bytes": 385085440
+    },
+    {
+      "stage": "B30",
+      "scene": "lake_ontario",
+      "footprint": "axis_square",
+      "connectivity": 4,
+      "n": 3,
+      "planned": 3,
+      "J_median": 17.264874448,
+      "J_min": 17.264874448,
+      "J_max": 17.264874448,
+      "Pd_median": 0.897364416,
+      "initial_J_median": 17.264874448,
+      "improvement_from_initial_J_median": 0.0,
+      "algorithm_wall_median_s": 29.599374600000374,
+      "algorithm_cpu_median_s": 29.484375,
+      "best_found_elapsed_median_s": 0.1842212000010477,
+      "diagonal_distance_fraction_median": 0.0,
+      "peak_rss_median_bytes": 721010688
+    },
+    {
+      "stage": "B30",
+      "scene": "lake_ontario",
+      "footprint": "axis_square",
+      "connectivity": 8,
+      "n": 3,
+      "planned": 3,
+      "J_median": 16.7169314627584,
+      "J_min": 16.7169314627584,
+      "J_max": 16.7169314627584,
+      "Pd_median": 0.9051169365888,
+      "initial_J_median": 17.264874448,
+      "improvement_from_initial_J_median": 0.5479429852416011,
+      "algorithm_wall_median_s": 30.133510900001056,
+      "algorithm_cpu_median_s": 30.015625,
+      "best_found_elapsed_median_s": 5.7958539000010205,
+      "diagonal_distance_fraction_median": 0.38775510204081676,
+      "peak_rss_median_bytes": 521744384
+    },
+    {
+      "stage": "B30",
+      "scene": "lake_ontario",
+      "footprint": "heading_square",
+      "connectivity": 4,
+      "n": 3,
+      "planned": 3,
+      "J_median": 17.264874448,
+      "J_min": 17.264874448,
+      "J_max": 17.264874448,
+      "Pd_median": 0.897364416,
+      "initial_J_median": 17.264874448,
+      "improvement_from_initial_J_median": 0.0,
+      "algorithm_wall_median_s": 30.173188699999628,
+      "algorithm_cpu_median_s": 29.859375,
+      "best_found_elapsed_median_s": 0.18842359999962355,
+      "diagonal_distance_fraction_median": 0.0,
+      "peak_rss_median_bytes": 714407936
+    },
+    {
+      "stage": "B30",
+      "scene": "lake_ontario",
+      "footprint": "heading_square",
+      "connectivity": 8,
+      "n": 3,
+      "planned": 3,
+      "J_median": 16.752262696441605,
+      "J_min": 16.752262696441605,
+      "J_max": 16.752262696441605,
+      "Pd_median": 0.9046783654272,
+      "initial_J_median": 17.264874448,
+      "improvement_from_initial_J_median": 0.5126117515583957,
+      "algorithm_wall_median_s": 30.059076200000163,
+      "algorithm_cpu_median_s": 30.03125,
+      "best_found_elapsed_median_s": 2.4057746000007683,
+      "diagonal_distance_fraction_median": 0.3751995165479639,
+      "peak_rss_median_bytes": 285413376
+    },
+    {
+      "stage": "B5",
+      "scene": "arctic_ocean",
+      "footprint": "axis_square",
+      "connectivity": 4,
+      "n": 3,
+      "planned": 3,
+      "J_median": 20.386109349119998,
+      "J_min": 20.386109349119998,
+      "J_max": 20.386109349119998,
+      "Pd_median": 0.90858311232,
+      "initial_J_median": 20.386109349119998,
+      "improvement_from_initial_J_median": 0.0,
+      "algorithm_wall_median_s": 5.0202055999998265,
+      "algorithm_cpu_median_s": 4.984375,
+      "best_found_elapsed_median_s": 0.024307900000167137,
+      "diagonal_distance_fraction_median": 0.0,
+      "peak_rss_median_bytes": 174784512
+    },
+    {
+      "stage": "B5",
+      "scene": "arctic_ocean",
+      "footprint": "axis_square",
+      "connectivity": 8,
+      "n": 3,
+      "planned": 3,
+      "J_median": 20.386109349119998,
+      "J_min": 20.386109349119998,
+      "J_max": 20.386109349119998,
+      "Pd_median": 0.90858311232,
+      "initial_J_median": 20.386109349119998,
+      "improvement_from_initial_J_median": 0.0,
+      "algorithm_wall_median_s": 5.018602600000122,
+      "algorithm_cpu_median_s": 5.015625,
+      "best_found_elapsed_median_s": 0.02256310000029771,
+      "diagonal_distance_fraction_median": 0.0,
+      "peak_rss_median_bytes": 167354368
+    },
+    {
+      "stage": "B5",
+      "scene": "arctic_ocean",
+      "footprint": "heading_square",
+      "connectivity": 4,
+      "n": 3,
+      "planned": 3,
+      "J_median": 20.386109349119998,
+      "J_min": 20.386109349119998,
+      "J_max": 20.386109349119998,
+      "Pd_median": 0.90858311232,
+      "initial_J_median": 20.386109349119998,
+      "improvement_from_initial_J_median": 0.0,
+      "algorithm_wall_median_s": 5.021401799999694,
+      "algorithm_cpu_median_s": 5.015625,
+      "best_found_elapsed_median_s": 0.02560130000074423,
+      "diagonal_distance_fraction_median": 0.0,
+      "peak_rss_median_bytes": 177115136
+    },
+    {
+      "stage": "B5",
+      "scene": "arctic_ocean",
+      "footprint": "heading_square",
+      "connectivity": 8,
+      "n": 3,
+      "planned": 3,
+      "J_median": 20.386109349119998,
+      "J_min": 20.386109349119998,
+      "J_max": 20.386109349119998,
+      "Pd_median": 0.90858311232,
+      "initial_J_median": 20.386109349119998,
+      "improvement_from_initial_J_median": 0.0,
+      "algorithm_wall_median_s": 5.024371200000132,
+      "algorithm_cpu_median_s": 5.0,
+      "best_found_elapsed_median_s": 0.028597600000466628,
+      "diagonal_distance_fraction_median": 0.0,
+      "peak_rss_median_bytes": 185389056
+    },
+    {
+      "stage": "B5",
+      "scene": "lake_ontario",
+      "footprint": "axis_square",
+      "connectivity": 4,
+      "n": 3,
+      "planned": 3,
+      "J_median": 17.264874448,
+      "J_min": 17.264874448,
+      "J_max": 17.264874448,
+      "Pd_median": 0.897364416,
+      "initial_J_median": 17.264874448,
+      "improvement_from_initial_J_median": 0.0,
+      "algorithm_wall_median_s": 5.025795600000492,
+      "algorithm_cpu_median_s": 4.96875,
+      "best_found_elapsed_median_s": 0.029120500000317406,
+      "diagonal_distance_fraction_median": 0.0,
+      "peak_rss_median_bytes": 184672256
+    },
+    {
+      "stage": "B5",
+      "scene": "lake_ontario",
+      "footprint": "axis_square",
+      "connectivity": 8,
+      "n": 3,
+      "planned": 3,
+      "J_median": 17.264874448,
+      "J_min": 17.264874448,
+      "J_max": 17.264874448,
+      "Pd_median": 0.897364416,
+      "initial_J_median": 17.264874448,
+      "improvement_from_initial_J_median": 0.0,
+      "algorithm_wall_median_s": 5.02578529999937,
+      "algorithm_cpu_median_s": 5.03125,
+      "best_found_elapsed_median_s": 0.02903119999973569,
+      "diagonal_distance_fraction_median": 0.0,
+      "peak_rss_median_bytes": 194371584
+    },
+    {
+      "stage": "B5",
+      "scene": "lake_ontario",
+      "footprint": "heading_square",
+      "connectivity": 4,
+      "n": 3,
+      "planned": 3,
+      "J_median": 17.264874448,
+      "J_min": 17.264874448,
+      "J_max": 17.264874448,
+      "Pd_median": 0.897364416,
+      "initial_J_median": 17.264874448,
+      "improvement_from_initial_J_median": 0.0,
+      "algorithm_wall_median_s": 5.0249149000001125,
+      "algorithm_cpu_median_s": 5.015625,
+      "best_found_elapsed_median_s": 0.028364100000544568,
+      "diagonal_distance_fraction_median": 0.0,
+      "peak_rss_median_bytes": 184606720
+    },
+    {
+      "stage": "B5",
+      "scene": "lake_ontario",
+      "footprint": "heading_square",
+      "connectivity": 8,
+      "n": 3,
+      "planned": 3,
+      "J_median": 16.752262696441605,
+      "J_min": 16.752262696441605,
+      "J_max": 16.752262696441605,
+      "Pd_median": 0.9046783654272,
+      "initial_J_median": 17.264874448,
+      "improvement_from_initial_J_median": 0.5126117515583957,
+      "algorithm_wall_median_s": 5.016825300000164,
+      "algorithm_cpu_median_s": 5.0,
+      "best_found_elapsed_median_s": 2.3801343000004636,
+      "diagonal_distance_fraction_median": 0.3751995165479639,
+      "peak_rss_median_bytes": 160174080
+    }
+  ],
+  "sensor_model_status": "controlled_geometric_proxy_not_camera_calibrated",
+  "holdout": "not_designed_not_run",
+  "long_budget": "not_enabled",
+  "historical_metrics": "bridge only, never the new-model improvement target",
+  "B30_does_not_rewrite_B5": true
+}

@@ -1,0 +1,9 @@
+{
+  "stage": "A",
+  "case": "diagonal_intercept",
+  "footprint": "heading_square",
+  "connectivity": 4,
+  "method": "search",
+  "seconds": 2,
+  "repetition": 0
+}

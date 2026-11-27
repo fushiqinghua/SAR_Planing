@@ -1,0 +1,9 @@
+{
+  "stage": "A",
+  "case": "special_mass",
+  "footprint": "heading_square",
+  "connectivity": 8,
+  "method": "oracle",
+  "seconds": 10,
+  "repetition": 0
+}

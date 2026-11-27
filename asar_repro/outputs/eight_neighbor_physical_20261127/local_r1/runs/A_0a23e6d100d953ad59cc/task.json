@@ -1,0 +1,9 @@
+{
+  "stage": "A",
+  "case": "turning_footprint",
+  "footprint": "heading_square",
+  "connectivity": 4,
+  "method": "search",
+  "seconds": 2,
+  "repetition": 0
+}

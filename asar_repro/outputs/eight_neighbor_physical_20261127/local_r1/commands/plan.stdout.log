@@ -1,0 +1,22 @@
+{
+  "status": "plan_not_results",
+  "stages": {
+    "A": {
+      "tasks": 48,
+      "algorithm_budget_s": 288
+    },
+    "B5": {
+      "tasks": 24,
+      "algorithm_budget_s": 120
+    },
+    "B30": {
+      "tasks": 24,
+      "algorithm_budget_s": 720
+    }
+  },
+  "total_tasks": 96,
+  "algorithm_budget_s": 1128,
+  "excludes": "validation, input loading, process startup, final audit and IO",
+  "long_budget": "not_enabled",
+  "holdout": "not_designed_not_run"
+}

@@ -1,0 +1,671 @@
+{
+  "task": {
+    "stage": "A",
+    "case": "turning_footprint",
+    "footprint": "axis_square",
+    "connectivity": 4,
+    "method": "search",
+    "seconds": 2,
+    "repetition": 0
+  },
+  "result": {
+    "status": "valid",
+    "method_status": "completed",
+    "stop_reason": "frontier_exhausted",
+    "J": 1.62252,
+    "pd_final": 0.59748,
+    "physical_replay": {
+      "model": "constant_speed_common_clock_square_proxy_v1",
+      "sensor_model_status": "controlled_geometric_proxy_not_camera_calibrated",
+      "footprint": "axis_square",
+      "connectivity": 4,
+      "J": 1.62252,
+      "pd_final": 0.59748,
+      "J_time_scaled_s": 1.62252,
+      "J_time_scaled_interpretation": "fixed-clock post-observation sum, not exact continuous-time MTTD",
+      "survival": [
+        0.9999999999999999,
+        0.766,
+        0.45399999999999996,
+        0.40252
+      ],
+      "final_weights": [
+        0.088,
+        0.014519999999999996,
+        0.2,
+        0.1
+      ],
+      "waypoints": [
+        4,
+        5,
+        2,
+        5
+      ],
+      "path": [
+        4,
+        5,
+        2,
+        5
+      ],
+      "waypoint_semantics": "motion commands; a terminal partial edge may not reach its last waypoint",
+      "planned_arrival_times_s": [
+        0.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "arrival_times_s": [
+        0.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "observation_times_s": [
+        1.0,
+        2.0,
+        3.0
+      ],
+      "observations": [
+        {
+          "tick": 1,
+          "time_s": 1.0,
+          "aircraft_xy": [
+            1.0,
+            0.0
+          ],
+          "heading_xy": [
+            1.0,
+            0.0
+          ],
+          "source_vertex": 4,
+          "target_vertex": 5,
+          "fraction_of_edge": 1.0,
+          "sensed_particle_indices": [
+            1
+          ],
+          "sensed_trajectory_ids": [
+            1
+          ],
+          "mass_before": 0.9999999999999999,
+          "mass_after": 0.766,
+          "detected_mass": 0.23399999999999987,
+          "cumulative_J": 0.766
+        },
+        {
+          "tick": 2,
+          "time_s": 2.0,
+          "aircraft_xy": [
+            1.0,
+            1.0
+          ],
+          "heading_xy": [
+            0.0,
+            1.0
+          ],
+          "source_vertex": 5,
+          "target_vertex": 2,
+          "fraction_of_edge": 1.0,
+          "sensed_particle_indices": [
+            0
+          ],
+          "sensed_trajectory_ids": [
+            0
+          ],
+          "mass_before": 0.766,
+          "mass_after": 0.45399999999999996,
+          "detected_mass": 0.31200000000000006,
+          "cumulative_J": 1.22
+        },
+        {
+          "tick": 3,
+          "time_s": 3.0,
+          "aircraft_xy": [
+            1.0,
+            0.0
+          ],
+          "heading_xy": [
+            0.0,
+            -1.0
+          ],
+          "source_vertex": 2,
+          "target_vertex": 5,
+          "fraction_of_edge": 1.0,
+          "sensed_particle_indices": [
+            1
+          ],
+          "sensed_trajectory_ids": [
+            1
+          ],
+          "mass_before": 0.45399999999999996,
+          "mass_after": 0.40252,
+          "detected_mass": 0.05147999999999997,
+          "cumulative_J": 1.62252
+        }
+      ],
+      "segments": [
+        {
+          "source_vertex": 4,
+          "target_vertex": 5,
+          "start_time_s": 0.0,
+          "planned_arrival_time_s": 1.0,
+          "end_time_s": 1.0,
+          "full_edge_duration_s": 1.0,
+          "start_xy": [
+            0.0,
+            0.0
+          ],
+          "target_xy": [
+            1.0,
+            0.0
+          ],
+          "actual_end_xy": [
+            1.0,
+            0.0
+          ],
+          "diagonal": false,
+          "partial": false,
+          "flown_distance_m": 1.0
+        },
+        {
+          "source_vertex": 5,
+          "target_vertex": 2,
+          "start_time_s": 1.0,
+          "planned_arrival_time_s": 2.0,
+          "end_time_s": 2.0,
+          "full_edge_duration_s": 1.0,
+          "start_xy": [
+            1.0,
+            0.0
+          ],
+          "target_xy": [
+            1.0,
+            1.0
+          ],
+          "actual_end_xy": [
+            1.0,
+            1.0
+          ],
+          "diagonal": false,
+          "partial": false,
+          "flown_distance_m": 1.0
+        },
+        {
+          "source_vertex": 2,
+          "target_vertex": 5,
+          "start_time_s": 2.0,
+          "planned_arrival_time_s": 3.0,
+          "end_time_s": 3.0,
+          "full_edge_duration_s": 1.0,
+          "start_xy": [
+            1.0,
+            1.0
+          ],
+          "target_xy": [
+            1.0,
+            0.0
+          ],
+          "actual_end_xy": [
+            1.0,
+            0.0
+          ],
+          "diagonal": false,
+          "partial": false,
+          "flown_distance_m": 1.0
+        }
+      ],
+      "physical_duration_s": 3.0,
+      "horizon_s": 3.0,
+      "observation_count": 3,
+      "delta_s": 1.0,
+      "speed_m_s": 1.0,
+      "distance_m": 3.0,
+      "diagonal_distance_m": 0.0,
+      "diagonal_distance_fraction": 0.0,
+      "diagonal_edge_count": 0,
+      "final_xy": [
+        1.0,
+        0.0
+      ],
+      "last_edge_partial": false,
+      "trajectory_identity": "provided_ids",
+      "formal_certificate": false
+    },
+    "history": [
+      {
+        "elapsed_s": 0.00029370000083872583,
+        "source": "initial_route",
+        "J": 1.93452,
+        "pd_final": 0.44148,
+        "waypoints": [
+          4,
+          5,
+          4,
+          5
+        ],
+        "path": [
+          4,
+          5,
+          4,
+          5
+        ]
+      },
+      {
+        "elapsed_s": 0.0012728000001516193,
+        "source": "search",
+        "J": 1.674,
+        "pd_final": 0.546,
+        "waypoints": [
+          4,
+          5,
+          2,
+          1
+        ],
+        "path": [
+          4,
+          5,
+          2,
+          1
+        ]
+      },
+      {
+        "elapsed_s": 0.001485000000684522,
+        "source": "search",
+        "J": 1.62252,
+        "pd_final": 0.59748,
+        "waypoints": [
+          4,
+          5,
+          2,
+          5
+        ],
+        "path": [
+          4,
+          5,
+          2,
+          5
+        ]
+      }
+    ],
+    "raw_solver": {
+      "algorithm": "paper_guided_physical_anytime_adapter_v1",
+      "algorithm_claim": "research adapter, not a bit-for-bit paper reproduction",
+      "connectivity": 4,
+      "footprint": "axis_square",
+      "status": "completed",
+      "stop_reason": "frontier_exhausted",
+      "error": null,
+      "max_seconds": 2.0,
+      "max_open": 100000,
+      "guide_weight": 1.04,
+      "guide_role": "coarse-cell ordering only; not an admissible bound",
+      "pruning_rule": "accumulated J >= incumbent J + 1e-10; remaining cost is nonnegative",
+      "global_optimality_certified": false,
+      "epsilon_certificate": null,
+      "initial_route_generation_cost": "external and excluded; copy and physical replay included",
+      "best": {
+        "model": "constant_speed_common_clock_square_proxy_v1",
+        "sensor_model_status": "controlled_geometric_proxy_not_camera_calibrated",
+        "footprint": "axis_square",
+        "connectivity": 4,
+        "J": 1.62252,
+        "pd_final": 0.59748,
+        "J_time_scaled_s": 1.62252,
+        "J_time_scaled_interpretation": "fixed-clock post-observation sum, not exact continuous-time MTTD",
+        "survival": [
+          0.9999999999999999,
+          0.766,
+          0.45399999999999996,
+          0.40252
+        ],
+        "final_weights": [
+          0.088,
+          0.014519999999999996,
+          0.2,
+          0.1
+        ],
+        "waypoints": [
+          4,
+          5,
+          2,
+          5
+        ],
+        "path": [
+          4,
+          5,
+          2,
+          5
+        ],
+        "waypoint_semantics": "motion commands; a terminal partial edge may not reach its last waypoint",
+        "planned_arrival_times_s": [
+          0.0,
+          1.0,
+          2.0,
+          3.0
+        ],
+        "arrival_times_s": [
+          0.0,
+          1.0,
+          2.0,
+          3.0
+        ],
+        "observation_times_s": [
+          1.0,
+          2.0,
+          3.0
+        ],
+        "observations": [
+          {
+            "tick": 1,
+            "time_s": 1.0,
+            "aircraft_xy": [
+              1.0,
+              0.0
+            ],
+            "heading_xy": [
+              1.0,
+              0.0
+            ],
+            "source_vertex": 4,
+            "target_vertex": 5,
+            "fraction_of_edge": 1.0,
+            "sensed_particle_indices": [
+              1
+            ],
+            "sensed_trajectory_ids": [
+              1
+            ],
+            "mass_before": 0.9999999999999999,
+            "mass_after": 0.766,
+            "detected_mass": 0.23399999999999987,
+            "cumulative_J": 0.766
+          },
+          {
+            "tick": 2,
+            "time_s": 2.0,
+            "aircraft_xy": [
+              1.0,
+              1.0
+            ],
+            "heading_xy": [
+              0.0,
+              1.0
+            ],
+            "source_vertex": 5,
+            "target_vertex": 2,
+            "fraction_of_edge": 1.0,
+            "sensed_particle_indices": [
+              0
+            ],
+            "sensed_trajectory_ids": [
+              0
+            ],
+            "mass_before": 0.766,
+            "mass_after": 0.45399999999999996,
+            "detected_mass": 0.31200000000000006,
+            "cumulative_J": 1.22
+          },
+          {
+            "tick": 3,
+            "time_s": 3.0,
+            "aircraft_xy": [
+              1.0,
+              0.0
+            ],
+            "heading_xy": [
+              0.0,
+              -1.0
+            ],
+            "source_vertex": 2,
+            "target_vertex": 5,
+            "fraction_of_edge": 1.0,
+            "sensed_particle_indices": [
+              1
+            ],
+            "sensed_trajectory_ids": [
+              1
+            ],
+            "mass_before": 0.45399999999999996,
+            "mass_after": 0.40252,
+            "detected_mass": 0.05147999999999997,
+            "cumulative_J": 1.62252
+          }
+        ],
+        "segments": [
+          {
+            "source_vertex": 4,
+            "target_vertex": 5,
+            "start_time_s": 0.0,
+            "planned_arrival_time_s": 1.0,
+            "end_time_s": 1.0,
+            "full_edge_duration_s": 1.0,
+            "start_xy": [
+              0.0,
+              0.0
+            ],
+            "target_xy": [
+              1.0,
+              0.0
+            ],
+            "actual_end_xy": [
+              1.0,
+              0.0
+            ],
+            "diagonal": false,
+            "partial": false,
+            "flown_distance_m": 1.0
+          },
+          {
+            "source_vertex": 5,
+            "target_vertex": 2,
+            "start_time_s": 1.0,
+            "planned_arrival_time_s": 2.0,
+            "end_time_s": 2.0,
+            "full_edge_duration_s": 1.0,
+            "start_xy": [
+              1.0,
+              0.0
+            ],
+            "target_xy": [
+              1.0,
+              1.0
+            ],
+            "actual_end_xy": [
+              1.0,
+              1.0
+            ],
+            "diagonal": false,
+            "partial": false,
+            "flown_distance_m": 1.0
+          },
+          {
+            "source_vertex": 2,
+            "target_vertex": 5,
+            "start_time_s": 2.0,
+            "planned_arrival_time_s": 3.0,
+            "end_time_s": 3.0,
+            "full_edge_duration_s": 1.0,
+            "start_xy": [
+              1.0,
+              1.0
+            ],
+            "target_xy": [
+              1.0,
+              0.0
+            ],
+            "actual_end_xy": [
+              1.0,
+              0.0
+            ],
+            "diagonal": false,
+            "partial": false,
+            "flown_distance_m": 1.0
+          }
+        ],
+        "physical_duration_s": 3.0,
+        "horizon_s": 3.0,
+        "observation_count": 3,
+        "delta_s": 1.0,
+        "speed_m_s": 1.0,
+        "distance_m": 3.0,
+        "diagonal_distance_m": 0.0,
+        "diagonal_distance_fraction": 0.0,
+        "diagonal_edge_count": 0,
+        "final_xy": [
+          1.0,
+          0.0
+        ],
+        "last_edge_partial": false,
+        "trajectory_identity": "provided_ids",
+        "formal_certificate": false
+      },
+      "best_elapsed_s": 0.0014762000000700937,
+      "history": [
+        {
+          "elapsed_s": 0.0002849000002242974,
+          "source": "initial_route",
+          "J": 1.93452,
+          "pd_final": 0.44148,
+          "waypoints": [
+            4,
+            5,
+            4,
+            5
+          ],
+          "path": [
+            4,
+            5,
+            4,
+            5
+          ]
+        },
+        {
+          "elapsed_s": 0.0012639999995371909,
+          "source": "search",
+          "J": 1.674,
+          "pd_final": 0.546,
+          "waypoints": [
+            4,
+            5,
+            2,
+            1
+          ],
+          "path": [
+            4,
+            5,
+            2,
+            1
+          ]
+        },
+        {
+          "elapsed_s": 0.0014762000000700937,
+          "source": "search",
+          "J": 1.62252,
+          "pd_final": 0.59748,
+          "waypoints": [
+            4,
+            5,
+            2,
+            5
+          ],
+          "path": [
+            4,
+            5,
+            2,
+            5
+          ]
+        }
+      ],
+      "late_candidates": [],
+      "stats": {
+        "expanded": 8,
+        "generated": 24,
+        "safe_pruned": 9,
+        "terminal_candidates": 8,
+        "replayed_candidates": 3,
+        "guide_calls": 8,
+        "peak_open": 6,
+        "preprocessing_s": 0.00015720000010333024,
+        "guide_s": 0.00020979999953851802,
+        "transition_s": 0.0009501999993517529,
+        "replay_s": 0.000632400000540656,
+        "initial_copy_s": 3.0000046535860747e-07
+      },
+      "open_count": 0,
+      "J": 1.62252,
+      "pd_final": 0.59748,
+      "path": [
+        4,
+        5,
+        2,
+        5
+      ],
+      "waypoints": [
+        4,
+        5,
+        2,
+        5
+      ],
+      "survival": [
+        0.9999999999999999,
+        0.766,
+        0.45399999999999996,
+        0.40252
+      ],
+      "expanded": 8,
+      "generated": 24,
+      "peak_open": 6,
+      "timings": {
+        "preprocessing_s": 0.00015720000010333024,
+        "guide_s": 0.00020979999953851802,
+        "transition_s": 0.0009501999993517529,
+        "replay_s": 0.000632400000540656,
+        "initial_copy_s": 3.0000046535860747e-07
+      },
+      "wall_s": 0.002053899999737041,
+      "elapsed_s": 0.002053899999737041,
+      "deadline_overshoot_s": 0.0
+    },
+    "best_found_elapsed_s": 0.001485000000684522,
+    "initial_J": 1.93452,
+    "improvement_from_initial_J": 0.31200000000000006,
+    "algorithm_wall_s": 0.0020627000003514695,
+    "algorithm_cpu_s": 0.0,
+    "inner_wall_s": 0.002053899999737041,
+    "conservative_clock_offset_s": 8.800000614428427e-06,
+    "audit_wall_s": 0.0006621000002269284,
+    "budget_overshoot_s": 0.0,
+    "numerical_optimum_complete": false,
+    "lower_bound": null,
+    "proof_elapsed_s": null,
+    "inputs": {
+      "case_id": "turning_footprint",
+      "case_sha256": "ddb4a1d0479c1a66fe5254ee9a6e82c413dad11c8de84c133e42bcadc7914193"
+    },
+    "environment": {
+      "python": "3.11.18 | packaged by conda-forge | (main, Oct 26 2026, 11:29:07) [MSC v.1944 64 bit (AMD64)]",
+      "executable": "c:\\users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+      "platform": "Windows-10-10.0.26200-SP0",
+      "machine": "",
+      "processor": "",
+      "cpu_count": 32,
+      "memory_total_bytes": 16340455424,
+      "packages": {
+        "numpy": "2.4.6",
+        "scipy": "1.17.1",
+        "pytest": "9.2.0",
+        "psutil": "7.2.2",
+        "pyproj": "3.7.2"
+      },
+      "scipy_embedded_highs_version": "1.12.0",
+      "thread_environment": {
+        "OMP_NUM_THREADS": "1",
+        "OPENBLAS_NUM_THREADS": "1",
+        "MKL_NUM_THREADS": "1",
+        "NUMEXPR_NUM_THREADS": "1",
+        "VECLIB_MAXIMUM_THREADS": "1"
+      }
+    },
+    "sensor_model_status": "controlled_geometric_proxy_not_camera_calibrated",
+    "formal_optimality_certificate": false
+  }
+}

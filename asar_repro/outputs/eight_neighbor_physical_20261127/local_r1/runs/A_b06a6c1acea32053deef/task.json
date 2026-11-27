@@ -1,0 +1,9 @@
+{
+  "stage": "A",
+  "case": "special_mass",
+  "footprint": "axis_square",
+  "connectivity": 8,
+  "method": "search",
+  "seconds": 2,
+  "repetition": 0
+}

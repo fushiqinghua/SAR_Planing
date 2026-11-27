@@ -1,0 +1,9 @@
+{
+  "stage": "B30",
+  "scene": "arctic_ocean",
+  "footprint": "heading_square",
+  "connectivity": 8,
+  "method": "search",
+  "seconds": 30,
+  "repetition": 0
+}

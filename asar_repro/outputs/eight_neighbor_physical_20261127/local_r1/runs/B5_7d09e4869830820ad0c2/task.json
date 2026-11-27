@@ -1,0 +1,9 @@
+{
+  "stage": "B5",
+  "scene": "lake_ontario",
+  "footprint": "heading_square",
+  "connectivity": 8,
+  "method": "search",
+  "seconds": 5,
+  "repetition": 2
+}

@@ -1,0 +1,218 @@
+[
+  {
+    "stage": "B30",
+    "scene": "arctic_ocean",
+    "footprint": "heading_square",
+    "connectivity": 4,
+    "method": "search",
+    "seconds": 30,
+    "repetition": 2
+  },
+  {
+    "stage": "B30",
+    "scene": "arctic_ocean",
+    "footprint": "heading_square",
+    "connectivity": 4,
+    "method": "search",
+    "seconds": 30,
+    "repetition": 1
+  },
+  {
+    "stage": "B30",
+    "scene": "lake_ontario",
+    "footprint": "heading_square",
+    "connectivity": 8,
+    "method": "search",
+    "seconds": 30,
+    "repetition": 0
+  },
+  {
+    "stage": "B30",
+    "scene": "lake_ontario",
+    "footprint": "heading_square",
+    "connectivity": 4,
+    "method": "search",
+    "seconds": 30,
+    "repetition": 2
+  },
+  {
+    "stage": "B30",
+    "scene": "lake_ontario",
+    "footprint": "heading_square",
+    "connectivity": 4,
+    "method": "search",
+    "seconds": 30,
+    "repetition": 1
+  },
+  {
+    "stage": "B30",
+    "scene": "arctic_ocean",
+    "footprint": "heading_square",
+    "connectivity": 8,
+    "method": "search",
+    "seconds": 30,
+    "repetition": 2
+  },
+  {
+    "stage": "B30",
+    "scene": "lake_ontario",
+    "footprint": "heading_square",
+    "connectivity": 4,
+    "method": "search",
+    "seconds": 30,
+    "repetition": 0
+  },
+  {
+    "stage": "B30",
+    "scene": "arctic_ocean",
+    "footprint": "axis_square",
+    "connectivity": 4,
+    "method": "search",
+    "seconds": 30,
+    "repetition": 2
+  },
+  {
+    "stage": "B30",
+    "scene": "arctic_ocean",
+    "footprint": "heading_square",
+    "connectivity": 8,
+    "method": "search",
+    "seconds": 30,
+    "repetition": 1
+  },
+  {
+    "stage": "B30",
+    "scene": "lake_ontario",
+    "footprint": "heading_square",
+    "connectivity": 8,
+    "method": "search",
+    "seconds": 30,
+    "repetition": 2
+  },
+  {
+    "stage": "B30",
+    "scene": "lake_ontario",
+    "footprint": "axis_square",
+    "connectivity": 4,
+    "method": "search",
+    "seconds": 30,
+    "repetition": 2
+  },
+  {
+    "stage": "B30",
+    "scene": "arctic_ocean",
+    "footprint": "axis_square",
+    "connectivity": 4,
+    "method": "search",
+    "seconds": 30,
+    "repetition": 0
+  },
+  {
+    "stage": "B30",
+    "scene": "lake_ontario",
+    "footprint": "heading_square",
+    "connectivity": 8,
+    "method": "search",
+    "seconds": 30,
+    "repetition": 1
+  },
+  {
+    "stage": "B30",
+    "scene": "lake_ontario",
+    "footprint": "axis_square",
+    "connectivity": 8,
+    "method": "search",
+    "seconds": 30,
+    "repetition": 2
+  },
+  {
+    "stage": "B30",
+    "scene": "lake_ontario",
+    "footprint": "axis_square",
+    "connectivity": 4,
+    "method": "search",
+    "seconds": 30,
+    "repetition": 0
+  },
+  {
+    "stage": "B30",
+    "scene": "arctic_ocean",
+    "footprint": "axis_square",
+    "connectivity": 4,
+    "method": "search",
+    "seconds": 30,
+    "repetition": 1
+  },
+  {
+    "stage": "B30",
+    "scene": "arctic_ocean",
+    "footprint": "axis_square",
+    "connectivity": 8,
+    "method": "search",
+    "seconds": 30,
+    "repetition": 1
+  },
+  {
+    "stage": "B30",
+    "scene": "lake_ontario",
+    "footprint": "axis_square",
+    "connectivity": 8,
+    "method": "search",
+    "seconds": 30,
+    "repetition": 1
+  },
+  {
+    "stage": "B30",
+    "scene": "arctic_ocean",
+    "footprint": "heading_square",
+    "connectivity": 8,
+    "method": "search",
+    "seconds": 30,
+    "repetition": 0
+  },
+  {
+    "stage": "B30",
+    "scene": "lake_ontario",
+    "footprint": "axis_square",
+    "connectivity": 4,
+    "method": "search",
+    "seconds": 30,
+    "repetition": 1
+  },
+  {
+    "stage": "B30",
+    "scene": "lake_ontario",
+    "footprint": "axis_square",
+    "connectivity": 8,
+    "method": "search",
+    "seconds": 30,
+    "repetition": 0
+  },
+  {
+    "stage": "B30",
+    "scene": "arctic_ocean",
+    "footprint": "heading_square",
+    "connectivity": 4,
+    "method": "search",
+    "seconds": 30,
+    "repetition": 0
+  },
+  {
+    "stage": "B30",
+    "scene": "arctic_ocean",
+    "footprint": "axis_square",
+    "connectivity": 8,
+    "method": "search",
+    "seconds": 30,
+    "repetition": 0
+  },
+  {
+    "stage": "B30",
+    "scene": "arctic_ocean",
+    "footprint": "axis_square",
+    "connectivity": 8,
+    "method": "search",
+    "seconds": 30,
+    "repetition": 2
+  }
+]
