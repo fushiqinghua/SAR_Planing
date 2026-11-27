@@ -1,3 +1,47 @@
+# 四／八邻接物理一致性实验（待本地执行）
+
+分支：**eight-neighbor-physical-study-20261127**  
+基点：上一批结果提交 **3399015cdf2e20dabe5895e30e3ae812bb68b049**  
+交付状态：**源码、协议、配置和测试已准备；仅静态检查，测试与实验均 `not_run`。**
+
+本批推进一个明确的问题：**同一条历史强路线起步，在相同地速、飞行时长、观测时钟与覆盖假设下，开放对角运动能否改善 SAR 搜索质量？** 请先按本地说明验证，再执行预定矩阵；不会自动启动长预算或生成新漂移档案。
+
+## 本批入口
+
+| 内容 | 文件 |
+|---|---|
+| 逐条本地命令、预检、测试、冻结与回传 | [LOCAL_RUNBOOK.md](asar_repro/docs/eight_neighbor_physical/LOCAL_RUNBOOK.md) |
+| 有限实验矩阵与成本范围 | [PLAN.md](asar_repro/docs/eight_neighbor_physical/PLAN.md) |
+| 恒速运动、共同观测时钟与概率评分 | [MODEL.md](asar_repro/docs/eight_neighbor_physical/MODEL.md) |
+| 同预算判断门槛、负结果与停止规则 | [DECISIONS.md](asar_repro/docs/eight_neighbor_physical/DECISIONS.md) |
+| 结果填写与证据清单 | [RESULTS_TEMPLATE.md](asar_repro/docs/eight_neighbor_physical/RESULTS_TEMPLATE.md) |
+| 原论文、any-angle 与状态格的适用边界 | [LITERATURE.md](asar_repro/docs/eight_neighbor_physical/LITERATURE.md) |
+| 固定配置 / 执行器 | [配置](asar_repro/configs/eight_neighbor_physical.json) · [执行器](asar_repro/scripts/run_eight_neighbor_physical.py) |
+| 物理评分 / 搜索与独立 toy 枚举 | [physical_model.py](asar_repro/src/asar_repro/physical_model.py) · [physical_search.py](asar_repro/src/asar_repro/physical_search.py) |
+| 交付状态与静态核验清单 | [delivery_manifest.json](asar_repro/docs/eight_neighbor_physical/delivery_manifest.json) |
+
+## 本批固定矩阵
+
+| 阶段 | 内容 | 任务数 | 算法预算 |
+|---|---|---:|---:|
+| P0 | 原始代码与输入保护、评分桥接、实际本地测试、冻结 | 不计性能任务 | 另计 |
+| A | 六个 toy × 两种覆盖 × 四／八邻接 × 研究搜索／独立枚举 | 48 | 288 秒 |
+| B5 | Lake / Hudson × 两种覆盖 × 四／八邻接 × 三次重复，各 5 秒 | 24 | 120 秒 |
+| B30 | 同矩阵重新起步，各 30 秒 | 24 | 720 秒 |
+| 合计 | 不包含 P0 与进程/I/O/审计开销 | **96** | **1128 秒（18 分 48 秒）** |
+
+正交边长为 d，对角边长为 sqrt(2)d，两组保持 20 m/s 和原观测时刻。航段与探测时刻分开，允许在边内观测；末边在 H 截断仍要评满 H。固定飞行时长意味着两组实际航程均为 vH。保留原粒子身份、特殊箱质量、无等待、自由终点和原 J/Pd 公式。
+
+主要覆盖 `heading_square` 随飞行方向转动；同预算 `axis_square` 保持世界轴方向，用于敏感性分析和旧四邻评分桥接。两者均是**未校准几何代理**。平方边长采用一个原网格宽度，不把 sweep width 当作已知实机视场。
+
+四／八邻接共用新增的 paper-guided anytime 研究适配器，仅动作图不同。它不是原论文求解器逐位复现，没有继承旧 STDC 或 epsilon 证书。初始化使用相同的历史强四邻接路线并按新模型重放；原路线离线生成成本统一不计，复制、评分、内部预处理和候选重放均计时。
+
+**正式比较是在新模型内部的四／八邻接之间进行。** 旧模型 J 的绝对值只做桥接核验；保持指标公式，不等于跨模型直接归因。B5 质量门槛与覆盖敏感性均通过，才标记待独立验证的筛选信号；B30 独立判断，不能改写 B5。Fundy、300 秒、any-angle、状态格与独立档案均未启用。
+
+以下保留上一批的结果、研究入口和复现说明。
+
+---
+
 # 同一模型下的完整路线求解实验
 
 分支：**solver-paradigm-study-20261127**  

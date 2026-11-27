@@ -1,0 +1,6 @@
+# Existing satisfactory packages can be retained. No installation is performed on delivery.
+numpy>=1.24
+scipy>=1.11
+pyproj>=3.6
+pytest>=7
+psutil>=5.9

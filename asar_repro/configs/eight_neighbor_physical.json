@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "batch": "eight-neighbor-physical-study-20261127",
+  "delivery_status": "not_run",
+  "base_commit": "3399015cdf2e20dabe5895e30e3ae812bb68b049",
+  "legacy_config": "configs/solver_paradigm_study.json",
+  "primary_scenes": [
+    "lake_ontario",
+    "arctic_ocean"
+  ],
+  "connectivities": [
+    4,
+    8
+  ],
+  "footprints": [
+    "heading_square",
+    "axis_square"
+  ],
+  "primary_footprint": "heading_square",
+  "sensor_model_status": "controlled_geometric_proxy_not_camera_calibrated",
+  "physical_contract": {
+    "speed_m_s": 20,
+    "observation_clock": "original step_s = cell_width_m / speed_m_s",
+    "square_width": "one cell width in each axis",
+    "q": "original 0.78 per original observation clock; no frequency change",
+    "final_edge": "truncate at common physical horizon and observe through final tick",
+    "special_bins": "retain mass, never searchable",
+    "heading_at_vertex": "arriving edge; one observation only",
+    "initialization": "same historical strong four-neighbor route replayed under the new model inside solver budget; offline generation excluded",
+    "flight_model": "constant ground speed point mass, all-water approximation, no turn dynamics, no added return constraint"
+  },
+  "diagnostic": {
+    "expected_cases": 6,
+    "search_seconds": 2,
+    "oracle_seconds": 10,
+    "tolerance": 1e-8
+  },
+  "stages": {
+    "B5": {
+      "seconds": 5,
+      "repetitions": 3
+    },
+    "B30": {
+      "seconds": 30,
+      "repetitions": 3
+    }
+  },
+  "search": {
+    "guide_weight": 1.04,
+    "max_open": 100000
+  },
+  "task_order_seed": 20261127,
+  "gates": {
+    "quality_relative_improvement": 0.005,
+    "non_regression_relative_tolerance": 1e-8,
+    "sensitivity_positive_relative_tolerance": 1e-8,
+    "sensitivity_max_relative_regression": 0.005
+  },
+  "watchdog": {
+    "rss_limit_bytes": 2147483648,
+    "grace_seconds": 15,
+    "poll_seconds": 0.1
+  },
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "validation_tests": [
+    "tests/test_objective.py",
+    "tests/test_particle_search.py",
+    "tests/test_physical_model.py",
+    "tests/test_physical_search.py",
+    "tests/test_eight_neighbor_physical_runner.py"
+  ],
+  "runtime_experiments_executed_on_delivery": false,
+  "holdout": "not_designed_not_run",
+  "long_budget": "not_enabled",
+  "fundy": "excluded_physical_direction_unverified"
+}

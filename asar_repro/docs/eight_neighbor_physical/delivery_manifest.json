@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "study": "eight-neighbor-physical-study-20261127",
+  "branch": "eight-neighbor-physical-study-20261127",
+  "base_commit": "3399015cdf2e20dabe5895e30e3ae812bb68b049",
+  "delivery_date": "2026-11-27",
+  "status": "prepared_not_run",
+  "execution_status": {
+    "dependency_installation": "not_run",
+    "pytest": "not_run",
+    "input_replay": "not_run",
+    "toy_enumeration": "not_run",
+    "real_scene_search": "not_run",
+    "holdout": "not_designed_not_run"
+  },
+  "static_validation": {
+    "python_ast": "passed",
+    "python_files": [
+      "asar_repro/scripts/run_eight_neighbor_physical.py",
+      "asar_repro/src/asar_repro/physical_model.py",
+      "asar_repro/src/asar_repro/physical_search.py",
+      "asar_repro/tests/test_physical_model.py",
+      "asar_repro/tests/test_physical_search.py",
+      "asar_repro/tests/test_eight_neighbor_physical_runner.py"
+    ],
+    "config_json": "parsed",
+    "registered_config_literals": "matched",
+    "diagnostic_case_ids": [
+      "diagonal_intercept",
+      "late_drift",
+      "repeat_detection",
+      "special_mass",
+      "coverage_tradeoff",
+      "turning_footprint"
+    ],
+    "relative_markdown_links_checked": 44,
+    "broken_relative_links": [],
+    "available_base_source_snapshot_blobs_matched": 58,
+    "base_source_blobs_in_parent": 183,
+    "scope": "Source parsing, literal checks, hashes and link targets only. No module execution, pytest, search or enumeration."
+  },
+  "change_set": {
+    "modified_existing": [
+      "README.md"
+    ],
+    "added": [
+      "asar_repro/configs/eight_neighbor_physical.json",
+      "asar_repro/requirements-physical-study.txt",
+      "asar_repro/scripts/run_eight_neighbor_physical.py",
+      "asar_repro/src/asar_repro/physical_model.py",
+      "asar_repro/src/asar_repro/physical_search.py",
+      "asar_repro/tests/test_physical_model.py",
+      "asar_repro/tests/test_physical_search.py",
+      "asar_repro/tests/test_eight_neighbor_physical_runner.py",
+      "asar_repro/docs/eight_neighbor_physical/PLAN.md",
+      "asar_repro/docs/eight_neighbor_physical/MODEL.md",
+      "asar_repro/docs/eight_neighbor_physical/DECISIONS.md",
+      "asar_repro/docs/eight_neighbor_physical/RESULTS_TEMPLATE.md",
+      "asar_repro/docs/eight_neighbor_physical/LITERATURE.md",
+      "asar_repro/docs/eight_neighbor_physical/LOCAL_RUNBOOK.md",
+      "asar_repro/docs/eight_neighbor_physical/delivery_manifest.json"
+    ],
+    "deleted": [],
+    "historical_code_and_results": "inherited unchanged from base Git tree"
+  },
+  "plan": {
+    "stages": {
+      "A": {
+        "tasks": 48,
+        "algorithm_budget_s": 288
+      },
+      "B5": {
+        "tasks": 24,
+        "algorithm_budget_s": 120
+      },
+      "B30": {
+        "tasks": 24,
+        "algorithm_budget_s": 720
+      }
+    },
+    "total_tasks": 96,
+    "algorithm_budget_s": 1128,
+    "total_wall_time": "not_predicted; validation, startup, input loading, audit and IO are additional"
+  },
+  "limitations": [
+    "uncalibrated square sensor proxies",
+    "constant-speed planar point mass; no turn dynamics",
+    "common historical route generation cost excluded; replay and solver preparation charged",
+    "original metrics retained but official comparison occurs within each new physical model",
+    "no inherited STDC or epsilon certificate",
+    "no completed tests or experiments at delivery"
+  ],
+  "files": {
+    "README.md": {
+      "sha256": "a5f70d68f73e00c917c5da4568c4e6649cff954ca84c294ac6314b379db989a0",
+      "git_blob_sha": "81a1a9400193930f50e1fc96761a960ca8c16622",
+      "bytes": 9066
+    },
+    "asar_repro/configs/eight_neighbor_physical.json": {
+      "sha256": "ed62f613c49fd3ce57fb92eac78d49005741d1374475ec0edac0416be3440880",
+      "git_blob_sha": "a1cf4f8be2e38582a1b8573b4b8684a30242162b",
+      "bytes": 2506
+    },
+    "asar_repro/requirements-physical-study.txt": {
+      "sha256": "429539171e60b40947c6de97ec558b943120e9a729036665e7541605771b95d7",
+      "git_blob_sha": "3c405edd4767c9e303760e2fc59a9930885c6088",
+      "bytes": 150
+    },
+    "asar_repro/scripts/run_eight_neighbor_physical.py": {
+      "sha256": "358a10f2c1d48fa7410ee68d51146731224c54787dc41aa4d8c6d845328ea7ab",
+      "git_blob_sha": "bb602fed397ada91a61c673554a8090cb318b384",
+      "bytes": 44758,
+      "test_function_count": 0
+    },
+    "asar_repro/src/asar_repro/physical_model.py": {
+      "sha256": "dea279468b210922b523c2274433689dde19a1428ed6a2adaf4b32ab750dd14c",
+      "git_blob_sha": "c8ff4bfc3b57b12da2e5f437c61bdac5e69c070d",
+      "bytes": 19350,
+      "test_function_count": 0
+    },
+    "asar_repro/src/asar_repro/physical_search.py": {
+      "sha256": "e96b65fe30d9471cb27037a7d4f633b3efec0457fca16ce491906e09d18524d8",
+      "git_blob_sha": "b0ce8407373692a48c8048af0eb5f616cece23b8",
+      "bytes": 27847,
+      "test_function_count": 0
+    },
+    "asar_repro/tests/test_physical_model.py": {
+      "sha256": "10f75b29874c2d95c09676bd6d38e12b4d0e88006e8987ca2e6ec1528264ab20",
+      "git_blob_sha": "273ea37b0e5cc7f1c7f3eb81fed4af60afd25ac7",
+      "bytes": 12458,
+      "test_function_count": 17
+    },
+    "asar_repro/tests/test_physical_search.py": {
+      "sha256": "b224475eeefacac0cbb3f4d29cf163dfcaf55ba8ec9c1914e6b85365b2c718f3",
+      "git_blob_sha": "27eb69103a67c90e1341f140d33a3026b87962df",
+      "bytes": 14701,
+      "test_function_count": 17
+    },
+    "asar_repro/tests/test_eight_neighbor_physical_runner.py": {
+      "sha256": "a8ea3077ceca3aacb78a50662c2cb9be2bf2ad9308f42df67a80a8fd4f4fd3b4",
+      "git_blob_sha": "a5b56585baedd9bd1244a50edc0e4e97a277df96",
+      "bytes": 7755,
+      "test_function_count": 14
+    },
+    "asar_repro/docs/eight_neighbor_physical/PLAN.md": {
+      "sha256": "a9f60db559596310ff6726fa6652460223b907faf4f7d4ae17975487d96749bd",
+      "git_blob_sha": "cd7fa9dbfeb73a542d91f0de3d814b2707bc9ca0",
+      "bytes": 8638
+    },
+    "asar_repro/docs/eight_neighbor_physical/MODEL.md": {
+      "sha256": "9e87330d03a8004b6a9cb19c6d505436c808e8a82e55b4b0438f213918395e5b",
+      "git_blob_sha": "3fe34556ff0a1ec1e1624ef8a806d0ea70110b71",
+      "bytes": 6954
+    },
+    "asar_repro/docs/eight_neighbor_physical/DECISIONS.md": {
+      "sha256": "34614e58ff10b1f232a5c200bc0e33942dbf04450b985b48ecae6ae862bdfe53",
+      "git_blob_sha": "63b4b1e743f675f638b9a6636935eef17e50fbf8",
+      "bytes": 6561
+    },
+    "asar_repro/docs/eight_neighbor_physical/RESULTS_TEMPLATE.md": {
+      "sha256": "6aad215f2a17889d9dd2261bc03fa41c9dca1ee0f4242ac8eefff6e138a91fac",
+      "git_blob_sha": "866d0274e1e9f4ec5ae1fbb5a04f36d46796d7d8",
+      "bytes": 5402
+    },
+    "asar_repro/docs/eight_neighbor_physical/LITERATURE.md": {
+      "sha256": "e9237149980bbdd80b670930eddc46e9d85880d670ded589f9806f0a10099851",
+      "git_blob_sha": "b7e2f9702d52814fc9d01220e42c69c53cec0211",
+      "bytes": 3788
+    },
+    "asar_repro/docs/eight_neighbor_physical/LOCAL_RUNBOOK.md": {
+      "sha256": "ba85eec8a0fb6f2b76dbdea8eb32a83ca0964094dd8fb0ecb1eb8014c9be6872",
+      "git_blob_sha": "c9a05a0169fdd78de104869656365fd165563743",
+      "bytes": 10398
+    }
+  },
+  "manifest_self_hash": "not included; use the Git blob identity"
+}
