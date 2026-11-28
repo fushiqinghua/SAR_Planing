@@ -1,0 +1,144 @@
+{
+  "dates": [
+    {
+      "block_id": "lake_h3_d1",
+      "captures": {
+        "sources/lake_h3_d1/noaa/a001.json": "c9930a9901058a9e65924e9749d1189fd0fd28d85e17e02582259d2305a47f1e",
+        "sources/lake_h3_d1/noaa/claims/a001.json": "a67f1e7cf6b824f2f9dec8f797543527e5b8f9ff38ff71976929d80800db9670"
+      },
+      "date": "2025-08-05",
+      "manifest": "source_manifests/20261128T143457315214Z/lake_h3_d1.json",
+      "manifest_sha256": "9fb9f301e2a9cfc05d528b43b4e29d6a00bc84c2282779f39e4ef1d46c61a138",
+      "primary": true,
+      "providers": {
+        "noaa": "retrieved"
+      },
+      "reason": "input must have type NumPy datetime",
+      "scene": "lake_ontario",
+      "seeds": [
+        3401,
+        3402
+      ],
+      "status": "blocked",
+      "traceback": "Traceback (most recent call last):\n  File \"E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\scripts\\prepare_eight_neighbor_h3.py\", line 71, in _audit_block\n    _, checks = load_h3_forcing(ROOT, block, manifest)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\src\\asar_repro\\h3_forcing.py\", line 256, in load_h3_forcing\n    native_valid_times_utc=[utc_label(when) for when in field.times],\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\src\\asar_repro\\h3_forcing.py\", line 256, in <listcomp>\n    native_valid_times_utc=[utc_label(when) for when in field.times],\n                            ^^^^^^^^^^^^^^^\n  File \"E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\src\\asar_repro\\historical_drift.py\", line 18, in utc_label\n    return np.datetime_as_string(value, unit=\"ns\").rstrip(\"0\").rstrip(\".\") + \"Z\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: input must have type NumPy datetime\n"
+    },
+    {
+      "block_id": "lake_h3_d2",
+      "captures": {},
+      "date": "2025-09-16",
+      "primary": true,
+      "providers": {},
+      "reason": "acquisition_not_complete",
+      "scene": "lake_ontario",
+      "seeds": [
+        3501,
+        3502
+      ],
+      "status": "pending"
+    },
+    {
+      "block_id": "lake_h3_d3",
+      "captures": {},
+      "date": "2025-09-30",
+      "primary": true,
+      "providers": {},
+      "reason": "acquisition_not_complete",
+      "scene": "lake_ontario",
+      "seeds": [
+        3601,
+        3602
+      ],
+      "status": "pending"
+    },
+    {
+      "block_id": "hudson_h3_d1",
+      "captures": {
+        "sources/hudson_h3_d1/hycom/a001.json": "4c5ab3fd8d72104d7da7993e87290150d3ca6695102309358108871792b00c57",
+        "sources/hudson_h3_d1/hycom/a002.json": "d106f04a9f299cfc23c533a6f4ad50e0b78f0bd916e412a87791c385c526cf59",
+        "sources/hudson_h3_d1/hycom/claims/a001.json": "6fa23d75ee89cb56ab97fa600cb7f5349919013e8c5470314b207384f6639dc0",
+        "sources/hudson_h3_d1/hycom/claims/a002.json": "60d7495da13baa33c7322a3fdb5b178670acaa01d6e1c44cafddfcf8cb51ecd3",
+        "sources/hudson_h3_d1/noaa/a001.json": "60dfc20b83abbcc2c3e28889ea0c6dc6af13c330156b9dbe7de8b8d92d9eb1e7",
+        "sources/hudson_h3_d1/noaa/claims/a001.json": "311fee9441410f590378e71780190a0b99da3c9544e52e6f242b438a893fe85f"
+      },
+      "date": "2025-08-08",
+      "manifest": "source_manifests/20261128T143457315214Z/hudson_h3_d1.json",
+      "manifest_sha256": "453d8e63e3467446b26f6dcd766a6cf26eeb8d76c1f7de340cbd6fc836ca9a20",
+      "primary": true,
+      "providers": {
+        "hycom": "retrieved",
+        "noaa": "retrieved"
+      },
+      "reason": "HYCOM OPeNDAP capture lacks a verified provider time axis",
+      "scene": "arctic_ocean",
+      "seeds": [
+        4401,
+        4402
+      ],
+      "status": "blocked",
+      "traceback": "Traceback (most recent call last):\n  File \"E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\scripts\\prepare_eight_neighbor_h3.py\", line 71, in _audit_block\n    _, checks = load_h3_forcing(ROOT, block, manifest)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\src\\asar_repro\\h3_forcing.py\", line 233, in load_h3_forcing\n    current = _hudson_dap_current(root, block, current_rows, cfg)\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\src\\asar_repro\\h3_forcing.py\", line 141, in _hudson_dap_current\n    raise ValueError(\"HYCOM OPeNDAP capture lacks a verified provider time axis\")\nValueError: HYCOM OPeNDAP capture lacks a verified provider time axis\n"
+    },
+    {
+      "block_id": "hudson_h3_d2",
+      "captures": {
+        "sources/hudson_h3_d2/hycom/a001.json": "37a6f64d440ae40ded9c9880a33c0f4e95b033ac7495f87c4b3f8f96c24b33ba",
+        "sources/hudson_h3_d2/hycom/claims/a001.json": "830daaf2cbfd2c473c37c65f57411e0092bce1b58d25000cefe591cf17ac2e61",
+        "sources/hudson_h3_d2/noaa/a001.json": "bd08cb1ceabb0b4708f2615c1204e42dbb00e6c638c08357da1f2201581265c5",
+        "sources/hudson_h3_d2/noaa/claims/a001.json": "a8874ff1a9549a89888ee9f8e647c57bbf012c50d110b0eb8578fafb9968ea86"
+      },
+      "date": "2025-09-19",
+      "details": "NCSS transport not resolved after 3 attempts: https://ncss.hycom.org/thredds/ncss/grid/ESPC-D-V02/ice/2025?var=ssu&var=ssv&var=sic&north=64.0&south=61.5&west=268&east=271.5&horizStride=1&time_start=2025-09-19T00%3A00%3A00Z&time_end=2025-09-19T23%3A00%3A00Z&timeStride=1&addLatLon=true&accept=netcdf4",
+      "primary": true,
+      "providers": {
+        "hycom": "blocked",
+        "noaa": "retrieved"
+      },
+      "reason": "unverified_acquisition",
+      "scene": "arctic_ocean",
+      "seeds": [
+        4501,
+        4502
+      ],
+      "status": "blocked"
+    },
+    {
+      "block_id": "hudson_h3_d3",
+      "captures": {
+        "sources/hudson_h3_d3/hycom/a001.json": "975a05108524e8fb50e393301e25230511c1d998c7e540a357df4c15b0c6c17b",
+        "sources/hudson_h3_d3/hycom/claims/a001.json": "3a52af8609b0955b25f32a6da0503d72a8c042c6889080a95c7c31ebc133995e",
+        "sources/hudson_h3_d3/noaa/a001.json": "d3010e5ed7dcc23fd701b87baac8ba6a07c7cb314e93772c733a03438d9c356e",
+        "sources/hudson_h3_d3/noaa/claims/a001.json": "63792fa147b9b407d6891a866c5030e3fa23220807abcea9399c52f92c1742d3"
+      },
+      "date": "2025-10-03",
+      "manifest": "source_manifests/20261128T143457315214Z/hudson_h3_d3.json",
+      "manifest_sha256": "5297c03abf5d8aa582dd05d160c7c42070bf1128f3824d9b6f5a3439bb651a3b",
+      "primary": true,
+      "providers": {
+        "hycom": "retrieved",
+        "noaa": "retrieved"
+      },
+      "reason": "input must have type NumPy datetime",
+      "scene": "arctic_ocean",
+      "seeds": [
+        4601,
+        4602
+      ],
+      "status": "blocked",
+      "traceback": "Traceback (most recent call last):\n  File \"E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\scripts\\prepare_eight_neighbor_h3.py\", line 71, in _audit_block\n    _, checks = load_h3_forcing(ROOT, block, manifest)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\src\\asar_repro\\h3_forcing.py\", line 256, in load_h3_forcing\n    native_valid_times_utc=[utc_label(when) for when in field.times],\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\src\\asar_repro\\h3_forcing.py\", line 256, in <listcomp>\n    native_valid_times_utc=[utc_label(when) for when in field.times],\n                            ^^^^^^^^^^^^^^^\n  File \"E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\src\\asar_repro\\historical_drift.py\", line 18, in utc_label\n    return np.datetime_as_string(value, unit=\"ns\").rstrip(\"0\").rstrip(\".\") + \"Z\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: input must have type NumPy datetime\n"
+    }
+  ],
+  "exhausted": [],
+  "method_lock_sha256": "a249f1a941fc0e6ee58051338a0d518c58262af273821b92f89b5dbf9b63103f",
+  "replacements": {},
+  "route_scores_used": 0,
+  "selected": [],
+  "selection_inputs": "official source qualification only",
+  "status": "pending_qualification",
+  "waiting": [
+    "lake_h3_d1",
+    "lake_h3_d2",
+    "lake_h3_d3",
+    "hudson_h3_d1",
+    "hudson_h3_d2",
+    "hudson_h3_d3"
+  ]
+}

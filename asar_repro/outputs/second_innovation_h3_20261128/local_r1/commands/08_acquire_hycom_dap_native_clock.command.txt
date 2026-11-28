@@ -1,0 +1,1 @@
+C:\Users\35448\.conda\envs\maritime-sar\python.exe scripts/h3_acquire.py acquire --provider hycom --hycom-access dap --retry-transport --block hudson_h3_d1 --block hudson_h3_d2

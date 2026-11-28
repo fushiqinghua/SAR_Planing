@@ -1,0 +1,39 @@
+from hashlib import file_digest
+import json
+import os
+from pathlib import Path
+
+from netCDF4 import Dataset
+import numpy as np
+
+from h3_hycom_dap import attributes, packed_product, unpack
+
+out = Path(os.environ["ASAR_H3_QA_DIR"])
+dap = out / "05_hycom_dap_sep18.body"
+das = out / "04_hycom_dap_das.body"
+native = Path("data/raw/h3/hudson_h3_d2/local_r1/hycom/a001/hycom/ESPC-D-V02_surface_20250918.nc")
+fields = packed_product(dap.read_bytes(), 1)
+attrs = attributes(das.read_bytes())
+with Dataset(native) as nd:
+    axes = {name: np.array_equal(fields[name], nd[name][:] if name != "time" else nd[name][:1])
+            for name in ("lon", "lat", "time")}
+    values = {}
+    for name in ("ssu", "ssv", "sic"):
+        source = nd[name]
+        decoded = np.ma.asarray(source[:1], dtype=np.float64).filled(np.nan)
+        source.set_auto_maskandscale(False)
+        raw = np.asarray(source[:1])
+        values[name] = dict(raw_packed_identical=np.array_equal(fields[name], raw),
+                            cf_unpacked_identical=np.array_equal(unpack(fields[name],attrs[name]), decoded,
+                                                                equal_nan=True))
+def sha(path):
+    with path.open("rb") as f:
+        return file_digest(f, "sha256").hexdigest()
+okay = all(axes.values()) and all(all(v.values()) for v in values.values())
+doc = dict(status="equivalent" if okay else "blocked", utc="2025-09-18T21:00:00Z",
+           region="Hudson Bay", axes=axes, variables=values,
+           files={str(path.relative_to(Path.cwd())) if path.is_absolute() else str(path): sha(path)
+                  for path in (dap,das,native)})
+print(json.dumps(doc, indent=2))
+if not okay:
+    raise SystemExit(1)

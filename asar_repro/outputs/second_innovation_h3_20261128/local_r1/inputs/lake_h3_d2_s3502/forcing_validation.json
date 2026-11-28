@@ -1,0 +1,140 @@
+{
+  "fields": {
+    "current": {
+      "lkp_csp_range_m_s": [
+        [
+          [
+            0.14648851851622263,
+            0.07744371704757214
+          ],
+          [
+            0.14059504692753155,
+            0.05194976460188627
+          ]
+        ],
+        [
+          [
+            0.16235945001244545,
+            0.09130735471844673
+          ],
+          [
+            0.15251174569129944,
+            0.07273833900690078
+          ]
+        ]
+      ],
+      "metadata": {
+        "lon_lat_bounds": [
+          -79.80072021484375,
+          -76.05899047851562,
+          43.180450439453125,
+          44.22895431518555
+        ],
+        "native_variables": [
+          "u",
+          "v"
+        ],
+        "node_projection_residual_m": 0.2596666113792793,
+        "projection": "proj=utm +zone=16 +datum=NAD83",
+        "sigma": -0.02500000037252903,
+        "sigma_index": 0,
+        "spatial_method": "constant on containing native FVCOM face",
+        "top_layer_center_depth_m": [
+          0.023007732972617934,
+          5.708191503706447
+        ],
+        "vector_basis": "geographic_east_north"
+      },
+      "native_shape": [
+        5,
+        64453,
+        3
+      ],
+      "native_valid_times_utc": [
+        "2025-09-16T13:00:00Z",
+        "2025-09-16T14:00:00Z",
+        "2025-09-16T15:00:00Z",
+        "2025-09-16T16:00:00Z",
+        "2025-09-16T17:00:00Z"
+      ],
+      "probe_count": 274,
+      "source_sha256": {
+        "data/raw/h3/lake_h3_d2/local_r1/noaa/a001/loofs/loofs.t18z.20250916.fields.n001.nc": "865503039a9ec1694d715bf6e04eb31d4ec5451782e647b3a8ada0bb3cc026c9",
+        "data/raw/h3/lake_h3_d2/local_r1/noaa/a001/loofs/loofs.t18z.20250916.fields.n002.nc": "6c8d9f319cc6291af76fecf6f0a509b869729635bdde6a26ce170110727cbf3b",
+        "data/raw/h3/lake_h3_d2/local_r1/noaa/a001/loofs/loofs.t18z.20250916.fields.n003.nc": "2705c46521c91c1e5921e247b5832914d7e03f7f301a52b832620c2c28c34f56",
+        "data/raw/h3/lake_h3_d2/local_r1/noaa/a001/loofs/loofs.t18z.20250916.fields.n004.nc": "dfafa49646c680c7b96618cd54901628e2bba7d0e49c850349f9d90caf696ba4",
+        "data/raw/h3/lake_h3_d2/local_r1/noaa/a001/loofs/loofs.t18z.20250916.fields.n005.nc": "655cb80c2e7bb3933cac7095d63122e8a973fb1ae412d85d53222ece72e7bb0d"
+      }
+    },
+    "wind": {
+      "lkp_csp_range_m_s": [
+        [
+          [
+            -2.9001136980224542,
+            -1.6670263752199284
+          ],
+          [
+            -2.891448316829043,
+            -1.5718880998291693
+          ]
+        ],
+        [
+          [
+            -2.8336846244601217,
+            -0.9687474407482055
+          ],
+          [
+            -2.831317780823579,
+            -0.8920335314212134
+          ]
+        ]
+      ],
+      "metadata": {
+        "height_m": 10,
+        "native_variables": [
+          "UGRD",
+          "VGRD"
+        ],
+        "spatial_method": "bilinear in native Lambert grid, then rotate at query",
+        "vector_basis": "grid_relative"
+      },
+      "native_shape": [
+        5,
+        1059,
+        1799,
+        2
+      ],
+      "native_valid_times_utc": [
+        "2025-09-16T13:00:00Z",
+        "2025-09-16T14:00:00Z",
+        "2025-09-16T15:00:00Z",
+        "2025-09-16T16:00:00Z",
+        "2025-09-16T17:00:00Z"
+      ],
+      "probe_count": 274,
+      "source_sha256": {
+        "data/raw/h3/lake_h3_d2/local_r1/noaa/a001/wind/hrrr.t13z.wrfsfcf00.grib2.wind10m.grib2": "1afd947979960448f6acd3f87dcab529f42d783ae3c171c7d35732a41b27b1fb",
+        "data/raw/h3/lake_h3_d2/local_r1/noaa/a001/wind/hrrr.t14z.wrfsfcf00.grib2.wind10m.grib2": "19624f29cdf70278b711f059b9c991a332cbea8004e2306dc79cf151405ef578",
+        "data/raw/h3/lake_h3_d2/local_r1/noaa/a001/wind/hrrr.t15z.wrfsfcf00.grib2.wind10m.grib2": "0471696e8afa65b81b92b34750b881fe0b044086a0473762cef63ecbca3755cd",
+        "data/raw/h3/lake_h3_d2/local_r1/noaa/a001/wind/hrrr.t16z.wrfsfcf00.grib2.wind10m.grib2": "ce6c3564d26fd705688a0a0ce8486ffbeeb134b1b41e0c1b0fcf6740e69f0fe9",
+        "data/raw/h3/lake_h3_d2/local_r1/noaa/a001/wind/hrrr.t17z.wrfsfcf00.grib2.wind10m.grib2": "5d8245752c27fec865753f2cf618aa6ce30fd5aecf62472b81a422be920af36a"
+      }
+    }
+  },
+  "forcing_kind": "historical_real",
+  "lkp_csp_lon_lat": [
+    [
+      -76.5,
+      44.21
+    ],
+    [
+      -76.496,
+      44.215
+    ]
+  ],
+  "native_window_utc": [
+    "2025-09-16T14:45:00Z",
+    "2025-09-16T15:53:00Z"
+  ],
+  "status": "eligible"
+}

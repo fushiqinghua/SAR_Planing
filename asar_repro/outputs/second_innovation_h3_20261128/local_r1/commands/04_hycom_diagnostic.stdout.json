@@ -1,0 +1,38 @@
+{
+  "dap_dds": {
+    "url": "https://tds.hycom.org/thredds/dodsC/ESPC-D-V02/ice/2025.dds",
+    "started_utc": "2026-11-28T14:28:54.707050+00:00",
+    "status": 200,
+    "response_url": "https://tds.hycom.org/thredds/dodsC/ESPC-D-V02/ice/2025.dds",
+    "bytes": 2180,
+    "sha256": "6deb26f079fbf1a602209f3a5f0076e65ef5be4686d0a6febade57885996289f",
+    "finished_utc": "2026-11-28T14:28:58.757370+00:00"
+  },
+  "dap_das": {
+    "url": "https://tds.hycom.org/thredds/dodsC/ESPC-D-V02/ice/2025.das",
+    "started_utc": "2026-11-28T14:28:54.708058+00:00",
+    "status": 200,
+    "response_url": "https://tds.hycom.org/thredds/dodsC/ESPC-D-V02/ice/2025.das",
+    "bytes": 4693,
+    "sha256": "c0a03a3b81d664b6ea7a0f26b9e01c3792aef0d258fb771a4e8f3958bc86331d",
+    "finished_utc": "2026-11-28T14:28:58.436886+00:00"
+  },
+  "dap_times": {
+    "url": "https://tds.hycom.org/thredds/dodsC/ESPC-D-V02/ice/2025.ascii?time",
+    "started_utc": "2026-11-28T14:28:58.436886+00:00",
+    "status": 200,
+    "response_url": "https://tds.hycom.org/thredds/dodsC/ESPC-D-V02/ice/2025.ascii?time",
+    "bytes": 146121,
+    "sha256": "8179c1d3f8d78c5c22b17c6bc37e585d2d8a88a4b83c13d88ed31c0ec20f6205",
+    "finished_utc": "2026-11-28T14:29:02.637775+00:00"
+  },
+  "provider_missing": {
+    "url": "https://www.hycom.org/faqs/513-did-you-know-there-are-missing-days-in-the-espc-d-v02-global-1-12-analysis",
+    "started_utc": "2026-11-28T14:28:58.757370+00:00",
+    "status": 200,
+    "response_url": "https://www.hycom.org/faqs/513-did-you-know-there-are-missing-days-in-the-espc-d-v02-global-1-12-analysis",
+    "bytes": 22075,
+    "sha256": "6b39107fd3d7660254f73cbef0f6cacddc069c57b2be143be1e42ec9d3871801",
+    "finished_utc": "2026-11-28T14:29:00.610722+00:00"
+  }
+}

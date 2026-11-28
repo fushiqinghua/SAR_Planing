@@ -1,0 +1,118 @@
+{
+  "case": {
+    "base_scene": "lake_ontario",
+    "block_id": "lake_h3_d2",
+    "cst_utc": "2025-09-16T15:45:00.000Z",
+    "end_utc": "2025-09-16T15:52:33.740Z",
+    "id": "lake_h3_d2_s3502",
+    "lkp_utc": "2025-09-16T14:45:00.000Z",
+    "seed": 3502
+  },
+  "config": {
+    "audit_q": 0.78,
+    "budget": 49,
+    "cell_width_m": 185.2,
+    "csp_lon_lat": [
+      -76.496,
+      44.215
+    ],
+    "cst_utc": "2025-09-16T15:45:00.000Z",
+    "forcing_kind": "historical_real",
+    "grid_rows_cols": [
+      17,
+      17
+    ],
+    "incident_utc": "2025-09-16T14:45:00.000Z",
+    "integration_s": 30,
+    "lkp_lon_lat": [
+      -76.5,
+      44.21
+    ],
+    "object_key": "PIW-2",
+    "output_s": 30,
+    "particles": 500,
+    "radius_m": 100,
+    "seed": 3502,
+    "step_s": 9.26
+  },
+  "config_hash": "a751b91a0a49082724fed927ba9f981f7ae4ad5b4a5d6fe68d0e66ee1ac3ba45",
+  "data_role": "new_date_historical_forcing_preregistered",
+  "fixed_path_mass_audit_only": true,
+  "generation_wall_s": 1.2737240999995265,
+  "integration_wall_s": 0.8348081999938586,
+  "max_mass_error": 4.440892098500626e-16,
+  "model": {
+    "integration_steps": 136,
+    "object": {
+      "description": ">PIW, vertical PFD type III conscious",
+      "key": "PIW-2",
+      "number": 2
+    },
+    "readers": {
+      "x_sea_water_velocity": [
+        "asar_current"
+      ],
+      "x_wind": [
+        "asar_wind"
+      ],
+      "y_sea_water_velocity": [
+        "asar_current"
+      ],
+      "y_wind": [
+        "asar_wind"
+      ]
+    },
+    "source_dims": [
+      "trajectory",
+      "time"
+    ]
+  },
+  "opendrift_runs": 1,
+  "particle_sha256": "aec4bb1084c5d377c59de418cfe710c3e976718a1a9141822c94cce255286ae3",
+  "provenance": {
+    "config": {
+      "audit_q": 0.78,
+      "budget": 49,
+      "cell_width_m": 185.2,
+      "csp_lon_lat": [
+        -76.496,
+        44.215
+      ],
+      "cst_utc": "2025-09-16T15:45:00.000Z",
+      "forcing_kind": "historical_real",
+      "grid_rows_cols": [
+        17,
+        17
+      ],
+      "incident_utc": "2025-09-16T14:45:00.000Z",
+      "integration_s": 30,
+      "lkp_lon_lat": [
+        -76.5,
+        44.21
+      ],
+      "object_key": "PIW-2",
+      "output_s": 30,
+      "particles": 500,
+      "radius_m": 100,
+      "seed": 3502,
+      "step_s": 9.26
+    },
+    "input_fingerprints": {
+      "date_lock_sha256": "640349bb593cb04ddb195c0ddefe005c9c370c937cdf91279df9b5d0951984da",
+      "method_lock_sha256": "a249f1a941fc0e6ee58051338a0d518c58262af273821b92f89b5dbf9b63103f",
+      "source_manifest_sha256": "f4a4d62f5a175d25e0f40382c04fe8674c3929ffa5a782199478af09e36367da",
+      "study": "second_innovation_h3_new_forcing"
+    },
+    "schema": 1,
+    "versions": {
+      "netCDF4": "1.7.5",
+      "numpy": "2.4.6",
+      "opendrift": "1.14.12",
+      "pyproj": "3.7.2",
+      "scipy": "1.17.1",
+      "shapely": "2.2.0"
+    }
+  },
+  "status": "prepared",
+  "terminal_forcing": []
+}

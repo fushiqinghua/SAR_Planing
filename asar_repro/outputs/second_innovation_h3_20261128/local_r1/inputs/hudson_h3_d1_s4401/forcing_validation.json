@@ -1,0 +1,384 @@
+{
+  "fields": {
+    "current": {
+      "lkp_csp_range_m_s": [
+        [
+          [
+            -0.11973955584372376,
+            -0.15749460368349857
+          ],
+          [
+            -0.017576026150440592,
+            -0.1859570339134462
+          ]
+        ],
+        [
+          [
+            0.16688006838624067,
+            0.3795028828799442
+          ],
+          [
+            0.18881950657371316,
+            0.3935183941373476
+          ]
+        ]
+      ],
+      "metadata": {
+        "CF_unpack_count": 1,
+        "delivery": "official_opendap_dap2",
+        "ice_audit": [
+          {
+            "nonzero_ice_counts": [
+              0,
+              0,
+              0
+            ],
+            "point_checks": {
+              "CSP": {
+                "bilinear_2x2_stencil_valid_all_times": true,
+                "indices_yx": [
+                  31,
+                  19
+                ]
+              },
+              "LKP": {
+                "bilinear_2x2_stencil_valid_all_times": true,
+                "indices_yx": [
+                  33,
+                  17
+                ]
+              }
+            },
+            "unknown_ice_counts": [
+              0,
+              0,
+              0
+            ],
+            "valid_times_utc": [
+              "2025-08-07T21:00:00+00:00",
+              "2025-08-07T22:00:00+00:00",
+              "2025-08-07T23:00:00+00:00"
+            ],
+            "wet_counts": [
+              2255,
+              2255,
+              2255
+            ]
+          },
+          {
+            "nonzero_ice_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "point_checks": {
+              "CSP": {
+                "bilinear_2x2_stencil_valid_all_times": true,
+                "indices_yx": [
+                  31,
+                  19
+                ]
+              },
+              "LKP": {
+                "bilinear_2x2_stencil_valid_all_times": true,
+                "indices_yx": [
+                  33,
+                  17
+                ]
+              }
+            },
+            "unknown_ice_counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "valid_times_utc": [
+              "2025-08-08T00:00:00+00:00",
+              "2025-08-08T01:00:00+00:00",
+              "2025-08-08T02:00:00+00:00",
+              "2025-08-08T03:00:00+00:00",
+              "2025-08-08T04:00:00+00:00",
+              "2025-08-08T05:00:00+00:00",
+              "2025-08-08T06:00:00+00:00",
+              "2025-08-08T07:00:00+00:00",
+              "2025-08-08T08:00:00+00:00",
+              "2025-08-08T09:00:00+00:00",
+              "2025-08-08T10:00:00+00:00",
+              "2025-08-08T11:00:00+00:00",
+              "2025-08-08T12:00:00+00:00",
+              "2025-08-08T13:00:00+00:00",
+              "2025-08-08T14:00:00+00:00",
+              "2025-08-08T15:00:00+00:00",
+              "2025-08-08T16:00:00+00:00",
+              "2025-08-08T17:00:00+00:00",
+              "2025-08-08T18:00:00+00:00",
+              "2025-08-08T19:00:00+00:00",
+              "2025-08-08T20:00:00+00:00",
+              "2025-08-08T21:00:00+00:00",
+              "2025-08-08T22:00:00+00:00",
+              "2025-08-08T23:00:00+00:00"
+            ],
+            "wet_counts": [
+              2255,
+              2255,
+              2255,
+              2255,
+              2255,
+              2255,
+              2255,
+              2255,
+              2255,
+              2255,
+              2255,
+              2255,
+              2255,
+              2255,
+              2255,
+              2255,
+              2255,
+              2255,
+              2255,
+              2255,
+              2255,
+              2255,
+              2255,
+              2255
+            ]
+          },
+          {
+            "nonzero_ice_counts": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "point_checks": {
+              "CSP": {
+                "bilinear_2x2_stencil_valid_all_times": true,
+                "indices_yx": [
+                  31,
+                  19
+                ]
+              },
+              "LKP": {
+                "bilinear_2x2_stencil_valid_all_times": true,
+                "indices_yx": [
+                  33,
+                  17
+                ]
+              }
+            },
+            "unknown_ice_counts": [
+              0,
+              0,
+              0,
+              0
+            ],
+            "valid_times_utc": [
+              "2025-08-09T00:00:00+00:00",
+              "2025-08-09T01:00:00+00:00",
+              "2025-08-09T02:00:00+00:00",
+              "2025-08-09T03:00:00+00:00"
+            ],
+            "wet_counts": [
+              2255,
+              2255,
+              2255,
+              2255
+            ]
+          }
+        ],
+        "ice_policy": "zero on every paired wet sample",
+        "native_lon_lat_bounds": [
+          268.0,
+          271.52001953125,
+          61.52000045776367,
+          64.0
+        ],
+        "native_variables": [
+          "ssu",
+          "ssv"
+        ],
+        "run_cycle_status": "annual_archive_per_frame_lineage_not_verified",
+        "spatial_method": "native bilinear with missing velocities masked",
+        "vector_basis": "geographic_east_north"
+      },
+      "native_shape": [
+        31,
+        63,
+        45,
+        2
+      ],
+      "native_valid_times_utc": [
+        "2025-08-07T21:00:00Z",
+        "2025-08-07T22:00:00Z",
+        "2025-08-07T23:00:00Z",
+        "2025-08-08T00:00:00Z",
+        "2025-08-08T01:00:00Z",
+        "2025-08-08T02:00:00Z",
+        "2025-08-08T03:00:00Z",
+        "2025-08-08T04:00:00Z",
+        "2025-08-08T05:00:00Z",
+        "2025-08-08T06:00:00Z",
+        "2025-08-08T07:00:00Z",
+        "2025-08-08T08:00:00Z",
+        "2025-08-08T09:00:00Z",
+        "2025-08-08T10:00:00Z",
+        "2025-08-08T11:00:00Z",
+        "2025-08-08T12:00:00Z",
+        "2025-08-08T13:00:00Z",
+        "2025-08-08T14:00:00Z",
+        "2025-08-08T15:00:00Z",
+        "2025-08-08T16:00:00Z",
+        "2025-08-08T17:00:00Z",
+        "2025-08-08T18:00:00Z",
+        "2025-08-08T19:00:00Z",
+        "2025-08-08T20:00:00Z",
+        "2025-08-08T21:00:00Z",
+        "2025-08-08T22:00:00Z",
+        "2025-08-08T23:00:00Z",
+        "2025-08-09T00:00:00Z",
+        "2025-08-09T01:00:00Z",
+        "2025-08-09T02:00:00Z",
+        "2025-08-09T03:00:00Z"
+      ],
+      "probe_count": 1490,
+      "source_sha256": {
+        "data/raw/h3/hudson_h3_d1/local_r1/hycom/a003/ESPC-D-V02_surface_20250807.dods": "7be8d86fee8eff6d6de43b577d9f4d15149887ad938e6377a9c832a01832637e",
+        "data/raw/h3/hudson_h3_d1/local_r1/hycom/a003/ESPC-D-V02_surface_20250808.dods": "9498d61f235445501839dd84520fefdc1dcbba49e203aaaf776da0e7aaaf9d39",
+        "data/raw/h3/hudson_h3_d1/local_r1/hycom/a003/ESPC-D-V02_surface_20250809.dods": "2071c462c8bb42359cf9859c918b309143aea5f4a59f7ba93ca7d8bb4192dbda"
+      }
+    },
+    "wind": {
+      "lkp_csp_range_m_s": [
+        [
+          [
+            1.0065579101562632,
+            -0.4027044140624799
+          ],
+          [
+            0.6835710301562617,
+            -0.1981507927291705
+          ]
+        ],
+        [
+          [
+            5.7439759765625045,
+            8.386577441406251
+          ],
+          [
+            6.220659521093739,
+            8.878166561406243
+          ]
+        ]
+      ],
+      "metadata": {
+        "grid_spacing_deg": 0.25,
+        "height_m": 10,
+        "native_variables": [
+          "UGRD",
+          "VGRD"
+        ],
+        "roi_lon_lat": [
+          -93.58507263846168,
+          -87.46192736153832,
+          61.422363636363634,
+          64.21363636363637
+        ],
+        "spatial_method": "native bilinear",
+        "vector_basis": "geographic_east_north"
+      },
+      "native_shape": [
+        11,
+        16,
+        30,
+        2
+      ],
+      "native_valid_times_utc": [
+        "2025-08-07T21:00:00Z",
+        "2025-08-08T00:00:00Z",
+        "2025-08-08T03:00:00Z",
+        "2025-08-08T06:00:00Z",
+        "2025-08-08T09:00:00Z",
+        "2025-08-08T12:00:00Z",
+        "2025-08-08T15:00:00Z",
+        "2025-08-08T18:00:00Z",
+        "2025-08-08T21:00:00Z",
+        "2025-08-09T00:00:00Z",
+        "2025-08-09T03:00:00Z"
+      ],
+      "probe_count": 1490,
+      "source_sha256": {
+        "data/raw/h3/hudson_h3_d1/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f003.wind10m.grib2": "8cb4603a1d0911efcaaff8b1cf020a9400922ea5de73403d790be1e636217355",
+        "data/raw/h3/hudson_h3_d1/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f006.wind10m.grib2": "0a8424673915086edde8ea178e3608d2ba89f70d3103359b1b4b329b6d649b5c",
+        "data/raw/h3/hudson_h3_d1/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f009.wind10m.grib2": "58951adcaab809c6f1b06ed33b2b58b2f04be1a507b196f92fc5b57f3e072bbe",
+        "data/raw/h3/hudson_h3_d1/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f012.wind10m.grib2": "1177b799965a8239daba946965a892bf2666173e5f122d93063849401a71d654",
+        "data/raw/h3/hudson_h3_d1/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f015.wind10m.grib2": "a6aa61dc3644c5293a891c2f45c844f016d749d46f3385c1363eb58994080ac0",
+        "data/raw/h3/hudson_h3_d1/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f018.wind10m.grib2": "733afa99045c0b587fce8cc1cebff05343dde85f23f4fded1b30336918a86c5a",
+        "data/raw/h3/hudson_h3_d1/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f021.wind10m.grib2": "19f39f00cdf7578b9dcef2c7a1bdefe59e40ff7bef54ba929eca2023ae4cf180",
+        "data/raw/h3/hudson_h3_d1/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f024.wind10m.grib2": "d93f8d915628282ac926f3158e6aee71ba06fc70764360dbd84af53396d76430",
+        "data/raw/h3/hudson_h3_d1/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f027.wind10m.grib2": "bc937543af39bf7f42447d6c327551818de8e520ed1021faec818ddc2af555c2",
+        "data/raw/h3/hudson_h3_d1/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f030.wind10m.grib2": "c53bf6e0bf5e81089d28400b7a26b240343c6cb1b2d8bec220bbb5fa96e99b5f",
+        "data/raw/h3/hudson_h3_d1/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f033.wind10m.grib2": "b9c222beee2e8cec53a23ac5a0475086db45ba3e67e65a4967b98265e8a8f0a0"
+      }
+    }
+  },
+  "forcing_kind": "historical_real",
+  "lkp_csp_lon_lat": [
+    [
+      -90.6,
+      62.85
+    ],
+    [
+      -90.447,
+      62.786
+    ]
+  ],
+  "native_window_utc": [
+    "2025-08-08T00:00:00Z",
+    "2025-08-09T00:48:00Z"
+  ],
+  "status": "eligible"
+}

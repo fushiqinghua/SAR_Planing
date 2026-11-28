@@ -1,0 +1,15 @@
+{
+  "block_id": "hudson_h3_d3",
+  "connectivity": 8,
+  "date": "2025-10-03",
+  "footprint": "heading_square",
+  "instance": "hudson_h3_d3_s4601",
+  "manifest_sha256": "61b9b118acb70ef095d2fe5f26ce2461983724a4a3417a4a89c53159b61f55e8",
+  "method": "Lazy",
+  "particle_sha256": "fd8a7c1aa2877c628fda8d5366d9e6f35993659cbe5bfb96225c79a53bd5aa8f",
+  "repetition": 0,
+  "seconds": 30,
+  "seed": 4601,
+  "site": "arctic_ocean",
+  "stage": "E30"
+}

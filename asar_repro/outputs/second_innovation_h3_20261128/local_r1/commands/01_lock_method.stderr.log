@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\scripts\h3_acquire.py", line 130, in <module>
+    main()
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\scripts\h3_acquire.py", line 103, in main
+    registry = freeze_method(out)
+               ^^^^^^^^^^^^^^^^^^
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\scripts\h3_protocol.py", line 104, in freeze_method
+    identity = registered_method()
+               ^^^^^^^^^^^^^^^^^^^
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\scripts\h3_protocol.py", line 72, in registered_method
+    if (prior["timing_screen_passed"] is not True or prior["valid_runs"] != 48
+        ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'timing_screen_passed'

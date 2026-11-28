@@ -1,0 +1,134 @@
+{
+  "attempt": "a002",
+  "block_id": "hudson_h3_d2",
+  "completed": "20261128T143713166989Z",
+  "current": [
+    {
+      "access": "official_opendap_dap2",
+      "block_id": "hudson_h3_d2",
+      "bytes": 103346,
+      "catalog_url": "https://ncss.hycom.org/thredds/catalogs/ESPC-D-V02_ice.html?dataset=ESPC-D-V02-ice-2025",
+      "http_headers": {
+        "content-type": "application/octet-stream"
+      },
+      "http_status": 200,
+      "local_path": "data/raw/h3/hudson_h3_d2/local_r1/hycom/a002/ESPC-D-V02_surface_20250918.dods",
+      "metadata": {
+        "bytes": 4693,
+        "local_path": "data/raw/h3/hudson_h3_d2/local_r1/hycom/a002/ESPC-D-V02_ice_2025.das",
+        "sha256": "c0a03a3b81d664b6ea7a0f26b9e01c3792aef0d258fb771a4e8f3958bc86331d",
+        "source_url": "https://tds.hycom.org/thredds/dodsC/ESPC-D-V02/ice/2025.das"
+      },
+      "product": "ESPC-D-V02",
+      "sha256": "b7e5383891133f3d12a48d6d0a7ef7a7c7e131a7681e87d11325f23f84f2a27f",
+      "source_url": "https://tds.hycom.org/thredds/dodsC/ESPC-D-V02/ice/2025.dods?time%5B6249:1:6251%5D,lat%5B3538:1:3600%5D,lon%5B3350:1:3394%5D,ssu.ssu%5B6249:1:6251%5D%5B3538:1:3600%5D%5B3350:1:3394%5D,ssv.ssv%5B6249:1:6251%5D%5B3538:1:3600%5D%5B3350:1:3394%5D,sic.sic%5B6249:1:6251%5D%5B3538:1:3600%5D%5B3350:1:3394%5D",
+      "time_axis": {
+        "bytes": 146121,
+        "local_path": "data/raw/h3/hudson_h3_d2/local_r1/hycom/a002/ESPC-D-V02_ice_2025.time.txt",
+        "sha256": "8179c1d3f8d78c5c22b17c6bc37e585d2d8a88a4b83c13d88ed31c0ec20f6205",
+        "source_url": "https://tds.hycom.org/thredds/dodsC/ESPC-D-V02/ice/2025.ascii?time"
+      },
+      "valid_times_utc": [
+        "2025-09-18T21:00:00+00:00",
+        "2025-09-18T22:00:00+00:00",
+        "2025-09-18T23:00:00+00:00"
+      ]
+    },
+    {
+      "access": "official_opendap_dap2",
+      "block_id": "hudson_h3_d2",
+      "bytes": 817938,
+      "catalog_url": "https://ncss.hycom.org/thredds/catalogs/ESPC-D-V02_ice.html?dataset=ESPC-D-V02-ice-2025",
+      "http_headers": {
+        "content-type": "application/octet-stream"
+      },
+      "http_status": 200,
+      "local_path": "data/raw/h3/hudson_h3_d2/local_r1/hycom/a002/ESPC-D-V02_surface_20250919.dods",
+      "metadata": {
+        "bytes": 4693,
+        "local_path": "data/raw/h3/hudson_h3_d2/local_r1/hycom/a002/ESPC-D-V02_ice_2025.das",
+        "sha256": "c0a03a3b81d664b6ea7a0f26b9e01c3792aef0d258fb771a4e8f3958bc86331d",
+        "source_url": "https://tds.hycom.org/thredds/dodsC/ESPC-D-V02/ice/2025.das"
+      },
+      "product": "ESPC-D-V02",
+      "sha256": "106b2fa72fa58e917133ff27c47733d4de527ad3b748d76378b5c52c8cd401f6",
+      "source_url": "https://tds.hycom.org/thredds/dodsC/ESPC-D-V02/ice/2025.dods?time%5B6252:1:6275%5D,lat%5B3538:1:3600%5D,lon%5B3350:1:3394%5D,ssu.ssu%5B6252:1:6275%5D%5B3538:1:3600%5D%5B3350:1:3394%5D,ssv.ssv%5B6252:1:6275%5D%5B3538:1:3600%5D%5B3350:1:3394%5D,sic.sic%5B6252:1:6275%5D%5B3538:1:3600%5D%5B3350:1:3394%5D",
+      "time_axis": {
+        "bytes": 146121,
+        "local_path": "data/raw/h3/hudson_h3_d2/local_r1/hycom/a002/ESPC-D-V02_ice_2025.time.txt",
+        "sha256": "8179c1d3f8d78c5c22b17c6bc37e585d2d8a88a4b83c13d88ed31c0ec20f6205",
+        "source_url": "https://tds.hycom.org/thredds/dodsC/ESPC-D-V02/ice/2025.ascii?time"
+      },
+      "valid_times_utc": [
+        "2025-09-19T00:00:00+00:00",
+        "2025-09-19T01:00:00+00:00",
+        "2025-09-19T02:00:00+00:00",
+        "2025-09-19T03:00:00+00:00",
+        "2025-09-19T04:00:00+00:00",
+        "2025-09-19T05:00:00+00:00",
+        "2025-09-19T06:00:00+00:00",
+        "2025-09-19T07:00:00+00:00",
+        "2025-09-19T08:00:00+00:00",
+        "2025-09-19T09:00:00+00:00",
+        "2025-09-19T10:00:00+00:00",
+        "2025-09-19T11:00:00+00:00",
+        "2025-09-19T12:00:00+00:00",
+        "2025-09-19T13:00:00+00:00",
+        "2025-09-19T14:00:00+00:00",
+        "2025-09-19T15:00:00+00:00",
+        "2025-09-19T16:00:00+00:00",
+        "2025-09-19T17:00:00+00:00",
+        "2025-09-19T18:00:00+00:00",
+        "2025-09-19T19:00:00+00:00",
+        "2025-09-19T20:00:00+00:00",
+        "2025-09-19T21:00:00+00:00",
+        "2025-09-19T22:00:00+00:00",
+        "2025-09-19T23:00:00+00:00"
+      ]
+    },
+    {
+      "access": "official_opendap_dap2",
+      "block_id": "hudson_h3_d2",
+      "bytes": 137374,
+      "catalog_url": "https://ncss.hycom.org/thredds/catalogs/ESPC-D-V02_ice.html?dataset=ESPC-D-V02-ice-2025",
+      "http_headers": {
+        "content-type": "application/octet-stream"
+      },
+      "http_status": 200,
+      "local_path": "data/raw/h3/hudson_h3_d2/local_r1/hycom/a002/ESPC-D-V02_surface_20250920.dods",
+      "metadata": {
+        "bytes": 4693,
+        "local_path": "data/raw/h3/hudson_h3_d2/local_r1/hycom/a002/ESPC-D-V02_ice_2025.das",
+        "sha256": "c0a03a3b81d664b6ea7a0f26b9e01c3792aef0d258fb771a4e8f3958bc86331d",
+        "source_url": "https://tds.hycom.org/thredds/dodsC/ESPC-D-V02/ice/2025.das"
+      },
+      "product": "ESPC-D-V02",
+      "sha256": "60d7557b600d465bb857ad72fe118730e2d15f754886a29bcd7ef6c344a2d246",
+      "source_url": "https://tds.hycom.org/thredds/dodsC/ESPC-D-V02/ice/2025.dods?time%5B6276:1:6279%5D,lat%5B3538:1:3600%5D,lon%5B3350:1:3394%5D,ssu.ssu%5B6276:1:6279%5D%5B3538:1:3600%5D%5B3350:1:3394%5D,ssv.ssv%5B6276:1:6279%5D%5B3538:1:3600%5D%5B3350:1:3394%5D,sic.sic%5B6276:1:6279%5D%5B3538:1:3600%5D%5B3350:1:3394%5D",
+      "time_axis": {
+        "bytes": 146121,
+        "local_path": "data/raw/h3/hudson_h3_d2/local_r1/hycom/a002/ESPC-D-V02_ice_2025.time.txt",
+        "sha256": "8179c1d3f8d78c5c22b17c6bc37e585d2d8a88a4b83c13d88ed31c0ec20f6205",
+        "source_url": "https://tds.hycom.org/thredds/dodsC/ESPC-D-V02/ice/2025.ascii?time"
+      },
+      "valid_times_utc": [
+        "2025-09-20T00:00:00+00:00",
+        "2025-09-20T01:00:00+00:00",
+        "2025-09-20T02:00:00+00:00",
+        "2025-09-20T03:00:00+00:00"
+      ]
+    }
+  ],
+  "date": "2025-09-19",
+  "method_lock_sha256": "a249f1a941fc0e6ee58051338a0d518c58262af273821b92f89b5dbf9b63103f",
+  "provider": "hycom",
+  "receipt_sha256": {
+    "data/raw/h3/hudson_h3_d2/local_r1/hycom/a002/ESPC-D-V02_ice_2025.das": "c0a03a3b81d664b6ea7a0f26b9e01c3792aef0d258fb771a4e8f3958bc86331d",
+    "data/raw/h3/hudson_h3_d2/local_r1/hycom/a002/ESPC-D-V02_ice_2025.time.txt": "8179c1d3f8d78c5c22b17c6bc37e585d2d8a88a4b83c13d88ed31c0ec20f6205",
+    "data/raw/h3/hudson_h3_d2/local_r1/hycom/a002/dap_request_receipts.jsonl": "0c38db54c4ab512081ce117944d019622e48dc06cc1fafe8e5e5a0e82af32741"
+  },
+  "scene": "arctic_ocean",
+  "started": "20261128T143701442085Z",
+  "status": "retrieved",
+  "wind": []
+}

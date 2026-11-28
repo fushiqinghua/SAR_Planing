@@ -1,0 +1,373 @@
+{
+  "attempt": "a001",
+  "block_id": "hudson_h3_d3",
+  "completed": "20261128T143436877845Z",
+  "current": [
+    {
+      "attempt": 1,
+      "audit": {
+        "auxiliary_variables": [
+          "sic"
+        ],
+        "coordinate_sha256": "e68cd3cf8b4cbf23282df3c33fb99201e6f1bd6d50299cc0d24554305c37124f",
+        "dimensions": {
+          "lat": 63,
+          "lon": 45,
+          "time": 3
+        },
+        "encoding": {
+          "sic": {
+            "add_offset": 0.0,
+            "fill_value": -30000,
+            "mask_preserved": true,
+            "scale_factor": 9.999999747378752e-05,
+            "storage": "int16",
+            "unpacking_count": 1
+          },
+          "ssu": {
+            "add_offset": 0.0,
+            "fill_value": -30000,
+            "mask_preserved": true,
+            "scale_factor": 0.0010000000474974513,
+            "storage": "int16",
+            "unpacking_count": 1
+          },
+          "ssv": {
+            "add_offset": 0.0,
+            "fill_value": -30000,
+            "mask_preserved": true,
+            "scale_factor": 0.0010000000474974513,
+            "storage": "int16",
+            "unpacking_count": 1
+          }
+        },
+        "ice_max_wet": 0.0,
+        "known_wet_samples": 6765,
+        "lon_lat_bounds": [
+          268.0,
+          271.52001953125,
+          61.52000045776367,
+          64.0
+        ],
+        "native_variables": [
+          "ssu",
+          "ssv"
+        ],
+        "nonzero_ice_wet_samples": 0,
+        "point_checks": {
+          "CSP": {
+            "bilinear_2x2_stencil_valid_all_times": true,
+            "indices_yx": [
+              31,
+              19
+            ]
+          },
+          "LKP": {
+            "bilinear_2x2_stencil_valid_all_times": true,
+            "indices_yx": [
+              33,
+              17
+            ]
+          }
+        },
+        "product": "ESPC-D-V02",
+        "run_cycle_status": "annual_archive_per_frame_lineage_not_verified",
+        "time_units": "hours since 2000-01-01 00:00:00",
+        "unknown_ice_wet_samples": 0,
+        "valid_times_utc": [
+          "2025-10-02T21:00:00+00:00",
+          "2025-10-02T22:00:00+00:00",
+          "2025-10-02T23:00:00+00:00"
+        ],
+        "vector_basis": "geographic_east_north"
+      },
+      "block_id": "hudson_h3_d3",
+      "bytes": 78311,
+      "catalog_url": "https://ncss.hycom.org/thredds/catalogs/ESPC-D-V02_ice.html?dataset=ESPC-D-V02-ice-2025",
+      "http_headers": {
+        "Content-Disposition": "attachment; filename=ice_2025.nc4",
+        "Content-Length": null,
+        "Content-Type": "application/x-netcdf4",
+        "Date": "Sat, 28 Nov 2026 14:32:02 GMT",
+        "ETag": null,
+        "Last-Modified": null
+      },
+      "http_status": 200,
+      "local_path": "data/raw/h3/hudson_h3_d3/local_r1/hycom/a001/hycom/ESPC-D-V02_surface_20251002.nc",
+      "product": "ESPC-D-V02",
+      "receipt_path": "data/raw/h3/hudson_h3_d3/local_r1/hycom/a001/hycom/ESPC-D-V02_surface_20251002.attempt-1.json",
+      "requested_utc": "2026-11-28T14:32:00.003723+00:00",
+      "sha256": "b122c0991a2cd4ecfa08206a426cf7652f898181d8676c37a0ec4b4dac77d3bb",
+      "source_url": "https://ncss.hycom.org/thredds/ncss/grid/ESPC-D-V02/ice/2025?var=ssu&var=ssv&var=sic&north=64.0&south=61.5&west=268&east=271.5&horizStride=1&time_start=2025-10-02T21%3A00%3A00Z&time_end=2025-10-02T23%3A00%3A00Z&timeStride=1&addLatLon=true&accept=netcdf4",
+      "status": "accepted",
+      "valid_times_utc": [
+        "2025-10-02T21:00:00+00:00",
+        "2025-10-02T22:00:00+00:00",
+        "2025-10-02T23:00:00+00:00"
+      ]
+    },
+    {
+      "attempt": 2,
+      "audit": {
+        "auxiliary_variables": [
+          "sic"
+        ],
+        "coordinate_sha256": "e68cd3cf8b4cbf23282df3c33fb99201e6f1bd6d50299cc0d24554305c37124f",
+        "dimensions": {
+          "lat": 63,
+          "lon": 45,
+          "time": 24
+        },
+        "encoding": {
+          "sic": {
+            "add_offset": 0.0,
+            "fill_value": -30000,
+            "mask_preserved": true,
+            "scale_factor": 9.999999747378752e-05,
+            "storage": "int16",
+            "unpacking_count": 1
+          },
+          "ssu": {
+            "add_offset": 0.0,
+            "fill_value": -30000,
+            "mask_preserved": true,
+            "scale_factor": 0.0010000000474974513,
+            "storage": "int16",
+            "unpacking_count": 1
+          },
+          "ssv": {
+            "add_offset": 0.0,
+            "fill_value": -30000,
+            "mask_preserved": true,
+            "scale_factor": 0.0010000000474974513,
+            "storage": "int16",
+            "unpacking_count": 1
+          }
+        },
+        "ice_max_wet": 0.0,
+        "known_wet_samples": 54120,
+        "lon_lat_bounds": [
+          268.0,
+          271.52001953125,
+          61.52000045776367,
+          64.0
+        ],
+        "native_variables": [
+          "ssu",
+          "ssv"
+        ],
+        "nonzero_ice_wet_samples": 0,
+        "point_checks": {
+          "CSP": {
+            "bilinear_2x2_stencil_valid_all_times": true,
+            "indices_yx": [
+              31,
+              19
+            ]
+          },
+          "LKP": {
+            "bilinear_2x2_stencil_valid_all_times": true,
+            "indices_yx": [
+              33,
+              17
+            ]
+          }
+        },
+        "product": "ESPC-D-V02",
+        "run_cycle_status": "annual_archive_per_frame_lineage_not_verified",
+        "time_units": "hours since 2000-01-01 00:00:00",
+        "unknown_ice_wet_samples": 0,
+        "valid_times_utc": [
+          "2025-10-03T00:00:00+00:00",
+          "2025-10-03T01:00:00+00:00",
+          "2025-10-03T02:00:00+00:00",
+          "2025-10-03T03:00:00+00:00",
+          "2025-10-03T04:00:00+00:00",
+          "2025-10-03T05:00:00+00:00",
+          "2025-10-03T06:00:00+00:00",
+          "2025-10-03T07:00:00+00:00",
+          "2025-10-03T08:00:00+00:00",
+          "2025-10-03T09:00:00+00:00",
+          "2025-10-03T10:00:00+00:00",
+          "2025-10-03T11:00:00+00:00",
+          "2025-10-03T12:00:00+00:00",
+          "2025-10-03T13:00:00+00:00",
+          "2025-10-03T14:00:00+00:00",
+          "2025-10-03T15:00:00+00:00",
+          "2025-10-03T16:00:00+00:00",
+          "2025-10-03T17:00:00+00:00",
+          "2025-10-03T18:00:00+00:00",
+          "2025-10-03T19:00:00+00:00",
+          "2025-10-03T20:00:00+00:00",
+          "2025-10-03T21:00:00+00:00",
+          "2025-10-03T22:00:00+00:00",
+          "2025-10-03T23:00:00+00:00"
+        ],
+        "vector_basis": "geographic_east_north"
+      },
+      "block_id": "hudson_h3_d3",
+      "bytes": 170316,
+      "catalog_url": "https://ncss.hycom.org/thredds/catalogs/ESPC-D-V02_ice.html?dataset=ESPC-D-V02-ice-2025",
+      "http_headers": {
+        "Content-Disposition": "attachment; filename=ice_2025.nc4",
+        "Content-Length": null,
+        "Content-Type": "application/x-netcdf4",
+        "Date": "Sat, 28 Nov 2026 14:34:00 GMT",
+        "ETag": null,
+        "Last-Modified": null
+      },
+      "http_status": 200,
+      "local_path": "data/raw/h3/hudson_h3_d3/local_r1/hycom/a001/hycom/ESPC-D-V02_surface_20251003.nc",
+      "product": "ESPC-D-V02",
+      "receipt_path": "data/raw/h3/hudson_h3_d3/local_r1/hycom/a001/hycom/ESPC-D-V02_surface_20251003.attempt-2.json",
+      "requested_utc": "2026-11-28T14:33:58.932658+00:00",
+      "sha256": "f7a3caaf934ab098c90239ef2bcece37a9a4b1a21814d95a398f816dbcc3083d",
+      "source_url": "https://ncss.hycom.org/thredds/ncss/grid/ESPC-D-V02/ice/2025?var=ssu&var=ssv&var=sic&north=64.0&south=61.5&west=268&east=271.5&horizStride=1&time_start=2025-10-03T00%3A00%3A00Z&time_end=2025-10-03T23%3A00%3A00Z&timeStride=1&addLatLon=true&accept=netcdf4",
+      "status": "accepted",
+      "valid_times_utc": [
+        "2025-10-03T00:00:00+00:00",
+        "2025-10-03T01:00:00+00:00",
+        "2025-10-03T02:00:00+00:00",
+        "2025-10-03T03:00:00+00:00",
+        "2025-10-03T04:00:00+00:00",
+        "2025-10-03T05:00:00+00:00",
+        "2025-10-03T06:00:00+00:00",
+        "2025-10-03T07:00:00+00:00",
+        "2025-10-03T08:00:00+00:00",
+        "2025-10-03T09:00:00+00:00",
+        "2025-10-03T10:00:00+00:00",
+        "2025-10-03T11:00:00+00:00",
+        "2025-10-03T12:00:00+00:00",
+        "2025-10-03T13:00:00+00:00",
+        "2025-10-03T14:00:00+00:00",
+        "2025-10-03T15:00:00+00:00",
+        "2025-10-03T16:00:00+00:00",
+        "2025-10-03T17:00:00+00:00",
+        "2025-10-03T18:00:00+00:00",
+        "2025-10-03T19:00:00+00:00",
+        "2025-10-03T20:00:00+00:00",
+        "2025-10-03T21:00:00+00:00",
+        "2025-10-03T22:00:00+00:00",
+        "2025-10-03T23:00:00+00:00"
+      ]
+    },
+    {
+      "attempt": 1,
+      "audit": {
+        "auxiliary_variables": [
+          "sic"
+        ],
+        "coordinate_sha256": "e68cd3cf8b4cbf23282df3c33fb99201e6f1bd6d50299cc0d24554305c37124f",
+        "dimensions": {
+          "lat": 63,
+          "lon": 45,
+          "time": 4
+        },
+        "encoding": {
+          "sic": {
+            "add_offset": 0.0,
+            "fill_value": -30000,
+            "mask_preserved": true,
+            "scale_factor": 9.999999747378752e-05,
+            "storage": "int16",
+            "unpacking_count": 1
+          },
+          "ssu": {
+            "add_offset": 0.0,
+            "fill_value": -30000,
+            "mask_preserved": true,
+            "scale_factor": 0.0010000000474974513,
+            "storage": "int16",
+            "unpacking_count": 1
+          },
+          "ssv": {
+            "add_offset": 0.0,
+            "fill_value": -30000,
+            "mask_preserved": true,
+            "scale_factor": 0.0010000000474974513,
+            "storage": "int16",
+            "unpacking_count": 1
+          }
+        },
+        "ice_max_wet": 0.0,
+        "known_wet_samples": 9020,
+        "lon_lat_bounds": [
+          268.0,
+          271.52001953125,
+          61.52000045776367,
+          64.0
+        ],
+        "native_variables": [
+          "ssu",
+          "ssv"
+        ],
+        "nonzero_ice_wet_samples": 0,
+        "point_checks": {
+          "CSP": {
+            "bilinear_2x2_stencil_valid_all_times": true,
+            "indices_yx": [
+              31,
+              19
+            ]
+          },
+          "LKP": {
+            "bilinear_2x2_stencil_valid_all_times": true,
+            "indices_yx": [
+              33,
+              17
+            ]
+          }
+        },
+        "product": "ESPC-D-V02",
+        "run_cycle_status": "annual_archive_per_frame_lineage_not_verified",
+        "time_units": "hours since 2000-01-01 00:00:00",
+        "unknown_ice_wet_samples": 0,
+        "valid_times_utc": [
+          "2025-10-04T00:00:00+00:00",
+          "2025-10-04T01:00:00+00:00",
+          "2025-10-04T02:00:00+00:00",
+          "2025-10-04T03:00:00+00:00"
+        ],
+        "vector_basis": "geographic_east_north"
+      },
+      "block_id": "hudson_h3_d3",
+      "bytes": 95329,
+      "catalog_url": "https://ncss.hycom.org/thredds/catalogs/ESPC-D-V02_ice.html?dataset=ESPC-D-V02-ice-2025",
+      "http_headers": {
+        "Content-Disposition": "attachment; filename=ice_2025.nc4",
+        "Content-Length": null,
+        "Content-Type": "application/x-netcdf4",
+        "Date": "Sat, 28 Nov 2026 14:34:34 GMT",
+        "ETag": null,
+        "Last-Modified": null
+      },
+      "http_status": 200,
+      "local_path": "data/raw/h3/hudson_h3_d3/local_r1/hycom/a001/hycom/ESPC-D-V02_surface_20251004.nc",
+      "product": "ESPC-D-V02",
+      "receipt_path": "data/raw/h3/hudson_h3_d3/local_r1/hycom/a001/hycom/ESPC-D-V02_surface_20251004.attempt-1.json",
+      "requested_utc": "2026-11-28T14:34:32.139001+00:00",
+      "sha256": "be8e5bbdfe7af107e0abcd357b102681e151256f0d5af13a999e58104ce7df75",
+      "source_url": "https://ncss.hycom.org/thredds/ncss/grid/ESPC-D-V02/ice/2025?var=ssu&var=ssv&var=sic&north=64.0&south=61.5&west=268&east=271.5&horizStride=1&time_start=2025-10-04T00%3A00%3A00Z&time_end=2025-10-04T03%3A00%3A00Z&timeStride=1&addLatLon=true&accept=netcdf4",
+      "status": "accepted",
+      "valid_times_utc": [
+        "2025-10-04T00:00:00+00:00",
+        "2025-10-04T01:00:00+00:00",
+        "2025-10-04T02:00:00+00:00",
+        "2025-10-04T03:00:00+00:00"
+      ]
+    }
+  ],
+  "date": "2025-10-03",
+  "method_lock_sha256": "a249f1a941fc0e6ee58051338a0d518c58262af273821b92f89b5dbf9b63103f",
+  "provider": "hycom",
+  "receipt_sha256": {
+    "data/raw/h3/hudson_h3_d3/local_r1/hycom/a001/hycom/ESPC-D-V02_surface_20251002.attempt-1.json": "67a1b43cbb0089b2269b9372a4ba6740ff573d26417ddda57e9db65d1d064384",
+    "data/raw/h3/hudson_h3_d3/local_r1/hycom/a001/hycom/ESPC-D-V02_surface_20251003.attempt-1.json": "6611c3721da385d5560615fb7bbcb8955502921b2f0f8b31b49bae1d21374c94",
+    "data/raw/h3/hudson_h3_d3/local_r1/hycom/a001/hycom/ESPC-D-V02_surface_20251003.attempt-2.json": "c70cc5cc9f1b34cada8a95dbf048187dacac999add8a1e2b64306d2886990d1a",
+    "data/raw/h3/hudson_h3_d3/local_r1/hycom/a001/hycom/ESPC-D-V02_surface_20251004.attempt-1.json": "8480e0b6f38084161ffb2a533333f223596159aa5301a5239c6a941e88c53839"
+  },
+  "scene": "arctic_ocean",
+  "started": "20261128T143159995954Z",
+  "status": "retrieved",
+  "wind": []
+}

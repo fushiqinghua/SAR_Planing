@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "valid_runs": {
+    "E30": 72,
+    "S30": 12
+  },
+  "max_dual_replay_error": {
+    "J": 3.552713678800501e-14,
+    "pd_final": 7.771561172376096e-16,
+    "survival": 1.2212453270876722e-15
+  },
+  "max_mass_error": 6.661338147750939e-16,
+  "best_end_Pd_delta_pp": [
+    0.23326288127999417,
+    3502
+  ],
+  "worst_end_Pd_delta_pp": [
+    -0.44314944910079923,
+    3401
+  ],
+  "max_E30_algorithm_wall_s": 29.92818210000405,
+  "visuals": {
+    "paths.png": [
+      1950,
+      1200
+    ],
+    "resources.png": [
+      1800,
+      900
+    ],
+    "survival.png": [
+      1950,
+      1200
+    ]
+  },
+  "survival_rows": 4662,
+  "reports_sha256": {
+    "dates.csv": "76fb12349f32124cf05f03d07d9210cdb5ede39600ca1deac374a8923c44be69",
+    "forcing_qualification.csv": "15051afff11926f1d308e8f2b831d26a6ffb7ad2857c552ec63a0479bdd6da89",
+    "paths.png": "53260466bbecd11a1615f3eae43fe3310a648ec4f5eddd05195484157d00c867",
+    "REPORT.md": "2b5228a31a96d79cfb14498467224547e9e06edec5c08c50cba6916c8c29d07a",
+    "resources.png": "afe79bc18cb67996f775902abb89cdad2cc1213d3dbd0e00c6d65d3b63d9d7c0",
+    "runs.csv": "6c377b8240c71adb27d650ba0e7590ddeb4497909bcc7125e95383e4a9858b2c",
+    "seeds.csv": "58729dd59de116b426be50052afa5026e5a9b51e04d8c282e02307c60769a11c",
+    "summary.json": "fe801278a49ccafeaee45434c18c9c36073e3c46477b50d4a06f9c532a3a10e7",
+    "survival.csv": "b249e7913c0509a5c531c7a08ec3c0c39bcd47a7cc424e9b7bca8a00dc386758",
+    "survival.png": "3b1a9614d9286c5e6a5f96022132dd81ba4958bbd53979af154064a9d5f69280"
+  }
+}

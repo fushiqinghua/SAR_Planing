@@ -1,0 +1,321 @@
+{
+  "cases": {
+    "hudson_h3_d1_s4401": {
+      "case": {
+        "base_scene": "arctic_ocean",
+        "block_id": "hudson_h3_d1",
+        "cst_utc": "2025-08-09T00:00:00.000Z",
+        "end_utc": "2025-08-09T00:46:18.000Z",
+        "id": "hudson_h3_d1_s4401",
+        "lkp_utc": "2025-08-08T00:00:00.000Z",
+        "seed": 4401
+      },
+      "h3_evidence": {
+        "date_lock_sha256": "640349bb593cb04ddb195c0ddefe005c9c370c937cdf91279df9b5d0951984da",
+        "method_lock_sha256": "a249f1a941fc0e6ee58051338a0d518c58262af273821b92f89b5dbf9b63103f",
+        "source_manifest_sha256": "1b86ddd08dc8db3b2d962eefb9fc94299a5b82eddb6c112a9f810df174fb7e6c",
+        "study": "second_innovation_h3_new_forcing"
+      },
+      "input_sha256": "cf80cdcefac71b55d9269e0cb858c0cc7e908b6fefefd00e3912de37442616c8",
+      "manifest_sha256": "bce29edd67bc3fa7ae4ff771eb63b212baf5b7681d84c0d711567d20b768bbe8"
+    },
+    "hudson_h3_d1_s4402": {
+      "case": {
+        "base_scene": "arctic_ocean",
+        "block_id": "hudson_h3_d1",
+        "cst_utc": "2025-08-09T00:00:00.000Z",
+        "end_utc": "2025-08-09T00:46:18.000Z",
+        "id": "hudson_h3_d1_s4402",
+        "lkp_utc": "2025-08-08T00:00:00.000Z",
+        "seed": 4402
+      },
+      "h3_evidence": {
+        "date_lock_sha256": "640349bb593cb04ddb195c0ddefe005c9c370c937cdf91279df9b5d0951984da",
+        "method_lock_sha256": "a249f1a941fc0e6ee58051338a0d518c58262af273821b92f89b5dbf9b63103f",
+        "source_manifest_sha256": "1b86ddd08dc8db3b2d962eefb9fc94299a5b82eddb6c112a9f810df174fb7e6c",
+        "study": "second_innovation_h3_new_forcing"
+      },
+      "input_sha256": "15a81aa43bf15c88a9e4e0ddaa91b1a2abb563579537dc2209154613fee07a28",
+      "manifest_sha256": "18b6f4bc899eb9fef33f321862d11f60ed17368a4acb4fba997410283b4d659d"
+    },
+    "hudson_h3_d2_s4501": {
+      "case": {
+        "base_scene": "arctic_ocean",
+        "block_id": "hudson_h3_d2",
+        "cst_utc": "2025-09-20T00:00:00.000Z",
+        "end_utc": "2025-09-20T00:46:18.000Z",
+        "id": "hudson_h3_d2_s4501",
+        "lkp_utc": "2025-09-19T00:00:00.000Z",
+        "seed": 4501
+      },
+      "h3_evidence": {
+        "date_lock_sha256": "640349bb593cb04ddb195c0ddefe005c9c370c937cdf91279df9b5d0951984da",
+        "method_lock_sha256": "a249f1a941fc0e6ee58051338a0d518c58262af273821b92f89b5dbf9b63103f",
+        "source_manifest_sha256": "a1ca9099297d83cb1ad9ae2137c290790fd807bb235ca213483ce43a13ca47e8",
+        "study": "second_innovation_h3_new_forcing"
+      },
+      "input_sha256": "0a63075775ba4d7d5115299edbb080e255263b8a44765351baf12f6943cdd7d5",
+      "manifest_sha256": "3e98d0ac66079a9272dcdd1b70dcd914e1b0ff916690c9ad360dcac462c46229"
+    },
+    "hudson_h3_d2_s4502": {
+      "case": {
+        "base_scene": "arctic_ocean",
+        "block_id": "hudson_h3_d2",
+        "cst_utc": "2025-09-20T00:00:00.000Z",
+        "end_utc": "2025-09-20T00:46:18.000Z",
+        "id": "hudson_h3_d2_s4502",
+        "lkp_utc": "2025-09-19T00:00:00.000Z",
+        "seed": 4502
+      },
+      "h3_evidence": {
+        "date_lock_sha256": "640349bb593cb04ddb195c0ddefe005c9c370c937cdf91279df9b5d0951984da",
+        "method_lock_sha256": "a249f1a941fc0e6ee58051338a0d518c58262af273821b92f89b5dbf9b63103f",
+        "source_manifest_sha256": "a1ca9099297d83cb1ad9ae2137c290790fd807bb235ca213483ce43a13ca47e8",
+        "study": "second_innovation_h3_new_forcing"
+      },
+      "input_sha256": "277ba6f56644640906fcb4873d0046dd3e43d0eac5174e4318d9a88af4dcb6fa",
+      "manifest_sha256": "aea5abebe405ecab8b139761d0ff62e635a301287e8e6bb77922b6036ab8f6f3"
+    },
+    "hudson_h3_d3_s4601": {
+      "case": {
+        "base_scene": "arctic_ocean",
+        "block_id": "hudson_h3_d3",
+        "cst_utc": "2025-10-04T00:00:00.000Z",
+        "end_utc": "2025-10-04T00:46:18.000Z",
+        "id": "hudson_h3_d3_s4601",
+        "lkp_utc": "2025-10-03T00:00:00.000Z",
+        "seed": 4601
+      },
+      "h3_evidence": {
+        "date_lock_sha256": "640349bb593cb04ddb195c0ddefe005c9c370c937cdf91279df9b5d0951984da",
+        "method_lock_sha256": "a249f1a941fc0e6ee58051338a0d518c58262af273821b92f89b5dbf9b63103f",
+        "source_manifest_sha256": "5297c03abf5d8aa582dd05d160c7c42070bf1128f3824d9b6f5a3439bb651a3b",
+        "study": "second_innovation_h3_new_forcing"
+      },
+      "input_sha256": "fd8a7c1aa2877c628fda8d5366d9e6f35993659cbe5bfb96225c79a53bd5aa8f",
+      "manifest_sha256": "61b9b118acb70ef095d2fe5f26ce2461983724a4a3417a4a89c53159b61f55e8"
+    },
+    "hudson_h3_d3_s4602": {
+      "case": {
+        "base_scene": "arctic_ocean",
+        "block_id": "hudson_h3_d3",
+        "cst_utc": "2025-10-04T00:00:00.000Z",
+        "end_utc": "2025-10-04T00:46:18.000Z",
+        "id": "hudson_h3_d3_s4602",
+        "lkp_utc": "2025-10-03T00:00:00.000Z",
+        "seed": 4602
+      },
+      "h3_evidence": {
+        "date_lock_sha256": "640349bb593cb04ddb195c0ddefe005c9c370c937cdf91279df9b5d0951984da",
+        "method_lock_sha256": "a249f1a941fc0e6ee58051338a0d518c58262af273821b92f89b5dbf9b63103f",
+        "source_manifest_sha256": "5297c03abf5d8aa582dd05d160c7c42070bf1128f3824d9b6f5a3439bb651a3b",
+        "study": "second_innovation_h3_new_forcing"
+      },
+      "input_sha256": "bc06de6a102b057ee5dfe34b185362d1d5aff4e7012d810a23c1389748e7bd4e",
+      "manifest_sha256": "a7a6fab7063acdfafd171cde49316a4ec6350c38dfe7c0551cfc9fd5616f7a9a"
+    },
+    "lake_h3_d1_s3401": {
+      "case": {
+        "base_scene": "lake_ontario",
+        "block_id": "lake_h3_d1",
+        "cst_utc": "2025-08-05T15:45:00.000Z",
+        "end_utc": "2025-08-05T15:52:33.740Z",
+        "id": "lake_h3_d1_s3401",
+        "lkp_utc": "2025-08-05T14:45:00.000Z",
+        "seed": 3401
+      },
+      "h3_evidence": {
+        "date_lock_sha256": "640349bb593cb04ddb195c0ddefe005c9c370c937cdf91279df9b5d0951984da",
+        "method_lock_sha256": "a249f1a941fc0e6ee58051338a0d518c58262af273821b92f89b5dbf9b63103f",
+        "source_manifest_sha256": "9fb9f301e2a9cfc05d528b43b4e29d6a00bc84c2282779f39e4ef1d46c61a138",
+        "study": "second_innovation_h3_new_forcing"
+      },
+      "input_sha256": "e874f55e6bfac63099fbdfc13fc797a957d943bbff3d8c82c8615abd00500e69",
+      "manifest_sha256": "94b9e9151645cdfee86b6c2e3057e703c61c5b6ba6b44f27d8ae2c64ed80be25"
+    },
+    "lake_h3_d1_s3402": {
+      "case": {
+        "base_scene": "lake_ontario",
+        "block_id": "lake_h3_d1",
+        "cst_utc": "2025-08-05T15:45:00.000Z",
+        "end_utc": "2025-08-05T15:52:33.740Z",
+        "id": "lake_h3_d1_s3402",
+        "lkp_utc": "2025-08-05T14:45:00.000Z",
+        "seed": 3402
+      },
+      "h3_evidence": {
+        "date_lock_sha256": "640349bb593cb04ddb195c0ddefe005c9c370c937cdf91279df9b5d0951984da",
+        "method_lock_sha256": "a249f1a941fc0e6ee58051338a0d518c58262af273821b92f89b5dbf9b63103f",
+        "source_manifest_sha256": "9fb9f301e2a9cfc05d528b43b4e29d6a00bc84c2282779f39e4ef1d46c61a138",
+        "study": "second_innovation_h3_new_forcing"
+      },
+      "input_sha256": "63c45a3d7c4881a40e1cf75f23b77b06471f604ac407447a25feb24848bfb86b",
+      "manifest_sha256": "87c38beff1061787889e7f238cd98d4609e4f12bda16a640b5df4d29fc9fb255"
+    },
+    "lake_h3_d2_s3501": {
+      "case": {
+        "base_scene": "lake_ontario",
+        "block_id": "lake_h3_d2",
+        "cst_utc": "2025-09-16T15:45:00.000Z",
+        "end_utc": "2025-09-16T15:52:33.740Z",
+        "id": "lake_h3_d2_s3501",
+        "lkp_utc": "2025-09-16T14:45:00.000Z",
+        "seed": 3501
+      },
+      "h3_evidence": {
+        "date_lock_sha256": "640349bb593cb04ddb195c0ddefe005c9c370c937cdf91279df9b5d0951984da",
+        "method_lock_sha256": "a249f1a941fc0e6ee58051338a0d518c58262af273821b92f89b5dbf9b63103f",
+        "source_manifest_sha256": "f4a4d62f5a175d25e0f40382c04fe8674c3929ffa5a782199478af09e36367da",
+        "study": "second_innovation_h3_new_forcing"
+      },
+      "input_sha256": "b8cf30c652cb900312e8368eff3ebf71c25acf5714f8455de7b93b9d337da6e4",
+      "manifest_sha256": "bd322e3676373256223f3f4bda7d8113f21448e13b96d3a53b507e82a2d5c172"
+    },
+    "lake_h3_d2_s3502": {
+      "case": {
+        "base_scene": "lake_ontario",
+        "block_id": "lake_h3_d2",
+        "cst_utc": "2025-09-16T15:45:00.000Z",
+        "end_utc": "2025-09-16T15:52:33.740Z",
+        "id": "lake_h3_d2_s3502",
+        "lkp_utc": "2025-09-16T14:45:00.000Z",
+        "seed": 3502
+      },
+      "h3_evidence": {
+        "date_lock_sha256": "640349bb593cb04ddb195c0ddefe005c9c370c937cdf91279df9b5d0951984da",
+        "method_lock_sha256": "a249f1a941fc0e6ee58051338a0d518c58262af273821b92f89b5dbf9b63103f",
+        "source_manifest_sha256": "f4a4d62f5a175d25e0f40382c04fe8674c3929ffa5a782199478af09e36367da",
+        "study": "second_innovation_h3_new_forcing"
+      },
+      "input_sha256": "aec4bb1084c5d377c59de418cfe710c3e976718a1a9141822c94cce255286ae3",
+      "manifest_sha256": "dd4a28cc3fc8cb74eb5651e3c865a0c6049b3827bdfda28385bbfb49d79cc147"
+    },
+    "lake_h3_d3_s3601": {
+      "case": {
+        "base_scene": "lake_ontario",
+        "block_id": "lake_h3_d3",
+        "cst_utc": "2025-09-30T15:45:00.000Z",
+        "end_utc": "2025-09-30T15:52:33.740Z",
+        "id": "lake_h3_d3_s3601",
+        "lkp_utc": "2025-09-30T14:45:00.000Z",
+        "seed": 3601
+      },
+      "h3_evidence": {
+        "date_lock_sha256": "640349bb593cb04ddb195c0ddefe005c9c370c937cdf91279df9b5d0951984da",
+        "method_lock_sha256": "a249f1a941fc0e6ee58051338a0d518c58262af273821b92f89b5dbf9b63103f",
+        "source_manifest_sha256": "7b08fdf168ae6e27d69ff0f53806416f2eb2541cd9d37a37d5e837a45aa9bea1",
+        "study": "second_innovation_h3_new_forcing"
+      },
+      "input_sha256": "ed8c954d716de49efff5dc383a91d7acd2206065c93cc5d6e46a4708ef86b322",
+      "manifest_sha256": "ca054929b3db0d5e4f49ac75b806cb3a8f1bb9bfc4fe0083518bd02bc07108d7"
+    },
+    "lake_h3_d3_s3602": {
+      "case": {
+        "base_scene": "lake_ontario",
+        "block_id": "lake_h3_d3",
+        "cst_utc": "2025-09-30T15:45:00.000Z",
+        "end_utc": "2025-09-30T15:52:33.740Z",
+        "id": "lake_h3_d3_s3602",
+        "lkp_utc": "2025-09-30T14:45:00.000Z",
+        "seed": 3602
+      },
+      "h3_evidence": {
+        "date_lock_sha256": "640349bb593cb04ddb195c0ddefe005c9c370c937cdf91279df9b5d0951984da",
+        "method_lock_sha256": "a249f1a941fc0e6ee58051338a0d518c58262af273821b92f89b5dbf9b63103f",
+        "source_manifest_sha256": "7b08fdf168ae6e27d69ff0f53806416f2eb2541cd9d37a37d5e837a45aa9bea1",
+        "study": "second_innovation_h3_new_forcing"
+      },
+      "input_sha256": "13c4f8e280ce7a3c214d71cb284da83777c0d34f56630b870d659e9b298f8a13",
+      "manifest_sha256": "6e48a57670b9c736701d3ff2190c6daffb70195b6121a58b6e246fad1659dbf8"
+    }
+  },
+  "date_lock_sha256": "640349bb593cb04ddb195c0ddefe005c9c370c937cdf91279df9b5d0951984da",
+  "files": {
+    "inputs/hudson_h3_d1_s4401/forcing_validation.json": "95f7489c0697525a17a0cb03511663b76d165aaf8f9a22fcc72870c86f37df88",
+    "inputs/hudson_h3_d1_s4401/manifest.json": "bce29edd67bc3fa7ae4ff771eb63b212baf5b7681d84c0d711567d20b768bbe8",
+    "inputs/hudson_h3_d1_s4401/mass_audit.json": "178c283e0aaa40039ceab9f1dd83855b5f7d15878cf3c8b77154094de9d2eb07",
+    "inputs/hudson_h3_d1_s4401/metadata.json": "73a1f7540a02f407007de5469ce23fd0abbc9c9917074b43ebb89b98df032ed6",
+    "inputs/hudson_h3_d1_s4401/particles.npz": "cf80cdcefac71b55d9269e0cb858c0cc7e908b6fefefd00e3912de37442616c8",
+    "inputs/hudson_h3_d1_s4401/prepare.log": "4f9a7cc101a2b76f16bcb7d02b69b70c4322b57017fec3922681a655a7db99bd",
+    "inputs/hudson_h3_d1_s4401/request.json": "003ad78d6b21cad4f481897020f4af3cddcb3fd463cfffa09cd140e4368ebccf",
+    "inputs/hudson_h3_d1_s4402/forcing_validation.json": "95f7489c0697525a17a0cb03511663b76d165aaf8f9a22fcc72870c86f37df88",
+    "inputs/hudson_h3_d1_s4402/manifest.json": "18b6f4bc899eb9fef33f321862d11f60ed17368a4acb4fba997410283b4d659d",
+    "inputs/hudson_h3_d1_s4402/mass_audit.json": "fc37f084fe786e53cfeef9f2cd268ad5489be3cdac8477f923b2d3c80f609244",
+    "inputs/hudson_h3_d1_s4402/metadata.json": "072213f16f4ff505c8b6ed0ce4f8e6790b8ef8cab612802fc0ee353ddaa3a1fb",
+    "inputs/hudson_h3_d1_s4402/particles.npz": "15a81aa43bf15c88a9e4e0ddaa91b1a2abb563579537dc2209154613fee07a28",
+    "inputs/hudson_h3_d1_s4402/prepare.log": "b53a67eb93a1199bd492b7e3fd25a41c986bc7ab925fed7bdd46d842781bd624",
+    "inputs/hudson_h3_d1_s4402/request.json": "87b9700b3100df55f80bb36192943ee74d5e7cc74ba9a734a012c26b70cdc5ed",
+    "inputs/hudson_h3_d2_s4501/forcing_validation.json": "5b5c731f5d39bd643141d886d1f312314677ce5f6860101d5b5d077d1ac8389f",
+    "inputs/hudson_h3_d2_s4501/manifest.json": "3e98d0ac66079a9272dcdd1b70dcd914e1b0ff916690c9ad360dcac462c46229",
+    "inputs/hudson_h3_d2_s4501/mass_audit.json": "608c7a6fc6c927b7cbea85d2120b44f8788bc77fcaa4b0df3b58e657574f339c",
+    "inputs/hudson_h3_d2_s4501/metadata.json": "b87695d0bca0aaa368bc7f7a116b20c5e1df55a4498b7360b5ed22d236c6ad5e",
+    "inputs/hudson_h3_d2_s4501/particles.npz": "0a63075775ba4d7d5115299edbb080e255263b8a44765351baf12f6943cdd7d5",
+    "inputs/hudson_h3_d2_s4501/prepare.log": "eea59686dd44ac7393cea7a47da529ae4556c343a079ac2a7e4934f3501d32d1",
+    "inputs/hudson_h3_d2_s4501/request.json": "87034cdb0bd7008424e77370e870aece6521f7fc7767563ab2a88d4e66dc5c8c",
+    "inputs/hudson_h3_d2_s4502/forcing_validation.json": "5b5c731f5d39bd643141d886d1f312314677ce5f6860101d5b5d077d1ac8389f",
+    "inputs/hudson_h3_d2_s4502/manifest.json": "aea5abebe405ecab8b139761d0ff62e635a301287e8e6bb77922b6036ab8f6f3",
+    "inputs/hudson_h3_d2_s4502/mass_audit.json": "4ebf638d8a0b77c7809ed791f137393744bce976335e365670a7d94bb0c0eab5",
+    "inputs/hudson_h3_d2_s4502/metadata.json": "2ec7898a426da99d941150dbd7ff4d44c013aeecb71f0dee3045983636414ac7",
+    "inputs/hudson_h3_d2_s4502/particles.npz": "277ba6f56644640906fcb4873d0046dd3e43d0eac5174e4318d9a88af4dcb6fa",
+    "inputs/hudson_h3_d2_s4502/prepare.log": "bb89227d10ae3746a6f52d6d2553960a3c8fde6322a4d9866484be82035e79e3",
+    "inputs/hudson_h3_d2_s4502/request.json": "dfc7bbe16295f9069982391677752785e2dfaecbf2fe991c48996717e223043e",
+    "inputs/hudson_h3_d3_s4601/forcing_validation.json": "2c96af6924711a0303aa2b3581ad0a45fdccb7ed9dd8f5e880c51a38d1e40c4d",
+    "inputs/hudson_h3_d3_s4601/manifest.json": "61b9b118acb70ef095d2fe5f26ce2461983724a4a3417a4a89c53159b61f55e8",
+    "inputs/hudson_h3_d3_s4601/mass_audit.json": "968ca93947b0ce6b5a424be2c0a5337cd52f89e7467c092d61630476221298f1",
+    "inputs/hudson_h3_d3_s4601/metadata.json": "55cd00b7bf5f594d538f20813f9594095a334111071548e9393dc1c19038cb3e",
+    "inputs/hudson_h3_d3_s4601/particles.npz": "fd8a7c1aa2877c628fda8d5366d9e6f35993659cbe5bfb96225c79a53bd5aa8f",
+    "inputs/hudson_h3_d3_s4601/prepare.log": "01cceab06d6078b6eddf7c8545f9fc46b97a0b0df156da00e0982c2353297675",
+    "inputs/hudson_h3_d3_s4601/request.json": "22f031d5ac3b6b534d3559d355cbe51ecd862a58cf2db762c533a485c7b768b5",
+    "inputs/hudson_h3_d3_s4602/forcing_validation.json": "2c96af6924711a0303aa2b3581ad0a45fdccb7ed9dd8f5e880c51a38d1e40c4d",
+    "inputs/hudson_h3_d3_s4602/manifest.json": "a7a6fab7063acdfafd171cde49316a4ec6350c38dfe7c0551cfc9fd5616f7a9a",
+    "inputs/hudson_h3_d3_s4602/mass_audit.json": "0ac30a7ee8e2cca5c1d6d748bc541658c0048e75a2b710fe34c925f1806be69c",
+    "inputs/hudson_h3_d3_s4602/metadata.json": "65772c1b377e8872d511178ab67bd743704874859557f8a1b286cdf037aaa8e7",
+    "inputs/hudson_h3_d3_s4602/particles.npz": "bc06de6a102b057ee5dfe34b185362d1d5aff4e7012d810a23c1389748e7bd4e",
+    "inputs/hudson_h3_d3_s4602/prepare.log": "cfaaa07974e1858d21ee07891524b0ead93aecf42fb7dc8e918c234ad0715389",
+    "inputs/hudson_h3_d3_s4602/request.json": "8dd64047dc61bddfd0a1a2513e456ae31fcbc098b99b438da3fb3ca2b04b2d1d",
+    "inputs/lake_h3_d1_s3401/forcing_validation.json": "2d67ed3a978fa289363b159db9cdff48a163b4312a44996bf57a755b7913a318",
+    "inputs/lake_h3_d1_s3401/manifest.json": "94b9e9151645cdfee86b6c2e3057e703c61c5b6ba6b44f27d8ae2c64ed80be25",
+    "inputs/lake_h3_d1_s3401/mass_audit.json": "0ca05b75b57bfbcd9c8730d05f16a06a48873f3e743005c16f38cc6a2f96c3a3",
+    "inputs/lake_h3_d1_s3401/metadata.json": "b8529aedbc3902a7eebda51c274e8650c0f11cbcadac803d4137cac284aa719b",
+    "inputs/lake_h3_d1_s3401/particles.npz": "e874f55e6bfac63099fbdfc13fc797a957d943bbff3d8c82c8615abd00500e69",
+    "inputs/lake_h3_d1_s3401/prepare.log": "648d34dd788d8c3300cc51477ae894aee32cd4ad1f3dbc3e6a65613778915269",
+    "inputs/lake_h3_d1_s3401/request.json": "192e1c67408d0f66bea492712419bbc2c0dae980ce55e2fe8eb6d17d8c845ff4",
+    "inputs/lake_h3_d1_s3402/forcing_validation.json": "2d67ed3a978fa289363b159db9cdff48a163b4312a44996bf57a755b7913a318",
+    "inputs/lake_h3_d1_s3402/manifest.json": "87c38beff1061787889e7f238cd98d4609e4f12bda16a640b5df4d29fc9fb255",
+    "inputs/lake_h3_d1_s3402/mass_audit.json": "1feca03f33425eb7db00986003c01bb6a2ce2c1941388692ba384ab8c609e71a",
+    "inputs/lake_h3_d1_s3402/metadata.json": "5ca4b10f1c17d3aac4f1c9be5937d3458a6dca1799b199cc5ee195bb6b794e4a",
+    "inputs/lake_h3_d1_s3402/particles.npz": "63c45a3d7c4881a40e1cf75f23b77b06471f604ac407447a25feb24848bfb86b",
+    "inputs/lake_h3_d1_s3402/prepare.log": "9e5fc8ebedf194b95284a27d04d351022c61e69d915aee80aa6de6188d32e593",
+    "inputs/lake_h3_d1_s3402/request.json": "631fc04872c3b2b97904831f3fcb33a0a9912804299954cbad8ccc0a2d3a1c24",
+    "inputs/lake_h3_d2_s3501/forcing_validation.json": "8bd03075fbb7fc2bace5027559153f1ccd1e0f8c5103f783d43431d905fac2f3",
+    "inputs/lake_h3_d2_s3501/manifest.json": "bd322e3676373256223f3f4bda7d8113f21448e13b96d3a53b507e82a2d5c172",
+    "inputs/lake_h3_d2_s3501/mass_audit.json": "4b391c7b281bb9c01a440ab5c95dffdd32b0e5fad821d10760c5dbeb4924720e",
+    "inputs/lake_h3_d2_s3501/metadata.json": "0117551f2ed5816e1c4ea969314c8aa25b115b63fceddaa9bcbe8ef9c9a52fff",
+    "inputs/lake_h3_d2_s3501/particles.npz": "b8cf30c652cb900312e8368eff3ebf71c25acf5714f8455de7b93b9d337da6e4",
+    "inputs/lake_h3_d2_s3501/prepare.log": "a5b7d77f0081dd9f3b14e61ae069f6b4f9eb52ba560641f5de90e0ea7de0d9e9",
+    "inputs/lake_h3_d2_s3501/request.json": "291793eee88a3926fd4112b1b2b5b368829fe2a37caab4e879013241d0e1ff11",
+    "inputs/lake_h3_d2_s3502/forcing_validation.json": "8bd03075fbb7fc2bace5027559153f1ccd1e0f8c5103f783d43431d905fac2f3",
+    "inputs/lake_h3_d2_s3502/manifest.json": "dd4a28cc3fc8cb74eb5651e3c865a0c6049b3827bdfda28385bbfb49d79cc147",
+    "inputs/lake_h3_d2_s3502/mass_audit.json": "ddc02e0ef766d11e771aed5b31a26a23f6eff8026e865b398cf570e146e19973",
+    "inputs/lake_h3_d2_s3502/metadata.json": "b4b7187c001a0184063ce77319e20b90e511c7aeab8728a7906e0fba7562e17b",
+    "inputs/lake_h3_d2_s3502/particles.npz": "aec4bb1084c5d377c59de418cfe710c3e976718a1a9141822c94cce255286ae3",
+    "inputs/lake_h3_d2_s3502/prepare.log": "67329347f7b6f3394ca4f0aa8d8cd3f0eac54820bbd70b1bfbaa4b574537c4ea",
+    "inputs/lake_h3_d2_s3502/request.json": "7c5a1c7d46722f635c8fe7626962b4414cca19fd832ba0ece231de51608edf85",
+    "inputs/lake_h3_d3_s3601/forcing_validation.json": "fead67a5f23245b6a129d0019abdf36f3ccb0b68ba189e440cccd186bf6063e5",
+    "inputs/lake_h3_d3_s3601/manifest.json": "ca054929b3db0d5e4f49ac75b806cb3a8f1bb9bfc4fe0083518bd02bc07108d7",
+    "inputs/lake_h3_d3_s3601/mass_audit.json": "55c62f0c7b9146de015d836bd8f1890ad76210499c24ff2beae360b422e3aaaa",
+    "inputs/lake_h3_d3_s3601/metadata.json": "3543801852b2d5b6913f13ebf05bb29e910f68d4b48390a9e43cd64a0db03e66",
+    "inputs/lake_h3_d3_s3601/particles.npz": "ed8c954d716de49efff5dc383a91d7acd2206065c93cc5d6e46a4708ef86b322",
+    "inputs/lake_h3_d3_s3601/prepare.log": "57a4363508d1110c83bc13bbfda13ae03d585c3ae7185ad53ea0b492a0c8d2cb",
+    "inputs/lake_h3_d3_s3601/request.json": "b3910e9a261cf3d59f47edb46968f98973642a6ac428e4c73d936d01b2ac85e9",
+    "inputs/lake_h3_d3_s3602/forcing_validation.json": "fead67a5f23245b6a129d0019abdf36f3ccb0b68ba189e440cccd186bf6063e5",
+    "inputs/lake_h3_d3_s3602/manifest.json": "6e48a57670b9c736701d3ff2190c6daffb70195b6121a58b6e246fad1659dbf8",
+    "inputs/lake_h3_d3_s3602/mass_audit.json": "69be8e6f14ba17b97f3d75d333d7d5773b9bba6f3559758383b78e0bd86def5f",
+    "inputs/lake_h3_d3_s3602/metadata.json": "58ef3805e499e4bfadea03bdafbfe7a3da260a7652bc0447a7f9bbb48927a4c4",
+    "inputs/lake_h3_d3_s3602/particles.npz": "13c4f8e280ce7a3c214d71cb284da83777c0d34f56630b870d659e9b298f8a13",
+    "inputs/lake_h3_d3_s3602/prepare.log": "d3e87355b9dc90ca823f2928d1d5e404ba8172aca64191ed95319bf8065b0ee0",
+    "inputs/lake_h3_d3_s3602/request.json": "75204a3d121205e05635fee78dc277b84f53c81cd2a326a989552ae436222736"
+  },
+  "opendrift_preprocessing_runs": 12,
+  "status": "twelve_historical_archives_verified"
+}

@@ -1,0 +1,28 @@
+{
+  "case": {
+    "base_scene": "arctic_ocean",
+    "block_id": "hudson_h3_d3",
+    "cst_utc": "2025-10-04T00:00:00.000Z",
+    "end_utc": "2025-10-04T00:46:18.000Z",
+    "id": "hudson_h3_d3_s4602",
+    "lkp_utc": "2025-10-03T00:00:00.000Z",
+    "seed": 4602
+  },
+  "config_sha256": "c423d60784080d42464ccfa93d0872dd89e8aec753dc7bcf4d60e768e05ccedd",
+  "data_role": "new_date_historical_forcing_preregistered",
+  "evidence": {
+    "date_lock_sha256": "640349bb593cb04ddb195c0ddefe005c9c370c937cdf91279df9b5d0951984da",
+    "method_lock_sha256": "a249f1a941fc0e6ee58051338a0d518c58262af273821b92f89b5dbf9b63103f",
+    "source_manifest_sha256": "5297c03abf5d8aa582dd05d160c7c42070bf1128f3824d9b6f5a3439bb651a3b",
+    "study": "second_innovation_h3_new_forcing"
+  },
+  "files": {
+    "forcing_validation.json": "2c96af6924711a0303aa2b3581ad0a45fdccb7ed9dd8f5e880c51a38d1e40c4d",
+    "mass_audit.json": "0ac30a7ee8e2cca5c1d6d748bc541658c0048e75a2b710fe34c925f1806be69c",
+    "metadata.json": "65772c1b377e8872d511178ab67bd743704874859557f8a1b286cdf037aaa8e7",
+    "particles.npz": "bc06de6a102b057ee5dfe34b185362d1d5aff4e7012d810a23c1389748e7bd4e",
+    "prepare.log": "cfaaa07974e1858d21ee07891524b0ead93aecf42fb7dc8e918c234ad0715389",
+    "request.json": "8dd64047dc61bddfd0a1a2513e456ae31fcbc098b99b438da3fb3ca2b04b2d1d"
+  },
+  "status": "prepared"
+}

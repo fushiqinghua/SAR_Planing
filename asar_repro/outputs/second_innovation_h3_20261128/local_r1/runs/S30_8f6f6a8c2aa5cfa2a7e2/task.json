@@ -1,0 +1,15 @@
+{
+  "block_id": "lake_h3_d1",
+  "connectivity": 4,
+  "date": "2025-08-05",
+  "footprint": "axis_square",
+  "instance": "lake_h3_d1_s3402",
+  "manifest_sha256": "87c38beff1061787889e7f238cd98d4609e4f12bda16a640b5df4d29fc9fb255",
+  "method": "PT_then_original_paper_greedy",
+  "particle_sha256": "63c45a3d7c4881a40e1cf75f23b77b06471f604ac407447a25feb24848bfb86b",
+  "repetition": 0,
+  "seconds": 30,
+  "seed": 3402,
+  "site": "lake_ontario",
+  "stage": "S30"
+}

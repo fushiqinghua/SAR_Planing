@@ -1,0 +1,45 @@
+{
+  "status": "equivalent",
+  "utc": "2025-09-18T21:00:00+00:00",
+  "source": {
+    "status": 200,
+    "url": "https://tds.hycom.org/thredds/dodsC/ESPC-D-V02/ice/2025.dods?time%5B6249:1:6249%5D,lat%5B3538:1:3600%5D,lon%5B3350:1:3394%5D,ssu.ssu%5B6249:1:6249%5D%5B3538:1:3600%5D%5B3350:1:3394%5D,ssv.ssv%5B6249:1:6249%5D%5B3538:1:3600%5D%5B3350:1:3394%5D,sic.sic%5B6249:1:6249%5D%5B3538:1:3600%5D%5B3350:1:3394%5D",
+    "headers": {
+      "Date": "Sat, 28 Nov 2026 14:35:26 GMT",
+      "Server": "Apache",
+      "X-Frame-Options": "SAMEORIGIN",
+      "X-XSS-Protection": "1;",
+      "XDODS-Server": "opendap/3.7",
+      "Content-Description": "dods-data",
+      "Content-Type": "application/octet-stream",
+      "Connection": "close",
+      "Transfer-Encoding": "chunked"
+    }
+  },
+  "axes": {
+    "lon": true,
+    "lat": true,
+    "time": true
+  },
+  "variables": {
+    "ssu": {
+      "raw_packed_identical": true,
+      "cf_unpacked_identical": true
+    },
+    "ssv": {
+      "raw_packed_identical": true,
+      "cf_unpacked_identical": true
+    },
+    "sic": {
+      "raw_packed_identical": true,
+      "cf_unpacked_identical": true
+    }
+  },
+  "compared_spatial_samples": 2835,
+  "files": {
+    "outputs\\second_innovation_h3_20261128\\local_r1\\commands\\07_hycom_dap_calibration.body": "d91584879c087ebe3ed8e6c3c263c216929a4276ed9a89ddb94eb1a88c84ed2e",
+    "outputs\\second_innovation_h3_20261128\\local_r1\\commands\\04_hycom_dap_das.body": "c0a03a3b81d664b6ea7a0f26b9e01c3792aef0d258fb771a4e8f3958bc86331d",
+    "outputs\\second_innovation_h3_20261128\\local_r1\\commands\\04_hycom_dap_times.body": "8179c1d3f8d78c5c22b17c6bc37e585d2d8a88a4b83c13d88ed31c0ec20f6205",
+    "data\\raw\\h3\\hudson_h3_d2\\local_r1\\hycom\\a001\\hycom\\ESPC-D-V02_surface_20250918.nc": "c6b5020cbfb47a126adb21b254dca27976e315662130035b707cff8c6d248246"
+  }
+}

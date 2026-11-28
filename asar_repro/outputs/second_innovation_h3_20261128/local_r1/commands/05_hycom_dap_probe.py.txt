@@ -1,0 +1,31 @@
+from datetime import datetime, timezone
+from hashlib import sha256
+import json
+import os
+from pathlib import Path
+from urllib.parse import quote
+from urllib.request import Request, urlopen
+
+out = Path(os.environ["ASAR_H3_HYCOM_DIAG_DIR"])
+source = "https://tds.hycom.org/thredds/dodsC/ESPC-D-V02/ice/2025"
+year_start = datetime(2025, 1, 1, tzinfo=timezone.utc)
+for label, date in (("aug7", "2025-08-07T21:00:00+00:00"), ("sep18", "2025-09-18T21:00:00+00:00")):
+    t = int((datetime.fromisoformat(date) - year_start).total_seconds() // 3600)
+    index = f"[{t}:1:{t}][3538:1:3600][3350:1:3394]"
+    query = f"time[{t}:1:{t}],lat[3538:1:3600],lon[3350:1:3394],ssu.ssu{index},ssv.ssv{index},sic.sic{index}"
+    url = source + ".dods?" + quote(query, safe=",.:")
+    record = dict(url=url, target_utc=date, started_utc=datetime.now(timezone.utc).isoformat())
+    try:
+        with urlopen(Request(url, headers={"Accept-Encoding": "identity"}), timeout=85) as remote:
+            payload = remote.read(256 * 1024 + 1)
+            if len(payload) > 256 * 1024:
+                raise ValueError("Diagnostic response exceeded byte cap")
+            (out / ("05_hycom_dap_" + label + ".body")).write_bytes(payload)
+            record.update(status=remote.status, response_url=remote.geturl(), bytes=len(payload),
+                          sha256=sha256(payload).hexdigest())
+    except Exception as exc:
+        record.update(error=str(exc), error_type=type(exc).__name__)
+    finally:
+        record["finished_utc"] = datetime.now(timezone.utc).isoformat()
+        (out / ("05_hycom_dap_" + label + ".json")).write_text(json.dumps(record, indent=2), encoding="utf-8")
+        print(label, record.get("status"), record.get("error", ""), flush=True)

@@ -1,0 +1,44 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\scripts\\run_eight_neighbor_h3.py",
+    "_worker",
+    "--out",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\outputs\\second_innovation_h3_20261128\\local_r1",
+    "--run-id",
+    "E30_3013a336d5fb65572427"
+  ],
+  "error": null,
+  "files": {
+    "result.json": "246c1da5b7ea39bc4d5caa221ac6000acf1a67c3eb014c952d9ff9e6fa47075d",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "task.json": "4587c9b7941d630e2146121a797e50b6eee99f3bf6e999af7cfa061c53a3941d"
+  },
+  "frozen_evidence": {
+    "date_lock.json": "640349bb593cb04ddb195c0ddefe005c9c370c937cdf91279df9b5d0951984da",
+    "inputs_lock.json": "c152d57ec67353e76cd2ed3f0c2b1dce83c9f7515acf72d4180f9b773ad42f20",
+    "protocol.json": "fd437e16c26af91891e6831c2c19bb0315803ffe028aa39d462b152364e28062",
+    "s30_lock.json": "3a38904ea181d45410ca2ed85816001ae18df9ddd75118e174c8b288354ec382"
+  },
+  "peak_rss_bytes": 371724288,
+  "process_wall_s": 31.03602839999803,
+  "returncode": 0,
+  "status": "completed",
+  "task": {
+    "block_id": "lake_h3_d3",
+    "connectivity": 8,
+    "date": "2025-09-30",
+    "footprint": "heading_square",
+    "instance": "lake_h3_d3_s3602",
+    "manifest_sha256": "6e48a57670b9c736701d3ff2190c6daffb70195b6121a58b6e246fad1659dbf8",
+    "method": "C0",
+    "particle_sha256": "13c4f8e280ce7a3c214d71cb284da83777c0d34f56630b870d659e9b298f8a13",
+    "repetition": 0,
+    "seconds": 30,
+    "seed": 3602,
+    "site": "lake_ontario",
+    "stage": "E30"
+  },
+  "watchdog": null
+}

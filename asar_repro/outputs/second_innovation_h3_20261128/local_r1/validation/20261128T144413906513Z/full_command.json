@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\outputs\\second_innovation_h3_20261128\\local_r1\\validation\\20261128T144413906513Z\\full.xml",
+    "--basetemp=C:\\Users\\35448\\Documents\\Codex\\h3_pytest\\20261128T144413906513Z_full",
+    "tests"
+  ],
+  "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro",
+  "pythonhashseed": 0
+}

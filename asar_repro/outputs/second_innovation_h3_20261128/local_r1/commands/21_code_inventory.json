@@ -1,0 +1,117 @@
+{
+  "Head": "26276433832c43f83dad158e7f7bcf38ce0851d0",
+  "Branch": "eight-neighbor-rolling-pilot-20261128",
+  "TrackedChanges": [],
+  "ProtectedFiles": [
+    {
+      "Path": "configs/eight_neighbor_rolling_merge.json",
+      "Sha256": "d44117addd25e7983b6c88539d7fd113de9581b7ae6d2d7cde3dda39fa7b2087"
+    },
+    {
+      "Path": "outputs/second_innovation_p1_20261128/local_r1/protocol.json",
+      "Sha256": "b9054928f40598e5fc08c668eaba4e82c0cfe2bd4c3e3a4c9a3c1ac7c7733d41"
+    },
+    {
+      "Path": "scripts/run_eight_neighbor_followup.py",
+      "Sha256": "60a59a8063dd24e5138ae58318aed406ff7b106c5120e7b704e6779a4d0d82bb"
+    },
+    {
+      "Path": "scripts/run_eight_neighbor_lazy_prefix.py",
+      "Sha256": "3ab6196d142a1fa976f7c35ce1c52feb7ce05b0db9f46437287e2fab550c0307"
+    },
+    {
+      "Path": "scripts/run_eight_neighbor_progress.py",
+      "Sha256": "2bdda2e5ca86cf150ca7fc82fa13ab1481918626740abd9e7b9135cb7d9bda42"
+    },
+    {
+      "Path": "scripts/run_eight_neighbor_rolling.py",
+      "Sha256": "add5390bba666ee471ed693e1d2bbd381a9322037c8543f40ccd75e0bb85fa42"
+    },
+    {
+      "Path": "src/asar_repro/historical_drift.py",
+      "Sha256": "64fae2f0a0744dc35a3f3b557083c74a2a1b98b1c7572e028012f7d81970b80d"
+    },
+    {
+      "Path": "src/asar_repro/objective.py",
+      "Sha256": "792077ad3e0286c03f60108f2580ea3b3557e3f5b002bc1a5e2f9f67e48fb2ad"
+    },
+    {
+      "Path": "src/asar_repro/physical_accel.py",
+      "Sha256": "56cc4c6ce2038caf92e252d60201a7ec34e95fef6d8f79cc1019675848aa2255"
+    },
+    {
+      "Path": "src/asar_repro/physical_followup_data.py",
+      "Sha256": "7ef42a3d732531fcd611cbb21d149bdd8b918957b600f520964ef27f67a90ea2"
+    },
+    {
+      "Path": "src/asar_repro/physical_lazy_prefix.py",
+      "Sha256": "3deea33915272171f8df5bd928f2d7f99e15dc7027bb2733117b5525fb4051be"
+    },
+    {
+      "Path": "src/asar_repro/physical_model.py",
+      "Sha256": "dea279468b210922b523c2274433689dde19a1428ed6a2adaf4b32ab750dd14c"
+    },
+    {
+      "Path": "src/asar_repro/physical_progress_prefix.py",
+      "Sha256": "2f1bda1adeb5c0ba4ea41f8d6417a16a9b956f14fd641bf1ce126c48a8d8d5ee"
+    },
+    {
+      "Path": "src/asar_repro/physical_refinement.py",
+      "Sha256": "461aec117a9526e5bc1dd415f277afaea420ff2b9cafa3c10406ec6dd36cdf47"
+    },
+    {
+      "Path": "src/asar_repro/physical_rolling.py",
+      "Sha256": "82a130edf99c3ed42918fc97dfe5204b5bddbc99e8c6364e4d6ff1aa1e380d49"
+    },
+    {
+      "Path": "src/asar_repro/physical_search.py",
+      "Sha256": "e96b65fe30d9471cb27037a7d4f633b3efec0457fca16ce491906e09d18524d8"
+    },
+    {
+      "Path": "src/asar_repro/search.py",
+      "Sha256": "868b09203c3a782765f9b4440751d56512e5a24c1a0a44d5706e6a6aa5b34bbc"
+    }
+  ],
+  "AddedFiles": [
+    {
+      "Path": "docs/second_innovation_next/P2_H3_LOCAL_EXECUTION.md",
+      "Sha256": "9a787d6f5691907f9c8ed70d7bc4292460069e52e744cb9ac1edf06744b5daa0"
+    },
+    {
+      "Path": "scripts/h3_acquire.py",
+      "Sha256": "1d326448e3393178a487586aaf6148a51c37591c817f52f35ed1b9df0ab77b5f"
+    },
+    {
+      "Path": "scripts/h3_hycom_dap.py",
+      "Sha256": "609524d6866fcc514d0150cc601852d83fd2608b4737f4443bb24258b301ed9c"
+    },
+    {
+      "Path": "scripts/h3_protocol.py",
+      "Sha256": "492de6b943c021f4a601ed17bc2524f6c6bcaf66f935edc3e39049d4e1fbfbd4"
+    },
+    {
+      "Path": "scripts/prepare_eight_neighbor_h3.py",
+      "Sha256": "9c0c002d209f64ba3c8a212b5d05ec663ceb4707b9d8bedd086dd0a4f8585e70"
+    },
+    {
+      "Path": "scripts/run_eight_neighbor_h3.py",
+      "Sha256": "78a5a534c7bfbfdd56b6dc93a2e9e23bd8a8fc09068812d090db761392ecb352"
+    },
+    {
+      "Path": "scripts/report_eight_neighbor_h3.py",
+      "Sha256": "a2f034cdce3f013990164a3282071c8f425b5009e36edc230350c25808aec624"
+    },
+    {
+      "Path": "src/asar_repro/h3_forcing.py",
+      "Sha256": "514b96f0f61461106a22ffda5dfc50c7d3467f5a119e3f89a93771802cc493b9"
+    },
+    {
+      "Path": "tests/test_h3_forcing.py",
+      "Sha256": "b21420a9e4c7073935374c1f867ea1c92f79490b19c868bdf208a24e86a08788"
+    },
+    {
+      "Path": "tests/test_eight_neighbor_h3_runner.py",
+      "Sha256": "4fb1871800283fa4f2f3dd672ee435f4416911e7d9b31180762f93d344318cda"
+    }
+  ]
+}

@@ -1,0 +1,231 @@
+{
+  "frozen_utc": "2026-11-28T14:20:21.551937+00:00",
+  "identity": {
+    "method_sha256": {
+      "scripts/run_eight_neighbor_lazy_prefix.py": "3ab6196d142a1fa976f7c35ce1c52feb7ce05b0db9f46437287e2fab550c0307",
+      "src/asar_repro/physical_lazy_prefix.py": "3deea33915272171f8df5bd928f2d7f99e15dc7027bb2733117b5525fb4051be",
+      "src/asar_repro/physical_model.py": "dea279468b210922b523c2274433689dde19a1428ed6a2adaf4b32ab750dd14c",
+      "src/asar_repro/physical_refinement.py": "461aec117a9526e5bc1dd415f277afaea420ff2b9cafa3c10406ec6dd36cdf47",
+      "src/asar_repro/physical_rolling.py": "82a130edf99c3ed42918fc97dfe5204b5bddbc99e8c6364e4d6ff1aa1e380d49"
+    },
+    "registered_sha256": {
+      "configs/eight_neighbor_h2.json": "4aaf85c21a786a31ccbeb0838c2456cb9dc91161ae3e05c9a97cd2f7820015bc",
+      "docs/second_innovation_next/P1_DECISIONS.md": "fb76ddf04e9570dd1a06f31258e56a21f8e4936f8478af249ef80353d88eb5a6",
+      "docs/second_innovation_next/P2_H3_PREREGISTRATION.md": "06b3cdcc9ab9cce6d541c8fb10c8b6d3e3c38e9f61c709273e9a26de2900d2b6",
+      "docs/second_innovation_next/h3_date_registry.json": "05bb614113bb49a2c116d70ea7238a5b45f8be4300a7f3fa7883fd1c63c8e6c6",
+      "outputs/eight_neighbor_h2_20261127/local_r2/date_lock.json": "f1412a794214515bba0e7325af0c3fa2eca0e4a79e05451c93b3331b92824ade",
+      "outputs/second_innovation_p1_20261128/local_r1/summary.json": "7ea8ab1338eb13c01003f46f1a66e5434fc12fac77e260a6e993845b7287942d"
+    },
+    "registry": {
+      "blocks": [
+        {
+          "cst_utc": "2025-08-05T15:45:00.000Z",
+          "date": "2025-08-05",
+          "end_utc": "2025-08-05T15:52:33.740Z",
+          "id": "lake_h3_d1",
+          "lkp_utc": "2025-08-05T14:45:00.000Z",
+          "primary": true,
+          "scene": "lake_ontario",
+          "seeds": [
+            3401,
+            3402
+          ],
+          "source_registration": "lake_h2_alt1"
+        },
+        {
+          "cst_utc": "2025-09-16T15:45:00.000Z",
+          "date": "2025-09-16",
+          "end_utc": "2025-09-16T15:52:33.740Z",
+          "id": "lake_h3_d2",
+          "lkp_utc": "2025-09-16T14:45:00.000Z",
+          "primary": true,
+          "scene": "lake_ontario",
+          "seeds": [
+            3501,
+            3502
+          ],
+          "source_registration": "lake_h2_alt2"
+        },
+        {
+          "cst_utc": "2025-09-30T15:45:00.000Z",
+          "date": "2025-09-30",
+          "end_utc": "2025-09-30T15:52:33.740Z",
+          "id": "lake_h3_d3",
+          "lkp_utc": "2025-09-30T14:45:00.000Z",
+          "primary": true,
+          "scene": "lake_ontario",
+          "seeds": [
+            3601,
+            3602
+          ],
+          "source_registration": "lake_h2_alt3"
+        },
+        {
+          "cst_utc": "2025-08-09T00:00:00.000Z",
+          "date": "2025-08-08",
+          "end_utc": "2025-08-09T00:46:18.000Z",
+          "id": "hudson_h3_d1",
+          "lkp_utc": "2025-08-08T00:00:00.000Z",
+          "primary": true,
+          "scene": "arctic_ocean",
+          "seeds": [
+            4401,
+            4402
+          ],
+          "source_registration": "hudson_h2_alt1"
+        },
+        {
+          "cst_utc": "2025-09-20T00:00:00.000Z",
+          "date": "2025-09-19",
+          "end_utc": "2025-09-20T00:46:18.000Z",
+          "id": "hudson_h3_d2",
+          "lkp_utc": "2025-09-19T00:00:00.000Z",
+          "primary": true,
+          "scene": "arctic_ocean",
+          "seeds": [
+            4501,
+            4502
+          ],
+          "source_registration": "hudson_h2_alt2"
+        },
+        {
+          "cst_utc": "2025-10-04T00:00:00.000Z",
+          "date": "2025-10-03",
+          "end_utc": "2025-10-04T00:46:18.000Z",
+          "id": "hudson_h3_d3",
+          "lkp_utc": "2025-10-03T00:00:00.000Z",
+          "primary": true,
+          "scene": "arctic_ocean",
+          "seeds": [
+            4601,
+            4602
+          ],
+          "source_registration": "hudson_h2_alt3"
+        },
+        {
+          "cst_utc": "2025-08-19T15:45:00.000Z",
+          "date": "2025-08-19",
+          "end_utc": "2025-08-19T15:52:33.740Z",
+          "id": "lake_h3_f1",
+          "lkp_utc": "2025-08-19T14:45:00.000Z",
+          "primary": false,
+          "scene": "lake_ontario",
+          "seeds": [
+            3701,
+            3702
+          ],
+          "source_registration": "new_fallback"
+        },
+        {
+          "cst_utc": "2025-10-07T15:45:00.000Z",
+          "date": "2025-10-07",
+          "end_utc": "2025-10-07T15:52:33.740Z",
+          "id": "lake_h3_f2",
+          "lkp_utc": "2025-10-07T14:45:00.000Z",
+          "primary": false,
+          "scene": "lake_ontario",
+          "seeds": [
+            3801,
+            3802
+          ],
+          "source_registration": "new_fallback"
+        },
+        {
+          "cst_utc": "2025-08-30T00:00:00.000Z",
+          "date": "2025-08-29",
+          "end_utc": "2025-08-30T00:46:18.000Z",
+          "id": "hudson_h3_f1",
+          "lkp_utc": "2025-08-29T00:00:00.000Z",
+          "primary": false,
+          "scene": "arctic_ocean",
+          "seeds": [
+            4701,
+            4702
+          ],
+          "source_registration": "new_fallback"
+        },
+        {
+          "cst_utc": "2025-10-11T00:00:00.000Z",
+          "date": "2025-10-10",
+          "end_utc": "2025-10-11T00:46:18.000Z",
+          "id": "hudson_h3_f2",
+          "lkp_utc": "2025-10-10T00:00:00.000Z",
+          "primary": false,
+          "scene": "arctic_ocean",
+          "seeds": [
+            4801,
+            4802
+          ],
+          "source_registration": "new_fallback"
+        }
+      ],
+      "budget": {
+        "E30": {
+          "seconds": 30,
+          "tasks": 72,
+          "total_seconds": 2160
+        },
+        "S30": {
+          "inputs": 12,
+          "seconds": 30,
+          "total_seconds": 360
+        },
+        "total_algorithm_seconds": 2520
+      },
+      "data_role": "future_independent_date_forcing_test_only_after_provenance_and_availability_qualification",
+      "history": {
+        "h2_candidate_alternates_unused": true,
+        "h2_replacements": {},
+        "h2_selected": [
+          "2025-08-12",
+          "2025-09-09",
+          "2025-09-23",
+          "2025-08-15",
+          "2025-09-12",
+          "2025-09-26"
+        ]
+      },
+      "method": {
+        "archive": true,
+        "archive_history_limit": 8192,
+        "archive_limit": 512,
+        "candidate": "physical_lazy_prefix_v1",
+        "completion_every": 128,
+        "completion_max_calls": 32,
+        "connectivity": 8,
+        "control": "physical_refinement_diagnostic_v1",
+        "footprint": "heading_square",
+        "guide_weight": 1.04,
+        "max_open": 100000,
+        "objective": "J",
+        "pd_tolerance": 1e-08,
+        "repetitions": 3,
+        "seconds": 30
+      },
+      "model": {
+        "hudson_current": "HYCOM ESPC-D-V02 native hourly ssu ssv sic ice-free audit",
+        "hudson_wind": "GFS 0.25deg D-1 18Z leads 003-033 step3h",
+        "initial_particles": 500,
+        "initial_radius_m": 100,
+        "lake_current": "LOOFS 18Z nowcast 13-17Z top sigma",
+        "lake_wind": "HRRR CONUS 10m UGRD/VGRD f00 13-17Z",
+        "q": 0.78,
+        "speed_m_s": 20,
+        "time_standard": "UTC"
+      },
+      "parent_commit": "440760c35e5c5e26f8ea44d5501e50088c3d2bcd",
+      "protected_github_blobs": {
+        "scripts/run_eight_neighbor_lazy_prefix.py": "cfd6431caebf3bd0a77b48cf2d2665a7c30a385c",
+        "src/asar_repro/physical_lazy_prefix.py": "4bff4d8fa4a54b218467af0eb074d690a286c8bc",
+        "src/asar_repro/physical_model.py": "c8ff4bfc3b57b12da2e5f437c61bdac5e69c070d",
+        "src/asar_repro/physical_refinement.py": "428b2843b3c109246a5bcc50d023f15511c4bf40",
+        "src/asar_repro/physical_rolling.py": "6280e53af605f3320cc9a6045c058c870b28798c"
+      },
+      "qualification_order": "primary dates in order; substitute only when source quality or model applicability fails, never on particle/J/Pd/planning outcome",
+      "schema_version": 1,
+      "status": "dates_preregistered_for_qualification_not_yet_acquired",
+      "study": "second_innovation_h3_new_forcing"
+    }
+  },
+  "status": "frozen_before_qualification"
+}

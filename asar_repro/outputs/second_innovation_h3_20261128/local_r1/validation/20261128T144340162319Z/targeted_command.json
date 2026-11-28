@@ -1,0 +1,24 @@
+{
+  "argv": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "-p",
+    "no:cacheprovider",
+    "--junitxml=E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\outputs\\second_innovation_h3_20261128\\local_r1\\validation\\20261128T144340162319Z\\targeted.xml",
+    "--basetemp=E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h3\\.pytest\\20261128T144340162319Z_targeted",
+    "tests/test_h3_forcing.py",
+    "tests/test_eight_neighbor_h3_runner.py",
+    "tests/test_h2_acquire.py",
+    "tests/test_h2_hycom.py",
+    "tests/test_eight_neighbor_h2_inputs.py",
+    "tests/test_historical_drift.py",
+    "tests/test_physical_search.py",
+    "tests/test_physical_lazy_prefix.py",
+    "tests/test_physical_refinement.py",
+    "tests/test_physical_rolling.py"
+  ],
+  "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro",
+  "pythonhashseed": 0
+}

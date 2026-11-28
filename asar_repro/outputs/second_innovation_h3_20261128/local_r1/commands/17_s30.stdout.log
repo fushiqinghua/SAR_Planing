@@ -1,0 +1,13 @@
+S30 1/12 lake_h3_d1_s3401 PT_then_original_paper_greedy rep=0
+S30 2/12 lake_h3_d1_s3402 PT_then_original_paper_greedy rep=0
+S30 3/12 lake_h3_d2_s3501 PT_then_original_paper_greedy rep=0
+S30 4/12 lake_h3_d2_s3502 PT_then_original_paper_greedy rep=0
+S30 5/12 lake_h3_d3_s3601 PT_then_original_paper_greedy rep=0
+S30 6/12 lake_h3_d3_s3602 PT_then_original_paper_greedy rep=0
+S30 7/12 hudson_h3_d1_s4401 PT_then_original_paper_greedy rep=0
+S30 8/12 hudson_h3_d1_s4402 PT_then_original_paper_greedy rep=0
+S30 9/12 hudson_h3_d2_s4501 PT_then_original_paper_greedy rep=0
+S30 10/12 hudson_h3_d2_s4502 PT_then_original_paper_greedy rep=0
+S30 11/12 hudson_h3_d3_s4601 PT_then_original_paper_greedy rep=0
+S30 12/12 hudson_h3_d3_s4602 PT_then_original_paper_greedy rep=0
+Frozen twelve independently replayed S30 routes

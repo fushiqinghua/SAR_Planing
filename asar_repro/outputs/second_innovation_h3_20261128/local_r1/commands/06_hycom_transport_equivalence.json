@@ -1,0 +1,29 @@
+{
+  "status": "blocked",
+  "utc": "2025-09-18T21:00:00Z",
+  "region": "Hudson Bay",
+  "axes": {
+    "lon": true,
+    "lat": true,
+    "time": false
+  },
+  "variables": {
+    "ssu": {
+      "raw_packed_identical": false,
+      "cf_unpacked_identical": false
+    },
+    "ssv": {
+      "raw_packed_identical": false,
+      "cf_unpacked_identical": false
+    },
+    "sic": {
+      "raw_packed_identical": true,
+      "cf_unpacked_identical": true
+    }
+  },
+  "files": {
+    "outputs\\second_innovation_h3_20261128\\local_r1\\commands\\05_hycom_dap_sep18.body": "59690d0d96806818615699a2376b09cb1f1e31dd3b0e257dc9cd1e092d9edb6e",
+    "outputs\\second_innovation_h3_20261128\\local_r1\\commands\\04_hycom_dap_das.body": "c0a03a3b81d664b6ea7a0f26b9e01c3792aef0d258fb771a4e8f3958bc86331d",
+    "data\\raw\\h3\\hudson_h3_d2\\local_r1\\hycom\\a001\\hycom\\ESPC-D-V02_surface_20250918.nc": "c6b5020cbfb47a126adb21b254dca27976e315662130035b707cff8c6d248246"
+  }
+}

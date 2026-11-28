@@ -1,0 +1,1758 @@
+{
+  "dates": [
+    {
+      "block_id": "lake_h3_d1",
+      "captures": {
+        "sources/lake_h3_d1/noaa/a001.json": "c9930a9901058a9e65924e9749d1189fd0fd28d85e17e02582259d2305a47f1e",
+        "sources/lake_h3_d1/noaa/claims/a001.json": "a67f1e7cf6b824f2f9dec8f797543527e5b8f9ff38ff71976929d80800db9670"
+      },
+      "checks": {
+        "fields": {
+          "current": {
+            "lkp_csp_range_m_s": [
+              [
+                [
+                  0.11013120412826538,
+                  0.0829201228916645
+                ],
+                [
+                  0.10547865182161331,
+                  0.06328805908560753
+                ]
+              ],
+              [
+                [
+                  0.11428644508123398,
+                  0.09498546955486138
+                ],
+                [
+                  0.11087953858077526,
+                  0.07872443857292334
+                ]
+              ]
+            ],
+            "metadata": {
+              "lon_lat_bounds": [
+                -79.80072021484375,
+                -76.05899047851562,
+                43.180450439453125,
+                44.22895431518555
+              ],
+              "native_variables": [
+                "u",
+                "v"
+              ],
+              "node_projection_residual_m": 0.2596666113792793,
+              "projection": "proj=utm +zone=16 +datum=NAD83",
+              "sigma": -0.02500000037252903,
+              "sigma_index": 0,
+              "spatial_method": "constant on containing native FVCOM face",
+              "top_layer_center_depth_m": [
+                0.02853590292537067,
+                5.713517402313908
+              ],
+              "vector_basis": "geographic_east_north"
+            },
+            "native_shape": [
+              5,
+              64453,
+              3
+            ],
+            "native_valid_times_utc": [
+              "2025-08-05T13:00:00Z",
+              "2025-08-05T14:00:00Z",
+              "2025-08-05T15:00:00Z",
+              "2025-08-05T16:00:00Z",
+              "2025-08-05T17:00:00Z"
+            ],
+            "probe_count": 274,
+            "source_sha256": {
+              "data/raw/h3/lake_h3_d1/local_r1/noaa/a001/loofs/loofs.t18z.20250805.fields.n001.nc": "e51f4e0fdd7f939f2c70edd53085517fd3a4a0235cd51d69a7e9f2f09a95c3a9",
+              "data/raw/h3/lake_h3_d1/local_r1/noaa/a001/loofs/loofs.t18z.20250805.fields.n002.nc": "f0dd0a59985b249a8d5a03befcec0c42b5fe1a820051afe6800cb86b085e5e2f",
+              "data/raw/h3/lake_h3_d1/local_r1/noaa/a001/loofs/loofs.t18z.20250805.fields.n003.nc": "a461d9d764d888248a993b89e0cbc0d4eb9650f8609640d956c281d82e393834",
+              "data/raw/h3/lake_h3_d1/local_r1/noaa/a001/loofs/loofs.t18z.20250805.fields.n004.nc": "b8da8bc69c8e38ea6fbac528ff56549d11e1a8e4ece26b97aa6539b691d64aa4",
+              "data/raw/h3/lake_h3_d1/local_r1/noaa/a001/loofs/loofs.t18z.20250805.fields.n005.nc": "8aee060902faccd7f7821856914c3ed72a2ea93a1fc113eb6069944ac58d01a5"
+            }
+          },
+          "wind": {
+            "lkp_csp_range_m_s": [
+              [
+                [
+                  -3.222476693724298,
+                  -1.6798557186342284
+                ],
+                [
+                  -3.206270893156039,
+                  -1.6023667730719824
+                ]
+              ],
+              [
+                [
+                  -3.058984550051785,
+                  -1.4928785986175466
+                ],
+                [
+                  -3.0072818001562007,
+                  -1.4138459495662392
+                ]
+              ]
+            ],
+            "metadata": {
+              "height_m": 10,
+              "native_variables": [
+                "UGRD",
+                "VGRD"
+              ],
+              "spatial_method": "bilinear in native Lambert grid, then rotate at query",
+              "vector_basis": "grid_relative"
+            },
+            "native_shape": [
+              5,
+              1059,
+              1799,
+              2
+            ],
+            "native_valid_times_utc": [
+              "2025-08-05T13:00:00Z",
+              "2025-08-05T14:00:00Z",
+              "2025-08-05T15:00:00Z",
+              "2025-08-05T16:00:00Z",
+              "2025-08-05T17:00:00Z"
+            ],
+            "probe_count": 274,
+            "source_sha256": {
+              "data/raw/h3/lake_h3_d1/local_r1/noaa/a001/wind/hrrr.t13z.wrfsfcf00.grib2.wind10m.grib2": "1a4dd6422cd648170f3e4472e1e146eacecd7965ce4988fe1b93d2d3d0460b58",
+              "data/raw/h3/lake_h3_d1/local_r1/noaa/a001/wind/hrrr.t14z.wrfsfcf00.grib2.wind10m.grib2": "350f808a83ce5be42d347f4b2c1fa2ac7fc71025bd13c9c41fbaef0f7de2cd05",
+              "data/raw/h3/lake_h3_d1/local_r1/noaa/a001/wind/hrrr.t15z.wrfsfcf00.grib2.wind10m.grib2": "b410022e964716c4c31d6dfdc75d340d1e127e371f2bc88d18f68fa63658ac3b",
+              "data/raw/h3/lake_h3_d1/local_r1/noaa/a001/wind/hrrr.t16z.wrfsfcf00.grib2.wind10m.grib2": "56a82326ffe9cbc05602a15bcac601a142abca89b02d10b7b8c0c5dd2dc5d14f",
+              "data/raw/h3/lake_h3_d1/local_r1/noaa/a001/wind/hrrr.t17z.wrfsfcf00.grib2.wind10m.grib2": "df6ccc28128b1775744da8cf6b80f92524f3905d7a74db101eda8b4c59e6962f"
+            }
+          }
+        },
+        "forcing_kind": "historical_real",
+        "lkp_csp_lon_lat": [
+          [
+            -76.5,
+            44.21
+          ],
+          [
+            -76.496,
+            44.215
+          ]
+        ],
+        "native_window_utc": [
+          "2025-08-05T14:45:00Z",
+          "2025-08-05T15:53:00Z"
+        ],
+        "status": "eligible"
+      },
+      "date": "2025-08-05",
+      "manifest": "source_manifests/20261128T144553898503Z/lake_h3_d1.json",
+      "manifest_sha256": "9fb9f301e2a9cfc05d528b43b4e29d6a00bc84c2282779f39e4ef1d46c61a138",
+      "primary": true,
+      "providers": {
+        "noaa": "retrieved"
+      },
+      "scene": "lake_ontario",
+      "seeds": [
+        3401,
+        3402
+      ],
+      "status": "eligible"
+    },
+    {
+      "block_id": "lake_h3_d2",
+      "captures": {
+        "sources/lake_h3_d2/noaa/a001.json": "dc34dbedb3411d2d98905cc4a732485e8485f670d0dcaf31c212267763ffb11d",
+        "sources/lake_h3_d2/noaa/claims/a001.json": "5ea463e63ad813b5ba5926ce6124b946d343d078ed80b18c2d457c04c4f90ead"
+      },
+      "checks": {
+        "fields": {
+          "current": {
+            "lkp_csp_range_m_s": [
+              [
+                [
+                  0.14648851851622263,
+                  0.07744371704757214
+                ],
+                [
+                  0.14059504692753155,
+                  0.05194976460188627
+                ]
+              ],
+              [
+                [
+                  0.16235945001244545,
+                  0.09130735471844673
+                ],
+                [
+                  0.15251174569129944,
+                  0.07273833900690078
+                ]
+              ]
+            ],
+            "metadata": {
+              "lon_lat_bounds": [
+                -79.80072021484375,
+                -76.05899047851562,
+                43.180450439453125,
+                44.22895431518555
+              ],
+              "native_variables": [
+                "u",
+                "v"
+              ],
+              "node_projection_residual_m": 0.2596666113792793,
+              "projection": "proj=utm +zone=16 +datum=NAD83",
+              "sigma": -0.02500000037252903,
+              "sigma_index": 0,
+              "spatial_method": "constant on containing native FVCOM face",
+              "top_layer_center_depth_m": [
+                0.023007732972617934,
+                5.708191503706447
+              ],
+              "vector_basis": "geographic_east_north"
+            },
+            "native_shape": [
+              5,
+              64453,
+              3
+            ],
+            "native_valid_times_utc": [
+              "2025-09-16T13:00:00Z",
+              "2025-09-16T14:00:00Z",
+              "2025-09-16T15:00:00Z",
+              "2025-09-16T16:00:00Z",
+              "2025-09-16T17:00:00Z"
+            ],
+            "probe_count": 274,
+            "source_sha256": {
+              "data/raw/h3/lake_h3_d2/local_r1/noaa/a001/loofs/loofs.t18z.20250916.fields.n001.nc": "865503039a9ec1694d715bf6e04eb31d4ec5451782e647b3a8ada0bb3cc026c9",
+              "data/raw/h3/lake_h3_d2/local_r1/noaa/a001/loofs/loofs.t18z.20250916.fields.n002.nc": "6c8d9f319cc6291af76fecf6f0a509b869729635bdde6a26ce170110727cbf3b",
+              "data/raw/h3/lake_h3_d2/local_r1/noaa/a001/loofs/loofs.t18z.20250916.fields.n003.nc": "2705c46521c91c1e5921e247b5832914d7e03f7f301a52b832620c2c28c34f56",
+              "data/raw/h3/lake_h3_d2/local_r1/noaa/a001/loofs/loofs.t18z.20250916.fields.n004.nc": "dfafa49646c680c7b96618cd54901628e2bba7d0e49c850349f9d90caf696ba4",
+              "data/raw/h3/lake_h3_d2/local_r1/noaa/a001/loofs/loofs.t18z.20250916.fields.n005.nc": "655cb80c2e7bb3933cac7095d63122e8a973fb1ae412d85d53222ece72e7bb0d"
+            }
+          },
+          "wind": {
+            "lkp_csp_range_m_s": [
+              [
+                [
+                  -2.9001136980224542,
+                  -1.6670263752199284
+                ],
+                [
+                  -2.891448316829043,
+                  -1.5718880998291693
+                ]
+              ],
+              [
+                [
+                  -2.8336846244601217,
+                  -0.9687474407482055
+                ],
+                [
+                  -2.831317780823579,
+                  -0.8920335314212134
+                ]
+              ]
+            ],
+            "metadata": {
+              "height_m": 10,
+              "native_variables": [
+                "UGRD",
+                "VGRD"
+              ],
+              "spatial_method": "bilinear in native Lambert grid, then rotate at query",
+              "vector_basis": "grid_relative"
+            },
+            "native_shape": [
+              5,
+              1059,
+              1799,
+              2
+            ],
+            "native_valid_times_utc": [
+              "2025-09-16T13:00:00Z",
+              "2025-09-16T14:00:00Z",
+              "2025-09-16T15:00:00Z",
+              "2025-09-16T16:00:00Z",
+              "2025-09-16T17:00:00Z"
+            ],
+            "probe_count": 274,
+            "source_sha256": {
+              "data/raw/h3/lake_h3_d2/local_r1/noaa/a001/wind/hrrr.t13z.wrfsfcf00.grib2.wind10m.grib2": "1afd947979960448f6acd3f87dcab529f42d783ae3c171c7d35732a41b27b1fb",
+              "data/raw/h3/lake_h3_d2/local_r1/noaa/a001/wind/hrrr.t14z.wrfsfcf00.grib2.wind10m.grib2": "19624f29cdf70278b711f059b9c991a332cbea8004e2306dc79cf151405ef578",
+              "data/raw/h3/lake_h3_d2/local_r1/noaa/a001/wind/hrrr.t15z.wrfsfcf00.grib2.wind10m.grib2": "0471696e8afa65b81b92b34750b881fe0b044086a0473762cef63ecbca3755cd",
+              "data/raw/h3/lake_h3_d2/local_r1/noaa/a001/wind/hrrr.t16z.wrfsfcf00.grib2.wind10m.grib2": "ce6c3564d26fd705688a0a0ce8486ffbeeb134b1b41e0c1b0fcf6740e69f0fe9",
+              "data/raw/h3/lake_h3_d2/local_r1/noaa/a001/wind/hrrr.t17z.wrfsfcf00.grib2.wind10m.grib2": "5d8245752c27fec865753f2cf618aa6ce30fd5aecf62472b81a422be920af36a"
+            }
+          }
+        },
+        "forcing_kind": "historical_real",
+        "lkp_csp_lon_lat": [
+          [
+            -76.5,
+            44.21
+          ],
+          [
+            -76.496,
+            44.215
+          ]
+        ],
+        "native_window_utc": [
+          "2025-09-16T14:45:00Z",
+          "2025-09-16T15:53:00Z"
+        ],
+        "status": "eligible"
+      },
+      "date": "2025-09-16",
+      "manifest": "source_manifests/20261128T144553898503Z/lake_h3_d2.json",
+      "manifest_sha256": "f4a4d62f5a175d25e0f40382c04fe8674c3929ffa5a782199478af09e36367da",
+      "primary": true,
+      "providers": {
+        "noaa": "retrieved"
+      },
+      "scene": "lake_ontario",
+      "seeds": [
+        3501,
+        3502
+      ],
+      "status": "eligible"
+    },
+    {
+      "block_id": "lake_h3_d3",
+      "captures": {
+        "sources/lake_h3_d3/noaa/a001.json": "46a7bf3b7c0699a691aebfbf095f82e05870ac29a8bd40b4387492820298bc03",
+        "sources/lake_h3_d3/noaa/claims/a001.json": "4721951cc8653676eb01ed32e1668c2280002da2771601001ef35c053c8bdb99"
+      },
+      "checks": {
+        "fields": {
+          "current": {
+            "lkp_csp_range_m_s": [
+              [
+                [
+                  0.12261271278063456,
+                  0.03209982253611088
+                ],
+                [
+                  0.1035702674339215,
+                  0.02344219060614705
+                ]
+              ],
+              [
+                [
+                  0.13598497584462166,
+                  0.04897361273566882
+                ],
+                [
+                  0.11627346649765968,
+                  0.0401278853106002
+                ]
+              ]
+            ],
+            "metadata": {
+              "lon_lat_bounds": [
+                -79.80072021484375,
+                -76.05899047851562,
+                43.180450439453125,
+                44.22895431518555
+              ],
+              "native_variables": [
+                "u",
+                "v"
+              ],
+              "node_projection_residual_m": 0.2596666113792793,
+              "projection": "proj=utm +zone=16 +datum=NAD83",
+              "sigma": -0.02500000037252903,
+              "sigma_index": 0,
+              "spatial_method": "constant on containing native FVCOM face",
+              "top_layer_center_depth_m": [
+                0.022001622200036375,
+                5.707347649445349
+              ],
+              "vector_basis": "geographic_east_north"
+            },
+            "native_shape": [
+              5,
+              64453,
+              3
+            ],
+            "native_valid_times_utc": [
+              "2025-09-30T13:00:00Z",
+              "2025-09-30T14:00:00Z",
+              "2025-09-30T15:00:00Z",
+              "2025-09-30T16:00:00Z",
+              "2025-09-30T17:00:00Z"
+            ],
+            "probe_count": 274,
+            "source_sha256": {
+              "data/raw/h3/lake_h3_d3/local_r1/noaa/a001/loofs/loofs.t18z.20250930.fields.n001.nc": "47ad707b203dcf8d7dc92b163dcd39703e6d0e8808720ee33fec4e1dcb0e3d4b",
+              "data/raw/h3/lake_h3_d3/local_r1/noaa/a001/loofs/loofs.t18z.20250930.fields.n002.nc": "f2e36e487a053aa986a62c62c275fb8944f377c60d9467510df5620621a61c09",
+              "data/raw/h3/lake_h3_d3/local_r1/noaa/a001/loofs/loofs.t18z.20250930.fields.n003.nc": "9425df5cbc8ff6f9fa44bb940d1ccae40fb5624db97207a1916cfca7a3ab2e47",
+              "data/raw/h3/lake_h3_d3/local_r1/noaa/a001/loofs/loofs.t18z.20250930.fields.n004.nc": "b5d2b1d577fe274185b89acea504fad8eaa576c710435dbda40714cbba640b58",
+              "data/raw/h3/lake_h3_d3/local_r1/noaa/a001/loofs/loofs.t18z.20250930.fields.n005.nc": "6623a7ec7f62a290e20c3faa1bf86ac941d49f9fa1c93108fade604459b0cb57"
+            }
+          },
+          "wind": {
+            "lkp_csp_range_m_s": [
+              [
+                [
+                  -5.679428612833008,
+                  -3.511875411142883
+                ],
+                [
+                  -5.629826439016442,
+                  -3.440146104296505
+                ]
+              ],
+              [
+                [
+                  -5.483920529580407,
+                  -2.777516496430634
+                ],
+                [
+                  -5.40619445903792,
+                  -2.784988796402084
+                ]
+              ]
+            ],
+            "metadata": {
+              "height_m": 10,
+              "native_variables": [
+                "UGRD",
+                "VGRD"
+              ],
+              "spatial_method": "bilinear in native Lambert grid, then rotate at query",
+              "vector_basis": "grid_relative"
+            },
+            "native_shape": [
+              5,
+              1059,
+              1799,
+              2
+            ],
+            "native_valid_times_utc": [
+              "2025-09-30T13:00:00Z",
+              "2025-09-30T14:00:00Z",
+              "2025-09-30T15:00:00Z",
+              "2025-09-30T16:00:00Z",
+              "2025-09-30T17:00:00Z"
+            ],
+            "probe_count": 274,
+            "source_sha256": {
+              "data/raw/h3/lake_h3_d3/local_r1/noaa/a001/wind/hrrr.t13z.wrfsfcf00.grib2.wind10m.grib2": "7ebe6138c9762bbd763243f9aba7cd4cc2d69cc11c5b6f49c45da4c94044892b",
+              "data/raw/h3/lake_h3_d3/local_r1/noaa/a001/wind/hrrr.t14z.wrfsfcf00.grib2.wind10m.grib2": "808d1bd1ad20e1a7923b1a71300de91c384a2803d3e92eb823e971d2c87fe26d",
+              "data/raw/h3/lake_h3_d3/local_r1/noaa/a001/wind/hrrr.t15z.wrfsfcf00.grib2.wind10m.grib2": "135147c80881cb87f904f18be1f6d29862dc82721fa416df0e18e2c3b6ad35fc",
+              "data/raw/h3/lake_h3_d3/local_r1/noaa/a001/wind/hrrr.t16z.wrfsfcf00.grib2.wind10m.grib2": "f97204dad252f6c10c1ac31aa98d1e0f3ee5a3d9a04de669be25bf0c7d2dd9f1",
+              "data/raw/h3/lake_h3_d3/local_r1/noaa/a001/wind/hrrr.t17z.wrfsfcf00.grib2.wind10m.grib2": "05dde22f3bb5c9c5fe3c4df2b1b267b1d17d0f77cd60cac9c66c4e3fffc0913e"
+            }
+          }
+        },
+        "forcing_kind": "historical_real",
+        "lkp_csp_lon_lat": [
+          [
+            -76.5,
+            44.21
+          ],
+          [
+            -76.496,
+            44.215
+          ]
+        ],
+        "native_window_utc": [
+          "2025-09-30T14:45:00Z",
+          "2025-09-30T15:53:00Z"
+        ],
+        "status": "eligible"
+      },
+      "date": "2025-09-30",
+      "manifest": "source_manifests/20261128T144553898503Z/lake_h3_d3.json",
+      "manifest_sha256": "7b08fdf168ae6e27d69ff0f53806416f2eb2541cd9d37a37d5e837a45aa9bea1",
+      "primary": true,
+      "providers": {
+        "noaa": "retrieved"
+      },
+      "scene": "lake_ontario",
+      "seeds": [
+        3601,
+        3602
+      ],
+      "status": "eligible"
+    },
+    {
+      "block_id": "hudson_h3_d1",
+      "captures": {
+        "sources/hudson_h3_d1/hycom/a001.json": "4c5ab3fd8d72104d7da7993e87290150d3ca6695102309358108871792b00c57",
+        "sources/hudson_h3_d1/hycom/a002.json": "d106f04a9f299cfc23c533a6f4ad50e0b78f0bd916e412a87791c385c526cf59",
+        "sources/hudson_h3_d1/hycom/a003.json": "746fe18e2e272b696771a1c161d35b90fb147ccb4752faf85dceac8ca0f94d08",
+        "sources/hudson_h3_d1/hycom/claims/a001.json": "6fa23d75ee89cb56ab97fa600cb7f5349919013e8c5470314b207384f6639dc0",
+        "sources/hudson_h3_d1/hycom/claims/a002.json": "60d7495da13baa33c7322a3fdb5b178670acaa01d6e1c44cafddfcf8cb51ecd3",
+        "sources/hudson_h3_d1/hycom/claims/a003.json": "f89bfda327e8fbb71341c78873e5d9508a89b99fc83f81418b00bc84a34da461",
+        "sources/hudson_h3_d1/noaa/a001.json": "60dfc20b83abbcc2c3e28889ea0c6dc6af13c330156b9dbe7de8b8d92d9eb1e7",
+        "sources/hudson_h3_d1/noaa/claims/a001.json": "311fee9441410f590378e71780190a0b99da3c9544e52e6f242b438a893fe85f"
+      },
+      "checks": {
+        "fields": {
+          "current": {
+            "lkp_csp_range_m_s": [
+              [
+                [
+                  -0.11973955584372376,
+                  -0.15749460368349857
+                ],
+                [
+                  -0.017576026150440592,
+                  -0.1859570339134462
+                ]
+              ],
+              [
+                [
+                  0.16688006838624067,
+                  0.3795028828799442
+                ],
+                [
+                  0.18881950657371316,
+                  0.3935183941373476
+                ]
+              ]
+            ],
+            "metadata": {
+              "CF_unpack_count": 1,
+              "delivery": "official_opendap_dap2",
+              "ice_audit": [
+                {
+                  "nonzero_ice_counts": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "point_checks": {
+                    "CSP": {
+                      "bilinear_2x2_stencil_valid_all_times": true,
+                      "indices_yx": [
+                        31,
+                        19
+                      ]
+                    },
+                    "LKP": {
+                      "bilinear_2x2_stencil_valid_all_times": true,
+                      "indices_yx": [
+                        33,
+                        17
+                      ]
+                    }
+                  },
+                  "unknown_ice_counts": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "valid_times_utc": [
+                    "2025-08-07T21:00:00+00:00",
+                    "2025-08-07T22:00:00+00:00",
+                    "2025-08-07T23:00:00+00:00"
+                  ],
+                  "wet_counts": [
+                    2255,
+                    2255,
+                    2255
+                  ]
+                },
+                {
+                  "nonzero_ice_counts": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "point_checks": {
+                    "CSP": {
+                      "bilinear_2x2_stencil_valid_all_times": true,
+                      "indices_yx": [
+                        31,
+                        19
+                      ]
+                    },
+                    "LKP": {
+                      "bilinear_2x2_stencil_valid_all_times": true,
+                      "indices_yx": [
+                        33,
+                        17
+                      ]
+                    }
+                  },
+                  "unknown_ice_counts": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "valid_times_utc": [
+                    "2025-08-08T00:00:00+00:00",
+                    "2025-08-08T01:00:00+00:00",
+                    "2025-08-08T02:00:00+00:00",
+                    "2025-08-08T03:00:00+00:00",
+                    "2025-08-08T04:00:00+00:00",
+                    "2025-08-08T05:00:00+00:00",
+                    "2025-08-08T06:00:00+00:00",
+                    "2025-08-08T07:00:00+00:00",
+                    "2025-08-08T08:00:00+00:00",
+                    "2025-08-08T09:00:00+00:00",
+                    "2025-08-08T10:00:00+00:00",
+                    "2025-08-08T11:00:00+00:00",
+                    "2025-08-08T12:00:00+00:00",
+                    "2025-08-08T13:00:00+00:00",
+                    "2025-08-08T14:00:00+00:00",
+                    "2025-08-08T15:00:00+00:00",
+                    "2025-08-08T16:00:00+00:00",
+                    "2025-08-08T17:00:00+00:00",
+                    "2025-08-08T18:00:00+00:00",
+                    "2025-08-08T19:00:00+00:00",
+                    "2025-08-08T20:00:00+00:00",
+                    "2025-08-08T21:00:00+00:00",
+                    "2025-08-08T22:00:00+00:00",
+                    "2025-08-08T23:00:00+00:00"
+                  ],
+                  "wet_counts": [
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255
+                  ]
+                },
+                {
+                  "nonzero_ice_counts": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "point_checks": {
+                    "CSP": {
+                      "bilinear_2x2_stencil_valid_all_times": true,
+                      "indices_yx": [
+                        31,
+                        19
+                      ]
+                    },
+                    "LKP": {
+                      "bilinear_2x2_stencil_valid_all_times": true,
+                      "indices_yx": [
+                        33,
+                        17
+                      ]
+                    }
+                  },
+                  "unknown_ice_counts": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "valid_times_utc": [
+                    "2025-08-09T00:00:00+00:00",
+                    "2025-08-09T01:00:00+00:00",
+                    "2025-08-09T02:00:00+00:00",
+                    "2025-08-09T03:00:00+00:00"
+                  ],
+                  "wet_counts": [
+                    2255,
+                    2255,
+                    2255,
+                    2255
+                  ]
+                }
+              ],
+              "ice_policy": "zero on every paired wet sample",
+              "native_lon_lat_bounds": [
+                268.0,
+                271.52001953125,
+                61.52000045776367,
+                64.0
+              ],
+              "native_variables": [
+                "ssu",
+                "ssv"
+              ],
+              "run_cycle_status": "annual_archive_per_frame_lineage_not_verified",
+              "spatial_method": "native bilinear with missing velocities masked",
+              "vector_basis": "geographic_east_north"
+            },
+            "native_shape": [
+              31,
+              63,
+              45,
+              2
+            ],
+            "native_valid_times_utc": [
+              "2025-08-07T21:00:00Z",
+              "2025-08-07T22:00:00Z",
+              "2025-08-07T23:00:00Z",
+              "2025-08-08T00:00:00Z",
+              "2025-08-08T01:00:00Z",
+              "2025-08-08T02:00:00Z",
+              "2025-08-08T03:00:00Z",
+              "2025-08-08T04:00:00Z",
+              "2025-08-08T05:00:00Z",
+              "2025-08-08T06:00:00Z",
+              "2025-08-08T07:00:00Z",
+              "2025-08-08T08:00:00Z",
+              "2025-08-08T09:00:00Z",
+              "2025-08-08T10:00:00Z",
+              "2025-08-08T11:00:00Z",
+              "2025-08-08T12:00:00Z",
+              "2025-08-08T13:00:00Z",
+              "2025-08-08T14:00:00Z",
+              "2025-08-08T15:00:00Z",
+              "2025-08-08T16:00:00Z",
+              "2025-08-08T17:00:00Z",
+              "2025-08-08T18:00:00Z",
+              "2025-08-08T19:00:00Z",
+              "2025-08-08T20:00:00Z",
+              "2025-08-08T21:00:00Z",
+              "2025-08-08T22:00:00Z",
+              "2025-08-08T23:00:00Z",
+              "2025-08-09T00:00:00Z",
+              "2025-08-09T01:00:00Z",
+              "2025-08-09T02:00:00Z",
+              "2025-08-09T03:00:00Z"
+            ],
+            "probe_count": 1490,
+            "source_sha256": {
+              "data/raw/h3/hudson_h3_d1/local_r1/hycom/a003/ESPC-D-V02_surface_20250807.dods": "7be8d86fee8eff6d6de43b577d9f4d15149887ad938e6377a9c832a01832637e",
+              "data/raw/h3/hudson_h3_d1/local_r1/hycom/a003/ESPC-D-V02_surface_20250808.dods": "9498d61f235445501839dd84520fefdc1dcbba49e203aaaf776da0e7aaaf9d39",
+              "data/raw/h3/hudson_h3_d1/local_r1/hycom/a003/ESPC-D-V02_surface_20250809.dods": "2071c462c8bb42359cf9859c918b309143aea5f4a59f7ba93ca7d8bb4192dbda"
+            }
+          },
+          "wind": {
+            "lkp_csp_range_m_s": [
+              [
+                [
+                  1.0065579101562632,
+                  -0.4027044140624799
+                ],
+                [
+                  0.6835710301562617,
+                  -0.1981507927291705
+                ]
+              ],
+              [
+                [
+                  5.7439759765625045,
+                  8.386577441406251
+                ],
+                [
+                  6.220659521093739,
+                  8.878166561406243
+                ]
+              ]
+            ],
+            "metadata": {
+              "grid_spacing_deg": 0.25,
+              "height_m": 10,
+              "native_variables": [
+                "UGRD",
+                "VGRD"
+              ],
+              "roi_lon_lat": [
+                -93.58507263846168,
+                -87.46192736153832,
+                61.422363636363634,
+                64.21363636363637
+              ],
+              "spatial_method": "native bilinear",
+              "vector_basis": "geographic_east_north"
+            },
+            "native_shape": [
+              11,
+              16,
+              30,
+              2
+            ],
+            "native_valid_times_utc": [
+              "2025-08-07T21:00:00Z",
+              "2025-08-08T00:00:00Z",
+              "2025-08-08T03:00:00Z",
+              "2025-08-08T06:00:00Z",
+              "2025-08-08T09:00:00Z",
+              "2025-08-08T12:00:00Z",
+              "2025-08-08T15:00:00Z",
+              "2025-08-08T18:00:00Z",
+              "2025-08-08T21:00:00Z",
+              "2025-08-09T00:00:00Z",
+              "2025-08-09T03:00:00Z"
+            ],
+            "probe_count": 1490,
+            "source_sha256": {
+              "data/raw/h3/hudson_h3_d1/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f003.wind10m.grib2": "8cb4603a1d0911efcaaff8b1cf020a9400922ea5de73403d790be1e636217355",
+              "data/raw/h3/hudson_h3_d1/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f006.wind10m.grib2": "0a8424673915086edde8ea178e3608d2ba89f70d3103359b1b4b329b6d649b5c",
+              "data/raw/h3/hudson_h3_d1/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f009.wind10m.grib2": "58951adcaab809c6f1b06ed33b2b58b2f04be1a507b196f92fc5b57f3e072bbe",
+              "data/raw/h3/hudson_h3_d1/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f012.wind10m.grib2": "1177b799965a8239daba946965a892bf2666173e5f122d93063849401a71d654",
+              "data/raw/h3/hudson_h3_d1/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f015.wind10m.grib2": "a6aa61dc3644c5293a891c2f45c844f016d749d46f3385c1363eb58994080ac0",
+              "data/raw/h3/hudson_h3_d1/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f018.wind10m.grib2": "733afa99045c0b587fce8cc1cebff05343dde85f23f4fded1b30336918a86c5a",
+              "data/raw/h3/hudson_h3_d1/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f021.wind10m.grib2": "19f39f00cdf7578b9dcef2c7a1bdefe59e40ff7bef54ba929eca2023ae4cf180",
+              "data/raw/h3/hudson_h3_d1/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f024.wind10m.grib2": "d93f8d915628282ac926f3158e6aee71ba06fc70764360dbd84af53396d76430",
+              "data/raw/h3/hudson_h3_d1/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f027.wind10m.grib2": "bc937543af39bf7f42447d6c327551818de8e520ed1021faec818ddc2af555c2",
+              "data/raw/h3/hudson_h3_d1/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f030.wind10m.grib2": "c53bf6e0bf5e81089d28400b7a26b240343c6cb1b2d8bec220bbb5fa96e99b5f",
+              "data/raw/h3/hudson_h3_d1/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f033.wind10m.grib2": "b9c222beee2e8cec53a23ac5a0475086db45ba3e67e65a4967b98265e8a8f0a0"
+            }
+          }
+        },
+        "forcing_kind": "historical_real",
+        "lkp_csp_lon_lat": [
+          [
+            -90.6,
+            62.85
+          ],
+          [
+            -90.447,
+            62.786
+          ]
+        ],
+        "native_window_utc": [
+          "2025-08-08T00:00:00Z",
+          "2025-08-09T00:48:00Z"
+        ],
+        "status": "eligible"
+      },
+      "date": "2025-08-08",
+      "manifest": "source_manifests/20261128T144553898503Z/hudson_h3_d1.json",
+      "manifest_sha256": "1b86ddd08dc8db3b2d962eefb9fc94299a5b82eddb6c112a9f810df174fb7e6c",
+      "primary": true,
+      "providers": {
+        "hycom": "retrieved",
+        "noaa": "retrieved"
+      },
+      "scene": "arctic_ocean",
+      "seeds": [
+        4401,
+        4402
+      ],
+      "status": "eligible"
+    },
+    {
+      "block_id": "hudson_h3_d2",
+      "captures": {
+        "sources/hudson_h3_d2/hycom/a001.json": "37a6f64d440ae40ded9c9880a33c0f4e95b033ac7495f87c4b3f8f96c24b33ba",
+        "sources/hudson_h3_d2/hycom/a002.json": "f5247c98a677a3b3b26a452073616925e85e72586dc37613e383feba5542afdb",
+        "sources/hudson_h3_d2/hycom/claims/a001.json": "830daaf2cbfd2c473c37c65f57411e0092bce1b58d25000cefe591cf17ac2e61",
+        "sources/hudson_h3_d2/hycom/claims/a002.json": "fa47b351e513e186480666cfce029bf953b11df8728b67833355493fce0ce554",
+        "sources/hudson_h3_d2/noaa/a001.json": "bd08cb1ceabb0b4708f2615c1204e42dbb00e6c638c08357da1f2201581265c5",
+        "sources/hudson_h3_d2/noaa/claims/a001.json": "a8874ff1a9549a89888ee9f8e647c57bbf012c50d110b0eb8578fafb9968ea86"
+      },
+      "checks": {
+        "fields": {
+          "current": {
+            "lkp_csp_range_m_s": [
+              [
+                [
+                  -0.16899195570474368,
+                  -0.1978768619132575
+                ],
+                [
+                  -0.14866425775397704,
+                  -0.2051406535430378
+                ]
+              ],
+              [
+                [
+                  0.17150090352214825,
+                  0.2791070552384577
+                ],
+                [
+                  0.10494005139801671,
+                  0.24636205273497563
+                ]
+              ]
+            ],
+            "metadata": {
+              "CF_unpack_count": 1,
+              "delivery": "official_opendap_dap2",
+              "ice_audit": [
+                {
+                  "nonzero_ice_counts": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "point_checks": {
+                    "CSP": {
+                      "bilinear_2x2_stencil_valid_all_times": true,
+                      "indices_yx": [
+                        31,
+                        19
+                      ]
+                    },
+                    "LKP": {
+                      "bilinear_2x2_stencil_valid_all_times": true,
+                      "indices_yx": [
+                        33,
+                        17
+                      ]
+                    }
+                  },
+                  "unknown_ice_counts": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "valid_times_utc": [
+                    "2025-09-18T21:00:00+00:00",
+                    "2025-09-18T22:00:00+00:00",
+                    "2025-09-18T23:00:00+00:00"
+                  ],
+                  "wet_counts": [
+                    2255,
+                    2255,
+                    2255
+                  ]
+                },
+                {
+                  "nonzero_ice_counts": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "point_checks": {
+                    "CSP": {
+                      "bilinear_2x2_stencil_valid_all_times": true,
+                      "indices_yx": [
+                        31,
+                        19
+                      ]
+                    },
+                    "LKP": {
+                      "bilinear_2x2_stencil_valid_all_times": true,
+                      "indices_yx": [
+                        33,
+                        17
+                      ]
+                    }
+                  },
+                  "unknown_ice_counts": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "valid_times_utc": [
+                    "2025-09-19T00:00:00+00:00",
+                    "2025-09-19T01:00:00+00:00",
+                    "2025-09-19T02:00:00+00:00",
+                    "2025-09-19T03:00:00+00:00",
+                    "2025-09-19T04:00:00+00:00",
+                    "2025-09-19T05:00:00+00:00",
+                    "2025-09-19T06:00:00+00:00",
+                    "2025-09-19T07:00:00+00:00",
+                    "2025-09-19T08:00:00+00:00",
+                    "2025-09-19T09:00:00+00:00",
+                    "2025-09-19T10:00:00+00:00",
+                    "2025-09-19T11:00:00+00:00",
+                    "2025-09-19T12:00:00+00:00",
+                    "2025-09-19T13:00:00+00:00",
+                    "2025-09-19T14:00:00+00:00",
+                    "2025-09-19T15:00:00+00:00",
+                    "2025-09-19T16:00:00+00:00",
+                    "2025-09-19T17:00:00+00:00",
+                    "2025-09-19T18:00:00+00:00",
+                    "2025-09-19T19:00:00+00:00",
+                    "2025-09-19T20:00:00+00:00",
+                    "2025-09-19T21:00:00+00:00",
+                    "2025-09-19T22:00:00+00:00",
+                    "2025-09-19T23:00:00+00:00"
+                  ],
+                  "wet_counts": [
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255
+                  ]
+                },
+                {
+                  "nonzero_ice_counts": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "point_checks": {
+                    "CSP": {
+                      "bilinear_2x2_stencil_valid_all_times": true,
+                      "indices_yx": [
+                        31,
+                        19
+                      ]
+                    },
+                    "LKP": {
+                      "bilinear_2x2_stencil_valid_all_times": true,
+                      "indices_yx": [
+                        33,
+                        17
+                      ]
+                    }
+                  },
+                  "unknown_ice_counts": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "valid_times_utc": [
+                    "2025-09-20T00:00:00+00:00",
+                    "2025-09-20T01:00:00+00:00",
+                    "2025-09-20T02:00:00+00:00",
+                    "2025-09-20T03:00:00+00:00"
+                  ],
+                  "wet_counts": [
+                    2255,
+                    2255,
+                    2255,
+                    2255
+                  ]
+                }
+              ],
+              "ice_policy": "zero on every paired wet sample",
+              "native_lon_lat_bounds": [
+                268.0,
+                271.52001953125,
+                61.52000045776367,
+                64.0
+              ],
+              "native_variables": [
+                "ssu",
+                "ssv"
+              ],
+              "run_cycle_status": "annual_archive_per_frame_lineage_not_verified",
+              "spatial_method": "native bilinear with missing velocities masked",
+              "vector_basis": "geographic_east_north"
+            },
+            "native_shape": [
+              31,
+              63,
+              45,
+              2
+            ],
+            "native_valid_times_utc": [
+              "2025-09-18T21:00:00Z",
+              "2025-09-18T22:00:00Z",
+              "2025-09-18T23:00:00Z",
+              "2025-09-19T00:00:00Z",
+              "2025-09-19T01:00:00Z",
+              "2025-09-19T02:00:00Z",
+              "2025-09-19T03:00:00Z",
+              "2025-09-19T04:00:00Z",
+              "2025-09-19T05:00:00Z",
+              "2025-09-19T06:00:00Z",
+              "2025-09-19T07:00:00Z",
+              "2025-09-19T08:00:00Z",
+              "2025-09-19T09:00:00Z",
+              "2025-09-19T10:00:00Z",
+              "2025-09-19T11:00:00Z",
+              "2025-09-19T12:00:00Z",
+              "2025-09-19T13:00:00Z",
+              "2025-09-19T14:00:00Z",
+              "2025-09-19T15:00:00Z",
+              "2025-09-19T16:00:00Z",
+              "2025-09-19T17:00:00Z",
+              "2025-09-19T18:00:00Z",
+              "2025-09-19T19:00:00Z",
+              "2025-09-19T20:00:00Z",
+              "2025-09-19T21:00:00Z",
+              "2025-09-19T22:00:00Z",
+              "2025-09-19T23:00:00Z",
+              "2025-09-20T00:00:00Z",
+              "2025-09-20T01:00:00Z",
+              "2025-09-20T02:00:00Z",
+              "2025-09-20T03:00:00Z"
+            ],
+            "probe_count": 1490,
+            "source_sha256": {
+              "data/raw/h3/hudson_h3_d2/local_r1/hycom/a002/ESPC-D-V02_surface_20250918.dods": "b7e5383891133f3d12a48d6d0a7ef7a7c7e131a7681e87d11325f23f84f2a27f",
+              "data/raw/h3/hudson_h3_d2/local_r1/hycom/a002/ESPC-D-V02_surface_20250919.dods": "106b2fa72fa58e917133ff27c47733d4de527ad3b748d76378b5c52c8cd401f6",
+              "data/raw/h3/hudson_h3_d2/local_r1/hycom/a002/ESPC-D-V02_surface_20250920.dods": "60d7557b600d465bb857ad72fe118730e2d15f754886a29bcd7ef6c344a2d246"
+            }
+          },
+          "wind": {
+            "lkp_csp_range_m_s": [
+              [
+                [
+                  -1.8978179687500007,
+                  1.4979777343750027
+                ],
+                [
+                  -2.1569597287499964,
+                  0.9056650757812686
+                ]
+              ],
+              [
+                [
+                  3.466177734375006,
+                  10.740970266927091
+                ],
+                [
+                  3.427442374375004,
+                  11.111763205593746
+                ]
+              ]
+            ],
+            "metadata": {
+              "grid_spacing_deg": 0.25,
+              "height_m": 10,
+              "native_variables": [
+                "UGRD",
+                "VGRD"
+              ],
+              "roi_lon_lat": [
+                -93.58507263846168,
+                -87.46192736153832,
+                61.422363636363634,
+                64.21363636363637
+              ],
+              "spatial_method": "native bilinear",
+              "vector_basis": "geographic_east_north"
+            },
+            "native_shape": [
+              11,
+              16,
+              30,
+              2
+            ],
+            "native_valid_times_utc": [
+              "2025-09-18T21:00:00Z",
+              "2025-09-19T00:00:00Z",
+              "2025-09-19T03:00:00Z",
+              "2025-09-19T06:00:00Z",
+              "2025-09-19T09:00:00Z",
+              "2025-09-19T12:00:00Z",
+              "2025-09-19T15:00:00Z",
+              "2025-09-19T18:00:00Z",
+              "2025-09-19T21:00:00Z",
+              "2025-09-20T00:00:00Z",
+              "2025-09-20T03:00:00Z"
+            ],
+            "probe_count": 1490,
+            "source_sha256": {
+              "data/raw/h3/hudson_h3_d2/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f003.wind10m.grib2": "24208cf2485b3e6c1a846d4780e1484450516776b5696ae12865956859dc904e",
+              "data/raw/h3/hudson_h3_d2/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f006.wind10m.grib2": "6a49a13095aed1e40dff029046dd0af413300edf184d7adbbd0f1ed2ba0d7a08",
+              "data/raw/h3/hudson_h3_d2/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f009.wind10m.grib2": "a8197a57dacfc9ab2cba94e9fb1b89df89e6384c9be181ed655f1fdc59d68fd7",
+              "data/raw/h3/hudson_h3_d2/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f012.wind10m.grib2": "639d54c71e6f26d35bdb395d5a94005acf006e0b1db9a32ea2a2f0816dad41ae",
+              "data/raw/h3/hudson_h3_d2/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f015.wind10m.grib2": "bad49d3df577651a7c5f39f7acae3d029cabe989e80b9337e7b1d072a390739c",
+              "data/raw/h3/hudson_h3_d2/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f018.wind10m.grib2": "7da15ecd02047a0cfb6cc1d4ec80d5f30cb0341ffbff2781d347495b1d5edee1",
+              "data/raw/h3/hudson_h3_d2/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f021.wind10m.grib2": "e747ad2f94da49f017a69ccc25ab428d17153437fa685f1ad66c58bc759cf8df",
+              "data/raw/h3/hudson_h3_d2/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f024.wind10m.grib2": "cbc2e779b584e204cf342c30ded086503f4f487ee92044b0ff0f3f7859998abb",
+              "data/raw/h3/hudson_h3_d2/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f027.wind10m.grib2": "df0b4404b9bc47676be71f64ee1ffdf2f657bcf386d253da090f0232b713af6b",
+              "data/raw/h3/hudson_h3_d2/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f030.wind10m.grib2": "16babba9962cdcf988e2226c9d55e34d8a2ac929826670721f75dc4bdcd25635",
+              "data/raw/h3/hudson_h3_d2/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f033.wind10m.grib2": "c0a523f409d43d40c855d7829018c7e491ae36feb4588f186e68dcf45f8969d8"
+            }
+          }
+        },
+        "forcing_kind": "historical_real",
+        "lkp_csp_lon_lat": [
+          [
+            -90.6,
+            62.85
+          ],
+          [
+            -90.447,
+            62.786
+          ]
+        ],
+        "native_window_utc": [
+          "2025-09-19T00:00:00Z",
+          "2025-09-20T00:48:00Z"
+        ],
+        "status": "eligible"
+      },
+      "date": "2025-09-19",
+      "manifest": "source_manifests/20261128T144553898503Z/hudson_h3_d2.json",
+      "manifest_sha256": "a1ca9099297d83cb1ad9ae2137c290790fd807bb235ca213483ce43a13ca47e8",
+      "primary": true,
+      "providers": {
+        "hycom": "retrieved",
+        "noaa": "retrieved"
+      },
+      "scene": "arctic_ocean",
+      "seeds": [
+        4501,
+        4502
+      ],
+      "status": "eligible"
+    },
+    {
+      "block_id": "hudson_h3_d3",
+      "captures": {
+        "sources/hudson_h3_d3/hycom/a001.json": "975a05108524e8fb50e393301e25230511c1d998c7e540a357df4c15b0c6c17b",
+        "sources/hudson_h3_d3/hycom/claims/a001.json": "3a52af8609b0955b25f32a6da0503d72a8c042c6889080a95c7c31ebc133995e",
+        "sources/hudson_h3_d3/noaa/a001.json": "d3010e5ed7dcc23fd701b87baac8ba6a07c7cb314e93772c733a03438d9c356e",
+        "sources/hudson_h3_d3/noaa/claims/a001.json": "63792fa147b9b407d6891a866c5030e3fa23220807abcea9399c52f92c1742d3"
+      },
+      "checks": {
+        "fields": {
+          "current": {
+            "lkp_csp_range_m_s": [
+              [
+                [
+                  -0.030435651850517612,
+                  -0.20548485972034797
+                ],
+                [
+                  -0.1779356150663776,
+                  -0.2586022636081102
+                ]
+              ],
+              [
+                [
+                  0.25378015819352123,
+                  0.19585310027238192
+                ],
+                [
+                  0.3175255070130492,
+                  0.1785444736395803
+                ]
+              ]
+            ],
+            "metadata": {
+              "CF_unpack_count": 1,
+              "ice_audit": [
+                {
+                  "nonzero_ice_counts": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "unknown_ice_counts": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "valid_times_utc": [
+                    "2025-10-02T21:00:00+00:00",
+                    "2025-10-02T22:00:00+00:00",
+                    "2025-10-02T23:00:00+00:00"
+                  ],
+                  "wet_counts": [
+                    2255,
+                    2255,
+                    2255
+                  ]
+                },
+                {
+                  "nonzero_ice_counts": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "unknown_ice_counts": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "valid_times_utc": [
+                    "2025-10-03T00:00:00+00:00",
+                    "2025-10-03T01:00:00+00:00",
+                    "2025-10-03T02:00:00+00:00",
+                    "2025-10-03T03:00:00+00:00",
+                    "2025-10-03T04:00:00+00:00",
+                    "2025-10-03T05:00:00+00:00",
+                    "2025-10-03T06:00:00+00:00",
+                    "2025-10-03T07:00:00+00:00",
+                    "2025-10-03T08:00:00+00:00",
+                    "2025-10-03T09:00:00+00:00",
+                    "2025-10-03T10:00:00+00:00",
+                    "2025-10-03T11:00:00+00:00",
+                    "2025-10-03T12:00:00+00:00",
+                    "2025-10-03T13:00:00+00:00",
+                    "2025-10-03T14:00:00+00:00",
+                    "2025-10-03T15:00:00+00:00",
+                    "2025-10-03T16:00:00+00:00",
+                    "2025-10-03T17:00:00+00:00",
+                    "2025-10-03T18:00:00+00:00",
+                    "2025-10-03T19:00:00+00:00",
+                    "2025-10-03T20:00:00+00:00",
+                    "2025-10-03T21:00:00+00:00",
+                    "2025-10-03T22:00:00+00:00",
+                    "2025-10-03T23:00:00+00:00"
+                  ],
+                  "wet_counts": [
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255,
+                    2255
+                  ]
+                },
+                {
+                  "nonzero_ice_counts": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "unknown_ice_counts": [
+                    0,
+                    0,
+                    0,
+                    0
+                  ],
+                  "valid_times_utc": [
+                    "2025-10-04T00:00:00+00:00",
+                    "2025-10-04T01:00:00+00:00",
+                    "2025-10-04T02:00:00+00:00",
+                    "2025-10-04T03:00:00+00:00"
+                  ],
+                  "wet_counts": [
+                    2255,
+                    2255,
+                    2255,
+                    2255
+                  ]
+                }
+              ],
+              "ice_policy": "zero on every paired wet sample",
+              "native_lon_lat_bounds": [
+                268.0,
+                271.52001953125,
+                61.52000045776367,
+                64.0
+              ],
+              "native_variables": [
+                "ssu",
+                "ssv"
+              ],
+              "spatial_method": "native bilinear with missing velocities masked",
+              "vector_basis": "geographic_east_north"
+            },
+            "native_shape": [
+              31,
+              63,
+              45,
+              2
+            ],
+            "native_valid_times_utc": [
+              "2025-10-02T21:00:00Z",
+              "2025-10-02T22:00:00Z",
+              "2025-10-02T23:00:00Z",
+              "2025-10-03T00:00:00Z",
+              "2025-10-03T01:00:00Z",
+              "2025-10-03T02:00:00Z",
+              "2025-10-03T03:00:00Z",
+              "2025-10-03T04:00:00Z",
+              "2025-10-03T05:00:00Z",
+              "2025-10-03T06:00:00Z",
+              "2025-10-03T07:00:00Z",
+              "2025-10-03T08:00:00Z",
+              "2025-10-03T09:00:00Z",
+              "2025-10-03T10:00:00Z",
+              "2025-10-03T11:00:00Z",
+              "2025-10-03T12:00:00Z",
+              "2025-10-03T13:00:00Z",
+              "2025-10-03T14:00:00Z",
+              "2025-10-03T15:00:00Z",
+              "2025-10-03T16:00:00Z",
+              "2025-10-03T17:00:00Z",
+              "2025-10-03T18:00:00Z",
+              "2025-10-03T19:00:00Z",
+              "2025-10-03T20:00:00Z",
+              "2025-10-03T21:00:00Z",
+              "2025-10-03T22:00:00Z",
+              "2025-10-03T23:00:00Z",
+              "2025-10-04T00:00:00Z",
+              "2025-10-04T01:00:00Z",
+              "2025-10-04T02:00:00Z",
+              "2025-10-04T03:00:00Z"
+            ],
+            "probe_count": 1490,
+            "source_sha256": {
+              "data/raw/h3/hudson_h3_d3/local_r1/hycom/a001/hycom/ESPC-D-V02_surface_20251002.nc": "b122c0991a2cd4ecfa08206a426cf7652f898181d8676c37a0ec4b4dac77d3bb",
+              "data/raw/h3/hudson_h3_d3/local_r1/hycom/a001/hycom/ESPC-D-V02_surface_20251003.nc": "f7a3caaf934ab098c90239ef2bcece37a9a4b1a21814d95a398f816dbcc3083d",
+              "data/raw/h3/hudson_h3_d3/local_r1/hycom/a001/hycom/ESPC-D-V02_surface_20251004.nc": "be8e5bbdfe7af107e0abcd357b102681e151256f0d5af13a999e58104ce7df75"
+            }
+          },
+          "wind": {
+            "lkp_csp_range_m_s": [
+              [
+                [
+                  2.300877070312506,
+                  -9.378914160156263
+                ],
+                [
+                  2.4055509049791652,
+                  -9.667853360156247
+                ]
+              ],
+              [
+                [
+                  9.8380072265625,
+                  6.871089700520834
+                ],
+                [
+                  9.7970664265625,
+                  6.931878799187501
+                ]
+              ]
+            ],
+            "metadata": {
+              "grid_spacing_deg": 0.25,
+              "height_m": 10,
+              "native_variables": [
+                "UGRD",
+                "VGRD"
+              ],
+              "roi_lon_lat": [
+                -93.58507263846168,
+                -87.46192736153832,
+                61.422363636363634,
+                64.21363636363637
+              ],
+              "spatial_method": "native bilinear",
+              "vector_basis": "geographic_east_north"
+            },
+            "native_shape": [
+              11,
+              16,
+              30,
+              2
+            ],
+            "native_valid_times_utc": [
+              "2025-10-02T21:00:00Z",
+              "2025-10-03T00:00:00Z",
+              "2025-10-03T03:00:00Z",
+              "2025-10-03T06:00:00Z",
+              "2025-10-03T09:00:00Z",
+              "2025-10-03T12:00:00Z",
+              "2025-10-03T15:00:00Z",
+              "2025-10-03T18:00:00Z",
+              "2025-10-03T21:00:00Z",
+              "2025-10-04T00:00:00Z",
+              "2025-10-04T03:00:00Z"
+            ],
+            "probe_count": 1490,
+            "source_sha256": {
+              "data/raw/h3/hudson_h3_d3/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f003.wind10m.grib2": "2e2bfa4c1e1516ea5dd403280347d024d2951571270acaf6fcc9023492b3735b",
+              "data/raw/h3/hudson_h3_d3/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f006.wind10m.grib2": "b8b1b762818835a973252ff0c5570fa266ea37ff61c6e3cda6cca9e1bf251cbc",
+              "data/raw/h3/hudson_h3_d3/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f009.wind10m.grib2": "5c7870d57bbb535534ccb4907d6d64e5f24774dca006f1164ef435af8b6905d7",
+              "data/raw/h3/hudson_h3_d3/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f012.wind10m.grib2": "3cdb39cff76f0cb54523a30cee96328f6a8244389c7ec86db8361758649a99ea",
+              "data/raw/h3/hudson_h3_d3/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f015.wind10m.grib2": "98cee3fba014effdf8b8fa23fb4f413cf42aeafe1a3c56f96cefe1175490b9b5",
+              "data/raw/h3/hudson_h3_d3/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f018.wind10m.grib2": "355f1c7855a71d211eefd89707dde8606133fdb016aab979354ef4b8ea9da9c9",
+              "data/raw/h3/hudson_h3_d3/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f021.wind10m.grib2": "402c6fe50a5a982764f706a00a1cec3af4c62a2ce39ecff9a481ba28002be31b",
+              "data/raw/h3/hudson_h3_d3/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f024.wind10m.grib2": "08e35cd0fb3189abfb9f3564ce2c5be75ae575a06e65cf601f23e9e1e8cb414c",
+              "data/raw/h3/hudson_h3_d3/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f027.wind10m.grib2": "667f186440dce8b29fb76c0840307abc1fcb2b3cdcb32ba7d78a4cba6e16bdf7",
+              "data/raw/h3/hudson_h3_d3/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f030.wind10m.grib2": "9e144af7147ab4dd8844af8202e97703e5eb3039bc1157ee38cb126438e0c794",
+              "data/raw/h3/hudson_h3_d3/local_r1/noaa/a001/wind/gfs.t18z.pgrb2.0p25.f033.wind10m.grib2": "c7f32e16e0096c67d3a17b5fc0f6e4dca8dfb82a86a72a1c61fa003e29161702"
+            }
+          }
+        },
+        "forcing_kind": "historical_real",
+        "lkp_csp_lon_lat": [
+          [
+            -90.6,
+            62.85
+          ],
+          [
+            -90.447,
+            62.786
+          ]
+        ],
+        "native_window_utc": [
+          "2025-10-03T00:00:00Z",
+          "2025-10-04T00:48:00Z"
+        ],
+        "status": "eligible"
+      },
+      "date": "2025-10-03",
+      "manifest": "source_manifests/20261128T144553898503Z/hudson_h3_d3.json",
+      "manifest_sha256": "5297c03abf5d8aa582dd05d160c7c42070bf1128f3824d9b6f5a3439bb651a3b",
+      "primary": true,
+      "providers": {
+        "hycom": "retrieved",
+        "noaa": "retrieved"
+      },
+      "scene": "arctic_ocean",
+      "seeds": [
+        4601,
+        4602
+      ],
+      "status": "eligible"
+    }
+  ],
+  "exhausted": [],
+  "method_lock_sha256": "a249f1a941fc0e6ee58051338a0d518c58262af273821b92f89b5dbf9b63103f",
+  "replacements": {},
+  "route_scores_used": 0,
+  "same_hour_hycom_cross_access": {
+    "path": "commands/07_hycom_transport_equivalence.json",
+    "sha256": "7469369789b72ba03216c0f8553c2582a198f7f6a23a885e77f7f12baaab2167"
+  },
+  "selected": [
+    {
+      "cst_utc": "2025-08-05T15:45:00.000Z",
+      "date": "2025-08-05",
+      "end_utc": "2025-08-05T15:52:33.740Z",
+      "id": "lake_h3_d1",
+      "lkp_utc": "2025-08-05T14:45:00.000Z",
+      "primary": true,
+      "scene": "lake_ontario",
+      "seeds": [
+        3401,
+        3402
+      ],
+      "source_registration": "lake_h2_alt1"
+    },
+    {
+      "cst_utc": "2025-09-16T15:45:00.000Z",
+      "date": "2025-09-16",
+      "end_utc": "2025-09-16T15:52:33.740Z",
+      "id": "lake_h3_d2",
+      "lkp_utc": "2025-09-16T14:45:00.000Z",
+      "primary": true,
+      "scene": "lake_ontario",
+      "seeds": [
+        3501,
+        3502
+      ],
+      "source_registration": "lake_h2_alt2"
+    },
+    {
+      "cst_utc": "2025-09-30T15:45:00.000Z",
+      "date": "2025-09-30",
+      "end_utc": "2025-09-30T15:52:33.740Z",
+      "id": "lake_h3_d3",
+      "lkp_utc": "2025-09-30T14:45:00.000Z",
+      "primary": true,
+      "scene": "lake_ontario",
+      "seeds": [
+        3601,
+        3602
+      ],
+      "source_registration": "lake_h2_alt3"
+    },
+    {
+      "cst_utc": "2025-08-09T00:00:00.000Z",
+      "date": "2025-08-08",
+      "end_utc": "2025-08-09T00:46:18.000Z",
+      "id": "hudson_h3_d1",
+      "lkp_utc": "2025-08-08T00:00:00.000Z",
+      "primary": true,
+      "scene": "arctic_ocean",
+      "seeds": [
+        4401,
+        4402
+      ],
+      "source_registration": "hudson_h2_alt1"
+    },
+    {
+      "cst_utc": "2025-09-20T00:00:00.000Z",
+      "date": "2025-09-19",
+      "end_utc": "2025-09-20T00:46:18.000Z",
+      "id": "hudson_h3_d2",
+      "lkp_utc": "2025-09-19T00:00:00.000Z",
+      "primary": true,
+      "scene": "arctic_ocean",
+      "seeds": [
+        4501,
+        4502
+      ],
+      "source_registration": "hudson_h2_alt2"
+    },
+    {
+      "cst_utc": "2025-10-04T00:00:00.000Z",
+      "date": "2025-10-03",
+      "end_utc": "2025-10-04T00:46:18.000Z",
+      "id": "hudson_h3_d3",
+      "lkp_utc": "2025-10-03T00:00:00.000Z",
+      "primary": true,
+      "scene": "arctic_ocean",
+      "seeds": [
+        4601,
+        4602
+      ],
+      "source_registration": "hudson_h2_alt3"
+    }
+  ],
+  "selection_inputs": "official source qualification only",
+  "status": "six_dates_qualified",
+  "waiting": []
+}

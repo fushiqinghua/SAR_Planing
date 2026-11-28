@@ -1,0 +1,2149 @@
+{
+  "case": {
+    "base_scene": "arctic_ocean",
+    "block_id": "hudson_h3_d2",
+    "cst_utc": "2025-09-20T00:00:00.000Z",
+    "end_utc": "2025-09-20T00:46:18.000Z",
+    "id": "hudson_h3_d2_s4501",
+    "lkp_utc": "2025-09-19T00:00:00.000Z",
+    "seed": 4501
+  },
+  "config": {
+    "audit_q": 0.78,
+    "budget": 60,
+    "cell_width_m": 926.0,
+    "csp_lon_lat": [
+      -90.447,
+      62.786
+    ],
+    "cst_utc": "2025-09-20T00:00:00.000Z",
+    "forcing_kind": "historical_real",
+    "grid_rows_cols": [
+      65,
+      85
+    ],
+    "incident_utc": "2025-09-19T00:00:00.000Z",
+    "integration_s": 120,
+    "lkp_lon_lat": [
+      -90.6,
+      62.85
+    ],
+    "object_key": "LIFE-RAFT-DB-10",
+    "output_s": 120,
+    "particles": 500,
+    "radius_m": 100,
+    "seed": 4501,
+    "step_s": 46.3
+  },
+  "config_hash": "b2d3451b952256c3a11d2ae3e3737540d9eb918c9b12ed41c4e0eceaa0db7ea6",
+  "data_role": "new_date_historical_forcing_preregistered",
+  "fixed_path_mass_audit_only": true,
+  "generation_wall_s": 4.550369199998386,
+  "integration_wall_s": 3.421999300000607,
+  "max_mass_error": 4.440892098500626e-16,
+  "model": {
+    "integration_steps": 744,
+    "object": {
+      "description": "Life raft, deep ballast (DB) system, general, unknown capacity and loading (mean values)",
+      "key": "LIFE-RAFT-DB-10",
+      "number": 7
+    },
+    "readers": {
+      "x_sea_water_velocity": [
+        "asar_current"
+      ],
+      "x_wind": [
+        "asar_wind"
+      ],
+      "y_sea_water_velocity": [
+        "asar_current"
+      ],
+      "y_wind": [
+        "asar_wind"
+      ]
+    },
+    "source_dims": [
+      "trajectory",
+      "time"
+    ]
+  },
+  "opendrift_runs": 1,
+  "particle_sha256": "0a63075775ba4d7d5115299edbb080e255263b8a44765351baf12f6943cdd7d5",
+  "provenance": {
+    "config": {
+      "audit_q": 0.78,
+      "budget": 60,
+      "cell_width_m": 926.0,
+      "csp_lon_lat": [
+        -90.447,
+        62.786
+      ],
+      "cst_utc": "2025-09-20T00:00:00.000Z",
+      "forcing_kind": "historical_real",
+      "grid_rows_cols": [
+        65,
+        85
+      ],
+      "incident_utc": "2025-09-19T00:00:00.000Z",
+      "integration_s": 120,
+      "lkp_lon_lat": [
+        -90.6,
+        62.85
+      ],
+      "object_key": "LIFE-RAFT-DB-10",
+      "output_s": 120,
+      "particles": 500,
+      "radius_m": 100,
+      "seed": 4501,
+      "step_s": 46.3
+    },
+    "input_fingerprints": {
+      "date_lock_sha256": "640349bb593cb04ddb195c0ddefe005c9c370c937cdf91279df9b5d0951984da",
+      "method_lock_sha256": "a249f1a941fc0e6ee58051338a0d518c58262af273821b92f89b5dbf9b63103f",
+      "source_manifest_sha256": "a1ca9099297d83cb1ad9ae2137c290790fd807bb235ca213483ce43a13ca47e8",
+      "study": "second_innovation_h3_new_forcing"
+    },
+    "schema": 1,
+    "versions": {
+      "netCDF4": "1.7.5",
+      "numpy": "2.4.6",
+      "opendrift": "1.14.12",
+      "pyproj": "3.7.2",
+      "scipy": "1.17.1",
+      "shapely": "2.2.0"
+    }
+  },
+  "status": "prepared",
+  "terminal_forcing": [
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T17:50:00+00:00",
+      "trajectory_id": 118,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T17:54:00+00:00",
+      "trajectory_id": 62,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T17:58:00+00:00",
+      "trajectory_id": 215,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T18:06:00+00:00",
+      "trajectory_id": 35,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T18:12:00+00:00",
+      "trajectory_id": 296,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T18:12:00+00:00",
+      "trajectory_id": 403,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T18:20:00+00:00",
+      "trajectory_id": 183,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T18:22:00+00:00",
+      "trajectory_id": 393,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T18:30:00+00:00",
+      "trajectory_id": 407,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T18:38:00+00:00",
+      "trajectory_id": 277,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T18:42:00+00:00",
+      "trajectory_id": 368,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T18:46:00+00:00",
+      "trajectory_id": 204,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T18:46:00+00:00",
+      "trajectory_id": 416,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T18:48:00+00:00",
+      "trajectory_id": 352,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T18:50:00+00:00",
+      "trajectory_id": 47,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T18:50:00+00:00",
+      "trajectory_id": 341,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T18:52:00+00:00",
+      "trajectory_id": 42,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T18:52:00+00:00",
+      "trajectory_id": 80,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T18:54:00+00:00",
+      "trajectory_id": 191,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T18:56:00+00:00",
+      "trajectory_id": 261,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:00:00+00:00",
+      "trajectory_id": 209,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:04:00+00:00",
+      "trajectory_id": 442,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:10:00+00:00",
+      "trajectory_id": 24,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:10:00+00:00",
+      "trajectory_id": 77,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:10:00+00:00",
+      "trajectory_id": 121,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:10:00+00:00",
+      "trajectory_id": 366,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:12:00+00:00",
+      "trajectory_id": 29,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:16:00+00:00",
+      "trajectory_id": 134,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:16:00+00:00",
+      "trajectory_id": 255,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:18:00+00:00",
+      "trajectory_id": 76,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:18:00+00:00",
+      "trajectory_id": 435,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:20:00+00:00",
+      "trajectory_id": 196,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:20:00+00:00",
+      "trajectory_id": 222,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:22:00+00:00",
+      "trajectory_id": 347,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:24:00+00:00",
+      "trajectory_id": 17,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:24:00+00:00",
+      "trajectory_id": 199,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:24:00+00:00",
+      "trajectory_id": 469,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:26:00+00:00",
+      "trajectory_id": 65,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:26:00+00:00",
+      "trajectory_id": 493,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:28:00+00:00",
+      "trajectory_id": 1,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:28:00+00:00",
+      "trajectory_id": 46,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:28:00+00:00",
+      "trajectory_id": 428,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:30:00+00:00",
+      "trajectory_id": 445,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:32:00+00:00",
+      "trajectory_id": 205,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:34:00+00:00",
+      "trajectory_id": 489,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:36:00+00:00",
+      "trajectory_id": 244,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:36:00+00:00",
+      "trajectory_id": 268,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:36:00+00:00",
+      "trajectory_id": 476,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:38:00+00:00",
+      "trajectory_id": 305,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:46:00+00:00",
+      "trajectory_id": 487,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:48:00+00:00",
+      "trajectory_id": 399,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:50:00+00:00",
+      "trajectory_id": 479,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:52:00+00:00",
+      "trajectory_id": 19,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:52:00+00:00",
+      "trajectory_id": 49,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:52:00+00:00",
+      "trajectory_id": 181,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:52:00+00:00",
+      "trajectory_id": 256,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:52:00+00:00",
+      "trajectory_id": 495,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:52:00+00:00",
+      "trajectory_id": 497,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:56:00+00:00",
+      "trajectory_id": 426,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:58:00+00:00",
+      "trajectory_id": 90,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:58:00+00:00",
+      "trajectory_id": 362,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T19:58:00+00:00",
+      "trajectory_id": 419,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:00:00+00:00",
+      "trajectory_id": 120,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:00:00+00:00",
+      "trajectory_id": 197,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:00:00+00:00",
+      "trajectory_id": 224,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:02:00+00:00",
+      "trajectory_id": 220,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:02:00+00:00",
+      "trajectory_id": 423,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:02:00+00:00",
+      "trajectory_id": 448,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:04:00+00:00",
+      "trajectory_id": 6,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:04:00+00:00",
+      "trajectory_id": 337,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:08:00+00:00",
+      "trajectory_id": 25,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:08:00+00:00",
+      "trajectory_id": 262,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:08:00+00:00",
+      "trajectory_id": 272,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:10:00+00:00",
+      "trajectory_id": 122,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:10:00+00:00",
+      "trajectory_id": 149,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:12:00+00:00",
+      "trajectory_id": 117,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:12:00+00:00",
+      "trajectory_id": 193,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:12:00+00:00",
+      "trajectory_id": 319,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:14:00+00:00",
+      "trajectory_id": 321,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:16:00+00:00",
+      "trajectory_id": 63,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:16:00+00:00",
+      "trajectory_id": 67,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:16:00+00:00",
+      "trajectory_id": 216,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:16:00+00:00",
+      "trajectory_id": 494,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:18:00+00:00",
+      "trajectory_id": 207,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:20:00+00:00",
+      "trajectory_id": 165,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:20:00+00:00",
+      "trajectory_id": 380,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:20:00+00:00",
+      "trajectory_id": 471,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:20:00+00:00",
+      "trajectory_id": 486,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:22:00+00:00",
+      "trajectory_id": 52,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:22:00+00:00",
+      "trajectory_id": 258,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:24:00+00:00",
+      "trajectory_id": 355,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:24:00+00:00",
+      "trajectory_id": 467,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:26:00+00:00",
+      "trajectory_id": 239,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:26:00+00:00",
+      "trajectory_id": 381,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:28:00+00:00",
+      "trajectory_id": 15,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:28:00+00:00",
+      "trajectory_id": 233,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:28:00+00:00",
+      "trajectory_id": 424,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:30:00+00:00",
+      "trajectory_id": 78,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:30:00+00:00",
+      "trajectory_id": 203,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:32:00+00:00",
+      "trajectory_id": 317,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:32:00+00:00",
+      "trajectory_id": 464,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:34:00+00:00",
+      "trajectory_id": 127,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:34:00+00:00",
+      "trajectory_id": 364,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:36:00+00:00",
+      "trajectory_id": 232,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:36:00+00:00",
+      "trajectory_id": 490,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:38:00+00:00",
+      "trajectory_id": 57,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:38:00+00:00",
+      "trajectory_id": 108,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:42:00+00:00",
+      "trajectory_id": 104,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:42:00+00:00",
+      "trajectory_id": 153,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:42:00+00:00",
+      "trajectory_id": 230,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:42:00+00:00",
+      "trajectory_id": 468,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:44:00+00:00",
+      "trajectory_id": 68,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:44:00+00:00",
+      "trajectory_id": 107,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:44:00+00:00",
+      "trajectory_id": 141,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:44:00+00:00",
+      "trajectory_id": 488,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:46:00+00:00",
+      "trajectory_id": 227,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:48:00+00:00",
+      "trajectory_id": 294,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:48:00+00:00",
+      "trajectory_id": 343,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:50:00+00:00",
+      "trajectory_id": 39,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:50:00+00:00",
+      "trajectory_id": 110,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:52:00+00:00",
+      "trajectory_id": 18,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:54:00+00:00",
+      "trajectory_id": 37,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:54:00+00:00",
+      "trajectory_id": 172,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:54:00+00:00",
+      "trajectory_id": 265,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:56:00+00:00",
+      "trajectory_id": 470,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:56:00+00:00",
+      "trajectory_id": 492,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:58:00+00:00",
+      "trajectory_id": 119,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T20:58:00+00:00",
+      "trajectory_id": 140,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:00:00+00:00",
+      "trajectory_id": 238,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:00:00+00:00",
+      "trajectory_id": 242,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:00:00+00:00",
+      "trajectory_id": 299,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:00:00+00:00",
+      "trajectory_id": 312,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:02:00+00:00",
+      "trajectory_id": 41,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:04:00+00:00",
+      "trajectory_id": 180,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:04:00+00:00",
+      "trajectory_id": 440,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:06:00+00:00",
+      "trajectory_id": 0,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:06:00+00:00",
+      "trajectory_id": 158,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:08:00+00:00",
+      "trajectory_id": 98,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:10:00+00:00",
+      "trajectory_id": 243,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:12:00+00:00",
+      "trajectory_id": 11,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:12:00+00:00",
+      "trajectory_id": 377,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:12:00+00:00",
+      "trajectory_id": 456,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:14:00+00:00",
+      "trajectory_id": 10,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:14:00+00:00",
+      "trajectory_id": 408,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:16:00+00:00",
+      "trajectory_id": 301,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:16:00+00:00",
+      "trajectory_id": 351,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:18:00+00:00",
+      "trajectory_id": 31,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:18:00+00:00",
+      "trajectory_id": 274,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:18:00+00:00",
+      "trajectory_id": 290,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:20:00+00:00",
+      "trajectory_id": 51,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:22:00+00:00",
+      "trajectory_id": 365,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:22:00+00:00",
+      "trajectory_id": 415,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:24:00+00:00",
+      "trajectory_id": 14,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:24:00+00:00",
+      "trajectory_id": 91,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:24:00+00:00",
+      "trajectory_id": 346,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:24:00+00:00",
+      "trajectory_id": 358,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:26:00+00:00",
+      "trajectory_id": 231,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:26:00+00:00",
+      "trajectory_id": 249,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:28:00+00:00",
+      "trajectory_id": 175,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:28:00+00:00",
+      "trajectory_id": 194,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:28:00+00:00",
+      "trajectory_id": 473,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:32:00+00:00",
+      "trajectory_id": 84,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:34:00+00:00",
+      "trajectory_id": 451,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:44:00+00:00",
+      "trajectory_id": 414,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:46:00+00:00",
+      "trajectory_id": 9,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:46:00+00:00",
+      "trajectory_id": 136,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:48:00+00:00",
+      "trajectory_id": 237,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:50:00+00:00",
+      "trajectory_id": 187,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:54:00+00:00",
+      "trajectory_id": 53,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:54:00+00:00",
+      "trajectory_id": 89,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:54:00+00:00",
+      "trajectory_id": 340,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:56:00+00:00",
+      "trajectory_id": 291,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:56:00+00:00",
+      "trajectory_id": 438,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T21:58:00+00:00",
+      "trajectory_id": 5,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:00:00+00:00",
+      "trajectory_id": 162,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:04:00+00:00",
+      "trajectory_id": 71,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:04:00+00:00",
+      "trajectory_id": 125,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:06:00+00:00",
+      "trajectory_id": 151,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:06:00+00:00",
+      "trajectory_id": 174,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:08:00+00:00",
+      "trajectory_id": 30,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:10:00+00:00",
+      "trajectory_id": 145,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:10:00+00:00",
+      "trajectory_id": 212,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:10:00+00:00",
+      "trajectory_id": 306,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:14:00+00:00",
+      "trajectory_id": 103,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:14:00+00:00",
+      "trajectory_id": 135,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:14:00+00:00",
+      "trajectory_id": 293,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:14:00+00:00",
+      "trajectory_id": 325,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:16:00+00:00",
+      "trajectory_id": 286,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:16:00+00:00",
+      "trajectory_id": 378,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:16:00+00:00",
+      "trajectory_id": 475,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:18:00+00:00",
+      "trajectory_id": 472,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:20:00+00:00",
+      "trajectory_id": 112,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:22:00+00:00",
+      "trajectory_id": 97,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:22:00+00:00",
+      "trajectory_id": 248,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:24:00+00:00",
+      "trajectory_id": 267,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:26:00+00:00",
+      "trajectory_id": 55,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:26:00+00:00",
+      "trajectory_id": 376,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:32:00+00:00",
+      "trajectory_id": 116,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:32:00+00:00",
+      "trajectory_id": 360,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:40:00+00:00",
+      "trajectory_id": 88,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:40:00+00:00",
+      "trajectory_id": 483,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:44:00+00:00",
+      "trajectory_id": 329,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:46:00+00:00",
+      "trajectory_id": 285,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:48:00+00:00",
+      "trajectory_id": 390,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:48:00+00:00",
+      "trajectory_id": 425,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:50:00+00:00",
+      "trajectory_id": 201,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:52:00+00:00",
+      "trajectory_id": 371,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:52:00+00:00",
+      "trajectory_id": 379,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:54:00+00:00",
+      "trajectory_id": 310,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:54:00+00:00",
+      "trajectory_id": 326,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:56:00+00:00",
+      "trajectory_id": 45,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:56:00+00:00",
+      "trajectory_id": 131,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:56:00+00:00",
+      "trajectory_id": 143,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T22:58:00+00:00",
+      "trajectory_id": 157,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:00:00+00:00",
+      "trajectory_id": 43,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:00:00+00:00",
+      "trajectory_id": 137,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:00:00+00:00",
+      "trajectory_id": 413,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:04:00+00:00",
+      "trajectory_id": 133,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:04:00+00:00",
+      "trajectory_id": 322,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:06:00+00:00",
+      "trajectory_id": 72,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:06:00+00:00",
+      "trajectory_id": 190,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:06:00+00:00",
+      "trajectory_id": 398,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:06:00+00:00",
+      "trajectory_id": 418,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:08:00+00:00",
+      "trajectory_id": 384,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:12:00+00:00",
+      "trajectory_id": 115,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:12:00+00:00",
+      "trajectory_id": 123,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:12:00+00:00",
+      "trajectory_id": 333,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:14:00+00:00",
+      "trajectory_id": 61,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:16:00+00:00",
+      "trajectory_id": 96,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:16:00+00:00",
+      "trajectory_id": 327,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:18:00+00:00",
+      "trajectory_id": 452,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:22:00+00:00",
+      "trajectory_id": 195,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:24:00+00:00",
+      "trajectory_id": 82,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:30:00+00:00",
+      "trajectory_id": 169,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:32:00+00:00",
+      "trajectory_id": 79,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:32:00+00:00",
+      "trajectory_id": 128,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:32:00+00:00",
+      "trajectory_id": 481,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:34:00+00:00",
+      "trajectory_id": 297,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:34:00+00:00",
+      "trajectory_id": 397,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:36:00+00:00",
+      "trajectory_id": 350,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:38:00+00:00",
+      "trajectory_id": 34,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:38:00+00:00",
+      "trajectory_id": 202,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:40:00+00:00",
+      "trajectory_id": 388,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:44:00+00:00",
+      "trajectory_id": 246,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:46:00+00:00",
+      "trajectory_id": 447,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:48:00+00:00",
+      "trajectory_id": 417,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:50:00+00:00",
+      "trajectory_id": 155,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:50:00+00:00",
+      "trajectory_id": 164,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:50:00+00:00",
+      "trajectory_id": 167,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:50:00+00:00",
+      "trajectory_id": 453,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-19T23:56:00+00:00",
+      "trajectory_id": 359,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:02:00+00:00",
+      "trajectory_id": 289,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:04:00+00:00",
+      "trajectory_id": 269,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:06:00+00:00",
+      "trajectory_id": 437,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:06:00+00:00",
+      "trajectory_id": 446,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:08:00+00:00",
+      "trajectory_id": 363,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:10:00+00:00",
+      "trajectory_id": 56,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:10:00+00:00",
+      "trajectory_id": 168,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:12:00+00:00",
+      "trajectory_id": 372,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:14:00+00:00",
+      "trajectory_id": 4,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:14:00+00:00",
+      "trajectory_id": 252,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:14:00+00:00",
+      "trajectory_id": 375,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:16:00+00:00",
+      "trajectory_id": 173,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:16:00+00:00",
+      "trajectory_id": 288,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:16:00+00:00",
+      "trajectory_id": 331,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:16:00+00:00",
+      "trajectory_id": 334,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:18:00+00:00",
+      "trajectory_id": 259,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:18:00+00:00",
+      "trajectory_id": 287,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:18:00+00:00",
+      "trajectory_id": 370,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:20:00+00:00",
+      "trajectory_id": 146,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:20:00+00:00",
+      "trajectory_id": 221,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:22:00+00:00",
+      "trajectory_id": 251,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:22:00+00:00",
+      "trajectory_id": 335,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:24:00+00:00",
+      "trajectory_id": 36,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:24:00+00:00",
+      "trajectory_id": 411,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:24:00+00:00",
+      "trajectory_id": 454,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:26:00+00:00",
+      "trajectory_id": 58,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:26:00+00:00",
+      "trajectory_id": 114,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:26:00+00:00",
+      "trajectory_id": 177,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:28:00+00:00",
+      "trajectory_id": 328,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:30:00+00:00",
+      "trajectory_id": 283,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:32:00+00:00",
+      "trajectory_id": 387,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:34:00+00:00",
+      "trajectory_id": 457,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:36:00+00:00",
+      "trajectory_id": 182,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:38:00+00:00",
+      "trajectory_id": 357,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:40:00+00:00",
+      "trajectory_id": 64,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:40:00+00:00",
+      "trajectory_id": 278,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:42:00+00:00",
+      "trajectory_id": 93,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:42:00+00:00",
+      "trajectory_id": 210,
+      "wind_status": "ok"
+    },
+    {
+      "current_status": "missing_component",
+      "mass_bin": "unknown",
+      "time_utc": "2025-09-20T00:46:00+00:00",
+      "trajectory_id": 401,
+      "wind_status": "ok"
+    }
+  ]
+}

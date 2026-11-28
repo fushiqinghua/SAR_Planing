@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\scripts\run_eight_neighbor_h3.py", line 521, in <module>
+    main()
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\scripts\run_eight_neighbor_h3.py", line 507, in main
+    validate(out)
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\scripts\run_eight_neighbor_h3.py", line 131, in validate
+    raise RuntimeError(f"Validation stopped; preserved at {path}")
+RuntimeError: Validation stopped; preserved at E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\outputs\second_innovation_h3_20261128\local_r1\validation\20261128T144340162319Z\validation.json

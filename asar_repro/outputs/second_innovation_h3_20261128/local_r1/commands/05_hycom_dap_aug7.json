@@ -1,0 +1,10 @@
+{
+  "url": "https://tds.hycom.org/thredds/dodsC/ESPC-D-V02/ice/2025.dods?time%5B5253:1:5253%5D,lat%5B3538:1:3600%5D,lon%5B3350:1:3394%5D,ssu.ssu%5B5253:1:5253%5D%5B3538:1:3600%5D%5B3350:1:3394%5D,ssv.ssv%5B5253:1:5253%5D%5B3538:1:3600%5D%5B3350:1:3394%5D,sic.sic%5B5253:1:5253%5D%5B3538:1:3600%5D%5B3350:1:3394%5D",
+  "target_utc": "2025-08-07T21:00:00+00:00",
+  "started_utc": "2026-11-28T14:30:14.195277+00:00",
+  "status": 200,
+  "response_url": "https://tds.hycom.org/thredds/dodsC/ESPC-D-V02/ice/2025.dods?time%5B5253:1:5253%5D,lat%5B3538:1:3600%5D,lon%5B3350:1:3394%5D,ssu.ssu%5B5253:1:5253%5D%5B3538:1:3600%5D%5B3350:1:3394%5D,ssv.ssv%5B5253:1:5253%5D%5B3538:1:3600%5D%5B3350:1:3394%5D,sic.sic%5B5253:1:5253%5D%5B3538:1:3600%5D%5B3350:1:3394%5D",
+  "bytes": 35290,
+  "sha256": "85a0d54d427a9ba6cddc553bbd6dc7c095040e94c5e42eacfe40dd2dffe1369d",
+  "finished_utc": "2026-11-28T14:30:15.739698+00:00"
+}

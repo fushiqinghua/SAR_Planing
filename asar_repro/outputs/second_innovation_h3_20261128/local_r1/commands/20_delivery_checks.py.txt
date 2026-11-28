@@ -1,0 +1,109 @@
+from collections import Counter, defaultdict
+import csv
+from hashlib import file_digest
+import json
+from math import isclose
+import os
+from pathlib import Path
+from statistics import median
+
+from PIL import Image
+
+out = Path(os.environ["ASAR_H3_POSTCHECK_OUT"])
+report = sorted((out/"reports").iterdir())[-1]
+
+def read(path):
+    return json.loads(path.read_text(encoding="utf-8"))
+
+def sha(path):
+    with path.open("rb") as stream:
+        return file_digest(stream,"sha256").hexdigest()
+
+summary = read(report/"summary.json")
+protocol = read(out/"protocol.json")
+s30 = read(out/"s30_lock.json")
+dates = read(out/"date_lock.json")
+assert summary["status"] == "complete"
+assert len(dates["selected"]) == 6 and not dates["replacements"]
+assert len(s30["references"]) == 12 and s30["protocol_sha256"] == sha(out/"protocol.json")
+assert len(protocol["config"]["protected_sha256"]) == 17
+assert len(protocol["cases"]) == 12
+test = read(out/protocol["validation_file"])
+assert [(r["scope"],r["testcase_count"],r["status"]) for r in test["evidence"]] == [
+    ("targeted",197,"passed"), ("full",1866,"passed")]
+runs = sorted((out/"runs").iterdir())
+job_counts = Counter()
+actual = defaultdict(list)
+by_arm = defaultdict(list)
+max_replay_error = defaultdict(float)
+for folder in runs:
+    record = read(folder/"record.json")
+    result_path = folder/"result.json"
+    raw = read(result_path)
+    task, r = raw["task"], raw["result"]
+    assert record["task"] == task
+    assert record["status"] == "completed" and record["watchdog"] is None and record["returncode"] == 0
+    assert record["files"]["result.json"] == sha(result_path)
+    assert r["inputs"]["particle_sha256"] == s30["references"][task["instance"]]["particle_sha256"]
+    assert r["inputs"]["forcing_kind"] == "historical_real" and r["inputs"]["opendrift_runs_in_search"] == 0
+    assert 0 < r["algorithm_wall_s"] <= 30
+    assert not r["formal_optimality_certificate"]
+    job_counts[task["stage"]] += 1
+    d1, d2 = r["physical_replay"], r["independent_replay"]
+    for key in ("J","pd_final"):
+        max_replay_error[key] = max(max_replay_error[key], abs(d1[key]-d2[key]))
+    max_replay_error["survival"] = max(max_replay_error["survival"],
+                                      max(abs(a-b) for a,b in zip(d1["survival"],d2["survival"],strict=True)))
+    if task["stage"] == "E30":
+        assert r["raw"]["initial_score"]["waypoints"] == s30["references"][task["instance"]]["waypoints"]
+        inner = r["raw"]["phases"][0]["inner"]
+        actual[(task["seed"],task["method"])].append((r["J"],task["repetition"],r["pd_final"],folder.name))
+        by_arm[task["method"]].append((r["algorithm_wall_s"],record["peak_rss_bytes"]/2**20,inner["stop_reason"]))
+assert job_counts == {"S30":12,"E30":72}
+assert max(max_replay_error.values()) <= 1e-8
+
+date_gains = defaultdict(list)
+pd_guard = []
+for comparison in summary["seed_comparisons"]:
+    values = {}
+    for arm in ("C0","Lazy"):
+        choices = actual[(comparison["seed"],arm)]
+        assert len(choices) == 3 and {v[1] for v in choices} == {0,1,2}
+        j, _, p, identity = sorted(choices)[1]
+        assert (j,p,identity) == tuple(comparison[arm][name] for name in ("J","Pd","run_id"))
+        values[arm] = (j,p)
+    relative = 1 - values["Lazy"][0]/values["C0"][0]
+    delta = 100*(values["Lazy"][1]-values["C0"][1])
+    assert isclose(relative,comparison["J_gain"],abs_tol=1e-14)
+    assert isclose(delta,comparison["delta_Pd_pp"],abs_tol=1e-14)
+    date_gains[comparison["site"],comparison["date"]].append(relative)
+    pd_guard.append((delta,comparison["seed"]))
+for row in summary["date_screen"]["date_rows"]:
+    assert len(date_gains[row["site"],row["date"]]) == 2
+    assert isclose(median(date_gains[row["site"],row["date"]]),row["J_gain"],abs_tol=1e-14)
+
+for arm,v in by_arm.items():
+    g = summary["resources"][arm]
+    assert len(v) == 36 and g["stops"] == dict(Counter(row[2] for row in v))
+    assert median(row[0] for row in v) == g["wall_median_s"]
+    assert median(row[1] for row in v) == g["rss_median_mib"]
+
+with (report/"runs.csv").open(encoding="utf-8",newline="") as s:
+    assert {r["run_id"] for r in csv.DictReader(s)} == {folder.name for folder in runs}
+with (report/"survival.csv").open(encoding="utf-8",newline="") as s:
+    curve_rows = sum(1 for _ in csv.DictReader(s))
+assert curve_rows == 42*50 + 42*61
+visuals = {}
+for name in ("paths.png","resources.png","survival.png"):
+    with Image.open(report/name) as image:
+        visuals[name] = list(image.size)
+        image.verify()
+
+cases = [read(p/"metadata.json") for p in (out/"inputs").iterdir()]
+assert len(cases) == 12 and all(m["opendrift_runs"]==1 for m in cases)
+files = {p.name:sha(p) for p in report.iterdir() if p.is_file()}
+print(json.dumps(dict(status="passed", valid_runs=dict(job_counts), max_dual_replay_error=dict(max_replay_error),
+                      max_mass_error=max(r["max_mass_error"] for r in cases),
+                      best_end_Pd_delta_pp=max(pd_guard), worst_end_Pd_delta_pp=min(pd_guard),
+                      max_E30_algorithm_wall_s=max(row[0] for group in by_arm.values() for row in group),
+                      visuals=visuals, survival_rows=curve_rows, reports_sha256=files),indent=2))

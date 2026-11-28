@@ -1,0 +1,93 @@
+{
+  "audit": "qualification/20261128T144553898503Z.json",
+  "audit_sha256": "db205881e0aa957c48afcdad6ce0dc3fa3f4e3482fad93a2d88f2fe1b7a329af",
+  "method_lock_sha256": "a249f1a941fc0e6ee58051338a0d518c58262af273821b92f89b5dbf9b63103f",
+  "replacements": {},
+  "selected": [
+    {
+      "cst_utc": "2025-08-05T15:45:00.000Z",
+      "date": "2025-08-05",
+      "end_utc": "2025-08-05T15:52:33.740Z",
+      "id": "lake_h3_d1",
+      "lkp_utc": "2025-08-05T14:45:00.000Z",
+      "primary": true,
+      "scene": "lake_ontario",
+      "seeds": [
+        3401,
+        3402
+      ],
+      "source_registration": "lake_h2_alt1"
+    },
+    {
+      "cst_utc": "2025-09-16T15:45:00.000Z",
+      "date": "2025-09-16",
+      "end_utc": "2025-09-16T15:52:33.740Z",
+      "id": "lake_h3_d2",
+      "lkp_utc": "2025-09-16T14:45:00.000Z",
+      "primary": true,
+      "scene": "lake_ontario",
+      "seeds": [
+        3501,
+        3502
+      ],
+      "source_registration": "lake_h2_alt2"
+    },
+    {
+      "cst_utc": "2025-09-30T15:45:00.000Z",
+      "date": "2025-09-30",
+      "end_utc": "2025-09-30T15:52:33.740Z",
+      "id": "lake_h3_d3",
+      "lkp_utc": "2025-09-30T14:45:00.000Z",
+      "primary": true,
+      "scene": "lake_ontario",
+      "seeds": [
+        3601,
+        3602
+      ],
+      "source_registration": "lake_h2_alt3"
+    },
+    {
+      "cst_utc": "2025-08-09T00:00:00.000Z",
+      "date": "2025-08-08",
+      "end_utc": "2025-08-09T00:46:18.000Z",
+      "id": "hudson_h3_d1",
+      "lkp_utc": "2025-08-08T00:00:00.000Z",
+      "primary": true,
+      "scene": "arctic_ocean",
+      "seeds": [
+        4401,
+        4402
+      ],
+      "source_registration": "hudson_h2_alt1"
+    },
+    {
+      "cst_utc": "2025-09-20T00:00:00.000Z",
+      "date": "2025-09-19",
+      "end_utc": "2025-09-20T00:46:18.000Z",
+      "id": "hudson_h3_d2",
+      "lkp_utc": "2025-09-19T00:00:00.000Z",
+      "primary": true,
+      "scene": "arctic_ocean",
+      "seeds": [
+        4501,
+        4502
+      ],
+      "source_registration": "hudson_h2_alt2"
+    },
+    {
+      "cst_utc": "2025-10-04T00:00:00.000Z",
+      "date": "2025-10-03",
+      "end_utc": "2025-10-04T00:46:18.000Z",
+      "id": "hudson_h3_d3",
+      "lkp_utc": "2025-10-03T00:00:00.000Z",
+      "primary": true,
+      "scene": "arctic_ocean",
+      "seeds": [
+        4601,
+        4602
+      ],
+      "source_registration": "hudson_h2_alt3"
+    }
+  ],
+  "status": "six_dates_qualified"
+}

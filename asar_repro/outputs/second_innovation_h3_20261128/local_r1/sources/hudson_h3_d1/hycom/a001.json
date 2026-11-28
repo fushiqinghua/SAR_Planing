@@ -1,0 +1,22 @@
+{
+  "acquisition_reason": null,
+  "attempt": "a001",
+  "block_id": "hudson_h3_d1",
+  "completed": "20261128T142614553159Z",
+  "date": "2025-08-08",
+  "details": null,
+  "error": "NCSS transport not resolved after 3 attempts: https://ncss.hycom.org/thredds/ncss/grid/ESPC-D-V02/ice/2025?var=ssu&var=ssv&var=sic&north=64.0&south=61.5&west=268&east=271.5&horizStride=1&time_start=2025-08-07T21%3A00%3A00Z&time_end=2025-08-07T23%3A00%3A00Z&timeStride=1&addLatLon=true&accept=netcdf4",
+  "error_type": "HycomRequestError",
+  "method_lock_sha256": "a249f1a941fc0e6ee58051338a0d518c58262af273821b92f89b5dbf9b63103f",
+  "provider": "hycom",
+  "reason": "unverified_acquisition",
+  "receipt_sha256": {
+    "data/raw/h3/hudson_h3_d1/local_r1/hycom/a001/hycom/ESPC-D-V02_surface_20250807.attempt-1.json": "a307a065232f322d0f87d6652a0682c0ecb14137a9e510d001794458255932f2",
+    "data/raw/h3/hudson_h3_d1/local_r1/hycom/a001/hycom/ESPC-D-V02_surface_20250807.attempt-2.json": "39fae52f382f5676f672233f6c48c322457faf15fd1339e29d9d867f5beeb977",
+    "data/raw/h3/hudson_h3_d1/local_r1/hycom/a001/hycom/ESPC-D-V02_surface_20250807.attempt-3.json": "be9875e6d1e6ca9d551afe5e3e90455a95e1d400e2104a7cc79466d9873bc062"
+  },
+  "scene": "arctic_ocean",
+  "started": "20261128T142038020840Z",
+  "status": "blocked",
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\scripts\\h3_acquire.py\", line 73, in acquire_block\n    native = dict(wind=[], current=acquire_hycom(ROOT, raw, block, PROVIDER_ATTEMPTS))\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\scripts\\h2_hycom.py\", line 275, in acquire_hycom\n    rows = [_retrieve_chunk(root, directory, block, spec, max_attempts, points) for spec in specs]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\scripts\\h2_hycom.py\", line 275, in <listcomp>\n    rows = [_retrieve_chunk(root, directory, block, spec, max_attempts, points) for spec in specs]\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\scripts\\h2_hycom.py\", line 260, in _retrieve_chunk\n    raise HycomRequestError(f\"NCSS transport not resolved after {attempts} attempts: {spec['source_url']}\")\nh2_hycom.HycomRequestError: NCSS transport not resolved after 3 attempts: https://ncss.hycom.org/thredds/ncss/grid/ESPC-D-V02/ice/2025?var=ssu&var=ssv&var=sic&north=64.0&south=61.5&west=268&east=271.5&horizStride=1&time_start=2025-08-07T21%3A00%3A00Z&time_end=2025-08-07T23%3A00%3A00Z&timeStride=1&addLatLon=true&accept=netcdf4\n"
+}

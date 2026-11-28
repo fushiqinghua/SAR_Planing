@@ -1,0 +1,9 @@
+{
+  "attempt": "a001",
+  "block_id": "hudson_h3_d3",
+  "date": "2025-10-03",
+  "method_lock_sha256": "a249f1a941fc0e6ee58051338a0d518c58262af273821b92f89b5dbf9b63103f",
+  "provider": "noaa",
+  "scene": "arctic_ocean",
+  "started": "20261128T143213766083Z"
+}

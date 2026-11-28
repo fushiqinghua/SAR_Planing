@@ -1,0 +1,7 @@
+block_id,scene,date,primary,status,reason
+lake_h3_d1,lake_ontario,2025-08-05,True,eligible,
+lake_h3_d2,lake_ontario,2025-09-16,True,eligible,
+lake_h3_d3,lake_ontario,2025-09-30,True,eligible,
+hudson_h3_d1,arctic_ocean,2025-08-08,True,eligible,
+hudson_h3_d2,arctic_ocean,2025-09-19,True,eligible,
+hudson_h3_d3,arctic_ocean,2025-10-03,True,eligible,
