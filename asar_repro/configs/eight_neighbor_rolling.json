@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "batch": "eight-neighbor-rolling-pilot-20261128",
+  "base_commit": "be048ea2304a25211be546c24cca506e87734049",
+  "reference_manifest": "docs/eight_neighbor_rolling/reference_manifest.json",
+  "source_root": "outputs/eight_neighbor_h2_20261127/local_r2",
+  "data_role": "seen_H2_development_diagnostic",
+  "selection_rule": "first two registered primary date blocks per region; first particle seed per block",
+  "instances": [
+    "lake_h2_d1_s3101",
+    "lake_h2_d2_s3201",
+    "hudson_h2_d1_s4101",
+    "hudson_h2_d2_s4201"
+  ],
+  "methods": ["C0", "C1"],
+  "method_labels": {
+    "C0": "single pre-CST full-horizon solve",
+    "C1": "fixed-prediction rolling full-remaining-horizon solve"
+  },
+  "objective": {
+    "primary": "sum of post-observation remaining masses k=1..K",
+    "terminal_metric": "1 - remaining mass after K",
+    "footprint": "heading_square",
+    "connectivity": 8,
+    "q": 0.78,
+    "speed_m_s": 20.0,
+    "preserve_original_mass": true,
+    "absolute_observation_clock": true,
+    "fixed_mission_deadline": true
+  },
+  "solver": {
+    "guide_weight": 1.04,
+    "max_open": 100000,
+    "completion": "greedy",
+    "objective": "J",
+    "completion_every": 128,
+    "completion_max_calls": 32,
+    "archive": true,
+    "archive_limit": 512,
+    "archive_history_limit": 8192,
+    "pd_tolerance": 1e-8
+  },
+  "search": {
+    "seconds": 30.0,
+    "repetitions": 3,
+    "triggers": [0.2, 0.4, 0.6, 0.8],
+    "anchor_guard_s": 0.25,
+    "solver_reserve_s": 0.25,
+    "initialization": "reuse the same frozen H2 S30 route; copy and replay charged in each method",
+    "preparation_policy": "No new drift, new forcing, new particle seed or sensor feedback",
+    "latency_model": "Online computation consumes physical time while the aircraft follows the committed old route; only complete waypoint anchors; late replacement discarded"
+  },
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMEXPR_NUM_THREADS": "1",
+    "VECLIB_MAXIMUM_THREADS": "1"
+  },
+  "watchdog": {
+    "rss_limit_bytes": 2147483648,
+    "grace_seconds": 60.0,
+    "poll_seconds": 0.1
+  },
+  "task_order_seed": 20261128,
+  "decision": {
+    "score_absolute": 1e-8,
+    "relative_tolerance": 1e-8,
+    "instance_winner_min": 0.005,
+    "min_instance_winners": 3,
+    "min_winners_per_scene": 1,
+    "max_pd_drop": 0.005,
+    "rule_scope": "development engineering screen, not significance or generalization proof"
+  }
+}

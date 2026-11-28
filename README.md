@@ -1,4 +1,47 @@
-# 下一批：八邻接收益确认、完整路线与发现概率护栏
+# 当前批次：动态粒子场下的一次性／滚动规划最小验证
+
+分支：**eight-neighbor-rolling-pilot-20261128**  
+继承参考：**eight-neighbor-physical-study-20261127 @ be048ea2304a25211be546c24cca506e87734049**  
+交付状态：**prepared_not_run。仅完成源码、协议和静态核查；测试与实验由用户本地执行。**
+
+本批只回答一个问题：**同一八邻接物理模型、同一动态粒子预测和相同整次任务计算预算下，按执行进展重新规划剩余路线，能否优于当前一次性规划？**
+
+现有模型已在搜索期间使用各未来时刻的粒子位置，并随路径更新未发现质量。此次新增的是分阶段决策及其时间、预算核算；不把动态漂移、负观测或一般滚动规划本身宣称为首次提出，也不预设第二项研究一定有效。
+
+## 两组与固定规模
+
+| 组别 | 规划方式 | 整次任务算法预算 |
+|---|---|---:|
+| C0 | 冻结的八邻接 `completion_J`，搜索开始前一次规划完整路线 | 30 秒 |
+| C1 | 同一搜索规则，初始规划后在任务进度 20%、40%、60%、80% 附近的完整航点触发后续规划；各阶段保留已承诺前缀并优化到原任务截止时刻 | 合计 30 秒，五个名义 6 秒阶段 |
+
+选取 H2 两地区各前两个日期区块、各区块首个粒子 seed：Lake 3101、3201，Hudson 4101、4201。全部属于**已见开发／诊断实例**；不挑选高收益日期，也不把本轮称作独立泛化验证。仅使用主覆盖 `heading_square`、八邻接、原 J／Pd／观测时钟。4 实例 × 2 方法 × 3 次计时重复，共 **24 次 R30，名义算法预算 720 秒（12 分钟）**；本地测试、输入核验、进程启动与外部审计另计。
+
+滚动组重规划时，虚拟无人机沿旧路线的已承诺前缀继续飞行。新后缀须在原评分验证完成、计算预算和承诺航点时限均满足时才可接替；迟到或无改善时继续当前可行路线。不得重置粒子权重、观测时间或任务终点，不新增等待动作。任务时间为仿真时间，无需按真实飞行时长等待；实测计算延迟映射到任务时间轴。
+
+## 本批入口
+
+| 内容 | 文件 |
+|---|---|
+| 实验问题、固定实例、预算和执行阶段 | [PLAN.md](asar_repro/docs/eight_neighbor_rolling/PLAN.md) |
+| 本地拉取、预检、测试、冻结、执行与回传 | [LOCAL_RUNBOOK.md](asar_repro/docs/eight_neighbor_rolling/LOCAL_RUNBOOK.md) |
+| 工程门槛、失败处理与停止条件 | [DECISIONS.md](asar_repro/docs/eight_neighbor_rolling/DECISIONS.md) |
+| 滚动机制与论文声明范围 | [THEORY_AND_CLAIMS.md](asar_repro/docs/eight_neighbor_rolling/THEORY_AND_CLAIMS.md) |
+| 结果说明和证据清单 | [RESULTS_TEMPLATE.md](asar_repro/docs/eight_neighbor_rolling/RESULTS_TEMPLATE.md) |
+| 原始代码／输入／共同初始路线锁定 | [reference_manifest.json](asar_repro/docs/eight_neighbor_rolling/reference_manifest.json) |
+| 固定配置与实验执行器 | [配置](asar_repro/configs/eight_neighbor_rolling.json) · [执行器](asar_repro/scripts/run_eight_neighbor_rolling.py) |
+| 新增滚动调度与前缀求解器 | [physical_rolling.py](asar_repro/src/asar_repro/physical_rolling.py) · [physical_rolling_solver.py](asar_repro/src/asar_repro/physical_rolling_solver.py) |
+| 静态审查和交付状态 | [REVIEW.md](asar_repro/docs/eight_neighbor_rolling/REVIEW.md) · [delivery_manifest.json](asar_repro/docs/eight_neighbor_rolling/delivery_manifest.json) |
+
+筛选要求：全部正式记录有效；至少 3/4 实例的 J 中位数改善不低于 0.5%，且两个地区都有通过实例；全部实例 J 无超容差退化；终点 Pd 的下降不超过预声明的 0.5 个百分点。该门槛只用于本轮工程决策，不是显著性检验或新颖性证明。未通过则保存负结果并停止本轮，不自动扩展时域、参数、数据或新信息反馈机制。
+
+八邻接历史结果保留在父提交。H2 的主覆盖六个日期区块均获得正向 J 差异，日期改善中位数约 0.7887%；这是所测试历史重建场景下的实证结果。当前批次进一步与八邻接强版本比较，不能仅凭优于旧四邻接就判为第二项增益。[H2 结果](asar_repro/outputs/eight_neighbor_h2_20261127/local_r2/ANALYSIS.md)
+
+以下保留原分支的历史交付说明；其中“待执行”“H2 尚未启用”等文字描述当时的交付状态，不能覆盖本页当前入口或父提交中的已上传结果。
+
+---
+
+# 下一批：八邻接收益确认、完整路线与发现概率护栏（历史交付说明）
 
 分支：**eight-neighbor-physical-study-20261127**  
 固定研究参考：**physical_cached_V2_0 / b3ca640de25c1d5b9d1a7449b5ed6053d9e3f3f1**  

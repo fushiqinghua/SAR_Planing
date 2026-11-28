@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "status": "prepared_not_run",
+  "date_asia_shanghai": "2026-11-28",
+  "repository": "fushiqinghua/SAR_Planing",
+  "base_branch": "eight-neighbor-physical-study-20261127",
+  "base_commit": "be048ea2304a25211be546c24cca506e87734049",
+  "branch": "eight-neighbor-rolling-pilot-20261128",
+  "purpose": "Minimal equal-total-budget C0/C1 pilot on the existing eight-neighbor physical model and fixed dynamic particle predictions",
+  "config_canonical_sha256": "7a455c88cffc146fde6c229a9c92f0261ccf5922bd46b31790ef72ec7400099a",
+  "formal_design": {
+    "stage": "R30",
+    "instances": 4,
+    "methods": [
+      "C0",
+      "C1"
+    ],
+    "timing_repetitions": 3,
+    "tasks": 24,
+    "budget_per_task_s": 30.0,
+    "nominal_total_algorithm_budget_s": 720,
+    "data_role": "seen_H2_development_diagnostic"
+  },
+  "static_validation": {
+    "status": "passed",
+    "python_ast_files": 5,
+    "json_syntax_and_registered_config_hash": "checked",
+    "local_mirrored_baseline_git_blobs_unchanged_except_readme": 33,
+    "reference_sha256_pins_checked_against_fetched_files": 31,
+    "inherited_source_git_blob_pins_recorded_from_base_tree": 219,
+    "identical_copied_solver_helper_definitions": 10,
+    "local_document_links": "checked against local deliverables and inherited Git tree",
+    "independent_design_and_source_review": "completed; see REVIEW.md"
+  },
+  "not_executed_by_preparer": [
+    "project imports",
+    "pytest",
+    "project CLI commands",
+    "route scoring or replay",
+    "path search",
+    "formal experiments",
+    "particle or OpenDrift generation",
+    "dependency installation"
+  ],
+  "limitations": [
+    "Static review is not a runtime pass or an experiment result.",
+    "Historical particle binaries were not downloaded or recomputed by the preparer; local preflight verifies the inherited archive hashes.",
+    "The four selected H2 instances are already seen development/diagnostic cases.",
+    "The pilot tests a finite-computation rolling schedule, not additional forecast information or a general optimality guarantee."
+  ],
+  "local_stages": [
+    "plan",
+    "preflight",
+    "validate",
+    "freeze",
+    "run",
+    "analyze"
+  ],
+  "default_output": "asar_repro/outputs/eight_neighbor_rolling_20261128/local_r1",
+  "files_sha256": {
+    "README.md": "fe58ec0fd9e64db2bcb4706852d19d81e471191882e7e761d3c7bab9057193c2",
+    "asar_repro/src/asar_repro/physical_rolling.py": "82a130edf99c3ed42918fc97dfe5204b5bddbc99e8c6364e4d6ff1aa1e380d49",
+    "asar_repro/src/asar_repro/physical_rolling_solver.py": "8fdf105cdfa58236ae8d690b911bcb5e1d5ba61659bf79206d741aae1f148405",
+    "asar_repro/scripts/run_eight_neighbor_rolling.py": "add5390bba666ee471ed693e1d2bbd381a9322037c8543f40ccd75e0bb85fa42",
+    "asar_repro/configs/eight_neighbor_rolling.json": "3d227867ced8e2889d3e13e50cbecf861970159aedaed262631037586bc31ffb",
+    "asar_repro/tests/test_physical_rolling.py": "4caf3c65c0632e55238002474b56fb7fd113c68b5abcb1a0e2d0d6bc8ea1bcbc",
+    "asar_repro/tests/test_eight_neighbor_rolling_runner.py": "854afd71980bf0465ac3b8cc9ee0a062c7c9cc9ef790a83bbebc84523cfee59b",
+    "asar_repro/docs/eight_neighbor_rolling/DECISIONS.md": "0089be71f144bb15982b4360457f5b8a033311c19259f981c904142b742456ca",
+    "asar_repro/docs/eight_neighbor_rolling/LOCAL_RUNBOOK.md": "1e36e879b9c8409dd844f53120451a8b57f34398f5616fb7f0a9a0654667fb9f",
+    "asar_repro/docs/eight_neighbor_rolling/PLAN.md": "6364acd9206403e8524003553f8ab98e077e765bc1f1a78ead7ff28c68c53970",
+    "asar_repro/docs/eight_neighbor_rolling/RESULTS_TEMPLATE.md": "eb9fc021cc1959c510a5389f3fa6ea08292b7c6122877acaffa1a5b53562fec8",
+    "asar_repro/docs/eight_neighbor_rolling/REVIEW.md": "07113821b0813e808668b66bff25fc7066b0de6ca057d25710fe6ceaa270bf65",
+    "asar_repro/docs/eight_neighbor_rolling/THEORY_AND_CLAIMS.md": "515db8fc6c622b6bdc65fd403ac43ec0eb7474473623e235b8c39d45d40e72f8",
+    "asar_repro/docs/eight_neighbor_rolling/reference_manifest.json": "1a4ffb24ab4c740b06dbcf2154bf9d4457edc8b81c66d0389fe52b61f6bab523"
+  },
+  "manifest_hash_policy": "This manifest is excluded from files_sha256 to avoid self-reference; the Git commit identifies the complete delivery."
+}
