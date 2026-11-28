@@ -1,0 +1,16 @@
+{
+  "source_commit": "5b0011159fc606e27b080a20b3babd7622dad547",
+  "stage": "P30",
+  "argv": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "scripts/run_eight_neighbor_lazy_prefix.py",
+    "P30",
+    "--out",
+    "outputs/eight_neighbor_lazy_prefix_20261128/local_r1"
+  ],
+  "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro",
+  "start_time_utc": "2026-11-28T09:45:36.7178746Z",
+  "pythonhashseed": "0",
+  "numerical_threads": 1,
+  "pytest_base": null
+}
