@@ -1,5 +1,5 @@
-"""Small non-I/O tests for the preregistered progress batch and quality gates."""
-from copy import deepcopy
+"""Small validation tests for the preregistered progress batch and quality gates."""
+import pytest
 
 import analyze_eight_neighbor_progress as analysis
 import run_eight_neighbor_progress as runner
@@ -39,3 +39,15 @@ def test_screen_requires_both_regions_and_no_regression():
                                "progress_vs_control")["passed"]
     assert not analysis.screen(_dummy_comparisons([0.002, 0.006, 0.0, 0.0]),
                                "progress_vs_control")["passed"]
+
+def test_over_budget_result_is_rejected_and_kept_separately(tmp_path):
+    task = dict(method="C0_PROGRESS", seconds=30.0)
+    result = dict(algorithm_wall_s=30.025, algorithm_cpu_s=23.0,
+                  physical_replay=dict(J=7.5, pd_final=0.78))
+    with pytest.raises(ValueError, match=r"Algorithm wall time 30\.025"):
+        runner.save_checked_result(tmp_path, task, result, {})
+    assert not (tmp_path / "result.json").exists()
+    rejected = runner.read(tmp_path / "rejected_result.json")
+    assert rejected["status"] == "validation_rejected"
+    assert rejected["task"] == task
+    assert rejected["result"] == result

@@ -206,6 +206,9 @@ def require_validation(out):
 
 
 def check_result(task, result, protocol):
+    wall = result["algorithm_wall_s"]
+    if not 0 < wall <= task["seconds"]:
+        raise ValueError(f"Algorithm wall time {wall:.9f} s outside (0, {task['seconds']:.9f}] s")
     raw = result["raw"]
     inner = raw["phases"][0]["inner"]
     expected_algorithm = {
@@ -229,10 +232,21 @@ def check_result(task, result, protocol):
                  or progress["active_decisions"] > progress["checked_pops"]
                  or progress["activations"] < progress["deactivations"]
                  or progress["first_search_improvement_s"] is not None and
-                    progress["first_search_improvement_s"] > task["seconds"]))
-            or not 0 < result["algorithm_wall_s"] <= task["seconds"]):
-        raise ValueError("Formal arm does not match registered algorithm, policy, or budget")
+                    progress["first_search_improvement_s"] > task["seconds"]))):
+        raise ValueError("Formal arm does not match registered algorithm or policy")
     legacy.verify_result(dict(task, method="C0"), dict(result, method="C0"), protocol)
+
+def save_checked_result(folder, task, result, protocol):
+    try:
+        check_result(task, result, protocol)
+    except (KeyError, OSError, TypeError, ValueError) as error:
+        save(folder / "rejected_result.json", legacy.failure_safe(dict(
+            status="validation_rejected", error=dict(type=type(error).__name__, message=str(error)),
+            task=task, result=result,
+        )))
+        raise
+    save(folder / "result.json", dict(task=task, result=result))
+
 
 def worker(out, run_id):
     protocol, tasks = verify(out)
@@ -293,8 +307,7 @@ def worker(out, run_id):
         formal_optimality_certificate=False, algorithm_wall_s=wall, algorithm_cpu_s=cpu_s,
         input_load_s=input_load, independent_audit_s=time.perf_counter()-before,
     )
-    check_result(task, result, protocol)
-    save(folder / "result.json", dict(task=task, result=result))
+    save_checked_result(folder, task, result, protocol)
 
 
 def run(out):
@@ -341,8 +354,10 @@ def run(out):
                 rc = child.wait()
         path = folder / "result.json"
         problem = None
+        rejected = folder / "rejected_result.json"
         if rc != 0 or killed or not path.is_file():
-            problem = "worker did not complete"
+            problem = (read(rejected)["error"]["message"] if rejected.is_file()
+                       else "worker did not complete")
         else:
             try:
                 payload = read(path)
@@ -356,6 +371,7 @@ def run(out):
             returncode=rc, watchdog=killed, verification_error=problem, peak_rss_bytes=peak,
             process_wall_s=time.perf_counter()-before,
             result_sha256=digest(path) if path.is_file() else None,
+            rejected_result_sha256=digest(rejected) if rejected.is_file() else None,
             frozen_evidence=dict(
                 protocol_sha256=digest(out / "protocol.json"),
                 validation_sha256=digest(out / "validation" / "validation.json"),
