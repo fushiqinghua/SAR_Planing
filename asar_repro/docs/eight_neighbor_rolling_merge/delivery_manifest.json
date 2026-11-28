@@ -1,0 +1,166 @@
+{
+  "schema_version": 1,
+  "status": "prepared_not_run",
+  "date": "2026-11-28",
+  "timezone": "Asia/Shanghai",
+  "repository": "fushiqinghua/SAR_Planing",
+  "branch": "eight-neighbor-rolling-pilot-20261128",
+  "study_base_commit": "6084c7d6528a863709466e1dfbb0930459d95414",
+  "physical_base_commit": "be048ea2304a25211be546c24cca506e87734049",
+  "scope": "exact-state merging diagnosis and four-arm fixed-budget follow-up on the existing rolling pilot branch",
+  "canonical_config_sha256": "9cf1093f00d8a458bb40ca6db4938bbbb8b8d090d1bbcd6091e5bba45b34a6a3",
+  "source_inventory": {
+    "README.md": {
+      "change": "modified",
+      "bytes": 26166,
+      "sha256": "cc50a2d26ae93c9f785525eb38612f22bd53cc603b5ae1d944b7c3974db58ec4",
+      "git_blob": "54d2bed35f80a7421b83f4b1834baccb231f1259"
+    },
+    "asar_repro/configs/eight_neighbor_rolling_merge.json": {
+      "change": "added",
+      "bytes": 4773,
+      "sha256": "d44117addd25e7983b6c88539d7fd113de9581b7ae6d2d7cde3dda39fa7b2087",
+      "git_blob": "390fd53364592ea69400cf4f10c95e18b40f7889"
+    },
+    "asar_repro/docs/eight_neighbor_rolling_merge/DECISIONS.md": {
+      "change": "added",
+      "bytes": 5372,
+      "sha256": "e293b9a1b4708b9fdf94ff515a0e32b1449a25d40111825d39e0ed1a4f4fe030",
+      "git_blob": "22661ef81f5249aff856ee0fd514ba810f6b205f"
+    },
+    "asar_repro/docs/eight_neighbor_rolling_merge/DIAGNOSIS.md": {
+      "change": "added",
+      "bytes": 6483,
+      "sha256": "9c4d9fc874ccbf54b86f1058cb20090f18bd97247dd896dfd504a472641decdc",
+      "git_blob": "2f80fbd71a9ab2bded369f7dd049fba1f2aff0a5"
+    },
+    "asar_repro/docs/eight_neighbor_rolling_merge/LOCAL_RUNBOOK.md": {
+      "change": "added",
+      "bytes": 6030,
+      "sha256": "0c9a1643dc6d80255cb91be0ba149dce926bbec32962dd3d9a42c2e75dc32c35",
+      "git_blob": "9f871857b5b5dabe61f51e2f2ebef712dd7777df"
+    },
+    "asar_repro/docs/eight_neighbor_rolling_merge/PLAN.md": {
+      "change": "added",
+      "bytes": 9062,
+      "sha256": "e7cf43fea1c1e39d71879b66c874507aa18b54c3e9043f8f9d734a82a3ee25c1",
+      "git_blob": "c8999d4f08c468b9784c355d04c4a150a891dac8"
+    },
+    "asar_repro/docs/eight_neighbor_rolling_merge/RESULTS_TEMPLATE.md": {
+      "change": "added",
+      "bytes": 4915,
+      "sha256": "d4bb33481dfb36e3c336d8c640f31145d5cbf6d862f128647b212bbac85b06e8",
+      "git_blob": "ca222e97f5d512da564207939e3b9950c34e86c5"
+    },
+    "asar_repro/docs/eight_neighbor_rolling_merge/REVIEW.md": {
+      "change": "added",
+      "bytes": 4794,
+      "sha256": "b6d3aa6256abacd395b6b97226448902cfc396a3ccbb5394e0e869e096e3b2ba",
+      "git_blob": "c3c3e63996671f5dad7bb43544fc88a55eae59f0"
+    },
+    "asar_repro/docs/eight_neighbor_rolling_merge/THEORY_AND_CLAIMS.md": {
+      "change": "added",
+      "bytes": 6790,
+      "sha256": "be7dccbb0427f5267d411d47b97dc0d4479e3e2662d51530687f2358751ce571",
+      "git_blob": "52f70de1e25a609edaa81346a3d2eae54b142591"
+    },
+    "asar_repro/docs/eight_neighbor_rolling_merge/diagnostic_readback.json": {
+      "change": "added",
+      "bytes": 10320,
+      "sha256": "1442b66f640230aa73ce4cf96ef77fb101f4c0f09ca24ced1fa2b53800d7ff65",
+      "git_blob": "628e89a9f0ac1e0af82575075f3cdf977f3b23d6"
+    },
+    "asar_repro/docs/eight_neighbor_rolling_merge/reference_manifest.json": {
+      "change": "added",
+      "bytes": 25365,
+      "sha256": "055a62a3839efb61d5304be7c439f54dd41c082484c092ab75f23e650ab23e80",
+      "git_blob": "b2e95dc72270f013610c08cf2cb5359fdcca05a2"
+    },
+    "asar_repro/scripts/run_eight_neighbor_rolling_merge.py": {
+      "change": "added",
+      "bytes": 42551,
+      "sha256": "771e54a8575c92d17d91a2d33c1c75ed9487b93fe832e12bbce19afdc2d1337e",
+      "git_blob": "4b8d6895f6407c34cbceb67b251af301a5ce264a"
+    },
+    "asar_repro/src/asar_repro/physical_merge_solver.py": {
+      "change": "added",
+      "bytes": 25866,
+      "sha256": "290cdeae4826ad5b789059bf93967ab94a6fcbff6fffbb9ee3f2b34cd2b0667a",
+      "git_blob": "7bd588db43d40c440e1c49e91eeb854f5500e84f"
+    },
+    "asar_repro/src/asar_repro/physical_rolling_merge.py": {
+      "change": "added",
+      "bytes": 21061,
+      "sha256": "91a6dd3ee9d33e6ac1828ade8b5f63e1987f8d27d0e301b5b54c5545b24919d7",
+      "git_blob": "3ff01ea5a47af3cc2fffc586c600ecd020448c30"
+    },
+    "asar_repro/src/asar_repro/physical_state_merge.py": {
+      "change": "added",
+      "bytes": 7854,
+      "sha256": "e874e22a7fdc62fe61be8e724c161f23a77bd449b244187918d2b918cb08a760",
+      "git_blob": "9606a29a9bddcbe8593ae7e157cb79c833c886f6"
+    },
+    "asar_repro/tests/test_eight_neighbor_rolling_merge_runner.py": {
+      "change": "added",
+      "bytes": 13509,
+      "sha256": "8cc08610129e03bfb1f66c05abc5169b46938d2d6cb77d34b5ba6e7948f3a57f",
+      "git_blob": "1204284ce0bedb5b4df04ff17f0e12dd9d9f0086"
+    },
+    "asar_repro/tests/test_physical_state_merge.py": {
+      "change": "added",
+      "bytes": 14419,
+      "sha256": "06577122fd2f79aeee61c5868e512d45f08b0aeddb6193738638126d7f7c8f59",
+      "git_blob": "d6380ab084901b2bf9a3084d7ccbb3cd191f9355"
+    }
+  },
+  "inventory_excludes_this_manifest": true,
+  "total_changed_files_including_manifest": 18,
+  "static_checks": {
+    "new_python_AST_parsed": 6,
+    "new_python_files": [
+      "asar_repro/scripts/run_eight_neighbor_rolling_merge.py",
+      "asar_repro/src/asar_repro/physical_merge_solver.py",
+      "asar_repro/src/asar_repro/physical_rolling_merge.py",
+      "asar_repro/src/asar_repro/physical_state_merge.py",
+      "asar_repro/tests/test_eight_neighbor_rolling_merge_runner.py",
+      "asar_repro/tests/test_physical_state_merge.py"
+    ],
+    "configuration_JSON_parsed": true,
+    "configuration_canonical_hash_matches_runner": true,
+    "immutable_fetched_files_git_blob_verified": 45,
+    "protected_SHA256_reference_files_verified": 44,
+    "inherited_git_blob_pins_recorded_for_local_verification": 225,
+    "all_44_fetched_original_files_except_root_README_unchanged": true,
+    "unchanged_helper_AST_definitions": {
+      "physical_rolling_solver.py -> physical_merge_solver.py": 10,
+      "physical_rolling.py -> physical_rolling_merge.py": 5
+    },
+    "independent_static_review": "REVIEW.md",
+    "runtime_tests_executed": false,
+    "project_modules_imported_or_executed": false,
+    "search_or_route_scoring_or_replay_executed": false,
+    "drift_or_new_forcing_generated": false,
+    "formal_or_diagnostic_experiments_executed": false,
+    "archived_result_readback": "JSON parsing, arithmetic and set counts only; diagnostic_readback.json is derived from existing uploaded results"
+  },
+  "local_workflow": {
+    "runner": "asar_repro/scripts/run_eight_neighbor_rolling_merge.py",
+    "runbook": "LOCAL_RUNBOOK.md",
+    "output": "asar_repro/outputs/eight_neighbor_rolling_merge_20261128/local_r1",
+    "registered_test_files": 8,
+    "D0_tasks": 4,
+    "conditional_F30_tasks": 48,
+    "maximum_tasks": 52,
+    "maximum_nominal_algorithm_seconds": 1560,
+    "timing_note": "local validation, loading, process overhead and independent audit are additional"
+  },
+  "decisions": {
+    "D0": "all four valid; at least one instance has >=100 mergeable nonterminal children and fraction >=0.05",
+    "F30": "all 48 valid; four comparisons retain the original J/Pd quality gates",
+    "rolling_continuation_required_pairs": [
+      "C1_M_vs_C0_M",
+      "C1_M_vs_C0"
+    ]
+  },
+  "claims": "No measured gain, speedup, new global bound or established second innovation is asserted. Original pilot negative result remains valid."
+}

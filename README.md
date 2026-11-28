@@ -1,4 +1,45 @@
-# 当前批次：动态粒子场下的一次性／滚动规划最小验证
+# 当前批次：滚动规划的严格状态合并验证
+
+分支：**eight-neighbor-rolling-pilot-20261128**  
+开发基点：**6084c7d6528a863709466e1dfbb0930459d95414**  
+交付状态：**prepared_not_run；完成实现与静态核查后，由用户在本地执行测试和实验。**
+
+上一轮 24 项滚动实验完整有效，但固定五等分配置没有通过原收益门槛。两例 Lake 约 1.2–1.4 秒就由主搜索得到最终最好解，后续约 88%–92% 展开集中在末两个非终止观测阶段。它们当前路线覆盖充分，属于较早进入平台的实例；没有最优性证书，不能据此判定无改进空间。
+
+本轮只增加一个机制因素：**严格比较物理位置、绝对时间、观测 tick 和逐粒子未发现权重，在未来状态完全等价时保留累计 J 最小的代表。** 先测量精确重复率，再验证是否值得启用合并。末端展开多并不自动证明重复率高。
+
+## 研究入口
+
+| 内容 | 文件 |
+|---|---|
+| Lake 难度、平台与末端展开诊断 | [DIAGNOSIS.md](asar_repro/docs/eight_neighbor_rolling_merge/DIAGNOSIS.md) · [数值复核](asar_repro/docs/eight_neighbor_rolling_merge/diagnostic_readback.json) |
+| 两阶段计划与四组对照 | [PLAN.md](asar_repro/docs/eight_neighbor_rolling_merge/PLAN.md) |
+| 预检、测试、冻结与本地执行 | [LOCAL_RUNBOOK.md](asar_repro/docs/eight_neighbor_rolling_merge/LOCAL_RUNBOOK.md) |
+| 门槛、停止规则和贡献归因 | [DECISIONS.md](asar_repro/docs/eight_neighbor_rolling_merge/DECISIONS.md) |
+| 状态等价证明和论文边界 | [THEORY_AND_CLAIMS.md](asar_repro/docs/eight_neighbor_rolling_merge/THEORY_AND_CLAIMS.md) |
+| 结果模板与静态审查 | [RESULTS_TEMPLATE.md](asar_repro/docs/eight_neighbor_rolling_merge/RESULTS_TEMPLATE.md) · [REVIEW.md](asar_repro/docs/eight_neighbor_rolling_merge/REVIEW.md) |
+| 来源与交付身份 | [reference_manifest.json](asar_repro/docs/eight_neighbor_rolling_merge/reference_manifest.json) · [delivery_manifest.json](asar_repro/docs/eight_neighbor_rolling_merge/delivery_manifest.json) |
+| 配置与执行器 | [配置](asar_repro/configs/eight_neighbor_rolling_merge.json) · [执行器](asar_repro/scripts/run_eight_neighbor_rolling_merge.py) |
+
+## 固定执行范围
+
+| 阶段 | 定义 | 任务数 | 名义算法预算 |
+|---|---|---:|---:|
+| D0 | 四个原实例，各一次仅统计、不剪枝的 shadow 诊断 | 4 | 120 s |
+| F30 | D0 通过后，四例 × C0/C1/C0_M/C1_M × 三次重复 | 48 | 1440 s |
+| 上限合计 | 先诊断、后验证 | 52 | 1560 s（26 min） |
+
+D0 要求四项完整有效，并至少一例可安全合并的非终止子状态比例 ≥5%、计数 ≥100。未通过则本轮停止。F30 保留原 0.5% J 改善、实例覆盖、非退化及 Pd 门槛；C1_M 对 C0_M 与 C1_M 对 C0 都通过，才讨论滚动的增量收益。通用合并优化和滚动收益分别判定。
+
+所有输入来自同一已见 H2 档案，正式任务仍为八邻接、heading_square、同一 J/Pd、同一动态粒子预测和每任务 30 s 总上限。C0/C1 调用冻结原实现；M 组的索引、键构造和核验均计费。仅保存局部严格等价规则，不输出全局或 ε 最优证书。
+
+新的输出目录为 `asar_repro/outputs/eight_neighbor_rolling_merge_20261128/local_r1/`。旧实验的冻结源码身份包含当时的源码集合；如需重新运行其分析器，应检出原结果提交，而非修改旧协议去接受当前新增文件。
+
+以下保留前轮设计入口和历史说明；本页上方为当前批次。
+
+---
+
+# 前轮：动态粒子场下的一次性／滚动规划最小验证（历史设计）
 
 分支：**eight-neighbor-rolling-pilot-20261128**  
 继承参考：**eight-neighbor-physical-study-20261127 @ be048ea2304a25211be546c24cca506e87734049**  
