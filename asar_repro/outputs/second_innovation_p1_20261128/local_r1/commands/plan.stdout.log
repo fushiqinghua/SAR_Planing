@@ -1,0 +1,41 @@
+{
+  "status": "prepared_not_run",
+  "branch": "eight-neighbor-rolling-pilot-20261128",
+  "base_commit": "440760c35e5c5e26f8ea44d5501e50088c3d2bcd",
+  "config": {
+    "study": "lazy_prefix_p1_timing_robustness",
+    "reference_commit": "440760c35e5c5e26f8ea44d5501e50088c3d2bcd",
+    "cases": {
+      "hudson_h2_d1_s4101": 12,
+      "hudson_h2_d2_s4201": 6
+    },
+    "arms": {
+      "hudson_h2_d1_s4101": [
+        "C0_A",
+        "C0_B",
+        "C0_LAZY"
+      ],
+      "hudson_h2_d2_s4201": [
+        "C0",
+        "C0_LAZY"
+      ]
+    },
+    "seconds": 30.0,
+    "task_seed": 2026112816,
+    "target": {
+      "hudson_h2_d1_s4101": 28.448979882240007,
+      "hudson_h2_d2_s4201": 58.5220872
+    },
+    "baseline_initial_j": {
+      "hudson_h2_d1_s4101": 28.72458835200001
+    },
+    "source_model": "unchanged original eight-neighbor C0, heading_square and completion_J",
+    "lazy_model": "unchanged physical_lazy_prefix_v1",
+    "metrics": "full route J, same-route Pd, time to first strict search improvement, RSS"
+  },
+  "tasks": 48,
+  "max_algorithm_seconds": 1440,
+  "input_role": "seen_development_timing_diagnostic",
+  "independence": "not a new weather-date validation",
+  "experimental_claim": "timing stability, not model generalization"
+}

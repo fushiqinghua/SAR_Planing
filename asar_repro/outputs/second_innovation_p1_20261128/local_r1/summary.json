@@ -1,0 +1,97 @@
+{
+  "status": "timing_screen_passed",
+  "valid_runs": 48,
+  "expected_runs": 48,
+  "by_instance_method": {
+    "hudson_h2_d1_s4101": {
+      "C0_A": {
+        "runs": 12,
+        "median_J": 28.448979882240007,
+        "p90_J": 28.448979882240007,
+        "worst_J": 28.448979882240007,
+        "hit_count": 12,
+        "hit_rate": 1.0,
+        "median_Pd": 0.81246062976,
+        "median_rss_mib": 400.203125,
+        "median_wall_s": 29.843953149997105,
+        "missed_search_improvement": 0,
+        "stopped": {
+          "max_seconds": 12
+        }
+      },
+      "C0_B": {
+        "runs": 12,
+        "median_J": 28.448979882240007,
+        "p90_J": 28.448979882240007,
+        "worst_J": 28.448979882240007,
+        "hit_count": 12,
+        "hit_rate": 1.0,
+        "median_Pd": 0.81246062976,
+        "median_rss_mib": 400.775390625,
+        "median_wall_s": 29.844136449995858,
+        "missed_search_improvement": 0,
+        "stopped": {
+          "max_seconds": 12
+        }
+      },
+      "C0_LAZY": {
+        "runs": 12,
+        "median_J": 28.448979882240007,
+        "p90_J": 28.448979882240007,
+        "worst_J": 28.448979882240007,
+        "hit_count": 12,
+        "hit_rate": 1.0,
+        "median_Pd": 0.81246062976,
+        "median_rss_mib": 400.4765625,
+        "median_wall_s": 29.844651849998627,
+        "missed_search_improvement": 0,
+        "stopped": {
+          "max_seconds": 12
+        }
+      }
+    },
+    "hudson_h2_d2_s4201": {
+      "C0": {
+        "runs": 6,
+        "median_J": 58.73970720000001,
+        "p90_J": 58.73970720000001,
+        "worst_J": 58.73970720000001,
+        "hit_count": 0,
+        "hit_rate": 0.0,
+        "median_Pd": 0.08580811199999983,
+        "median_rss_mib": 91.767578125,
+        "median_wall_s": 29.7554485499968,
+        "missed_search_improvement": 0,
+        "stopped": {
+          "max_seconds": 6
+        }
+      },
+      "C0_LAZY": {
+        "runs": 6,
+        "median_J": 58.5220872,
+        "p90_J": 58.5220872,
+        "worst_J": 58.5220872,
+        "hit_count": 6,
+        "hit_rate": 1.0,
+        "median_Pd": 0.0909479999999998,
+        "median_rss_mib": 402.09765625,
+        "median_wall_s": 29.843626899997616,
+        "missed_search_improvement": 0,
+        "stopped": {
+          "max_seconds": 6
+        }
+      }
+    }
+  },
+  "decision": {
+    "status": "timing_screen_passed",
+    "4101_noninferiority": true,
+    "4201_retain": true,
+    "4101_control_pooled_bad_rate": 0.0,
+    "4101_lazy_bad_rate": 0.0,
+    "note": "engineering robustness screen, not significance or generalization proof"
+  },
+  "data_role": "seen_development_timing_diagnostic",
+  "input_provenance": "frozen H2 particle cases",
+  "global_optimality_certified": false
+}

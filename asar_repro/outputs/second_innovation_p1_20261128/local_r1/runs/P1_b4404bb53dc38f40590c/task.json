@@ -1,0 +1,8 @@
+{
+  "instance": "hudson_h2_d1_s4101",
+  "repetition": 5,
+  "method": "C0_LAZY",
+  "seconds": 30.0,
+  "stage": "P1",
+  "block": "hudson_h2_d1_s4101:5"
+}

@@ -1,0 +1,30 @@
+{
+  "task": {
+    "instance": "hudson_h2_d2_s4201",
+    "repetition": 0,
+    "method": "C0",
+    "seconds": 30.0,
+    "stage": "P1",
+    "block": "hudson_h2_d2_s4201:0"
+  },
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\scripts\\run_lazy_robustness_p1.py",
+    "_worker",
+    "--out",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\outputs\\second_innovation_p1_20261128\\local_r1",
+    "P1_09f04d1edd8a1ca945bc"
+  ],
+  "status": "completed",
+  "returncode": 0,
+  "watchdog": null,
+  "verification_error": null,
+  "peak_rss_bytes": 96329728,
+  "process_wall_s": 31.141216299998632,
+  "result_sha256": "c7bb7ddca0413db412c4f86fbdd4c7da66f9e313a5e6b0cc99467bde4afaa33e",
+  "rejected_result_sha256": null,
+  "frozen_evidence": {
+    "protocol_sha256": "b9054928f40598e5fc08c668eaba4e82c0cfe2bd4c3e3a4c9a3c1ac7c7733d41",
+    "validation_sha256": "8027fcf9c811fc8036f2f65ff67b33a57f873c33a86f3348ab81efe86260f876"
+  }
+}

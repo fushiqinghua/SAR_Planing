@@ -1,0 +1,16 @@
+{
+  "numerical_threads": 1,
+  "argv": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "scripts/run_lazy_robustness_p1.py",
+    "validate",
+    "--out",
+    "outputs/second_innovation_p1_20261128/local_r1"
+  ],
+  "stage": "validate",
+  "pytest_base": "C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\asar-p1-20261128-test-parent-r1",
+  "source_commit": "5d879f74127421539cf0a21b7d12230acb56e4b2",
+  "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro",
+  "pythonhashseed": "0",
+  "start_time_utc": "2026-11-28T13:23:02.7852591Z"
+}

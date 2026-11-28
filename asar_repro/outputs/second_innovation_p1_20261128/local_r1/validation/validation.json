@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "protocol_sha256": "b9054928f40598e5fc08c668eaba4e82c0cfe2bd4c3e3a4c9a3c1ac7c7733d41",
+  "results": [
+    {
+      "name": "toy",
+      "returncode": 0,
+      "tests": 48,
+      "failures_or_skips": 0,
+      "junit_sha256": "f6b1210e2b87de0f2c9aea61e2dc8cb69aeb56f1c74b1a907e0c619bcf47f251"
+    },
+    {
+      "name": "full",
+      "returncode": 0,
+      "tests": 1845,
+      "failures_or_skips": 0,
+      "junit_sha256": "2bc90ea96da00b20a766bff3049c4fc0c01427ec716a3f315ed20563df5ab804"
+    }
+  ]
+}
