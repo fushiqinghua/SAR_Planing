@@ -1,0 +1,1535 @@
+......................................EE.E.............................. [  4%]
+....................................E......E.......E.EE.EE..E......EEEEE [  8%]
+EEE............E.EEE.................................................... [ 12%]
+.....................................................EEE................ [ 16%]
+........................EEEEE...........EEEEE.........EEE............... [ 20%]
+.....EE.............EEEE.........................EEE.......E............ [ 24%]
+........................................................................ [ 28%]
+................................................. [ 30%]
+..........EEEEEEEEE..E.............................EFE.EEEEEE........... [ 34%]
+.......................EE............................................... [ 38%]
+........................................................................ [ 42%]
+........................................................................ [ 46%]
+..................................................................EEEEEE [ 50%]
+E.EEEEEE......E......................................................... [ 54%]
+........................................................................ [ 58%]
+........................................................................ [ 62%]
+........................................................................ [ 66%]
+........................................................................ [ 70%]
+.................................................................. [ 74%]
+........................................................................ [ 78%]
+..........................................EEEEEEEEE..................... [ 82%]
+................E.........EE.EEE........................................ [ 86%]
+........................................................................ [ 90%]
+........................................................................ [ 94%]
+........................................................................ [ 98%]
+......................                                                   [100%]
+=================================== ERRORS ====================================
+_ ERROR at setup of test_cf_default_UTC_must_match_independent_expected_times _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+__________ ERROR at setup of test_sha_guard_rejects_forged_manifest ___________
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_hycom_bytes_adapter_supports_nonascii_windows_paths __
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+______ ERROR at setup of test_cf_storage_unpacks_once_and_preserves_mask ______
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_import_detects_member_corruption_and_refuses_overwrite _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+______ ERROR at setup of test_metadata_alone_does_not_verify_any_source _______
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+____ ERROR at setup of test_local_header_and_receipt_need_physical_review _____
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_____ ERROR at setup of test_corrupt_file_cannot_count_as_reviewable_pair _____
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_wind_acquisition_rejects_full_object_or_saves_exact_messages[True] _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_wind_acquisition_rejects_full_object_or_saves_exact_messages[False] _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_current_size_limit_and_short_transfer_do_not_publish _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+________ ERROR at setup of test_benchmark_cli_reports_selected_method _________
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+________ ERROR at setup of test_loader_rejects_changed_archive_and_utc ________
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_worker_replays_and_matches_oracle_without_drift[None] _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_worker_replays_and_matches_oracle_without_drift[cprofile] _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_worker_replays_and_matches_oracle_without_drift[memory] _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+______ ERROR at setup of test_timeout_preserves_pt_but_never_certificate ______
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+__ ERROR at setup of test_parent_records_watchdog_or_crash_as_null[timeout] ___
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+___ ERROR at setup of test_parent_records_watchdog_or_crash_as_null[crash] ____
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+__________ ERROR at setup of test_output_guard_preserves_old_results __________
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+______ ERROR at setup of test_npz_equal_nan_and_detect_one_changed_value ______
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_________ ERROR at setup of test_failed_command_persists_nonzero_exit _________
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_________ ERROR at setup of test_blocked_report_cannot_claim_release __________
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_stage_gate_does_not_launch_when_an_earlier_stage_is_incomplete _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_____ ERROR at setup of test_failed_or_partial_run_directory_is_preserved _____
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_aggregation_keeps_user_analysis_and_writes_all_stage_rows _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+__ ERROR at setup of test_selection_cannot_be_created_after_new_inputs_exist __
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+______ ERROR at setup of test_selection_cannot_change_after_it_is_locked ______
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_failed_p0_cannot_fall_back_to_original_and_enter_holdout _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_prepare_inputs_requires_locked_selection_before_forcing_or_generation _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_freeze_holdout_requires_complete_common_initializations _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_cf_unpack_is_once_and_unknown_nonzero_ice_count_only_at_water _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_invalid_native_vectors_block_qualification[mismatch-masks disagree] _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_invalid_native_vectors_block_qualification[direction_flip-direction or units] _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_invalid_native_vectors_block_qualification[empty-no finite paired water currents] _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+____ ERROR at setup of test_input_hash_and_qualified_raw_path_are_required ____
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+___ ERROR at setup of test_run_h30_requires_the_shared_initialization_lock ____
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_freeze_does_not_publish_a_matrix_without_the_scientific_lock _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_______ ERROR at setup of test_load_record_preserves_incomplete_attempt _______
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_____ ERROR at setup of test_incomplete_and_failed_evidence_is_preserved ______
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+____________ ERROR at setup of test_changed_raw_result_is_rejected ____________
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+___ ERROR at setup of test_f30_gate_binds_raw_records_and_cannot_be_flipped ___
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_____ ERROR at setup of test_negative_d0_gate_is_preserved_but_blocks_f30 _____
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_failed_or_partial_record_is_not_automatically_retried _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_completed_label_cannot_hide_recorded_verification_error _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_frozen_source_hashes_are_verified_without_git_or_network _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+___________ ERROR at setup of test_paths_cannot_escape_the_checkout ___________
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_existing_partial_run_is_preserved_instead_of_retried _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_loaded_project_modules_must_come_from_the_new_checkout _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_____________ ERROR at setup of test_cf_values_and_opendrift_api ______________
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+__ ERROR at setup of test_reversed_latitude_dateline_and_time_interpolation ___
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+____ ERROR at setup of test_fill_value_masks_only_positive_weight_corners _____
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+___________ ERROR at setup of test_invalid_cf_metadata[units-units] ___________
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_____________ ERROR at setup of test_invalid_cf_metadata[utc-UTC] _____________
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_____________ ERROR at setup of test_invalid_cf_metadata[gap-gap] _____________
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_______ ERROR at setup of test_invalid_cf_metadata[duplicate-UTC time] ________
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+________ ERROR at setup of test_mapped_variables_window_and_empty_file ________
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+____ ERROR at setup of test_real_manifest_without_sha_fails_before_loading ____
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_masked_open_drift_environment_has_no_velocity_fallback _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_request_attempts_are_kept_and_payload_is_not_assumed _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_noaa_requires_a_dedicated_scope_and_bounded_attempts _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_decoded_ice_and_wet_mask_are_not_replaced[None-0-0] __
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+___ ERROR at setup of test_decoded_ice_and_wet_mask_are_not_replaced[1-1-0] ___
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_decoded_ice_and_wet_mask_are_not_replaced[-30000-0-1] _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_rejects_wrong_valid_time_and_unmatched_vector_masks __
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_acquisition_keeps_every_native_chunk_and_rejection_evidence _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_transport_retries_retain_evidence_and_do_not_reset_on_resume _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+____ ERROR at setup of test_cache_rejects_changed_config_and_archive_bytes ____
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+______ ERROR at setup of test_missing_velocity_archive_blocks_generation ______
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+__ ERROR at setup of test_inventory_is_read_only_and_checks_each_native_file __
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+__ ERROR at setup of test_inventory_reports_all_missing_and_mismatched_files __
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_missing_package_blocks_before_generation_and_retains_failure _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_even_an_empty_existing_destination_is_not_overwritten _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_prepare_and_load_preserve_shared_clock_identity_and_special_mass _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_______ ERROR at setup of test_successful_archive_cannot_be_overwritten _______
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_____ ERROR at setup of test_loader_never_invokes_forcing_or_integration ______
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_retained_library_log_stream_forwards_to_current_case _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_loader_rejects_any_changed_deliverable[particles.npz] _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_loader_rejects_any_changed_deliverable[metadata.json] _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_loader_rejects_any_changed_deliverable[input_validation.json] _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_loader_rejects_any_changed_deliverable[prepare.log] __
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+________ ERROR at setup of test_loader_rejects_another_registered_case ________
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_integration_error_retains_logs_and_blocks_all_loading _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_long_selection_reads_b30_and_requires_two_strict_reference_wins _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_______ ERROR at setup of test_incomplete_b30_cannot_trigger_long_runs ________
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+____ ERROR at setup of test_complete_consistent_diagnostic_evidence_passes ____
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+___ ERROR at setup of test_unclosed_tiny_count_interval_blocks_real_stages ____
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_fatal_medium_result_cannot_be_masked_by_valid_initial_route _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_medium_dual_must_respect_other_solvers_feasible_routes _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_closed_tiny_numbers_need_checked_full_domain_optimality[invalid_claim0] _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_closed_tiny_numbers_need_checked_full_domain_optimality[invalid_claim1] _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_closed_tiny_numbers_need_checked_full_domain_optimality[invalid_claim2] _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+____________ ERROR at setup of test_stage5_lake_alignment_and_hash ____________
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+___________________ ERROR at setup of test_bundle_integrity ___________________
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_offline_adapter_matches_saved_search_without_importing_leeway _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_mutated_current_source_is_rejected[src/asar_repro/heuristic.py] _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_mutated_current_source_is_rejected[src/asar_repro/objective.py] _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_mutated_current_source_is_rejected[src/asar_repro/search.py] _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+================================== FAILURES ===================================
+_______ test_noaa_uses_registered_wind_schedule_and_listed_lake_objects _______
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000019BAF7B8490>
+tmp_path_factory = TempPathFactory(_given_basetemp=WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-202...luggy._tracing.TagTracerSub object at 0x0000019BA3F435D0>, _basetemp=None, _retention_count=3, _retention_policy='all')
+
+    def test_noaa_uses_registered_wind_schedule_and_listed_lake_objects(monkeypatch, tmp_path_factory):
+        # Full provider basenames plus a sandbox TEMP path need a short fixture directory on Windows.
+>       tmp_path = tmp_path_factory.mktemp("noaa")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_h2_acquire.py:135: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\35448\.conda\envs\maritime-sar\Lib\site-packages\_pytest\tmpdir.py:138: in mktemp
+    basename = self._ensure_relative_to_basetemp(basename)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C:\Users\35448\.conda\envs\maritime-sar\Lib\site-packages\_pytest\tmpdir.py:118: in _ensure_relative_to_basetemp
+    if (self.getbasetemp() / basename).resolve().parent != self.getbasetemp():
+        ^^^^^^^^^^^^^^^^^^
+C:\Users\35448\.conda\envs\maritime-sar\Lib\site-packages\_pytest\tmpdir.py:198: in getbasetemp
+    basetemp.mkdir(mode=0o700)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/prefix-pytest-r2-20261128/full')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\prefix-pytest-r2-20261128\\full'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+=========================== short test summary info ===========================
+FAILED tests/test_h2_acquire.py::test_noaa_uses_registered_wind_schedule_and_listed_lake_objects
+ERROR tests/test_additional_forcing.py::test_cf_default_UTC_must_match_independent_expected_times
+ERROR tests/test_additional_forcing.py::test_sha_guard_rejects_forged_manifest
+ERROR tests/test_additional_forcing.py::test_hycom_bytes_adapter_supports_nonascii_windows_paths
+ERROR tests/test_b1_additional.py::test_cf_storage_unpacks_once_and_preserves_mask
+ERROR tests/test_b1_additional.py::test_import_detects_member_corruption_and_refuses_overwrite
+ERROR tests/test_b1_inventory.py::test_metadata_alone_does_not_verify_any_source
+ERROR tests/test_b1_inventory.py::test_local_header_and_receipt_need_physical_review
+ERROR tests/test_b1_inventory.py::test_corrupt_file_cannot_count_as_reviewable_pair
+ERROR tests/test_b1_inventory.py::test_wind_acquisition_rejects_full_object_or_saves_exact_messages[True]
+ERROR tests/test_b1_inventory.py::test_wind_acquisition_rejects_full_object_or_saves_exact_messages[False]
+ERROR tests/test_b1_inventory.py::test_current_size_limit_and_short_transfer_do_not_publish
+ERROR tests/test_b4_artifacts.py::test_benchmark_cli_reports_selected_method
+ERROR tests/test_b5_benchmark.py::test_loader_rejects_changed_archive_and_utc
+ERROR tests/test_b5_benchmark.py::test_worker_replays_and_matches_oracle_without_drift[None]
+ERROR tests/test_b5_benchmark.py::test_worker_replays_and_matches_oracle_without_drift[cprofile]
+ERROR tests/test_b5_benchmark.py::test_worker_replays_and_matches_oracle_without_drift[memory]
+ERROR tests/test_b5_benchmark.py::test_timeout_preserves_pt_but_never_certificate
+ERROR tests/test_b5_benchmark.py::test_parent_records_watchdog_or_crash_as_null[timeout]
+ERROR tests/test_b5_benchmark.py::test_parent_records_watchdog_or_crash_as_null[crash]
+ERROR tests/test_b6_comparison.py::test_output_guard_preserves_old_results - ...
+ERROR tests/test_b7_validation.py::test_npz_equal_nan_and_detect_one_changed_value
+ERROR tests/test_b7_validation.py::test_failed_command_persists_nonzero_exit
+ERROR tests/test_b7_validation.py::test_blocked_report_cannot_claim_release
+ERROR tests/test_eight_neighbor_confirmation_runner.py::test_stage_gate_does_not_launch_when_an_earlier_stage_is_incomplete
+ERROR tests/test_eight_neighbor_confirmation_runner.py::test_failed_or_partial_run_directory_is_preserved
+ERROR tests/test_eight_neighbor_confirmation_runner.py::test_aggregation_keeps_user_analysis_and_writes_all_stage_rows
+ERROR tests/test_eight_neighbor_followup_runner.py::test_selection_cannot_be_created_after_new_inputs_exist
+ERROR tests/test_eight_neighbor_followup_runner.py::test_selection_cannot_change_after_it_is_locked
+ERROR tests/test_eight_neighbor_followup_runner.py::test_failed_p0_cannot_fall_back_to_original_and_enter_holdout
+ERROR tests/test_eight_neighbor_followup_runner.py::test_prepare_inputs_requires_locked_selection_before_forcing_or_generation
+ERROR tests/test_eight_neighbor_followup_runner.py::test_freeze_holdout_requires_complete_common_initializations
+ERROR tests/test_eight_neighbor_h2_inputs.py::test_cf_unpack_is_once_and_unknown_nonzero_ice_count_only_at_water
+ERROR tests/test_eight_neighbor_h2_inputs.py::test_invalid_native_vectors_block_qualification[mismatch-masks disagree]
+ERROR tests/test_eight_neighbor_h2_inputs.py::test_invalid_native_vectors_block_qualification[direction_flip-direction or units]
+ERROR tests/test_eight_neighbor_h2_inputs.py::test_invalid_native_vectors_block_qualification[empty-no finite paired water currents]
+ERROR tests/test_eight_neighbor_h2_inputs.py::test_input_hash_and_qualified_raw_path_are_required
+ERROR tests/test_eight_neighbor_h2_runner.py::test_run_h30_requires_the_shared_initialization_lock
+ERROR tests/test_eight_neighbor_h2_runner.py::test_freeze_does_not_publish_a_matrix_without_the_scientific_lock
+ERROR tests/test_eight_neighbor_h2_runner.py::test_load_record_preserves_incomplete_attempt
+ERROR tests/test_eight_neighbor_physical_runner.py::test_incomplete_and_failed_evidence_is_preserved
+ERROR tests/test_eight_neighbor_physical_runner.py::test_changed_raw_result_is_rejected
+ERROR tests/test_eight_neighbor_rolling_merge_runner.py::test_f30_gate_binds_raw_records_and_cannot_be_flipped
+ERROR tests/test_eight_neighbor_rolling_merge_runner.py::test_negative_d0_gate_is_preserved_but_blocks_f30
+ERROR tests/test_eight_neighbor_rolling_merge_runner.py::test_failed_or_partial_record_is_not_automatically_retried
+ERROR tests/test_eight_neighbor_rolling_merge_runner.py::test_completed_label_cannot_hide_recorded_verification_error
+ERROR tests/test_eight_neighbor_rolling_runner.py::test_frozen_source_hashes_are_verified_without_git_or_network
+ERROR tests/test_eight_neighbor_rolling_runner.py::test_paths_cannot_escape_the_checkout
+ERROR tests/test_eight_neighbor_rolling_runner.py::test_existing_partial_run_is_preserved_instead_of_retried
+ERROR tests/test_eight_neighbor_rolling_runner.py::test_loaded_project_modules_must_come_from_the_new_checkout
+ERROR tests/test_forcing.py::test_cf_values_and_opendrift_api - FileNotFoundE...
+ERROR tests/test_forcing.py::test_reversed_latitude_dateline_and_time_interpolation
+ERROR tests/test_forcing.py::test_fill_value_masks_only_positive_weight_corners
+ERROR tests/test_forcing.py::test_invalid_cf_metadata[units-units] - FileNotF...
+ERROR tests/test_forcing.py::test_invalid_cf_metadata[utc-UTC] - FileNotFound...
+ERROR tests/test_forcing.py::test_invalid_cf_metadata[gap-gap] - FileNotFound...
+ERROR tests/test_forcing.py::test_invalid_cf_metadata[duplicate-UTC time] - F...
+ERROR tests/test_forcing.py::test_mapped_variables_window_and_empty_file - Fi...
+ERROR tests/test_forcing.py::test_real_manifest_without_sha_fails_before_loading
+ERROR tests/test_forcing.py::test_masked_open_drift_environment_has_no_velocity_fallback
+ERROR tests/test_h2_acquire.py::test_request_attempts_are_kept_and_payload_is_not_assumed
+ERROR tests/test_h2_acquire.py::test_noaa_requires_a_dedicated_scope_and_bounded_attempts
+ERROR tests/test_h2_hycom.py::test_decoded_ice_and_wet_mask_are_not_replaced[None-0-0]
+ERROR tests/test_h2_hycom.py::test_decoded_ice_and_wet_mask_are_not_replaced[1-1-0]
+ERROR tests/test_h2_hycom.py::test_decoded_ice_and_wet_mask_are_not_replaced[-30000-0-1]
+ERROR tests/test_h2_hycom.py::test_rejects_wrong_valid_time_and_unmatched_vector_masks
+ERROR tests/test_h2_hycom.py::test_acquisition_keeps_every_native_chunk_and_rejection_evidence
+ERROR tests/test_h2_hycom.py::test_transport_retries_retain_evidence_and_do_not_reset_on_resume
+ERROR tests/test_historical_drift.py::test_cache_rejects_changed_config_and_archive_bytes
+ERROR tests/test_historical_drift.py::test_missing_velocity_archive_blocks_generation
+ERROR tests/test_physical_followup_data.py::test_inventory_is_read_only_and_checks_each_native_file
+ERROR tests/test_physical_followup_data.py::test_inventory_reports_all_missing_and_mismatched_files
+ERROR tests/test_physical_followup_data.py::test_missing_package_blocks_before_generation_and_retains_failure
+ERROR tests/test_physical_followup_data.py::test_even_an_empty_existing_destination_is_not_overwritten
+ERROR tests/test_physical_followup_data.py::test_prepare_and_load_preserve_shared_clock_identity_and_special_mass
+ERROR tests/test_physical_followup_data.py::test_successful_archive_cannot_be_overwritten
+ERROR tests/test_physical_followup_data.py::test_loader_never_invokes_forcing_or_integration
+ERROR tests/test_physical_followup_data.py::test_retained_library_log_stream_forwards_to_current_case
+ERROR tests/test_physical_followup_data.py::test_loader_rejects_any_changed_deliverable[particles.npz]
+ERROR tests/test_physical_followup_data.py::test_loader_rejects_any_changed_deliverable[metadata.json]
+ERROR tests/test_physical_followup_data.py::test_loader_rejects_any_changed_deliverable[input_validation.json]
+ERROR tests/test_physical_followup_data.py::test_loader_rejects_any_changed_deliverable[prepare.log]
+ERROR tests/test_physical_followup_data.py::test_loader_rejects_another_registered_case
+ERROR tests/test_physical_followup_data.py::test_integration_error_retains_logs_and_blocks_all_loading
+ERROR tests/test_solver_paradigm_study.py::test_long_selection_reads_b30_and_requires_two_strict_reference_wins
+ERROR tests/test_solver_paradigm_study.py::test_incomplete_b30_cannot_trigger_long_runs
+ERROR tests/test_solver_paradigm_study.py::test_complete_consistent_diagnostic_evidence_passes
+ERROR tests/test_solver_paradigm_study.py::test_unclosed_tiny_count_interval_blocks_real_stages
+ERROR tests/test_solver_paradigm_study.py::test_fatal_medium_result_cannot_be_masked_by_valid_initial_route
+ERROR tests/test_solver_paradigm_study.py::test_medium_dual_must_respect_other_solvers_feasible_routes
+ERROR tests/test_solver_paradigm_study.py::test_closed_tiny_numbers_need_checked_full_domain_optimality[invalid_claim0]
+ERROR tests/test_solver_paradigm_study.py::test_closed_tiny_numbers_need_checked_full_domain_optimality[invalid_claim1]
+ERROR tests/test_solver_paradigm_study.py::test_closed_tiny_numbers_need_checked_full_domain_optimality[invalid_claim2]
+ERROR tests/test_stage7.py::test_stage5_lake_alignment_and_hash - FileNotFoun...
+ERROR tests/test_stage8.py::test_bundle_integrity - FileNotFoundError: [WinEr...
+ERROR tests/test_stage8.py::test_offline_adapter_matches_saved_search_without_importing_leeway
+ERROR tests/test_stdc_audit_contract.py::test_mutated_current_source_is_rejected[src/asar_repro/heuristic.py]
+ERROR tests/test_stdc_audit_contract.py::test_mutated_current_source_is_rejected[src/asar_repro/objective.py]
+ERROR tests/test_stdc_audit_contract.py::test_mutated_current_source_is_rejected[src/asar_repro/search.py]
+1 failed, 1694 passed, 98 errors, 29 subtests passed in 32.23s

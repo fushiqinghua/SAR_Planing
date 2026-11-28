@@ -1,0 +1,72 @@
+........................................................................ [  4%]
+........................................................F............... [  8%]
+........................................................................ [ 12%]
+........................................................................ [ 16%]
+........................................................................ [ 20%]
+........................................................................ [ 24%]
+........................................................................ [ 28%]
+................................................. [ 30%]
+........................................................................ [ 34%]
+........................................................................ [ 38%]
+........................................................................ [ 42%]
+........................................................................ [ 46%]
+........................................................................ [ 50%]
+........................................................................ [ 54%]
+........................................................................ [ 58%]
+........................................................................ [ 62%]
+........................................................................ [ 66%]
+........................................................................ [ 70%]
+.................................................................. [ 74%]
+........................................................................ [ 78%]
+........................................................................ [ 82%]
+........................................................................ [ 86%]
+........................................................................ [ 90%]
+........................................................................ [ 94%]
+........................................................................ [ 98%]
+......................                                                   [100%]
+================================== FAILURES ===================================
+___ test_wind_acquisition_rejects_full_object_or_saves_exact_messages[True] ___
+
+tmp_path = WindowsPath('C:/Users/35448/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/AC/#!sandbox.{9a276e21-8104-49fb-a009-4c4b3f3756f8}/Temp/pytest-of-35448/pytest-0/test_wind_acquisition_rejects_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x000001F31060FED0>
+honor_range = True
+
+    @pytest.mark.parametrize("honor_range", [True, False])
+    def test_wind_acquisition_rejects_full_object_or_saves_exact_messages(
+        tmp_path, monkeypatch, honor_range
+    ):
+        msg = b"GRIB" + bytes([0, 0, 0, 2]) + (20).to_bytes(8, "big") + b"7777"
+    
+        def server(req, timeout):
+            if isinstance(req, str):
+                return BytesIO(wind_index().encode("ascii"))
+            r = BytesIO(msg)
+            r.status = 206 if honor_range else 200
+            r.headers = {"Content-Range": req.headers["Range"].replace("=", " ") + "/100"}
+            return r
+    
+        monkeypatch.setattr(fetch, "urlopen", server)
+        if honor_range:
+>           result = fetch.fetch_wind("https://example.invalid/wind", tmp_path)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_b1_inventory.py:135: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+scripts\fetch_lake_b1.py:82: in fetch_wind
+    archive_file(tmp, path, sha)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+tmp = WindowsPath('C:/Users/35448/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/AC/#!sandbox.{9a276e21-8104-49fb-a009-4c4b3f3756f8}/Temp/pytest-of-35448/pytest-0/test_wind_acquisition_rejects_0/.47ecbe1cac8f4892ba313bdf001595fc.part')
+target = WindowsPath('C:/Users/35448/AppData/Local/Packages/OpenAI.Codex_2p2nqsd0c76g0/AC/#!sandbox.{9a276e21-8104-49fb-a009-4c4b3f3756f8}/Temp/pytest-of-35448/pytest-0/test_wind_acquisition_rejects_0/wind.wind10m.grib2')
+sha = 'ff5acb12d204930dcfe733a6a4d88a214d1382a28905e1a1865f9dedda07f4bf'
+
+    def archive_file(tmp, target, sha):
+        """Publish complete bytes once; a retry must match an existing archive."""
+        try:
+>           os.link(tmp, target)
+E           PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\35448\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\AC\\#!sandbox.{9a276e21-8104-49fb-a009-4c4b3f3756f8}\\Temp\\pytest-of-35448\\pytest-0\\test_wind_acquisition_rejects_0\\.47ecbe1cac8f4892ba313bdf001595fc.part' -> 'C:\\Users\\35448\\AppData\\Local\\Packages\\OpenAI.Codex_2p2nqsd0c76g0\\AC\\#!sandbox.{9a276e21-8104-49fb-a009-4c4b3f3756f8}\\Temp\\pytest-of-35448\\pytest-0\\test_wind_acquisition_rejects_0\\wind.wind10m.grib2'
+
+scripts\fetch_lake_b1.py:23: PermissionError
+=========================== short test summary info ===========================
+FAILED tests/test_b1_inventory.py::test_wind_acquisition_rejects_full_object_or_saves_exact_messages[True]
+1 failed, 1792 passed, 29 subtests passed in 48.70s

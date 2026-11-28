@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\scripts\run_eight_neighbor_prefix_order.py", line 355, in <module>
+    main()
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\scripts\run_eight_neighbor_prefix_order.py", line 351, in main
+    {"prepare": prepare, "validate": validate, "run": run}[args.action](out)
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\scripts\run_eight_neighbor_prefix_order.py", line 156, in validate
+    raise RuntimeError(f"{name} validation failed; see {folder}")
+RuntimeError: full validation failed; see E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\outputs\eight_neighbor_prefix_order_20261128\local_r2\validation

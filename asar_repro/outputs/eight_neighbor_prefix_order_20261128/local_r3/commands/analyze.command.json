@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "scripts/analyze_eight_neighbor_prefix_order.py",
+    "--out",
+    "outputs/eight_neighbor_prefix_order_20261128/local_r3",
+    "--tests",
+    "outputs\\eight_neighbor_prefix_order_20261128\\local_r3\\validation\\full-pytest.xml",
+    "--diagnostics",
+    "outputs\\eight_neighbor_prefix_order_20261128\\local_r3\\equal-work.json",
+    "--protocol",
+    "outputs\\eight_neighbor_prefix_order_20261128\\local_r3\\protocol.json"
+  ],
+  "pythonhashseed": "0",
+  "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro",
+  "stage": "analyze",
+  "start_time_utc": "2026-11-28T07:52:30.6585090Z"
+}

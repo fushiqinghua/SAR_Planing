@@ -1,0 +1,13 @@
+lake_h2_d1_s3101__off 4096 expansions, 3.336 s
+lake_h2_d1_s3101__shadow 4096 expansions, 3.319 s
+lake_h2_d1_s3101__exact 4096 expansions, 3.366 s
+lake_h2_d2_s3201__off 4096 expansions, 3.373 s
+lake_h2_d2_s3201__shadow 4096 expansions, 3.316 s
+lake_h2_d2_s3201__exact 4096 expansions, 3.672 s
+hudson_h2_d1_s4101__off 4096 expansions, 17.676 s
+hudson_h2_d1_s4101__shadow 4096 expansions, 17.709 s
+hudson_h2_d1_s4101__exact 4096 expansions, 16.951 s
+hudson_h2_d2_s4201__off 4096 expansions, 1.452 s
+hudson_h2_d2_s4201__shadow 4096 expansions, 1.654 s
+hudson_h2_d2_s4201__exact 4096 expansions, 1.483 s
+Equal-work gate passed (12 runs)

@@ -1,0 +1,22 @@
+{
+  "task": {
+    "instance": "lake_h2_d2_s3201",
+    "mode": "shadow"
+  },
+  "status": "completed",
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\scripts\\run_prefix_order_equal_work.py",
+    "--out",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\outputs\\eight_neighbor_prefix_order_20261128\\local_r3",
+    "--worker",
+    "lake_h2_d2_s3201",
+    "shadow"
+  ],
+  "result_sha256": "cf4101e797d60cbd6a46d01b1cdb78f023d28b85bb16b35223b849e25a0093f5",
+  "process_wall_s": 4.825619800001732,
+  "peak_rss_bytes": 206266368,
+  "returncode": 0,
+  "watchdog": null,
+  "verification_error": null
+}

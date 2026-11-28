@@ -1,0 +1,31 @@
+{
+  "task": {
+    "instance": "hudson_h2_d2_s4201",
+    "method": "C0_PREFIX",
+    "repetition": 2,
+    "seconds": 30.0,
+    "stage": "P30",
+    "manifest_sha256": "1a487ad0b664dbb4a1770ca4a275ad2ca8aa42d20283990f0d4719f8b0aa22ca",
+    "reference_sha256": "1d85561ef826deccfb4cafd8c3d83e7b293ed3f7e713258cb2066a9ff969143a"
+  },
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\scripts\\run_eight_neighbor_prefix_order.py",
+    "_worker",
+    "--out",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\outputs\\eight_neighbor_prefix_order_20261128\\local_r3",
+    "P30_a92106cae861e674c41e"
+  ],
+  "status": "completed",
+  "returncode": 0,
+  "watchdog": null,
+  "verification_error": null,
+  "peak_rss_bytes": 453611520,
+  "process_wall_s": 31.441546900001413,
+  "result_sha256": "3e7881203f3192fec81f4b744de633e55e1fe3aa939501c7f21795d2fc78d5e7",
+  "frozen_evidence": {
+    "protocol_sha256": "84f4fe051cf0d3846e579858f4119bf63b7919f29181c2668ee541a0f43fd2d4",
+    "validation_sha256": "74cd1acfea00d1c90bcc1bc244c3acaaf6102cc8cf5ed4f1dcfc55976cb47602",
+    "fixed_work_sha256": "c18a5e63f876792196239a0f6020e3c42c1c061fadd365eeb5bceda42de8139b"
+  }
+}

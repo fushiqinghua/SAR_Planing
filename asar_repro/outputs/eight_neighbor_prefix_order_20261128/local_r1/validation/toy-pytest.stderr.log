@@ -1,0 +1,4 @@
+Exception ignored in: <function Console.__del__ at 0x00000169619BF100>
+Traceback (most recent call last):
+  File "C:\Users\35448\.conda\envs\maritime-sar\Lib\site-packages\pyreadline3\console\console.py", line 256, in __del__
+OSError: [WinError -1073741816] Windows Error 0xc0000008

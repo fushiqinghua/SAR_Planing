@@ -1,0 +1,9 @@
+{
+  "instance": "lake_h2_d2_s3201",
+  "method": "C0_PREFIX",
+  "repetition": 2,
+  "seconds": 30.0,
+  "stage": "P30",
+  "manifest_sha256": "fc888c06270c3544504978df5b3ddc9444cb5cfca7898d4e7212c0fc6c468ea7",
+  "reference_sha256": "be93a93200b6302e3a0ff0481e0ab62a4a4f6508e7f35a2272f362c29750b20f"
+}

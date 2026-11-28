@@ -1,0 +1,11 @@
+{
+  "argv": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "scripts/run_eight_neighbor_prefix_order.py",
+    "prepare"
+  ],
+  "start_time_utc": "2026-11-28T07:34:09.0960591Z",
+  "stage": "prepare",
+  "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro",
+  "pythonhashseed": "0"
+}

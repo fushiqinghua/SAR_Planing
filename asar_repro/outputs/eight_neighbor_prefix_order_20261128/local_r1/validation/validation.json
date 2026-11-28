@@ -1,0 +1,45 @@
+{
+  "status": "blocked",
+  "protocol_sha256": "2ca145f1bb0ae6f7de58967a9e73b8e6043541b11e50ca1aec0d99c6f3513425",
+  "results": [
+    {
+      "name": "toy",
+      "command": [
+        "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml=E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\outputs\\eight_neighbor_prefix_order_20261128\\local_r1\\validation\\toy-pytest.xml",
+        "tests/test_physical_prefix_order.py"
+      ],
+      "returncode": 0,
+      "seconds": 1.8420709999991232,
+      "junit_sha256": "2a5cf4471c141a8f7d186e4275c7aa6ad012abf08536b2f37ee41e71965d3d06",
+      "tests": 17,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "full",
+      "command": [
+        "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--junitxml=E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\outputs\\eight_neighbor_prefix_order_20261128\\local_r1\\validation\\full-pytest.xml"
+      ],
+      "returncode": 1,
+      "seconds": 51.068957300001784,
+      "junit_sha256": "5f5b8ffdc592e11ba89e6d4a5d548419038e74992dd2647690692641a935a8f8",
+      "tests": 1822,
+      "failures": 1,
+      "errors": 0,
+      "skipped": 0
+    }
+  ]
+}
