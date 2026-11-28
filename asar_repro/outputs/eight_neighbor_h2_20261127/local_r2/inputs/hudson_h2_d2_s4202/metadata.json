@@ -1,0 +1,118 @@
+{
+  "case": {
+    "base_scene": "arctic_ocean",
+    "block_id": "hudson_h2_d2",
+    "cst_utc": "2025-09-13T00:00:00.000Z",
+    "end_utc": "2025-09-13T00:46:18.000Z",
+    "id": "hudson_h2_d2_s4202",
+    "lkp_utc": "2025-09-12T00:00:00.000Z",
+    "seed": 4202
+  },
+  "config": {
+    "audit_q": 0.78,
+    "budget": 60,
+    "cell_width_m": 926.0,
+    "csp_lon_lat": [
+      -90.447,
+      62.786
+    ],
+    "cst_utc": "2025-09-13T00:00:00.000Z",
+    "forcing_kind": "historical_real",
+    "grid_rows_cols": [
+      65,
+      85
+    ],
+    "incident_utc": "2025-09-12T00:00:00.000Z",
+    "integration_s": 120,
+    "lkp_lon_lat": [
+      -90.6,
+      62.85
+    ],
+    "object_key": "LIFE-RAFT-DB-10",
+    "output_s": 120,
+    "particles": 500,
+    "radius_m": 100,
+    "seed": 4202,
+    "step_s": 46.3
+  },
+  "config_hash": "bed93a9228a3aabfc35d6fa71e12b634d63f67d5562095698c0851b51e56cfce",
+  "data_role": "new_date_historical_forcing_preregistered",
+  "fixed_path_mass_audit_only": true,
+  "generation_wall_s": 4.205703700001322,
+  "integration_wall_s": 3.073527100001229,
+  "max_mass_error": 6.661338147750939e-16,
+  "model": {
+    "integration_steps": 744,
+    "object": {
+      "description": "Life raft, deep ballast (DB) system, general, unknown capacity and loading (mean values)",
+      "key": "LIFE-RAFT-DB-10",
+      "number": 7
+    },
+    "readers": {
+      "x_sea_water_velocity": [
+        "asar_current"
+      ],
+      "x_wind": [
+        "asar_wind"
+      ],
+      "y_sea_water_velocity": [
+        "asar_current"
+      ],
+      "y_wind": [
+        "asar_wind"
+      ]
+    },
+    "source_dims": [
+      "trajectory",
+      "time"
+    ]
+  },
+  "opendrift_runs": 1,
+  "particle_sha256": "47e20e3db2bb59b282faff9befd37858795c1c64c4ae382e680dd8e218f4fed7",
+  "provenance": {
+    "config": {
+      "audit_q": 0.78,
+      "budget": 60,
+      "cell_width_m": 926.0,
+      "csp_lon_lat": [
+        -90.447,
+        62.786
+      ],
+      "cst_utc": "2025-09-13T00:00:00.000Z",
+      "forcing_kind": "historical_real",
+      "grid_rows_cols": [
+        65,
+        85
+      ],
+      "incident_utc": "2025-09-12T00:00:00.000Z",
+      "integration_s": 120,
+      "lkp_lon_lat": [
+        -90.6,
+        62.85
+      ],
+      "object_key": "LIFE-RAFT-DB-10",
+      "output_s": 120,
+      "particles": 500,
+      "radius_m": 100,
+      "seed": 4202,
+      "step_s": 46.3
+    },
+    "input_fingerprints": {
+      "block_id": "hudson_h2_d2",
+      "date_lock_sha256": "f1412a794214515bba0e7325af0c3fa2eca0e4a79e05451c93b3331b92824ade",
+      "method_lock_sha256": "5bf1feae461340cfb44293d743157d9f75b17d0edf825a3a80cb2b1405a0bec1",
+      "source_manifest_sha256": "25ff26f3d7736eea055380e7f7ebb591218ff68744b032cd938a915ce640c62e"
+    },
+    "schema": 1,
+    "versions": {
+      "netCDF4": "1.7.5",
+      "numpy": "2.4.6",
+      "opendrift": "1.14.12",
+      "pyproj": "3.7.2",
+      "scipy": "1.17.1",
+      "shapely": "2.2.0"
+    }
+  },
+  "status": "prepared",
+  "terminal_forcing": []
+}

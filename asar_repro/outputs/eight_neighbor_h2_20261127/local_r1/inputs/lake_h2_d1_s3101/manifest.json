@@ -1,0 +1,28 @@
+{
+  "case": {
+    "base_scene": "lake_ontario",
+    "block_id": "lake_h2_d1",
+    "cst_utc": "2025-08-12T15:45:00.000Z",
+    "end_utc": "2025-08-12T15:52:33.740Z",
+    "id": "lake_h2_d1_s3101",
+    "lkp_utc": "2025-08-12T14:45:00.000Z",
+    "seed": 3101
+  },
+  "config_sha256": "4e3546b31d59f6ca696d7537e69b1cfa035e22801f4ea1dca39ed7326352f0f1",
+  "data_role": "new_date_historical_forcing_preregistered",
+  "evidence": {
+    "block_id": "lake_h2_d1",
+    "date_lock_sha256": "f1412a794214515bba0e7325af0c3fa2eca0e4a79e05451c93b3331b92824ade",
+    "method_lock_sha256": "5bf1feae461340cfb44293d743157d9f75b17d0edf825a3a80cb2b1405a0bec1",
+    "source_manifest_sha256": "c52a0e677cfede2891ef9539b18d8f7d021dcf7141a6c701b6d7601efd097101"
+  },
+  "files": {
+    "forcing_validation.json": "1bb15f48dab4c6fafa73bbdaa93e9b4ccb1a123858f9a625176428578e404f94",
+    "mass_audit.json": "34c8be61c0007d5551dc813c3271436cc09ecc980a632dfefb7017df6a45caa7",
+    "metadata.json": "f0ca540b4551530974fc039890c5b0fd3781c868af85c2cf47b82e8639be5553",
+    "particles.npz": "c8dd0df61e761c2efd4491a6474ae29019a5bbcbdf8ba3f028513e687c3e8c96",
+    "prepare.log": "0260a9307c186b3b46e767b61e15e2ff8329d37e77f4d9242260927189819584",
+    "request.json": "1afc1031e0ae6fdc1f9ce4fb6820bf20b48d22e0ebb7e3d3cf71af0871463c9b"
+  },
+  "status": "prepared"
+}

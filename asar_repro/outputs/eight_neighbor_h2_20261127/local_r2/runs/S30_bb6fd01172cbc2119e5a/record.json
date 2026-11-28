@@ -1,0 +1,37 @@
+{
+  "task": {
+    "instance": "lake_h2_d3_s3301",
+    "block_id": "lake_h2_d3",
+    "base_scene": "lake_ontario",
+    "seed": 3301,
+    "manifest_sha256": "cad70abcc9facdbb5d9fd5bd4fedd40c558f35b53348323dc6e173d35a6d73e7",
+    "stage": "S30",
+    "method": "PT_then_original_paper_greedy",
+    "connectivity": 4,
+    "footprint": "axis_square",
+    "repetition": 0,
+    "seconds": 30
+  },
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\scripts\\run_eight_neighbor_h2.py",
+    "_worker",
+    "--config",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\configs\\eight_neighbor_h2.json",
+    "--out",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\outputs\\eight_neighbor_h2_20261127\\local_r1",
+    "--task",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\outputs\\eight_neighbor_h2_20261127\\local_r1\\runs\\S30_bb6fd01172cbc2119e5a\\task.json",
+    "--result",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\outputs\\eight_neighbor_h2_20261127\\local_r1\\runs\\S30_bb6fd01172cbc2119e5a\\result.json"
+  ],
+  "frozen_evidence": {
+    "protocol_sha256": "13de8e1e424a84470598ee5e7d37afefab9747fe5fcf95894dbd2cfb28ce3f98"
+  },
+  "status": "completed",
+  "returncode": 0,
+  "watchdog": null,
+  "process_wall_s": 2.9425287999983993,
+  "peak_rss_bytes": 148721664,
+  "result_sha256": "46f53c3a7782c1fdc463125b8fed50c64559ced3792c7ea88ca4486953bad63e"
+}

@@ -1,0 +1,4 @@
+hudson_h2_d1: eligible
+hudson_h2_d2: eligible
+hudson_h2_d3: eligible
+data_incomplete: 3/6 eligible blocks; next prerequisites: ['lake_h2_d1', 'lake_h2_d2', 'lake_h2_d3']

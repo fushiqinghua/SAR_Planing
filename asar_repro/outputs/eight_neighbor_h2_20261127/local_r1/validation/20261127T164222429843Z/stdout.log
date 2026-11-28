@@ -1,0 +1,624 @@
+........................................................................ [ 18%]
+..............................................EE........................ [ 36%]
+...................................EEEEEEE.EEEEEE......E................ [ 55%]
+........................EEEEE........................................... [ 73%]
+.....................................................EEE...EEEEE........ [ 91%]
+.EEE..................EEE.EEEEEE                                         [100%]
+=================================== ERRORS ====================================
+_____ ERROR at setup of test_incomplete_and_failed_evidence_is_preserved ______
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+____________ ERROR at setup of test_changed_raw_result_is_rejected ____________
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+__ ERROR at setup of test_inventory_is_read_only_and_checks_each_native_file __
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+__ ERROR at setup of test_inventory_reports_all_missing_and_mismatched_files __
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_missing_package_blocks_before_generation_and_retains_failure _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_even_an_empty_existing_destination_is_not_overwritten _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_prepare_and_load_preserve_shared_clock_identity_and_special_mass _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_______ ERROR at setup of test_successful_archive_cannot_be_overwritten _______
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_____ ERROR at setup of test_loader_never_invokes_forcing_or_integration ______
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_retained_library_log_stream_forwards_to_current_case _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_loader_rejects_any_changed_deliverable[particles.npz] _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_loader_rejects_any_changed_deliverable[metadata.json] _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_loader_rejects_any_changed_deliverable[input_validation.json] _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_loader_rejects_any_changed_deliverable[prepare.log] __
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+________ ERROR at setup of test_loader_rejects_another_registered_case ________
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_integration_error_retains_logs_and_blocks_all_loading _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+__ ERROR at setup of test_selection_cannot_be_created_after_new_inputs_exist __
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+______ ERROR at setup of test_selection_cannot_change_after_it_is_locked ______
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_failed_p0_cannot_fall_back_to_original_and_enter_holdout _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_prepare_inputs_requires_locked_selection_before_forcing_or_generation _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_freeze_holdout_requires_complete_common_initializations _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_stage_gate_does_not_launch_when_an_earlier_stage_is_incomplete _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_____ ERROR at setup of test_failed_or_partial_run_directory_is_preserved _____
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_aggregation_keeps_user_analysis_and_writes_all_stage_rows _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_cf_unpack_is_once_and_unknown_nonzero_ice_count_only_at_water _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_invalid_native_vectors_block_qualification[mismatch-masks disagree] _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_invalid_native_vectors_block_qualification[direction_flip-direction or units] _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_invalid_native_vectors_block_qualification[empty-no finite paired water currents] _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+____ ERROR at setup of test_input_hash_and_qualified_raw_path_are_required ____
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+___ ERROR at setup of test_run_h30_requires_the_shared_initialization_lock ____
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_freeze_does_not_publish_a_matrix_without_the_scientific_lock _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_______ ERROR at setup of test_load_record_preserves_incomplete_attempt _______
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_request_attempts_are_kept_and_payload_is_not_assumed _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_noaa_uses_registered_wind_schedule_and_listed_lake_objects _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_noaa_requires_a_dedicated_scope_and_bounded_attempts _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_decoded_ice_and_wet_mask_are_not_replaced[None-0-0] __
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+___ ERROR at setup of test_decoded_ice_and_wet_mask_are_not_replaced[1-1-0] ___
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_decoded_ice_and_wet_mask_are_not_replaced[-30000-0-1] _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_rejects_wrong_valid_time_and_unmatched_vector_masks __
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_acquisition_keeps_every_native_chunk_and_rejection_evidence _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+_ ERROR at setup of test_transport_retries_retain_evidence_and_do_not_reset_on_resume _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164222429843Z')
+mode = 448, parents = False, exist_ok = False
+
+    def mkdir(self, mode=0o777, parents=False, exist_ok=False):
+        """
+        Create a new directory at this given path.
+        """
+        try:
+>           os.mkdir(self, mode)
+E           FileNotFoundError: [WinError 3] 系统找不到指定的路径。: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164222429843Z'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1116: FileNotFoundError
+=========================== short test summary info ===========================
+ERROR tests/test_eight_neighbor_physical_runner.py::test_incomplete_and_failed_evidence_is_preserved
+ERROR tests/test_eight_neighbor_physical_runner.py::test_changed_raw_result_is_rejected
+ERROR tests/test_physical_followup_data.py::test_inventory_is_read_only_and_checks_each_native_file
+ERROR tests/test_physical_followup_data.py::test_inventory_reports_all_missing_and_mismatched_files
+ERROR tests/test_physical_followup_data.py::test_missing_package_blocks_before_generation_and_retains_failure
+ERROR tests/test_physical_followup_data.py::test_even_an_empty_existing_destination_is_not_overwritten
+ERROR tests/test_physical_followup_data.py::test_prepare_and_load_preserve_shared_clock_identity_and_special_mass
+ERROR tests/test_physical_followup_data.py::test_successful_archive_cannot_be_overwritten
+ERROR tests/test_physical_followup_data.py::test_loader_never_invokes_forcing_or_integration
+ERROR tests/test_physical_followup_data.py::test_retained_library_log_stream_forwards_to_current_case
+ERROR tests/test_physical_followup_data.py::test_loader_rejects_any_changed_deliverable[particles.npz]
+ERROR tests/test_physical_followup_data.py::test_loader_rejects_any_changed_deliverable[metadata.json]
+ERROR tests/test_physical_followup_data.py::test_loader_rejects_any_changed_deliverable[input_validation.json]
+ERROR tests/test_physical_followup_data.py::test_loader_rejects_any_changed_deliverable[prepare.log]
+ERROR tests/test_physical_followup_data.py::test_loader_rejects_another_registered_case
+ERROR tests/test_physical_followup_data.py::test_integration_error_retains_logs_and_blocks_all_loading
+ERROR tests/test_eight_neighbor_followup_runner.py::test_selection_cannot_be_created_after_new_inputs_exist
+ERROR tests/test_eight_neighbor_followup_runner.py::test_selection_cannot_change_after_it_is_locked
+ERROR tests/test_eight_neighbor_followup_runner.py::test_failed_p0_cannot_fall_back_to_original_and_enter_holdout
+ERROR tests/test_eight_neighbor_followup_runner.py::test_prepare_inputs_requires_locked_selection_before_forcing_or_generation
+ERROR tests/test_eight_neighbor_followup_runner.py::test_freeze_holdout_requires_complete_common_initializations
+ERROR tests/test_eight_neighbor_confirmation_runner.py::test_stage_gate_does_not_launch_when_an_earlier_stage_is_incomplete
+ERROR tests/test_eight_neighbor_confirmation_runner.py::test_failed_or_partial_run_directory_is_preserved
+ERROR tests/test_eight_neighbor_confirmation_runner.py::test_aggregation_keeps_user_analysis_and_writes_all_stage_rows
+ERROR tests/test_eight_neighbor_h2_inputs.py::test_cf_unpack_is_once_and_unknown_nonzero_ice_count_only_at_water
+ERROR tests/test_eight_neighbor_h2_inputs.py::test_invalid_native_vectors_block_qualification[mismatch-masks disagree]
+ERROR tests/test_eight_neighbor_h2_inputs.py::test_invalid_native_vectors_block_qualification[direction_flip-direction or units]
+ERROR tests/test_eight_neighbor_h2_inputs.py::test_invalid_native_vectors_block_qualification[empty-no finite paired water currents]
+ERROR tests/test_eight_neighbor_h2_inputs.py::test_input_hash_and_qualified_raw_path_are_required
+ERROR tests/test_eight_neighbor_h2_runner.py::test_run_h30_requires_the_shared_initialization_lock
+ERROR tests/test_eight_neighbor_h2_runner.py::test_freeze_does_not_publish_a_matrix_without_the_scientific_lock
+ERROR tests/test_eight_neighbor_h2_runner.py::test_load_record_preserves_incomplete_attempt
+ERROR tests/test_h2_acquire.py::test_request_attempts_are_kept_and_payload_is_not_assumed
+ERROR tests/test_h2_acquire.py::test_noaa_uses_registered_wind_schedule_and_listed_lake_objects
+ERROR tests/test_h2_acquire.py::test_noaa_requires_a_dedicated_scope_and_bounded_attempts
+ERROR tests/test_h2_hycom.py::test_decoded_ice_and_wet_mask_are_not_replaced[None-0-0]
+ERROR tests/test_h2_hycom.py::test_decoded_ice_and_wet_mask_are_not_replaced[1-1-0]
+ERROR tests/test_h2_hycom.py::test_decoded_ice_and_wet_mask_are_not_replaced[-30000-0-1]
+ERROR tests/test_h2_hycom.py::test_rejects_wrong_valid_time_and_unmatched_vector_masks
+ERROR tests/test_h2_hycom.py::test_acquisition_keeps_every_native_chunk_and_rejection_evidence
+ERROR tests/test_h2_hycom.py::test_transport_retries_retain_evidence_and_do_not_reset_on_resume
+351 passed, 41 errors in 3.19s

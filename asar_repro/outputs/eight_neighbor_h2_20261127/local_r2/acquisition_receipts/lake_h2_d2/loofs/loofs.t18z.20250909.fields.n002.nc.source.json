@@ -1,0 +1,30 @@
+{
+  "product": "LOOFS",
+  "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/loofs/netcdf/2025/09/09/loofs.t18z.20250909.fields.n002.nc",
+  "local_path": "data/raw/h2/lake_h2_d2/loofs/loofs.t18z.20250909.fields.n002.nc",
+  "run_cycle_utc": "2025-09-09T18:00:00Z",
+  "valid_utc": "2025-09-09T14:00:00Z",
+  "lead_hours": -4,
+  "forecast_or_analysis": "nowcast",
+  "source_kind": "byte_exact_original_netcdf",
+  "listing_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/?list-type=2&prefix=loofs%2Fnetcdf%2F2025%2F09%2F09%2Floofs.t18z.20250909.fields.n",
+  "listing_path": "data/raw/h2/lake_h2_d2/loofs/loofs_18z_provider_listing.xml",
+  "listing_sha256": "9af3de60938c5cfcb467a3135a0b541572cdb2880154134e4502350242f1027b",
+  "listed_object": {
+    "object_key": "loofs/netcdf/2025/09/09/loofs.t18z.20250909.fields.n002.nc",
+    "etag": "\"b3f97e0bcb5d16397c7e1fd0b3924ef3-9\"",
+    "size": 70159473,
+    "last_modified": "2025-09-09T20:45:50.000Z"
+  },
+  "sha256": "8df09a091eb5c35b47fd46997d490cbb7267a5988a70bc89858998ef2abf2279",
+  "bytes": 70159473,
+  "response": {
+    "http_status": 200,
+    "content-type": "application/x-netcdf",
+    "content-length": "70159473",
+    "etag": "\"b3f97e0bcb5d16397c7e1fd0b3924ef3-9\"",
+    "last-modified": "Tue, 09 Sep 2025 20:45:50 GMT",
+    "x-amz-request-id": "62EMG8ABWX23STJ6",
+    "x-amz-id-2": "GF9ZW8ob1zKswhgfYRLxurikgNafTGukqnEN58yTC1CN66ap4w5Nt0SmGpbrWPBzWILFRN0RC6Q="
+  }
+}

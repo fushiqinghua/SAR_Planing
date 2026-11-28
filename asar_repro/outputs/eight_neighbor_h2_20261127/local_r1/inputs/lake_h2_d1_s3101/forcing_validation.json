@@ -1,0 +1,112 @@
+{
+  "fields": {
+    "current": {
+      "lkp_csp_max_m_s": [
+        [
+          0.3177749127149582,
+          0.13635365664958954
+        ],
+        [
+          0.30433732966581983,
+          0.11527684330940247
+        ]
+      ],
+      "lkp_csp_min_m_s": [
+        [
+          0.30698610097169876,
+          0.13165071879824003
+        ],
+        [
+          0.2964085191488266,
+          0.10990624601642292
+        ]
+      ],
+      "lkp_csp_probe_count": 274,
+      "metadata": {
+        "lon_lat_bounds": [
+          -79.80072021484375,
+          -76.05899047851562,
+          43.180450439453125,
+          44.22895431518555
+        ],
+        "native_variables": [
+          "u",
+          "v"
+        ],
+        "node_projection_residual_m": 0.2596666113792793,
+        "projection": "proj=utm +zone=16 +datum=NAD83",
+        "sigma": -0.02500000037252903,
+        "sigma_index": 0,
+        "spatial_method": "constant on containing native FVCOM face",
+        "top_layer_center_depth_m": [
+          0.027089067207113904,
+          5.712424792534481
+        ],
+        "vector_basis": "geographic_east_north"
+      },
+      "shape": [
+        5,
+        64453,
+        3
+      ],
+      "valid_times_utc": [
+        "2025-08-12T13:00:00+00:00",
+        "2025-08-12T14:00:00+00:00",
+        "2025-08-12T15:00:00+00:00",
+        "2025-08-12T16:00:00+00:00",
+        "2025-08-12T17:00:00+00:00"
+      ]
+    },
+    "wind": {
+      "lkp_csp_max_m_s": [
+        [
+          1.2209934559913518,
+          3.453624774751925
+        ],
+        [
+          1.3457987098282815,
+          3.4033166422114856
+        ]
+      ],
+      "lkp_csp_min_m_s": [
+        [
+          0.7415979706265026,
+          3.101785145101153
+        ],
+        [
+          0.9088818815143614,
+          3.016574477307819
+        ]
+      ],
+      "lkp_csp_probe_count": 274,
+      "metadata": {
+        "height_m": 10,
+        "native_variables": [
+          "UGRD",
+          "VGRD"
+        ],
+        "spatial_method": "bilinear in native Lambert grid, then rotate at query",
+        "vector_basis": "grid_relative"
+      },
+      "shape": [
+        5,
+        1059,
+        1799,
+        2
+      ],
+      "valid_times_utc": [
+        "2025-08-12T13:00:00+00:00",
+        "2025-08-12T14:00:00+00:00",
+        "2025-08-12T15:00:00+00:00",
+        "2025-08-12T16:00:00+00:00",
+        "2025-08-12T17:00:00+00:00"
+      ]
+    }
+  },
+  "forcing_kind": "historical_real",
+  "native_window_utc": [
+    "2025-08-12T14:45:00Z",
+    "2025-08-12T15:53:00Z"
+  ],
+  "status": "eligible"
+}

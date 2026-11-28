@@ -1,0 +1,105 @@
+{
+  "block_id": "hudson_h2_d3",
+  "product": "ESPC-D-V02",
+  "attempt": 1,
+  "requested_utc": "2026-11-27T16:38:52.621691+00:00",
+  "catalog_url": "https://ncss.hycom.org/thredds/catalogs/ESPC-D-V02_ice.html?dataset=ESPC-D-V02-ice-2025",
+  "source_url": "https://ncss.hycom.org/thredds/ncss/grid/ESPC-D-V02/ice/2025?var=ssu&var=ssv&var=sic&north=64.0&south=61.5&west=268&east=271.5&horizStride=1&time_start=2025-09-25T21%3A00%3A00Z&time_end=2025-09-25T23%3A00%3A00Z&timeStride=1&addLatLon=true&accept=netcdf4",
+  "valid_times_utc": [
+    "2025-09-25T21:00:00+00:00",
+    "2025-09-25T22:00:00+00:00",
+    "2025-09-25T23:00:00+00:00"
+  ],
+  "http_status": 200,
+  "http_headers": {
+    "Content-Type": "application/x-netcdf4",
+    "Content-Length": null,
+    "Content-Disposition": "attachment; filename=ice_2025.nc4",
+    "Last-Modified": null,
+    "Date": "Fri, 27 Nov 2026 16:38:54 GMT",
+    "ETag": null
+  },
+  "bytes": 78311,
+  "sha256": "76615741e0e5d6d136c67ddb982f90746a846076e681db0b93b594cfba6d8883",
+  "local_path": "data/raw/h2/hudson_h2_d3/hycom/ESPC-D-V02_surface_20250925.nc",
+  "receipt_path": "data/raw/h2/hudson_h2_d3/hycom/ESPC-D-V02_surface_20250925.local-audit-v2.json",
+  "status": "accepted",
+  "audit": {
+    "valid_times_utc": [
+      "2025-09-25T21:00:00+00:00",
+      "2025-09-25T22:00:00+00:00",
+      "2025-09-25T23:00:00+00:00"
+    ],
+    "product": "ESPC-D-V02",
+    "dimensions": {
+      "time": 3,
+      "lat": 63,
+      "lon": 45
+    },
+    "lon_lat_bounds": [
+      268.0,
+      271.52001953125,
+      61.52000045776367,
+      64.0
+    ],
+    "coordinate_sha256": "e68cd3cf8b4cbf23282df3c33fb99201e6f1bd6d50299cc0d24554305c37124f",
+    "vector_basis": "geographic_east_north",
+    "native_variables": [
+      "ssu",
+      "ssv"
+    ],
+    "auxiliary_variables": [
+      "sic"
+    ],
+    "encoding": {
+      "ssu": {
+        "storage": "int16",
+        "scale_factor": 0.0010000000474974513,
+        "add_offset": 0.0,
+        "fill_value": -30000,
+        "unpacking_count": 1,
+        "mask_preserved": true
+      },
+      "ssv": {
+        "storage": "int16",
+        "scale_factor": 0.0010000000474974513,
+        "add_offset": 0.0,
+        "fill_value": -30000,
+        "unpacking_count": 1,
+        "mask_preserved": true
+      },
+      "sic": {
+        "storage": "int16",
+        "scale_factor": 9.999999747378752e-05,
+        "add_offset": 0.0,
+        "fill_value": -30000,
+        "unpacking_count": 1,
+        "mask_preserved": true
+      }
+    },
+    "known_wet_samples": 6765,
+    "nonzero_ice_wet_samples": 0,
+    "unknown_ice_wet_samples": 0,
+    "ice_max_wet": 0.0,
+    "time_units": "hours since 2000-01-01 00:00:00",
+    "run_cycle_status": "annual_archive_per_frame_lineage_not_verified",
+    "point_checks": {
+      "LKP": {
+        "bilinear_2x2_stencil_valid_all_times": true,
+        "indices_yx": [
+          33,
+          17
+        ]
+      },
+      "CSP": {
+        "bilinear_2x2_stencil_valid_all_times": true,
+        "indices_yx": [
+          31,
+          19
+        ]
+      }
+    }
+  },
+  "original_receipt_sha256": "9af0fe2ba7657575238ace824af4f88ed00bd7f59bc575dbbbb9810226de02c6",
+  "original_receipt_path": "data/raw/h2/hudson_h2_d3/hycom/ESPC-D-V02_surface_20250925.attempt-1.json"
+}

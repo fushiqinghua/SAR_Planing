@@ -1,0 +1,28 @@
+{
+  "case": {
+    "base_scene": "arctic_ocean",
+    "block_id": "hudson_h2_d3",
+    "cst_utc": "2025-09-27T00:00:00.000Z",
+    "end_utc": "2025-09-27T00:46:18.000Z",
+    "id": "hudson_h2_d3_s4302",
+    "lkp_utc": "2025-09-26T00:00:00.000Z",
+    "seed": 4302
+  },
+  "config_sha256": "70ba517d112c76163043153dd876780c819ac3aee47fc20bdea1251d77dfab30",
+  "data_role": "new_date_historical_forcing_preregistered",
+  "evidence": {
+    "block_id": "hudson_h2_d3",
+    "date_lock_sha256": "f1412a794214515bba0e7325af0c3fa2eca0e4a79e05451c93b3331b92824ade",
+    "method_lock_sha256": "5bf1feae461340cfb44293d743157d9f75b17d0edf825a3a80cb2b1405a0bec1",
+    "source_manifest_sha256": "70c467db44e047f74f6dba4720a313b3061ffbdf8fe74aa2a1f7905e2a181bf9"
+  },
+  "files": {
+    "forcing_validation.json": "52d9a97effd3c91dbd8aae7273592f440322a797e6cedfed36245cf309cabb09",
+    "mass_audit.json": "631cc2c590fb79a0b3809c57e37dd8bdde2e45141523aa7c307e2b577749796b",
+    "metadata.json": "1b708ffc62eccaac96e6693d4415ef4fc90840b2e850ad41a705875b53fc228b",
+    "particles.npz": "09eb46bf5d99c05b4d51a09f82100338084b9496ee9d4f5e86c8f1d652fd419f",
+    "prepare.log": "80ff46951eef053ea6e6af748e86041d4cbba392bbe775d99aec018265975d52",
+    "request.json": "57b6b0bea46184c8f65908944020afcef1ac9ec3f6b8203e860a861f665ee5dc"
+  },
+  "status": "prepared"
+}

@@ -1,0 +1,12 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "scripts/run_eight_neighbor_h2.py",
+    "validate",
+    "--out",
+    "outputs/eight_neighbor_h2_20261127/local_r1"
+  ],
+  "start": "2026-11-28T00:42:42.1306659+08:00",
+  "numerical_threads": 1,
+  "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro"
+}

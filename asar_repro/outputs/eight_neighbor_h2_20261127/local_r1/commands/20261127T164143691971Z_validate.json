@@ -1,0 +1,15 @@
+{
+  "status": "failed",
+  "started_utc": "2026-11-27T16:41:43.691971+00:00",
+  "directory": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro",
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\scripts\\run_eight_neighbor_h2.py",
+    "validate",
+    "--out",
+    "outputs/eight_neighbor_h2_20261127/local_r1"
+  ],
+  "returncode": 1,
+  "traceback": "Traceback (most recent call last):\n  File \"E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\scripts\\run_eight_neighbor_h2.py\", line 741, in main\n    validate(config_path, out)\n  File \"E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\scripts\\run_eight_neighbor_h2.py\", line 156, in validate\n    raise ValueError(\"Actual H2 validation failed; see retained test evidence\")\nValueError: Actual H2 validation failed; see retained test evidence\n",
+  "finished_utc": "2026-11-27T16:41:49.701669+00:00"
+}

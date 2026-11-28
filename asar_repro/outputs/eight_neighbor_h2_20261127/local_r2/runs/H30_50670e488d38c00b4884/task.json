@@ -1,0 +1,13 @@
+{
+  "instance": "lake_h2_d3_s3301",
+  "block_id": "lake_h2_d3",
+  "base_scene": "lake_ontario",
+  "seed": 3301,
+  "manifest_sha256": "cad70abcc9facdbb5d9fd5bd4fedd40c558f35b53348323dc6e173d35a6d73e7",
+  "stage": "H30",
+  "method": "completion_J",
+  "footprint": "axis_square",
+  "connectivity": 4,
+  "repetition": 2,
+  "seconds": 30
+}

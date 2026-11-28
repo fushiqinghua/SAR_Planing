@@ -1,0 +1,188 @@
+{
+  "block_id": "lake_h2_d2",
+  "scene": "lake_ontario",
+  "date": "2025-09-09",
+  "primary": true,
+  "registered_seeds": [
+    3201,
+    3202
+  ],
+  "request_plan": {
+    "wind": [
+      {
+        "valid_utc": "2025-09-09T13:00:00+00:00",
+        "cycle_utc": "2025-09-09T13:00:00+00:00",
+        "lead_hours": 0
+      },
+      {
+        "valid_utc": "2025-09-09T14:00:00+00:00",
+        "cycle_utc": "2025-09-09T14:00:00+00:00",
+        "lead_hours": 0
+      },
+      {
+        "valid_utc": "2025-09-09T15:00:00+00:00",
+        "cycle_utc": "2025-09-09T15:00:00+00:00",
+        "lead_hours": 0
+      },
+      {
+        "valid_utc": "2025-09-09T16:00:00+00:00",
+        "cycle_utc": "2025-09-09T16:00:00+00:00",
+        "lead_hours": 0
+      },
+      {
+        "valid_utc": "2025-09-09T17:00:00+00:00",
+        "cycle_utc": "2025-09-09T17:00:00+00:00",
+        "lead_hours": 0
+      }
+    ],
+    "current_valid_times_utc": [
+      "2025-09-09T13:00:00+00:00",
+      "2025-09-09T14:00:00+00:00",
+      "2025-09-09T15:00:00+00:00",
+      "2025-09-09T16:00:00+00:00",
+      "2025-09-09T17:00:00+00:00"
+    ]
+  },
+  "raw_receipts_sha256": {
+    "data/raw/h2/lake_h2_d2/loofs/loofs.t18z.20250909.fields.n001.nc.source.json": "d180aad04dd88657424c97b2e297e7862cdbe4eb3e139cfd9955bacab5bcd137",
+    "data/raw/h2/lake_h2_d2/loofs/loofs.t18z.20250909.fields.n001.nc.source.v0-provisional-clock.json": "7d37c8b5f27abdf25630b22e37f6588ae791d3658da1ef98d855adfe504ca5a6",
+    "data/raw/h2/lake_h2_d2/loofs/loofs.t18z.20250909.fields.n002.nc.source.json": "f8046d94d91d6a5d095ef5928fb2eca8560580ac9f026cace04243bcccbdeb4a",
+    "data/raw/h2/lake_h2_d2/loofs/loofs.t18z.20250909.fields.n002.nc.source.v0-provisional-clock.json": "5493eba023f77759df5726d3f24865d7da8ca2595430f2c441c5e08841fc69fc",
+    "data/raw/h2/lake_h2_d2/loofs/loofs.t18z.20250909.fields.n003.nc.source.json": "16ef23e78d4fae841efce85a8c866148fc9c7fc57e002367df395b9da55c95d8",
+    "data/raw/h2/lake_h2_d2/loofs/loofs.t18z.20250909.fields.n004.nc.source.json": "6376e8ab276d1bbdf460b3862b4d0a5d2b8e41b5bea2267edc95b20b81bb39ea",
+    "data/raw/h2/lake_h2_d2/loofs/loofs.t18z.20250909.fields.n004.nc.source.v0-provisional-clock.json": "7a76909d97fc9c9f79cf8e3c191404b2e2cceb93f96e494e7d87fdcf30e3fc9a",
+    "data/raw/h2/lake_h2_d2/loofs/loofs.t18z.20250909.fields.n005.nc.source.json": "4f8167e97750dc692678289e613656f7a8425800462d374f10367a9af03abdb6",
+    "data/raw/h2/lake_h2_d2/loofs/loofs.t18z.20250909.fields.n005.nc.source.v0-provisional-clock.json": "33d0936ddd69923ed6950c92ac1d7439479f5b5d8d888f60005f6f3a1f9de6dc",
+    "data/raw/h2/lake_h2_d2/loofs/loofs_18z_provider_listing.xml": "9af3de60938c5cfcb467a3135a0b541572cdb2880154134e4502350242f1027b",
+    "data/raw/h2/lake_h2_d2/loofs/loofs_18z_provider_listing.xml.source.json": "a367bc4a6541a7846d9abfb15796a58782cb5faaaddc4b83b305e0a09cd8d339",
+    "data/raw/h2/lake_h2_d2/noaa_request_receipts.jsonl": "3740d1e484f630c9913fdcf4025273c0a7aa6d86ca942448cbc83c8351a38a78",
+    "data/raw/h2/lake_h2_d2/noaa_wind/hrrr.t13z.wrfsfcf00.grib2.idx": "f73dafd54ecf6153b6c7d14258a2dc208dfa95f35a424c11ce29a82c90e639a5",
+    "data/raw/h2/lake_h2_d2/noaa_wind/hrrr.t13z.wrfsfcf00.grib2.wind10m.grib2.source.json": "3b73c66c6c4b9cc8886ae4cc92206082a852c0fd17c8c9032c112a355b2cfa4f",
+    "data/raw/h2/lake_h2_d2/noaa_wind/hrrr.t14z.wrfsfcf00.grib2.idx": "71c8620ec415f846f733709d64fa60014b44201731d0ac2cc6142d035790e94e",
+    "data/raw/h2/lake_h2_d2/noaa_wind/hrrr.t14z.wrfsfcf00.grib2.wind10m.grib2.source.json": "cbbbf878fbcfd751a93c3599b5473c65128c5942604ad709ad8f6b12d44f60ba",
+    "data/raw/h2/lake_h2_d2/noaa_wind/hrrr.t15z.wrfsfcf00.grib2.idx": "c61fc59cad0c192dab863deeff97173a7806dfbf3d940e92948e3e04cf9b7a4e",
+    "data/raw/h2/lake_h2_d2/noaa_wind/hrrr.t15z.wrfsfcf00.grib2.wind10m.grib2.source.json": "0534426aa8f402835d53b9c09e2c93bef2dd47f2aa18c2c7f9106edc6a84bc8a",
+    "data/raw/h2/lake_h2_d2/noaa_wind/hrrr.t16z.wrfsfcf00.grib2.idx": "10f3e938ed65c6ec465d909ca7ca8ab40db4c358e918feb75c02ee74d6a44c6f",
+    "data/raw/h2/lake_h2_d2/noaa_wind/hrrr.t16z.wrfsfcf00.grib2.wind10m.grib2.source.json": "049aea9c5f683590f2e6f5d4bd1afbf0b60a522f14d280ca4165f5cd9dddc29d",
+    "data/raw/h2/lake_h2_d2/noaa_wind/hrrr.t17z.wrfsfcf00.grib2.idx": "9282dbdc41e14e4b738fc92e4f64a491436d2e4d704172994fb8f8bf8ce2137b",
+    "data/raw/h2/lake_h2_d2/noaa_wind/hrrr.t17z.wrfsfcf00.grib2.wind10m.grib2.source.json": "680dd6c080972fff64a888a8b1e382882c6581d06753bc49ba0620a76732ca77"
+  },
+  "source_manifest": "sources/lake_h2_d2/qualification/20261127T170123068228Z/source_manifest.json",
+  "source_manifest_sha256": "2f25b55cc36e0934a2f20daa126dbc7fa87c39feeffd8abfd97f24dbed5a67c9",
+  "acquisition_files": {
+    "sources/lake_h2_d2/noaa.json": "2f25b55cc36e0934a2f20daa126dbc7fa87c39feeffd8abfd97f24dbed5a67c9"
+  },
+  "status": "eligible",
+  "checks": {
+    "forcing_kind": "historical_real",
+    "status": "eligible",
+    "native_window_utc": [
+      "2025-09-09T14:45:00Z",
+      "2025-09-09T15:53:00Z"
+    ],
+    "fields": {
+      "wind": {
+        "valid_times_utc": [
+          "2025-09-09T13:00:00+00:00",
+          "2025-09-09T14:00:00+00:00",
+          "2025-09-09T15:00:00+00:00",
+          "2025-09-09T16:00:00+00:00",
+          "2025-09-09T17:00:00+00:00"
+        ],
+        "shape": [
+          5,
+          1059,
+          1799,
+          2
+        ],
+        "metadata": {
+          "vector_basis": "grid_relative",
+          "native_variables": [
+            "UGRD",
+            "VGRD"
+          ],
+          "height_m": 10,
+          "spatial_method": "bilinear in native Lambert grid, then rotate at query"
+        },
+        "lkp_csp_probe_count": 274,
+        "lkp_csp_min_m_s": [
+          [
+            0.0628139541653252,
+            3.087670859107492
+          ],
+          [
+            0.05864455522422163,
+            2.9478386191575017
+          ]
+        ],
+        "lkp_csp_max_m_s": [
+          [
+            0.8493227445123931,
+            3.770589146484272
+          ],
+          [
+            0.9860570513814351,
+            3.6887667228594805
+          ]
+        ]
+      },
+      "current": {
+        "valid_times_utc": [
+          "2025-09-09T13:00:00+00:00",
+          "2025-09-09T14:00:00+00:00",
+          "2025-09-09T15:00:00+00:00",
+          "2025-09-09T16:00:00+00:00",
+          "2025-09-09T17:00:00+00:00"
+        ],
+        "shape": [
+          5,
+          64453,
+          3
+        ],
+        "metadata": {
+          "vector_basis": "geographic_east_north",
+          "native_variables": [
+            "u",
+            "v"
+          ],
+          "spatial_method": "constant on containing native FVCOM face",
+          "sigma_index": 0,
+          "sigma": -0.02500000037252903,
+          "top_layer_center_depth_m": [
+            0.02310504724241863,
+            5.70925166620689
+          ],
+          "lon_lat_bounds": [
+            -79.80072021484375,
+            -76.05899047851562,
+            43.180450439453125,
+            44.22895431518555
+          ],
+          "projection": "proj=utm +zone=16 +datum=NAD83",
+          "node_projection_residual_m": 0.2596666113792793
+        },
+        "lkp_csp_probe_count": 274,
+        "lkp_csp_min_m_s": [
+          [
+            0.18910950422286987,
+            0.07146182470023632
+          ],
+          [
+            0.1657971888780594,
+            0.06164548173546791
+          ]
+        ],
+        "lkp_csp_max_m_s": [
+          [
+            0.196258241434892,
+            0.10286427674194176
+          ],
+          [
+            0.17545898680885633,
+            0.08238483605285486
+          ]
+        ]
+      }
+    }
+  }
+}

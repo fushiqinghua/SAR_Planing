@@ -1,0 +1,12 @@
+{
+  "bytes": 2735,
+  "local_path": "data/raw/h2/lake_h2_d3/loofs/loofs_18z_provider_listing.xml",
+  "response": {
+    "content-type": "application/xml",
+    "http_status": 200,
+    "x-amz-id-2": "8C2/A2QLQntHwMiKVl8xrTv73unaFWUcZZ/Q1cddJTC5KVK6ufFcE5JWxG7yExSlH7OsrHBJ6rs=",
+    "x-amz-request-id": "FEQM99F14M67W25G"
+  },
+  "sha256": "5e2205a52f9ffbb249448319bb3cd5cb23f2c82963579b66231502d3af07e163",
+  "source_url": "https://noaa-nos-ofs-pds.s3.amazonaws.com/?list-type=2&prefix=loofs%2Fnetcdf%2F2025%2F09%2F23%2Floofs.t18z.20250923.fields.n"
+}

@@ -1,0 +1,64 @@
+{
+  "byte_ranges": [
+    {
+      "end_inclusive": 45023599,
+      "index_line": "77:42880128:d=2025090913:UGRD:10 m above ground:anl:",
+      "level": "10 m above ground",
+      "response": {
+        "content-length": "2143472",
+        "content-range": "bytes 42880128-45023599/141211399",
+        "content-type": "binary/octet-stream",
+        "etag": "\"c3a582031b318ce3c0c6db6e5b320961\"",
+        "http_status": 206,
+        "last-modified": "Tue, 09 Sep 2025 13:51:37 GMT",
+        "x-amz-id-2": "QwPuTLbeFuP29bDYA/ocdYpQixMrKK/MFBXjJ91dq6vAth4Jng3BC2XQRKTg4XIJ5a9/mlWcYJPsmK1udjjG9Qq8yFYzEfP8",
+        "x-amz-request-id": "268NNZBZKYR7BXKJ"
+      },
+      "sha256": "f2e049ee0b79dd2e6a984420ea049cc3c9ab211bd220bc4a601b595376c148a6",
+      "start": 42880128,
+      "variable": "UGRD"
+    },
+    {
+      "end_inclusive": 47167071,
+      "index_line": "78:45023600:d=2025090913:VGRD:10 m above ground:anl:",
+      "level": "10 m above ground",
+      "response": {
+        "content-length": "2143472",
+        "content-range": "bytes 45023600-47167071/141211399",
+        "content-type": "binary/octet-stream",
+        "etag": "\"c3a582031b318ce3c0c6db6e5b320961\"",
+        "http_status": 206,
+        "last-modified": "Tue, 09 Sep 2025 13:51:37 GMT",
+        "x-amz-id-2": "1fycOGauMbzfAO8b7MS2q0FJnOuz8NvE0MJE7RUW/ifyp6u3xpPERIHXDKclLeJf2ViA9koDTrmOU621nQAZK4T2zw8qdZe5",
+        "x-amz-request-id": "YNEJXVSQEXY3GYAS"
+      },
+      "sha256": "c5acbd07af8983d6027dcd1a9a196b04137ce621f15a00a03d4e386f76c13934",
+      "start": 45023600,
+      "variable": "VGRD"
+    }
+  ],
+  "bytes": 4286944,
+  "forecast_or_analysis": "analysis_f00",
+  "index_path": "data/raw/h2/lake_h2_d2/noaa_wind/hrrr.t13z.wrfsfcf00.grib2.idx",
+  "index_response": {
+    "content-length": "9000",
+    "content-type": "binary/octet-stream",
+    "etag": "\"4e0f1d379fb14672ac23967ea37bf5fd\"",
+    "http_status": 200,
+    "last-modified": "Tue, 09 Sep 2025 13:51:41 GMT",
+    "x-amz-id-2": "uJFKKjBjiKclL9cZtPVLZZZlpBH8vUVImx5JWUL2TruH8gF1kKBh3GNPaP6t+2Xkyals1VcoF9F3e7qbe6sOhMwCXXZFdHXu",
+    "x-amz-request-id": "CGJ5H7G713P7WCZP"
+  },
+  "index_sha256": "f73dafd54ecf6153b6c7d14258a2dc208dfa95f35a424c11ce29a82c90e639a5",
+  "index_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250909/conus/hrrr.t13z.wrfsfcf00.grib2.idx",
+  "lead_hours": 0,
+  "local_path": "data/raw/h2/lake_h2_d2/noaa_wind/hrrr.t13z.wrfsfcf00.grib2.wind10m.grib2",
+  "product": "HRRR",
+  "run_cycle_utc": "2025-09-09T13:00:00Z",
+  "sha256": "8f38209502d28ca2a47e781fc8d89e4e4ef05e8e15d44288d863de5e6950a02d",
+  "source_kind": "byte_exact_selected_original_grib_messages",
+  "source_object_bytes": 141211399,
+  "source_object_etag": "\"c3a582031b318ce3c0c6db6e5b320961\"",
+  "source_url": "https://noaa-hrrr-bdp-pds.s3.amazonaws.com/hrrr.20250909/conus/hrrr.t13z.wrfsfcf00.grib2",
+  "valid_utc": "2025-09-09T13:00:00Z"
+}

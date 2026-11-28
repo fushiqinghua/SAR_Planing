@@ -1,0 +1,30 @@
+{
+  "block_id": "hudson_h2_d1",
+  "product": "ESPC-D-V02",
+  "attempt": 1,
+  "requested_utc": "2026-11-27T16:38:06.705876+00:00",
+  "catalog_url": "https://ncss.hycom.org/thredds/catalogs/ESPC-D-V02_ice.html?dataset=ESPC-D-V02-ice-2025",
+  "source_url": "https://ncss.hycom.org/thredds/ncss/grid/ESPC-D-V02/ice/2025?var=ssu&var=ssv&var=sic&north=64.0&south=61.5&west=268&east=271.5&horizStride=1&time_start=2025-08-16T00%3A00%3A00Z&time_end=2025-08-16T03%3A00%3A00Z&timeStride=1&addLatLon=true&accept=netcdf4",
+  "valid_times_utc": [
+    "2025-08-16T00:00:00+00:00",
+    "2025-08-16T01:00:00+00:00",
+    "2025-08-16T02:00:00+00:00",
+    "2025-08-16T03:00:00+00:00"
+  ],
+  "http_status": 200,
+  "http_headers": {
+    "Content-Type": "application/x-netcdf4",
+    "Content-Length": null,
+    "Content-Disposition": "attachment; filename=ice_2025.nc4",
+    "Last-Modified": null,
+    "Date": "Fri, 27 Nov 2026 16:38:08 GMT",
+    "ETag": null
+  },
+  "bytes": 95329,
+  "sha256": "aab919ddff610e71961591d71e9327818663a447db71d5dd8bea85295cc0dd02",
+  "local_path": "data/raw/h2/hudson_h2_d1/hycom/ESPC-D-V02_surface_20250816.nc",
+  "receipt_path": "data/raw/h2/hudson_h2_d1/hycom/ESPC-D-V02_surface_20250816.attempt-1.json",
+  "status": "rejected_data",
+  "error": "HYCOM lon is not the increasing unstrided native 0.08 degree axis",
+  "audit": null
+}

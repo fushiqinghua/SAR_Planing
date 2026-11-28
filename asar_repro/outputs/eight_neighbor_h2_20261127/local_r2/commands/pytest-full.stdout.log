@@ -1,0 +1,164 @@
+
+=================================== ERRORS ====================================
+_______________ ERROR collecting tests/test_adaptive_search.py ________________
+ImportError while importing test module 'E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\tests\test_adaptive_search.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\35448\.conda\envs\maritime-sar\Lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_adaptive_search.py:6: in <module>
+    from asar_repro.adaptive_search import search_adaptive
+E   ModuleNotFoundError: No module named 'asar_repro'
+______________ ERROR collecting tests/test_additional_forcing.py ______________
+ImportError while importing test module 'E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\tests\test_additional_forcing.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\35448\.conda\envs\maritime-sar\Lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_additional_forcing.py:8: in <module>
+    from asar_repro.additional_forcing import collocate_rotate,TopologyTriangles,cf_times,checked_sources,hycom_field
+E   ModuleNotFoundError: No module named 'asar_repro'
+________________ ERROR collecting tests/test_anytime_search.py ________________
+ImportError while importing test module 'E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\tests\test_anytime_search.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\35448\.conda\envs\maritime-sar\Lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_anytime_search.py:8: in <module>
+    import asar_repro.anytime_search as anytime_module
+E   ModuleNotFoundError: No module named 'asar_repro'
+________________ ERROR collecting tests/test_b1_additional.py _________________
+ImportError while importing test module 'E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\tests\test_b1_additional.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\35448\.conda\envs\maritime-sar\Lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_b1_additional.py:17: in <module>
+    from b1_gfs import complex_values, decode, regular_grid
+scripts\b1_gfs.py:15: in <module>
+    from asar_repro.hrrr import grib_sections, require
+E   ModuleNotFoundError: No module named 'asar_repro'
+_________________ ERROR collecting tests/test_b1_inventory.py _________________
+ImportError while importing test module 'E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\tests\test_b1_inventory.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\35448\.conda\envs\maritime-sar\Lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_b1_inventory.py:17: in <module>
+    import fetch_lake_b1 as fetch
+scripts\fetch_lake_b1.py:16: in <module>
+    from inventory_historical import ROOT, NOS, utc_datetime, windows, utc_text
+scripts\inventory_historical.py:20: in <module>
+    from asar_repro.opendrift_adapter import planning_times, utc_datetime
+E   ModuleNotFoundError: No module named 'asar_repro'
+__________________ ERROR collecting tests/test_b1_package.py __________________
+ImportError while importing test module 'E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\tests\test_b1_package.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\35448\.conda\envs\maritime-sar\Lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_b1_package.py:12: in <module>
+    import inventory_historical as inv
+scripts\inventory_historical.py:20: in <module>
+    from asar_repro.opendrift_adapter import planning_times, utc_datetime
+E   ModuleNotFoundError: No module named 'asar_repro'
+_________________ ERROR collecting tests/test_b4_artifacts.py _________________
+ImportError while importing test module 'E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\tests\test_b4_artifacts.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\35448\.conda\envs\maritime-sar\Lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_b4_artifacts.py:11: in <module>
+    from asar_repro.scenarios import digest
+E   ModuleNotFoundError: No module named 'asar_repro'
+_________________ ERROR collecting tests/test_b5_benchmark.py _________________
+ImportError while importing test module 'E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\tests\test_b5_benchmark.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\35448\.conda\envs\maritime-sar\Lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_b5_benchmark.py:12: in <module>
+    from asar_repro.oracle import enumerate_oracle
+E   ModuleNotFoundError: No module named 'asar_repro'
+________________ ERROR collecting tests/test_b6_comparison.py _________________
+ImportError while importing test module 'E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\tests\test_b6_comparison.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\35448\.conda\envs\maritime-sar\Lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_b6_comparison.py:13: in <module>
+    import compare_b6 as b6
+scripts\compare_b6.py:10: in <module>
+    from benchmark_b5 import ROOT, load_input, prepare_warm, isolated_run, manifest, read_json, save_json
+scripts\benchmark_b5.py:25: in <module>
+    from asar_repro.grid import GridGraph
+E   ModuleNotFoundError: No module named 'asar_repro'
+________________ ERROR collecting tests/test_b7_validation.py _________________
+ImportError while importing test module 'E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\tests\test_b7_validation.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\35448\.conda\envs\maritime-sar\Lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_b7_validation.py:12: in <module>
+    import validate_baseline_v1_1 as b7
+scripts\validate_baseline_v1_1.py:17: in <module>
+    from benchmark_b5 import ROOT, read_json, save_json, load_input
+scripts\benchmark_b5.py:25: in <module>
+    from asar_repro.grid import GridGraph
+E   ModuleNotFoundError: No module named 'asar_repro'
+____________________ ERROR collecting tests/test_belief.py ____________________
+ImportError while importing test module 'E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\tests\test_belief.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\35448\.conda\envs\maritime-sar\Lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_belief.py:5: in <module>
+    from asar_repro.belief import detect, initial_belief
+E   ModuleNotFoundError: No module named 'asar_repro'
+_____________ ERROR collecting tests/test_compact_particle_dp.py ______________
+ImportError while importing test module 'E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\tests\test_compact_particle_dp.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\35448\.conda\envs\maritime-sar\Lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_compact_particle_dp.py:7: in <module>
+    import asar_repro.compact_particle_dp as compact_module
+E   ModuleNotFoundError: No module named 'asar_repro'
+_________________ ERROR collecting tests/test_count_oracle.py _________________
+ImportError while importing test module 'E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\tests\test_count_oracle.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\35448\.conda\envs\maritime-sar\Lib\importlib\__init__.py:126: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tests\test_count_oracle.py:9: in <module>
+    from asar_repro.count_oracle import (
+E   ModuleNotFoundError: No module named 'asar_repro'
+=========================== short test summary info ===========================
+ERROR tests/test_adaptive_search.py
+ERROR tests/test_additional_forcing.py
+ERROR tests/test_anytime_search.py
+ERROR tests/test_b1_additional.py
+ERROR tests/test_b1_inventory.py
+ERROR tests/test_b1_package.py
+ERROR tests/test_b4_artifacts.py
+ERROR tests/test_b5_benchmark.py
+ERROR tests/test_b6_comparison.py
+ERROR tests/test_b7_validation.py
+ERROR tests/test_belief.py
+ERROR tests/test_compact_particle_dp.py
+ERROR tests/test_count_oracle.py
+!!!!!!!!!!!!!!!!!! Interrupted: 13 errors during collection !!!!!!!!!!!!!!!!!!!
+13 errors in 8.80s

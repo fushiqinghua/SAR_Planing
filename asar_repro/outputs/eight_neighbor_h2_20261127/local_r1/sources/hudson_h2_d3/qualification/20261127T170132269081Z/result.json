@@ -1,0 +1,494 @@
+{
+  "block_id": "hudson_h2_d3",
+  "scene": "arctic_ocean",
+  "date": "2025-09-26",
+  "primary": true,
+  "registered_seeds": [
+    4301,
+    4302
+  ],
+  "request_plan": {
+    "wind": [
+      {
+        "valid_utc": "2025-09-25T21:00:00+00:00",
+        "cycle_utc": "2025-09-25T18:00:00+00:00",
+        "lead_hours": 3
+      },
+      {
+        "valid_utc": "2025-09-26T00:00:00+00:00",
+        "cycle_utc": "2025-09-25T18:00:00+00:00",
+        "lead_hours": 6
+      },
+      {
+        "valid_utc": "2025-09-26T03:00:00+00:00",
+        "cycle_utc": "2025-09-25T18:00:00+00:00",
+        "lead_hours": 9
+      },
+      {
+        "valid_utc": "2025-09-26T06:00:00+00:00",
+        "cycle_utc": "2025-09-25T18:00:00+00:00",
+        "lead_hours": 12
+      },
+      {
+        "valid_utc": "2025-09-26T09:00:00+00:00",
+        "cycle_utc": "2025-09-25T18:00:00+00:00",
+        "lead_hours": 15
+      },
+      {
+        "valid_utc": "2025-09-26T12:00:00+00:00",
+        "cycle_utc": "2025-09-25T18:00:00+00:00",
+        "lead_hours": 18
+      },
+      {
+        "valid_utc": "2025-09-26T15:00:00+00:00",
+        "cycle_utc": "2025-09-25T18:00:00+00:00",
+        "lead_hours": 21
+      },
+      {
+        "valid_utc": "2025-09-26T18:00:00+00:00",
+        "cycle_utc": "2025-09-25T18:00:00+00:00",
+        "lead_hours": 24
+      },
+      {
+        "valid_utc": "2025-09-26T21:00:00+00:00",
+        "cycle_utc": "2025-09-25T18:00:00+00:00",
+        "lead_hours": 27
+      },
+      {
+        "valid_utc": "2025-09-27T00:00:00+00:00",
+        "cycle_utc": "2025-09-25T18:00:00+00:00",
+        "lead_hours": 30
+      },
+      {
+        "valid_utc": "2025-09-27T03:00:00+00:00",
+        "cycle_utc": "2025-09-25T18:00:00+00:00",
+        "lead_hours": 33
+      }
+    ],
+    "current_valid_times_utc": [
+      "2025-09-25T21:00:00+00:00",
+      "2025-09-25T22:00:00+00:00",
+      "2025-09-25T23:00:00+00:00",
+      "2025-09-26T00:00:00+00:00",
+      "2025-09-26T01:00:00+00:00",
+      "2025-09-26T02:00:00+00:00",
+      "2025-09-26T03:00:00+00:00",
+      "2025-09-26T04:00:00+00:00",
+      "2025-09-26T05:00:00+00:00",
+      "2025-09-26T06:00:00+00:00",
+      "2025-09-26T07:00:00+00:00",
+      "2025-09-26T08:00:00+00:00",
+      "2025-09-26T09:00:00+00:00",
+      "2025-09-26T10:00:00+00:00",
+      "2025-09-26T11:00:00+00:00",
+      "2025-09-26T12:00:00+00:00",
+      "2025-09-26T13:00:00+00:00",
+      "2025-09-26T14:00:00+00:00",
+      "2025-09-26T15:00:00+00:00",
+      "2025-09-26T16:00:00+00:00",
+      "2025-09-26T17:00:00+00:00",
+      "2025-09-26T18:00:00+00:00",
+      "2025-09-26T19:00:00+00:00",
+      "2025-09-26T20:00:00+00:00",
+      "2025-09-26T21:00:00+00:00",
+      "2025-09-26T22:00:00+00:00",
+      "2025-09-26T23:00:00+00:00",
+      "2025-09-27T00:00:00+00:00",
+      "2025-09-27T01:00:00+00:00",
+      "2025-09-27T02:00:00+00:00",
+      "2025-09-27T03:00:00+00:00"
+    ],
+    "hycom_requests": [
+      {
+        "filename": "ESPC-D-V02_surface_20250925.nc",
+        "source_url": "https://ncss.hycom.org/thredds/ncss/grid/ESPC-D-V02/ice/2025?var=ssu&var=ssv&var=sic&north=64.0&south=61.5&west=268&east=271.5&horizStride=1&time_start=2025-09-25T21%3A00%3A00Z&time_end=2025-09-25T23%3A00%3A00Z&timeStride=1&addLatLon=true&accept=netcdf4",
+        "valid_times_utc": [
+          "2025-09-25T21:00:00+00:00",
+          "2025-09-25T22:00:00+00:00",
+          "2025-09-25T23:00:00+00:00"
+        ]
+      },
+      {
+        "filename": "ESPC-D-V02_surface_20250926.nc",
+        "source_url": "https://ncss.hycom.org/thredds/ncss/grid/ESPC-D-V02/ice/2025?var=ssu&var=ssv&var=sic&north=64.0&south=61.5&west=268&east=271.5&horizStride=1&time_start=2025-09-26T00%3A00%3A00Z&time_end=2025-09-26T23%3A00%3A00Z&timeStride=1&addLatLon=true&accept=netcdf4",
+        "valid_times_utc": [
+          "2025-09-26T00:00:00+00:00",
+          "2025-09-26T01:00:00+00:00",
+          "2025-09-26T02:00:00+00:00",
+          "2025-09-26T03:00:00+00:00",
+          "2025-09-26T04:00:00+00:00",
+          "2025-09-26T05:00:00+00:00",
+          "2025-09-26T06:00:00+00:00",
+          "2025-09-26T07:00:00+00:00",
+          "2025-09-26T08:00:00+00:00",
+          "2025-09-26T09:00:00+00:00",
+          "2025-09-26T10:00:00+00:00",
+          "2025-09-26T11:00:00+00:00",
+          "2025-09-26T12:00:00+00:00",
+          "2025-09-26T13:00:00+00:00",
+          "2025-09-26T14:00:00+00:00",
+          "2025-09-26T15:00:00+00:00",
+          "2025-09-26T16:00:00+00:00",
+          "2025-09-26T17:00:00+00:00",
+          "2025-09-26T18:00:00+00:00",
+          "2025-09-26T19:00:00+00:00",
+          "2025-09-26T20:00:00+00:00",
+          "2025-09-26T21:00:00+00:00",
+          "2025-09-26T22:00:00+00:00",
+          "2025-09-26T23:00:00+00:00"
+        ]
+      },
+      {
+        "filename": "ESPC-D-V02_surface_20250927.nc",
+        "source_url": "https://ncss.hycom.org/thredds/ncss/grid/ESPC-D-V02/ice/2025?var=ssu&var=ssv&var=sic&north=64.0&south=61.5&west=268&east=271.5&horizStride=1&time_start=2025-09-27T00%3A00%3A00Z&time_end=2025-09-27T03%3A00%3A00Z&timeStride=1&addLatLon=true&accept=netcdf4",
+        "valid_times_utc": [
+          "2025-09-27T00:00:00+00:00",
+          "2025-09-27T01:00:00+00:00",
+          "2025-09-27T02:00:00+00:00",
+          "2025-09-27T03:00:00+00:00"
+        ]
+      }
+    ]
+  },
+  "raw_receipts_sha256": {
+    "data/raw/h2/hudson_h2_d3/hycom/ESPC-D-V02_surface_20250925.attempt-1.json": "9af0fe2ba7657575238ace824af4f88ed00bd7f59bc575dbbbb9810226de02c6",
+    "data/raw/h2/hudson_h2_d3/hycom/ESPC-D-V02_surface_20250925.local-audit-v2.json": "edf7209363265197bfb252d30449febe570eabb6e794b574dc034dc4729eba0e",
+    "data/raw/h2/hudson_h2_d3/hycom/ESPC-D-V02_surface_20250926.attempt-1.json": "63db06c03ea73584c35f58b4b9805898bb0a030e5a1cbd216c80daf5b3dcf0ed",
+    "data/raw/h2/hudson_h2_d3/hycom/ESPC-D-V02_surface_20250926.attempt-2.json": "0da4f99a48ef59126c2fdef64cd27a1900ebf8c7ee619da3f18709573e7a39ff",
+    "data/raw/h2/hudson_h2_d3/hycom/ESPC-D-V02_surface_20250926.local-audit-v2.json": "016a7b5d46067fbd94bfe5cbc46823210cadcda2fd02aa78fdf1fb66fc1fd9b3",
+    "data/raw/h2/hudson_h2_d3/hycom/ESPC-D-V02_surface_20250927.attempt-1.json": "01968781eece1bea43615ce68da8f971f1b34fc5cc6c5b139962aa23137fee33",
+    "data/raw/h2/hudson_h2_d3/hycom/ESPC-D-V02_surface_20250927.local-audit-v2.json": "4efd21d62334dd0ba6b6b9da0399abed7fb352f9348621345679ae53f3afb70b",
+    "data/raw/h2/hudson_h2_d3/noaa_request_receipts.jsonl": "1be2c27226b9d83dc1751f9e3749e4972c09a7d55711b96ddd6681a50beeae3f",
+    "data/raw/h2/hudson_h2_d3/noaa_wind/gfs.t18z.pgrb2.0p25.f003.idx": "85d96cf2a7a52675494de989849d6ec74bb2deafd96d03a0f5e153251ffe3cfe",
+    "data/raw/h2/hudson_h2_d3/noaa_wind/gfs.t18z.pgrb2.0p25.f003.wind10m.grib2.source.json": "a4c45abec28b3ca91923c6bdbbdb139c9a102e963267b3dc92a9841d6f3b2dee",
+    "data/raw/h2/hudson_h2_d3/noaa_wind/gfs.t18z.pgrb2.0p25.f006.idx": "6a83925cd095e06eb398b7a798665d373134ddfd8377b776a96c1ef9f7bb9748",
+    "data/raw/h2/hudson_h2_d3/noaa_wind/gfs.t18z.pgrb2.0p25.f006.wind10m.grib2.source.json": "1f543d3f70fcef168740350f3a2e1328fd6e695ab1bad6e9f02455728391d5c5",
+    "data/raw/h2/hudson_h2_d3/noaa_wind/gfs.t18z.pgrb2.0p25.f009.idx": "3575996eda532c8115cc7f31b73c44bfd5861400982e9be5b8e8b04645f2962c",
+    "data/raw/h2/hudson_h2_d3/noaa_wind/gfs.t18z.pgrb2.0p25.f009.wind10m.grib2.source.json": "6e26823397bd5ac0c22bbb81fc53860888bf944afd4d74b920a96482535c0408",
+    "data/raw/h2/hudson_h2_d3/noaa_wind/gfs.t18z.pgrb2.0p25.f012.idx": "5c816d0d49238df491ab36e9360e36559fa268e8ac3508cbfe6048afbe53ed21",
+    "data/raw/h2/hudson_h2_d3/noaa_wind/gfs.t18z.pgrb2.0p25.f012.wind10m.grib2.source.json": "d6c80910df5d71680f83c287fe7dafda13b0622912f1434ee98222cc9124cccb",
+    "data/raw/h2/hudson_h2_d3/noaa_wind/gfs.t18z.pgrb2.0p25.f015.idx": "4c8949a849cf23aae3d7aebc69fae2f2960190526e84f0a2d754fbc6b0d11c2b",
+    "data/raw/h2/hudson_h2_d3/noaa_wind/gfs.t18z.pgrb2.0p25.f015.wind10m.grib2.source.json": "009b096dcf560c04448a76b7ef9a0392a279f05c93fecf7ebcb8868dbd00ed88",
+    "data/raw/h2/hudson_h2_d3/noaa_wind/gfs.t18z.pgrb2.0p25.f018.idx": "b14381d748efe880f6f5db141703b8aad25f678455f2cc7345664023d690639a",
+    "data/raw/h2/hudson_h2_d3/noaa_wind/gfs.t18z.pgrb2.0p25.f018.wind10m.grib2.source.json": "b89a36e9dc072f1ddf527c99e0ea37e21d8f9470a3986c2455c95027501d2f5b",
+    "data/raw/h2/hudson_h2_d3/noaa_wind/gfs.t18z.pgrb2.0p25.f021.idx": "af21be3db5ee50b999a3281e25c9e4074d5794a7f5818c1f4e7e545ef5f244a3",
+    "data/raw/h2/hudson_h2_d3/noaa_wind/gfs.t18z.pgrb2.0p25.f021.wind10m.grib2.source.json": "ac4090da7049609f278bf8e97ab5456c648d81fdb24c614792abcce2f6f1327d",
+    "data/raw/h2/hudson_h2_d3/noaa_wind/gfs.t18z.pgrb2.0p25.f024.idx": "d31c044ba7ed6b8c215d0cc9d48dc31f89d93b19db14621a479f320453e112c2",
+    "data/raw/h2/hudson_h2_d3/noaa_wind/gfs.t18z.pgrb2.0p25.f024.wind10m.grib2.source.json": "a48c7b11db2684ac61987ee22b76422faa24a096ea02e0429d59754da9639b45",
+    "data/raw/h2/hudson_h2_d3/noaa_wind/gfs.t18z.pgrb2.0p25.f027.idx": "6fc357ba377adef9610e36a099aa043c264f7d7bdf46b7400121c03eff21121e",
+    "data/raw/h2/hudson_h2_d3/noaa_wind/gfs.t18z.pgrb2.0p25.f027.wind10m.grib2.source.json": "8c3707ca1dd2d049d58ac82d47d551fccc50e10fafcb0b0492d062d6f64a2b7e",
+    "data/raw/h2/hudson_h2_d3/noaa_wind/gfs.t18z.pgrb2.0p25.f030.idx": "11693192d7aeb0312789d25c7897c1a59ed90fd18862978640997262a50888eb",
+    "data/raw/h2/hudson_h2_d3/noaa_wind/gfs.t18z.pgrb2.0p25.f030.wind10m.grib2.source.json": "28928e5f1fae44023852daa8a50c4ae4775e7892a69026e4d57be989e7a58720",
+    "data/raw/h2/hudson_h2_d3/noaa_wind/gfs.t18z.pgrb2.0p25.f033.idx": "a8f82e3dbd2ce9085c726aa27087a46b8c5ee21184f6568d95852fb46ae4ca37",
+    "data/raw/h2/hudson_h2_d3/noaa_wind/gfs.t18z.pgrb2.0p25.f033.wind10m.grib2.source.json": "95ace6cda0ec815b1c19ffab9745f42341d84fd3c41703b0502342b59227a80a"
+  },
+  "source_manifest": "sources/hudson_h2_d3/qualification/20261127T170132269081Z/source_manifest.json",
+  "source_manifest_sha256": "70c467db44e047f74f6dba4720a313b3061ffbdf8fe74aa2a1f7905e2a181bf9",
+  "acquisition_files": {
+    "sources/hudson_h2_d3/noaa.json": "80c0d466ade03e6ee2884e4f84f987c82e5b06e5291d9366c0064770b2410e7e",
+    "sources/hudson_h2_d3/hycom.json": "3f9ca0a447fc78f2b4c49cd50466f344c1c1cfe8e27a8d82d4fbeb4b20cc87cc"
+  },
+  "status": "eligible",
+  "checks": {
+    "forcing_kind": "historical_real",
+    "status": "eligible",
+    "native_window_utc": [
+      "2025-09-26T00:00:00Z",
+      "2025-09-27T00:48:00Z"
+    ],
+    "fields": {
+      "wind": {
+        "valid_times_utc": [
+          "2025-09-25T21:00:00+00:00",
+          "2025-09-26T00:00:00+00:00",
+          "2025-09-26T03:00:00+00:00",
+          "2025-09-26T06:00:00+00:00",
+          "2025-09-26T09:00:00+00:00",
+          "2025-09-26T12:00:00+00:00",
+          "2025-09-26T15:00:00+00:00",
+          "2025-09-26T18:00:00+00:00",
+          "2025-09-26T21:00:00+00:00",
+          "2025-09-27T00:00:00+00:00",
+          "2025-09-27T03:00:00+00:00"
+        ],
+        "shape": [
+          11,
+          16,
+          30,
+          2
+        ],
+        "metadata": {
+          "vector_basis": "geographic_east_north",
+          "native_variables": [
+            "UGRD",
+            "VGRD"
+          ],
+          "height_m": 10,
+          "spatial_method": "native bilinear",
+          "roi_lon_lat": [
+            -93.58507263846168,
+            -87.46192736153832,
+            61.422363636363634,
+            64.21363636363637
+          ],
+          "grid_spacing_deg": 0.25
+        },
+        "lkp_csp_probe_count": 1490,
+        "lkp_csp_min_m_s": [
+          [
+            -0.8843861523437475,
+            -6.708556835937526
+          ],
+          [
+            -0.9601595923437494,
+            -7.272703075937492
+          ]
+        ],
+        "lkp_csp_max_m_s": [
+          [
+            1.5347207031249859,
+            3.6364083333333355
+          ],
+          [
+            1.3219949431250082,
+            3.6302161626666676
+          ]
+        ]
+      },
+      "current": {
+        "valid_times_utc": [
+          "2025-09-25T21:00:00+00:00",
+          "2025-09-25T22:00:00+00:00",
+          "2025-09-25T23:00:00+00:00",
+          "2025-09-26T00:00:00+00:00",
+          "2025-09-26T01:00:00+00:00",
+          "2025-09-26T02:00:00+00:00",
+          "2025-09-26T03:00:00+00:00",
+          "2025-09-26T04:00:00+00:00",
+          "2025-09-26T05:00:00+00:00",
+          "2025-09-26T06:00:00+00:00",
+          "2025-09-26T07:00:00+00:00",
+          "2025-09-26T08:00:00+00:00",
+          "2025-09-26T09:00:00+00:00",
+          "2025-09-26T10:00:00+00:00",
+          "2025-09-26T11:00:00+00:00",
+          "2025-09-26T12:00:00+00:00",
+          "2025-09-26T13:00:00+00:00",
+          "2025-09-26T14:00:00+00:00",
+          "2025-09-26T15:00:00+00:00",
+          "2025-09-26T16:00:00+00:00",
+          "2025-09-26T17:00:00+00:00",
+          "2025-09-26T18:00:00+00:00",
+          "2025-09-26T19:00:00+00:00",
+          "2025-09-26T20:00:00+00:00",
+          "2025-09-26T21:00:00+00:00",
+          "2025-09-26T22:00:00+00:00",
+          "2025-09-26T23:00:00+00:00",
+          "2025-09-27T00:00:00+00:00",
+          "2025-09-27T01:00:00+00:00",
+          "2025-09-27T02:00:00+00:00",
+          "2025-09-27T03:00:00+00:00"
+        ],
+        "shape": [
+          31,
+          63,
+          45,
+          2
+        ],
+        "metadata": {
+          "vector_basis": "geographic_east_north",
+          "native_variables": [
+            "ssu",
+            "ssv"
+          ],
+          "spatial_method": "native bilinear with missing velocities masked",
+          "ice_policy": "zero on every paired wet sample",
+          "ice_audit": [
+            {
+              "wet_counts": [
+                2255,
+                2255,
+                2255
+              ],
+              "unknown_ice_counts": [
+                0,
+                0,
+                0
+              ],
+              "nonzero_ice_counts": [
+                0,
+                0,
+                0
+              ],
+              "valid_times_utc": [
+                "2025-09-25T21:00:00+00:00",
+                "2025-09-25T22:00:00+00:00",
+                "2025-09-25T23:00:00+00:00"
+              ]
+            },
+            {
+              "wet_counts": [
+                2255,
+                2255,
+                2255,
+                2255,
+                2255,
+                2255,
+                2255,
+                2255,
+                2255,
+                2255,
+                2255,
+                2255,
+                2255,
+                2255,
+                2255,
+                2255,
+                2255,
+                2255,
+                2255,
+                2255,
+                2255,
+                2255,
+                2255,
+                2255
+              ],
+              "unknown_ice_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "nonzero_ice_counts": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "valid_times_utc": [
+                "2025-09-26T00:00:00+00:00",
+                "2025-09-26T01:00:00+00:00",
+                "2025-09-26T02:00:00+00:00",
+                "2025-09-26T03:00:00+00:00",
+                "2025-09-26T04:00:00+00:00",
+                "2025-09-26T05:00:00+00:00",
+                "2025-09-26T06:00:00+00:00",
+                "2025-09-26T07:00:00+00:00",
+                "2025-09-26T08:00:00+00:00",
+                "2025-09-26T09:00:00+00:00",
+                "2025-09-26T10:00:00+00:00",
+                "2025-09-26T11:00:00+00:00",
+                "2025-09-26T12:00:00+00:00",
+                "2025-09-26T13:00:00+00:00",
+                "2025-09-26T14:00:00+00:00",
+                "2025-09-26T15:00:00+00:00",
+                "2025-09-26T16:00:00+00:00",
+                "2025-09-26T17:00:00+00:00",
+                "2025-09-26T18:00:00+00:00",
+                "2025-09-26T19:00:00+00:00",
+                "2025-09-26T20:00:00+00:00",
+                "2025-09-26T21:00:00+00:00",
+                "2025-09-26T22:00:00+00:00",
+                "2025-09-26T23:00:00+00:00"
+              ]
+            },
+            {
+              "wet_counts": [
+                2255,
+                2255,
+                2255,
+                2255
+              ],
+              "unknown_ice_counts": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "nonzero_ice_counts": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "valid_times_utc": [
+                "2025-09-27T00:00:00+00:00",
+                "2025-09-27T01:00:00+00:00",
+                "2025-09-27T02:00:00+00:00",
+                "2025-09-27T03:00:00+00:00"
+              ]
+            }
+          ],
+          "native_lon_lat_bounds": [
+            268.0,
+            271.52001953125,
+            61.52000045776367,
+            64.0
+          ],
+          "CF_unpack_count": 1
+        },
+        "lkp_csp_probe_count": 1490,
+        "lkp_csp_min_m_s": [
+          [
+            -0.20299174167215742,
+            -0.4526297947526601
+          ],
+          [
+            -0.12927776750984882,
+            -0.48679245632437057
+          ]
+        ],
+        "lkp_csp_max_m_s": [
+          [
+            0.27198825895881945,
+            0.2206583152348751
+          ],
+          [
+            0.23546931914581362,
+            0.30211174961674014
+          ]
+        ]
+      }
+    }
+  }
+}

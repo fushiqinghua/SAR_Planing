@@ -1,0 +1,13 @@
+{
+  "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro",
+  "start": "2026-11-28T00:48:17.9642915+08:00",
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "-m",
+    "pytest",
+    "-q",
+    "--basetemp=C:/Users/35448/Documents/Codex/h2-pytest-final-20261127T164817",
+    "--junitxml=outputs/eight_neighbor_h2_20261127/local_r1/full_pytest_r3.xml"
+  ],
+  "numerical_threads": 1
+}

@@ -1,0 +1,6 @@
+{
+  "status": "clock_audit_failed",
+  "block_id": "lake_h2_d1",
+  "error": "[Errno 2] No such file or directory: 'E:\\\\毕业设计\\\\终稿研发\\\\new\\\\baseline\\\\SAR_Planing-eight-neighbor-physical-study-20261127\\\\asar_repro\\\\data\\\\raw\\\\h2\\\\lake_h2_d1\\\\loofs\\\\loofs.t18z.20250812.fields.n005.nc'",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\h2_audit_loofs_clock.py\", line 124, in main\n    inspect_and_correct(block)\n  File \"C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\h2_audit_loofs_clock.py\", line 56, in inspect_and_correct\n    with Dataset(artifact) as ds:\n         ^^^^^^^^^^^^^^^^^\n  File \"src/netCDF4/_netCDF4.pyx\", line 2525, in netCDF4._netCDF4.Dataset.__init__\n  File \"src/netCDF4/_netCDF4.pyx\", line 2162, in netCDF4._netCDF4._ensure_nc_success\nFileNotFoundError: [Errno 2] No such file or directory: 'E:\\\\毕业设计\\\\终稿研发\\\\new\\\\baseline\\\\SAR_Planing-eight-neighbor-physical-study-20261127\\\\asar_repro\\\\data\\\\raw\\\\h2\\\\lake_h2_d1\\\\loofs\\\\loofs.t18z.20250812.fields.n005.nc'\n"
+}

@@ -1,0 +1,12 @@
+{
+  "status": "planned_requires_verified_real_inputs",
+  "method": "completion_J",
+  "date_blocks": 6,
+  "particle_instances": 12,
+  "tasks": {
+    "S30": 12,
+    "H30": 144
+  },
+  "total_algorithm_budget_s": 4680,
+  "budget_scope": "algorithm only, excludes forcing acquisition, drift, loading and external audit"
+}

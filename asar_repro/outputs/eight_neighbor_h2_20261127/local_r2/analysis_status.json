@@ -1,0 +1,47 @@
+{
+  "status": "new_date_J_transfer_signal",
+  "method_valid": true,
+  "qualifying_date_blocks": 6,
+  "date_lock_valid": true,
+  "particle_lock_valid": true,
+  "configured_validation": {
+    "total": 392,
+    "passed": 392,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0
+  },
+  "full_validation_attempts": 3,
+  "full_validation_latest": {
+    "file": "full_pytest_r3.xml",
+    "total": 1667,
+    "passed": 1667,
+    "failed": 0,
+    "error": 0,
+    "skipped": 0
+  },
+  "seed_archives": 12,
+  "formal_run_counts": {
+    "S30": 12,
+    "H30": 144
+  },
+  "issues": [],
+  "verified_sha256": {
+    "method_lock_sha256": "5bf1feae461340cfb44293d743157d9f75b17d0edf825a3a80cb2b1405a0bec1",
+    "availability_audit_sha256": "274a82777e420b89bb129e97e0079fb9cc9b9f28c14c845b7a22704476def535",
+    "validation_result_sha256": "1198880018b20e210e964fc65d44791d0a0b559f6997074a355ea4f26a925082",
+    "full_pytest.xml_sha256": "e33e2d9ee6109f7e5089fc04abcd4741f036b37acf11b02744dc42a9dc0c1d8c",
+    "full_pytest_r2.xml_sha256": "b123425691982111241ccb7c7ffe184dbf919ac095acc64ba2c58ca6cacfed1f",
+    "full_pytest_r3.xml_sha256": "b97ba49d90eaf5b32c75a4a9255b9615de46362911294fe48ab34ba8bcd99dc0",
+    "date_lock_sha256": "f1412a794214515bba0e7325af0c3fa2eca0e4a79e05451c93b3331b92824ade",
+    "inputs_lock_sha256": "71c530f496fd0437dfd446aa2d6c6e5c83259d0714d4c3a028555f9b6378e964",
+    "protocol_sha256": "13de8e1e424a84470598ee5e7d37afefab9747fe5fcf95894dbd2cfb28ce3f98",
+    "s30_lock_sha256": "7c6f594817ed5f208b0712667182d7a3534e09e1d23050be563144983a510821",
+    "comparison.csv_sha256": "e83ed38d5f4f52714c10a2b6dbd5ca2da568519712ffe009d51b93051cba7cb1",
+    "survival.csv_sha256": "25b322c4aabe59429e38035da37890fff80090552a3198f2df93c2e4a21344e1",
+    "seed_comparison.csv_sha256": "06b2469898f39b6178e97e8644ef5441bc56511210564402402075afd9bf8336",
+    "date_comparison.csv_sha256": "41fd478b43bb2e285935db0bc172db6913147b318af2bfe5fbdd426de8903e31",
+    "summary.json_sha256": "442e1a4a696563acd6f3e17e32a48763c6b908977ef1e1f04be229de97c6ec25"
+  },
+  "formal_optimality_certificate": false
+}

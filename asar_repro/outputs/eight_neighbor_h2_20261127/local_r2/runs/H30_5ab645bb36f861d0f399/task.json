@@ -1,0 +1,13 @@
+{
+  "instance": "hudson_h2_d1_s4102",
+  "block_id": "hudson_h2_d1",
+  "base_scene": "arctic_ocean",
+  "seed": 4102,
+  "manifest_sha256": "b6274bdd954f31c488ec56e4d5e1aa9095ed626cd3a77a6d4c69885463dfdee1",
+  "stage": "H30",
+  "method": "completion_J",
+  "footprint": "heading_square",
+  "connectivity": 4,
+  "repetition": 0,
+  "seconds": 30
+}

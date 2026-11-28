@@ -1,0 +1,179 @@
+........................................................................ [  4%]
+.............................................FF.........F.......F....... [  8%]
+........................................................................ [ 12%]
+........................................................................ [ 17%]
+........................................................................ [ 21%]
+........................................................................ [ 25%]
+......................................................................................................................... [ 33%]
+........................................................................ [ 37%]
+........................................................................ [ 41%]
+........................................................................ [ 46%]
+........................................................................ [ 50%]
+........................................................................ [ 54%]
+........................................................................ [ 59%]
+........................................................................ [ 63%]
+........................................................................ [ 67%]
+.................................................................. [ 71%]
+........................................................................ [ 76%]
+........................................................................ [ 80%]
+........................................................................ [ 84%]
+........................................................................ [ 88%]
+........................................................................ [ 93%]
+........................................................................ [ 97%]
+........................................                                 [100%]
+================================== FAILURES ===================================
+______ test_delivered_gfs_compares_to_independent_reference_if_available ______
+
+    def test_delivered_gfs_compares_to_independent_reference_if_available():
+        root=ROOT/'data/raw/historical/ASAR_B1_HudsonsBay_20250829'
+        if not root.exists():pytest.skip('local Hudsons Bay package absent')
+>       reference=json.loads((root/'validation_download_environment.json').read_bytes())['wind_files'][0]
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_b1_additional.py:143: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1050: in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/historical/ASAR_B1_HudsonsBay_20250829/validation_download_environment.json')
+mode = 'rb', buffering = -1, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\historical\\ASAR_B1_HudsonsBay_20250829\\validation_download_environment.json'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1044: FileNotFoundError
+____ test_delivered_hycom_360_longitudes_and_valid_time_not_global_origin _____
+
+    def test_delivered_hycom_360_longitudes_and_valid_time_not_global_origin():
+        root=ROOT/'data/raw/historical/ASAR_B1_HudsonsBay_20250829'
+        if not root.exists():pytest.skip('local Hudsons Bay package absent')
+>       ref=json.loads((root/'validation_download_environment.json').read_bytes())['current']['files'][0]
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_b1_additional.py:155: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1050: in read_bytes
+    with self.open(mode='rb') as f:
+         ^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/historical/ASAR_B1_HudsonsBay_20250829/validation_download_environment.json')
+mode = 'rb', buffering = -1, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\historical\\ASAR_B1_HudsonsBay_20250829\\validation_download_environment.json'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1044: FileNotFoundError
+___ test_wind_acquisition_rejects_full_object_or_saves_exact_messages[True] ___
+
+tmp_path = WindowsPath('C:/Users/35448/Documents/Codex/h2-pytest-20261127T164533/test_wind_acquisition_rejects_0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000025B32B78950>
+honor_range = True
+
+    @pytest.mark.parametrize("honor_range", [True, False])
+    def test_wind_acquisition_rejects_full_object_or_saves_exact_messages(
+        tmp_path, monkeypatch, honor_range
+    ):
+        msg = b"GRIB" + bytes([0, 0, 0, 2]) + (20).to_bytes(8, "big") + b"7777"
+    
+        def server(req, timeout):
+            if isinstance(req, str):
+                return BytesIO(wind_index().encode("ascii"))
+            r = BytesIO(msg)
+            r.status = 206 if honor_range else 200
+            r.headers = {"Content-Range": req.headers["Range"].replace("=", " ") + "/100"}
+            return r
+    
+        monkeypatch.setattr(fetch, "urlopen", server)
+        if honor_range:
+>           result = fetch.fetch_wind("https://example.invalid/wind", tmp_path)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_b1_inventory.py:135: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+scripts\fetch_lake_b1.py:82: in fetch_wind
+    archive_file(tmp, path, sha)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+tmp = WindowsPath('C:/Users/35448/Documents/Codex/h2-pytest-20261127T164533/test_wind_acquisition_rejects_0/.99cc20a0fe5c4c7a97d8e45020f60363.part')
+target = WindowsPath('C:/Users/35448/Documents/Codex/h2-pytest-20261127T164533/test_wind_acquisition_rejects_0/wind.wind10m.grib2')
+sha = 'ff5acb12d204930dcfe733a6a4d88a214d1382a28905e1a1865f9dedda07f4bf'
+
+    def archive_file(tmp, target, sha):
+        """Publish complete bytes once; a retry must match an existing archive."""
+        try:
+>           os.link(tmp, target)
+E           PermissionError: [WinError 5] 拒绝访问。: 'C:\\Users\\35448\\Documents\\Codex\\h2-pytest-20261127T164533\\test_wind_acquisition_rejects_0\\.99cc20a0fe5c4c7a97d8e45020f60363.part' -> 'C:\\Users\\35448\\Documents\\Codex\\h2-pytest-20261127T164533\\test_wind_acquisition_rejects_0\\wind.wind10m.grib2'
+
+scripts\fetch_lake_b1.py:23: PermissionError
+__________ test_inventory_rechecks_real_package_with_archive_offline __________
+
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x0000025B4C239010>
+
+    def test_inventory_rechecks_real_package_with_archive_offline(monkeypatch):
+        raw = inv.ROOT / "data/raw/historical"
+        if not (raw / inv.LAKE_PACKAGE).exists():
+            pytest.skip("local B1 data package absent")
+        spec = yaml.safe_load((inv.ROOT / "configs/stage7_scenarios.yaml").read_bytes())
+        monkeypatch.setattr(inv, "probe", lambda item: dict(url=item[1], status="probe_failed"))
+>       cases = inv.inventory(spec, raw)
+                ^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_b1_package.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+scripts\inventory_historical.py:278: in inventory
+    merge_lake(record, verify(raw / LAKE_PACKAGE, spec))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+scripts\verify_lake_b1.py:172: in verify
+    hashes = checked_hashes(folder)
+             ^^^^^^^^^^^^^^^^^^^^^^
+scripts\verify_lake_b1.py:30: in checked_hashes
+    require(digest(sums) == SUMS_SHA, "checksum table differs from the delivered edition")
+            ^^^^^^^^^^^^
+src\asar_repro\scenarios.py:18: in digest
+    with path.open("rb") as handle:
+         ^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/historical/ASAR_B1_LakeOntario_20250826/SHA256SUMS.txt')
+mode = 'rb', buffering = -1, encoding = None, errors = None, newline = None
+
+    def open(self, mode='r', buffering=-1, encoding=None,
+             errors=None, newline=None):
+        """
+        Open the file pointed by this path and return a file object, as
+        the built-in open() function does.
+        """
+        if "b" not in mode:
+            encoding = io.text_encoding(encoding)
+>       return io.open(self, mode, buffering, encoding, errors, newline)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       FileNotFoundError: [Errno 2] No such file or directory: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\historical\\ASAR_B1_LakeOntario_20250826\\SHA256SUMS.txt'
+
+C:\Users\35448\.conda\envs\maritime-sar\Lib\pathlib.py:1044: FileNotFoundError
+=========================== short test summary info ===========================
+FAILED tests/test_b1_additional.py::test_delivered_gfs_compares_to_independent_reference_if_available
+FAILED tests/test_b1_additional.py::test_delivered_hycom_360_longitudes_and_valid_time_not_global_origin
+FAILED tests/test_b1_inventory.py::test_wind_acquisition_rejects_full_object_or_saves_exact_messages[True]
+FAILED tests/test_b1_package.py::test_inventory_rechecks_real_package_with_archive_offline
+4 failed, 1663 passed, 29 subtests passed in 35.71s

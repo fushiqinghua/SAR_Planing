@@ -1,0 +1,86 @@
+{
+  "status": "six_dates_qualified",
+  "blocks": [
+    {
+      "id": "lake_h2_d1",
+      "scene": "lake_ontario",
+      "date": "2025-08-12",
+      "seeds": [
+        3101,
+        3102
+      ],
+      "primary": true,
+      "lkp_utc": "2025-08-12T14:45:00.000Z",
+      "cst_utc": "2025-08-12T15:45:00.000Z",
+      "end_utc": "2025-08-12T15:52:33.740Z"
+    },
+    {
+      "id": "lake_h2_d2",
+      "scene": "lake_ontario",
+      "date": "2025-09-09",
+      "seeds": [
+        3201,
+        3202
+      ],
+      "primary": true,
+      "lkp_utc": "2025-09-09T14:45:00.000Z",
+      "cst_utc": "2025-09-09T15:45:00.000Z",
+      "end_utc": "2025-09-09T15:52:33.740Z"
+    },
+    {
+      "id": "lake_h2_d3",
+      "scene": "lake_ontario",
+      "date": "2025-09-23",
+      "seeds": [
+        3301,
+        3302
+      ],
+      "primary": true,
+      "lkp_utc": "2025-09-23T14:45:00.000Z",
+      "cst_utc": "2025-09-23T15:45:00.000Z",
+      "end_utc": "2025-09-23T15:52:33.740Z"
+    },
+    {
+      "id": "hudson_h2_d1",
+      "scene": "arctic_ocean",
+      "date": "2025-08-15",
+      "seeds": [
+        4101,
+        4102
+      ],
+      "primary": true,
+      "lkp_utc": "2025-08-15T00:00:00.000Z",
+      "cst_utc": "2025-08-16T00:00:00.000Z",
+      "end_utc": "2025-08-16T00:46:18.000Z"
+    },
+    {
+      "id": "hudson_h2_d2",
+      "scene": "arctic_ocean",
+      "date": "2025-09-12",
+      "seeds": [
+        4201,
+        4202
+      ],
+      "primary": true,
+      "lkp_utc": "2025-09-12T00:00:00.000Z",
+      "cst_utc": "2025-09-13T00:00:00.000Z",
+      "end_utc": "2025-09-13T00:46:18.000Z"
+    },
+    {
+      "id": "hudson_h2_d3",
+      "scene": "arctic_ocean",
+      "date": "2025-09-26",
+      "seeds": [
+        4301,
+        4302
+      ],
+      "primary": true,
+      "lkp_utc": "2025-09-26T00:00:00.000Z",
+      "cst_utc": "2025-09-27T00:00:00.000Z",
+      "end_utc": "2025-09-27T00:46:18.000Z"
+    }
+  ],
+  "replacements": {},
+  "method_lock_sha256": "5bf1feae461340cfb44293d743157d9f75b17d0edf825a3a80cb2b1405a0bec1",
+  "audit_sha256": "274a82777e420b89bb129e97e0079fb9cc9b9f28c14c845b7a22704476def535"
+}

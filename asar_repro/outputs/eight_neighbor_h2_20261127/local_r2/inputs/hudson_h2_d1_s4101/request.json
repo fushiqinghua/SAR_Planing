@@ -1,0 +1,45 @@
+{
+  "case": {
+    "base_scene": "arctic_ocean",
+    "block_id": "hudson_h2_d1",
+    "cst_utc": "2025-08-16T00:00:00.000Z",
+    "end_utc": "2025-08-16T00:46:18.000Z",
+    "id": "hudson_h2_d1_s4101",
+    "lkp_utc": "2025-08-15T00:00:00.000Z",
+    "seed": 4101
+  },
+  "config": {
+    "audit_q": 0.78,
+    "budget": 60,
+    "cell_width_m": 926.0,
+    "csp_lon_lat": [
+      -90.447,
+      62.786
+    ],
+    "cst_utc": "2025-08-16T00:00:00.000Z",
+    "forcing_kind": "historical_real",
+    "grid_rows_cols": [
+      65,
+      85
+    ],
+    "incident_utc": "2025-08-15T00:00:00.000Z",
+    "integration_s": 120,
+    "lkp_lon_lat": [
+      -90.6,
+      62.85
+    ],
+    "object_key": "LIFE-RAFT-DB-10",
+    "output_s": 120,
+    "particles": 500,
+    "radius_m": 100,
+    "seed": 4101,
+    "step_s": 46.3
+  },
+  "data_role": "new_date_historical_forcing_preregistered",
+  "evidence": {
+    "block_id": "hudson_h2_d1",
+    "date_lock_sha256": "f1412a794214515bba0e7325af0c3fa2eca0e4a79e05451c93b3331b92824ade",
+    "method_lock_sha256": "5bf1feae461340cfb44293d743157d9f75b17d0edf825a3a80cb2b1405a0bec1",
+    "source_manifest_sha256": "9b1fbc4f9f3e91357f042ce638e210286f7bf7858e642a3e4b293844c8cd9074"
+  }
+}

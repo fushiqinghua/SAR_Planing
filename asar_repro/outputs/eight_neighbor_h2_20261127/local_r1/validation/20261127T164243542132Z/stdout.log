@@ -1,0 +1,248 @@
+........................................................................ [ 18%]
+........................................................................ [ 36%]
+........................................................................ [ 55%]
+........................................................................ [ 73%]
+...........................................................FFFF......... [ 91%]
+..........................FFFFF.                                         [100%]
+================================== FAILURES ===================================
+_____ test_cf_unpack_is_once_and_unknown_nonzero_ice_count_only_at_water ______
+
+tmp_path = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164243542132Z/test_cf_unpack_is_once_and_unk0')
+
+    def test_cf_unpack_is_once_and_unknown_nonzero_ice_count_only_at_water(tmp_path):
+        path = tmp_path / "packing.nc"
+>       _packed_fixture(path)
+
+tests\test_eight_neighbor_h2_inputs.py:108: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_eight_neighbor_h2_inputs.py:83: in _packed_fixture
+    with Dataset(path, "w") as dataset:
+         ^^^^^^^^^^^^^^^^^^
+src/netCDF4/_netCDF4.pyx:2525: in netCDF4._netCDF4.Dataset.__init__
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   PermissionError: [Errno 13] Permission denied: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164243542132Z\\test_cf_unpack_is_once_and_unk0\\packing.nc'
+
+src/netCDF4/_netCDF4.pyx:2162: PermissionError
+__ test_invalid_native_vectors_block_qualification[mismatch-masks disagree] ___
+
+tmp_path = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164243542132Z/test_invalid_native_vectors_bl0')
+case = 'mismatch', message = 'masks disagree'
+
+    @pytest.mark.parametrize(
+        ("case", "message"), [
+            ("mismatch", "masks disagree"),
+            ("direction_flip", "direction or units"),
+            ("empty", "no finite paired water currents"),
+        ],
+    )
+    def test_invalid_native_vectors_block_qualification(tmp_path, case, message):
+        path = tmp_path / "invalid.nc"
+>       _packed_fixture(path, **{case: True})
+
+tests\test_eight_neighbor_h2_inputs.py:126: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_eight_neighbor_h2_inputs.py:83: in _packed_fixture
+    with Dataset(path, "w") as dataset:
+         ^^^^^^^^^^^^^^^^^^
+src/netCDF4/_netCDF4.pyx:2525: in netCDF4._netCDF4.Dataset.__init__
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   PermissionError: [Errno 13] Permission denied: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164243542132Z\\test_invalid_native_vectors_bl0\\invalid.nc'
+
+src/netCDF4/_netCDF4.pyx:2162: PermissionError
+_ test_invalid_native_vectors_block_qualification[direction_flip-direction or units] _
+
+tmp_path = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164243542132Z/test_invalid_native_vectors_bl1')
+case = 'direction_flip', message = 'direction or units'
+
+    @pytest.mark.parametrize(
+        ("case", "message"), [
+            ("mismatch", "masks disagree"),
+            ("direction_flip", "direction or units"),
+            ("empty", "no finite paired water currents"),
+        ],
+    )
+    def test_invalid_native_vectors_block_qualification(tmp_path, case, message):
+        path = tmp_path / "invalid.nc"
+>       _packed_fixture(path, **{case: True})
+
+tests\test_eight_neighbor_h2_inputs.py:126: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_eight_neighbor_h2_inputs.py:83: in _packed_fixture
+    with Dataset(path, "w") as dataset:
+         ^^^^^^^^^^^^^^^^^^
+src/netCDF4/_netCDF4.pyx:2525: in netCDF4._netCDF4.Dataset.__init__
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   PermissionError: [Errno 13] Permission denied: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164243542132Z\\test_invalid_native_vectors_bl1\\invalid.nc'
+
+src/netCDF4/_netCDF4.pyx:2162: PermissionError
+_ test_invalid_native_vectors_block_qualification[empty-no finite paired water currents] _
+
+tmp_path = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164243542132Z/test_invalid_native_vectors_bl2')
+case = 'empty', message = 'no finite paired water currents'
+
+    @pytest.mark.parametrize(
+        ("case", "message"), [
+            ("mismatch", "masks disagree"),
+            ("direction_flip", "direction or units"),
+            ("empty", "no finite paired water currents"),
+        ],
+    )
+    def test_invalid_native_vectors_block_qualification(tmp_path, case, message):
+        path = tmp_path / "invalid.nc"
+>       _packed_fixture(path, **{case: True})
+
+tests\test_eight_neighbor_h2_inputs.py:126: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_eight_neighbor_h2_inputs.py:83: in _packed_fixture
+    with Dataset(path, "w") as dataset:
+         ^^^^^^^^^^^^^^^^^^
+src/netCDF4/_netCDF4.pyx:2525: in netCDF4._netCDF4.Dataset.__init__
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   PermissionError: [Errno 13] Permission denied: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164243542132Z\\test_invalid_native_vectors_bl2\\invalid.nc'
+
+src/netCDF4/_netCDF4.pyx:2162: PermissionError
+__________ test_decoded_ice_and_wet_mask_are_not_replaced[None-0-0] ___________
+
+tmp_path = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164243542132Z/test_decoded_ice_and_wet_mask_0')
+ice = None, nonzero = 0, unknown = 0
+
+    @pytest.mark.parametrize("ice,nonzero,unknown", [(None, 0, 0), (1, 1, 0), (-30000, 0, 1)])
+    def test_decoded_ice_and_wet_mask_are_not_replaced(tmp_path, ice, nonzero, unknown):
+        times = h2.requests_for(BLOCK)[0]["valid_times_utc"]
+>       data = make_chunk(tmp_path / "surface.nc", times, ice=ice)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_h2_hycom.py:74: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_h2_hycom.py:40: in make_chunk
+    with Dataset(path, "w", format="NETCDF4") as ds:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/netCDF4/_netCDF4.pyx:2525: in netCDF4._netCDF4.Dataset.__init__
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   PermissionError: [Errno 13] Permission denied: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164243542132Z\\test_decoded_ice_and_wet_mask_0\\surface.nc'
+
+src/netCDF4/_netCDF4.pyx:2162: PermissionError
+____________ test_decoded_ice_and_wet_mask_are_not_replaced[1-1-0] ____________
+
+tmp_path = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164243542132Z/test_decoded_ice_and_wet_mask_1')
+ice = 1, nonzero = 1, unknown = 0
+
+    @pytest.mark.parametrize("ice,nonzero,unknown", [(None, 0, 0), (1, 1, 0), (-30000, 0, 1)])
+    def test_decoded_ice_and_wet_mask_are_not_replaced(tmp_path, ice, nonzero, unknown):
+        times = h2.requests_for(BLOCK)[0]["valid_times_utc"]
+>       data = make_chunk(tmp_path / "surface.nc", times, ice=ice)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_h2_hycom.py:74: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_h2_hycom.py:40: in make_chunk
+    with Dataset(path, "w", format="NETCDF4") as ds:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/netCDF4/_netCDF4.pyx:2525: in netCDF4._netCDF4.Dataset.__init__
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   PermissionError: [Errno 13] Permission denied: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164243542132Z\\test_decoded_ice_and_wet_mask_1\\surface.nc'
+
+src/netCDF4/_netCDF4.pyx:2162: PermissionError
+_________ test_decoded_ice_and_wet_mask_are_not_replaced[-30000-0-1] __________
+
+tmp_path = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164243542132Z/test_decoded_ice_and_wet_mask_2')
+ice = -30000, nonzero = 0, unknown = 1
+
+    @pytest.mark.parametrize("ice,nonzero,unknown", [(None, 0, 0), (1, 1, 0), (-30000, 0, 1)])
+    def test_decoded_ice_and_wet_mask_are_not_replaced(tmp_path, ice, nonzero, unknown):
+        times = h2.requests_for(BLOCK)[0]["valid_times_utc"]
+>       data = make_chunk(tmp_path / "surface.nc", times, ice=ice)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_h2_hycom.py:74: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_h2_hycom.py:40: in make_chunk
+    with Dataset(path, "w", format="NETCDF4") as ds:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/netCDF4/_netCDF4.pyx:2525: in netCDF4._netCDF4.Dataset.__init__
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   PermissionError: [Errno 13] Permission denied: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164243542132Z\\test_decoded_ice_and_wet_mask_2\\surface.nc'
+
+src/netCDF4/_netCDF4.pyx:2162: PermissionError
+__________ test_rejects_wrong_valid_time_and_unmatched_vector_masks ___________
+
+tmp_path = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164243542132Z/test_rejects_wrong_valid_time_0')
+
+    def test_rejects_wrong_valid_time_and_unmatched_vector_masks(tmp_path):
+        times = h2.requests_for(BLOCK)[0]["valid_times_utc"]
+>       data = make_chunk(tmp_path / "misaligned.nc", times, different_masks=True)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+tests\test_h2_hycom.py:90: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_h2_hycom.py:40: in make_chunk
+    with Dataset(path, "w", format="NETCDF4") as ds:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/netCDF4/_netCDF4.pyx:2525: in netCDF4._netCDF4.Dataset.__init__
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   PermissionError: [Errno 13] Permission denied: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164243542132Z\\test_rejects_wrong_valid_time_0\\misaligned.nc'
+
+src/netCDF4/_netCDF4.pyx:2162: PermissionError
+______ test_acquisition_keeps_every_native_chunk_and_rejection_evidence _______
+
+tmp_path = WindowsPath('E:/毕业设计/终稿研发/new/baseline/SAR_Planing-eight-neighbor-physical-study-20261127/asar_repro/data/raw/h2/.tests/20261127T164243542132Z/test_acquisition_keeps_every_n0')
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x00000171EBFAFBD0>
+
+    def test_acquisition_keeps_every_native_chunk_and_rejection_evidence(tmp_path, monkeypatch):
+        raw = setup_project(tmp_path)
+>       bodies = {
+            spec["source_url"]: make_chunk(tmp_path / spec["filename"], spec["valid_times_utc"],
+                                           ice=1 if i == 0 else None)
+            for i, spec in enumerate(h2.requests_for(BLOCK))
+        }
+
+tests\test_h2_hycom.py:109: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\test_h2_hycom.py:110: in <dictcomp>
+    spec["source_url"]: make_chunk(tmp_path / spec["filename"], spec["valid_times_utc"],
+tests\test_h2_hycom.py:40: in make_chunk
+    with Dataset(path, "w", format="NETCDF4") as ds:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src/netCDF4/_netCDF4.pyx:2525: in netCDF4._netCDF4.Dataset.__init__
+    ???
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+>   ???
+E   PermissionError: [Errno 13] Permission denied: 'E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\data\\raw\\h2\\.tests\\20261127T164243542132Z\\test_acquisition_keeps_every_n0\\ESPC-D-V02_surface_20250814.nc'
+
+src/netCDF4/_netCDF4.pyx:2162: PermissionError
+=========================== short test summary info ===========================
+FAILED tests/test_eight_neighbor_h2_inputs.py::test_cf_unpack_is_once_and_unknown_nonzero_ice_count_only_at_water
+FAILED tests/test_eight_neighbor_h2_inputs.py::test_invalid_native_vectors_block_qualification[mismatch-masks disagree]
+FAILED tests/test_eight_neighbor_h2_inputs.py::test_invalid_native_vectors_block_qualification[direction_flip-direction or units]
+FAILED tests/test_eight_neighbor_h2_inputs.py::test_invalid_native_vectors_block_qualification[empty-no finite paired water currents]
+FAILED tests/test_h2_hycom.py::test_decoded_ice_and_wet_mask_are_not_replaced[None-0-0]
+FAILED tests/test_h2_hycom.py::test_decoded_ice_and_wet_mask_are_not_replaced[1-1-0]
+FAILED tests/test_h2_hycom.py::test_decoded_ice_and_wet_mask_are_not_replaced[-30000-0-1]
+FAILED tests/test_h2_hycom.py::test_rejects_wrong_valid_time_and_unmatched_vector_masks
+FAILED tests/test_h2_hycom.py::test_acquisition_keeps_every_native_chunk_and_rejection_evidence
+9 failed, 383 passed in 3.21s

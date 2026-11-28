@@ -1,0 +1,14 @@
+{
+  "status": "completed",
+  "started_utc": "2026-11-27T16:44:47.408019+00:00",
+  "directory": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro",
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\scripts\\run_eight_neighbor_h2.py",
+    "validate",
+    "--out",
+    "outputs/eight_neighbor_h2_20261127/local_r1"
+  ],
+  "returncode": 0,
+  "finished_utc": "2026-11-27T16:44:53.039728+00:00"
+}
