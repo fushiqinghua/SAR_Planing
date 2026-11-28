@@ -1,3 +1,13 @@
+# 第二创新点下一批：计时稳健性 P1 与新日期 H3 预注册
+
+当前新批状态：**P1 ready_for_local_validation（48 次任务，24 分钟算法预算）；P2/H3 method_and_dates_preregistered_inputs_not_ready（6 个新 forcing 日期，12 个粒子档案，预计42分钟算法预算，不含下载、漂移和审计）。**
+
+请先查看 [下一批实验计划](asar_repro/docs/second_innovation_next/PLAN.md)、[P1 本地执行手册](asar_repro/docs/second_innovation_next/LOCAL_RUNBOOK.md)、[P1 预定判定门槛](asar_repro/docs/second_innovation_next/P1_DECISIONS.md)、[H3 新日期预注册](asar_repro/docs/second_innovation_next/P2_H3_PREREGISTRATION.md) 和 [日期/方法注册表](asar_repro/docs/second_innovation_next/h3_date_registry.json)。
+
+本批不修改已有八邻接、PGPE、Lazy Prefix 的算法实现或原始结果。P1 的 C0 同程序对照是检验 Hudson 4101 截止时间敏感性，P2 尚未完成强迫场资格审计及专属执行器，不能直接运行 H3。
+
+---
+
 # 当前研究：进展感知的早中段前缀搜索（prepared_not_run）
 
 这是第二创新点下一批的**设计与本地实验交付**。本批原代码与数据保持冻结，新方法 C0_PROGRESS 仅根据搜索中已观察到的进展决定是否启用早中段 OPEN 保留配额；同时重新跑 C0、C0_PREFIX、C0_PROGRESS 三组，每组 4 实例×3 次重复、30 秒。**尚未运行任何新测试和正式实验**。
