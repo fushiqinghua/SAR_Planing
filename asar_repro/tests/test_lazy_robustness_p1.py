@@ -1,4 +1,6 @@
 """Frozen-P1 timing robustness protocol: allocation and qualitative gate checks."""
+import pytest
+
 import run_lazy_robustness_p1 as study
 
 
@@ -24,3 +26,9 @@ def test_control_arms_use_original_solver():
     assert set(study.DESIGN["arms"]["hudson_h2_d1_s4101"])=={"C0_A","C0_B","C0_LAZY"}
     assert set(study.DESIGN["arms"]["hudson_h2_d2_s4201"])=={"C0","C0_LAZY"}
     assert study.DESIGN["target"]["hudson_h2_d1_s4101"]<study.DESIGN["baseline_initial_j"]["hudson_h2_d1_s4101"]
+
+def test_strict_wall_budget_reports_the_rejected_measurement():
+    task = dict(method="C0_LAZY", seconds=30.0)
+    result = dict(method="C0_LAZY", algorithm_wall_s=30.001)
+    with pytest.raises(ValueError, match=r"Algorithm wall time 30[.]001.*30[.]000"):
+        study.check_result(task, result, {})

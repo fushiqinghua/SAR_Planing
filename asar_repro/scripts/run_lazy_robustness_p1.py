@@ -213,8 +213,11 @@ def check_validation(out):
 
 
 def check_result(task, result, protocol):
-    if result["method"] != task["method"] or not 0 < result["algorithm_wall_s"] <= 30:
-        raise ValueError("Incorrect method or exceeded algorithm budget")
+    if result["method"] != task["method"]:
+        raise ValueError("Incorrect formal method")
+    wall = result["algorithm_wall_s"]
+    if not 0 < wall <= task["seconds"]:
+        raise ValueError(f"Algorithm wall time {wall:.9f} s outside (0, {task['seconds']:.9f}] s")
     score=result["physical_replay"]
     inner=result["raw"]["phases"][0]["inner"]
     expected="physical_lazy_prefix_v1" if task["method"]=="C0_LAZY" else "physical_refinement_diagnostic_v1"
@@ -268,34 +271,47 @@ def worker(out, run_id):
             solver_options=protocol["config"]["solver"])
         algorithm_wall_s=time.perf_counter()-start
         algorithm_cpu_s=time.process_time()-cpu
-    if raw.get("error") or raw["status"]!="completed":
-        write(out/"runs"/run_id/"raw_failure.json",dict(error=raw.get("error"),status=raw["status"]))
-        raise ValueError("Solver failed")
-    before=time.perf_counter()
-    original=problem.replay(raw["waypoints"],connectivity=8)
-    independent=independent_replay(problem,raw["waypoints"],connectivity=8)
-    if (abs(original["J"]-independent["J"])>1e-8
-            or abs(original["pd_final"]-independent["pd_final"])>1e-8
-            or len(original["survival"])!=len(independent["survival"])
-            or any(abs(a-b)>1e-8 for a,b in zip(original["survival"],independent["survival"]))):
-        raise AssertionError("Independent physical replay mismatch")
-    result=dict(status="valid",method=task["method"],J=original["J"],
-        pd_final=original["pd_final"],physical_replay=original,raw=raw,
-        execution_audit=old.legacy.audit_execution(problem,raw,seed,1e-8),
-        inputs=info, algorithm_wall_s=algorithm_wall_s,
-        algorithm_cpu_s=algorithm_cpu_s,input_load_s=load_s,
-        independent_audit_s=time.perf_counter()-before,
-        reference_sha256=old.object_digest(seed),formal_optimality_certificate=False)
-    check_result(task,result,protocol)
-    write(out/"runs"/run_id/"result.json",dict(task=task,result=result))
+    folder = out / "runs" / run_id
+    result = dict(
+        status="valid", method=task["method"], raw=raw, inputs=info,
+        algorithm_wall_s=algorithm_wall_s, algorithm_cpu_s=algorithm_cpu_s, input_load_s=load_s,
+        reference_sha256=old.object_digest(seed), formal_optimality_certificate=False,
+    )
+    try:
+        if raw.get("error") or raw["status"] != "completed":
+            raise ValueError(f"Solver failed: {raw.get('error')}")
+        before = time.perf_counter()
+        original = problem.replay(raw["waypoints"], connectivity=8)
+        independent = independent_replay(problem, raw["waypoints"], connectivity=8)
+        result.update(J=original["J"], pd_final=original["pd_final"], physical_replay=original)
+        if (abs(original["J"] - independent["J"]) > 1e-8
+                or abs(original["pd_final"] - independent["pd_final"]) > 1e-8
+                or len(original["survival"]) != len(independent["survival"])
+                or any(abs(a-b) > 1e-8 for a, b in zip(original["survival"], independent["survival"]))):
+            raise AssertionError("Independent physical replay mismatch")
+        result["execution_audit"] = old.legacy.audit_execution(problem, raw, seed, 1e-8)
+        result["independent_audit_s"] = time.perf_counter() - before
+        check_result(task, result, protocol)
+    except (AssertionError, KeyError, OSError, TypeError, ValueError) as error:
+        result["status"] = "validation_rejected"
+        write(folder / "rejected_result.json", old.legacy.failure_safe(dict(
+            status="validation_rejected", task=task, result=result,
+            error=dict(type=type(error).__name__, message=str(error)),
+        )))
+        raise
+    write(folder / "result.json", dict(task=task, result=result))
 
 
 def verify_saved_task(out, task, folder):
     record=read(folder/"record.json")
     payload=read(folder/"result.json")
-    if (record["status"]!="completed" or record["task"]!=task
-            or record["returncode"]!=0 or record["watchdog"] is not None
-            or payload["task"]!=task or record["result_sha256"]!=sha(folder/"result.json")):
+    expected_evidence = dict(protocol_sha256=sha(out / "protocol.json"),
+                             validation_sha256=sha(out / "validation" / "validation.json"))
+    if (record["status"] != "completed" or record["task"] != task
+            or record["returncode"] != 0 or record["watchdog"] is not None
+            or record["peak_rss_bytes"] <= 0 or record["frozen_evidence"] != expected_evidence
+            or payload["task"] != task or read(folder / "task.json") != task
+            or record["result_sha256"] != sha(folder / "result.json")):
         raise ValueError("Saved task is not valid")
     check_result(task,payload["result"],verify(out))
     return record,payload["result"]
@@ -340,10 +356,16 @@ def run(out):
                     if termination is not None and child.poll() is None:
                         child.kill()
                 rc=child.wait()
-        resultpath=folder/"result.json"
-        error=None
+        resultpath = folder / "result.json"
+        rejected = folder / "rejected_result.json"
+        error = None
         if rc or termination or not resultpath.exists():
-            error="Worker did not finish"
+            error = "Worker did not finish"
+            if rejected.is_file():
+                try:
+                    error = read(rejected)["error"]["message"]
+                except (KeyError, OSError, TypeError, ValueError):
+                    error = "Worker did not finish and rejection evidence is unreadable"
         else:
             try:
                 result=read(resultpath)
@@ -355,7 +377,8 @@ def run(out):
             task=task,command=cmd,status="failed" if error else "completed",
             returncode=rc,watchdog=termination,verification_error=error,
             peak_rss_bytes=peak,process_wall_s=time.perf_counter()-start,
-            result_sha256=sha(resultpath) if resultpath.exists() else None,
+            result_sha256=sha(resultpath) if resultpath.is_file() else None,
+            rejected_result_sha256=sha(rejected) if rejected.is_file() else None,
             frozen_evidence=dict(protocol_sha256=sha(out/"protocol.json"),
                 validation_sha256=sha(out/"validation/validation.json"))))
         if error:
@@ -420,10 +443,14 @@ def analyze(out):
           and lazy_bad<=pooled_bad+1/12)
     retained=(c["C0_LAZY"]["hit_count"]>=5
               and c["C0_LAZY"]["median_Pd"]>=.090948-1e-8)
-    decision=dict(status=("timing_screen_passed" if safe and retained else "timing_screen_not_passed"),
-                  4101_noninferiority=safe,4201_retain=retained,
-                  4101_control_pooled_bad_rate=pooled_bad,4101_lazy_bad_rate=lazy_bad,
-                  note="engineering robustness screen, not significance or generalization proof")
+    decision = {
+        "status": "timing_screen_passed" if safe and retained else "timing_screen_not_passed",
+        "4101_noninferiority": safe,
+        "4201_retain": retained,
+        "4101_control_pooled_bad_rate": pooled_bad,
+        "4101_lazy_bad_rate": lazy_bad,
+        "note": "engineering robustness screen, not significance or generalization proof",
+    }
     summary=dict(status=decision["status"],valid_runs=len(rows),expected_runs=48,
                  by_instance_method=by,decision=decision,
                  data_role="seen_development_timing_diagnostic",
