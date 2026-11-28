@@ -1,0 +1,12 @@
+{
+  "files": {
+    "fixed_cases.json": "3d551691f6031ac1f152c5cfdceffd3e66e872ffda11da8bdbf965de51c4915b"
+  },
+  "implementation_sha256": {
+    "check_fixed_work.py": "aacb6e3cff22a70ae93f59d9988e0591e041a64c221e879644c2f020ed26b437",
+    "gated_solver.py": "e7ec5b392543665c6127095f0715c1253794e0c1a948aa6b717aff0886199afd",
+    "test_gated_solver.py": "dfefbe9d0e645d1edaa0465d3431eb5365ecbe95f332c41ed43b8c4cdafc933d"
+  },
+  "status": "passed",
+  "validation_sha256": "8db015160fc1173a517dc8c44c94f24e6f7b38666660e3c6a46082b6557b6843"
+}

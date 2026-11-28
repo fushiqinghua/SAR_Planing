@@ -1,0 +1,138 @@
+{
+  "algorithm_wall_max_s": 28.131557699998666,
+  "deadline_fallbacks": 0,
+  "gates": {
+    "3401": {
+      "paired_rss_ratio_median": 1.1257678629162626,
+      "passed": true,
+      "repetitions": [
+        {
+          "J": 11.343163823807107,
+          "Pd": 0.960127638417792,
+          "Pd_delta_pp": -0.44314944910079923,
+          "mode": "lazy",
+          "outer_accept_s": 28.088731499999994,
+          "peak_rss_ratio": 1.1200361836421477,
+          "rep": 0,
+          "source": "lazy",
+          "status": "passed",
+          "waves": 0
+        },
+        {
+          "J": 11.343163823807107,
+          "Pd": 0.960127638417792,
+          "Pd_delta_pp": -0.44314944910079923,
+          "mode": "lazy",
+          "outer_accept_s": 28.10204800000065,
+          "peak_rss_ratio": 1.1257678629162626,
+          "rep": 1,
+          "source": "lazy",
+          "status": "passed",
+          "waves": 0
+        },
+        {
+          "J": 11.343163823807107,
+          "Pd": 0.960127638417792,
+          "Pd_delta_pp": -0.44314944910079923,
+          "mode": "lazy",
+          "outer_accept_s": 28.088756999997713,
+          "peak_rss_ratio": 1.1328051933762446,
+          "rep": 2,
+          "source": "lazy",
+          "status": "passed",
+          "waves": 0
+        }
+      ]
+    },
+    "4501": {
+      "paired_rss_ratio_median": 1.0010775862068966,
+      "passed": true,
+      "repetitions": [
+        {
+          "J": 55.655905440000026,
+          "Pd": 0.19140700799999988,
+          "Pd_delta_pp": 0.0,
+          "mode": "single_global",
+          "outer_accept_s": 28.011066299994127,
+          "peak_rss_ratio": 1.0010775862068966,
+          "rep": 0,
+          "source": "main",
+          "status": "passed",
+          "waves": 0
+        },
+        {
+          "J": 55.655905440000026,
+          "Pd": 0.19140700799999988,
+          "Pd_delta_pp": 0.0,
+          "mode": "single_global",
+          "outer_accept_s": 28.005862500001967,
+          "peak_rss_ratio": 1.0005208139578141,
+          "rep": 1,
+          "source": "main",
+          "status": "passed",
+          "waves": 0
+        },
+        {
+          "J": 55.655905440000026,
+          "Pd": 0.19140700799999988,
+          "Pd_delta_pp": 0.0,
+          "mode": "single_global",
+          "outer_accept_s": 28.006297599997197,
+          "peak_rss_ratio": 1.0042819376698813,
+          "rep": 2,
+          "source": "main",
+          "status": "passed",
+          "waves": 0
+        }
+      ]
+    },
+    "4601": {
+      "paired_rss_ratio_median": 0.8322179829841062,
+      "passed": true,
+      "repetitions": [
+        {
+          "J": 55.196889792,
+          "Pd": 0.23017550399999998,
+          "Pd_delta_pp": 6.380899200000001,
+          "mode": "single_global",
+          "outer_accept_s": 28.05359419999877,
+          "peak_rss_ratio": 0.8200897841988926,
+          "rep": 0,
+          "source": "bounded_completion",
+          "status": "passed",
+          "waves": 2
+        },
+        {
+          "J": 55.196889792,
+          "Pd": 0.23017550399999998,
+          "Pd_delta_pp": 6.380899200000001,
+          "mode": "single_global",
+          "outer_accept_s": 28.090066900003876,
+          "peak_rss_ratio": 0.875151812406577,
+          "rep": 1,
+          "source": "bounded_completion",
+          "status": "passed",
+          "waves": 2
+        },
+        {
+          "J": 55.196889792,
+          "Pd": 0.23017550399999998,
+          "Pd_delta_pp": 6.380899200000001,
+          "mode": "single_global",
+          "outer_accept_s": 28.05842880000273,
+          "peak_rss_ratio": 0.8322179829841062,
+          "rep": 2,
+          "source": "bounded_completion",
+          "status": "passed",
+          "waves": 2
+        }
+      ]
+    }
+  },
+  "protocol_sha256": "9ffab063ae91a4b43b5cdc14d4fa690fe747a1cb89ded5a026da919f26757951",
+  "registered_trials": 45,
+  "statuses": {
+    "valid": 45
+  },
+  "valid_trials": 45
+}

@@ -1,0 +1,17 @@
+{
+  "failed_or_skipped": 0,
+  "files": {
+    "toy/command.json": "8bb0104a55ce0d29f65fdf378d582e199646ed011eddfc1779d4c0052d3287b7",
+    "toy/pytest.xml": "a4b2917ef8c682263a9cccbb29a2705a673ad4760b9452495c347d766a5b1c09",
+    "toy/stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "toy/stdout.log": "2074140904ee12ea6d243d61e917358b093e4204eba74a7d6921d8068ca44cd3"
+  },
+  "implementation_sha256": {
+    "check_fixed_work.py": "aacb6e3cff22a70ae93f59d9988e0591e041a64c221e879644c2f020ed26b437",
+    "gated_solver.py": "e7ec5b392543665c6127095f0715c1253794e0c1a948aa6b717aff0886199afd",
+    "test_gated_solver.py": "dfefbe9d0e645d1edaa0465d3431eb5365ecbe95f332c41ed43b8c4cdafc933d"
+  },
+  "returncode": 0,
+  "status": "passed",
+  "tests": 152
+}

@@ -1,0 +1,28 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\p2_h3_gated_30s\\run_study.py",
+    "--out",
+    "C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\p2_h3_gated_30s\\results\\local_r1",
+    "_worker",
+    "s4402_r1_C0"
+  ],
+  "files": {
+    "result.json": "b368405f51f4f7e665ac9ed1297d6bb1d66ca9992df3c9a75d04a383a02dd54f",
+    "rss.csv": "651e62dd3257c5f54a7348ed398067ebbda68cbd56dd3d30f85187b9d7e3fd6c",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "task.json": "d78499766d464655d16c0d7bfadb21fdd902fd2d6601cccc801b324a960a86f9"
+  },
+  "process_peak_rss_bytes": 124370944,
+  "process_wall_s": 29.443984000005003,
+  "result_sha256": "b368405f51f4f7e665ac9ed1297d6bb1d66ca9992df3c9a75d04a383a02dd54f",
+  "returncode": 0,
+  "status": "valid",
+  "task": {
+    "arm": "C0",
+    "rep": 1,
+    "seed": 4402
+  },
+  "watchdog": null
+}
