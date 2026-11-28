@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\scripts\run_eight_neighbor_progress.py", line 396, in <module>
+    main()
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\scripts\run_eight_neighbor_progress.py", line 392, in main
+    {"prepare": prepare, "validate": validate, "run": run, "analyze": analyze}[args.action](out)
+  File "E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\scripts\run_eight_neighbor_progress.py", line 366, in run
+    raise RuntimeError(f"Failed task retained at {folder}: {problem}")
+RuntimeError: Failed task retained at E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\outputs\eight_neighbor_progress_20261128\local_r1\runs\P30_91ea47f134ac6b4643b7: worker did not complete

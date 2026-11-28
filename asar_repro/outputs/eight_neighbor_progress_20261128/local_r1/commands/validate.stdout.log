@@ -1,0 +1,2 @@
+toy: {'tests': 34, 'failures': 0, 'errors': 0, 'skipped': 0}, exit 0
+full: {'tests': 1842, 'failures': 0, 'errors': 0, 'skipped': 0}, exit 0

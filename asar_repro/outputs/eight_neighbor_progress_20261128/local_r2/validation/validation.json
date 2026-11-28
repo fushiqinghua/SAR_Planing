@@ -1,0 +1,48 @@
+{
+  "status": "passed",
+  "protocol_sha256": "c0ce229a1253aa4d48a8b306fe7b0563b17551f7a805a31588ed0c9ca37f6372",
+  "results": [
+    {
+      "name": "toy",
+      "command": [
+        "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp=C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\asar-pgpe-pytest-20261128-r2\\toy",
+        "--junitxml=E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\outputs\\eight_neighbor_progress_20261128\\local_r2\\validation\\toy-pytest.xml",
+        "tests/test_physical_prefix_order.py",
+        "tests/test_physical_progress_prefix.py"
+      ],
+      "returncode": 0,
+      "seconds": 1.7870492000001832,
+      "junit_sha256": "6bd40ff2297212899069174f4643d2de185d4b0660cdc15f1c5a76ec88bf5bca",
+      "tests": 34,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "name": "full",
+      "command": [
+        "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+        "-m",
+        "pytest",
+        "-q",
+        "-p",
+        "no:cacheprovider",
+        "--basetemp=C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\asar-pgpe-pytest-20261128-r2\\full",
+        "--junitxml=E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\outputs\\eight_neighbor_progress_20261128\\local_r2\\validation\\full-pytest.xml"
+      ],
+      "returncode": 0,
+      "seconds": 39.656901800000924,
+      "junit_sha256": "6a6d0d5dc3c67e846bc455906756a6f1e14ad8216bd25ebf0fe0ad6258f88783",
+      "tests": 1843,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ]
+}

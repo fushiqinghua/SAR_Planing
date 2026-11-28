@@ -1,0 +1,14 @@
+lake_h2_d1_s3101 C0 J=14.307066617 Pd=94.910327% RSSmed=265.8 MiB activations=[0, 0, 0]
+lake_h2_d1_s3101 C0_PREFIX J=14.281396295 Pd=94.745134% RSSmed=520.8 MiB activations=[0, 0, 0]
+lake_h2_d1_s3101 C0_PROGRESS J=14.281396295 Pd=94.745134% RSSmed=469.1 MiB activations=[3, 3, 3]
+lake_h2_d2_s3201 C0 J=14.058508572 Pd=93.040037% RSSmed=417.6 MiB activations=[0, 0, 0]
+lake_h2_d2_s3201 C0_PREFIX J=13.873903333 Pd=93.570324% RSSmed=557.6 MiB activations=[0, 0, 0]
+lake_h2_d2_s3201 C0_PROGRESS J=13.907239443 Pd=93.563412% RSSmed=501.4 MiB activations=[6, 6, 5]
+hudson_h2_d1_s4101 C0 J=28.448979882 Pd=81.246063% RSSmed=396.1 MiB activations=[0, 0, 0]
+hudson_h2_d1_s4101 C0_PREFIX J=28.724588352 Pd=81.423451% RSSmed=375.1 MiB activations=[0, 0, 0]
+hudson_h2_d1_s4101 C0_PROGRESS J=28.492906300 Pd=80.476615% RSSmed=391.6 MiB activations=[0, 0, 0]
+hudson_h2_d2_s4201 C0 J=58.739707200 Pd=8.580811% RSSmed=91.6 MiB activations=[0, 0, 0]
+hudson_h2_d2_s4201 C0_PREFIX J=58.522087200 Pd=9.094800% RSSmed=467.1 MiB activations=[0, 0, 0]
+hudson_h2_d2_s4201 C0_PROGRESS J=58.522087200 Pd=9.094800% RSSmed=400.0 MiB activations=[2, 2, 2]
+Verified 36 frozen tasks, dual replays and three independent median screens. progress_prefix_development_screen_not_passed
+E:\毕业设计\终稿研发\new\baseline\SAR_Planing-eight-neighbor-physical-study-20261127\asar_repro\outputs\eight_neighbor_progress_20261128\local_r2\independent_verification.json

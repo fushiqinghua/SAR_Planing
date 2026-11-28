@@ -1,0 +1,23 @@
+{
+  "status": "blocked",
+  "valid": 6,
+  "failed": 1,
+  "not_started": 29,
+  "planned": 36,
+  "source_commit": "867014cd51dd7ac8f072c0c32525514c3aa22d33",
+  "failure_run_id": "P30_91ea47f134ac6b4643b7",
+  "task": {
+    "instance": "lake_h2_d2_s3201",
+    "method": "C0_PROGRESS",
+    "repetition": 2,
+    "seconds": 30.0,
+    "stage": "P30",
+    "manifest_sha256": "fc888c06270c3544504978df5b3ddc9444cb5cfca7898d4e7212c0fc6c468ea7",
+    "reference_sha256": "be93a93200b6302e3a0ff0481e0ab62a4a4f6508e7f35a2272f362c29750b20f"
+  },
+  "process_wall_s": 39.17110359999788,
+  "algorithm_wall_s": null,
+  "watchdog": null,
+  "reason": "Compound algorithm, policy, or budget validation rejected the trial after dual replay. The rejecting value and result payload were not saved.",
+  "formal_comparison_performed": false
+}

@@ -1,0 +1,16 @@
+{
+  "start_time_utc": "2026-11-28T08:57:36.1556112Z",
+  "pythonhashseed": "0",
+  "pytest_base": null,
+  "argv": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "scripts/run_eight_neighbor_progress.py",
+    "run",
+    "--out",
+    "outputs/eight_neighbor_progress_20261128/local_r2"
+  ],
+  "stage": "run",
+  "source_commit": "58aa7d8c55965bdcd8e9585596c4d5bd3956bcbb",
+  "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro",
+  "numerical_threads": 1
+}
