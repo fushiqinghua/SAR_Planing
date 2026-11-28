@@ -1,0 +1,58 @@
+{
+  "schema": 1,
+  "study": "progress-aware-prefix-open",
+  "branch": "eight-neighbor-rolling-pilot-20261128",
+  "parent_commit": "5b7ffcf9c90a8e3b219ae58a9f7fb066f069b588",
+  "status": "prepared_not_run",
+  "source_mechanism": "first early strictly improved search completion + later stall + terminal-tail pressure",
+  "formal_tasks": 36,
+  "algorithm_budget_seconds": 1080,
+  "source_change_policy": "add-only; original scoring/particle/solver files unchanged",
+  "new_files": [
+    {
+      "path": "asar_repro/src/asar_repro/physical_progress_prefix.py",
+      "blob_sha": "2813dfa6b7880f27cb5bcbb8d1db4bec65e25c43"
+    },
+    {
+      "path": "asar_repro/scripts/run_eight_neighbor_progress.py",
+      "blob_sha": "09de6a939f0aef95f91e65a3ecb9f333f8350577"
+    },
+    {
+      "path": "asar_repro/scripts/analyze_eight_neighbor_progress.py",
+      "blob_sha": "f5463dfbbb8e0a64ced2e3bccd41f835fe38cdac"
+    },
+    {
+      "path": "asar_repro/tests/test_physical_progress_prefix.py",
+      "blob_sha": "cdc818810f4b6f6a2351692697f3035b29b244a5"
+    },
+    {
+      "path": "asar_repro/tests/test_eight_neighbor_progress_runner.py",
+      "blob_sha": "485166e691f8a3226c13f1ea9e4f733a733a6eed"
+    },
+    {
+      "path": "asar_repro/docs/eight_neighbor_progress/PLAN.md",
+      "blob_sha": "5f525bc80102e8c60d371f39d48ea1a00776fb4d"
+    },
+    {
+      "path": "asar_repro/docs/eight_neighbor_progress/DECISIONS.md",
+      "blob_sha": "1654f91f3068aa8978731eb1faf0304fe6d9f9e9"
+    },
+    {
+      "path": "asar_repro/docs/eight_neighbor_progress/LOCAL_RUNBOOK.md",
+      "blob_sha": "5b091289c3ae442a0b801bed01c9224d36a95739"
+    },
+    {
+      "path": "asar_repro/docs/eight_neighbor_progress/THEORY_AND_CLAIMS.md",
+      "blob_sha": "633fe6e51c6b345a802d0f6ac55524ba3e943eda"
+    },
+    {
+      "path": "asar_repro/docs/eight_neighbor_progress/RESULTS_TEMPLATE.md",
+      "blob_sha": "501eef9b3fb39dfbc46bc9b3223e91f454f839c0"
+    }
+  ],
+  "notes": [
+    "Tests, real runs, drift generation, and validation not performed by preparer.",
+    "Results to be executed locally after frozen identity and local pytest.",
+    "No claim of guaranteed J improvements, epsilon optimality or real-time sensor adaptation."
+  ]
+}

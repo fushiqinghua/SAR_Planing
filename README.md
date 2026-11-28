@@ -1,3 +1,13 @@
+# 当前研究：进展感知的早中段前缀搜索（prepared_not_run）
+
+这是第二创新点下一批的**设计与本地实验交付**。本批原代码与数据保持冻结，新方法 C0_PROGRESS 仅根据搜索中已观察到的进展决定是否启用早中段 OPEN 保留配额；同时重新跑 C0、C0_PREFIX、C0_PROGRESS 三组，每组 4 实例×3 次重复、30 秒。**尚未运行任何新测试和正式实验**。
+
+执行入口：[LOCAL_RUNBOOK.md](asar_repro/docs/eight_neighbor_progress/LOCAL_RUNBOOK.md) · [PLAN.md](asar_repro/docs/eight_neighbor_progress/PLAN.md) · [DECISIONS.md](asar_repro/docs/eight_neighbor_progress/DECISIONS.md) · [THEORY_AND_CLAIMS.md](asar_repro/docs/eight_neighbor_progress/THEORY_AND_CLAIMS.md) · [源代码](asar_repro/src/asar_repro/physical_progress_prefix.py) · [执行器](asar_repro/scripts/run_eight_neighbor_progress.py)
+
+上一批固定配额具有局部正收益但未通过不退化门槛，原始结果仍完整保留在 [local_r3](asar_repro/outputs/eight_neighbor_prefix_order_20261128/local_r3/REPORT.md)。新方案只做一次预登记策略与三组同预算验证，不做参数扫描或新的漂移生成。
+
+---
+
 # 当前批次：滚动规划的严格状态合并验证
 
 分支：**eight-neighbor-rolling-pilot-20261128**  
