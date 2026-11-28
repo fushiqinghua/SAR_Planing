@@ -1,0 +1,34 @@
+{
+  "summary_sha256": "5c7f32d92c416a616f3d4bac3484a8ff53bcdd2c49506a49988c03670339353f",
+  "generator_sha256": "60264d3aa69b592ceae1bc548019412e40a01a07a160ed16d79272d0f3003c1d",
+  "matplotlib_version": "3.11.2",
+  "representative_rule": "median J, then frozen repetition order",
+  "first_in_each_region": [
+    "lake_h2_d1_s3101",
+    "hudson_h2_d1_s4101"
+  ],
+  "representative_runs": {
+    "lake_h2_d1_s3101": {
+      "C0": "R30_857eb1669f2fd8471b88",
+      "C1": "R30_90729811fad7411a91b2"
+    },
+    "lake_h2_d2_s3201": {
+      "C0": "R30_a131845ff5be9033fc76",
+      "C1": "R30_797a40078987f6b17bf6"
+    },
+    "hudson_h2_d1_s4101": {
+      "C0": "R30_49d1b842aeda8d8e634d",
+      "C1": "R30_994379da3dad5a23c4dd"
+    },
+    "hudson_h2_d2_s4201": {
+      "C0": "R30_47af68e4496ceb627279",
+      "C1": "R30_443ffa4df63fd2cfd49f"
+    }
+  },
+  "png_sha256": {
+    "01_relative_j.png": "04933c40acac747511aa6b41dcafdd557c305708cab96d10ba96e95816affb7b",
+    "02_cumulative_detection.png": "e0ad51bd7ddff5aeac85d13c086eeb2b1fe69f137e56bc2bc472ae168f68eeb2",
+    "03_predicted_mass_routes.png": "7d64c23a51e9705190c49c0d7d1496099aaa74c17575eea4e14418156d6c8634",
+    "04_rolling_timeline.png": "4956328dfaa86600ba35c6cb94dbf62f6566887fd1ea60520846f586f941cdda"
+  }
+}

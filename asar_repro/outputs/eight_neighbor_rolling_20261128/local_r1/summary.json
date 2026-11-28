@@ -1,0 +1,153 @@
+{
+  "status": {
+    "status": "complete",
+    "planned": 24,
+    "valid": 24,
+    "missing": [],
+    "errors": []
+  },
+  "decision": {
+    "status": "rolling_development_screen_not_passed",
+    "screen_passed": false,
+    "comparisons": [
+      {
+        "instance": "lake_h2_d1_s3101",
+        "base_scene": "lake_ontario",
+        "J_C0": 14.307066616652799,
+        "J_C1": 14.307066616652799,
+        "relative_J_gain": 0.0,
+        "pd_C0": 0.9491032706688,
+        "pd_C1": 0.9491032706688,
+        "delta_pd": 0.0,
+        "delta_pd_percentage_points": 0.0,
+        "winner": false,
+        "J_regression": false,
+        "pd_drop_flag": false,
+        "C0_run_id": "R30_857eb1669f2fd8471b88",
+        "C1_run_id": "R30_90729811fad7411a91b2",
+        "C0_J_range": [
+          14.307066616652799,
+          14.307066616652799
+        ],
+        "C1_J_range": [
+          14.307066616652799,
+          14.307066616652799
+        ]
+      },
+      {
+        "instance": "lake_h2_d2_s3201",
+        "base_scene": "lake_ontario",
+        "J_C0": 14.058508572097407,
+        "J_C1": 14.058508572097407,
+        "relative_J_gain": 0.0,
+        "pd_C0": 0.930400367774592,
+        "pd_C1": 0.930400367774592,
+        "delta_pd": 0.0,
+        "delta_pd_percentage_points": 0.0,
+        "winner": false,
+        "J_regression": false,
+        "pd_drop_flag": false,
+        "C0_run_id": "R30_a131845ff5be9033fc76",
+        "C1_run_id": "R30_797a40078987f6b17bf6",
+        "C0_J_range": [
+          14.058508572097407,
+          14.058508572097407
+        ],
+        "C1_J_range": [
+          14.058508572097407,
+          14.058508572097407
+        ]
+      },
+      {
+        "instance": "hudson_h2_d1_s4101",
+        "base_scene": "arctic_ocean",
+        "J_C0": 28.448979882240007,
+        "J_C1": 28.63817832960001,
+        "relative_J_gain": -0.006650447507895159,
+        "pd_C0": 0.81246062976,
+        "pd_C1": 0.81761775264,
+        "delta_pd": 0.005157122880000031,
+        "delta_pd_percentage_points": 0.5157122880000031,
+        "winner": false,
+        "J_regression": true,
+        "pd_drop_flag": false,
+        "C0_run_id": "R30_49d1b842aeda8d8e634d",
+        "C1_run_id": "R30_994379da3dad5a23c4dd",
+        "C0_J_range": [
+          28.448979882240007,
+          28.72458835200001
+        ],
+        "C1_J_range": [
+          28.63817832960001,
+          28.63817832960001
+        ]
+      },
+      {
+        "instance": "hudson_h2_d2_s4201",
+        "base_scene": "arctic_ocean",
+        "J_C0": 58.73970720000001,
+        "J_C1": 58.677655392,
+        "relative_J_gain": 0.0010563860624762163,
+        "pd_C0": 0.08580811199999983,
+        "pd_C1": 0.08813001599999981,
+        "delta_pd": 0.0023219039999999858,
+        "delta_pd_percentage_points": 0.23219039999999858,
+        "winner": false,
+        "J_regression": false,
+        "pd_drop_flag": false,
+        "C0_run_id": "R30_47af68e4496ceb627279",
+        "C1_run_id": "R30_443ffa4df63fd2cfd49f",
+        "C0_J_range": [
+          58.73970720000001,
+          58.73970720000001
+        ],
+        "C1_J_range": [
+          58.677655392,
+          58.677655392
+        ]
+      }
+    ],
+    "quality_protected": false,
+    "pd_protected": true,
+    "instance_winners": 0,
+    "winners_by_scene": {},
+    "median_relative_J_gain": 0.0,
+    "inference_scope": "development engineering screen only; no significance, generalization or optimality proof"
+  },
+  "protocol_sha256": "c2af3696ae9623d9c1fc5318c2076a57fa68473ceb38495562d92d303b879093",
+  "data_role": "seen_H2_development_diagnostic",
+  "formal_optimality_certificate": false,
+  "total_algorithm_wall_s": 703.9934060999967,
+  "raw_evidence": {
+    "R30_5cf809b047a3d4f716cb": "5291dfa9e2843c5fb6c82e411cb8dfa9b2ba90706e1d4a4c2f6f4b3c74fa51a2",
+    "R30_dcdc664ff7765a4f0a08": "e8c28b9ea312a436c1161f71dc19906a4563e3dc6a7dfebaf1d91115ec61d88a",
+    "R30_0e4bc18fb7094a1bad6c": "6d4fbf499e797c23775a7ac9d747beb1e11302de5350ec4948ac7f5a7c09752f",
+    "R30_17867d67d378200112ab": "39854fc92294edfdc6cefb8046b439c6954c144f516dff92b29c94591b42da0f",
+    "R30_b09dbfbd6a54a9c69024": "ddf984c0bbf248487f9dd40606a5010219011e84605dde25f22ec66db918d911",
+    "R30_ac17bc4bb75c1936bc6a": "216db0d028c9f0dac28144f1297cc3aa69cc638610f9c78aca43c0225fecef35",
+    "R30_8b37595c38eff3b54b13": "f66d29196c5f2e038457aec16fdb8c7652a5994763868bcd51bbed26d2baa9e9",
+    "R30_90729811fad7411a91b2": "ca0fa6190071f24ecc69e7e744c3d6e9279d5edb04710f891a3c0903fdde1e15",
+    "R30_762fa00bc2f5da104f4d": "079cb31baca6fc201e86d377f5d94be4835da60ba7f6efd22e2047f21f559c45",
+    "R30_d4429be32a10db40fbff": "f2e05fd75d6bed03d4fe06f25fd5f388f07a13c356ca8dc4cda678655fd97bba",
+    "R30_29ea21c4955def7072e1": "a7e490ba2fb9a9bb2c2ffed8576ff67189396c5be3b0438eef39ba6dcef2e7e1",
+    "R30_797a40078987f6b17bf6": "03e54307303f80282e516f9100ef79305f93d1ca787dcc8e2a65add6c1f255cc",
+    "R30_994379da3dad5a23c4dd": "c6475b82a8e8f25d43b63f29a2a8d8258e148f68bd1f75f2e3b2bc9bdbdcc11c",
+    "R30_8ea48a7201f80709dc77": "4d43f0737a887a6e41f5828dfe044f800d2f45d5726d96ff17544b7a94489f9a",
+    "R30_4de001e57eafbf4f2cf6": "aac238f20babaf2c7a262858a2e697142acb80f6075f5fc2eb3b465295d6d3e4",
+    "R30_a131845ff5be9033fc76": "d8d5524d77b19ed9464ac0066085df24d22f6565b7d2831bfe3b54e2ceb744f3",
+    "R30_857eb1669f2fd8471b88": "e9d5af838d1c4bcaba24c512a5c9986da3341df689af1c2e536991422f94ebb0",
+    "R30_3aec98fe29eb940c0cbb": "87e76d7a5335b44a579dd9592e81e331782eeb518ed422959e852766d93b86f0",
+    "R30_47af68e4496ceb627279": "7127cf5eb57a13b6f01d4da875dde78b12b0534270be1dbbdf9668d200b45e56",
+    "R30_cc6f3a20abcc60c16a72": "1a0d3cc3e93e4ec679aec553204f88dc8849d61373a8b4c1046dd541deda68be",
+    "R30_ce050b9a85ad20a545b6": "82c3dcba765ed12615a3e4dc799ff2cea4e0cee09d299e1bb6bb2f5b3c81b7e4",
+    "R30_443ffa4df63fd2cfd49f": "905f19a885c8ac713775fcf650b2243be2b65ffe61f0240785ffcc42d3e00b43",
+    "R30_2223c7edfaf16e695547": "c9d19bcaa8a5117beb8f8d8759918d4d4a3bfeaa85e6d37d322df36840291c9b",
+    "R30_49d1b842aeda8d8e634d": "6b969b37549e2c61ab9878524994588502264bf76e162b3f58894563ce40030d"
+  },
+  "derived_file_sha256": {
+    "comparison.csv": "b29b32dab035e709952df03ba764082db1e4a915fe4f3822dd75f34ed36dbc90",
+    "survival.csv": "6757e895fed915e8ffca1f287975e44d608fe581f3839149622779a480279e96",
+    "phases.csv": "0bf735200bcfc985a298669bd28e5cb5bdfd51c635ff9ede185851e3e27f01e1",
+    "instance_comparison.csv": "073aa69047b29c815a7c9b5e8e9555458ceaebe7738fd8d9d0d52ff8ece21da0"
+  }
+}

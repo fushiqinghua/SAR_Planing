@@ -1,0 +1,15 @@
+{
+  "action": "validate",
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\scripts\\run_eight_neighbor_rolling.py",
+    "validate",
+    "--config",
+    "configs/eight_neighbor_rolling.json",
+    "--out",
+    "outputs/eight_neighbor_rolling_20261128/local_r1"
+  ],
+  "started_utc": "2026-11-28T03:34:32.412892+00:00",
+  "status": "completed",
+  "wall_s": 6.064936000000671
+}

@@ -1,0 +1,14 @@
+{
+  "start": "2026-11-28T11:34:48.9913022+08:00",
+  "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro",
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "scripts/run_eight_neighbor_rolling.py",
+    "run",
+    "--config",
+    "configs/eight_neighbor_rolling.json",
+    "--out",
+    "outputs/eight_neighbor_rolling_20261128/local_r1"
+  ],
+  "numerical_threads": 1
+}

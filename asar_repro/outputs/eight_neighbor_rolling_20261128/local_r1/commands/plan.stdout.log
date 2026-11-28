@@ -1,0 +1,35 @@
+{
+  "status": "prepared_not_run",
+  "stage": "R30",
+  "instances": [
+    "lake_h2_d1_s3101",
+    "lake_h2_d2_s3201",
+    "hudson_h2_d1_s4101",
+    "hudson_h2_d2_s4201"
+  ],
+  "methods": [
+    "C0",
+    "C1"
+  ],
+  "formal_tasks": 24,
+  "total_algorithm_budget_s": 720.0,
+  "C0_slots_s": [
+    30.0
+  ],
+  "C1_slots_s": [
+    6.0,
+    6.0,
+    6.0,
+    6.0,
+    6.0
+  ],
+  "triggers": [
+    0.2,
+    0.4,
+    0.6,
+    0.8
+  ],
+  "data_role": "seen_H2_development_diagnostic",
+  "budget_scope": "all method computation; loading and independent result audit recorded separately",
+  "inference_scope": "four seen date/seed instances, three timing repeats each; no independent holdout"
+}

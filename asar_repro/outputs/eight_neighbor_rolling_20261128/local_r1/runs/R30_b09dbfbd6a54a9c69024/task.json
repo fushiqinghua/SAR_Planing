@@ -1,0 +1,14 @@
+{
+  "stage": "R30",
+  "instance": "lake_h2_d2_s3201",
+  "base_scene": "lake_ontario",
+  "block_id": "lake_h2_d2",
+  "seed": 3201,
+  "method": "C0",
+  "repetition": 2,
+  "seconds": 30.0,
+  "connectivity": 8,
+  "footprint": "heading_square",
+  "manifest_sha256": "fc888c06270c3544504978df5b3ddc9444cb5cfca7898d4e7212c0fc6c468ea7",
+  "reference_sha256": "be93a93200b6302e3a0ff0481e0ab62a4a4f6508e7f35a2272f362c29750b20f"
+}
