@@ -1,0 +1,40 @@
+{
+  "protocol_sha256": "6889d21a3b9ee9d75ef33b5127125972735ada1acbf1efc4ab94d4000bb213ce",
+  "d0_gate_sha256": "edeb201460066f7b7f1875cfbb03e82ee16c45fab12916486c8070d57c7788c9",
+  "d0_summary_sha256": "52ccd7d72031a479001a25530260e74c11aa8ed3a8df2acdcdc9d9d2a273bd2b",
+  "f30_summary_sha256": "593f94cb3556d83eb2c197dd1e5479f0e0aeac2447a4796a995a468de1fcf4f0",
+  "generator_sha256": "8c6142375a90e5d5e47cbc928c7ff8cd4062578a388ee9b7f0e5b2457d805efc",
+  "matplotlib_version": "3.11.2",
+  "median_j_representative_run_ids": {
+    "lake_h2_d1_s3101": {
+      "C0": "F30_5b4c442b35b5350ca094",
+      "C1": "F30_a65069321fc0f385fcdb",
+      "C0_M": "F30_06da3ac7286ecbd7a002",
+      "C1_M": "F30_bae812538cc1fefce2d3"
+    },
+    "lake_h2_d2_s3201": {
+      "C0": "F30_88a4e6e4c3a0796ef8b2",
+      "C1": "F30_88bfeb10ba8bbc420df2",
+      "C0_M": "F30_4ae59e3cac6bc5b59217",
+      "C1_M": "F30_17a4c190f5aaa301e793"
+    },
+    "hudson_h2_d1_s4101": {
+      "C0": "F30_d0424f9f71624167360c",
+      "C1": "F30_43a9e6328e7a23b77e6e",
+      "C0_M": "F30_712a396f350e00081925",
+      "C1_M": "F30_de22123389e38fcf3d56"
+    },
+    "hudson_h2_d2_s4201": {
+      "C0": "F30_d362368fa80b3ca35a9f",
+      "C1": "F30_345be821a234e73f4a38",
+      "C0_M": "F30_3d937ebe8de5f861e408",
+      "C1_M": "F30_f034a0beb06a6efce3cc"
+    }
+  },
+  "png_sha256": {
+    "01_d0_opportunity_capacity.png": "f70d705154456c14a6d91b47546915d00573a5b455b11c4894df4dbe0a1f197c",
+    "02_f30_paired_relative_j.png": "8ed03a155b3fac802986cb857e600ef44b4492750268690b281d59d23fba73f0",
+    "03_f30_cumulative_pd.png": "e568dc4cb7a822a761e9cf7753e0b99e5925e3c403947ecf045b3dbc6bc59efb",
+    "04_f30_merge_resources.png": "4a2b73c15bf849c7fc4e44c081c2bb25dc25aa2a643278ff85f0ec3dab41cba9"
+  }
+}

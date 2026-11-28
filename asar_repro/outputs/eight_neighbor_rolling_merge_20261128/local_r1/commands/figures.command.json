@@ -1,0 +1,10 @@
+{
+  "cwd": "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro",
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\rolling_merge_figures.py",
+    "--out",
+    "outputs/eight_neighbor_rolling_merge_20261128/local_r1"
+  ],
+  "start": "2026-11-28T13:30:43.8703594+08:00"
+}

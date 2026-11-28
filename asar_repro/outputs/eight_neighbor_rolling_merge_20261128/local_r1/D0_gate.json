@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "protocol_sha256": "6889d21a3b9ee9d75ef33b5127125972735ada1acbf1efc4ab94d4000bb213ce",
+  "decision": {
+    "status": "D0_admitted",
+    "all_instances_valid": true,
+    "passed": true,
+    "qualifying_instances": 2,
+    "instances": [
+      {
+        "instance": "lake_h2_d1_s3101",
+        "run_id": "D0_adbf09ccfef739638fde",
+        "nonterminal_children": 106306,
+        "mergeable_children": 201,
+        "mergeable_fraction": 0.0018907681598404607,
+        "qualifies": false,
+        "capacity_skips": 89716,
+        "lookup_s": 0.6980522996491345
+      },
+      {
+        "instance": "lake_h2_d2_s3201",
+        "run_id": "D0_3eed8b138cfc56d08fe2",
+        "nonterminal_children": 117099,
+        "mergeable_children": 13,
+        "mergeable_fraction": 0.00011101717350276262,
+        "qualifies": false,
+        "capacity_skips": 100703,
+        "lookup_s": 0.7714746999263298
+      },
+      {
+        "instance": "hudson_h2_d1_s4101",
+        "run_id": "D0_d42c61537fe542148537",
+        "nonterminal_children": 75208,
+        "mergeable_children": 5566,
+        "mergeable_fraction": 0.07400808424635677,
+        "qualifies": true,
+        "capacity_skips": 53258,
+        "lookup_s": 0.38500010033749277
+      },
+      {
+        "instance": "hudson_h2_d2_s4201",
+        "run_id": "D0_94b2379427259c620fda",
+        "nonterminal_children": 88401,
+        "mergeable_children": 13369,
+        "mergeable_fraction": 0.15123132091265937,
+        "qualifies": true,
+        "capacity_skips": 54892,
+        "lookup_s": 0.7542617002072802
+      }
+    ],
+    "scope": "shadow duplicate opportunity; not active speed, quality, or optimality evidence"
+  },
+  "raw_evidence": {
+    "D0_d42c61537fe542148537": "57dfe38a2372ffa11547b0a9d4147c8ff01993c4b3dccd2190c0eab3bcaefff1",
+    "D0_3eed8b138cfc56d08fe2": "2261ebad1f3dfc3e9e3f0f04f783dbe79e03ee515de886c4c6cb193522db6bde",
+    "D0_adbf09ccfef739638fde": "2a68d759331c55b117c6d3daad29868d543a4b297cc3cd9c010a1062ae9c126f",
+    "D0_94b2379427259c620fda": "d9ed6530867a23fc5be43fe6d600fec80e6635c9a9930db71d947d663e2d9497"
+  }
+}

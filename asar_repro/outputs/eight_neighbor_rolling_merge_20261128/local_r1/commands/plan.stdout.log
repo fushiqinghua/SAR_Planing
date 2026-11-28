@@ -1,0 +1,99 @@
+{
+  "status": "prepared_not_run",
+  "study_base_commit": "6084c7d6528a863709466e1dfbb0930459d95414",
+  "instances": [
+    "lake_h2_d1_s3101",
+    "lake_h2_d2_s3201",
+    "hudson_h2_d1_s4101",
+    "hudson_h2_d2_s4201"
+  ],
+  "stages": {
+    "D0": {
+      "methods": [
+        "D0"
+      ],
+      "repetitions": 1,
+      "seconds": 30.0,
+      "tasks": 4,
+      "role": "shadow duplicate opportunity diagnostic"
+    },
+    "F30": {
+      "methods": [
+        "C0",
+        "C1",
+        "C0_M",
+        "C1_M"
+      ],
+      "repetitions": 3,
+      "seconds": 30.0,
+      "tasks": 48,
+      "role": "four-arm equal-total-budget paired comparison"
+    }
+  },
+  "D0_algorithm_budget_s": 120.0,
+  "F30_conditional_algorithm_budget_s": 1440.0,
+  "maximum_algorithm_budget_s": 1560.0,
+  "D0_gate": {
+    "minimum_mergeable_children": 100,
+    "minimum_mergeable_fraction": 0.05,
+    "minimum_qualifying_instances": 1,
+    "denominator": "nonterminal children submitted to index after original J pruning and before guide; root excluded",
+    "numerator": "exact matching key with stored J <= child.J; improved replacements excluded",
+    "require_all_instances_valid": true,
+    "claim": "shadow opportunity only; not active speedup or optimality proof"
+  },
+  "merging": {
+    "max_entries": 16384,
+    "max_payload_bytes": 67108864,
+    "scope": "independent_index_per_solver_call",
+    "key_semantics": "exact_owner_vertex_time_tick_xy_weights",
+    "capacity_policy": "stop_storing_new_keys_keep_existing_updates"
+  },
+  "comparisons": [
+    {
+      "id": "C0_M_vs_C0",
+      "candidate": "C0_M",
+      "control": "C0",
+      "role": "generic merging increment"
+    },
+    {
+      "id": "C1_M_vs_C1",
+      "candidate": "C1_M",
+      "control": "C1",
+      "role": "merging increment inside rolling"
+    },
+    {
+      "id": "C1_M_vs_C0_M",
+      "candidate": "C1_M",
+      "control": "C0_M",
+      "role": "primary net rolling increment"
+    },
+    {
+      "id": "C1_M_vs_C0",
+      "candidate": "C1_M",
+      "control": "C0",
+      "role": "protected current strong control"
+    }
+  ],
+  "continuation": {
+    "required_pair_gates": [
+      "C1_M_vs_C0_M",
+      "C1_M_vs_C0"
+    ],
+    "no_posthoc_threshold_change": true,
+    "no_speed_claim_from_elapsed_or_expansion_counts": true
+  },
+  "data_role": "seen_H2_development_diagnostic_after_rolling_pilot",
+  "C0_slots_s": [
+    30.0
+  ],
+  "C1_slots_s": [
+    6.0,
+    6.0,
+    6.0,
+    6.0,
+    6.0
+  ],
+  "budget_scope": "all method computation, including index; loading and independent audit separate",
+  "inference_scope": "seen development cases; shadow admission is not a performance result"
+}

@@ -1,0 +1,78 @@
+{
+  "stage": "D0",
+  "status": {
+    "status": "complete",
+    "planned": 4,
+    "valid": 4,
+    "missing": [],
+    "errors": []
+  },
+  "decision": {
+    "status": "D0_admitted",
+    "all_instances_valid": true,
+    "passed": true,
+    "qualifying_instances": 2,
+    "instances": [
+      {
+        "instance": "lake_h2_d1_s3101",
+        "run_id": "D0_adbf09ccfef739638fde",
+        "nonterminal_children": 106306,
+        "mergeable_children": 201,
+        "mergeable_fraction": 0.0018907681598404607,
+        "qualifies": false,
+        "capacity_skips": 89716,
+        "lookup_s": 0.6980522996491345
+      },
+      {
+        "instance": "lake_h2_d2_s3201",
+        "run_id": "D0_3eed8b138cfc56d08fe2",
+        "nonterminal_children": 117099,
+        "mergeable_children": 13,
+        "mergeable_fraction": 0.00011101717350276262,
+        "qualifies": false,
+        "capacity_skips": 100703,
+        "lookup_s": 0.7714746999263298
+      },
+      {
+        "instance": "hudson_h2_d1_s4101",
+        "run_id": "D0_d42c61537fe542148537",
+        "nonterminal_children": 75208,
+        "mergeable_children": 5566,
+        "mergeable_fraction": 0.07400808424635677,
+        "qualifies": true,
+        "capacity_skips": 53258,
+        "lookup_s": 0.38500010033749277
+      },
+      {
+        "instance": "hudson_h2_d2_s4201",
+        "run_id": "D0_94b2379427259c620fda",
+        "nonterminal_children": 88401,
+        "mergeable_children": 13369,
+        "mergeable_fraction": 0.15123132091265937,
+        "qualifies": true,
+        "capacity_skips": 54892,
+        "lookup_s": 0.7542617002072802
+      }
+    ],
+    "scope": "shadow duplicate opportunity; not active speed, quality, or optimality evidence"
+  },
+  "protocol_sha256": "6889d21a3b9ee9d75ef33b5127125972735ada1acbf1efc4ab94d4000bb213ce",
+  "data_role": "seen_H2_development_diagnostic_after_rolling_pilot",
+  "formal_optimality_certificate": false,
+  "speedup_claim": false,
+  "total_algorithm_wall_s": 119.30872360000285,
+  "raw_evidence": {
+    "D0_d42c61537fe542148537": "57dfe38a2372ffa11547b0a9d4147c8ff01993c4b3dccd2190c0eab3bcaefff1",
+    "D0_3eed8b138cfc56d08fe2": "2261ebad1f3dfc3e9e3f0f04f783dbe79e03ee515de886c4c6cb193522db6bde",
+    "D0_adbf09ccfef739638fde": "2a68d759331c55b117c6d3daad29868d543a4b297cc3cd9c010a1062ae9c126f",
+    "D0_94b2379427259c620fda": "d9ed6530867a23fc5be43fe6d600fec80e6635c9a9930db71d947d663e2d9497"
+  },
+  "derived_file_sha256": {
+    "comparison.csv": "21a57176970114bf026a1592dce7c11369baf53866393984d15da105455ee7eb",
+    "survival.csv": "f589ed206df48a0630934bb71b9ddb06bd854ae819911f796b96e3f41ee80044",
+    "phases.csv": "4ce9b8d158adc6ba4095a85e635ce3db76c36804d04712c847beedcd04ed82f1",
+    "merge_diagnostics.csv": "fc5f666b02ce7c51c3add5eacb1f67596d7ea81585b4fd9d5f17cd642f6cde8a",
+    "incumbent_history.csv": "8668f1325e957a5de399924ada34d6eddfbf475aa70c91c897c6db3e9cff1e47",
+    "instance_comparison.csv": "24f87f594d9935e717c821a8a6d2dbf7270f2d4ff4a7714418feb84e540d5ace"
+  }
+}

@@ -1,0 +1,1 @@
+comparison,instance,base_scene,control,candidate,J_control,J_candidate,relative_J_gain,pd_control,pd_candidate,delta_pd_percentage_points,winner,J_regression,pd_drop_flag,control_run_id,candidate_run_id,control_J_range,candidate_J_range

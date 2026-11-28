@@ -1,0 +1,14 @@
+{
+  "action": "freeze",
+  "stage": null,
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "E:\\毕业设计\\终稿研发\\new\\baseline\\SAR_Planing-eight-neighbor-physical-study-20261127\\asar_repro\\scripts\\run_eight_neighbor_rolling_merge.py",
+    "freeze",
+    "--out",
+    "outputs/eight_neighbor_rolling_merge_20261128/local_r1"
+  ],
+  "started_utc": "2026-11-28T05:01:54.744926+00:00",
+  "status": "completed",
+  "wall_s": 0.6827281000005314
+}

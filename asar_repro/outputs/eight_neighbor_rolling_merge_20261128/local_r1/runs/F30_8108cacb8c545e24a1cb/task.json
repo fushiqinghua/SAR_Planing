@@ -1,0 +1,14 @@
+{
+  "stage": "F30",
+  "instance": "hudson_h2_d1_s4101",
+  "base_scene": "arctic_ocean",
+  "block_id": "hudson_h2_d1",
+  "seed": 4101,
+  "method": "C1",
+  "repetition": 2,
+  "seconds": 30.0,
+  "connectivity": 8,
+  "footprint": "heading_square",
+  "manifest_sha256": "252170039778326a36d8f5b9009cd75a0d822bd6c3f99e70b909d72aaf83a6bb",
+  "reference_sha256": "8eaa1684731f0a3cb068ae10a8b3f8e37a69008aebb7ad001be5be4a86abb24d"
+}
