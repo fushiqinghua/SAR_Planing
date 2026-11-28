@@ -1,0 +1,9 @@
+{
+  "checkpoint": 1024,
+  "limit": 6144,
+  "mode": "single_global",
+  "rep": 1,
+  "seconds": 120,
+  "seed": 4601,
+  "stage": "fixed"
+}

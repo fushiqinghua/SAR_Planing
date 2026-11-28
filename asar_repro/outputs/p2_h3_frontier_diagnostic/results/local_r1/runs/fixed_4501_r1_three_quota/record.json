@@ -1,0 +1,29 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\p2_h3_frontier_diagnostic\\run_diagnostic.py",
+    "_worker",
+    "fixed_4501_r1_three_quota"
+  ],
+  "files": {
+    "result.json": "7366c250b51d6936186ff54b97b4e4f5678f14404c8297f5524d95890a7c4df9",
+    "rss.csv": "64b7671541d4cacd771889bc03b2af2152736fcd3b11855addb4d556ffc21cea",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "task.json": "5b7e4097ca5cad9ea8f1a8cda7af51f81a3bd0a1e0ae7f00690078cce7d9b2b3"
+  },
+  "process_peak_rss_bytes": 378523648,
+  "result_sha256": "7366c250b51d6936186ff54b97b4e4f5678f14404c8297f5524d95890a7c4df9",
+  "returncode": 0,
+  "status": "valid",
+  "task": {
+    "checkpoint": 1024,
+    "limit": 32768,
+    "mode": "three_quota",
+    "rep": 1,
+    "seconds": 120,
+    "seed": 4501,
+    "stage": "fixed"
+  },
+  "watchdog": null
+}

@@ -1,0 +1,41 @@
+{
+  "first_capacity_sha256": "a7788908f11ad0d00ece502b661dc3f3bd8e615722790b7084a5c470552490d0",
+  "frozen_source": {
+    "date_lock.json": "640349bb593cb04ddb195c0ddefe005c9c370c937cdf91279df9b5d0951984da",
+    "inputs_lock.json": "c152d57ec67353e76cd2ed3f0c2b1dce83c9f7515acf72d4180f9b773ad42f20",
+    "method_lock.json": "a249f1a941fc0e6ee58051338a0d518c58262af273821b92f89b5dbf9b63103f",
+    "protocol.json": "fd437e16c26af91891e6831c2c19bb0315803ffe028aa39d462b152364e28062",
+    "s30_lock.json": "3a38904ea181d45410ca2ed85816001ae18df9ddd75118e174c8b288354ec382",
+    "tasks.json": "e10a792a549482493466d0642b51a2cd73aedd028776682b100dcc4485df4bdf"
+  },
+  "implementation_sha256": "a77a33d811876d52a628447cf834108eb727e87bc4bc11b66d847fb9a7159c60",
+  "search": {
+    "anchor_guard_s": 0.25,
+    "solver_reserve_s": 2.0,
+    "triggers": [
+      0.2,
+      0.4,
+      0.6,
+      0.8
+    ]
+  },
+  "settings": {
+    "archive": true,
+    "archive_history_limit": 8192,
+    "archive_limit": 512,
+    "completion": "greedy",
+    "completion_every": 128,
+    "completion_max_calls": 32,
+    "guide_weight": 1.04,
+    "max_open": 200000,
+    "objective": "J",
+    "pd_tolerance": 1e-08
+  },
+  "task": {
+    "mode": "C0_capacity_reserve",
+    "rep": 0,
+    "seconds": 120,
+    "seed": 4601,
+    "stage": "extended"
+  }
+}

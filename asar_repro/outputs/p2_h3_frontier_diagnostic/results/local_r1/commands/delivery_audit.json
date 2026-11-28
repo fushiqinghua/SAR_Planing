@@ -1,0 +1,22 @@
+{
+  "runs": 55,
+  "matched": 45,
+  "extended": 8,
+  "capacity": 2,
+  "inner_witness_confirmed": true,
+  "recovery_accepted": true,
+  "accepted_gain_pct": 2.2561290451699816,
+  "Pd_delta_pp": 6.087619199999994,
+  "peak_rss_mib": 804.71484375,
+  "peak_open": 134261,
+  "first_terminal_s": 74.29007170000114,
+  "fixed_global_digest_equal": true,
+  "source_sha256": {
+    "protocol.json": "fd437e16c26af91891e6831c2c19bb0315803ffe028aa39d462b152364e28062",
+    "s30_lock.json": "3a38904ea181d45410ca2ed85816001ae18df9ddd75118e174c8b288354ec382",
+    "method_lock.json": "a249f1a941fc0e6ee58051338a0d518c58262af273821b92f89b5dbf9b63103f",
+    "date_lock.json": "640349bb593cb04ddb195c0ddefe005c9c370c937cdf91279df9b5d0951984da",
+    "inputs_lock.json": "c152d57ec67353e76cd2ed3f0c2b1dce83c9f7515acf72d4180f9b773ad42f20",
+    "tasks.json": "e10a792a549482493466d0642b51a2cd73aedd028776682b100dcc4485df4bdf"
+  }
+}

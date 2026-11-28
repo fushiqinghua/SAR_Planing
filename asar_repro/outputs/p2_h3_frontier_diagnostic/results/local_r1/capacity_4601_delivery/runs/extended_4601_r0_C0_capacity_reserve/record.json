@@ -1,0 +1,27 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\p2_h3_frontier_diagnostic\\probe_capacity_delivery.py",
+    "_worker",
+    "extended_4601_r0_C0_capacity_reserve"
+  ],
+  "files": {
+    "result.json": "5e2ac8618750349ef2bfb0ea4c077701b216731bb286a4eec9a3b5f53930fb01",
+    "rss.csv": "0098605446e4b9f2599c4d754b46f61e345a4771e02cbb3e4e0a90e79bc97427",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "task.json": "02e71ad3d83bb77f01bff1903ac9973ad5562ce1abc8c4679949c115006028d2"
+  },
+  "process_peak_rss_bytes": 843804672,
+  "result_sha256": "5e2ac8618750349ef2bfb0ea4c077701b216731bb286a4eec9a3b5f53930fb01",
+  "returncode": 0,
+  "status": "valid",
+  "task": {
+    "mode": "C0_capacity_reserve",
+    "rep": 0,
+    "seconds": 120,
+    "seed": 4601,
+    "stage": "extended"
+  },
+  "watchdog": null
+}

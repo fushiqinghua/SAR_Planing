@@ -1,0 +1,9 @@
+{
+  "checkpoint": 1024,
+  "limit": 32768,
+  "mode": "three_global",
+  "rep": 2,
+  "seconds": 120,
+  "seed": 4402,
+  "stage": "fixed"
+}

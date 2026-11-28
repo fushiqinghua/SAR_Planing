@@ -1,0 +1,28 @@
+{
+  "baseline_sha256": {
+    "C0_extend": "d276b6d169bc8f89e7704fbc2f8e1adea8538b9b3f8642ea3b4d155a22b4924c",
+    "Lazy_extend": "5e1ddbc1049dcf8a68b9edebb0645e1c54e9e9a0011e83185f6ec1c86a5611d3"
+  },
+  "implementation_sha256": "b5e0e44e33181949bf6f2bfbbe9d4bf973319cb7080be79812ff0d9b8617e15b",
+  "original_protocol_sha256": "b463ab05f4b1446d6d45ad52044c8c9a42871adec2f69868c53661fb72d1f759",
+  "settings": {
+    "archive": true,
+    "archive_history_limit": 8192,
+    "archive_limit": 512,
+    "completion": "greedy",
+    "completion_every": 128,
+    "completion_max_calls": 32,
+    "guide_weight": 1.04,
+    "max_open": 200000,
+    "objective": "J",
+    "pd_tolerance": 1e-08
+  },
+  "task": {
+    "mode": "C0_capacity",
+    "rep": 0,
+    "seconds": 120,
+    "seed": 4601,
+    "stage": "extended"
+  },
+  "watchdog_rss": 2147483648
+}

@@ -1,0 +1,27 @@
+{
+  "command": [
+    "C:\\Users\\35448\\.conda\\envs\\maritime-sar\\python.exe",
+    "C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\p2_h3_frontier_diagnostic\\run_diagnostic.py",
+    "_worker",
+    "extended_4401_r0_C0_extend"
+  ],
+  "files": {
+    "result.json": "944d61fbbfef2d6e102f1cef04fb33142edea9ab5aa73de16c30a89b58d50fa2",
+    "rss.csv": "00b907299134e7df01d91ae8db10b1b5b08edace0fc7392f1f63eecc7bfc5a03",
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "task.json": "437cc7dc6f0fb8d37eef2599f942f2ed36cc324399edc32cabb84962993faae7"
+  },
+  "process_peak_rss_bytes": 99643392,
+  "result_sha256": "944d61fbbfef2d6e102f1cef04fb33142edea9ab5aa73de16c30a89b58d50fa2",
+  "returncode": 0,
+  "status": "valid",
+  "task": {
+    "mode": "C0_extend",
+    "rep": 0,
+    "seconds": 120,
+    "seed": 4401,
+    "stage": "extended"
+  },
+  "watchdog": null
+}

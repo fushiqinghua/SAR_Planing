@@ -1,0 +1,14 @@
+[
+  "-m",
+  "pytest",
+  "-q",
+  "-p",
+  "no:cacheprovider",
+  "--basetemp=C:/Users/35448/Documents/Codex/h3_frontier_toy_r1",
+  "--junitxml=C:\\Users\\35448\\Documents\\Codex\\2026-11-23\\new-chat-4\\p2_h3_frontier_diagnostic\\results\\local_r1\\validation\\toy.xml",
+  "C:/Users/35448/Documents/Codex/2026-11-23/new-chat-4/p2_h3_frontier_diagnostic/test_frontier_probe.py",
+  "tests/test_physical_search.py",
+  "tests/test_physical_lazy_prefix.py",
+  "tests/test_physical_refinement.py",
+  "tests/test_eight_neighbor_h3_runner.py"
+]
